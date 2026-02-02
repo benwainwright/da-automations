@@ -28,7 +28,7 @@ interface IMotionSwitchConfig {
 }
 
 export const MotionLightsService = ({ synapse, context, scheduler, hass }: TServiceParams) => {
-  const motionControlledLight = async ({
+  const motionControlledLight = ({
     switchName,
     sensorId,
     lightId,

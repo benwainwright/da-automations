@@ -1,11 +1,11 @@
 import type { TServiceParams } from "@digital-alchemy/core";
 
-export const CoreModule = ({ bens_flat: { lights } }: TServiceParams) => {
+export const CoreModule = ({ bens_flat: { lights, sleepMode, tvMode } }: TServiceParams) => {
   lights.motionControlledLight({
     switchName: "Bedroom motion sensor",
     lightId: "light.bedroom",
     sensorId: "binary_sensor.bedroom_sensor_sensor_state_motion",
-    blockSwitches: ["switch.sleep_mode"],
+    blockSwitches: [sleepMode.sleepModeSwitch.entity_id],
     timeout: "2m",
   });
 
@@ -13,7 +13,7 @@ export const CoreModule = ({ bens_flat: { lights } }: TServiceParams) => {
     switchName: "Living room motion sensor",
     lightId: "light.living_room",
     sensorId: "binary_sensor.living_room_sensor_sensor_state_motion",
-    blockSwitches: ["switch.tv_mode"],
+    blockSwitches: [tvMode.tvModeSwitch.entity_id],
     timeout: "10m",
   });
 
