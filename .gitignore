@@ -3,3 +3,4 @@ node_modules
 deploy
 previous_deploy.tar.gz
 .yarn/install-state.gz
+.env

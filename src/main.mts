@@ -24,19 +24,7 @@ void HOME_AUTOMATION.bootstrap({
      * ℹ️ Options you might want if running more than 1 app or on multiple machines
      */
     synapse: {
-      /**
-       * Default value considers machine host name & app name. If value changes, synapse will require re-integration.
-       * Set to stable value if you want dev/prod setup while preserving common entities.
-       *
-       * ⚠️ entity states are associated with db
-       * this may trigger automation logic if the internal state database is not kept in sync between machines
-       */
-      // METADATA_UNIQUE_ID: "my_synapse_app",
-      /**
-       * This file contains internal runtime state, used to preserve entity state between boots
-       * Default values used if file not found / deleted
-       */
-      // SQLITE_DB: "/path/to/alternate/sqlite.db",
+      METADATA_UNIQUE_ID: "532be3cf-5023-49bd-95f4-f3abfc1b0357",
     },
   },
 });

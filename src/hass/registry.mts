@@ -128,7 +128,7 @@ declare module "@digital-alchemy/hass" {
            */ position: string;
           /**
            * > ```yaml
-           * > sensor_value: 76
+           * > sensor_value: 76.1
            * > ```
            */ sensor_value: number;
           /**
@@ -1760,7 +1760,7 @@ declare module "@digital-alchemy/hass" {
            */ last_period: string;
           /**
            * > ```yaml
-           * > last_valid_state: '2751.179'
+           * > last_valid_state: '2751.3051'
            * > ```
            */ last_valid_state: string;
           /**
@@ -3218,7 +3218,7 @@ declare module "@digital-alchemy/hass" {
         {
           unit_of_measurement: "%";
           device_class: "battery";
-          icon: "mdi:battery";
+          icon: "mdi:battery-10";
           friendly_name: "iPhone Battery Level";
         }
       >;
@@ -3249,7 +3249,7 @@ declare module "@digital-alchemy/hass" {
         "sensor.iphone_battery_state",
         {
           "Low Power Mode": boolean;
-          icon: "mdi:battery";
+          icon: "mdi:battery-10";
           friendly_name: "iPhone Battery State";
         }
       >;
@@ -4579,7 +4579,7 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > update_time: Mon, 02/02, 06:47:05.755531
+           * > update_time: Mon, 02/02, 07:07:05.817390
            * > ```
            */ update_time: string;
           /**
@@ -4682,11 +4682,11 @@ declare module "@digital-alchemy/hass" {
            * > logs: >-
            * >   [['⚠️', "^h^◦⠈iCloud3 v3.3.4.4 is available on HACS, you are running
            * >   v3.2.4.2⣇✦⠈ben**1**84@ > Apple Acct Authentication Needed⣇●⠉Offline-Ben's
-           * >   iPhone"], ['6:47:05p', '^a^iCloud Loc > No GPS Data #12, RetryAt-6:52:05p (5
-           * >   mins)'], ['6:46:06p', 'iCloud Loc > No GPS Data #11, RetryAt-6:47:05p (1
-           * >   min)'], ['6:45:05p', 'iCloud Loc > No GPS Data #10, RetryAt-6:46:05p (1
-           * >   min)'], ['6:44:05p', 'iCloud Loc > No GPS Data #9, RetryAt-6:45:05p (1 min)'],
-           * >   ['6:43:05p', '^a^iCloud Loc > No ... [truncated]
+           * >   iPhone"], ['7:07:05p', '^a^iCloud Loc > No GPS Data #16, RetryAt-7:22:05p (15
+           * >   mins)'], ['7:02:06p', 'iCloud Loc > No GPS Data #15, RetryAt-7:07:05p (5
+           * >   mins)'], ['6:57:05p', 'iCloud Loc > No GPS Data #14, RetryAt-7:02:05p (5
+           * >   mins)'], ['6:52:05p', 'iCloud Loc > No GPS Data #13, RetryAt-6:57:05p (5
+           * >   mins)'], ['6:47:05p', '^a^iCloud Loc ... [truncated]
            * > ```
            */ logs: string;
           icon: "mdi:message-text-clock-outline";
@@ -5208,7 +5208,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-02-02T18:49:47.684063+00:00'
+           * > process_timestamp: '2026-02-02T19:09:59.688867+00:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -5259,7 +5259,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-02-02T18:49:47.684063+00:00'
+           * > process_timestamp: '2026-02-02T19:09:59.688867+00:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -5304,7 +5304,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-02-02T18:49:47.684063+00:00'
+           * > process_timestamp: '2026-02-02T19:09:59.688867+00:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -5514,7 +5514,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-02-02T18:49:47.684063+00:00'
+           * > process_timestamp: '2026-02-02T19:09:59.688867+00:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -5565,7 +5565,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-02-02T18:49:47.684063+00:00'
+           * > process_timestamp: '2026-02-02T19:09:59.688867+00:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -5610,7 +5610,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-02-02T18:49:47.684063+00:00'
+           * > process_timestamp: '2026-02-02T19:09:59.688867+00:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -5688,7 +5688,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-02-02T18:49:47.684063+00:00'
+           * > process_timestamp: '2026-02-02T19:09:59.688867+00:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -5732,7 +5732,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-02-02T18:49:47.684063+00:00'
+           * > process_timestamp: '2026-02-02T19:09:59.688867+00:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -5777,7 +5777,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-02-02T18:49:47.684063+00:00'
+           * > process_timestamp: '2026-02-02T19:09:59.688867+00:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -7946,7 +7946,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -7991,7 +7991,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           icon: "mdi:account";
@@ -8011,7 +8011,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8021,12 +8021,12 @@ declare module "@digital-alchemy/hass" {
            */ last_located: string;
           /**
            * > ```yaml
-           * > last_updated: '2026-02-02 18:47:05'
+           * > last_updated: '2026-02-02 19:07:05'
            * > ```
            */ last_updated: string;
           /**
            * > ```yaml
-           * > next_update: '2026-02-02 18:52:05'
+           * > next_update: '2026-02-02 19:22:05'
            * > ```
            */ next_update: string;
           icon: "mdi:history";
@@ -8046,7 +8046,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8056,12 +8056,12 @@ declare module "@digital-alchemy/hass" {
            */ last_located: string;
           /**
            * > ```yaml
-           * > last_updated: '2026-02-02 18:47:05'
+           * > last_updated: '2026-02-02 19:07:05'
            * > ```
            */ last_updated: string;
           /**
            * > ```yaml
-           * > next_update: '2026-02-02 18:52:05'
+           * > next_update: '2026-02-02 19:22:05'
            * > ```
            */ next_update: string;
           icon: "mdi:update";
@@ -8081,7 +8081,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8091,12 +8091,12 @@ declare module "@digital-alchemy/hass" {
            */ last_located: string;
           /**
            * > ```yaml
-           * > last_updated: '2026-02-02 18:47:05'
+           * > last_updated: '2026-02-02 19:07:05'
            * > ```
            */ last_updated: string;
           /**
            * > ```yaml
-           * > next_update: '2026-02-02 18:52:05'
+           * > next_update: '2026-02-02 19:22:05'
            * > ```
            */ next_update: string;
           icon: "mdi:history";
@@ -8116,7 +8116,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8126,12 +8126,12 @@ declare module "@digital-alchemy/hass" {
            */ last_located: string;
           /**
            * > ```yaml
-           * > last_updated: '2026-02-02 18:47:05'
+           * > last_updated: '2026-02-02 19:07:05'
            * > ```
            */ last_updated: string;
           /**
            * > ```yaml
-           * > next_update: '2026-02-02 18:52:05'
+           * > next_update: '2026-02-02 19:22:05'
            * > ```
            */ next_update: string;
           unit_of_measurement: "mins";
@@ -8204,7 +8204,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8242,7 +8242,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8297,7 +8297,7 @@ declare module "@digital-alchemy/hass" {
            */ went_3km: string;
           /**
            * > ```yaml
-           * > zones (calculated distance) (mi): '2026-02-02 18:47:05'
+           * > zones (calculated distance) (mi): '2026-02-02 19:07:05'
            * > ```
            */ "zones (calculated distance) (mi)": string;
           /**
@@ -8375,7 +8375,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8430,7 +8430,7 @@ declare module "@digital-alchemy/hass" {
            */ dir_of_travel: string;
           /**
            * > ```yaml
-           * > interval: 5 mins
+           * > interval: 15 mins
            * > ```
            */ interval: string;
           /**
@@ -8450,7 +8450,7 @@ declare module "@digital-alchemy/hass" {
            */ last_located: string;
           /**
            * > ```yaml
-           * > last_updated: '2026-02-02 18:47:05'
+           * > last_updated: '2026-02-02 19:07:05'
            * > ```
            */ last_updated: string;
           /**
@@ -8473,7 +8473,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8529,7 +8529,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8574,7 +8574,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:50:00
+           * > sensor_updated: Mon, 02/02, 19:17:00
            * > ```
            */ sensor_updated: string;
           icon: "mdi:information-outline";
@@ -8594,7 +8594,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8680,7 +8680,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8735,7 +8735,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > sensor_updated: Mon, 02/02, 18:47:05
+           * > sensor_updated: Mon, 02/02, 19:07:05
            * > ```
            */ sensor_updated: string;
           /**
@@ -8790,7 +8790,7 @@ declare module "@digital-alchemy/hass" {
            */ went_3km: string;
           /**
            * > ```yaml
-           * > zones (calculated distance) (mi): '2026-02-02 18:47:05'
+           * > zones (calculated distance) (mi): '2026-02-02 19:07:05'
            * > ```
            */ "zones (calculated distance) (mi)": string;
           /**
@@ -13010,7 +13010,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           entity_id: (
@@ -13110,7 +13110,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -13246,7 +13246,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 151
+           * > brightness: 132
            * > ```
            */ brightness: number;
           /**
@@ -13511,7 +13511,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -13647,7 +13647,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 209
+           * > brightness: 200
            * > ```
            */ brightness: number;
           /**
@@ -13783,7 +13783,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -13887,7 +13887,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 151
+           * > brightness: 132
            * > ```
            */ brightness: number;
           /**
@@ -13966,7 +13966,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -14070,7 +14070,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -14252,7 +14252,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -14355,7 +14355,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -14491,7 +14491,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 209
+           * > brightness: 200
            * > ```
            */ brightness: number;
           /**
@@ -14627,7 +14627,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -14892,7 +14892,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -14996,7 +14996,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 151
+           * > brightness: 132
            * > ```
            */ brightness: number;
           /**
@@ -15132,7 +15132,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -15211,7 +15211,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -15387,7 +15387,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -15491,7 +15491,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 151
+           * > brightness: 132
            * > ```
            */ brightness: number;
           /**
@@ -15659,7 +15659,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -15769,7 +15769,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -15867,7 +15867,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 209
+           * > brightness: 200
            * > ```
            */ brightness: number;
           /**
@@ -15955,7 +15955,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 151
+           * > brightness: 132
            * > ```
            */ brightness: number;
           /**
@@ -16065,7 +16065,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -16175,7 +16175,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 181
+           * > brightness: 167
            * > ```
            */ brightness: number;
           /**
@@ -16291,7 +16291,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 174
+           * > brightness: 159
            * > ```
            */ brightness: number;
           /**
@@ -16461,7 +16461,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 68.42491977198651
+           * > brightness_pct: 62.41450983082883
            * > ```
            */ brightness_pct: number;
           /**
@@ -16479,7 +16479,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.451072574685907
+           * > sun_position: -0.5369355738453024
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -16536,7 +16536,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 81.95704727752636
+           * > brightness_pct: 78.52250599593695
            * > ```
            */ brightness_pct: number;
           /**
@@ -16554,7 +16554,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.4510738180618411
+           * > sun_position: -0.5369373501015762
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -16611,7 +16611,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 68.42481570127647
+           * > brightness_pct: 62.41437016490957
            * > ```
            */ brightness_pct: number;
           /**
@@ -16629,7 +16629,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.4510740614103361
+           * > sun_position: -0.5369375690727204
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -16686,7 +16686,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 59.40326917222769
+           * > brightness_pct: 51.675580979993406
            * > ```
            */ brightness_pct: number;
           /**
@@ -16704,7 +16704,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.45107478697524794
+           * > sun_position: -0.5369379891111844
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -20797,17 +20797,17 @@ declare module "@digital-alchemy/hass" {
           )[];
           /**
            * > ```yaml
-           * > latitude: 53.47925281752059
+           * > latitude: 53.47926545691338
            * > ```
            */ latitude: number;
           /**
            * > ```yaml
-           * > longitude: -2.2206404561425583
+           * > longitude: -2.220810710504178
            * > ```
            */ longitude: number;
           /**
            * > ```yaml
-           * > gps_accuracy: 13
+           * > gps_accuracy: 19
            * > ```
            */ gps_accuracy: number;
           /**
@@ -20943,12 +20943,12 @@ declare module "@digital-alchemy/hass" {
            */ next_setting: string;
           /**
            * > ```yaml
-           * > elevation: -16.96
+           * > elevation: -21.21
            * > ```
            */ elevation: number;
           /**
            * > ```yaml
-           * > azimuth: 264.79
+           * > azimuth: 270.47
            * > ```
            */ azimuth: number;
           rising: boolean;
@@ -21101,7 +21101,7 @@ declare module "@digital-alchemy/hass" {
            */ volume_level: number;
           /**
            * > ```yaml
-           * > media_content_id: spotify:track:6WfL1pwMyFf3IvFWLnre4P
+           * > media_content_id: spotify:track:5TaNnFsq2RSPHpsb8euzib
            * > ```
            */ media_content_id: string;
           /**
@@ -21111,32 +21111,32 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 286
+           * > media_duration: 355
            * > ```
            */ media_duration: number;
           /**
            * > ```yaml
-           * > media_position: 90
+           * > media_position: 301
            * > ```
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-02T18:49:52.058448+00:00'
+           * > media_position_updated_at: '2026-02-02T19:16:54.147526+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Work It - Soulwax Remix
+           * > media_title: Blackpool Boulevard
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Marie Davidson, Soulwax
+           * > media_artist: Anish Kumar, Barry Can't Swim
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Work It (Soulwax Remix)
+           * > media_album_name: Blackpool Boulevard
            * > ```
            */ media_album_name: string;
           /**
@@ -21158,7 +21158,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.spotify_ben_wainwright?token=53006cc41ca72427081dbe3fb957af1cab7d36cf2812d75f178812b367e0690c&cache=b97e7ed588a3742d
+           * >   /api/media_player_proxy/media_player.spotify_ben_wainwright?token=53006cc41ca72427081dbe3fb957af1cab7d36cf2812d75f178812b367e0690c&cache=6a3638b02fd84d49
            * > ```
            */ entity_picture: string;
           friendly_name: "Spotify Ben Wainwright";
@@ -21196,7 +21196,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 286
+           * > media_duration: 355
            * > ```
            */ media_duration: number;
           /**
@@ -21206,22 +21206,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-02T18:48:21.461025+00:00'
+           * > media_position_updated_at: '2026-02-02T19:11:53.513179+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Work It - Soulwax Remix
+           * > media_title: Blackpool Boulevard
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Marie Davidson
+           * > media_artist: Anish Kumar
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Work It (Soulwax Remix)
+           * > media_album_name: Blackpool Boulevard
            * > ```
            */ media_album_name: string;
           /**
@@ -21244,7 +21244,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.sonos_arc_ultra?token=8ece95c6bdd20e8caa54c4b458cafc6b2e0352e987ae835f92575fe8219ba3b0&cache=b97e7ed588a3742d
+           * >   /api/media_player_proxy/media_player.sonos_arc_ultra?token=8ece95c6bdd20e8caa54c4b458cafc6b2e0352e987ae835f92575fe8219ba3b0&cache=6a3638b02fd84d49
            * > ```
            */ entity_picture: string;
           friendly_name: "Sonos Arc Ultra";
@@ -21739,7 +21739,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: spotify:track:6WfL1pwMyFf3IvFWLnre4P
+           * > media_content_id: spotify:track:5TaNnFsq2RSPHpsb8euzib
            * > ```
            */ media_content_id: string;
           /**
@@ -21749,7 +21749,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 286
+           * > media_duration: 355
            * > ```
            */ media_duration: number;
           /**
@@ -21759,22 +21759,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-02T18:48:21.442417+00:00'
+           * > media_position_updated_at: '2026-02-02T19:11:53.500028+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Work It - Soulwax Remix
+           * > media_title: Blackpool Boulevard
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Marie Davidson
+           * > media_artist: Anish Kumar
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Work It (Soulwax Remix)
+           * > media_album_name: Blackpool Boulevard
            * > ```
            */ media_album_name: string;
           /**
@@ -21790,7 +21790,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.unnamed_room_2?token=0245c8283c6b840022e991cbfee563104e99c2b3776d3af540a0a3fd58202c91&cache=b97e7ed588a3742d
+           * >   /api/media_player_proxy/media_player.unnamed_room_2?token=0245c8283c6b840022e991cbfee563104e99c2b3776d3af540a0a3fd58202c91&cache=6a3638b02fd84d49
            * > ```
            */ entity_picture_local: string;
           /**
@@ -21802,7 +21802,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b27323f124430f283cab7298fb91
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2733884a8730cf58a571eab9d00
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -22038,32 +22038,32 @@ declare module "@digital-alchemy/hass" {
           source_type: "gps";
           /**
            * > ```yaml
-           * > battery_level: 100
+           * > battery_level: 10
            * > ```
            */ battery_level: number;
           /**
            * > ```yaml
-           * > latitude: 53.47925281752059
+           * > latitude: 53.47926545691338
            * > ```
            */ latitude: number;
           /**
            * > ```yaml
-           * > longitude: -2.2206404561425583
+           * > longitude: -2.220810710504178
            * > ```
            */ longitude: number;
           /**
            * > ```yaml
-           * > gps_accuracy: 13
+           * > gps_accuracy: 19
            * > ```
            */ gps_accuracy: number;
           /**
            * > ```yaml
-           * > altitude: 53.05918892290939
+           * > altitude: 54.54788154762625
            * > ```
            */ altitude: number;
           /**
            * > ```yaml
-           * > vertical_accuracy: 30
+           * > vertical_accuracy: 19
            * > ```
            */ vertical_accuracy: number;
           friendly_name: "iPhone";
@@ -22208,7 +22208,7 @@ declare module "@digital-alchemy/hass" {
            */ away_time_zone_offset: string;
           /**
            * > ```yaml
-           * > '----- LOCATION INFO --------------------': '2026-02-02 18:47:05'
+           * > '----- LOCATION INFO --------------------': '2026-02-02 19:07:05'
            * > ```
            */ "----- LOCATION INFO --------------------": string;
           /**
@@ -22278,7 +22278,7 @@ declare module "@digital-alchemy/hass" {
            */ zone_changed: string;
           /**
            * > ```yaml
-           * > next_update: '2026-02-02 18:52:05'
+           * > next_update: '2026-02-02 19:22:05'
            * > ```
            */ next_update: string;
           /**
@@ -22323,14 +22323,14 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 13f803857c9c4326b6bdaab760c76e101f8a3a347e3a8b3e66121bafabab92a5
+           * > access_token: 2948ccfe21ca8309f371688046db226d285cd43f4116a0164841522290248ead
            * > ```
            */ access_token: string;
           motion_detection: boolean;
           /**
            * > ```yaml
            * > video_url: >-
-           * >   https://download-eu-west-1.prod.phoenix.devices.amazon.dev/v1/download/efeaf0dc-0067-11f1-9862-06cdb5e6a26f.mp4?X-Amz-Date=20260202T184943Z&X-Amz-Expires=900&id=fad405cd918b27da8b39f6230451fa61&req_id=efea5269006711f1_efea608c006711f1&req_type=TranscodingRequest&security_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJSaW5nRXZlbnRNYW5hZ2VyLXByb2QiLCJlbmQiOjE3NzAwMjQwMDUwNjcsImV4cCI6MTc3MDA1OTA4MywiaWF0IjoxNzcwMDU4MTgzLCJpZCI6IjU0MDM1MTE2MCIsInN0YXJ0IjoxNzcwMDIzOTg4M... [truncated]
+           * >   https://download-eu-west-1.prod.phoenix.devices.amazon.dev/v1/download/b6738b68-006b-11f1-b0fc-06f272def667.mp4?X-Amz-Date=20260202T191644Z&X-Amz-Expires=900&id=f69d80e41fd79a3a518276df253178fe&req_id=b6731b83006b11f1_b673273f006b11f1&req_type=TranscodingRequest&security_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJSaW5nRXZlbnRNYW5hZ2VyLXByb2QiLCJlbmQiOjE3NzAwMjQwMDUwNjcsImV4cCI6MTc3MDA2MDcwNCwiaWF0IjoxNzcwMDU5ODA0LCJpZCI6IjU0MDM1MTE2MCIsInN0YXJ0IjoxNzcwMDIzOTg4M... [truncated]
            * > ```
            */ video_url: string;
           /**
@@ -22346,7 +22346,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/camera_proxy/camera.front_door_live_view?token=13f803857c9c4326b6bdaab760c76e101f8a3a347e3a8b3e66121bafabab92a5
+           * >   /api/camera_proxy/camera.front_door_live_view?token=2948ccfe21ca8309f371688046db226d285cd43f4116a0164841522290248ead
            * > ```
            */ entity_picture: string;
           friendly_name: "Front Door Live view";
@@ -22365,14 +22365,14 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: c654a9f1151ab9b101a2399b44f8ede6da89edf3c359b97b1fda7f8256619172
+           * > access_token: d7b069e3d1b63700e4cb38c20675a8aeffa11959fec15d1b705c94147405a9f4
            * > ```
            */ access_token: string;
           motion_detection: boolean;
           /**
            * > ```yaml
            * > video_url: >-
-           * >   https://download-eu-west-1.prod.phoenix.devices.amazon.dev/v1/download/f008a998-0067-11f1-8548-02bd606e1491.mp4?X-Amz-Date=20260202T184943Z&X-Amz-Expires=900&id=e7c8728a9977a52f5a8908183882cdfc&req_id=f008497a006711f1_f008544a006711f1&req_type=TranscodingRequest&security_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJSaW5nRXZlbnRNYW5hZ2VyLXByb2QiLCJlbmQiOjE3NzAwMjQwMDUwNjcsImV4cCI6MTc3MDA1OTA4MywiaWF0IjoxNzcwMDU4MTgzLCJpZCI6IjU0MDM1MTE2MCIsInN0YXJ0IjoxNzcwMDIzOTg4M... [truncated]
+           * >   https://download-eu-west-1.prod.phoenix.devices.amazon.dev/v1/download/b6914356-006b-11f1-926b-0a5c461abd83.mp4?X-Amz-Date=20260202T191644Z&X-Amz-Expires=900&id=148e25b160c095be3e62c5c2362f4c1d&req_id=b690c901006b11f1_b690d28d006b11f1&req_type=TranscodingRequest&security_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJSaW5nRXZlbnRNYW5hZ2VyLXByb2QiLCJlbmQiOjE3NzAwMjQwMDUwNjcsImV4cCI6MTc3MDA2MDcwNCwiaWF0IjoxNzcwMDU5ODA0LCJpZCI6IjU0MDM1MTE2MCIsInN0YXJ0IjoxNzcwMDIzOTg4M... [truncated]
            * > ```
            */ video_url: string;
           /**
@@ -22388,7 +22388,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/camera_proxy/camera.front_door?token=c654a9f1151ab9b101a2399b44f8ede6da89edf3c359b97b1fda7f8256619172
+           * >   /api/camera_proxy/camera.front_door?token=d7b069e3d1b63700e4cb38c20675a8aeffa11959fec15d1b705c94147405a9f4
            * > ```
            */ entity_picture: string;
           friendly_name: "Front Door Last recording";
@@ -22407,7 +22407,7 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 34ddf3aeadb52dc4634163429de5afbc2dddb43d5b8e57c4f4ea644a4b3ddb03
+           * > access_token: 718e2690892e6e4e9d74928c89633ff3cb513f1828f58509ea0f08f458947a31
            * > ```
            */ access_token: string;
           /**
@@ -22423,7 +22423,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/camera_proxy/camera.front_door_doorbell_mqtt_snapshot?token=34ddf3aeadb52dc4634163429de5afbc2dddb43d5b8e57c4f4ea644a4b3ddb03
+           * >   /api/camera_proxy/camera.front_door_doorbell_mqtt_snapshot?token=718e2690892e6e4e9d74928c89633ff3cb513f1828f58509ea0f08f458947a31
            * > ```
            */ entity_picture: string;
           friendly_name: "Front Door Doorbell MQTT Snapshot";
@@ -24197,25 +24197,23 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > message: 'Manchester queer social '
+           * > message: Work
            * > ```
            */ message: string;
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-02-02 18:00:00'
+           * > start_time: '2026-02-03 09:00:00'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-02-02 19:00:00'
+           * > end_time: '2026-02-03 17:00:00'
            * > ```
            */ end_time: string;
           /**
            * > ```yaml
-           * > location: |-
-           * >   The Molly House
-           * >   26 Richmond St, Manchester, M1 3NB, England
+           * > location: ''
            * > ```
            */ location: string;
           /**
@@ -24297,12 +24295,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-02-02 18:49:40'
+           * > start_time: '2026-02-02 19:16:42'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-02-02 19:49:40'
+           * > end_time: '2026-02-02 20:16:42'
            * > ```
            */ end_time: string;
           /**
@@ -24351,12 +24349,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-02-02 18:49:40'
+           * > start_time: '2026-02-02 19:16:42'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-02-02 19:49:40'
+           * > end_time: '2026-02-02 20:16:42'
            * > ```
            */ end_time: string;
           /**
@@ -24403,12 +24401,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-02-02 18:49:40'
+           * > start_time: '2026-02-02 19:16:42'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-02-02 19:49:40'
+           * > end_time: '2026-02-02 20:16:42'
            * > ```
            */ end_time: string;
           /**
@@ -24504,12 +24502,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-02-02 18:49:40'
+           * > start_time: '2026-02-02 19:16:42'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-02-02 19:49:40'
+           * > end_time: '2026-02-02 20:16:42'
            * > ```
            */ end_time: string;
           /**
@@ -24556,12 +24554,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-02-02 18:49:40'
+           * > start_time: '2026-02-02 19:16:42'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-02-02 19:49:40'
+           * > end_time: '2026-02-02 20:16:42'
            * > ```
            */ end_time: string;
           /**
@@ -24600,12 +24598,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-02-02 18:49:40'
+           * > start_time: '2026-02-02 19:16:42'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-02-02 19:49:40'
+           * > end_time: '2026-02-02 20:16:42'
            * > ```
            */ end_time: string;
           /**
@@ -24644,12 +24642,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-02-02 18:49:40'
+           * > start_time: '2026-02-02 19:16:42'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-02-02 19:49:40'
+           * > end_time: '2026-02-02 20:16:42'
            * > ```
            */ end_time: string;
           /**
@@ -25172,7 +25170,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > recordingUrl: >-
-           * >   https://download-eu-west-1.prod.phoenix.devices.amazon.dev/v1/download/a6791866-0066-11f1-950f-026ac9b4665b.mp4?X-Amz-Date=20260202T184030Z&X-Amz-Expires=900&id=52e42c6443e27faa0c137178394278ea&req_id=a678a659006611f1_a678b1c9006611f1&req_type=TranscodingRequest&security_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJSaW5nRXZlbnRNYW5hZ2VyLXByb2QiLCJlbmQiOjE3NzAwMjQwMDUwNjcsImV4cCI6MTc3MDA1ODUzMCwiaWF0IjoxNzcwMDU3NjMwLCJpZCI6IjU0MDM1MTE2MCIsInN0YXJ0IjoxNzcwMDIzOT... [truncated]
+           * >   https://download-eu-west-1.prod.phoenix.devices.amazon.dev/v1/download/e4288092-006a-11f1-b140-063dc398e36f.mp4?X-Amz-Date=20260202T191051Z&X-Amz-Expires=900&id=1014fdd593d7209863320f7d287f7963&req_id=e4281629006a11f1_e42820a5006a11f1&req_type=TranscodingRequest&security_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJSaW5nRXZlbnRNYW5hZ2VyLXByb2QiLCJlbmQiOjE3NzAwMjQwMDUwNjcsImV4cCI6MTc3MDA2MDM1MSwiaWF0IjoxNzcwMDU5NDUxLCJpZCI6IjU0MDM1MTE2MCIsInN0YXJ0IjoxNzcwMDIzOT... [truncated]
            * > ```
            */ recordingUrl: string;
           /**
@@ -25250,13 +25248,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 619d79fda8c4adb5b19867253bbb72fe9460b584d4f2ee99c9397b09fb195ae2
+           * > access_token: 99054a03aa27982e2bcc795eeb154e74186a311640b7c7498733414025864933
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.sordidhydra4706_gamerpic?token=619d79fda8c4adb5b19867253bbb72fe9460b584d4f2ee99c9397b09fb195ae2
+           * >   /api/image_proxy/image.sordidhydra4706_gamerpic?token=99054a03aa27982e2bcc795eeb154e74186a311640b7c7498733414025864933
            * > ```
            */ entity_picture: string;
           friendly_name: "SordidHydra4706 Gamerpic";
@@ -25270,13 +25268,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: e6a21b3500c05b35a63564456fd3b7281fad4210df1c4c1ccdb425438dd8cb10
+           * > access_token: 8892063f15c244d0573dc4e68fb7db11dc00559fd6bae37f0837c1a59aa00c1e
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.sordidhydra4706_now_playing?token=e6a21b3500c05b35a63564456fd3b7281fad4210df1c4c1ccdb425438dd8cb10
+           * >   /api/image_proxy/image.sordidhydra4706_now_playing?token=8892063f15c244d0573dc4e68fb7db11dc00559fd6bae37f0837c1a59aa00c1e
            * > ```
            */ entity_picture: string;
           friendly_name: "SordidHydra4706 Now playing";
@@ -25290,13 +25288,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: aa0d50dea24f7b0cef58a5802bb3699ec171c4aa011dab673784884885d8bf02
+           * > access_token: bcac309d4ac2504d8e5977dc744284569b3adfa76293fe4f723bb60e3469c85e
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.sordidhydra4706_avatar?token=aa0d50dea24f7b0cef58a5802bb3699ec171c4aa011dab673784884885d8bf02
+           * >   /api/image_proxy/image.sordidhydra4706_avatar?token=bcac309d4ac2504d8e5977dc744284569b3adfa76293fe4f723bb60e3469c85e
            * > ```
            */ entity_picture: string;
           friendly_name: "SordidHydra4706 Avatar";
@@ -25310,13 +25308,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 133a06bd5baaac643b45a134c87fef46359ea9a9cfc3aca505af9d67c98ddeae
+           * > access_token: 27f8c50ea94878bab2d569220d9b943a46a3332cccde022e8c96536ab9418d6a
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.ryanwj1925_gamerpic?token=133a06bd5baaac643b45a134c87fef46359ea9a9cfc3aca505af9d67c98ddeae
+           * >   /api/image_proxy/image.ryanwj1925_gamerpic?token=27f8c50ea94878bab2d569220d9b943a46a3332cccde022e8c96536ab9418d6a
            * > ```
            */ entity_picture: string;
           friendly_name: "ryanwj1925 Gamerpic";
@@ -25330,13 +25328,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 4f5dcab1bbd7c581590b58fe3dd1459d8db717db84c38c80be0680220b69c039
+           * > access_token: e6d748bc22ed016174fbafb07235fafa83fede484e02911768a1e2764d2cb216
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.ryanwj1925_now_playing?token=4f5dcab1bbd7c581590b58fe3dd1459d8db717db84c38c80be0680220b69c039
+           * >   /api/image_proxy/image.ryanwj1925_now_playing?token=e6d748bc22ed016174fbafb07235fafa83fede484e02911768a1e2764d2cb216
            * > ```
            */ entity_picture: string;
           friendly_name: "ryanwj1925 Now playing";
@@ -25350,13 +25348,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 6cbe5e046dc4b637ae65000186bd03642a7983dcb8dd9741a9b309d231545669
+           * > access_token: e9b6148fcf48dc0ce3153e7b754b7e7fc0adafff6b7bafe428eb4405f3585bf6
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.ryanwj1925_avatar?token=6cbe5e046dc4b637ae65000186bd03642a7983dcb8dd9741a9b309d231545669
+           * >   /api/image_proxy/image.ryanwj1925_avatar?token=e9b6148fcf48dc0ce3153e7b754b7e7fc0adafff6b7bafe428eb4405f3585bf6
            * > ```
            */ entity_picture: string;
           friendly_name: "ryanwj1925 Avatar";
