@@ -3,7 +3,7 @@
 
 // Missing attributes?
 // https://docs.digital-alchemy.app/docs/home-automation/type-writer/custom-attributes
-import { DynamicMergeAttributes } from "@digital-alchemy/hass";
+import type { DynamicMergeAttributes } from "@digital-alchemy/hass";
 
 declare module "@digital-alchemy/hass" {
   export interface HassEntitySetupMapping {

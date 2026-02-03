@@ -1,5 +1,5 @@
-import { TServiceParams, type TOffset } from "@digital-alchemy/core";
-import { PICK_ENTITY } from "@digital-alchemy/hass";
+import type { TServiceParams, TOffset } from "@digital-alchemy/core";
+import type { PICK_ENTITY } from "@digital-alchemy/hass";
 
 interface IMotionSwitchConfig {
   /**
@@ -27,8 +27,11 @@ interface IMotionSwitchConfig {
   timeout: TOffset;
 }
 
-export const MotionLightsService = ({ synapse, context, scheduler, hass }: TServiceParams) => {
-  const motionControlledLight = ({
+/**
+ * Create a motion sensor controlled light
+ */
+export const CreateMotionLightService = ({ synapse, context, scheduler, hass }: TServiceParams) => {
+  const create = ({
     switchName,
     sensorId,
     lightId,
@@ -45,8 +48,8 @@ export const MotionLightsService = ({ synapse, context, scheduler, hass }: TServ
 
     theSensor.onUpdate(async (_, newState) => {
       const anyBlockSwitchIsOn = blockSwitches
-        .map(hass.refBy.id)
-        .some(theSwitch => theSwitch.state === "on");
+        ?.map(hass.refBy.id)
+        .some((theSwitch) => theSwitch.state === "on");
 
       if (newState.state === "on" && theSwitch.is_on && !anyBlockSwitchIsOn) {
         await theLight.turn_on();
@@ -57,5 +60,5 @@ export const MotionLightsService = ({ synapse, context, scheduler, hass }: TServ
     });
   };
 
-  return { motionControlledLight };
+  return { create };
 };

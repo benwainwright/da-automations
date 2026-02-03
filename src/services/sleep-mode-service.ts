@@ -1,23 +1,21 @@
-import { TServiceParams } from "@digital-alchemy/core";
-import { PICK_ENTITY } from "@digital-alchemy/hass";
+import type { TServiceParams } from "@digital-alchemy/core";
+import type { PICK_ENTITY } from "@digital-alchemy/hass";
 
-export const SleepMode = ({ hass, context, synapse }: TServiceParams) => {
-  const sleepModeSwitch = synapse.switch({
+export const SleepModeService = ({ hass, context, synapse }: TServiceParams) => {
+  const sleepMode = synapse.switch({
     name: "Sleep Mode",
     context,
   });
-
-  const theSwitch = hass.refBy.id(sleepModeSwitch.entity_id);
 
   hass.socket.onEvent({
     context,
     event: "sleep_mode_event",
     async exec() {
-      await theSwitch.turn_on();
+      await sleepMode.getEntity().turn_on();
     },
   });
 
-  theSwitch.onUpdate(async (oldState, newState) => {
+  sleepMode.getEntity().onUpdate(async (oldState, newState) => {
     if (oldState.state === "off" && newState.state === "on") {
       const adaptiveLightingSleepModeSwitches: PICK_ENTITY<"switch">[] = [
         "switch.adaptive_lighting_sleep_mode_bathroom",
@@ -32,5 +30,5 @@ export const SleepMode = ({ hass, context, synapse }: TServiceParams) => {
     }
   });
 
-  return { sleepModeSwitch: theSwitch };
+  return { sleepModeSwitch: sleepMode.getEntity() };
 };

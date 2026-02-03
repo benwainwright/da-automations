@@ -1,16 +1,14 @@
-import {
+import type {
   ApplicationDefinition,
   OptionalModuleConfiguration,
   ServiceFunction,
 } from "@digital-alchemy/core";
-import type { MotionLightsService } from "./services/lights.mts";
-import type { TVModeService } from "./services/tv-mode";
-import { SleepMode } from "./services/sleep-mode.mts";
+import { CreateMotionLightService, SleepModeService, TVModeService } from "@services";
 
 type HomeAutomationServices = {
   tvMode: typeof TVModeService;
-  lights: typeof MotionLightsService;
-  sleepMode: typeof SleepMode;
+  motionLights: typeof CreateMotionLightService;
+  sleepMode: typeof SleepModeService;
   core: ServiceFunction;
 };
 

@@ -48,7 +48,6 @@ export const InstalledAddons = {
   qBittorrent: "db21ed7f_qbittorrent",
 } as const;
 
-
 import {
   AndroidNotificationData,
   AppleNotificationData,
