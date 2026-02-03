@@ -1,3 +1,0 @@
-{
-  "*.{ts,mts,js,mjs}": ["oxfmt", "tsgo"]
-}

@@ -113,7 +113,7 @@
       "prettier": {
         "allowed": false
       },
-      "language_servers": ["tsgo"],
+      "language_servers": ["vtsls", "!eslint"],
       "formatter": [
         {
           "language_server": {
