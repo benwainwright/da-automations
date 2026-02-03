@@ -1,6 +1,6 @@
 import type { TServiceParams } from "@digital-alchemy/core";
 
-export const CoreModule = ({ bens_flat }: TServiceParams) => {
+export function CoreModule({ bens_flat }: TServiceParams) {
   const { motionLights, sleepMode, tvMode } = bens_flat;
   motionLights.create({
     switchName: "Bedroom motion sensor",
@@ -31,4 +31,4 @@ export const CoreModule = ({ bens_flat }: TServiceParams) => {
     sensorId: "binary_sensor.hallway_motion_sensor_occupancy",
     timeout: "2m",
   });
-};
+}

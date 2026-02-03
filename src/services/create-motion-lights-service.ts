@@ -30,7 +30,7 @@ interface IMotionSwitchConfig {
 /**
  * Create a motion sensor controlled light
  */
-export const CreateMotionLightService = ({ synapse, context, scheduler, hass }: TServiceParams) => {
+export function CreateMotionLightService({ synapse, context, scheduler, hass }: TServiceParams) {
   const create = ({
     switchName,
     sensorId,
@@ -61,4 +61,4 @@ export const CreateMotionLightService = ({ synapse, context, scheduler, hass }: 
   };
 
   return { create };
-};
+}

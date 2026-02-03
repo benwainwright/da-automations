@@ -21,4 +21,10 @@ const HOME_AUTOMATION = CreateApplication({
   },
 });
 
+declare module "@digital-alchemy/core" {
+  export interface LoadedModules {
+    bens_flat: typeof HOME_AUTOMATION;
+  }
+}
+
 export { HOME_AUTOMATION };

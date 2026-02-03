@@ -1,7 +1,7 @@
 import type { TServiceParams } from "@digital-alchemy/core";
 import type { PICK_ENTITY } from "@digital-alchemy/hass";
 
-export const SleepModeService = ({ hass, context, synapse }: TServiceParams) => {
+export function SleepModeService({ hass, context, synapse }: TServiceParams) {
   const sleepMode = synapse.switch({
     name: "Sleep Mode",
     context,
@@ -31,4 +31,4 @@ export const SleepModeService = ({ hass, context, synapse }: TServiceParams) => 
   });
 
   return { sleepModeSwitch: sleepMode.getEntity() };
-};
+}
