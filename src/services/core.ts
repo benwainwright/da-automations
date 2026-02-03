@@ -1,6 +1,7 @@
 import type { TServiceParams } from "@digital-alchemy/core";
 
-export const CoreModule = ({ bens_flat: { motionLights, sleepMode, tvMode } }: TServiceParams) => {
+export const CoreModule = ({ bens_flat }: TServiceParams) => {
+  const { motionLights, sleepMode, tvMode } = bens_flat;
   motionLights.create({
     switchName: "Bedroom motion sensor",
     lightId: "light.bedroom",

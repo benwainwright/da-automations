@@ -1,4 +1,4 @@
-import { HOME_AUTOMATION } from "./app.module";
+import { HOME_AUTOMATION } from "./app.module.ts";
 
 void HOME_AUTOMATION.bootstrap({
   bootLibrariesFirst: false,
