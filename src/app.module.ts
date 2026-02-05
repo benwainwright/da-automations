@@ -5,6 +5,7 @@ import { CreateApplication } from "@digital-alchemy/core";
 import { LIB_HASS } from "@digital-alchemy/hass";
 import { LIB_SYNAPSE } from "@digital-alchemy/synapse";
 
+import { PresenceDetectionService } from "./services/presence-detection-service.ts";
 import {
   CoreModule,
   CreateMotionLightService,
@@ -12,7 +13,6 @@ import {
   SleepModeService,
   TVModeService,
 } from "@services";
-import { PresenceDetectionService } from "./services/presence-detection-service.ts";
 
 const HOME_AUTOMATION = CreateApplication({
   configuration: {},
