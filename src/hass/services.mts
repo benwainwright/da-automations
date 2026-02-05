@@ -5,6 +5,7 @@ import "@digital-alchemy/hass";
 export const InstalledAddons = {
   "File editor": "core_configurator",
   "Get HACS": "cb646a50_get",
+  "Matter Server": "core_matter_server",
   "Mosquitto broker": "core_mosquitto",
   "Studio Code Server": "a0d7b954_vscode",
   "Z-Wave JS": "core_zwave_js",
@@ -808,6 +809,315 @@ declare module "@digital-alchemy/hass" {
         manual_control?: boolean;
       }) => Promise<void>;
     };
+    // # MARK: alarm_control_panel
+    alarm_control_panel: {
+      /**
+       * ### alarm_arm_away
+       *
+       * >
+       */
+      alarm_arm_away: (
+        service_data?: {
+          /**
+           * ## code
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "code": "1234"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          code?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - alarm_control_panel
+           * >     supported_features:
+           * >       - 2
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### alarm_arm_custom_bypass
+       *
+       * >
+       */
+      alarm_arm_custom_bypass: (
+        service_data?: {
+          /**
+           * ## code
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "code": "1234"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          code?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - alarm_control_panel
+           * >     supported_features:
+           * >       - 16
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### alarm_arm_home
+       *
+       * >
+       */
+      alarm_arm_home: (
+        service_data?: {
+          /**
+           * ## code
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "code": "1234"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          code?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - alarm_control_panel
+           * >     supported_features:
+           * >       - 1
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### alarm_arm_night
+       *
+       * >
+       */
+      alarm_arm_night: (
+        service_data?: {
+          /**
+           * ## code
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "code": "1234"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          code?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - alarm_control_panel
+           * >     supported_features:
+           * >       - 4
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### alarm_arm_vacation
+       *
+       * >
+       */
+      alarm_arm_vacation: (
+        service_data?: {
+          /**
+           * ## code
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "code": "1234"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          code?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - alarm_control_panel
+           * >     supported_features:
+           * >       - 32
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### alarm_disarm
+       *
+       * >
+       */
+      alarm_disarm: (
+        service_data?: {
+          /**
+           * ## code
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "code": "1234"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          code?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - alarm_control_panel
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### alarm_trigger
+       *
+       * >
+       */
+      alarm_trigger: (
+        service_data?: {
+          /**
+           * ## code
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "code": "1234"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          code?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - alarm_control_panel
+           * >     supported_features:
+           * >       - 8
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
     // # MARK: automation
     automation: {
       /**
@@ -1267,7 +1577,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 8
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1306,7 +1616,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 4
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1342,7 +1652,7 @@ declare module "@digital-alchemy/hass" {
            * >       - climate
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1386,7 +1696,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 16
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1430,7 +1740,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 512
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1474,7 +1784,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 32
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1545,7 +1855,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 2
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1569,7 +1879,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 256
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1592,7 +1902,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 128
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1615,7 +1925,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 256
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1891,7 +2201,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 2
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1914,7 +2224,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 32
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1937,7 +2247,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 1
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1960,7 +2270,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 16
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1999,7 +2309,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 4
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -2038,7 +2348,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 128
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -2061,7 +2371,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 8
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -2084,7 +2394,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 64
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -2107,7 +2417,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 3
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -2130,7 +2440,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 48
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -2854,6 +3164,15 @@ declare module "@digital-alchemy/hass" {
          */
         name_dark?: string;
       }) => Promise<void>;
+    };
+    // # MARK: generic_thermostat
+    generic_thermostat: {
+      /**
+       * ### reload
+       *
+       * >
+       */
+      reload: (service_data: EmptyObject) => Promise<void>;
     };
     // # MARK: group
     group: {
@@ -3716,7 +4035,21 @@ declare module "@digital-alchemy/hass" {
           | "01KGPDQQB2C6ZWJ9HPN4BZSVW3"
           | "01KGPDST4QFKXS0PZKN00QK01M"
           | "01KGPDTX6H3W2C727F7DRH0TET"
-          | "01KGPDV5H7N3HF1RZNSDFHTB7A";
+          | "01KGPDV5H7N3HF1RZNSDFHTB7A"
+          | "01KGQ2PXFHSBENFKYFR4QYRMFZ"
+          | "01KGQ2Q02S1VPGDZNDDE24A1YM"
+          | "01KGQ31C7SJ84Q4DACFK99STK6"
+          | "01KGQ33T2WVF93PC45JP1DWHY4"
+          | "01KGQ3DRCV68YGMKKNTS1RNPBM"
+          | "01KGQ5A47AGX11BWF92W401JH9"
+          | "01KGQ5BMAJXFXEGYBX7S9Q39QF"
+          | "01KGQ5GQ9JA6ZDH9NBG0A9QDZX"
+          | "01KGQ5GS3WWW437ZWZZFBPBXN4"
+          | "01KGQ6T1E82G5VR8XD6KXEW717"
+          | "01KGQ81R7DCYNP5KX4SFGAWVB6"
+          | "01KGQ8JRQWYNZES8JQA8250S97"
+          | "01KGQANDBGAPKSV8W2PPJ8JCMX"
+          | "01KGQAR09X8VNMTE6F55440WPX";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -4873,7 +5206,7 @@ declare module "@digital-alchemy/hass" {
            * >       - lock
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"lock"> | PICK_ENTITY<"lock">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4917,7 +5250,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 1
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"lock"> | PICK_ENTITY<"lock">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4959,7 +5292,7 @@ declare module "@digital-alchemy/hass" {
            * >       - lock
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"lock"> | PICK_ENTITY<"lock">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -5067,6 +5400,88 @@ declare module "@digital-alchemy/hass" {
        * >
        */
       set_level: (service_data: EmptyObject) => Promise<void>;
+    };
+    // # MARK: matter
+    matter: {
+      /**
+       * ### water_heater_boost
+       *
+       * >
+       */
+      water_heater_boost: (
+        service_data?: {
+          /**
+           * ## duration
+           *
+           * ### Default
+           *
+           * > ```json
+           * > 3600
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 60
+           * >   max: 14400
+           * >   step: 60
+           * >   mode: box
+           * > ```
+           */
+          duration: number;
+          /**
+           * ## emergency_boost
+           *
+           * ### Default
+           *
+           * > ```json
+           * > false
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          emergency_boost?: boolean;
+          /**
+           * ## temporary_setpoint
+           *
+           * ### Default
+           *
+           * > ```json
+           * > 65
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 30
+           * >   max: 65
+           * >   step: 1
+           * >   mode: slider
+           * > ```
+           */
+          temporary_setpoint?: number;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - water_heater
+           * >     integration: matter
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
     };
     // # MARK: media_player
     media_player: {
@@ -6058,6 +6473,140 @@ declare module "@digital-alchemy/hass" {
     // # MARK: notify
     notify: {
       /**
+       * ### Send a notification with lg_webos_tv_oled55c8pla
+       *
+       * > Sends a notification message using the lg_webos_tv_oled55c8pla service.
+       */
+      lg_webos_tv_oled55c8pla: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
+       * ### Send a notification via mobile_app_bens_imac_pro
+       *
+       * > Sends a notification message using the mobile_app_bens_imac_pro integration.
+       */
+      mobile_app_bens_imac_pro: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
        * ### Send a notification via mobile_app_bens_phone
        *
        * > Sends a notification message using the mobile_app_bens_phone integration.
@@ -6713,6 +7262,373 @@ declare module "@digital-alchemy/hass" {
         keep_days?: number;
       }) => Promise<void>;
     };
+    // # MARK: remote
+    remote: {
+      /**
+       * ### delete_command
+       *
+       * >
+       */
+      delete_command: (
+        service_data?: {
+          /**
+           * ## command
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "command": "Mute"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > object:
+           * >   multiple: false
+           * > ```
+           */
+          command: Record<string, unknown> | unknown[];
+          /**
+           * ## device
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "device": "television"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          device?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - remote
+           * > ```
+           */
+          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### learn_command
+       *
+       * >
+       */
+      learn_command: (
+        service_data?: {
+          /**
+           * ## alternative
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          alternative?: boolean;
+          /**
+           * ## command
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "command": "Turn on"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > object:
+           * >   multiple: false
+           * > ```
+           */
+          command?: Record<string, unknown> | unknown[];
+          /**
+           * ## command_type
+           *
+           * ### Default
+           *
+           * > ```json
+           * > "ir"
+           * > ```
+           */
+          command_type?: "ir" | "rf";
+          /**
+           * ## device
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "device": "television"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          device?: string;
+          /**
+           * ## timeout
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 0
+           * >   max: 60
+           * >   step: 5
+           * >   unit_of_measurement: seconds
+           * >   mode: slider
+           * > ```
+           */
+          timeout?: number;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - remote
+           * > ```
+           */
+          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### send_command
+       *
+       * >
+       */
+      send_command: (
+        service_data?: {
+          /**
+           * ## command
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "command": "Play"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > object:
+           * >   multiple: false
+           * > ```
+           */
+          command: Record<string, unknown> | unknown[];
+          /**
+           * ## delay_secs
+           *
+           * ### Default
+           *
+           * > ```json
+           * > 0.4
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 0
+           * >   max: 60
+           * >   step: 0.1
+           * >   unit_of_measurement: seconds
+           * >   mode: slider
+           * > ```
+           */
+          delay_secs?: number;
+          /**
+           * ## device
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "device": "32756745"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          device?: string;
+          /**
+           * ## hold_secs
+           *
+           * ### Default
+           *
+           * > ```json
+           * > 0
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 0
+           * >   max: 60
+           * >   step: 0.1
+           * >   unit_of_measurement: seconds
+           * >   mode: slider
+           * > ```
+           */
+          hold_secs?: number;
+          /**
+           * ## num_repeats
+           *
+           * ### Default
+           *
+           * > ```json
+           * > 1
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 0
+           * >   max: 255
+           * >   step: 1
+           * >   mode: slider
+           * > ```
+           */
+          num_repeats?: number;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - remote
+           * > ```
+           */
+          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### toggle
+       *
+       * >
+       */
+      toggle: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - remote
+           * > ```
+           */
+          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### turn_off
+       *
+       * >
+       */
+      turn_off: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - remote
+           * > ```
+           */
+          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### turn_on
+       *
+       * >
+       */
+      turn_on: (
+        service_data?: {
+          /**
+           * ## activity
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "activity": "BedroomTV"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          activity?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - remote
+           * > ```
+           */
+          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
     // # MARK: scene
     scene: {
       /**
@@ -6881,7 +7797,7 @@ declare module "@digital-alchemy/hass" {
            * >       - scene
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"scene"> | PICK_ENTITY<"scene">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -8889,6 +9805,248 @@ declare module "@digital-alchemy/hass" {
         }>,
       ) => Promise<void>;
     };
+    // # MARK: vacuum
+    vacuum: {
+      /**
+       * ### clean_spot
+       *
+       * >
+       */
+      clean_spot: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - vacuum
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### locate
+       *
+       * >
+       */
+      locate: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - vacuum
+           * >     supported_features:
+           * >       - 512
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### pause
+       *
+       * >
+       */
+      pause: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - vacuum
+           * >     supported_features:
+           * >       - 4
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### return_to_base
+       *
+       * >
+       */
+      return_to_base: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - vacuum
+           * >     supported_features:
+           * >       - 16
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### send_command
+       *
+       * >
+       */
+      send_command: (
+        service_data?: {
+          /**
+           * ## command
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "command": "set_dnd_timer"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          command: string;
+          /**
+           * ## params
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "params": "{ \"key\": \"value\" }"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > object:
+           * >   multiple: false
+           * > ```
+           */
+          params?: Record<string, unknown> | unknown[];
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - vacuum
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### set_fan_speed
+       *
+       * >
+       */
+      set_fan_speed: (
+        service_data: {
+          /**
+           * ## fan_speed
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "fan_speed": "low"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          fan_speed: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - vacuum
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### start
+       *
+       * >
+       */
+      start: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - vacuum
+           * >     supported_features:
+           * >       - 8192
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### stop
+       *
+       * >
+       */
+      stop: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - vacuum
+           * >     supported_features:
+           * >       - 8
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
     // # MARK: valve
     valve: {
       /**
@@ -9022,6 +10180,336 @@ declare module "@digital-alchemy/hass" {
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
+    };
+    // # MARK: water_heater
+    water_heater: {
+      /**
+       * ### set_away_mode
+       *
+       * >
+       */
+      set_away_mode: (
+        service_data: {
+          /**
+           * ## away_mode
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          away_mode: boolean;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - water_heater
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### set_operation_mode
+       *
+       * >
+       */
+      set_operation_mode: (
+        service_data: {
+          /**
+           * ## operation_mode
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "operation_mode": "eco"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          operation_mode: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - water_heater
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### set_temperature
+       *
+       * >
+       */
+      set_temperature: (
+        service_data?: {
+          /**
+           * ## operation_mode
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "operation_mode": "eco"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          operation_mode?: string;
+          /**
+           * ## temperature
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 0
+           * >   max: 250
+           * >   step: 0.5
+           * >   mode: box
+           * >   unit_of_measurement: °
+           * > ```
+           */
+          temperature: number;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - water_heater
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### turn_off
+       *
+       * >
+       */
+      turn_off: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - water_heater
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### turn_on
+       *
+       * >
+       */
+      turn_on: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - water_heater
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
+    // # MARK: webostv
+    webostv: {
+      /**
+       * ### button
+       *
+       * >
+       */
+      button: (service_data: {
+        /**
+         * ## button
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "button": "LEFT"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        button: string;
+        /**
+         * ## entity_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   integration: webostv
+         * >   domain:
+         * >     - media_player
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id:
+          | PICK_FROM_PLATFORM<"webostv", "media_player">
+          | PICK_FROM_PLATFORM<"webostv", "media_player">[];
+      }) => Promise<void>;
+      /**
+       * ### command
+       *
+       * >
+       */
+      command: <T = unknown>(service_data?: {
+        /**
+         * ## command
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "command": "system.launcher/open"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        command: string;
+        /**
+         * ## entity_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   integration: webostv
+         * >   domain:
+         * >     - media_player
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id:
+          | PICK_FROM_PLATFORM<"webostv", "media_player">
+          | PICK_FROM_PLATFORM<"webostv", "media_player">[];
+        /**
+         * ## payload
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "payload": "target: https://www.google.com"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        payload?: Record<string, unknown> | unknown[];
+      }) => Promise<T>;
+      /**
+       * ### select_sound_output
+       *
+       * >
+       */
+      select_sound_output: <T = unknown>(service_data: {
+        /**
+         * ## entity_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   integration: webostv
+         * >   domain:
+         * >     - media_player
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id:
+          | PICK_FROM_PLATFORM<"webostv", "media_player">
+          | PICK_FROM_PLATFORM<"webostv", "media_player">[];
+        /**
+         * ## sound_output
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "sound_output": "external_speaker"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        sound_output: string;
+      }) => Promise<T>;
     };
     // # MARK: zone
     zone: {

@@ -1,45 +1,44 @@
-// import type { TServiceParams } from "@digital-alchemy/core";
+import { TServiceParams } from "@digital-alchemy/core";
 
-// export function TVModeService({ hass, synapse, context, bens_flat }: TServiceParams) {
-//   const tvMode = synapse.switch({
-//     name: "TV Mode",
-//     context,
-//   });
+export function TVModeService({ hass, synapse, context }: TServiceParams) {
+  const tvMode = synapse.switch({
+    name: "TV Mode",
+    context,
+  });
 
-//   const xboxInGame = hass.refBy.id("binary_sensor.sordidhydra4706_in_game");
-//   const ps5Console = hass.refBy.id("media_player.wearing_clapper2_ps5_console");
-//   const appleTv = hass.refBy.id("media_player.bens_apple_tv");
+  // const xboxInGame = hass.refBy.id("binary_sensor.sordidhydra4706_in_game");
+  const appleTv = hass.refBy.id("media_player.apple_tv");
 
-//   xboxInGame.onUpdate(async (oldState, newState) => {
-//     if (oldState.state === "off" && newState.state === "on") {
-//       await tvMode.getEntity().turn_on();
-//     } else if (oldState.state === "on" && newState.state === "off") {
-//       await tvMode.getEntity().turn_off();
-//     }
-//   });
+  // xboxInGame.onUpdate(async (oldState, newState) => {
+  //   if (oldState.state === "off" && newState.state === "on") {
+  //     await tvMode.getEntity().turn_on();
+  //   } else if (oldState.state === "on" && newState.state === "off") {
+  //     await tvMode.getEntity().turn_off();
+  //   }
+  // });
 
-//   ps5Console.onUpdate(async (oldState, newState) => {
-//     if (oldState.state === "off" && newState.state === "on") {
-//       await tvMode.getEntity().turn_on();
-//     } else if (oldState.state === "on" && newState.state === "off") {
-//       await tvMode.getEntity().turn_off();
-//     }
-//   });
+  // ps5Console.onUpdate(async (oldState, newState) => {
+  //   if (oldState.state === "off" && newState.state === "on") {
+  //     await tvMode.getEntity().turn_on();
+  //   } else if (oldState.state === "on" && newState.state === "off") {
+  //     await tvMode.getEntity().turn_off();
+  //   }
+  // });
 
-//   appleTv.onUpdate(async (oldState, newState) => {
-//     const attributes = newState.attributes as (typeof newState)["attributes"] & {
-//       app_id: string;
-//     };
+  appleTv.onUpdate(async (oldState, newState) => {
+    const attributes = newState.attributes as (typeof newState)["attributes"] & {
+      app_id: string;
+    };
 
-//     const isYoutube = attributes.app_id === "com.google.ios.youtube";
-//     const isSpotify = attributes.app_id === "com.spotify.client";
+    const isYoutube = attributes.app_id === "com.google.ios.youtube";
+    const isSpotify = attributes.app_id === "com.spotify.client";
 
-//     if (oldState.state === "off" && newState.state === "on" && !isYoutube && !isSpotify) {
-//       await tvMode.getEntity().turn_on();
-//     } else if (oldState.state === "on" && newState.state === "off") {
-//       await tvMode.getEntity().turn_off();
-//     }
-//   });
+    if (oldState.state === "off" && newState.state === "on" && !isYoutube && !isSpotify) {
+      await tvMode.getEntity().turn_on();
+    } else if (oldState.state === "on" && newState.state === "off") {
+      await tvMode.getEntity().turn_off();
+    }
+  });
 
-//   return { tvModeSwitch: tvMode };
-// }
+  return { tvModeSwitch: tvMode };
+}
