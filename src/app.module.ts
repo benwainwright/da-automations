@@ -6,13 +6,11 @@ import { LIB_HASS } from "@digital-alchemy/hass";
 import { LIB_SYNAPSE } from "@digital-alchemy/synapse";
 
 import { PresenceDetectionService } from "./services/presence-detection-service.ts";
-import {
-  CoreModule,
-  CreateMotionLightService,
-  HelpersService,
-  SleepModeService,
-  TVModeService,
-} from "@services";
+import { TVModeService } from "./services/tv-mode-service.ts";
+import { CreateMotionLightService } from "./services/create-motion-lights-service.ts";
+import { SleepModeService } from "./services/seep-mode-service.ts";
+import { CoreModule } from "./services/core.ts";
+import { HelpersService } from "./services/helpers.ts";
 
 const HOME_AUTOMATION = CreateApplication({
   configuration: {},
