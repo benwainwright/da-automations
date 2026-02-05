@@ -7,8 +7,8 @@ import { LIB_SYNAPSE } from "@digital-alchemy/synapse";
 
 import { PresenceDetectionService } from "./services/presence-detection-service.ts";
 import { TVModeService } from "./services/tv-mode-service.ts";
-import { CreateMotionLightService } from "./services/create-motion-lights-service.ts";
-import { SleepModeService } from "./services/seep-mode-service.ts";
+import { LightsService } from "./services/lights-service.ts";
+import { SleepModeService } from "./services/sleep-mode-service.ts";
 import { CoreModule } from "./services/core.ts";
 import { HelpersService } from "./services/helpers.ts";
 
@@ -16,11 +16,11 @@ const HOME_AUTOMATION = CreateApplication({
   configuration: {},
   libraries: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION],
   name: "bens_flat",
-  priorityInit: ["helpers", "motionLights", "sleepMode"],
+  priorityInit: ["helpers", "lights", "sleepMode"],
   services: {
     tvMode: TVModeService,
     presence: PresenceDetectionService,
-    motionLights: CreateMotionLightService,
+    lights: LightsService,
     sleepMode: SleepModeService,
     core: CoreModule,
     helpers: HelpersService,

@@ -11,21 +11,21 @@ export function HelpersService({ hass }: TServiceParams) {
     "binary_sensor.living_room_occupancy",
   ];
 
-  const turnOffSwitches = async (switches: PICK_ENTITY<"switch">[]) => {
+  const turnOffAll = async (switches: PICK_ENTITY<"switch" | "light">[]) => {
     await Promise.all(
-      switches.map(async (theSwitch) => await hass.call.switch.turn_off({ entity_id: theSwitch })),
+      switches.map(hass.refBy.id).map(async (theThing) => await theThing.turn_on()),
     );
   };
 
-  const turnOnSwitches = async (switches: PICK_ENTITY<"switch">[]) => {
+  const turnOnAll = async (switches: PICK_ENTITY<"switch" | "light">[]) => {
     await Promise.all(
-      switches.map(async (theSwitch) => await hass.call.switch.turn_on({ entity_id: theSwitch })),
+      switches.map(hass.refBy.id).map(async (theThing) => await theThing.turn_off()),
     );
   };
 
   return {
-    turnOffSwitches,
-    turnOnSwitches,
+    turnOffAll,
+    turnOnAll,
     allAreas,
     allMotionSensors,
   };

@@ -7,14 +7,30 @@ interface NotifyConfig {
 
 export function NotificationService({ hass }: TServiceParams) {
   const tv = hass.refBy.id("media_player.tv");
-  const notify = ({ message, title }: NotifyConfig) => {
+  const notify = async ({ message, title }: NotifyConfig) => {
     if (tv.state === "on") {
       hass.call.notify.lg_webos_tv_oled55c8pla({
         message,
         title,
       });
+
+      await hass.call.notify.mobile_app_bens_phone.call({ message, title });
     }
   };
 
-  return { notify };
+  const notifyCritical = async ({ message, title }: NotifyConfig) => {
+    if (tv.state === "on") {
+      hass.call.notify.lg_webos_tv_oled55c8pla({
+        message,
+        title,
+        data: {
+          push: {
+            interruption_level: "critical",
+          },
+        },
+      });
+    }
+  };
+
+  return { notify, notifyCritical };
 }

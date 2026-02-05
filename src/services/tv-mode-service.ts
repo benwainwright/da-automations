@@ -4,6 +4,7 @@ export function TVModeService({ hass, synapse, context }: TServiceParams) {
   const tvMode = synapse.switch({
     name: "TV Mode",
     context,
+    icon: "mdi:television",
   });
 
   // const xboxInGame = hass.refBy.id("binary_sensor.sordidhydra4706_in_game");

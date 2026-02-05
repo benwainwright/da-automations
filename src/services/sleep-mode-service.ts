@@ -2,11 +2,12 @@ import { type TServiceParams } from "@digital-alchemy/core";
 import type { PICK_ENTITY } from "@digital-alchemy/hass";
 
 export function SleepModeService({ hass, context, synapse, bens_flat }: TServiceParams) {
-  const { helpers } = bens_flat;
+  const { helpers, lights } = bens_flat;
 
   const sleepMode = synapse.switch({
     name: "Sleep Mode",
     context,
+    icon: "mdi:sleep",
   });
 
   hass.socket.onEvent({
@@ -25,11 +26,12 @@ export function SleepModeService({ hass, context, synapse, bens_flat }: TService
   ];
 
   sleepMode.onTurnOn(async () => {
-    await helpers.turnOnSwitches(adaptiveLightingSleepModeSwitches);
+    await lights.turnOffAll();
+    await helpers.turnOnAll(adaptiveLightingSleepModeSwitches);
   });
 
   sleepMode.onTurnOff(async () => {
-    await helpers.turnOffSwitches(adaptiveLightingSleepModeSwitches);
+    await helpers.turnOffAll(adaptiveLightingSleepModeSwitches);
   });
 
   return { sleepModeSwitch: sleepMode };

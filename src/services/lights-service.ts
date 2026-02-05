@@ -30,14 +30,28 @@ interface IMotionSwitchConfig {
 /**
  * Create a motion sensor controlled light
  */
-export function CreateMotionLightService({
+export function LightsService({
   synapse,
   context,
   scheduler,
   hass,
   logger,
+  bens_flat,
 }: TServiceParams) {
-  const create = ({ switchName, sensorId, area, timeout, blockSwitches }: IMotionSwitchConfig) => {
+  const { helpers } = bens_flat;
+
+  const turnOffAll = async () => {
+    const lights = hass.refBy.domain(`light`);
+    await helpers.turnOffAll(lights.map((entity) => entity.entity_id));
+  };
+
+  const setupMotionTrigger = ({
+    switchName,
+    sensorId,
+    area,
+    timeout,
+    blockSwitches,
+  }: IMotionSwitchConfig) => {
     const theSwitch = synapse.switch({
       name: switchName,
       attributes: {
@@ -68,5 +82,5 @@ export function CreateMotionLightService({
     });
   };
 
-  return { create };
+  return { setupMotionTrigger, turnOffAll };
 }
