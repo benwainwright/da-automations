@@ -45,5 +45,5 @@ export function PresenceDetectionService({
     });
   });
 
-  return { flatIsOccupied: flatIsOccupied.getEntity() };
+  return { flatIsOccupied: flatIsOccupied };
 }

@@ -26,6 +26,9 @@ export function TVModeService({ hass, synapse, context }: TServiceParams) {
   // });
 
   appleTv.onUpdate(async (oldState, newState) => {
+    if (!newState) {
+      return;
+    }
     const attributes = newState.attributes as (typeof newState)["attributes"] & {
       app_id: string;
     };

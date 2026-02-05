@@ -21,7 +21,7 @@ export function CoreModule({ bens_flat, hass, lifecycle }: TServiceParams) {
     motionLights.create({
       switchName: "Bedroom motion sensor",
       area: "bedroom",
-      blockSwitches: [sleepMode.sleepModeSwitch.entity_id],
+      blockSwitches: [sleepMode.sleepModeSwitch.getEntity().entity_id],
       sensorId: "binary_sensor.bedroom_occupancy",
       timeout: "10m",
     });
@@ -33,7 +33,7 @@ export function CoreModule({ bens_flat, hass, lifecycle }: TServiceParams) {
       timeout: "2m",
     });
 
-    presence.flatIsOccupied.onUpdate(async (newState, oldState) => {
+    presence.flatIsOccupied.getEntity().onUpdate(async (newState, oldState) => {
       if (oldState.state === "on" && newState.state === "off") {
         const allLights = hass.refBy.domain("light").map((entity) => entity.entity_id);
         await hass.call.light.turn_off({ entity_id: allLights });

@@ -32,5 +32,5 @@ export function SleepModeService({ hass, context, synapse, bens_flat }: TService
     await helpers.turnOffSwitches(adaptiveLightingSleepModeSwitches);
   });
 
-  return { sleepModeSwitch: sleepMode.getEntity() };
+  return { sleepModeSwitch: sleepMode };
 }
