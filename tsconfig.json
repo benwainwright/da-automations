@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@services": ["./src/services/index.ts"]
+    },
     "allowJs": false,
     "alwaysStrict": false,
     "esModuleInterop": true,
@@ -21,8 +24,8 @@
     "strictFunctionTypes": false,
     "target": "ESNext",
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": true
   },
   "include": ["src/**/*.ts", "src/**/*.mts"],
-  "exclude": ["node_modules", "tmp", "dist", "src/**/*.spec.ts"],
+  "exclude": ["node_modules", "tmp", "dist", "src/**/*.spec.ts"]
 }

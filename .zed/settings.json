@@ -58,6 +58,7 @@
       "prettier": {
         "allowed": false
       },
+      "language_servers": ["vtsls", "!eslint"],
       "formatter": [
         {
           "language_server": {
@@ -113,7 +114,7 @@
       "prettier": {
         "allowed": false
       },
-      "language_servers": ["tsgo", "!vtsls", "!eslint"],
+      "language_servers": ["vtsls", "!eslint"],
       "formatter": [
         {
           "language_server": {
@@ -123,7 +124,7 @@
       ]
     },
     "TSX": {
-      "language_servers": ["tsgo", "!vtsls", "!eslint"],
+      "language_servers": ["vtsls", "!eslint"],
       "format_on_save": "on",
       "prettier": {
         "allowed": false

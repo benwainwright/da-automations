@@ -3,49 +3,12 @@
 import "@digital-alchemy/hass";
 
 export const InstalledAddons = {
-  "AdGuard Home": "a0d7b954_adguard",
-  "Advanced SSH & Web Terminal": "a0d7b954_ssh",
-  AppDaemon: "a0d7b954_appdaemon",
-  "Assist Microphone": "core_assist_microphone",
-  "Bazarr NAS": "db21ed7f_bazarr_nas",
-  "Code Runner": "3f718f42_code_runner",
   "File editor": "core_configurator",
-  "Firefly iii": "db21ed7f_fireflyiii",
-  "Firefly iii Data Importer": "db21ed7f_fireflyiii_data_importer",
-  FlareSolverr: "db21ed7f_flaresolverr",
-  Flexget: "db21ed7f_flexget",
-  Glances: "a0d7b954_glances",
-  "Hass Blocks": "0cd82180_hass-blocks",
-  InfluxDB: "a0d7b954_influxdb",
-  "Jellyfin NAS": "db21ed7f_jellyfin",
-  JupyterLab: "a0d7b954_jupyterlablite",
-  "LMS Lyrion Music Server(Formerly Logitech Media Server)": "fc57b866_lms",
-  "Let's Encrypt": "core_letsencrypt",
-  "Log Viewer": "a0d7b954_logviewer",
-  MariaDB: "core_mariadb",
-  "Matter Server": "core_matter_server",
-  Mealie: "db21ed7f_mealie",
+  "Get HACS": "cb646a50_get",
   "Mosquitto broker": "core_mosquitto",
-  "Music Assistant": "d5369777_music_assistant",
-  "NGINX Home Assistant SSL proxy": "core_nginx_proxy",
-  "Nginx Proxy Manager": "a0d7b954_nginxproxymanager",
-  "Node-RED": "a0d7b954_nodered",
-  "Plex Media Server": "a0d7b954_plex",
-  "Prowlarr NAS": "db21ed7f_prowlarr",
-  Radarr: "db21ed7f_radarr_nas",
-  "Rhasspy Assistant": "47701997_rhasspy",
-  "Ring-MQTT with Video Streaming": "03cabcc9_ring_mqtt",
-  "Samba share": "core_samba",
-  "SharpTools.io": "506c6dd7_sharptools_io",
-  Sonarr: "db21ed7f_sonarr_nas",
   "Studio Code Server": "a0d7b954_vscode",
-  "Terminal & SSH": "core_ssh",
-  Whisparr: "a0d7b954_whisparr",
-  Whisper: "core_whisper",
   "Z-Wave JS": "core_zwave_js",
   Zigbee2MQTT: "45df7312_zigbee2mqtt",
-  openWakeWord: "core_openwakeword",
-  qBittorrent: "db21ed7f_qbittorrent",
 } as const;
 
 import {
@@ -185,8 +148,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         transition?: string;
@@ -234,8 +197,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         adapt_delay?: string;
@@ -256,8 +219,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         autoreset_control_seconds?: string;
@@ -292,8 +255,8 @@ declare module "@digital-alchemy/hass" {
          * > entity:
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id: PICK_ENTITY<"switch"> | PICK_ENTITY<"switch">[];
@@ -326,8 +289,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         initial_transition?: string;
@@ -348,8 +311,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         max_brightness?: string;
@@ -370,8 +333,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         max_color_temp?: string;
@@ -404,8 +367,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         min_brightness?: string;
@@ -426,8 +389,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         min_color_temp?: string;
@@ -540,8 +503,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         sleep_brightness?: string;
@@ -562,8 +525,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         sleep_color_temp?: string;
@@ -610,8 +573,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         sleep_transition?: string;
@@ -730,8 +693,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         transition?: string;
@@ -845,1098 +808,6 @@ declare module "@digital-alchemy/hass" {
         manual_control?: boolean;
       }) => Promise<void>;
     };
-    // # MARK: adguard
-    adguard: {
-      /**
-       * ### add_url
-       *
-       * >
-       */
-      add_url: (service_data: {
-        /**
-         * ## name
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "name": "Example"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        name: string;
-        /**
-         * ## url
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "url": "https://www.example.com/filter/1.txt"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        url: string;
-      }) => Promise<void>;
-      /**
-       * ### disable_url
-       *
-       * >
-       */
-      disable_url: (service_data: {
-        /**
-         * ## url
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "url": "https://www.example.com/filter/1.txt"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        url: string;
-      }) => Promise<void>;
-      /**
-       * ### enable_url
-       *
-       * >
-       */
-      enable_url: (service_data: {
-        /**
-         * ## url
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "url": "https://www.example.com/filter/1.txt"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        url: string;
-      }) => Promise<void>;
-      /**
-       * ### refresh
-       *
-       * >
-       */
-      refresh: (service_data?: {
-        /**
-         * ## force
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        force?: boolean;
-      }) => Promise<void>;
-      /**
-       * ### remove_url
-       *
-       * >
-       */
-      remove_url: (service_data: {
-        /**
-         * ## url
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "url": "https://www.example.com/filter/1.txt"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        url: string;
-      }) => Promise<void>;
-    };
-    // # MARK: ai_task
-    ai_task: {
-      /**
-       * ### generate_data
-       *
-       * >
-       */
-      generate_data: <T = unknown>(service_data?: {
-        /**
-         * ## attachments
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > media:
-         * >   accept:
-         * >     - '*'
-         * >   multiple: true
-         * > ```
-         */
-        attachments?: string;
-        /**
-         * ## entity_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   filter:
-         * >     - domain:
-         * >         - ai_task
-         * >       supported_features:
-         * >         - 1
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id?: PICK_ENTITY | PICK_ENTITY[];
-        /**
-         * ## instructions
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "instructions": "Generate a funny notification that the garage door was left open"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiline: true
-         * >   multiple: false
-         * > ```
-         */
-        instructions: string;
-        /**
-         * ## structure
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "structure": "{ \"name\": { \"selector\": { \"text\": }, \"description\": \"Name of the user\", \"required\": \"True\" } } }, \"age\": { \"selector\": { \"number\": }, \"description\": \"Age of the user\" } }"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        structure?: Record<string, unknown> | unknown[];
-        /**
-         * ## task_name
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "task_name": "home summary"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        task_name: string;
-      }) => Promise<T>;
-      /**
-       * ### generate_image
-       *
-       * >
-       */
-      generate_image: <T = unknown>(service_data?: {
-        /**
-         * ## attachments
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > media:
-         * >   accept:
-         * >     - '*'
-         * >   multiple: true
-         * > ```
-         */
-        attachments?: string;
-        /**
-         * ## entity_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   filter:
-         * >     - domain:
-         * >         - ai_task
-         * >       supported_features:
-         * >         - 4
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id: PICK_ENTITY | PICK_ENTITY[];
-        /**
-         * ## instructions
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "instructions": "Generate a high quality square image of a dog on transparent background"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiline: true
-         * >   multiple: false
-         * > ```
-         */
-        instructions: string;
-        /**
-         * ## task_name
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "task_name": "picture of a dog"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        task_name: string;
-      }) => Promise<T>;
-    };
-    // # MARK: alarm_control_panel
-    alarm_control_panel: {
-      /**
-       * ### alarm_arm_away
-       *
-       * >
-       */
-      alarm_arm_away: (
-        service_data?: {
-          /**
-           * ## code
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "code": "1234"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          code?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - alarm_control_panel
-           * >     supported_features:
-           * >       - 2
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### alarm_arm_custom_bypass
-       *
-       * >
-       */
-      alarm_arm_custom_bypass: (
-        service_data?: {
-          /**
-           * ## code
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "code": "1234"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          code?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - alarm_control_panel
-           * >     supported_features:
-           * >       - 16
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### alarm_arm_home
-       *
-       * >
-       */
-      alarm_arm_home: (
-        service_data?: {
-          /**
-           * ## code
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "code": "1234"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          code?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - alarm_control_panel
-           * >     supported_features:
-           * >       - 1
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### alarm_arm_night
-       *
-       * >
-       */
-      alarm_arm_night: (
-        service_data?: {
-          /**
-           * ## code
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "code": "1234"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          code?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - alarm_control_panel
-           * >     supported_features:
-           * >       - 4
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### alarm_arm_vacation
-       *
-       * >
-       */
-      alarm_arm_vacation: (
-        service_data?: {
-          /**
-           * ## code
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "code": "1234"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          code?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - alarm_control_panel
-           * >     supported_features:
-           * >       - 32
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### alarm_disarm
-       *
-       * >
-       */
-      alarm_disarm: (
-        service_data?: {
-          /**
-           * ## code
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "code": "1234"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          code?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - alarm_control_panel
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### alarm_trigger
-       *
-       * >
-       */
-      alarm_trigger: (
-        service_data?: {
-          /**
-           * ## code
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "code": "1234"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          code?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - alarm_control_panel
-           * >     supported_features:
-           * >       - 8
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-    };
-    // # MARK: alexa_media
-    alexa_media: {
-      /**
-       * ### force_logout
-       *
-       * > Force logout of Alexa Login account and deletion of .pickle. Intended for debugging use.
-       */
-      force_logout: (service_data?: {
-        /**
-         * ## email
-         *
-         * > List of Alexa accounts to log out. If empty, will log out from all known accounts.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "email": "my_email@alexa.com"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * >
-         * > ```
-         */
-        email?: unknown;
-      }) => Promise<void>;
-      /**
-       * ### get_history_records
-       *
-       * > Returns the last entries of all the customer history.
-       */
-      get_history_records: (service_data?: {
-        /**
-         * ## Entity
-         *
-         * > Alexa Media Player device to get history from.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   domain:
-         * >     - media_player
-         * >   integration: alexa_media
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"alexa_media", "media_player">
-          | PICK_FROM_PLATFORM<"alexa_media", "media_player">[];
-        /**
-         * ## Entries
-         *
-         * > Number of records to return.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entries": "5"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 5
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * >
-         * > ```
-         */
-        entries?: unknown;
-      }) => Promise<void>;
-      /**
-       * ### restore_volume
-       *
-       * > Restores an Alexa Media Player volume level to the previous volume level.
-       */
-      restore_volume: (service_data: {
-        /**
-         * ## Entity
-         *
-         * > Alexa Media Player device to restore volume on.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   domain:
-         * >     - media_player
-         * >   integration: alexa_media
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"alexa_media", "media_player">
-          | PICK_FROM_PLATFORM<"alexa_media", "media_player">[];
-      }) => Promise<void>;
-      /**
-       * ### update_last_called
-       *
-       * > Forces update of last_called echo device for each Alexa account.
-       */
-      update_last_called: (service_data?: {
-        /**
-         * ## email
-         *
-         * > List of Alexa accounts to update. If empty, will update all known accounts.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "email": "my_email@alexa.com"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * >
-         * > ```
-         */
-        email?: unknown;
-      }) => Promise<void>;
-    };
-    // # MARK: assist_satellite
-    assist_satellite: {
-      /**
-       * ### announce
-       *
-       * >
-       */
-      announce: (
-        service_data?: {
-          /**
-           * ## media_id
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > media:
-           * >   accept:
-           * >     - audio/*
-           * >   multiple: false
-           * > ```
-           */
-          media_id?: string;
-          /**
-           * ## message
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "message": "Time to wake up!"
-           * > }
-           * > ```
-           *
-           * ### Default
-           *
-           * > ```json
-           * > ""
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          message?: string;
-          /**
-           * ## preannounce
-           *
-           * ### Default
-           *
-           * > ```json
-           * > true
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > boolean: {}
-           * > ```
-           */
-          preannounce?: boolean;
-          /**
-           * ## preannounce_media_id
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > media:
-           * >   accept:
-           * >     - audio/*
-           * >   multiple: false
-           * > ```
-           */
-          preannounce_media_id?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - assist_satellite
-           * >     supported_features:
-           * >       - 1
-           * > ```
-           */
-          entity_id: PICK_ENTITY<"assist_satellite"> | PICK_ENTITY<"assist_satellite">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### ask_question
-       *
-       * >
-       */
-      ask_question: <T = unknown>(service_data?: {
-        /**
-         * ## answers
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   label_field: sentences
-         * >   description_field: id
-         * >   multiple: true
-         * >   translation_key: answers
-         * >   fields:
-         * >     id:
-         * >       required: true
-         * >       selector:
-         * >         text:
-         * >           multiple: false
-         * >           multiline: false
-         * >     sentences:
-         * >       required: true
-         * >       selector:
-         * >         text:
-         * >           multiple: true
-         * >           multiline: false
-         * > ```
-         */
-        answers?: Record<string, unknown> | unknown[];
-        /**
-         * ## entity_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   filter:
-         * >     - domain:
-         * >         - assist_satellite
-         * >       supported_features:
-         * >         - 2
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id: PICK_ENTITY | PICK_ENTITY[];
-        /**
-         * ## preannounce
-         *
-         * ### Default
-         *
-         * > ```json
-         * > true
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        preannounce?: boolean;
-        /**
-         * ## preannounce_media_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > media:
-         * >   accept:
-         * >     - audio/*
-         * >   multiple: false
-         * > ```
-         */
-        preannounce_media_id?: string;
-        /**
-         * ## question
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "question": "What kind of music would you like to play?"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > ""
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        question?: string;
-        /**
-         * ## question_media_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > media:
-         * >   accept:
-         * >     - audio/*
-         * >   multiple: false
-         * > ```
-         */
-        question_media_id?: string;
-      }) => Promise<T>;
-      /**
-       * ### start_conversation
-       *
-       * >
-       */
-      start_conversation: (
-        service_data?: {
-          /**
-           * ## extra_system_prompt
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          extra_system_prompt?: string;
-          /**
-           * ## preannounce
-           *
-           * ### Default
-           *
-           * > ```json
-           * > true
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > boolean: {}
-           * > ```
-           */
-          preannounce?: boolean;
-          /**
-           * ## preannounce_media_id
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > media:
-           * >   accept:
-           * >     - audio/*
-           * >   multiple: false
-           * > ```
-           */
-          preannounce_media_id?: string;
-          /**
-           * ## start_media_id
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > media:
-           * >   accept:
-           * >     - audio/*
-           * >   multiple: false
-           * > ```
-           */
-          start_media_id?: string;
-          /**
-           * ## start_message
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "start_message": "You left the lights on in the living room. Turn them off?"
-           * > }
-           * > ```
-           *
-           * ### Default
-           *
-           * > ```json
-           * > ""
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          start_message?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - assist_satellite
-           * >     supported_features:
-           * >       - 2
-           * > ```
-           */
-          entity_id: PICK_ENTITY<"assist_satellite"> | PICK_ENTITY<"assist_satellite">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-    };
     // # MARK: automation
     automation: {
       /**
@@ -1960,7 +831,7 @@ declare module "@digital-alchemy/hass" {
            * >       - automation
            * > ```
            */
-          entity_id: PICK_ENTITY<"automation"> | PICK_ENTITY<"automation">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -1998,7 +869,7 @@ declare module "@digital-alchemy/hass" {
            * >       - automation
            * > ```
            */
-          entity_id: PICK_ENTITY<"automation"> | PICK_ENTITY<"automation">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -2036,7 +907,7 @@ declare module "@digital-alchemy/hass" {
            * >       - automation
            * > ```
            */
-          entity_id: PICK_ENTITY<"automation"> | PICK_ENTITY<"automation">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -2057,7 +928,7 @@ declare module "@digital-alchemy/hass" {
            * >       - automation
            * > ```
            */
-          entity_id: PICK_ENTITY<"automation"> | PICK_ENTITY<"automation">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -2072,1142 +943,6 @@ declare module "@digital-alchemy/hass" {
        * >
        */
       create_automatic: (service_data: EmptyObject) => Promise<void>;
-    };
-    // # MARK: browser_mod
-    browser_mod: {
-      /**
-       * ### change_browser_id
-       *
-       * > Change browser ID
-       */
-      change_browser_id: (service_data?: {
-        /**
-         * ## Current Browser ID
-         *
-         * > Current Browser ID of the browser to change
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: false
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        current_browser_id?: TDeviceId;
-        /**
-         * ## New ID
-         *
-         * > New Browser ID for the browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        new_browser_id?: string;
-        /**
-         * ## Refresh
-         *
-         * > Refresh the browser after changing the ID
-         *
-         * ### Default
-         *
-         * > ```json
-         * > true
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        refresh?: boolean;
-        /**
-         * ## Register
-         *
-         * > Register the browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        register?: boolean;
-      }) => Promise<void>;
-      /**
-       * ### close_popup
-       *
-       * > Close a popup
-       */
-      close_popup: (service_data?: {
-        /**
-         * ## All popups
-         *
-         * > Close all Browser Mod popups on the browser
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        all?: boolean;
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Tag
-         *
-         * > Tag for popup to close when using multiple popups
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        tag?: string;
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
-      /**
-       * ### console
-       *
-       * > Print text to browser console
-       */
-      console: (service_data?: {
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Message
-         *
-         * > Text to print
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        message?: string;
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
-      /**
-       * ### delay
-       *
-       * > Wait for a time
-       */
-      delay: (service_data?: {
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Time
-         *
-         * > Time to wait (ms)
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        time?: number;
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
-      /**
-       * ### deregister_browser
-       *
-       * > Deregister a browser. Include at leaset one paremeter. Calling wiith either exclude parameter will deregister all browsers except those excluded.
-       */
-      deregister_browser: (service_data?: {
-        /**
-         * ## Areas to exclude
-         *
-         * > Exclude browsers in area from deregister
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > area:
-         * >   multiple: true
-         * >   entity:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        area_id_exclude?: TAreaId[];
-        /**
-         * ## Target Browsers
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Browsers to exclude
-         *
-         * > Exclude browser from deregister
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id_exclude?: TDeviceId[];
-      }) => Promise<void>;
-      /**
-       * ### javascript
-       *
-       * > Run arbitrary JavaScript code
-       */
-      javascript: (service_data?: {
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Code
-         *
-         * > JavaScript code to run
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        code?: Record<string, unknown> | unknown[];
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
-      /**
-       * ### more_info
-       *
-       * > Show more-info dialog
-       */
-      more_info: (service_data?: {
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Close existing more-info dialog
-         *
-         * > Close the more-info dialog if open
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        close?: boolean;
-        /**
-         * ## Entity ID
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        entity?: string;
-        /**
-         * ## Ignore any active popup-card overrides
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        ignore_popup_card?: boolean;
-        /**
-         * ## Large size
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        large?: boolean;
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-        /**
-         * ## View
-         *
-         * > More-info view to show
-         */
-        view?: "info" | "history" | "settings" | "related";
-      }) => Promise<void>;
-      /**
-       * ### navigate
-       *
-       * > Navigate browser to a different page
-       */
-      navigate: (service_data?: {
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Path
-         *
-         * > Target path
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        path?: string;
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
-      /**
-       * ### notification
-       *
-       * > Display a short notification
-       */
-      notification: (service_data?: {
-        /**
-         * ## Button action
-         *
-         * > Action to perform when the action button is pressed
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        action?: Record<string, unknown> | unknown[];
-        /**
-         * ## Action button text
-         *
-         * > Text of optional action button
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        action_text?: string;
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Auto close timeout
-         *
-         * > Time before closing (ms)
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        duration?: number;
-        /**
-         * ## Message
-         *
-         * > Message to display
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        message: string;
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
-      /**
-       * ### popup
-       *
-       * > Display a popup
-       */
-      popup: (service_data?: {
-        /**
-         * ## Auto close
-         *
-         * > Close the popup automatically on mouse, pointer or keyboard activity
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        autoclose?: boolean;
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Content
-         *
-         * > Popup content (Text or lovelace card configuration)
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        content: Record<string, unknown> | unknown[];
-        /**
-         * ## Dismiss action
-         *
-         * > Action to perform when popup is dismissed
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        dismiss_action?: Record<string, unknown> | unknown[];
-        /**
-         * ## User dismissable
-         *
-         * > Whether the popup can be closed by the user without action
-         *
-         * ### Default
-         *
-         * > ```json
-         * > true
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        dismissable?: boolean;
-        /**
-         * ## Initial Style
-         *
-         * > Initial style to apply to the popup
-         */
-        initial_style?: LiteralUnion<"normal" | "classic" | "wide" | "fullscreen", string>;
-        /**
-         * ## Left button
-         *
-         * > Text of the left button
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        left_button?: string;
-        /**
-         * ## Left button action
-         *
-         * > Action to perform when left button is pressed
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        left_button_action?: Record<string, unknown> | unknown[];
-        /**
-         * ## Left button appearance
-         *
-         * > Appearance of the left button
-         */
-        left_button_appearance?: "accent" | "filled" | "outlined" | "plain";
-        /**
-         * ## Left button variant
-         *
-         * > Variant of the left button
-         */
-        left_button_variant?: "brand" | "neutral" | "danger" | "warning" | "success";
-        /**
-         * ## Popup-card ID
-         *
-         * > ID of the popup-card to use as a template for the popup
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        popup_card_id?: string;
-        /**
-         * ## Popup Styles
-         *
-         * > Popup styles to apply. Use 'all' to always apply the style. You can add to standard styles or create your own
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   label_field: style
-         * >   description_field: include_styles
-         * >   multiple: true
-         * >   fields:
-         * >     style:
-         * >       label: Style
-         * >       selector:
-         * >         select:
-         * >           mode: dropdown
-         * >           custom_value: true
-         * >           options:
-         * >             - normal
-         * >             - classic
-         * >             - wide
-         * >             - fullscreen
-         * >             - card
-         * >             - all
-         * >           multiple: false
-         * >           sort: false
-         * >     include_styles:
-         * >       label: Also apply styles from...
-         * >       selector:
-         * >         select:
-         * >           mode: dropdown
-         * >           custom_value: true
-         * >           multiple: true
-         * >           options:
-         * >             - normal
-         * >             - classic
-         * >             - wide
-         * >             - fullscreen
-         * >           sort: false
-         * >     styles:
-         * >       label: CSS Styles
-         * >       selector:
-         * >         text:
-         * >           multiline: true
-         * >           multiple: false
-         * > ```
-         */
-        popup_styles?: Record<string, unknown> | unknown[];
-        /**
-         * ## Right button
-         *
-         * > Text of the right button
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        right_button?: string;
-        /**
-         * ## Right button action
-         *
-         * > Action to perform when the right button is pressed
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        right_button_action?: Record<string, unknown> | unknown[];
-        /**
-         * ## Right button appearance
-         *
-         * > Appearance of the right button
-         */
-        right_button_appearance?: "accent" | "filled" | "outlined" | "plain";
-        /**
-         * ## Right button variant
-         *
-         * > Variant of the right button
-         */
-        right_button_variant?: "brand" | "neutral" | "danger" | "warning" | "success";
-        /**
-         * ## Style Sequence
-         *
-         * > Sequence of styles to cycle through when user taps the title or with browser_mod.set_popup_style service
-         */
-        style_sequence?: LiteralUnion<
-          "initial" | "normal" | "classic" | "wide" | "fullscreen",
-          string
-        >[];
-        /**
-         * ## Tag
-         *
-         * > Tag for managing multiple popups
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        tag?: string;
-        /**
-         * ## Auto close timeout
-         *
-         * > Time before closing (ms)
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        timeout?: number;
-        /**
-         * ## Timeout action
-         *
-         * > Action to perform when popup is closed by timeout
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        timeout_action?: Record<string, unknown> | unknown[];
-        /**
-         * ## Hide timeout progress
-         *
-         * > Hide timeout progress bar
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        timeout_hide_progress?: boolean;
-        /**
-         * ## Title
-         *
-         * > Popup title
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        title?: string;
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
-      /**
-       * ### refresh
-       *
-       * > Refresh page
-       */
-      refresh: (service_data?: {
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
-      /**
-       * ### sequence
-       *
-       * > Run a sequence of services
-       */
-      sequence: (service_data?: {
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Actions
-         *
-         * > List of services to run
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        sequence?: Record<string, unknown> | unknown[];
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
-      /**
-       * ### Set popup style
-       *
-       * > Set the style of a popup
-       */
-      set_popup_style: (service_data?: {
-        /**
-         * ## All popups
-         *
-         * > Set style for all open Browser Mod popups on the browser
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        all?: boolean;
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Direction
-         *
-         * > Direction to cycle through style sequence
-         */
-        direction?: "forward" | "back";
-        /**
-         * ## Style
-         *
-         * > Style to apply to the popup
-         */
-        style?: LiteralUnion<"normal" | "classic" | "wide" | "fullscreen", string>;
-        /**
-         * ## Tag
-         *
-         * > Tag for popup to set style for when using multiple popups
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        tag?: string;
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
-      /**
-       * ### set_theme
-       *
-       * > Change the current theme
-       */
-      set_theme: (service_data?: {
-        /**
-         * ## Accent Color
-         *
-         * > Accent theme color
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > color_rgb: {}
-         * > ```
-         */
-        accentColor?: [number, number, number];
-        /**
-         * ## Target Browser
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   multiple: true
-         * >   filter:
-         * >     - integration: browser_mod
-         * > ```
-         */
-        browser_id?: TDeviceId[];
-        /**
-         * ## Mode
-         *
-         * > Dark/light mode
-         */
-        dark?: "auto" | "light" | "dark";
-        /**
-         * ## Primary Color
-         *
-         * > Primary theme color
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > color_rgb: {}
-         * > ```
-         */
-        primaryColor?: [number, number, number];
-        /**
-         * ## Theme
-         *
-         * > Name of theme or 'auto'
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        theme?: string;
-        /**
-         * ## Target User
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: true
-         * >   filter:
-         * >     - domain:
-         * >         - person
-         * >   reorder: false
-         * > ```
-         */
-        user_id?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<void>;
     };
     // # MARK: button
     button: {
@@ -3233,251 +968,6 @@ declare module "@digital-alchemy/hass" {
         }>,
       ) => Promise<void>;
     };
-    // # MARK: calendar
-    calendar: {
-      /**
-       * ### create_event
-       *
-       * >
-       */
-      create_event: (
-        service_data?: {
-          /**
-           * ## description
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "description": "Meeting to provide technical review for 'Phoenix' design."
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          description?: string;
-          /**
-           * ## end_date
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "end_date": "2022-03-23"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > date: {}
-           * > ```
-           */
-          end_date?: string;
-          /**
-           * ## end_date_time
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "end_date_time": "2022-03-22 22:00:00"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > datetime: {}
-           * > ```
-           */
-          end_date_time?: string;
-          /**
-           * ## in
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "in": "{\"days\": 2} or {\"weeks\": 2}"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * >
-           * > ```
-           */
-          in?: unknown;
-          /**
-           * ## location
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "location": "Conference Room - F123, Bldg. 002"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          location?: string;
-          /**
-           * ## start_date
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "start_date": "2022-03-22"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > date: {}
-           * > ```
-           */
-          start_date?: string;
-          /**
-           * ## start_date_time
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "start_date_time": "2022-03-22 20:00:00"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > datetime: {}
-           * > ```
-           */
-          start_date_time?: string;
-          /**
-           * ## summary
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "summary": "Department Party"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          summary: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - calendar
-           * >     supported_features:
-           * >       - 1
-           * > ```
-           */
-          entity_id: PICK_ENTITY<"calendar"> | PICK_ENTITY<"calendar">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### get_events
-       *
-       * >
-       */
-      get_events: <T = unknown>(
-        service_data?: {
-          /**
-           * ## duration
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > duration: {}
-           * > ```
-           */
-          duration?: string;
-          /**
-           * ## end_date_time
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "end_date_time": "2022-03-22 22:00:00"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > datetime: {}
-           * > ```
-           */
-          end_date_time?: string;
-          /**
-           * ## start_date_time
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "start_date_time": "2022-03-22 20:00:00"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > datetime: {}
-           * > ```
-           */
-          start_date_time?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - calendar
-           * > ```
-           */
-          entity_id: PICK_ENTITY<"calendar"> | PICK_ENTITY<"calendar">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<T>;
-    };
     // # MARK: camera
     camera: {
       /**
@@ -3495,7 +985,7 @@ declare module "@digital-alchemy/hass" {
            * >       - camera
            * > ```
            */
-          entity_id: PICK_ENTITY<"camera"> | PICK_ENTITY<"camera">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3516,7 +1006,7 @@ declare module "@digital-alchemy/hass" {
            * >       - camera
            * > ```
            */
-          entity_id: PICK_ENTITY<"camera"> | PICK_ENTITY<"camera">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3548,8 +1038,8 @@ declare module "@digital-alchemy/hass" {
            * > entity:
            * >   domain:
            * >     - media_player
-           * >   multiple: false
            * >   reorder: false
+           * >   multiple: false
            * > ```
            */
           media_player: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
@@ -3562,7 +1052,7 @@ declare module "@digital-alchemy/hass" {
            * >       - camera
            * > ```
            */
-          entity_id: PICK_ENTITY<"camera"> | PICK_ENTITY<"camera">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3611,8 +1101,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           filename: string;
@@ -3646,7 +1136,7 @@ declare module "@digital-alchemy/hass" {
            * >       - camera
            * > ```
            */
-          entity_id: PICK_ENTITY<"camera"> | PICK_ENTITY<"camera">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3674,8 +1164,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           filename: string;
@@ -3688,7 +1178,7 @@ declare module "@digital-alchemy/hass" {
            * >       - camera
            * > ```
            */
-          entity_id: PICK_ENTITY<"camera"> | PICK_ENTITY<"camera">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3709,7 +1199,7 @@ declare module "@digital-alchemy/hass" {
            * >       - camera
            * > ```
            */
-          entity_id: PICK_ENTITY<"camera"> | PICK_ENTITY<"camera">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3730,7 +1220,7 @@ declare module "@digital-alchemy/hass" {
            * >       - camera
            * > ```
            */
-          entity_id: PICK_ENTITY<"camera"> | PICK_ENTITY<"camera">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3761,8 +1251,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           fan_mode: string;
@@ -3777,7 +1267,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 8
            * > ```
            */
-          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3816,7 +1306,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 4
            * > ```
            */
-          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3852,7 +1342,7 @@ declare module "@digital-alchemy/hass" {
            * >       - climate
            * > ```
            */
-          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3880,8 +1370,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           preset_mode: string;
@@ -3896,7 +1386,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 16
            * > ```
            */
-          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3924,8 +1414,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           swing_horizontal_mode: string;
@@ -3940,7 +1430,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 512
            * > ```
            */
-          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -3968,8 +1458,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           swing_mode: string;
@@ -3984,7 +1474,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 32
            * > ```
            */
-          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4055,7 +1545,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 2
            * > ```
            */
-          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4079,7 +1569,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 256
            * > ```
            */
-          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4102,7 +1592,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 128
            * > ```
            */
-          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4125,7 +1615,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 256
            * > ```
            */
-          entity_id: PICK_ENTITY<"climate"> | PICK_ENTITY<"climate">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4172,7 +1662,7 @@ declare module "@digital-alchemy/hass" {
          * > conversation_agent: {}
          * > ```
          */
-        agent_id?: "conversation.home_assistant" | "conversation.chatgpt";
+        agent_id?: "conversation.home_assistant";
         /**
          * ## conversation_id
          *
@@ -4188,8 +1678,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         conversation_id?: string;
@@ -4208,8 +1698,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         language?: string;
@@ -4228,8 +1718,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         text: string;
@@ -4257,7 +1747,7 @@ declare module "@digital-alchemy/hass" {
          * > conversation_agent: {}
          * > ```
          */
-        agent_id?: "conversation.home_assistant" | "conversation.chatgpt";
+        agent_id?: "conversation.home_assistant";
         /**
          * ## language
          *
@@ -4273,8 +1763,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         language?: string;
@@ -4401,7 +1891,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 2
            * > ```
            */
-          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4424,7 +1914,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 32
            * > ```
            */
-          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4447,7 +1937,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 1
            * > ```
            */
-          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4470,7 +1960,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 16
            * > ```
            */
-          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4509,7 +1999,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 4
            * > ```
            */
-          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4548,7 +2038,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 128
            * > ```
            */
-          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4571,7 +2061,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 8
            * > ```
            */
-          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4594,7 +2084,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 64
            * > ```
            */
-          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4617,7 +2107,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 3
            * > ```
            */
-          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4640,7 +2130,93 @@ declare module "@digital-alchemy/hass" {
            * >       - 48
            * > ```
            */
-          entity_id: PICK_ENTITY<"cover"> | PICK_ENTITY<"cover">[];
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
+    // # MARK: date
+    date: {
+      /**
+       * ### set_value
+       *
+       * >
+       */
+      set_value: (
+        service_data: {
+          /**
+           * ## date
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "date": "2022/11/01"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > date: {}
+           * > ```
+           */
+          date: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - date
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
+    // # MARK: datetime
+    datetime: {
+      /**
+       * ### set_value
+       *
+       * >
+       */
+      set_value: (
+        service_data: {
+          /**
+           * ## datetime
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "datetime": "2023-10-07T21:35:22"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > datetime: {}
+           * > ```
+           */
+          datetime: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - datetime
+           * > ```
+           */
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -4685,8 +2261,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         dev_id?: string;
@@ -4738,8 +2314,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         host_name?: string;
@@ -4758,8 +2334,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         location_name?: string;
@@ -4778,97 +2354,11 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         mac?: string;
-      }) => Promise<void>;
-    };
-    // # MARK: downloader
-    downloader: {
-      /**
-       * ### download_file
-       *
-       * >
-       */
-      download_file: (service_data?: {
-        /**
-         * ## filename
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "filename": "my_file_name"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        filename?: string;
-        /**
-         * ## overwrite
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        overwrite?: boolean;
-        /**
-         * ## subdir
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "subdir": "download_dir"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        subdir?: string;
-        /**
-         * ## url
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "url": "http://example.org/myfile"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        url: string;
       }) => Promise<void>;
     };
     // # MARK: fan
@@ -5074,8 +2564,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           preset_mode: string;
@@ -5177,8 +2667,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           preset_mode?: string;
@@ -5218,8 +2708,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: never | never[];
@@ -5240,8 +2730,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: never | never[];
@@ -5262,8 +2752,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: never | never[];
@@ -5304,8 +2794,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         file_name?: string;
@@ -5343,51 +2833,7 @@ declare module "@digital-alchemy/hass" {
          * >   include_default: true
          * > ```
          */
-        name?:
-          | "noctis"
-          | "minimalist-mobile"
-          | "slate"
-          | "ios-light-mode-blue-red-alternative"
-          | "ios-light-mode-blue-red"
-          | "ios-dark-mode-blue-red-alternative"
-          | "ios-dark-mode-blue-red"
-          | "ios-light-mode-dark-blue-alternative"
-          | "ios-light-mode-dark-blue"
-          | "ios-dark-mode-dark-blue-alternative"
-          | "ios-dark-mode-dark-blue"
-          | "ios-light-mode-dark-green-alternative"
-          | "ios-light-mode-dark-green"
-          | "ios-dark-mode-dark-green-alternative"
-          | "ios-dark-mode-dark-green"
-          | "ios-light-mode-light-blue-alternative"
-          | "ios-light-mode-light-blue"
-          | "ios-dark-mode-light-blue-alternative"
-          | "ios-dark-mode-light-blue"
-          | "ios-light-mode-light-green-alternative"
-          | "ios-light-mode-light-green"
-          | "ios-dark-mode-light-green-alternative"
-          | "ios-dark-mode-light-green"
-          | "ios-light-mode-orange-alternative"
-          | "ios-light-mode-orange"
-          | "ios-dark-mode-orange-alternative"
-          | "ios-dark-mode-orange"
-          | "ios-light-mode-red-alternative"
-          | "ios-light-mode-red"
-          | "ios-dark-mode-red-alternative"
-          | "ios-dark-mode-red"
-          | "yourname"
-          | "Catppuccin Latte"
-          | "Catppuccin Frappe"
-          | "Catppuccin Macchiato"
-          | "Catppuccin Mocha"
-          | "Catppuccin Auto Latte Frappe"
-          | "Catppuccin Auto Latte Macchiato"
-          | "Catppuccin Auto Latte Mocha"
-          | "scroll_lock"
-          | "waves"
-          | "minimalist-desktop"
-          | "minimalist-mobile-tapbar"
-          | "minimalist-ios-tapbar";
+        name?: string;
         /**
          * ## name_dark
          *
@@ -5406,51 +2852,7 @@ declare module "@digital-alchemy/hass" {
          * >   include_default: true
          * > ```
          */
-        name_dark?:
-          | "noctis"
-          | "minimalist-mobile"
-          | "slate"
-          | "ios-light-mode-blue-red-alternative"
-          | "ios-light-mode-blue-red"
-          | "ios-dark-mode-blue-red-alternative"
-          | "ios-dark-mode-blue-red"
-          | "ios-light-mode-dark-blue-alternative"
-          | "ios-light-mode-dark-blue"
-          | "ios-dark-mode-dark-blue-alternative"
-          | "ios-dark-mode-dark-blue"
-          | "ios-light-mode-dark-green-alternative"
-          | "ios-light-mode-dark-green"
-          | "ios-dark-mode-dark-green-alternative"
-          | "ios-dark-mode-dark-green"
-          | "ios-light-mode-light-blue-alternative"
-          | "ios-light-mode-light-blue"
-          | "ios-dark-mode-light-blue-alternative"
-          | "ios-dark-mode-light-blue"
-          | "ios-light-mode-light-green-alternative"
-          | "ios-light-mode-light-green"
-          | "ios-dark-mode-light-green-alternative"
-          | "ios-dark-mode-light-green"
-          | "ios-light-mode-orange-alternative"
-          | "ios-light-mode-orange"
-          | "ios-dark-mode-orange-alternative"
-          | "ios-dark-mode-orange"
-          | "ios-light-mode-red-alternative"
-          | "ios-light-mode-red"
-          | "ios-dark-mode-red-alternative"
-          | "ios-dark-mode-red"
-          | "yourname"
-          | "Catppuccin Latte"
-          | "Catppuccin Frappe"
-          | "Catppuccin Macchiato"
-          | "Catppuccin Mocha"
-          | "Catppuccin Auto Latte Frappe"
-          | "Catppuccin Auto Latte Macchiato"
-          | "Catppuccin Auto Latte Mocha"
-          | "scroll_lock"
-          | "waves"
-          | "minimalist-desktop"
-          | "minimalist-mobile-tapbar"
-          | "minimalist-ios-tapbar";
+        name_dark?: string;
       }) => Promise<void>;
     };
     // # MARK: group
@@ -5576,8 +2978,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name?: string;
@@ -5596,8 +2998,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         object_id: string;
@@ -5726,6 +3128,117 @@ declare module "@digital-alchemy/hass" {
         addon: (typeof InstalledAddons)[keyof typeof InstalledAddons];
       }) => Promise<void>;
       /**
+       * ### app_restart
+       *
+       * >
+       */
+      app_restart: (service_data: {
+        /**
+         * ## app
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "app": "core_ssh"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > app: {}
+         * > ```
+         */
+        app: unknown;
+      }) => Promise<void>;
+      /**
+       * ### app_start
+       *
+       * >
+       */
+      app_start: (service_data: {
+        /**
+         * ## app
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "app": "core_ssh"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > app: {}
+         * > ```
+         */
+        app: unknown;
+      }) => Promise<void>;
+      /**
+       * ### app_stdin
+       *
+       * >
+       */
+      app_stdin: (service_data: {
+        /**
+         * ## app
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "app": "core_ssh"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > app: {}
+         * > ```
+         */
+        app: unknown;
+        /**
+         * ## input
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        input: Record<string, unknown> | unknown[];
+      }) => Promise<void>;
+      /**
+       * ### app_stop
+       *
+       * >
+       */
+      app_stop: (service_data: {
+        /**
+         * ## app
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "app": "core_ssh"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > app: {}
+         * > ```
+         */
+        app: unknown;
+      }) => Promise<void>;
+      /**
        * ### backup_full
        *
        * >
@@ -5796,8 +3309,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name?: string;
@@ -5816,8 +3329,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         password?: string;
@@ -5847,6 +3360,25 @@ declare module "@digital-alchemy/hass" {
          * > ```
          */
         addons?: Record<string, unknown> | unknown[];
+        /**
+         * ## apps
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "apps": "core_ssh,core_samba,core_mosquitto"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        apps?: Record<string, unknown> | unknown[];
         /**
          * ## compressed
          *
@@ -5941,8 +3473,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name?: string;
@@ -5961,8 +3493,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         password?: string;
@@ -6000,8 +3532,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         password?: string;
@@ -6012,8 +3544,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         slug: string;
@@ -6043,6 +3575,25 @@ declare module "@digital-alchemy/hass" {
          * > ```
          */
         addons?: Record<string, unknown> | unknown[];
+        /**
+         * ## apps
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "apps": "core_ssh,core_samba,core_mosquitto"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        apps?: Record<string, unknown> | unknown[];
         /**
          * ## folders
          *
@@ -6087,8 +3638,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         password?: string;
@@ -6099,8 +3650,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         slug: string;
@@ -6144,113 +3695,28 @@ declare module "@digital-alchemy/hass" {
          * > ```
          */
         entry_id?:
-          | "c8bed19d292942a97a461373a7d6ba06"
-          | "c5eb9943b18934a9b6b7c97352455e66"
-          | "03294680d9f65c06ddc9c6c7e6298b4e"
-          | "e1d1f902370bd363c30ec1754be951de"
-          | "899539851520b643fb62d7bf649c9eba"
-          | "c01c8bafed9de60fd160a5c2b60ed47f"
-          | "c4607ed9761936dd06e9c93c10ba222b"
-          | "a4e5c98dabfb14a78b71c8b0059cc03b"
-          | "75a7ecb2f0d7abbb3be1582ab6133456"
-          | "293826fe696f8028e3e3a391a402c594"
-          | "96ed36b9014e2116ce4baeb13d6d913e"
-          | "6e8087dd21c4c3b2af6161342aefc07c"
-          | "8d484b4d7a078565f455bb247df810a5"
-          | "6b27c6379d501475d03291f7f2e9c753"
-          | "92632320d7d6b8e1ca44c9489bbc6ec9"
-          | "47586ba484648ba18a4ac617e95fccaa"
-          | "a38b3fa9e62a0ad042bd40ecfb7a2e58"
-          | "196a2e7ccba2ea68f32730e4dca0b3ff"
-          | "49b5c70604eee7b855be39e7581b994d"
-          | "532030e9bc284e48684d06a5b166a4cb"
-          | "84c18d021dbbfc76eef2f24086462811"
-          | "0a510a6b6e0594636be0da14390fc068"
-          | "5414f0f50caf4cb1c3cb65c8db8774ab"
-          | "17a91e089c77ea0cc5b503ee30eb416d"
-          | "68e1da457277d03e089c3bf89ae730e2"
-          | "37327437e69ad1fa62bca5866d51485b"
-          | "652db6cb0f52213087d4c7f43b0c7f99"
-          | "a65ff308ef637fa334615f1f95cdfc9c"
-          | "d6bfe5416e94341584548c1037664872"
-          | "af480b50e7f142bc26338c411b445db9"
-          | "b86b3a75f5f90105b2904bafc7ff16e2"
-          | "77790d3e11b0122b65d724a500e1eb6f"
-          | "69df01cf0a9e7fcd13122c8f097ec27b"
-          | "fe1e3d86a8d74c6248ec882f28f92ea9"
-          | "1a6490668d748b7a68f68cb8486cef86"
-          | "ae8237522ac6bd8fe5132c5c4e26def2"
-          | "78723e853efcc447171d035837201aff"
-          | "d7b45b15f8ad2c9c63654dc1e8a808e7"
-          | "5f043df105575f0c9e3859a9f2481e57"
-          | "01J5451XP0GRQW64N1TY1KRXB0"
-          | "01J54R0282SGZEM2A2PFVN8RJZ"
-          | "01J5E3Z1HZ1NK181T0069EYSR0"
-          | "01J5FM5KQQ60TMJ5P63B3RYEN4"
-          | "01J5G5PV36KTTHZF34HMPE7G14"
-          | "01J5GCJXRESNED9RDCDKT3WFV8"
-          | "01J5GD5959SYZFQ4WYPK7RCD0Z"
-          | "01J5MV0NKSFG540HYP8K3MJ3GK"
-          | "01J5PK4JNV8JRCV34SV2B8RP5J"
-          | "01J5V1XZ0QMRXWW4JM484G9VK7"
-          | "01J5XV9SBNAAP4YCC80X4THDTM"
-          | "01J5XVY0BTHGQ7BG12766HDJF5"
-          | "01J6549QR1XG9CGQW1KQM1Q6X6"
-          | "01J67GR7F9QWBB1QKD3R8RDHWT"
-          | "01J6811K5RB3TAZBVAG1927KHR"
-          | "01J681CTQWVE07HSKA7TA2F3CG"
-          | "01J681SX06FJ4BV0FYEPW15THD"
-          | "01J681ZZEY6Y0SRN5TS4D74S0S"
-          | "01J6HYDQ9WJ8SZHKKG0W3PXJZW"
-          | "01J6J6E8YWYPBSV033EBGQA3YM"
-          | "01J6Q3N3Y758XRR7P41H3K9R4T"
-          | "01J6QFKHYYZMYDCSAT7VBBVB1T"
-          | "01J6QJKD8SYWQ2AJBSA8BT9EQA"
-          | "01J6Z7J1F0AB8HGXYDT1MF65EY"
-          | "01J6Z7MXD9BDXK3ENAQP04J3D9"
-          | "01J71ZTR9CCVVDR4N8W6D0B8W2"
-          | "01J8AYH88X71THC9PWGEEZ96P4"
-          | "01J8AYHD7XXK1D2SKDM2F37ZD9"
-          | "01J8AYPC26HR9SQPVV7HQPZP0E"
-          | "01J8DKYMZ5CP5JYWSDWZKMPXB1"
-          | "01J8QMNJVJJGA2SVKE2KNDJ3RW"
-          | "01J8R24P39RY59E5K7Q4B455A6"
-          | "01J8TKSV2J67Y1JH5SC6TJ0HH2"
-          | "01J9EBE57F8P4D3N71VHAPKJYC"
-          | "01JA0RM9X4Z8HP744RNCMBPNR6"
-          | "01JA0RVCW4T6BNMGWCGP4G2F71"
-          | "01JA0RXSB4P5ZKW6959E3P46TV"
-          | "01JA0S4HW61T133FSRYM2B5DW5"
-          | "01JA8R4VMACZC72DABA6KK2NPK"
-          | "01JANMECN3J2TJGBZE6XHG3VTS"
-          | "01JANQJJ3ZD5MTEQ12GX58WTNW"
-          | "01JANREJYY9M7W3BCC87S3074S"
-          | "01JBM4M69512YE1DWNBZ2FF67E"
-          | "01JFT269K10RAGGRHZXR2QNXA1"
-          | "01JGBVEBX1A8WV0W0X8FYE04VG"
-          | "01JGSMXPKGY4T3WVCSG68NF94R"
-          | "01JKNXRMMCBZC3AJDR48JKRVV6"
-          | "01JMMYMGKRZPK95FJAD50A2MR7"
-          | "01JNP592H0CCDZS7ERH5EJZE3Y"
-          | "01JQKCF7PE9JMPQ3ECGNGT3H1C"
-          | "01JR5KF1PB09GMYSPF0QFYX76H"
-          | "01JR8V3W6HCR8TNAYF7S5917DB"
-          | "01JR8WTBR82VHBJPGS5R79P8NT"
-          | "01JRG9X277MJMJ4X5MW2FBRMSC"
-          | "01JRGBERMC04YT20E22TPNJSNM"
-          | "01JSRPFH1HCHNZFACXDJEBN3M1"
-          | "01JTV7J0H9Y4FXTW26NERJT332"
-          | "01JV5Q1HD3KJDVS7T0FCG63R4C"
-          | "01JV5Q1K01X6DFKMJHD90E32XZ"
-          | "01JV5R9SB7549Y0GXVM4RW1TEA"
-          | "01JV5RVGQXVVAYYEG7W81W1VPW"
-          | "01JV5RXK4WMWZDKERNGD2WZ0N0"
-          | "01JV5SJP9WWP5QD5H72342G6YK"
-          | "01K1EK9QD7NJ5CN3NT0CT9EDAK"
-          | "01K2Z4YRMMK0K7C3K6NNB6PNX0"
-          | "01K3D4XYHA835QJC77PAT86AT9"
-          | "01K4B3WE1K420R6ZZMSGF3DW49"
-          | "01K6X4YAHFYG613S5KQBYH14VX";
+          | "01KGNB1SM9Q5V950Y0CGGYJ87D"
+          | "01KGNB1SVBWDW2MXPH647M1HER"
+          | "01KGNB1SVJRGREE6JMR645H58Y"
+          | "01KGNB1T2FM0NT8R23MXD4PNZ4"
+          | "01KGNB1W1CS8SP4CVVBPDS5B37"
+          | "01KGNB1W73VP590M9DEP49C16A"
+          | "01KGNB1X9QWNJJ2B2DFM0F6HQ8"
+          | "01KGNB4WB89SBTYRTA7CRC1CNE"
+          | "01KGNB68Y8B88TF39H0FMD0854"
+          | "01KGNB692NWHW6V4JX7PCA7T8D"
+          | "01KGNB692P1T3MYR9SP5KABMVF"
+          | "01KGNEJ1VW5W0MBQQFBVT56DY1"
+          | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
+          | "01KGNHDASVCXZRP69JW51W7AWT"
+          | "01KGNHKVG40WJN1NZQRSTWQHFK"
+          | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
+          | "01KGP9Z70JSRJCRV4T3V0GX4G0"
+          | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
+          | "01KGPDQQB2C6ZWJ9HPN4BZSVW3"
+          | "01KGPDST4QFKXS0PZKN00QK01M"
+          | "01KGPDTX6H3W2C727F7DRH0TET"
+          | "01KGPDV5H7N3HF1RZNSDFHTB7A";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -6391,41 +3857,17 @@ declare module "@digital-alchemy/hass" {
         entity_id: PICK_ENTITY | PICK_ENTITY[];
       }) => Promise<void>;
     };
-    // # MARK: hue
-    hue: {
+    // # MARK: humidifier
+    humidifier: {
       /**
-       * ### activate_scene
+       * ### set_humidity
        *
        * >
        */
-      activate_scene: (
-        service_data?: {
+      set_humidity: (
+        service_data: {
           /**
-           * ## brightness
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > number:
-           * >   min: 1
-           * >   max: 255
-           * >   step: 1
-           * >   mode: slider
-           * > ```
-           */
-          brightness?: number;
-          /**
-           * ## dynamic
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > boolean: {}
-           * > ```
-           */
-          dynamic?: boolean;
-          /**
-           * ## speed
+           * ## humidity
            *
            * ## Selector
            *
@@ -6433,359 +3875,42 @@ declare module "@digital-alchemy/hass" {
            * > number:
            * >   min: 0
            * >   max: 100
+           * >   unit_of_measurement: '%'
            * >   step: 1
            * >   mode: slider
            * > ```
            */
-          speed?: number;
-          /**
-           * ## transition
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > number:
-           * >   min: 0
-           * >   max: 3600
-           * >   unit_of_measurement: seconds
-           * >   step: 1
-           * >   mode: slider
-           * > ```
-           */
-          transition?: number;
+          humidity: number;
         } & RequireAtLeastOne<{
           /**
            * Assisted definition
            * > ```yaml
            * > entity:
            * >   - domain:
-           * >       - scene
-           * >     integration: hue
+           * >       - humidifier
            * > ```
            */
-          entity_id: PICK_FROM_PLATFORM<"hue", "scene"> | PICK_FROM_PLATFORM<"hue", "scene">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
       /**
-       * ### hue_activate_scene
+       * ### set_mode
        *
        * >
        */
-      hue_activate_scene: (service_data?: {
-        /**
-         * ## dynamic
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        dynamic?: boolean;
-        /**
-         * ## group_name
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "group_name": "Living Room"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        group_name?: string;
-        /**
-         * ## scene_name
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "scene_name": "Energize"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        scene_name?: string;
-      }) => Promise<void>;
-    };
-    // # MARK: icloud3
-    icloud3: {
-      /**
-       * ### Action
-       *
-       * > This service will send operational commands to iCloud3
-       */
-      action: (service_data?: {
-        /**
-         * ## Command
-         *
-         * > (Required) The action to be performed
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "command": "pause"
-         * > }
-         * > ```
-         */
-        command:
-          | "Restart iCloud3"
-          | "Pause Tracking"
-          | "Resume Tracking"
-          | "Locate Device(s) using iCloud"
-          | "Send Locate Request to Mobile App";
-        /**
-         * ## Device Name
-         *
-         * > (Optional) Apply all devices or only apply to the selected device
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_name": "Gary (gary_iphone)"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   filter:
-         * >     - integration: icloud3
-         * >   multiple: false
-         * > ```
-         */
-        device_name?: TDeviceId;
-      }) => Promise<void>;
-      /**
-       * ### Display Message Alert
-       *
-       * > This service will display a message on the device and can also play an alert tone
-       */
-      display_message_alert: (service_data: {
-        /**
-         * ## Device Name
-         *
-         * > Device the message should be displayed on
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_name": "Duncan (duncan_iphone)"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   filter:
-         * >     - integration: icloud3
-         * >   multiple: false
-         * > ```
-         */
-        device_name: TDeviceId;
-        /**
-         * ## Message
-         *
-         * > The message to be sent
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "Back door is unlocked"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        message: string;
-        /**
-         * ## Sounds
-         *
-         * > If a sound is to be played along with message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sounds": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        sounds: string;
-      }) => Promise<void>;
-      /**
-       * ### Find iPhone Alert Tone
-       *
-       * > This service will send an alert tone to the device that you want to find
-       */
-      find_iphone_alert: (service_data: {
-        /**
-         * ## Device Name
-         *
-         * > Device the alert should be sent to
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_name": "Gary (gary_iphone)"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   filter:
-         * >     - integration: icloud3
-         * >   multiple: false
-         * > ```
-         */
-        device_name: TDeviceId;
-      }) => Promise<void>;
-      /**
-       * ### Send Lost Device Message
-       *
-       * > This service will send a Message and Phone number to the lost iPhone
-       */
-      lost_device_alert: (service_data: {
-        /**
-         * ## Device Name
-         *
-         * > Device the Find iPhone Alert and Message should be sent to
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_name": "Gary (gary_iphone)"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   filter:
-         * >     - integration: icloud3
-         * >   multiple: false
-         * > ```
-         */
-        device_name: TDeviceId;
-        /**
-         * ## Message
-         *
-         * > The message to be sent
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "This Phone has been lost. Please call this number to report it found."
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        message: string;
-        /**
-         * ## Phone Number
-         *
-         * > The phone number to send the message to
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "number": "123-456-7890"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        number: string;
-      }) => Promise<void>;
-      /**
-       * ### Restart
-       *
-       * > This service will restart iCloud3
-       */
-      restart: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### Update
-       *
-       * > The Update service has been replaced by the Action service
-       */
-      update: (service_data: EmptyObject) => Promise<void>;
-    };
-    // # MARK: image
-    image: {
-      /**
-       * ### snapshot
-       *
-       * >
-       */
-      snapshot: (
+      set_mode: (
         service_data: {
           /**
-           * ## filename
+           * ## mode
            *
            * ### Example
            *
            * > ```json
            * > {
-           * >   "filename": "/tmp/image_snapshot.jpg"
+           * >   "mode": "away"
            * > }
            * > ```
            *
@@ -6793,21 +3918,86 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
-          filename: string;
+          mode: string;
         } & RequireAtLeastOne<{
           /**
            * Assisted definition
            * > ```yaml
            * > entity:
            * >   - domain:
-           * >       - image
+           * >       - humidifier
+           * >     supported_features:
+           * >       - 1
            * > ```
            */
-          entity_id: PICK_ENTITY<"image"> | PICK_ENTITY<"image">[];
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### toggle
+       *
+       * >
+       */
+      toggle: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - humidifier
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### turn_off
+       *
+       * >
+       */
+      turn_off: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - humidifier
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### turn_on
+       *
+       * >
+       */
+      turn_on: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - humidifier
+           * > ```
+           */
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -6837,7 +4027,7 @@ declare module "@digital-alchemy/hass" {
            * >       - input_boolean
            * > ```
            */
-          entity_id: PICK_ENTITY<"input_boolean"> | PICK_ENTITY<"input_boolean">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -6858,7 +4048,7 @@ declare module "@digital-alchemy/hass" {
            * >       - input_boolean
            * > ```
            */
-          entity_id: PICK_ENTITY<"input_boolean"> | PICK_ENTITY<"input_boolean">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -6879,7 +4069,7 @@ declare module "@digital-alchemy/hass" {
            * >       - input_boolean
            * > ```
            */
-          entity_id: PICK_ENTITY<"input_boolean"> | PICK_ENTITY<"input_boolean">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -6946,8 +4136,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           date?: string;
@@ -6966,8 +4156,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           datetime?: string;
@@ -7129,7 +4319,7 @@ declare module "@digital-alchemy/hass" {
            * >       - input_select
            * > ```
            */
-          entity_id: PICK_ENTITY<"input_select"> | PICK_ENTITY<"input_select">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7150,7 +4340,7 @@ declare module "@digital-alchemy/hass" {
            * >       - input_select
            * > ```
            */
-          entity_id: PICK_ENTITY<"input_select"> | PICK_ENTITY<"input_select">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7188,7 +4378,7 @@ declare module "@digital-alchemy/hass" {
            * >       - input_select
            * > ```
            */
-          entity_id: PICK_ENTITY<"input_select"> | PICK_ENTITY<"input_select">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7232,7 +4422,7 @@ declare module "@digital-alchemy/hass" {
            * >       - input_select
            * > ```
            */
-          entity_id: PICK_ENTITY<"input_select"> | PICK_ENTITY<"input_select">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7270,7 +4460,7 @@ declare module "@digital-alchemy/hass" {
            * >       - input_select
            * > ```
            */
-          entity_id: PICK_ENTITY<"input_select"> | PICK_ENTITY<"input_select">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7312,7 +4502,7 @@ declare module "@digital-alchemy/hass" {
            * >       - input_select
            * > ```
            */
-          entity_id: PICK_ENTITY<"input_select"> | PICK_ENTITY<"input_select">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7349,8 +4539,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           value: string;
@@ -7363,21 +4553,12 @@ declare module "@digital-alchemy/hass" {
            * >       - input_text
            * > ```
            */
-          entity_id: PICK_ENTITY<"input_text"> | PICK_ENTITY<"input_text">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
-    };
-    // # MARK: intent_script
-    intent_script: {
-      /**
-       * ### reload
-       *
-       * >
-       */
-      reload: (service_data: EmptyObject) => Promise<void>;
     };
     // # MARK: light
     light: {
@@ -7433,8 +4614,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           effect?: string;
@@ -7600,8 +4781,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           effect?: string;
@@ -7678,8 +4859,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -7692,7 +4873,7 @@ declare module "@digital-alchemy/hass" {
            * >       - lock
            * > ```
            */
-          entity_id: PICK_ENTITY<"lock"> | PICK_ENTITY<"lock">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7720,8 +4901,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -7736,7 +4917,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 1
            * > ```
            */
-          entity_id: PICK_ENTITY<"lock"> | PICK_ENTITY<"lock">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7764,8 +4945,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -7778,7 +4959,7 @@ declare module "@digital-alchemy/hass" {
            * >       - lock
            * > ```
            */
-          entity_id: PICK_ENTITY<"lock"> | PICK_ENTITY<"lock">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7808,8 +4989,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         domain?: string;
@@ -7820,8 +5001,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > entity:
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: PICK_ENTITY | PICK_ENTITY[];
@@ -7840,8 +5021,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         message: string;
@@ -7860,8 +5041,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name: string;
@@ -7887,88 +5068,6 @@ declare module "@digital-alchemy/hass" {
        */
       set_level: (service_data: EmptyObject) => Promise<void>;
     };
-    // # MARK: matter
-    matter: {
-      /**
-       * ### water_heater_boost
-       *
-       * >
-       */
-      water_heater_boost: (
-        service_data?: {
-          /**
-           * ## duration
-           *
-           * ### Default
-           *
-           * > ```json
-           * > 3600
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > number:
-           * >   min: 60
-           * >   max: 14400
-           * >   step: 60
-           * >   mode: box
-           * > ```
-           */
-          duration: number;
-          /**
-           * ## emergency_boost
-           *
-           * ### Default
-           *
-           * > ```json
-           * > false
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > boolean: {}
-           * > ```
-           */
-          emergency_boost?: boolean;
-          /**
-           * ## temporary_setpoint
-           *
-           * ### Default
-           *
-           * > ```json
-           * > 65
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > number:
-           * >   min: 30
-           * >   max: 65
-           * >   step: 1
-           * >   mode: slider
-           * > ```
-           */
-          temporary_setpoint?: number;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - water_heater
-           * >     integration: matter
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-    };
     // # MARK: media_player
     media_player: {
       /**
@@ -7993,8 +5092,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           media_content_id?: string;
@@ -8013,8 +5112,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           media_content_type?: string;
@@ -8395,8 +5494,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           media_content_id?: string;
@@ -8415,8 +5514,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           media_content_type?: string;
@@ -8455,8 +5554,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           search_query: string;
@@ -8499,8 +5598,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           sound_mode?: string;
@@ -8543,8 +5642,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           source: string;
@@ -8856,8 +5955,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         topic?: string;
@@ -8943,8 +6042,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         topic: string;
@@ -8956,2343 +6055,14 @@ declare module "@digital-alchemy/hass" {
        */
       reload: (service_data: EmptyObject) => Promise<void>;
     };
-    // # MARK: music_assistant
-    music_assistant: {
-      /**
-       * ### get_library
-       *
-       * >
-       */
-      get_library: <T = unknown>(service_data?: {
-        /**
-         * ## album_artists_only
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "album_artists_only": "true"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        album_artists_only?: boolean;
-        /**
-         * ## album_type
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "album_type": "single"
-         * > }
-         * > ```
-         */
-        album_type?: ("album" | "single" | "compilation" | "ep" | "unknown")[];
-        /**
-         * ## config_entry_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > config_entry:
-         * >   integration: music_assistant
-         * > ```
-         */
-        config_entry_id:
-          | "c8bed19d292942a97a461373a7d6ba06"
-          | "c5eb9943b18934a9b6b7c97352455e66"
-          | "03294680d9f65c06ddc9c6c7e6298b4e"
-          | "e1d1f902370bd363c30ec1754be951de"
-          | "899539851520b643fb62d7bf649c9eba"
-          | "c01c8bafed9de60fd160a5c2b60ed47f"
-          | "c4607ed9761936dd06e9c93c10ba222b"
-          | "a4e5c98dabfb14a78b71c8b0059cc03b"
-          | "75a7ecb2f0d7abbb3be1582ab6133456"
-          | "293826fe696f8028e3e3a391a402c594"
-          | "96ed36b9014e2116ce4baeb13d6d913e"
-          | "6e8087dd21c4c3b2af6161342aefc07c"
-          | "8d484b4d7a078565f455bb247df810a5"
-          | "6b27c6379d501475d03291f7f2e9c753"
-          | "92632320d7d6b8e1ca44c9489bbc6ec9"
-          | "47586ba484648ba18a4ac617e95fccaa"
-          | "a38b3fa9e62a0ad042bd40ecfb7a2e58"
-          | "196a2e7ccba2ea68f32730e4dca0b3ff"
-          | "49b5c70604eee7b855be39e7581b994d"
-          | "532030e9bc284e48684d06a5b166a4cb"
-          | "84c18d021dbbfc76eef2f24086462811"
-          | "0a510a6b6e0594636be0da14390fc068"
-          | "5414f0f50caf4cb1c3cb65c8db8774ab"
-          | "17a91e089c77ea0cc5b503ee30eb416d"
-          | "68e1da457277d03e089c3bf89ae730e2"
-          | "37327437e69ad1fa62bca5866d51485b"
-          | "652db6cb0f52213087d4c7f43b0c7f99"
-          | "a65ff308ef637fa334615f1f95cdfc9c"
-          | "d6bfe5416e94341584548c1037664872"
-          | "af480b50e7f142bc26338c411b445db9"
-          | "b86b3a75f5f90105b2904bafc7ff16e2"
-          | "77790d3e11b0122b65d724a500e1eb6f"
-          | "69df01cf0a9e7fcd13122c8f097ec27b"
-          | "fe1e3d86a8d74c6248ec882f28f92ea9"
-          | "1a6490668d748b7a68f68cb8486cef86"
-          | "ae8237522ac6bd8fe5132c5c4e26def2"
-          | "78723e853efcc447171d035837201aff"
-          | "d7b45b15f8ad2c9c63654dc1e8a808e7"
-          | "5f043df105575f0c9e3859a9f2481e57"
-          | "01J5451XP0GRQW64N1TY1KRXB0"
-          | "01J54R0282SGZEM2A2PFVN8RJZ"
-          | "01J5E3Z1HZ1NK181T0069EYSR0"
-          | "01J5FM5KQQ60TMJ5P63B3RYEN4"
-          | "01J5G5PV36KTTHZF34HMPE7G14"
-          | "01J5GCJXRESNED9RDCDKT3WFV8"
-          | "01J5GD5959SYZFQ4WYPK7RCD0Z"
-          | "01J5MV0NKSFG540HYP8K3MJ3GK"
-          | "01J5PK4JNV8JRCV34SV2B8RP5J"
-          | "01J5V1XZ0QMRXWW4JM484G9VK7"
-          | "01J5XV9SBNAAP4YCC80X4THDTM"
-          | "01J5XVY0BTHGQ7BG12766HDJF5"
-          | "01J6549QR1XG9CGQW1KQM1Q6X6"
-          | "01J67GR7F9QWBB1QKD3R8RDHWT"
-          | "01J6811K5RB3TAZBVAG1927KHR"
-          | "01J681CTQWVE07HSKA7TA2F3CG"
-          | "01J681SX06FJ4BV0FYEPW15THD"
-          | "01J681ZZEY6Y0SRN5TS4D74S0S"
-          | "01J6HYDQ9WJ8SZHKKG0W3PXJZW"
-          | "01J6J6E8YWYPBSV033EBGQA3YM"
-          | "01J6Q3N3Y758XRR7P41H3K9R4T"
-          | "01J6QFKHYYZMYDCSAT7VBBVB1T"
-          | "01J6QJKD8SYWQ2AJBSA8BT9EQA"
-          | "01J6Z7J1F0AB8HGXYDT1MF65EY"
-          | "01J6Z7MXD9BDXK3ENAQP04J3D9"
-          | "01J71ZTR9CCVVDR4N8W6D0B8W2"
-          | "01J8AYH88X71THC9PWGEEZ96P4"
-          | "01J8AYHD7XXK1D2SKDM2F37ZD9"
-          | "01J8AYPC26HR9SQPVV7HQPZP0E"
-          | "01J8DKYMZ5CP5JYWSDWZKMPXB1"
-          | "01J8QMNJVJJGA2SVKE2KNDJ3RW"
-          | "01J8R24P39RY59E5K7Q4B455A6"
-          | "01J8TKSV2J67Y1JH5SC6TJ0HH2"
-          | "01J9EBE57F8P4D3N71VHAPKJYC"
-          | "01JA0RM9X4Z8HP744RNCMBPNR6"
-          | "01JA0RVCW4T6BNMGWCGP4G2F71"
-          | "01JA0RXSB4P5ZKW6959E3P46TV"
-          | "01JA0S4HW61T133FSRYM2B5DW5"
-          | "01JA8R4VMACZC72DABA6KK2NPK"
-          | "01JANMECN3J2TJGBZE6XHG3VTS"
-          | "01JANQJJ3ZD5MTEQ12GX58WTNW"
-          | "01JANREJYY9M7W3BCC87S3074S"
-          | "01JBM4M69512YE1DWNBZ2FF67E"
-          | "01JFT269K10RAGGRHZXR2QNXA1"
-          | "01JGBVEBX1A8WV0W0X8FYE04VG"
-          | "01JGSMXPKGY4T3WVCSG68NF94R"
-          | "01JKNXRMMCBZC3AJDR48JKRVV6"
-          | "01JMMYMGKRZPK95FJAD50A2MR7"
-          | "01JNP592H0CCDZS7ERH5EJZE3Y"
-          | "01JQKCF7PE9JMPQ3ECGNGT3H1C"
-          | "01JR5KF1PB09GMYSPF0QFYX76H"
-          | "01JR8V3W6HCR8TNAYF7S5917DB"
-          | "01JR8WTBR82VHBJPGS5R79P8NT"
-          | "01JRG9X277MJMJ4X5MW2FBRMSC"
-          | "01JRGBERMC04YT20E22TPNJSNM"
-          | "01JSRPFH1HCHNZFACXDJEBN3M1"
-          | "01JTV7J0H9Y4FXTW26NERJT332"
-          | "01JV5Q1HD3KJDVS7T0FCG63R4C"
-          | "01JV5Q1K01X6DFKMJHD90E32XZ"
-          | "01JV5R9SB7549Y0GXVM4RW1TEA"
-          | "01JV5RVGQXVVAYYEG7W81W1VPW"
-          | "01JV5RXK4WMWZDKERNGD2WZ0N0"
-          | "01JV5SJP9WWP5QD5H72342G6YK"
-          | "01K1EK9QD7NJ5CN3NT0CT9EDAK"
-          | "01K2Z4YRMMK0K7C3K6NNB6PNX0"
-          | "01K3D4XYHA835QJC77PAT86AT9"
-          | "01K4B3WE1K420R6ZZMSGF3DW49"
-          | "01K6X4YAHFYG613S5KQBYH14VX";
-        /**
-         * ## favorite
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "favorite": "true"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        favorite?: boolean;
-        /**
-         * ## limit
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "25"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 25
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## media_type
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "media_type": "playlist"
-         * > }
-         * > ```
-         */
-        media_type: "artist" | "album" | "audiobook" | "playlist" | "podcast" | "track" | "radio";
-        /**
-         * ## offset
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "25"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 0
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 1000000
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## order_by
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "order_by": "random"
-         * > }
-         * > ```
-         */
-        order_by?:
-          | "name"
-          | "name_desc"
-          | "sort_name"
-          | "sort_name_desc"
-          | "timestamp_added"
-          | "timestamp_added_desc"
-          | "last_played"
-          | "last_played_desc"
-          | "play_count"
-          | "play_count_desc"
-          | "year"
-          | "year_desc"
-          | "position"
-          | "position_desc"
-          | "artist_name"
-          | "artist_name_desc"
-          | "random"
-          | "random_play_count";
-        /**
-         * ## search
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "search": "We Are The Champions"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        search?: string;
-      }) => Promise<T>;
-      /**
-       * ### get_queue
-       *
-       * >
-       */
-      get_queue: <T = unknown>(
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - media_player
-           * >     integration: music_assistant
-           * >     supported_features:
-           * >       - 512
-           * > ```
-           */
-          entity_id:
-            | PICK_FROM_PLATFORM<"music_assistant", "media_player">
-            | PICK_FROM_PLATFORM<"music_assistant", "media_player">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<T>;
-      /**
-       * ### play_announcement
-       *
-       * >
-       */
-      play_announcement: (
-        service_data?: {
-          /**
-           * ## announce_volume
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "announce_volume": "75"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > number:
-           * >   min: 1
-           * >   max: 100
-           * >   step: 1
-           * >   mode: slider
-           * > ```
-           */
-          announce_volume?: number;
-          /**
-           * ## url
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "url": "http://someremotesite.com/doorbell.mp3"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          url: string;
-          /**
-           * ## use_pre_announce
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "use_pre_announce": "true"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > boolean: {}
-           * > ```
-           */
-          use_pre_announce?: boolean;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - media_player
-           * >     integration: music_assistant
-           * >     supported_features:
-           * >       - 512
-           * >       - 1048576
-           * > ```
-           */
-          entity_id:
-            | PICK_FROM_PLATFORM<"music_assistant", "media_player">
-            | PICK_FROM_PLATFORM<"music_assistant", "media_player">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### play_media
-       *
-       * >
-       */
-      play_media: (
-        service_data?: {
-          /**
-           * ## album
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "album": "News of the world"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          album?: string;
-          /**
-           * ## artist
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "artist": "Queen"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          artist?: string;
-          /**
-           * ## enqueue
-           */
-          enqueue?: "play" | "replace" | "next" | "replace_next" | "add";
-          /**
-           * ## media_id
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "media_id": "spotify://playlist/aabbccddeeff"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > object:
-           * >   multiple: false
-           * > ```
-           */
-          media_id: Record<string, unknown> | unknown[];
-          /**
-           * ## media_type
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "media_type": "playlist"
-           * > }
-           * > ```
-           */
-          media_type?:
-            | "artist"
-            | "album"
-            | "audiobook"
-            | "folder"
-            | "playlist"
-            | "podcast"
-            | "track"
-            | "radio";
-          /**
-           * ## radio_mode
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > boolean: {}
-           * > ```
-           */
-          radio_mode?: boolean;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - media_player
-           * >     integration: music_assistant
-           * >     supported_features:
-           * >       - 512
-           * > ```
-           */
-          entity_id:
-            | PICK_FROM_PLATFORM<"music_assistant", "media_player">
-            | PICK_FROM_PLATFORM<"music_assistant", "media_player">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### search
-       *
-       * >
-       */
-      search: <T = unknown>(service_data?: {
-        /**
-         * ## album
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "album": "News of the world"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        album?: string;
-        /**
-         * ## artist
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "artist": "Queen"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        artist?: string;
-        /**
-         * ## config_entry_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > config_entry:
-         * >   integration: music_assistant
-         * > ```
-         */
-        config_entry_id:
-          | "c8bed19d292942a97a461373a7d6ba06"
-          | "c5eb9943b18934a9b6b7c97352455e66"
-          | "03294680d9f65c06ddc9c6c7e6298b4e"
-          | "e1d1f902370bd363c30ec1754be951de"
-          | "899539851520b643fb62d7bf649c9eba"
-          | "c01c8bafed9de60fd160a5c2b60ed47f"
-          | "c4607ed9761936dd06e9c93c10ba222b"
-          | "a4e5c98dabfb14a78b71c8b0059cc03b"
-          | "75a7ecb2f0d7abbb3be1582ab6133456"
-          | "293826fe696f8028e3e3a391a402c594"
-          | "96ed36b9014e2116ce4baeb13d6d913e"
-          | "6e8087dd21c4c3b2af6161342aefc07c"
-          | "8d484b4d7a078565f455bb247df810a5"
-          | "6b27c6379d501475d03291f7f2e9c753"
-          | "92632320d7d6b8e1ca44c9489bbc6ec9"
-          | "47586ba484648ba18a4ac617e95fccaa"
-          | "a38b3fa9e62a0ad042bd40ecfb7a2e58"
-          | "196a2e7ccba2ea68f32730e4dca0b3ff"
-          | "49b5c70604eee7b855be39e7581b994d"
-          | "532030e9bc284e48684d06a5b166a4cb"
-          | "84c18d021dbbfc76eef2f24086462811"
-          | "0a510a6b6e0594636be0da14390fc068"
-          | "5414f0f50caf4cb1c3cb65c8db8774ab"
-          | "17a91e089c77ea0cc5b503ee30eb416d"
-          | "68e1da457277d03e089c3bf89ae730e2"
-          | "37327437e69ad1fa62bca5866d51485b"
-          | "652db6cb0f52213087d4c7f43b0c7f99"
-          | "a65ff308ef637fa334615f1f95cdfc9c"
-          | "d6bfe5416e94341584548c1037664872"
-          | "af480b50e7f142bc26338c411b445db9"
-          | "b86b3a75f5f90105b2904bafc7ff16e2"
-          | "77790d3e11b0122b65d724a500e1eb6f"
-          | "69df01cf0a9e7fcd13122c8f097ec27b"
-          | "fe1e3d86a8d74c6248ec882f28f92ea9"
-          | "1a6490668d748b7a68f68cb8486cef86"
-          | "ae8237522ac6bd8fe5132c5c4e26def2"
-          | "78723e853efcc447171d035837201aff"
-          | "d7b45b15f8ad2c9c63654dc1e8a808e7"
-          | "5f043df105575f0c9e3859a9f2481e57"
-          | "01J5451XP0GRQW64N1TY1KRXB0"
-          | "01J54R0282SGZEM2A2PFVN8RJZ"
-          | "01J5E3Z1HZ1NK181T0069EYSR0"
-          | "01J5FM5KQQ60TMJ5P63B3RYEN4"
-          | "01J5G5PV36KTTHZF34HMPE7G14"
-          | "01J5GCJXRESNED9RDCDKT3WFV8"
-          | "01J5GD5959SYZFQ4WYPK7RCD0Z"
-          | "01J5MV0NKSFG540HYP8K3MJ3GK"
-          | "01J5PK4JNV8JRCV34SV2B8RP5J"
-          | "01J5V1XZ0QMRXWW4JM484G9VK7"
-          | "01J5XV9SBNAAP4YCC80X4THDTM"
-          | "01J5XVY0BTHGQ7BG12766HDJF5"
-          | "01J6549QR1XG9CGQW1KQM1Q6X6"
-          | "01J67GR7F9QWBB1QKD3R8RDHWT"
-          | "01J6811K5RB3TAZBVAG1927KHR"
-          | "01J681CTQWVE07HSKA7TA2F3CG"
-          | "01J681SX06FJ4BV0FYEPW15THD"
-          | "01J681ZZEY6Y0SRN5TS4D74S0S"
-          | "01J6HYDQ9WJ8SZHKKG0W3PXJZW"
-          | "01J6J6E8YWYPBSV033EBGQA3YM"
-          | "01J6Q3N3Y758XRR7P41H3K9R4T"
-          | "01J6QFKHYYZMYDCSAT7VBBVB1T"
-          | "01J6QJKD8SYWQ2AJBSA8BT9EQA"
-          | "01J6Z7J1F0AB8HGXYDT1MF65EY"
-          | "01J6Z7MXD9BDXK3ENAQP04J3D9"
-          | "01J71ZTR9CCVVDR4N8W6D0B8W2"
-          | "01J8AYH88X71THC9PWGEEZ96P4"
-          | "01J8AYHD7XXK1D2SKDM2F37ZD9"
-          | "01J8AYPC26HR9SQPVV7HQPZP0E"
-          | "01J8DKYMZ5CP5JYWSDWZKMPXB1"
-          | "01J8QMNJVJJGA2SVKE2KNDJ3RW"
-          | "01J8R24P39RY59E5K7Q4B455A6"
-          | "01J8TKSV2J67Y1JH5SC6TJ0HH2"
-          | "01J9EBE57F8P4D3N71VHAPKJYC"
-          | "01JA0RM9X4Z8HP744RNCMBPNR6"
-          | "01JA0RVCW4T6BNMGWCGP4G2F71"
-          | "01JA0RXSB4P5ZKW6959E3P46TV"
-          | "01JA0S4HW61T133FSRYM2B5DW5"
-          | "01JA8R4VMACZC72DABA6KK2NPK"
-          | "01JANMECN3J2TJGBZE6XHG3VTS"
-          | "01JANQJJ3ZD5MTEQ12GX58WTNW"
-          | "01JANREJYY9M7W3BCC87S3074S"
-          | "01JBM4M69512YE1DWNBZ2FF67E"
-          | "01JFT269K10RAGGRHZXR2QNXA1"
-          | "01JGBVEBX1A8WV0W0X8FYE04VG"
-          | "01JGSMXPKGY4T3WVCSG68NF94R"
-          | "01JKNXRMMCBZC3AJDR48JKRVV6"
-          | "01JMMYMGKRZPK95FJAD50A2MR7"
-          | "01JNP592H0CCDZS7ERH5EJZE3Y"
-          | "01JQKCF7PE9JMPQ3ECGNGT3H1C"
-          | "01JR5KF1PB09GMYSPF0QFYX76H"
-          | "01JR8V3W6HCR8TNAYF7S5917DB"
-          | "01JR8WTBR82VHBJPGS5R79P8NT"
-          | "01JRG9X277MJMJ4X5MW2FBRMSC"
-          | "01JRGBERMC04YT20E22TPNJSNM"
-          | "01JSRPFH1HCHNZFACXDJEBN3M1"
-          | "01JTV7J0H9Y4FXTW26NERJT332"
-          | "01JV5Q1HD3KJDVS7T0FCG63R4C"
-          | "01JV5Q1K01X6DFKMJHD90E32XZ"
-          | "01JV5R9SB7549Y0GXVM4RW1TEA"
-          | "01JV5RVGQXVVAYYEG7W81W1VPW"
-          | "01JV5RXK4WMWZDKERNGD2WZ0N0"
-          | "01JV5SJP9WWP5QD5H72342G6YK"
-          | "01K1EK9QD7NJ5CN3NT0CT9EDAK"
-          | "01K2Z4YRMMK0K7C3K6NNB6PNX0"
-          | "01K3D4XYHA835QJC77PAT86AT9"
-          | "01K4B3WE1K420R6ZZMSGF3DW49"
-          | "01K6X4YAHFYG613S5KQBYH14VX";
-        /**
-         * ## library_only
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "library_only": "true"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        library_only?: boolean;
-        /**
-         * ## limit
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "25"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 5
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 100
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## media_type
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "media_type": "playlist"
-         * > }
-         * > ```
-         */
-        media_type?: (
-          | "artist"
-          | "album"
-          | "audiobook"
-          | "playlist"
-          | "podcast"
-          | "track"
-          | "radio"
-        )[];
-        /**
-         * ## name
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "name": "We Are The Champions"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        name: string;
-      }) => Promise<T>;
-      /**
-       * ### transfer_queue
-       *
-       * >
-       */
-      transfer_queue: (
-        service_data?: {
-          /**
-           * ## auto_play
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "auto_play": "true"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > boolean: {}
-           * > ```
-           */
-          auto_play?: boolean;
-          /**
-           * ## source_player
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > entity:
-           * >   domain:
-           * >     - media_player
-           * >   integration: music_assistant
-           * >   multiple: false
-           * >   reorder: false
-           * > ```
-           */
-          source_player?:
-            | PICK_FROM_PLATFORM<"music_assistant", "media_player">
-            | PICK_FROM_PLATFORM<"music_assistant", "media_player">[];
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - media_player
-           * >     integration: music_assistant
-           * > ```
-           */
-          entity_id:
-            | PICK_FROM_PLATFORM<"music_assistant", "media_player">
-            | PICK_FROM_PLATFORM<"music_assistant", "media_player">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-    };
-    // # MARK: nodered
-    nodered: {
-      /**
-       * ### trigger
-       *
-       * >
-       */
-      trigger: (
-        service_data?: {
-          /**
-           * ## message
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > object:
-           * >   multiple: false
-           * > ```
-           */
-          message?: Record<string, unknown> | unknown[];
-          /**
-           * ## output_path
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "output_path": "1,2"
-           * > }
-           * > ```
-           *
-           * ### Default
-           *
-           * > ```json
-           * > "0"
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          output_path?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - integration: nodered
-           * >     domain:
-           * >       - switch
-           * > ```
-           */
-          entity_id:
-            | PICK_FROM_PLATFORM<"nodered", "switch">
-            | PICK_FROM_PLATFORM<"nodered", "switch">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-    };
     // # MARK: notify
     notify: {
       /**
-       * ### Send a notification with alexa_media
+       * ### Send a notification via mobile_app_bens_phone
        *
-       * > Sends a notification message using the alexa_media service.
+       * > Sends a notification message using the mobile_app_bens_phone integration.
        */
-      alexa_media: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via alexa_media_bedroom_sonos_one
-       *
-       * > Sends a notification message using the alexa_media_bedroom_sonos_one integration.
-       */
-      alexa_media_bedroom_sonos_one: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via alexa_media_bedroom_speaker_2
-       *
-       * > Sends a notification message using the alexa_media_bedroom_speaker_2 integration.
-       */
-      alexa_media_bedroom_speaker_2: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via alexa_media_ben_s_2nd_sonos_one_second_edition
-       *
-       * > Sends a notification message using the alexa_media_ben_s_2nd_sonos_one_second_edition integration.
-       */
-      alexa_media_ben_s_2nd_sonos_one_second_edition: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via alexa_media_last_called_bwainwright28_gmail_com
-       *
-       * > Sends a notification message using the alexa_media_last_called_bwainwright28_gmail_com integration.
-       */
-      alexa_media_last_called_bwainwright28_gmail_com: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via alexa_media_living_room
-       *
-       * > Sends a notification message using the alexa_media_living_room integration.
-       */
-      alexa_media_living_room: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via alexa_media_living_room_sonos
-       *
-       * > Sends a notification message using the alexa_media_living_room_sonos integration.
-       */
-      alexa_media_living_room_sonos: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via alexa_media_living_room_sonos_one
-       *
-       * > Sends a notification message using the alexa_media_living_room_sonos_one integration.
-       */
-      alexa_media_living_room_sonos_one: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via alexa_media_office_2
-       *
-       * > Sends a notification message using the alexa_media_office_2 integration.
-       */
-      alexa_media_office_2: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via alexa_media_sonos_arc_ultra_2
-       *
-       * > Sends a notification message using the alexa_media_sonos_arc_ultra_2 integration.
-       */
-      alexa_media_sonos_arc_ultra_2: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via alexa_media_this_device_2
-       *
-       * > Sends a notification message using the alexa_media_this_device_2 integration.
-       */
-      alexa_media_this_device_2: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification with email
-       *
-       * > Sends a notification message using the email service.
-       */
-      email: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification with lg_webos_tv_oled55c8pla
-       *
-       * > Sends a notification message using the lg_webos_tv_oled55c8pla service.
-       */
-      lg_webos_tv_oled55c8pla: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via mobile_app_bens_imac
-       *
-       * > Sends a notification message using the mobile_app_bens_imac integration.
-       */
-      mobile_app_bens_imac: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via mobile_app_bens_imac_pro
-       *
-       * > Sends a notification message using the mobile_app_bens_imac_pro integration.
-       */
-      mobile_app_bens_imac_pro: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via mobile_app_bens_iphone
-       *
-       * > Sends a notification message using the mobile_app_bens_iphone integration.
-       */
-      mobile_app_bens_iphone: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via mobile_app_iphone
-       *
-       * > Sends a notification message using the mobile_app_iphone integration.
-       */
-      mobile_app_iphone: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via mobile_app_mums_phone
-       *
-       * > Sends a notification message using the mobile_app_mums_phone integration.
-       */
-      mobile_app_mums_phone: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via mobile_app_pixel_6_pro
-       *
-       * > Sends a notification message using the mobile_app_pixel_6_pro integration.
-       */
-      mobile_app_pixel_6_pro: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via mobile_app_ryans_iphone
-       *
-       * > Sends a notification message using the mobile_app_ryans_iphone integration.
-       */
-      mobile_app_ryans_iphone: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via mobile_app_ryans_phone
-       *
-       * > Sends a notification message using the mobile_app_ryans_phone integration.
-       */
-      mobile_app_ryans_phone: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
-      /**
-       * ### Send a notification via mobile_app_tom_s_pixel_7
-       *
-       * > Sends a notification message using the mobile_app_tom_s_pixel_7 integration.
-       */
-      mobile_app_tom_s_pixel_7: (service_data?: {
+      mobile_app_bens_phone: (service_data?: {
         /**
          * ## data
          *
@@ -11461,8 +6231,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         message: string;
@@ -11481,8 +6251,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         title?: string;
@@ -11501,8 +6271,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           message: string;
@@ -11513,8 +6283,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           title?: string;
@@ -11558,8 +6328,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           value: string;
@@ -11578,619 +6348,6 @@ declare module "@digital-alchemy/hass" {
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
-    };
-    // # MARK: octopus_energy
-    octopus_energy: {
-      /**
-       * ### Join Octoplus saving session event
-       *
-       * > Joins a given Octoplus saving session event.
-       */
-      join_octoplus_saving_session_event: (
-        service_data?: {
-          /**
-           * ## Event code
-           *
-           * > The code of the event that is to be joined.
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          event_code?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - integration: octopus_energy
-           * >     domain:
-           * >       - event
-           * > ```
-           */
-          entity_id:
-            | PICK_FROM_PLATFORM<"octopus_energy", "event">
-            | PICK_FROM_PLATFORM<"octopus_energy", "event">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### Purge invalid external statistics
-       *
-       * > Removes external statistics for all meters that don't have an active tariff
-       */
-      purge_invalid_external_statistic_ids: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### Refresh previous consumption data
-       *
-       * > Refreshes the previous consumption data for a given entity from a given date.
-       */
-      refresh_previous_consumption_data: (
-        service_data: {
-          /**
-           * ## Date
-           *
-           * > The date the data should be loaded from.
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > date: {}
-           * > ```
-           */
-          start_date: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - integration: octopus_energy
-           * >     domain:
-           * >       - sensor
-           * > ```
-           */
-          entity_id:
-            | PICK_FROM_PLATFORM<"octopus_energy", "sensor">
-            | PICK_FROM_PLATFORM<"octopus_energy", "sensor">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### Register rate weightings
-       *
-       * > Registers external weightings against rates, for use with target rate sensors when calculating target periods.
-       */
-      register_rate_weightings: (
-        service_data?: {
-          /**
-           * ## Weightings
-           *
-           * > The collection of time periods and associated weightings to apply.
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "weightings": "[\n  {\n    \"start\": \"2025-01-01T00:00:00Z\",\n    \"end\": \"2025-01-01T00:30:00Z\",\n    \"weighting\": 0.1\n  }\n]"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > object:
-           * >   multiple: false
-           * > ```
-           */
-          weightings?: Record<string, unknown> | unknown[];
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - integration: octopus_energy
-           * >     domain:
-           * >       - sensor
-           * > ```
-           */
-          entity_id:
-            | PICK_FROM_PLATFORM<"octopus_energy", "sensor">
-            | PICK_FROM_PLATFORM<"octopus_energy", "sensor">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### Spin wheel of fortune
-       *
-       * > Spins the wheel of fortune for a given energy type
-       */
-      spin_wheel_of_fortune: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - integration: octopus_energy
-           * >     domain:
-           * >       - sensor
-           * > ```
-           */
-          entity_id:
-            | PICK_FROM_PLATFORM<"octopus_energy", "sensor">
-            | PICK_FROM_PLATFORM<"octopus_energy", "sensor">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-    };
-    // # MARK: openai_conversation
-    openai_conversation: {
-      /**
-       * ### generate_content
-       *
-       * >
-       */
-      generate_content: <T = unknown>(service_data?: {
-        /**
-         * ## config_entry
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > config_entry:
-         * >   integration: openai_conversation
-         * > ```
-         */
-        config_entry:
-          | "c8bed19d292942a97a461373a7d6ba06"
-          | "c5eb9943b18934a9b6b7c97352455e66"
-          | "03294680d9f65c06ddc9c6c7e6298b4e"
-          | "e1d1f902370bd363c30ec1754be951de"
-          | "899539851520b643fb62d7bf649c9eba"
-          | "c01c8bafed9de60fd160a5c2b60ed47f"
-          | "c4607ed9761936dd06e9c93c10ba222b"
-          | "a4e5c98dabfb14a78b71c8b0059cc03b"
-          | "75a7ecb2f0d7abbb3be1582ab6133456"
-          | "293826fe696f8028e3e3a391a402c594"
-          | "96ed36b9014e2116ce4baeb13d6d913e"
-          | "6e8087dd21c4c3b2af6161342aefc07c"
-          | "8d484b4d7a078565f455bb247df810a5"
-          | "6b27c6379d501475d03291f7f2e9c753"
-          | "92632320d7d6b8e1ca44c9489bbc6ec9"
-          | "47586ba484648ba18a4ac617e95fccaa"
-          | "a38b3fa9e62a0ad042bd40ecfb7a2e58"
-          | "196a2e7ccba2ea68f32730e4dca0b3ff"
-          | "49b5c70604eee7b855be39e7581b994d"
-          | "532030e9bc284e48684d06a5b166a4cb"
-          | "84c18d021dbbfc76eef2f24086462811"
-          | "0a510a6b6e0594636be0da14390fc068"
-          | "5414f0f50caf4cb1c3cb65c8db8774ab"
-          | "17a91e089c77ea0cc5b503ee30eb416d"
-          | "68e1da457277d03e089c3bf89ae730e2"
-          | "37327437e69ad1fa62bca5866d51485b"
-          | "652db6cb0f52213087d4c7f43b0c7f99"
-          | "a65ff308ef637fa334615f1f95cdfc9c"
-          | "d6bfe5416e94341584548c1037664872"
-          | "af480b50e7f142bc26338c411b445db9"
-          | "b86b3a75f5f90105b2904bafc7ff16e2"
-          | "77790d3e11b0122b65d724a500e1eb6f"
-          | "69df01cf0a9e7fcd13122c8f097ec27b"
-          | "fe1e3d86a8d74c6248ec882f28f92ea9"
-          | "1a6490668d748b7a68f68cb8486cef86"
-          | "ae8237522ac6bd8fe5132c5c4e26def2"
-          | "78723e853efcc447171d035837201aff"
-          | "d7b45b15f8ad2c9c63654dc1e8a808e7"
-          | "5f043df105575f0c9e3859a9f2481e57"
-          | "01J5451XP0GRQW64N1TY1KRXB0"
-          | "01J54R0282SGZEM2A2PFVN8RJZ"
-          | "01J5E3Z1HZ1NK181T0069EYSR0"
-          | "01J5FM5KQQ60TMJ5P63B3RYEN4"
-          | "01J5G5PV36KTTHZF34HMPE7G14"
-          | "01J5GCJXRESNED9RDCDKT3WFV8"
-          | "01J5GD5959SYZFQ4WYPK7RCD0Z"
-          | "01J5MV0NKSFG540HYP8K3MJ3GK"
-          | "01J5PK4JNV8JRCV34SV2B8RP5J"
-          | "01J5V1XZ0QMRXWW4JM484G9VK7"
-          | "01J5XV9SBNAAP4YCC80X4THDTM"
-          | "01J5XVY0BTHGQ7BG12766HDJF5"
-          | "01J6549QR1XG9CGQW1KQM1Q6X6"
-          | "01J67GR7F9QWBB1QKD3R8RDHWT"
-          | "01J6811K5RB3TAZBVAG1927KHR"
-          | "01J681CTQWVE07HSKA7TA2F3CG"
-          | "01J681SX06FJ4BV0FYEPW15THD"
-          | "01J681ZZEY6Y0SRN5TS4D74S0S"
-          | "01J6HYDQ9WJ8SZHKKG0W3PXJZW"
-          | "01J6J6E8YWYPBSV033EBGQA3YM"
-          | "01J6Q3N3Y758XRR7P41H3K9R4T"
-          | "01J6QFKHYYZMYDCSAT7VBBVB1T"
-          | "01J6QJKD8SYWQ2AJBSA8BT9EQA"
-          | "01J6Z7J1F0AB8HGXYDT1MF65EY"
-          | "01J6Z7MXD9BDXK3ENAQP04J3D9"
-          | "01J71ZTR9CCVVDR4N8W6D0B8W2"
-          | "01J8AYH88X71THC9PWGEEZ96P4"
-          | "01J8AYHD7XXK1D2SKDM2F37ZD9"
-          | "01J8AYPC26HR9SQPVV7HQPZP0E"
-          | "01J8DKYMZ5CP5JYWSDWZKMPXB1"
-          | "01J8QMNJVJJGA2SVKE2KNDJ3RW"
-          | "01J8R24P39RY59E5K7Q4B455A6"
-          | "01J8TKSV2J67Y1JH5SC6TJ0HH2"
-          | "01J9EBE57F8P4D3N71VHAPKJYC"
-          | "01JA0RM9X4Z8HP744RNCMBPNR6"
-          | "01JA0RVCW4T6BNMGWCGP4G2F71"
-          | "01JA0RXSB4P5ZKW6959E3P46TV"
-          | "01JA0S4HW61T133FSRYM2B5DW5"
-          | "01JA8R4VMACZC72DABA6KK2NPK"
-          | "01JANMECN3J2TJGBZE6XHG3VTS"
-          | "01JANQJJ3ZD5MTEQ12GX58WTNW"
-          | "01JANREJYY9M7W3BCC87S3074S"
-          | "01JBM4M69512YE1DWNBZ2FF67E"
-          | "01JFT269K10RAGGRHZXR2QNXA1"
-          | "01JGBVEBX1A8WV0W0X8FYE04VG"
-          | "01JGSMXPKGY4T3WVCSG68NF94R"
-          | "01JKNXRMMCBZC3AJDR48JKRVV6"
-          | "01JMMYMGKRZPK95FJAD50A2MR7"
-          | "01JNP592H0CCDZS7ERH5EJZE3Y"
-          | "01JQKCF7PE9JMPQ3ECGNGT3H1C"
-          | "01JR5KF1PB09GMYSPF0QFYX76H"
-          | "01JR8V3W6HCR8TNAYF7S5917DB"
-          | "01JR8WTBR82VHBJPGS5R79P8NT"
-          | "01JRG9X277MJMJ4X5MW2FBRMSC"
-          | "01JRGBERMC04YT20E22TPNJSNM"
-          | "01JSRPFH1HCHNZFACXDJEBN3M1"
-          | "01JTV7J0H9Y4FXTW26NERJT332"
-          | "01JV5Q1HD3KJDVS7T0FCG63R4C"
-          | "01JV5Q1K01X6DFKMJHD90E32XZ"
-          | "01JV5R9SB7549Y0GXVM4RW1TEA"
-          | "01JV5RVGQXVVAYYEG7W81W1VPW"
-          | "01JV5RXK4WMWZDKERNGD2WZ0N0"
-          | "01JV5SJP9WWP5QD5H72342G6YK"
-          | "01K1EK9QD7NJ5CN3NT0CT9EDAK"
-          | "01K2Z4YRMMK0K7C3K6NNB6PNX0"
-          | "01K3D4XYHA835QJC77PAT86AT9"
-          | "01K4B3WE1K420R6ZZMSGF3DW49"
-          | "01K6X4YAHFYG613S5KQBYH14VX";
-        /**
-         * ## filenames
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "filenames": "- /path/to/file1.txt\n- /path/to/file2.txt\n"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiline: true
-         * >   multiple: false
-         * > ```
-         */
-        filenames?: string;
-        /**
-         * ## prompt
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "prompt": "Hello, how can I help you?"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiline: true
-         * >   multiple: false
-         * > ```
-         */
-        prompt: string;
-      }) => Promise<T>;
-      /**
-       * ### generate_image
-       *
-       * >
-       */
-      generate_image: <T = unknown>(service_data?: {
-        /**
-         * ## config_entry
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > config_entry:
-         * >   integration: openai_conversation
-         * > ```
-         */
-        config_entry:
-          | "c8bed19d292942a97a461373a7d6ba06"
-          | "c5eb9943b18934a9b6b7c97352455e66"
-          | "03294680d9f65c06ddc9c6c7e6298b4e"
-          | "e1d1f902370bd363c30ec1754be951de"
-          | "899539851520b643fb62d7bf649c9eba"
-          | "c01c8bafed9de60fd160a5c2b60ed47f"
-          | "c4607ed9761936dd06e9c93c10ba222b"
-          | "a4e5c98dabfb14a78b71c8b0059cc03b"
-          | "75a7ecb2f0d7abbb3be1582ab6133456"
-          | "293826fe696f8028e3e3a391a402c594"
-          | "96ed36b9014e2116ce4baeb13d6d913e"
-          | "6e8087dd21c4c3b2af6161342aefc07c"
-          | "8d484b4d7a078565f455bb247df810a5"
-          | "6b27c6379d501475d03291f7f2e9c753"
-          | "92632320d7d6b8e1ca44c9489bbc6ec9"
-          | "47586ba484648ba18a4ac617e95fccaa"
-          | "a38b3fa9e62a0ad042bd40ecfb7a2e58"
-          | "196a2e7ccba2ea68f32730e4dca0b3ff"
-          | "49b5c70604eee7b855be39e7581b994d"
-          | "532030e9bc284e48684d06a5b166a4cb"
-          | "84c18d021dbbfc76eef2f24086462811"
-          | "0a510a6b6e0594636be0da14390fc068"
-          | "5414f0f50caf4cb1c3cb65c8db8774ab"
-          | "17a91e089c77ea0cc5b503ee30eb416d"
-          | "68e1da457277d03e089c3bf89ae730e2"
-          | "37327437e69ad1fa62bca5866d51485b"
-          | "652db6cb0f52213087d4c7f43b0c7f99"
-          | "a65ff308ef637fa334615f1f95cdfc9c"
-          | "d6bfe5416e94341584548c1037664872"
-          | "af480b50e7f142bc26338c411b445db9"
-          | "b86b3a75f5f90105b2904bafc7ff16e2"
-          | "77790d3e11b0122b65d724a500e1eb6f"
-          | "69df01cf0a9e7fcd13122c8f097ec27b"
-          | "fe1e3d86a8d74c6248ec882f28f92ea9"
-          | "1a6490668d748b7a68f68cb8486cef86"
-          | "ae8237522ac6bd8fe5132c5c4e26def2"
-          | "78723e853efcc447171d035837201aff"
-          | "d7b45b15f8ad2c9c63654dc1e8a808e7"
-          | "5f043df105575f0c9e3859a9f2481e57"
-          | "01J5451XP0GRQW64N1TY1KRXB0"
-          | "01J54R0282SGZEM2A2PFVN8RJZ"
-          | "01J5E3Z1HZ1NK181T0069EYSR0"
-          | "01J5FM5KQQ60TMJ5P63B3RYEN4"
-          | "01J5G5PV36KTTHZF34HMPE7G14"
-          | "01J5GCJXRESNED9RDCDKT3WFV8"
-          | "01J5GD5959SYZFQ4WYPK7RCD0Z"
-          | "01J5MV0NKSFG540HYP8K3MJ3GK"
-          | "01J5PK4JNV8JRCV34SV2B8RP5J"
-          | "01J5V1XZ0QMRXWW4JM484G9VK7"
-          | "01J5XV9SBNAAP4YCC80X4THDTM"
-          | "01J5XVY0BTHGQ7BG12766HDJF5"
-          | "01J6549QR1XG9CGQW1KQM1Q6X6"
-          | "01J67GR7F9QWBB1QKD3R8RDHWT"
-          | "01J6811K5RB3TAZBVAG1927KHR"
-          | "01J681CTQWVE07HSKA7TA2F3CG"
-          | "01J681SX06FJ4BV0FYEPW15THD"
-          | "01J681ZZEY6Y0SRN5TS4D74S0S"
-          | "01J6HYDQ9WJ8SZHKKG0W3PXJZW"
-          | "01J6J6E8YWYPBSV033EBGQA3YM"
-          | "01J6Q3N3Y758XRR7P41H3K9R4T"
-          | "01J6QFKHYYZMYDCSAT7VBBVB1T"
-          | "01J6QJKD8SYWQ2AJBSA8BT9EQA"
-          | "01J6Z7J1F0AB8HGXYDT1MF65EY"
-          | "01J6Z7MXD9BDXK3ENAQP04J3D9"
-          | "01J71ZTR9CCVVDR4N8W6D0B8W2"
-          | "01J8AYH88X71THC9PWGEEZ96P4"
-          | "01J8AYHD7XXK1D2SKDM2F37ZD9"
-          | "01J8AYPC26HR9SQPVV7HQPZP0E"
-          | "01J8DKYMZ5CP5JYWSDWZKMPXB1"
-          | "01J8QMNJVJJGA2SVKE2KNDJ3RW"
-          | "01J8R24P39RY59E5K7Q4B455A6"
-          | "01J8TKSV2J67Y1JH5SC6TJ0HH2"
-          | "01J9EBE57F8P4D3N71VHAPKJYC"
-          | "01JA0RM9X4Z8HP744RNCMBPNR6"
-          | "01JA0RVCW4T6BNMGWCGP4G2F71"
-          | "01JA0RXSB4P5ZKW6959E3P46TV"
-          | "01JA0S4HW61T133FSRYM2B5DW5"
-          | "01JA8R4VMACZC72DABA6KK2NPK"
-          | "01JANMECN3J2TJGBZE6XHG3VTS"
-          | "01JANQJJ3ZD5MTEQ12GX58WTNW"
-          | "01JANREJYY9M7W3BCC87S3074S"
-          | "01JBM4M69512YE1DWNBZ2FF67E"
-          | "01JFT269K10RAGGRHZXR2QNXA1"
-          | "01JGBVEBX1A8WV0W0X8FYE04VG"
-          | "01JGSMXPKGY4T3WVCSG68NF94R"
-          | "01JKNXRMMCBZC3AJDR48JKRVV6"
-          | "01JMMYMGKRZPK95FJAD50A2MR7"
-          | "01JNP592H0CCDZS7ERH5EJZE3Y"
-          | "01JQKCF7PE9JMPQ3ECGNGT3H1C"
-          | "01JR5KF1PB09GMYSPF0QFYX76H"
-          | "01JR8V3W6HCR8TNAYF7S5917DB"
-          | "01JR8WTBR82VHBJPGS5R79P8NT"
-          | "01JRG9X277MJMJ4X5MW2FBRMSC"
-          | "01JRGBERMC04YT20E22TPNJSNM"
-          | "01JSRPFH1HCHNZFACXDJEBN3M1"
-          | "01JTV7J0H9Y4FXTW26NERJT332"
-          | "01JV5Q1HD3KJDVS7T0FCG63R4C"
-          | "01JV5Q1K01X6DFKMJHD90E32XZ"
-          | "01JV5R9SB7549Y0GXVM4RW1TEA"
-          | "01JV5RVGQXVVAYYEG7W81W1VPW"
-          | "01JV5RXK4WMWZDKERNGD2WZ0N0"
-          | "01JV5SJP9WWP5QD5H72342G6YK"
-          | "01K1EK9QD7NJ5CN3NT0CT9EDAK"
-          | "01K2Z4YRMMK0K7C3K6NNB6PNX0"
-          | "01K3D4XYHA835QJC77PAT86AT9"
-          | "01K4B3WE1K420R6ZZMSGF3DW49"
-          | "01K6X4YAHFYG613S5KQBYH14VX";
-        /**
-         * ## prompt
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiline: true
-         * >   multiple: false
-         * > ```
-         */
-        prompt: string;
-        /**
-         * ## quality
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "quality": "standard"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "standard"
-         * > ```
-         */
-        quality?: "standard" | "hd";
-        /**
-         * ## size
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "size": "1024x1024"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "1024x1024"
-         * > ```
-         */
-        size?: "1024x1024" | "1024x1792" | "1792x1024";
-        /**
-         * ## style
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "style": "vivid"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "vivid"
-         * > ```
-         */
-        style?: "vivid" | "natural";
-      }) => Promise<T>;
-    };
-    // # MARK: openplantbook
-    openplantbook: {
-      /**
-       * ### Clean Cache
-       *
-       * > Clean up the cached entries from Openplantbook
-       */
-      clean_cache: (service_data?: {
-        /**
-         * ## Hours
-         *
-         * > Minimum age of entries to clean from the cache. Default to 24 hours if not set
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "hours": "6"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   unit_of_measurement: hours
-         * >   min: 0
-         * >   max: 24
-         * >   step: 1
-         * > ```
-         */
-        hours?: number;
-      }) => Promise<void>;
-      /**
-       * ### Get
-       *
-       * > Fetches data for a single species
-       */
-      get: <T = unknown>(service_data: {
-        /**
-         * ## Species
-         *
-         * > The name of the species exactly as written in "pid" or "scientific species" in Openplantbook
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "species": "coleus 'marble'"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        species: string;
-      }) => Promise<T>;
-      /**
-       * ### Search
-       *
-       * > Searches Openplantbook for a plant
-       */
-      search: <T = unknown>(service_data: {
-        /**
-         * ## Search for
-         *
-         * > The string to search for
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "alias": "Capsicum"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        alias: string;
-      }) => Promise<T>;
-      /**
-       * ### Upload
-       *
-       * > Upload sensors data of all plant instances
-       */
-      upload: <T = unknown>(service_data: EmptyObject) => Promise<T>;
     };
     // # MARK: persistent_notification
     persistent_notification: {
@@ -12215,8 +6372,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         message: string;
@@ -12235,8 +6392,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         notification_id?: string;
@@ -12255,8 +6412,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         title?: string;
@@ -12282,8 +6439,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         notification_id: string;
@@ -12303,688 +6460,6 @@ declare module "@digital-alchemy/hass" {
        * >
        */
       reload: (service_data: EmptyObject) => Promise<void>;
-    };
-    // # MARK: plant
-    plant: {
-      /**
-       * ### replace_sensor
-       *
-       * > Replaces an external sensor
-       */
-      replace_sensor: (service_data?: {
-        /**
-         * ## Meter entity
-         *
-         * > The meter entity to replace the sensor for
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "meter_entity": "plant.my_plant_current_temperature"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   domain:
-         * >     - sensor
-         * >   integration: plant
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        meter_entity:
-          | PICK_FROM_PLATFORM<"plant", "sensor">
-          | PICK_FROM_PLATFORM<"plant", "sensor">[];
-        /**
-         * ## Sensor entity
-         *
-         * > Entity id of the new sensor. Leave blank to remove sensor.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "new_sensor": "sensor.new_temperature_outdoor"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   domain:
-         * >     - sensor
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        new_sensor?: PICK_ENTITY<"sensor"> | PICK_ENTITY<"sensor">[];
-      }) => Promise<void>;
-    };
-    // # MARK: profiler
-    profiler: {
-      /**
-       * ### dump_log_objects
-       *
-       * >
-       */
-      dump_log_objects: (service_data: {
-        /**
-         * ## type
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "type": "State"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        type: string;
-      }) => Promise<void>;
-      /**
-       * ### dump_sockets
-       *
-       * >
-       */
-      dump_sockets: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### log_current_tasks
-       *
-       * >
-       */
-      log_current_tasks: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### log_event_loop_scheduled
-       *
-       * >
-       */
-      log_event_loop_scheduled: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### log_thread_frames
-       *
-       * >
-       */
-      log_thread_frames: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### lru_stats
-       *
-       * >
-       */
-      lru_stats: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### memory
-       *
-       * >
-       */
-      memory: (service_data?: {
-        /**
-         * ## seconds
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 60
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 3600
-         * >   unit_of_measurement: seconds
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        seconds?: number;
-      }) => Promise<void>;
-      /**
-       * ### set_asyncio_debug
-       *
-       * >
-       */
-      set_asyncio_debug: (service_data?: {
-        /**
-         * ## enabled
-         *
-         * ### Default
-         *
-         * > ```json
-         * > true
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        enabled?: boolean;
-      }) => Promise<void>;
-      /**
-       * ### start
-       *
-       * >
-       */
-      start: (service_data?: {
-        /**
-         * ## seconds
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 60
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 3600
-         * >   unit_of_measurement: seconds
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        seconds?: number;
-      }) => Promise<void>;
-      /**
-       * ### start_log_object_sources
-       *
-       * >
-       */
-      start_log_object_sources: (service_data?: {
-        /**
-         * ## max_objects
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 5
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 30
-         * >   unit_of_measurement: objects
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        max_objects?: number;
-        /**
-         * ## scan_interval
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 30
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 3600
-         * >   unit_of_measurement: seconds
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        scan_interval?: number;
-      }) => Promise<void>;
-      /**
-       * ### start_log_objects
-       *
-       * >
-       */
-      start_log_objects: (service_data?: {
-        /**
-         * ## scan_interval
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 30
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 3600
-         * >   unit_of_measurement: seconds
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        scan_interval?: number;
-      }) => Promise<void>;
-      /**
-       * ### stop_log_object_sources
-       *
-       * >
-       */
-      stop_log_object_sources: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### stop_log_objects
-       *
-       * >
-       */
-      stop_log_objects: (service_data: EmptyObject) => Promise<void>;
-    };
-    // # MARK: pyscript
-    pyscript: {
-      /**
-       * ### autocomplete_generator
-       *
-       * > https://github.com/dmamelin/pyscript_autocomplete
-       */
-      autocomplete_generator: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-      /**
-       * ### hello_world
-       *
-       * > hello_world example using pyscript.
-       */
-      hello_world: (service_data?: {
-        /**
-         * ## action
-         *
-         * > argument action
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * >
-         * > ```
-         */
-        action?: unknown;
-        /**
-         * ## id
-         *
-         * > argument id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * >
-         * > ```
-         */
-        id?: unknown;
-      }) => Promise<void>;
-      /**
-       * ### Start Jupyter kernel
-       *
-       * > Starts a jupyter kernel for interactive use; Called by Jupyter front end and should generally not be used by users
-       */
-      jupyter_kernel_start: (service_data?: {
-        /**
-         * ## Control Port Number
-         *
-         * > Control port number
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "control_port": "63596"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 10240
-         * >   max: 65535
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        control_port?: number;
-        /**
-         * ## Heartbeat Port Number
-         *
-         * > Heartbeat port number
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "hb_port": "63595"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 10240
-         * >   max: 65535
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        hb_port?: number;
-        /**
-         * ## IOPub Port Number
-         *
-         * > IOPub port number
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "iopub_port": "63598"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 10240
-         * >   max: 65535
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        iopub_port?: number;
-        /**
-         * ## IP Address
-         *
-         * > IP address to connect to Jupyter front end
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ip": "127.0.0.1"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "127.0.0.1"
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ip?: string;
-        /**
-         * ## Name of Kernel
-         *
-         * > Kernel name
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "kernel_name": "pyscript"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "pyscript"
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        kernel_name: string;
-        /**
-         * ## Security Key
-         *
-         * > Used for signing
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "key": "012345678-9abcdef023456789abcdef"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        key: string;
-        /**
-         * ## Shell Port Number
-         *
-         * > Shell port number
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "shell_port": "63599"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 10240
-         * >   max: 65535
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        shell_port?: number;
-        /**
-         * ## Signing Algorithm
-         *
-         * > Signing algorithm
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "signature_scheme": "hmac-sha256"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "hmac-sha256"
-         * > ```
-         */
-        signature_scheme?: "hmac-sha256";
-        /**
-         * ## Stdin Port Number
-         *
-         * > Stdin port number
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "stdin_port": "63597"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 10240
-         * >   max: 65535
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        stdin_port?: number;
-        /**
-         * ## Transport Type
-         *
-         * > Transport type
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "transport": "tcp"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "tcp"
-         * > ```
-         */
-        transport?: "tcp" | "udp";
-      }) => Promise<void>;
-      /**
-       * ### Reload pyscript
-       *
-       * > Reloads all available pyscripts and restart triggers
-       */
-      reload: (service_data?: {
-        /**
-         * ## Global Context
-         *
-         * > Only reload this specific global context (file or app)
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "global_ctx": "file.example"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        global_ctx?: string;
-      }) => Promise<void>;
-    };
-    // # MARK: qbittorrent
-    qbittorrent: {
-      /**
-       * ### get_all_torrents
-       *
-       * >
-       */
-      get_all_torrents: <T = unknown>(service_data: {
-        /**
-         * ## torrent_filter
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "torrent_filter": "all"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "all"
-         * > ```
-         */
-        torrent_filter:
-          | "active"
-          | "inactive"
-          | "paused"
-          | "all"
-          | "seeding"
-          | "started"
-          | "errored";
-      }) => Promise<T>;
-      /**
-       * ### get_torrents
-       *
-       * >
-       */
-      get_torrents: <T = unknown>(service_data: {
-        /**
-         * ## device_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > device:
-         * >   integration: qbittorrent
-         * >   multiple: false
-         * > ```
-         */
-        device_id: TDeviceId;
-        /**
-         * ## torrent_filter
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "torrent_filter": "all"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "all"
-         * > ```
-         */
-        torrent_filter:
-          | "active"
-          | "inactive"
-          | "paused"
-          | "all"
-          | "seeding"
-          | "started"
-          | "errored";
-      }) => Promise<T>;
     };
     // # MARK: recorder
     recorder: {
@@ -13238,388 +6713,6 @@ declare module "@digital-alchemy/hass" {
         keep_days?: number;
       }) => Promise<void>;
     };
-    // # MARK: remote
-    remote: {
-      /**
-       * ### delete_command
-       *
-       * >
-       */
-      delete_command: (
-        service_data?: {
-          /**
-           * ## command
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "command": "Mute"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > object:
-           * >   multiple: false
-           * > ```
-           */
-          command: Record<string, unknown> | unknown[];
-          /**
-           * ## device
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "device": "television"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          device?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - remote
-           * > ```
-           */
-          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### learn_command
-       *
-       * >
-       */
-      learn_command: (
-        service_data?: {
-          /**
-           * ## alternative
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > boolean: {}
-           * > ```
-           */
-          alternative?: boolean;
-          /**
-           * ## command
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "command": "Turn on"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > object:
-           * >   multiple: false
-           * > ```
-           */
-          command?: Record<string, unknown> | unknown[];
-          /**
-           * ## command_type
-           *
-           * ### Default
-           *
-           * > ```json
-           * > "ir"
-           * > ```
-           */
-          command_type?: "ir" | "rf";
-          /**
-           * ## device
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "device": "television"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          device?: string;
-          /**
-           * ## timeout
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > number:
-           * >   min: 0
-           * >   max: 60
-           * >   step: 5
-           * >   unit_of_measurement: seconds
-           * >   mode: slider
-           * > ```
-           */
-          timeout?: number;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - remote
-           * > ```
-           */
-          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### send_command
-       *
-       * >
-       */
-      send_command: (
-        service_data?: {
-          /**
-           * ## command
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "command": "Play"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > object:
-           * >   multiple: false
-           * > ```
-           */
-          command: Record<string, unknown> | unknown[];
-          /**
-           * ## delay_secs
-           *
-           * ### Default
-           *
-           * > ```json
-           * > 0.4
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > number:
-           * >   min: 0
-           * >   max: 60
-           * >   step: 0.1
-           * >   unit_of_measurement: seconds
-           * >   mode: slider
-           * > ```
-           */
-          delay_secs?: number;
-          /**
-           * ## device
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "device": "32756745"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          device?: string;
-          /**
-           * ## hold_secs
-           *
-           * ### Default
-           *
-           * > ```json
-           * > 0
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > number:
-           * >   min: 0
-           * >   max: 60
-           * >   step: 0.1
-           * >   unit_of_measurement: seconds
-           * >   mode: slider
-           * > ```
-           */
-          hold_secs?: number;
-          /**
-           * ## num_repeats
-           *
-           * ### Default
-           *
-           * > ```json
-           * > 1
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > number:
-           * >   min: 0
-           * >   max: 255
-           * >   step: 1
-           * >   mode: slider
-           * > ```
-           */
-          num_repeats?: number;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - remote
-           * > ```
-           */
-          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### toggle
-       *
-       * >
-       */
-      toggle: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - remote
-           * > ```
-           */
-          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### turn_off
-       *
-       * >
-       */
-      turn_off: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - remote
-           * > ```
-           */
-          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### turn_on
-       *
-       * >
-       */
-      turn_on: (
-        service_data?: {
-          /**
-           * ## activity
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "activity": "BedroomTV"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          activity?: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - remote
-           * > ```
-           */
-          entity_id: PICK_ENTITY<"remote"> | PICK_ENTITY<"remote">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-    };
-    // # MARK: rest_command
-    rest_command: {
-      /**
-       * ### reload
-       *
-       * >
-       */
-      reload: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### shutdown_imac
-       *
-       * >
-       */
-      shutdown_imac: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-    };
     // # MARK: scene
     scene: {
       /**
@@ -13703,8 +6796,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         scene_id: string;
@@ -13745,9 +6838,7 @@ declare module "@digital-alchemy/hass" {
            * >       - scene
            * > ```
            */
-          entity_id:
-            | PICK_FROM_PLATFORM<"homeassistant", "scene">
-            | PICK_FROM_PLATFORM<"homeassistant", "scene">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -13790,7 +6881,7 @@ declare module "@digital-alchemy/hass" {
            * >       - scene
            * > ```
            */
-          entity_id: PICK_ENTITY<"scene"> | PICK_ENTITY<"scene">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -13827,577 +6918,14 @@ declare module "@digital-alchemy/hass" {
        */
       reload: (service_data: EmptyObject) => Promise<void>;
     };
-    // # MARK: scheduler
-    scheduler: {
-      /**
-       * ### Add
-       *
-       * > Create a new schedule entity
-       */
-      add: (service_data?: {
-        /**
-         * ## End date
-         *
-         * > Date until which schedule should be executed
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "end_date": "[\"2021-12-31\"]"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        end_date?: Record<string, unknown> | unknown[];
-        /**
-         * ## Name
-         *
-         * > Friendly name for the schedule
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "name": "My schedule"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        name?: string;
-        /**
-         * ## Repeat Type
-         *
-         * > Control what happens after the schedule is triggered
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "repeat_type": "\"repeat\""
-         * > }
-         * > ```
-         */
-        repeat_type: "repeat" | "single" | "pause";
-        /**
-         * ## Start date
-         *
-         * > Date from which schedule should be executed
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "start_date": "[\"2021-01-01\"]"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        start_date?: Record<string, unknown> | unknown[];
-        /**
-         * ## Timeslots
-         *
-         * > list of timeslots with their actions and optionally conditions (should be kept the same for all timeslots)
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "timeslots": "[{start: \"12:00\", stop: \"13:00\", actions: [{service: \"light.turn_on\", entity_id: \"light.my_lamp\", service_data: {brightness: 200}}]}]"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        timeslots: Record<string, unknown> | unknown[];
-        /**
-         * ## Weekdays
-         *
-         * > Days of the week for which the schedule should be repeated
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "weekdays": "[\"daily\"]"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        weekdays?: Record<string, unknown> | unknown[];
-      }) => Promise<void>;
-      /**
-       * ### Copy
-       *
-       * > Duplicate a schedule entity
-       */
-      copy: (service_data?: {
-        /**
-         * ## Entity
-         *
-         * > Identifier of the scheduler entity.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "switch.schedule_abcdef"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: scheduler
-         * >   domain:
-         * >     - switch
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"scheduler", "switch">
-          | PICK_FROM_PLATFORM<"scheduler", "switch">[];
-        /**
-         * ## Name
-         *
-         * > Friendly name for the copied schedule
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "name": "My schedule"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        name?: string;
-      }) => Promise<void>;
-      /**
-       * ### Disable All
-       *
-       * > Disables all schedules
-       */
-      disable_all: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### Edit
-       *
-       * > Edit a schedule entity
-       */
-      edit: (service_data?: {
-        /**
-         * ## End date
-         *
-         * > Date until which schedule should be executed
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "end_date": "[\"2021-12-31\"]"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        end_date?: Record<string, unknown> | unknown[];
-        /**
-         * ## Entity
-         *
-         * > Identifier of the scheduler entity.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "switch.schedule_abcdef"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: scheduler
-         * >   domain:
-         * >     - switch
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"scheduler", "switch">
-          | PICK_FROM_PLATFORM<"scheduler", "switch">[];
-        /**
-         * ## Name
-         *
-         * > Friendly name for the schedule
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "name": "My schedule"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        name?: string;
-        /**
-         * ## Repeat Type
-         *
-         * > Control what happens after the schedule is triggered
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "repeat_type": "\"repeat\""
-         * > }
-         * > ```
-         */
-        repeat_type?: "repeat" | "single" | "pause";
-        /**
-         * ## Start date
-         *
-         * > Date from which schedule should be executed
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "start_date": "[\"2021-01-01\"]"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        start_date?: Record<string, unknown> | unknown[];
-        /**
-         * ## Timeslots
-         *
-         * > list of timeslots with their actions and optionally conditions (should be kept the same for all timeslots)
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "timeslots": "[{start: \"12:00\", stop: \"13:00\", actions: [{service: \"light.turn_on\", entity_id: \"light.my_lamp\", service_data: {brightness: 200}}]}]"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        timeslots?: Record<string, unknown> | unknown[];
-        /**
-         * ## Weekdays
-         *
-         * > Days of the week for which the schedule should be repeated
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "weekdays": "[\"daily\"]"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        weekdays?: Record<string, unknown> | unknown[];
-      }) => Promise<void>;
-      /**
-       * ### Enable All
-       *
-       * > Enables all schedules
-       */
-      enable_all: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### Remove
-       *
-       * > Remove a schedule entity
-       */
-      remove: (service_data: {
-        /**
-         * ## Entity
-         *
-         * > Identifier of the scheduler entity.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "switch.schedule_abcdef"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: scheduler
-         * >   domain:
-         * >     - switch
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"scheduler", "switch">
-          | PICK_FROM_PLATFORM<"scheduler", "switch">[];
-      }) => Promise<void>;
-      /**
-       * ### Run Action
-       *
-       * > Execute the action of a schedule, optionally at a given time.
-       */
-      run_action: (service_data?: {
-        /**
-         * ## Entity
-         *
-         * > Identifier of the scheduler entity.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "switch.schedule_abcdef"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: scheduler
-         * >   domain:
-         * >     - switch
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"scheduler", "switch">
-          | PICK_FROM_PLATFORM<"scheduler", "switch">[];
-        /**
-         * ## Skip Conditions
-         *
-         * > Whether the conditions of the schedule should be skipped or not
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        skip_conditions?: boolean;
-        /**
-         * ## Time
-         *
-         * > Time for which to evaluate the action (only useful for schedules with multiple timeslot)
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "time": "\"12:00\""
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > time: {}
-         * > ```
-         */
-        time?: string;
-      }) => Promise<void>;
-    };
     // # MARK: script
     script: {
-      /**
-       * ### Boost boiler
-       *
-       * >
-       */
-      boost_boiler: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-      /**
-       * ### Dismiss Welcome Message
-       *
-       * >
-       */
-      dismiss_welcome_message: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-      /**
-       * ### Good morning routine
-       *
-       * >
-       */
-      good_morning_routine: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-      /**
-       * ### Join Speakers
-       *
-       * >
-       */
-      group_speakers: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-      /**
-       * ### Open AI TTS
-       *
-       * >
-       */
-      open_ai_tts: <T = unknown>(service_data: {
-        /**
-         * ## Message
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        message: string;
-        /**
-         * ## player
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "media_player.living_room_speaker"
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        player: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<T>;
-      /**
-       * ### Read today's calendar
-       *
-       * >
-       */
-      read_today_s_calendar: <T = unknown>(service_data?: {
-        /**
-         * ## player
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "media_player.living_room_speaker"
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        player?: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<T>;
       /**
        * ### reload
        *
        * >
        */
       reload: (service_data: EmptyObject) => Promise<void>;
-      /**
-       * ### Read today's todo list
-       *
-       * >
-       */
-      todo_list: <T = unknown>(service_data: {
-        /**
-         * ## player
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "media_player.living_room_speaker"
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        player: PICK_ENTITY | PICK_ENTITY[];
-      }) => Promise<T>;
       /**
        * ### toggle
        *
@@ -14413,18 +6941,12 @@ declare module "@digital-alchemy/hass" {
            * >       - script
            * > ```
            */
-          entity_id: PICK_ENTITY<"script"> | PICK_ENTITY<"script">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
-      /**
-       * ### Turn everything off
-       *
-       * >
-       */
-      turn_everything_off_2: <T = unknown>(service_data: EmptyObject) => Promise<T>;
       /**
        * ### turn_off
        *
@@ -14440,7 +6962,7 @@ declare module "@digital-alchemy/hass" {
            * >       - script
            * > ```
            */
-          entity_id: PICK_ENTITY<"script"> | PICK_ENTITY<"script">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -14461,36 +6983,12 @@ declare module "@digital-alchemy/hass" {
            * >       - script
            * > ```
            */
-          entity_id: PICK_ENTITY<"script"> | PICK_ENTITY<"script">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
-      /**
-       * ### Turn TV mode on
-       *
-       * >
-       */
-      turn_tv_mode_on: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-      /**
-       * ### Turn TV On
-       *
-       * >
-       */
-      turn_tv_on: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-      /**
-       * ### Unjoin Speakers
-       *
-       * >
-       */
-      unjoin_speakers: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-      /**
-       * ### Update all HACS items
-       *
-       * >
-       */
-      update_all_hacs_items: <T = unknown>(service_data: EmptyObject) => Promise<T>;
     };
     // # MARK: select
     select: {
@@ -14657,21 +7155,6 @@ declare module "@digital-alchemy/hass" {
         }>,
       ) => Promise<void>;
     };
-    // # MARK: shell_command
-    shell_command: {
-      /**
-       * ### imac_off
-       *
-       * >
-       */
-      imac_off: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-      /**
-       * ### update_config
-       *
-       * >
-       */
-      update_config: <T = unknown>(service_data: EmptyObject) => Promise<T>;
-    };
     // # MARK: shelly
     shelly: {
       /**
@@ -14699,8 +7182,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         key: string;
@@ -14730,8 +7213,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         key: string;
@@ -14746,6 +7229,158 @@ declare module "@digital-alchemy/hass" {
          * > ```
          */
         value: Record<string, unknown> | unknown[];
+      }) => Promise<void>;
+    };
+    // # MARK: shopping_list
+    shopping_list: {
+      /**
+       * ### add_item
+       *
+       * >
+       */
+      add_item: (service_data: {
+        /**
+         * ## name
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "name": "Beer"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        name: string;
+      }) => Promise<void>;
+      /**
+       * ### clear_completed_items
+       *
+       * >
+       */
+      clear_completed_items: (service_data: EmptyObject) => Promise<void>;
+      /**
+       * ### complete_all
+       *
+       * >
+       */
+      complete_all: (service_data: EmptyObject) => Promise<void>;
+      /**
+       * ### complete_item
+       *
+       * >
+       */
+      complete_item: (service_data: {
+        /**
+         * ## name
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "name": "Beer"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        name: string;
+      }) => Promise<void>;
+      /**
+       * ### incomplete_all
+       *
+       * >
+       */
+      incomplete_all: (service_data: EmptyObject) => Promise<void>;
+      /**
+       * ### incomplete_item
+       *
+       * >
+       */
+      incomplete_item: (service_data: {
+        /**
+         * ## name
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "name": "Beer"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        name: string;
+      }) => Promise<void>;
+      /**
+       * ### remove_item
+       *
+       * >
+       */
+      remove_item: (service_data: {
+        /**
+         * ## name
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "name": "Beer"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        name: string;
+      }) => Promise<void>;
+      /**
+       * ### sort
+       *
+       * >
+       */
+      sort: (service_data?: {
+        /**
+         * ## reverse
+         *
+         * ### Default
+         *
+         * > ```json
+         * > false
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        reverse?: boolean;
       }) => Promise<void>;
     };
     // # MARK: siren
@@ -14818,8 +7453,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           duration?: string;
@@ -14838,8 +7473,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           tone?: string;
@@ -14882,15 +7517,6 @@ declare module "@digital-alchemy/hass" {
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
-    };
-    // # MARK: smtp
-    smtp: {
-      /**
-       * ### reload
-       *
-       * >
-       */
-      reload: (service_data: EmptyObject) => Promise<void>;
     };
     // # MARK: sonos
     sonos: {
@@ -15036,8 +7662,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: sonos
          * >   domain:
          * >     - media_player
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?:
@@ -15116,8 +7742,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: sonos
          * >   domain:
          * >     - media_player
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?:
@@ -15232,12175 +7858,6 @@ declare module "@digital-alchemy/hass" {
         }>,
       ) => Promise<void>;
     };
-    // # MARK: spotcast
-    spotcast: {
-      /**
-       * ### Start Spotcast
-       *
-       * > Starts spotify playback on chromecast devices
-       */
-      start: (service_data?: {
-        /**
-         * ## Account
-         *
-         * > Optionally starts Spotify using an alternative account specified in config.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "account": "my_wifes"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        account?: string;
-        /**
-         * ## Album Name
-         *
-         * > Filters search results for the provided album name. Don't include this if you don't want an album.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "album_name": "The Dark Side of the Moon"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        album_name?: string;
-        /**
-         * ## Artist Name
-         *
-         * > This will filter search results to match the provided artist name. Don't include this if searching for a playlist or genre. Do include the author's name if searching for audiobooks.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "artist_name": "pink floyd"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        artist_name?: string;
-        /**
-         * ## Audiobook Name
-         *
-         * > Filters search results for the provided audiobook name. Don't include this if you don't want an audiobook.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "audiobook_name": "Ulysses"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        audiobook_name?: string;
-        /**
-         * ## Category
-         *
-         * > A category to fetch playlist from. See https://developer.spotify.com/console/get-browse-categories/ for a list of categories
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        category?: string;
-        /**
-         * ## Country
-         *
-         * > Country code to use with category. See https://spotipy.readthedocs.io/en/2.19.0/#spotipy.client.Spotify.country_codes for list of available codes
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        country?: string;
-        /**
-         * ## Device Name
-         *
-         * > The friendly name of the chromecast or spotify connect device. First checks spotify device list for name (not used together with entity_id and spotify_device_id).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_name": "Livingroom"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_name?: string;
-        /**
-         * ## Entity ID
-         *
-         * > The entity_id of the chromecast mediaplayer. Friendly name MUST match the spotify connect device name (not used together with device_name and spotify_device_id).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.vardagsrum"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   domain:
-         * >     - media_player
-         * >   integration: cast
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id?: never | never[];
-        /**
-         * ## Episode Name
-         *
-         * > Filters search results for the provided podcast episode name. Don't include this if you don't want a podcast.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "episode_name": "Sarah Sherman, Our Close Friend"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        episode_name?: string;
-        /**
-         * ## Force Playback
-         *
-         * > In case of transfering playback: If true starts playing the user's last playback even if nothing is currently playing.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "force_playback": "true"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        force_playback?: boolean;
-        /**
-         * ## Genre Name
-         *
-         * > Filters search results by genre of music
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "genre_name": "post punk"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        genre_name?: string;
-        /**
-         * ## Ignore Fully Played
-         *
-         * > Set to ignore or not already played episodes in a podcast playlist
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ignore_fully_played": "true"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        ignore_fully_played?: boolean;
-        /**
-         * ## Limit
-         *
-         * > Limit of playlist to fetch in a given category. Default 20
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 20
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * >   min: 0
-         * >   max: 50
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Offset
-         *
-         * > Set offset mode for playback. 0 is the first song.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "1"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 0
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * >   min: 0
-         * >   max: 999999
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Playlist Name
-         *
-         * > Filters search results for the provided playlist name. Don't include this if you don't want a playlist.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_name": "Ultimate pink floyd playlist"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_name?: string;
-        /**
-         * ## Random Song
-         *
-         * > Starts the playback at a random position in the playlist or album.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "random_song": "true"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        random_song?: boolean;
-        /**
-         * ## Repeat
-         *
-         * > Set repeat mode for playback.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "repeat": "track"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "off"
-         * > ```
-         */
-        repeat?: "track" | "context" | "off";
-        /**
-         * ## Show Name
-         *
-         * > Filters search results for the provided podcast show name. Don't include this if you don't want a podcast.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "show_name": "Hollywood Handbook"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        show_name?: string;
-        /**
-         * ## Shuffle
-         *
-         * > Set shuffle mode for playback.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "shuffle": "true"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        shuffle?: boolean;
-        /**
-         * ## Spotify Device ID
-         *
-         * > Advanced users only. The spotify device id (not used together with entity_id or device_name).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "spotify_device_id": "4363634563457346xcyvydgf3qwa"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        spotify_device_id?: string;
-        /**
-         * ## Position
-         *
-         * > Start position of the track in seconds
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "start_position": "1"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 0
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * >   min: 0
-         * >   max: 999999
-         * > ```
-         */
-        start_position?: number;
-        /**
-         * ## Start Volume
-         *
-         * > Set the volume for playback in percentage.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "start_volume": "50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: slider
-         * >   step: 1
-         * >   min: 0
-         * >   max: 100
-         * > ```
-         */
-        start_volume?: number;
-        /**
-         * ## Track Name
-         *
-         * > Filters search results for the provided track name. Don't include this if you don't want a particular track.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "track_name": "Money"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        track_name?: string;
-        /**
-         * ## URI
-         *
-         * > Supported Spotify URI as string. None or empty uri will transfer the current/last playback (see parameter force_playback).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "uri": "spotify:playlist:37i9dQZF1DX3yvAYDslnv8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        uri?: string;
-      }) => Promise<void>;
-    };
-    // # MARK: spotifyplus
-    spotifyplus: {
-      /**
-       * ### Add Player Queue Items
-       *
-       * > Add one or more items to the end of the user's current Spotify Player playback queue.
-       */
-      add_player_queue_items: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the final add request (if necessary). This delay will give the spotify web api time to process the change before another command is issued.  Default is 0.15; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.15"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an '*' is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## URI's
-         *
-         * > A list of Spotify track or episode URIs to add to the queue (spotify:track:6zd8T1PBe9JFHmuVnurdRp, spotify:track:1kWUud3vY5ij5r62zxpTRy); values can be track or episode URIs.  All URIs must be of the same type - you cannot mix and match tracks and episodes.  An unlimited number of items can be added in one request, but the more items the longer it will take.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "uris": "spotify:track:6zd8T1PBe9JFHmuVnurdRp"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        uris: string;
-        /**
-         * ## Verify Device ID?
-         *
-         * > DEPRECATED - no longer used, but left here to maintain compatibility.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        verify_device_id?: boolean;
-      }) => Promise<void>;
-      /**
-       * ### Check Album Favorites
-       *
-       * > Check if one or more albums (or the currently playing album) exists in the current user's 'Your Library' favorites.
-       */
-      check_album_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify album id's (e.g. `6vc9OTcyd3hyzabCmsdnwE,382ObEPsp2rxGrnsizN5TX`).  A maximum of 50 id's may be specified.  If omitted, the currently playing track album uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "6vc9OTcyd3hyzabCmsdnwE,382ObEPsp2rxGrnsizN5TX"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<T>;
-      /**
-       * ### Check Artists Following
-       *
-       * > Check if one or more artists (or the currently playing artists) is followed in the current user's 'Your Library' favorites.
-       */
-      check_artists_following: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify artist id's (e.g. `2CIMQHirSU0MQqyYHq0eOx,1IQ2e1buppatiN1bxUVkrk`).  A maximum of 50 id's may be specified.  If omitted, the currently playing track artist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "2CIMQHirSU0MQqyYHq0eOx,1IQ2e1buppatiN1bxUVkrk"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<T>;
-      /**
-       * ### Check Audiobook Favorites
-       *
-       * > Check if one or more audiobooks (or the currently playing audiobook) exists in the current user's 'Your Library' favorites.
-       */
-      check_audiobook_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify audiobook id's (e.g. `3PFyizE2tGCSRLusl2Qizf,7iHfbu1YPACw6oZPAFJtqe`).  A maximum of 50 id's may be specified.  If omitted, the currently playing audiobook uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "3PFyizE2tGCSRLusl2Qizf,7iHfbu1YPACw6oZPAFJtqe"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<T>;
-      /**
-       * ### Check Episode Favorites
-       *
-       * > Check if one or more episodes (or the currently playing episode) exists in the current user's 'Your Library' favorites.
-       */
-      check_episode_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify episode id's (e.g. `3F97boSWlXi8OzuhWClZHQ,1hPX5WJY6ja6yopgVPBqm4`).  A maximum of 50 id's may be specified.  If omitted, the currently playing episode uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "3F97boSWlXi8OzuhWClZHQ,1hPX5WJY6ja6yopgVPBqm4"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<T>;
-      /**
-       * ### Check Playlist Followers
-       *
-       * > Check to see if the current user is following a specified playlist.
-       */
-      check_playlist_followers: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. `3cEYpjA9oz9GiPac4AsH4n`).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "3cEYpjA9oz9GiPac4AsH4n"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id: string;
-        /**
-         * ## User ID's
-         *
-         * > Deprecated - must contain the current user's Spotify Username; Maximum of 1 id.  Omit to default to current user name.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        user_ids?: string;
-      }) => Promise<T>;
-      /**
-       * ### Check Show Favorites
-       *
-       * > Check if one or more shows (or the currently playing show) exists in the current user's 'Your Library' favorites.
-       */
-      check_show_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify show id's (e.g. `6kAsbP8pxwaU2kPibKTuHE,4rOoJ6Egrf8K2IrywzwOMk`).  A maximum of 50 id's may be specified.  If omitted, the currently playing show uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "6kAsbP8pxwaU2kPibKTuHE,4rOoJ6Egrf8K2IrywzwOMk"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<T>;
-      /**
-       * ### Check Track Favorites
-       *
-       * > Check if one or more tracks (or the currently playing track) exists in the current user's 'Your Library' favorites.
-       */
-      check_track_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify track id's (e.g. `1kWUud3vY5ij5r62zxpTRy,4eoYKv2kDwJS7gRGh5q6SK`).  A maximum of 50 id's may be specified.  If omitted, the currently playing context uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "1kWUud3vY5ij5r62zxpTRy,4eoYKv2kDwJS7gRGh5q6SK"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<T>;
-      /**
-       * ### Check Users Following
-       *
-       * > Check to see if the current user is following one or more users.
-       */
-      check_users_following: <T = unknown>(service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify user ID's to check (e.g. `smedjan, 7piUznRWxNyKpaPvmOSdiZ`).  A maximum of 50 ID's can be specified.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "smedjan, 7piUznRWxNyKpaPvmOSdiZ"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids: string;
-      }) => Promise<T>;
-      /**
-       * ### Follow Artists
-       *
-       * > Add the current user as a follower of one or more artists.
-       */
-      follow_artists: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify artist id's (e.g. `2CIMQHirSU0MQqyYHq0eOx,1IQ2e1buppatiN1bxUVkrk`).  A maximum of 50 id's may be specified.  If omitted, the currently playing track artist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "2CIMQHirSU0MQqyYHq0eOx,1IQ2e1buppatiN1bxUVkrk"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Follow Playlist
-       *
-       * > Add the current user as a follower of a playlist.
-       */
-      follow_playlist: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. `3cEYpjA9oz9GiPac4AsH4n`).  If omitted, the currently playing playlist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "3cEYpjA9oz9GiPac4AsH4n"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id?: string;
-        /**
-         * ## Public?
-         *
-         * > If true the playlist will be included in user's public playlists, if false it will remain private.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "public": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        public?: boolean;
-      }) => Promise<void>;
-      /**
-       * ### Follow Users
-       *
-       * > Add the current user as a follower of one or more users.
-       */
-      follow_users: (service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of the Spotify user IDs (e.g. 'smedjan,3758dfdsfjk435hjk6k79lm0n3c4').  A maximum of 50 IDs can be sent in one request.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "smedjan,3758dfdsfjk435hjk6k79lm0n3c4"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids: string;
-      }) => Promise<void>;
-      /**
-       * ### Get Album
-       *
-       * > Get Spotify catalog information for a single album.
-       */
-      get_album: <T = unknown>(service_data?: {
-        /**
-         * ## Album Id
-         *
-         * > The Spotify ID of the album.  If omitted, the currently playing album uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "album_id": "6vc9OTcyd3hyzabCmsdnwE"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        album_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Album Favorites
-       *
-       * > Get a list of the albums saved in the current Spotify user's 'Your Library'.
-       */
-      get_album_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Album New Releases
-       *
-       * > Get a list of new album releases featured in Spotify.
-       */
-      get_album_new_releases: <T = unknown>(service_data?: {
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "country": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        country?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Album Tracks
-       *
-       * > Get Spotify catalog information about an album's tracks.
-       */
-      get_album_tracks: <T = unknown>(service_data?: {
-        /**
-         * ## Album ID
-         *
-         * > The Spotify ID of the album (e.g. `6vc9OTcyd3hyzabCmsdnwE`). If null, the currently playing album uri id value is used; a Spotify Free or Premium account is required to correctly read the currently playing context.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "album_id": "6vc9OTcyd3hyzabCmsdnwE"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        album_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-      }) => Promise<T>;
-      /**
-       * ### Get Artist
-       *
-       * > Get Spotify catalog information for a single artist.
-       */
-      get_artist: <T = unknown>(service_data?: {
-        /**
-         * ## Artist Id
-         *
-         * > The Spotify ID of the artist.  If omitted, the currently playing artist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "artist_id": "6APm8EjxOHSYM5B4i3vT3q"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        artist_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-      }) => Promise<T>;
-      /**
-       * ### Get Artist Albums
-       *
-       * > Get Spotify catalog information about an artist's albums.
-       */
-      get_artist_albums: <T = unknown>(service_data?: {
-        /**
-         * ## Artist Id
-         *
-         * > The Spotify ID of the artist.  If omitted, the currently playing artist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "artist_id": "6APm8EjxOHSYM5B4i3vT3q"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        artist_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Include Groups
-         *
-         * > A comma-separated list of keywords that will be used to filter the response.  If not supplied, only `album` types will be returned. Valid values are `album`, `single`, `appears_on`, `compilation`.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "include_groups": "album"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        include_groups?: string;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Artist Info
-       *
-       * > Get artist about information from the Spotify Artist Biography page for the specified Spotify artist ID.
-       */
-      get_artist_info: <T = unknown>(service_data?: {
-        /**
-         * ## Artist Id
-         *
-         * > The Spotify ID of the artist.  If omitted, the currently playing artist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "artist_id": "6APm8EjxOHSYM5B4i3vT3q"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        artist_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-      }) => Promise<T>;
-      /**
-       * ### Get Artist Related Artists
-       *
-       * > Get Spotify catalog information about artists similar to a given artist. Similarity is based on analysis of the Spotify community's listening history.
-       */
-      get_artist_related_artists: <T = unknown>(service_data?: {
-        /**
-         * ## Artist Id
-         *
-         * > The Spotify ID of the artist.  If omitted, the currently playing artist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "artist_id": "6APm8EjxOHSYM5B4i3vT3q"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        artist_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Artist Top Tracks
-       *
-       * > Get Spotify catalog information about an artist's top tracks by country.
-       */
-      get_artist_top_tracks: <T = unknown>(service_data?: {
-        /**
-         * ## Artist Id
-         *
-         * > The Spotify ID of the artist.  If omitted, the currently playing artist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "artist_id": "6APm8EjxOHSYM5B4i3vT3q"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        artist_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Artists Followed
-       *
-       * > Get the current user's followed artists.
-       */
-      get_artists_followed: <T = unknown>(service_data?: {
-        /**
-         * ## After
-         *
-         * > The last artist ID retrieved from the previous request, or null for the first request.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "after": "6APm8EjxOHSYM5B4i3vT3q"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        after?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Audiobook
-       *
-       * > Get Spotify catalog information for a single audiobook.
-       */
-      get_audiobook: <T = unknown>(service_data?: {
-        /**
-         * ## Audiobook Id
-         *
-         * > The Spotify ID for the audiobook (e.g. `74aydHJKgYz3AIq3jjBSv1`). If null, the currently playing audiobook uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "audiobook_id": "74aydHJKgYz3AIq3jjBSv1"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        audiobook_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Audiobook Chapters
-       *
-       * > Get Spotify catalog information about an audiobook's chapters.
-       */
-      get_audiobook_chapters: <T = unknown>(service_data?: {
-        /**
-         * ## Audiobook Id
-         *
-         * > The Spotify ID for the audiobook (e.g. `74aydHJKgYz3AIq3jjBSv1`). If null, the currently playing audiobook uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "audiobook_id": "74aydHJKgYz3AIq3jjBSv1"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        audiobook_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-      }) => Promise<T>;
-      /**
-       * ### Get Audiobook Favorites
-       *
-       * > Get a list of the audiobooks saved in the current Spotify user's 'Your Library'.
-       */
-      get_audiobook_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Browse Categorys List
-       *
-       * > Get a sorted list of ALL categories used to tag items in Spotify.
-       */
-      get_browse_categorys_list: <T = unknown>(service_data?: {
-        /**
-         * ## Country
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "country": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        country?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Locale
-         *
-         * > The desired language, consisting of a lowercase ISO 639-1 language code and an uppercase ISO 3166-1 alpha-2 country code, joined by an underscore.  For example `es_MX`, meaning `Spanish (Mexico)`.  Provide this parameter if you want the results returned in a particular language (where available).  Note that if locale is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "locale": "es_MX"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        locale?: string;
-        /**
-         * ## Refresh Cache?
-         *
-         * > True to return real-time information from the spotify web api and update the cache; otherwise, False to just return the cached value.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "refresh": "False"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        refresh?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Category Playlists
-       *
-       * > Get a list of Spotify playlists tagged with a particular category.
-       */
-      get_category_playlists: <T = unknown>(service_data?: {
-        /**
-         * ## Category ID
-         *
-         * > Spotify category ID (not name) for the category.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "category_id": "dinner"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        category_id: string;
-        /**
-         * ## Country
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "country": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        country?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Chapter
-       *
-       * > Get Spotify catalog information for a single audiobook chapter identified by its unique Spotify ID.
-       */
-      get_chapter: <T = unknown>(service_data?: {
-        /**
-         * ## Chapter Id
-         *
-         * > The Spotify ID for the chapter.  If omitted, the currently playing chapter uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "chapter_id": "3V0yw9UDrYAfkhAvTrvt9Y"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        chapter_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Cover Image File
-       *
-       * > Gets the contents of an image url and transfers the contents to the local file system.
-       */
-      get_cover_image_file: (service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Image URL
-         *
-         * > The cover image url whose contents are to be retrieved.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "image_url": "https://i.scdn.co/image/ab67616d0000b27316c019c87a927829804caf0b"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        image_url: string;
-        /**
-         * ## Output Path
-         *
-         * > Fully-qualified path to store the downloaded image to.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "output_path": "/config/www/images/cover_file_image.jpg"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        output_path: string;
-      }) => Promise<void>;
-      /**
-       * ### Get Episode
-       *
-       * > Get Spotify catalog information for a single episode identified by its unique Spotify ID.
-       */
-      get_episode: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Episode Id
-         *
-         * > The Spotify ID for the episode.  If omitted, the currently playing episode uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "episode_id": "26c0zVyOv1lzfYpBXdh1zC"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        episode_id?: string;
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Episode Favorites
-       *
-       * > Get a list of the episodes saved in the current Spotify user's 'Your Library'.
-       */
-      get_episode_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Featured Playlists
-       *
-       * > Get a list of Spotify featured playlists.
-       */
-      get_featured_playlists: <T = unknown>(service_data?: {
-        /**
-         * ## Country
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "country": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        country?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Locale
-         *
-         * > The desired language, consisting of a lowercase ISO 639-1 language code and an uppercase ISO 3166-1 alpha-2 country code, joined by an underscore.  For example `es_MX`, meaning `Spanish (Mexico)`.  Provide this parameter if you want the results returned in a particular language (where available).  Note that if locale is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "locale": "es_MX"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        locale?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-        /**
-         * ## Timestamp
-         *
-         * > A timestamp in ISO 8601 format (yyyy-MM-ddTHH:mm:ss). Use this parameter to specify the user's local time to get results tailored for that specific date and time in the day. If not provided, the response defaults to the current UTC time.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "timestamp": "2023-10-23T09:00:00"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        timestamp?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Id From Uri
-       *
-       * > Gets the Id portion of a Spotify URI value.
-       */
-      get_id_from_uri: <T = unknown>(service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## URI Value
-         *
-         * > Spotify URI value to parse. Example: `spotify:track:6vc9OTcyd3hyzabCmsdnwE`.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "uri": "spotify:track:6vc9OTcyd3hyzabCmsdnwE"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        uri: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Image Palette Colors
-       *
-       * > Get color palette RGB values from the specified image source.
-       */
-      get_image_palette_colors: <T = unknown>(service_data?: {
-        /**
-         * ## Brightness Filter High
-         *
-         * > Removes colors that are too light based on their brightness value.  Range is 0 to 765.  Default is None.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "brightness_filter_high": "600"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 765
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        brightness_filter_high?: number;
-        /**
-         * ## Brightness Filter Low
-         *
-         * > Removes colors that are too dark based on their brightness value.  Range is 0 to 765.  Default is None.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "brightness_filter_low": "200"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 765
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        brightness_filter_low?: number;
-        /**
-         * ## Color Count
-         *
-         * > The size of the palette (max number of colors).  Default is 10.  Range is 1 to 256.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "color_count": "10"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 256
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        color_count?: number;
-        /**
-         * ## Color Quality
-         *
-         * > Controls the processing time and quality of the palette generation.  A lower value (e.g. 1) results in higher quality but takes more processing time, while a higher value (e.g. 5) is faster but may result in a lower-quality palette.  Default is 3; Range is 1 to 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "color_quality": "3"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        color_quality?: number;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Hue Distance Filter
-         *
-         * > Remove colors that are too close to each other for the specified hue.  This keeps the colors looking fairly distinct.  Range is 0 to 360.  Default is None.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "hue_distance_filter": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 360
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        hue_distance_filter?: number;
-        /**
-         * ## Image Source
-         *
-         * > The image source to extract color palette information from.  If the prefix of the value is `http:` or `https:`, then the image is downloaded from the url.  This can also point to a filename on the local file system.  If null, the currently playing Spotify track image url is used.  Example = `http://mydomain/image1.jpg`, `c:/image1.jpg`
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "image_source": "https://i.scdn.co/image/ab67616d0000b273b3f691a43c5d139895f8cc3d"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        image_source?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Image Vibrant Colors
-       *
-       * > Get vibrant color palette values from the specified image source.
-       */
-      get_image_vibrant_colors: <T = unknown>(service_data?: {
-        /**
-         * ## Color Count
-         *
-         * > The number of colors in the initial palette from which swatches will be generated.  Default is 64; Range is 1 to 256.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "color_count": "64"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 256
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        color_count?: number;
-        /**
-         * ## Color Quality
-         *
-         * > Controls the processing time and quality of the palette generation.  A lower value (e.g. 1) results in higher quality but takes more processing time, while a higher value (e.g. 5) is faster but may result in a lower-quality palette.  Default is 5; Range is 1 to 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "color_quality": "5"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        color_quality?: number;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Image Source
-         *
-         * > The image source to extract color palette information from.  If the prefix of the value is `http:` or `https:`, then the image is downloaded from the url.  This can also point to a filename on the local file system.  If null, the currently playing Spotify track image url is used.  Example = `http://mydomain/image1.jpg`, `c:/image1.jpg`
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "image_source": "https://i.scdn.co/image/ab67616d0000b2733deaee5f76ab2da15dd8db86"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        image_source?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Player Devices
-       *
-       * > Get information about a user's available Spotify Connect player devices.  Some device models are not supported and will not be listed in the API response.
-       */
-      get_player_devices: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Refresh?
-         *
-         * > True to return real-time information from the spotify web api and update the cache; otherwise, False to just return the cached value.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "refresh": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        refresh?: boolean;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Player Last Played Information
-       *
-       * > Get information about the content that was last playing on the Spotify Player, including context, item (track / episode), progress, and active device.
-       */
-      get_player_last_played_info: <T = unknown>(service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-      }) => Promise<T>;
-      /**
-       * ### Get Player Now Playing
-       *
-       * > Get the object currently being played on the user's Spotify account.
-       */
-      get_player_now_playing: <T = unknown>(service_data?: {
-        /**
-         * ## Additional Types
-         *
-         * > A comma-separated list of item types that your client supports besides the default track type. Valid types are 'track' and 'episode'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "additional_types": "episode"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        additional_types?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Player Playback State
-       *
-       * > Get information about the user's current playback state, including track or episode, progress, and active device.
-       */
-      get_player_playback_state: <T = unknown>(service_data?: {
-        /**
-         * ## Additional Types
-         *
-         * > A comma-separated list of item types that your client supports besides the default track type. Valid types are 'track' and 'episode'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "additional_types": "episode"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        additional_types?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Player Queue Info
-       *
-       * > Get the list of objects that make up the user's playback queue.
-       */
-      get_player_queue_info: <T = unknown>(service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-      }) => Promise<T>;
-      /**
-       * ### Get Player Recent Tracks
-       *
-       * > Get tracks from the current user's recently played tracks; currently doesn't support podcast episodes, and only 50 items may be returned due to spotify limits.
-       */
-      get_player_recent_tracks: <T = unknown>(service_data?: {
-        /**
-         * ## After Time MS
-         *
-         * > Returns all items after (but not including) this cursor position, which is a Unix timestamp in milliseconds.  If `after` is specified, `before` must not be specified.  Use with limit to get the next set of items.  Default is `0` (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "after": "1706218456821"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 99999999999999
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        after?: number;
-        /**
-         * ## Before Time MS
-         *
-         * > Returns all items before (but not including) this cursor position, which is a Unix timestamp in milliseconds.  If `before` is specified, `after` must not be specified.  Use with limit to get the next set of items.  Default is `0` (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "before": "1706218467821"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 99999999999999
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        before?: number;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-      }) => Promise<T>;
-      /**
-       * ### Get Playlist
-       *
-       * > Get a playlist owned by a Spotify user.
-       */
-      get_playlist: <T = unknown>(service_data?: {
-        /**
-         * ## Additional Types
-         *
-         * > A comma-separated list of item types that your client supports besides the default track type. Valid types are 'track' and 'episode'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "additional_types": "episode"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        additional_types?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Fields
-         *
-         * > A comma-separated list of fields to return from the Spotify Web API. All fields are returned if omitted. Limiting fields results can improve performance.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "fields": "description,id,name,public,snapshot_id,type,uri,tracks(limit,next,offset,previous,total,items(track(id,name,track_number,type,uri,album(id,images,name,total_tracks,type,uri,artists(id,name,type,uri)))))"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        fields?: string;
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Playlist Id
-         *
-         * > The Spotify ID of the playlist.  If omitted, the currently playing playlist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "5v5ETK9WFXAnGQ3MRubKuE"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Playlist Cover Image
-       *
-       * > Get the current image associated with a specific playlist.
-       */
-      get_playlist_cover_image: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. 5v5ETK9WFXAnGQ3MRubKuE).  If null, the currently playing playlist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "5v5ETK9WFXAnGQ3MRubKuE"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Playlist Favorites
-       *
-       * > Get a list of the playlists owned or followed by the current Spotify user.
-       */
-      get_playlist_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Playlist Items
-       *
-       * > Get full details of the items of a playlist owned by a Spotify user.
-       */
-      get_playlist_items: <T = unknown>(service_data?: {
-        /**
-         * ## Additional Types
-         *
-         * > A comma-separated list of item types that your client supports besides the default track type.  Valid types are 'track' and 'episode'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "additional_types": "track"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        additional_types?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Fields
-         *
-         * > Filters for the query; a comma-separated list of the fields to return. If omitted, all fields are returned. For example, specify 'items(track(name,uri))' to get just the playlist's track names and URIs.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "fields": "items(track(name,uri,album(name,uri)))"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        fields?: string;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. 5v5ETK9WFXAnGQ3MRubKuE).  If null, the currently playing playlist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "5v5ETK9WFXAnGQ3MRubKuE"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Playlists For User
-       *
-       * > Get a list of the playlists owned or followed by a Spotify user.
-       */
-      get_playlists_for_user: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-        /**
-         * ## User ID
-         *
-         * > The user's Spotify user ID (e.g. `smedjan`).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "user_id": "smedjan"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        user_id: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Show
-       *
-       * > Get Spotify catalog information for a single show identified by its unique Spotify ID.
-       */
-      get_show: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Show Id
-         *
-         * > The Spotify ID for the show.  If omitted, the currently playing show uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "show_id": "5CfCWKI5pZ28U0uOzXkDHe"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        show_id?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Show Episodes
-       *
-       * > Get Spotify catalog information about a show's episodes.
-       */
-      get_show_episodes: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Show Id
-         *
-         * > The Spotify ID for the show.  If omitted, the currently playing show uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "show_id": "6kAsbP8pxwaU2kPibKTuHE"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        show_id?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Show Favorites
-       *
-       * > Get a list of the shows saved in the current Spotify user's 'Your Library'.
-       */
-      get_show_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Exclude Audiobooks?
-         *
-         * > True (default) to exclude audiobook shows from the returned list, leaving only podcast shows; otherwise, False to include all results returned by the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "exclude_audiobooks": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        exclude_audiobooks?: boolean;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Spotify Connect Device
-       *
-       * > Get information about a specific Spotify Connect player device, and (optionally) activate the device if it requires it.
-       */
-      get_spotify_connect_device: <T = unknown>(service_data?: {
-        /**
-         * ## Activate Device?
-         *
-         * > True to activate the device if necessary; otherwise, False.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "activate_device": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        activate_device?: boolean;
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing any command to the device.  This delay will give the spotify zeroconf api time to process the change before another command is issued.  Default is 0.25; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.25"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device Value
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If an "*" is specified, then the SpotifyPlus default device is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_value": "Bose-ST10-1"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_value: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Refresh Device List?
-         *
-         * > DEPRECATED - no longer used, but left here to maintain compatibility.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        refresh_device_list?: boolean;
-        /**
-         * ## Verify Timeout
-         *
-         * > Maximum time to wait (in seconds) for the device to become active in the Spotify Connect device list.  This value is only used if a Connect command has to be issued to activate the device. Default is 5; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "verify_timeout": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        verify_timeout?: number;
-        /**
-         * ## Verify User Context?
-         *
-         * > DEPRECATED - no longer used, but left here to maintain compatibility.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        verify_user_context?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Spotify Connect Devices
-       *
-       * > Get information about all available Spotify Connect player (both static and dynamic) devices.
-       */
-      get_spotify_connect_devices: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Refresh Cache?
-         *
-         * > True (default) to return real-time information from the spotify zeroconf api and update the cache; otherwise, False to just return the cached value.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "refresh": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        refresh?: boolean;
-        /**
-         * ## Sort Result?
-         *
-         * > DEPRECATED - no longer used, but left here to maintain compatibility.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Track
-       *
-       * > Get Spotify catalog information for a single track identified by its unique Spotify ID.
-       */
-      get_track: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Track Id
-         *
-         * > The Spotify ID for the track.  If omitted, the currently playing track uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "track_id": "1kWUud3vY5ij5r62zxpTRy"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        track_id?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Track Audio Features
-       *
-       * > Get audio feature information for a single track identified by its unique Spotify ID.
-       */
-      get_track_audio_features: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Track ID
-         *
-         * > The Spotify ID of the track.  Example = `1kWUud3vY5ij5r62zxpTRy`.  If null, the currently playing track uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "track_id": "7ouMYWpwJ422jRcDASZB7P"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        track_id?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Track Favorites
-       *
-       * > Get a list of the tracks saved in the current Spotify user's 'Your Library'.
-       */
-      get_track_favorites: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Filter By Album
-         *
-         * > Filter returned entries by an album name.  Value can be the full name of the album (e.g. "Carried Me"), or a partial name (e.g. "Carried").
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        filter_album?: string;
-        /**
-         * ## Filter By Artist
-         *
-         * > Filter returned entries by an artist name.  Value can be the full name of the artist (e.g. "Jeremy Camp"), or a partial name (e.g. "Camp").
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        filter_artist?: string;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Get Track Recommendations
-       *
-       * > Get track recommendations for specified criteria.
-       */
-      get_track_recommendations: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items. Default is 20, Range is 1 to 50.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Maximum Acousticness
-         *
-         * > Restrict results to only those tracks whose acousticness level is less than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_acousticness?: number;
-        /**
-         * ## Maximum Danceability
-         *
-         * > Restrict results to only those tracks whose danceability level is less than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_danceability?: number;
-        /**
-         * ## Maximum Duration MS
-         *
-         * > Restrict results to only those tracks whose duration is less than the specified value in milliseconds.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_duration_ms?: number;
-        /**
-         * ## Maximum Energy
-         *
-         * > Restrict results to only those tracks whose energy level is less than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_energy?: number;
-        /**
-         * ## Maximum Instrumentalness
-         *
-         * > Restrict results to only those tracks whose instrumentalness level is less than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_instrumentalness?: number;
-        /**
-         * ## Maximum Key
-         *
-         * > Restrict results to only those tracks whose key level is less than the specified value.  Range is `0` - `11`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_key?: number;
-        /**
-         * ## Maximum Liveness
-         *
-         * > Restrict results to only those tracks whose liveness level is less than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_liveness?: number;
-        /**
-         * ## Maximum Loudness
-         *
-         * > Restrict results to only those tracks whose loudness level is less than the specified value.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_loudness?: number;
-        /**
-         * ## Maximum Mode
-         *
-         * > Restrict results to only those tracks whose mode level is less than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_mode?: number;
-        /**
-         * ## Maximum Popularity
-         *
-         * > Restrict results to only those tracks whose popularity level is less than the specified value.  Range is `0` - `100`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_popularity?: number;
-        /**
-         * ## Maximum Speechiness
-         *
-         * > Restrict results to only those tracks whose speechiness level is less than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_speechiness?: number;
-        /**
-         * ## Maximum Tempo
-         *
-         * > Restrict results to only those tracks with a tempo less than the specified number of beats per minute.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_tempo?: number;
-        /**
-         * ## Maximum Time Signature
-         *
-         * > Restrict results to only those tracks whose time signature is less than the specified value.  Range is `0` - `11`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_time_signature?: number;
-        /**
-         * ## Maximum Valence
-         *
-         * > Restrict results to only those tracks whose valence level is less than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        max_valence?: number;
-        /**
-         * ## Minimum Acousticness
-         *
-         * > Restrict results to only those tracks whose acousticness level is greater than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_acousticness?: number;
-        /**
-         * ## Minimum Danceability
-         *
-         * > Restrict results to only those tracks whose danceability level is greater than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_danceability?: number;
-        /**
-         * ## Minimum Duration MS
-         *
-         * > Restrict results to only those tracks whose duration is greater than the specified value in milliseconds.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_duration_ms?: number;
-        /**
-         * ## Minimum Energy
-         *
-         * > Restrict results to only those tracks whose energy level is greater than the specified value.  Range is `0` - `1`.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "min_energy": "0.975"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_energy?: number;
-        /**
-         * ## Minimum Instrumentalness
-         *
-         * > Restrict results to only those tracks whose instrumentalness level is greater than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_instrumentalness?: number;
-        /**
-         * ## Minimum Key
-         *
-         * > Restrict results to only those tracks whose key level is greater than the specified value.  Range is `0` - `11`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_key?: number;
-        /**
-         * ## Minimum Liveness
-         *
-         * > Restrict results to only those tracks whose liveness level is greater than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_liveness?: number;
-        /**
-         * ## Minimum Loudness
-         *
-         * > Restrict results to only those tracks whose loudness level is greater than the specified value.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "min_loudness": "-9.201"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_loudness?: number;
-        /**
-         * ## Minimum Mode
-         *
-         * > Restrict results to only those tracks whose mode level is greater than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_mode?: number;
-        /**
-         * ## Minimum Popularity
-         *
-         * > Restrict results to only those tracks whose popularity level is greater than the specified value.  Range is `0` - `100`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_popularity?: number;
-        /**
-         * ## Minimum Speechiness
-         *
-         * > Restrict results to only those tracks whose speechiness level is greater than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_speechiness?: number;
-        /**
-         * ## Minimum Tempo
-         *
-         * > Restrict results to only those tracks with a tempo greater than the specified number of beats per minute.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_tempo?: number;
-        /**
-         * ## Minimum Time Signature
-         *
-         * > Restrict results to only those tracks whose time signature is greater than the specified value.  Range is `0` - `11`.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "min_time_signature": "4"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_time_signature?: number;
-        /**
-         * ## Minimum Valence
-         *
-         * > Restrict results to only those tracks whose valence level is greater than the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        min_valence?: number;
-        /**
-         * ## Seed Artists
-         *
-         * > A comma separated list of Spotify IDs for seed artists (e.g. 4NHQUGzhtTLFvgF5SZesLK).  Up to 5 seed values may be provided in any combination of seedArtists, seedTracks and seedGenres; only required if seedGenres and seedTracks are not set.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        seed_artists?: string;
-        /**
-         * ## Seed Genres
-         *
-         * > A comma separated list of any genres in the set of available genre seeds (e.g. rock,hard-rock,rock-n-roll).  Up to 5 seed values may be provided in any combination of seedArtists, seedTracks and seedGenres; only required if seedArtists and seedTracks are not set.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "seed_genres": "rock,hard-rock,rock-n-roll"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        seed_genres?: string;
-        /**
-         * ## Seed Tracks
-         *
-         * > A comma separated list of Spotify IDs for a seed track (e.g. 0c6xIDDpzE81m2q797ordA).  Up to 5 seed values may be provided in any combination of seedArtists, seedTracks and seedGenres; only required if seedArtists and seedGenres are not set.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        seed_tracks?: string;
-        /**
-         * ## Target Acousticness
-         *
-         * > Restrict results to only those tracks whose acousticness level is equal to the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_acousticness?: number;
-        /**
-         * ## Target Danceability
-         *
-         * > Restrict results to only those tracks whose acousticness is equal to the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_danceability?: number;
-        /**
-         * ## Target Duration MS
-         *
-         * > Restrict results to only those tracks whose duration is equal to the specified value in milliseconds.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_duration_ms?: number;
-        /**
-         * ## Target Energy
-         *
-         * > Restrict results to only those tracks whose energy level is equal to the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_energy?: number;
-        /**
-         * ## Target Instrumentalness
-         *
-         * > Restrict results to only those tracks whose instrumentalness level is equal to the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_instrumentalness?: number;
-        /**
-         * ## Target Key
-         *
-         * > Restrict results to only those tracks whose key level is equal to the specified value.  Range is `0` - `11`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_key?: number;
-        /**
-         * ## Target Liveness
-         *
-         * > Restrict results to only those tracks whose liveness level is equal to the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_liveness?: number;
-        /**
-         * ## Target Loudness
-         *
-         * > Restrict results to only those tracks whose loudness level is equal to the specified value.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_loudness?: number;
-        /**
-         * ## Target Mode
-         *
-         * > Restrict results to only those tracks whose mode level is equal to the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_mode?: number;
-        /**
-         * ## Target Popularity
-         *
-         * > Restrict results to only those tracks whose popularity level is equal to the specified value.  Range is `0` - `100`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_popularity?: number;
-        /**
-         * ## Target Speechiness
-         *
-         * > Restrict results to only those tracks whose speechiness level is equal to the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_speechiness?: number;
-        /**
-         * ## Target Tempo
-         *
-         * > Restrict results to only those tracks with a tempo equal to the specified number of beats per minute.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_tempo?: number;
-        /**
-         * ## Target Time Signature
-         *
-         * > Restrict results to only those tracks whose time signature is equal to the specified value.  Range is `0` - `11`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_time_signature?: number;
-        /**
-         * ## Target Valence
-         *
-         * > Restrict results to only those tracks whose valence level is equal to the specified value.  Range is `0` - `1`.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        target_valence?: number;
-      }) => Promise<T>;
-      /**
-       * ### Get Tracks Audio Features
-       *
-       * > Get audio features for multiple tracks based on their Spotify IDs.
-       */
-      get_tracks_audio_features: <T = unknown>(service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of the Spotify track IDs. Maximum of 100 IDs.  Example = `7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B`.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Users Top Artists
-       *
-       * > Get the current user's top artists based on calculated affinity.
-       */
-      get_users_top_artists: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-        /**
-         * ## Time Range
-         *
-         * > Over what time frame the affinities are computed. Valid values are `long_term` (calculated from several years of data and including all new data as it becomes available), `medium_term` (approximately last 6 months), and `short_term` (approximately last 4 weeks).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "time_range": "long_term"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        time_range?: string;
-      }) => Promise<T>;
-      /**
-       * ### Get Users Top Tracks
-       *
-       * > Get the current user's top tracks based on calculated affinity.
-       */
-      get_users_top_tracks: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-        /**
-         * ## Sort Result?
-         *
-         * > True to sort result items by name prior to returning to the caller; otherwise, False to return results in the order that the Spotify Web API returned them.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sort_result": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        sort_result?: boolean;
-        /**
-         * ## Time Range
-         *
-         * > Over what time frame the affinities are computed. Valid values are `long_term` (calculated from several years of data and including all new data as it becomes available), `medium_term` (approximately last 6 months), and `short_term` (approximately last 4 weeks).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "time_range": "long_term"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        time_range?: string;
-      }) => Promise<T>;
-      /**
-       * ### List Application Credential Mappings
-       *
-       * > List Home Assistant application credential mappings to determine which configuration entitys use which credential.
-       */
-      list_application_credential_mappings: <T = unknown>(service_data?: {
-        /**
-         * ## Application Credentials Filter?
-         *
-         * > True (default) to limit entries displayed to those that have Application Credentials defined; otherwise, False to include all entries.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "filter_credentials_only": "true"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        filter_credentials_only?: boolean;
-        /**
-         * ## Domain Name Filter
-         *
-         * > Limit entries displayed to the specified domain name (e.g. 'spotifyplus', 'spotify', etc).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "filter_domain": "spotifyplus"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        filter_domain?: string;
-        /**
-         * ## List Domain Entities?
-         *
-         * > True to list entities that are children of the domain; otherwise, False (default) to exclude domain entity details.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "list_domain_entities": "false"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        list_domain_entities?: boolean;
-      }) => Promise<T>;
-      /**
-       * ### Player Media Pause
-       *
-       * > Pause media play for the specified Spotify Connect device.
-       */
-      player_media_pause: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the final Connect command (if necessary). This delay will give the spotify web api time to process the device list change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-      }) => Promise<void>;
-      /**
-       * ### Player Media Play Context
-       *
-       * > Start playing one or more tracks of the specified context on a Spotify Connect device.
-       */
-      player_media_play_context: (service_data?: {
-        /**
-         * ## Context Uri
-         *
-         * > Spotify URI of the context to play (e.g. `spotify:album:6vc9OTcyd3hyzabCmsdnwE`).  Valid contexts are albums, artists & playlists.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "context_uri": "spotify:album:6vc9OTcyd3hyzabCmsdnwE"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        context_uri: string;
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the final Connect command (if necessary). This delay will give the spotify web api time to process the device list change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Offset Position
-         *
-         * > Indicates from what position in the context playback should start.  The value is zero-based, and can't be negative.  Only available when contextUri corresponds to an album or playlist.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset_position": "3"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 11000
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset_position?: number;
-        /**
-         * ## Offset Uri
-         *
-         * > Indicates from what Uri in the context playback should start (e.g. `1kWUud3vY5ij5r62zxpTRy`.  Only available when contextUri corresponds to an artist, album or playlist.  The offsetPosition argument will be used if this value is null.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset_uri": "spotify:track:1kWUud3vY5ij5r62zxpTRy"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        offset_uri?: string;
-        /**
-         * ## Seek Position
-         *
-         * > The position (in milliseconds) to seek to; must be a positive number.  Passing in a position that is greater than the length of the track will cause the player to start playing the next track.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "position_ms": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 999999999
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        position_ms?: number;
-        /**
-         * ## Shuffle?
-         *
-         * > True to enable player shuffle mode; False to disable player shuffle mode; None to use current player shuffle mode. Default is None.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "shuffle": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        shuffle?: boolean;
-      }) => Promise<void>;
-      /**
-       * ### Player Media Play Track Favorites
-       *
-       * > Start playing track favorites on the specified Spotify Connect device.
-       */
-      player_media_play_track_favorites: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the command to the player.  This delay will give the spotify web api time to process the change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Filter By Album
-         *
-         * > Filter returned entries by an album name.  Value can be the full name of the album (e.g. "Carried Me"), or a partial name (e.g. "Carried").
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        filter_album?: string;
-        /**
-         * ## Filter By Artist
-         *
-         * > Filter returned entries by an artist name.  Value can be the full name of the artist (e.g. "Jeremy Camp"), or a partial name (e.g. "Camp").
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        filter_artist?: string;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to retrieve from favorites.  Default is 200.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "200"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Resolve Device Id?
-         *
-         * > DEPRECATED - no longer used, but left here to maintain compatibility.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        resolve_device_id?: boolean;
-        /**
-         * ## Shuffle?
-         *
-         * > True to enable player shuffle mode; False to disable player shuffle mode; None to use current player shuffle mode. Default is None.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "shuffle": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        shuffle?: boolean;
-      }) => Promise<void>;
-      /**
-       * ### Player Media Play Tracks
-       *
-       * > Start playing one or more tracks on the specified Spotify Connect device.
-       */
-      player_media_play_tracks: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the final Connect command (if necessary). This delay will give the spotify web api time to process the device list change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Seek Position
-         *
-         * > The position (in milliseconds) to seek to; must be a positive number.  Passing in a position that is greater than the length of the track will cause the player to start playing the next track.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "position_ms": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 999999999
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        position_ms?: number;
-        /**
-         * ## Shuffle?
-         *
-         * > True to enable player shuffle mode; False to disable player shuffle mode; None to use current player shuffle mode. Default is None.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "shuffle": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        shuffle?: boolean;
-        /**
-         * ## Uri's
-         *
-         * > A comma-separated list of Spotify track URIs to play; can be track or episode URIs.  A maximum of 50 items can be specified.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "uris": "spotify:track:6zd8T1PBe9JFHmuVnurdRp,spotify:track:1kWUud3vY5ij5r62zxpTRy"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        uris: string;
-      }) => Promise<void>;
-      /**
-       * ### Player Media Resume
-       *
-       * > Resume media play for the specified Spotify Connect device.
-       */
-      player_media_resume: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the final Connect command (if necessary). This delay will give the spotify web api time to process the device list change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-      }) => Promise<void>;
-      /**
-       * ### Player Media Seek
-       *
-       * > Seeks to the given absolute or relative position in the user's currently playing track for the specified Spotify Connect device.
-       */
-      player_media_seek: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the final Connect command (if necessary). This delay will give the spotify web api time to process the device list change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Absolute Seek Position
-         *
-         * > The absolute position in milliseconds to seek to; must be a positive number or zero if the `relativePositionMS` argument is specified. Passing in a position that is greater than the length of the track will cause the player to start playing the next song. Example = `25000` to start playing at the 25 second mark.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "position_ms": "25000"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 999999999
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        position_ms?: number;
-        /**
-         * ## Relative Seek Position
-         *
-         * > The relative position in milliseconds to seek to; can be a positive or negative number, or zero if the `positionMS` argument is specified. Example = `-10000` to seek behind by 10 seconds; `10000` to seek ahead by 10 seconds.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "relative_position_ms": "10000"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: -999999999
-         * >   max: 999999999
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        relative_position_ms?: number;
-      }) => Promise<void>;
-      /**
-       * ### Player Media Skip Next
-       *
-       * > Skips to next track in the user's queue for the specified Spotify Connect device.
-       */
-      player_media_skip_next: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the final Connect command (if necessary). This delay will give the spotify web api time to process the device list change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-      }) => Promise<void>;
-      /**
-       * ### Player Media Skip Previous
-       *
-       * > Skips to previous track in the user's queue for the specified Spotify Connect device.
-       */
-      player_media_skip_previous: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the final Connect command (if necessary). This delay will give the spotify web api time to process the device list change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-      }) => Promise<void>;
-      /**
-       * ### Player Set Repeat Mode
-       *
-       * > Set repeat mode for the specified Spotify Connect device.
-       */
-      player_set_repeat_mode: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the command to the player.  This delay will give the spotify web api time to process the change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Repeat State
-         *
-         * > The repeat mode state to set; `track` will repeat the current track; `context` will repeat the current context; `off` will turn repeat off.  Default is 'off'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "state": "off"
-         * > }
-         * > ```
-         */
-        state: "off" | "track" | "context";
-      }) => Promise<void>;
-      /**
-       * ### Player Set Shuffle Mode
-       *
-       * > Set shuffle mode for the specified Spotify Connect device.
-       */
-      player_set_shuffle_mode: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the command to the player.  This delay will give the spotify web api time to process the change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Shuffle State?
-         *
-         * > True to set player shuffle mode to on; otherwise, False for no shuffle.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "state": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        state: boolean;
-      }) => Promise<void>;
-      /**
-       * ### Player Set Volume Level
-       *
-       * > Set volume level for the specified Spotify Connect device.
-       */
-      player_set_volume_level: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the command to the player.  This delay will give the spotify web api time to process the change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device this command is targeting.  If not supplied, the user's currently active device is the target.  If no device is active (or an "*" is specified), then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Volume Level
-         *
-         * > The volume level to set, expressed as a percentage value (e.g. 25).  Must be a value from 0 (muted) to 100 (max volume) inclusive.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "volume_level": "25"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 100
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        volume_level: number;
-      }) => Promise<void>;
-      /**
-       * ### Player Transfer Playback
-       *
-       * > Transfer playback to a new Spotify Connect device and optionally begin playback.
-       */
-      player_transfer_playback: (service_data?: {
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing the final Connect command (if necessary). This delay will give the spotify web api time to process the device list change before another command is issued.  Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Device ID
-         *
-         * > The id or name of the Spotify Connect Player device on which playback should be started/transferred.  If no device is specified, then the SpotifyPlus default device is activated.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id": "0d1841b0976bae2a3a310dd74c0f337465899bc8"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id?: string;
-        /**
-         * ## Device ID From
-         *
-         * > The player device identifier where play is being transferred from; only used to stop play on restricted devices prior to transferring playback.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "device_id_from": "Office"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        device_id_from?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Force Activate Device?
-         *
-         * > True to issue a Spotify Connect Disconnect call prior to transfer, which will force the device to reconnect to Spotify Connect; otherwise, False to not disconnect. Default is True.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "force_activate_device": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        force_activate_device?: boolean;
-        /**
-         * ## Start Play?
-         *
-         * > True (default) to start playback on the new device; otherise, False to keep the current playback state on the existing device.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "play": "True"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        play?: boolean;
-        /**
-         * ## Refresh Device List?
-         *
-         * > DEPRECATED - no longer used, but left here to maintain compatibility.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        refresh_device_list?: boolean;
-      }) => Promise<void>;
-      /**
-       * ### Playlist Change
-       *
-       * > Change a playlists details (name, description, and public / private state).
-       */
-      playlist_change: (service_data?: {
-        /**
-         * ## Collaborative?
-         *
-         * > If true, the playlist will be collaborative (other users can modify it).  To create a collaborative playlist you must also set the public argument to false.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "collaborative": "False"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        collaborative: boolean;
-        /**
-         * ## Description
-         *
-         * > The playlist description, as displayed in Spotify Clients and in the Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "description": "A Playlist updated by the SpotifyPlus integration"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        description: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Image Path
-         *
-         * > The fully-qualified path of the image to be uploaded (e.g. `www/images/spotify_playlist_default_image.png`).  The image must be in PNG or JPEG format, and cannot exceed 256KB in Base64 encoded size.  Omit this parameter if you do not wish to update the existing playlist image.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "image_path": "www/images/spotify_playlist_default_image.png"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        image_path?: string;
-        /**
-         * ## Name
-         *
-         * > The updated name for the playlist (e.g. `My Updated Playlist`).  This name does not need to be unique; a user may have several playlists with the same name.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "name": "My Updated Playlist"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        name: string;
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. `5AC9ZXA7nJ7oGWO911FuDG`).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "5AC9ZXA7nJ7oGWO911FuDG"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id: string;
-        /**
-         * ## Public?
-         *
-         * > If true, the playlist will be public; if false, it will be private.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "public": "False"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        public: boolean;
-      }) => Promise<void>;
-      /**
-       * ### Playlist Cover Image Add
-       *
-       * > Replace the image used to represent a specific playlist.
-       */
-      playlist_cover_image_add: (service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Image Path
-         *
-         * > The fully-qualified path of the image to be uploaded (e.g. `www/images/spotify_playlist_default_image.png`).  The image must be in PNG or JPEG format, and cannot exceed 256KB in Base64 encoded size.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "image_path": "www/images/spotify_playlist_default_image.png"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        image_path: string;
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. 5v5ETK9WFXAnGQ3MRubKuE).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "5v5ETK9WFXAnGQ3MRubKuE"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id: string;
-      }) => Promise<void>;
-      /**
-       * ### Playlist Create
-       *
-       * > Create an empty playlist for a Spotify user.  The playlist will remain empty until you add tracks.
-       */
-      playlist_create: <T = unknown>(service_data?: {
-        /**
-         * ## Collaborative?
-         *
-         * > If true, the playlist will be collaborative (other users can modify it).  To create a collaborative playlist you must also set the public argument to false.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "collaborative": "False"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        collaborative: boolean;
-        /**
-         * ## Description
-         *
-         * > The playlist description, as displayed in Spotify Clients and in the Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "description": "A Playlist created by the SpotifyPlus integration"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        description: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Image Path
-         *
-         * > The fully-qualified path of the image to be uploaded (e.g. `www/images/spotify_playlist_default_image.png`).  The image must be in PNG or JPEG format, and cannot exceed 256KB in Base64 encoded size.  Omit this parameter if you do not wish to add a playlist image.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "image_path": "www/images/spotify_playlist_default_image.png"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        image_path?: string;
-        /**
-         * ## Name
-         *
-         * > The name for the new playlist (e.g. `My New Playlist`).  This name does not need to be unique; a user may have several playlists with the same name.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "name": "My New Playlist"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        name: string;
-        /**
-         * ## Public?
-         *
-         * > If true, the playlist will be public; if false, it will be private.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "public": "False"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        public: boolean;
-        /**
-         * ## User ID
-         *
-         * > The user's Spotify user ID (e.g. 32k99y2kg5lnn3mxhtmd2bpdkjfu).  Omit this argument to use the Spotify User ID of the player entity_id.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "user_id": "32k99y2kg5lnn3mxhtmd2bpdkjfu"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        user_id?: string;
-      }) => Promise<T>;
-      /**
-       * ### Playlist Items Add
-       *
-       * > Add one or more items to a user's playlist.  Items are added in the order they are listed in the `uris` argument.
-       */
-      playlist_items_add: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. 5AC9ZXA7nJ7oGWO911FuDG).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "5AC9ZXA7nJ7oGWO911FuDG"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id: string;
-        /**
-         * ## Position
-         *
-         * > The position to insert the items, a zero-based index.  For example, to insert the items in the first position use a value of 0; to insert the items in the third position use a value of 2.  Omit the parameter to append the items to the end of the playlist.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "position": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 9999
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        position?: number;
-        /**
-         * ## URI's
-         *
-         * > A comma-separated list of Spotify URIs to add; can be track or episode URIs (e.g. spotify:track:4iV5W9uYEdYUVa79Axb7Rh).  A maximum of 100 items can be specified in one request.  If nothing is specified, then the track (or episode) uri currently playing is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "uris": "spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:episode:512ojhOuo1ktJprKbVcKyQ"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        uris?: string;
-      }) => Promise<T>;
-      /**
-       * ### Playlist Items Clear
-       *
-       * > Removes (clears) all items from a user's playlist.
-       */
-      playlist_items_clear: <T = unknown>(service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. 5AC9ZXA7nJ7oGWO911FuDG).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "5AC9ZXA7nJ7oGWO911FuDG"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id: string;
-      }) => Promise<T>;
-      /**
-       * ### Playlist Items Remove
-       *
-       * > Remove one or more items from a user's playlist.
-       */
-      playlist_items_remove: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. 5AC9ZXA7nJ7oGWO911FuDG).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "5AC9ZXA7nJ7oGWO911FuDG"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id: string;
-        /**
-         * ## Snapshot ID
-         *
-         * > The playlist's snapshot ID against which you want to make the changes (e.g. `MzgsMWVkNDY3MTQ5YjVjYWE0MzAyNjkyZWMyOThjNjE3YWMwOTY0ZmJjYg==`).  The API will validate that the specified items exist and make the changes, even if more recent changes have been made to the playlist.  If omitted, the current playlist is updated.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        snapshot_id?: string;
-        /**
-         * ## URI's
-         *
-         * > A comma-separated list of Spotify URIs to remove; can be track or episode URIs (e.g. spotify:track:4iV5W9uYEdYUVa79Axb7Rh).  A maximum of 100 items can be specified in one request.  If nothing is specified, then the track (or episode) uri currently playing is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "uris": "spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:episode:512ojhOuo1ktJprKbVcKyQ"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        uris?: string;
-      }) => Promise<T>;
-      /**
-       * ### Playlist Items Reorder
-       *
-       * > Reorder items in a user's playlist.
-       */
-      playlist_items_reorder: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Insert Before
-         *
-         * > The position where the items should be inserted.  To reorder the items to the end of the playlist, simply set `insertBefore` to the position after the last item.  This is a one-offset integer (NOT zero-offset).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "insert_before": "1"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 99999
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        insert_before: number;
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. 4yptcTKnXjCu3V92tVVafS).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "4yptcTKnXjCu3V92tVVafS"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id: string;
-        /**
-         * ## Range Length
-         *
-         * > The amount of items to be reordered; defaults to 1 if not set.  The range of items to be reordered begins from the `rangeStart` position, and includes the `rangeLength` subsequent items.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "range_length": "1"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 99999
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        range_length?: number;
-        /**
-         * ## Range Start
-         *
-         * > The position of the first item to be reordered.  This is a one-offset integer (NOT zero-offset).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "range_start": "2"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 99999
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        range_start: number;
-        /**
-         * ## Snapshot ID
-         *
-         * > The playlist's snapshot ID against which you want to make the changes (e.g. `MzgsMWVkNDY3MTQ5YjVjYWE0MzAyNjkyZWMyOThjNjE3YWMwOTY0ZmJjYg==`).  The API will validate that the specified items exist and make the changes, even if more recent changes have been made to the playlist.  If omitted, the current playlist is updated.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        snapshot_id?: string;
-      }) => Promise<T>;
-      /**
-       * ### Playlist Items Replace
-       *
-       * > Replace one or more items in a user's playlist. Replacing items in a playlist will overwrite its existing items. This service can also be used to clear a playlist.
-       */
-      playlist_items_replace: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. `3cEYpjA9oz9GiPac4AsH4n`).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "3cEYpjA9oz9GiPac4AsH4n"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id: string;
-        /**
-         * ## URI's
-         *
-         * > A comma-separated list of Spotify URIs to replace; can be track or episode URIs (e.g. `spotify:track:4iV5W9uYEdYUVa79Axb7Rh, spotify:episode:26c0zVyOv1lzfYpBXdh1zC`). A maximum of 100 items can be specified in one request.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        uris?: string;
-      }) => Promise<T>;
-      /**
-       * ### Remove Album Favorites
-       *
-       * > Remove one or more albums from the current user's 'Your Library'.
-       */
-      remove_album_favorites: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify album id's (e.g. `6vc9OTcyd3hyzabCmsdnwE,382ObEPsp2rxGrnsizN5TX`).  A maximum of 50 id's may be specified.  If omitted, the currently playing track album uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "6vc9OTcyd3hyzabCmsdnwE,382ObEPsp2rxGrnsizN5TX"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Remove Audiobook Favorites
-       *
-       * > Remove one or more audiobooks from the current user's 'Your Library'.
-       */
-      remove_audiobook_favorites: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify audiobook id's (e.g. `3PFyizE2tGCSRLusl2Qizf,7iHfbu1YPACw6oZPAFJtqe`).  A maximum of 50 id's may be specified.  If omitted, the currently playing audiobook uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "3PFyizE2tGCSRLusl2Qizf,7iHfbu1YPACw6oZPAFJtqe"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Remove Episode Favorites
-       *
-       * > Remove one or more episodes from the current user's 'Your Library'.
-       */
-      remove_episode_favorites: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify episode id's (e.g. `3F97boSWlXi8OzuhWClZHQ,1hPX5WJY6ja6yopgVPBqm4`).  A maximum of 50 id's may be specified.  If omitted, the currently playing episode uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "3F97boSWlXi8OzuhWClZHQ,1hPX5WJY6ja6yopgVPBqm4"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Remove Show Favorites
-       *
-       * > Remove one or more shows from the current user's 'Your Library'.
-       */
-      remove_show_favorites: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify show id's (e.g. `6kAsbP8pxwaU2kPibKTuHE,4rOoJ6Egrf8K2IrywzwOMk`).  A maximum of 50 id's may be specified.  If omitted, the currently playing show uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "6kAsbP8pxwaU2kPibKTuHE,4rOoJ6Egrf8K2IrywzwOMk"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Remove Track Favorites
-       *
-       * > Remove one or more tracks from the current user's 'Your Library'.
-       */
-      remove_track_favorites: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify track id's (e.g. `1kWUud3vY5ij5r62zxpTRy,4eoYKv2kDwJS7gRGh5q6SK`).  A maximum of 50 id's may be specified.  If omitted, the currently playing context uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "1kWUud3vY5ij5r62zxpTRy,4eoYKv2kDwJS7gRGh5q6SK"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Save Album Favorites
-       *
-       * > Save one or more albums to the current user's 'Your Library'.
-       */
-      save_album_favorites: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify album id's (e.g. `6vc9OTcyd3hyzabCmsdnwE,382ObEPsp2rxGrnsizN5TX`).  A maximum of 50 id's may be specified.  If omitted, the currently playing track album uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "6vc9OTcyd3hyzabCmsdnwE,382ObEPsp2rxGrnsizN5TX"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Save Audiobook Favorites
-       *
-       * > Save one or more audiobooks to the current user's 'Your Library'.
-       */
-      save_audiobook_favorites: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify audiobook id's (e.g. `3PFyizE2tGCSRLusl2Qizf,7iHfbu1YPACw6oZPAFJtqe`).  A maximum of 50 id's may be specified.  If omitted, the currently playing audiobook uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "3PFyizE2tGCSRLusl2Qizf,7iHfbu1YPACw6oZPAFJtqe"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Save Episode Favorites
-       *
-       * > Save one or more episodes to the current user's 'Your Library'.
-       */
-      save_episode_favorites: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify episode id's (e.g. `3F97boSWlXi8OzuhWClZHQ,1hPX5WJY6ja6yopgVPBqm4`).  A maximum of 50 id's may be specified.  If omitted, the currently playing episode uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "3F97boSWlXi8OzuhWClZHQ,1hPX5WJY6ja6yopgVPBqm4"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Save Show Favorites
-       *
-       * > Save one or more shows to the current user's 'Your Library'.
-       */
-      save_show_favorites: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify show id's (e.g. `6kAsbP8pxwaU2kPibKTuHE,4rOoJ6Egrf8K2IrywzwOMk`).  A maximum of 50 id's may be specified.  If omitted, the currently playing show uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "6kAsbP8pxwaU2kPibKTuHE,4rOoJ6Egrf8K2IrywzwOMk"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Save Track Favorites
-       *
-       * > Save one or more tracks to the current user's 'Your Library'.
-       */
-      save_track_favorites: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify track id's (e.g. `1kWUud3vY5ij5r62zxpTRy,4eoYKv2kDwJS7gRGh5q6SK`).  A maximum of 50 id's may be specified.  If omitted, the currently playing context uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "1kWUud3vY5ij5r62zxpTRy,4eoYKv2kDwJS7gRGh5q6SK"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Search Albums
-       *
-       * > Get Spotify catalog information about Albums that match a keyword string.
-       */
-      search_albums: <T = unknown>(service_data?: {
-        /**
-         * ## Search Criteria
-         *
-         * > The criteria to search for.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "criteria": "Welcome to the New"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        criteria: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Include External
-         *
-         * > If 'audio' is specified it signals that the client can play externally hosted audio content, and marks the content as playable in the response. By default externally hosted audio content is marked as unplayable in the response.  Allowed values are 'audio'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "include_external": "audio"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        include_external?: string;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-      }) => Promise<T>;
-      /**
-       * ### Search All
-       *
-       * > Get Spotify catalog information about albums, artists, playlists, tracks, shows, episodes or audiobooks that match a keyword string. Audiobooks are only available within the US, UK, Canada, Ireland, New Zealand and Australia markets.
-       */
-      search_all: <T = unknown>(service_data?: {
-        /**
-         * ## Search Criteria
-         *
-         * > The criteria to search for.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "criteria": "Welcome to the New"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        criteria: string;
-        /**
-         * ## Search Criteria Type
-         *
-         * > A comma-separated list of item types to search across.  Search results include hits from all the specified item types.  For example, "album,track" returns both albums and tracks matching criteria argument.  Allowed values are "album", "artist", "playlist", "track", "show", "episode", "audiobook".  Default is "track".
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "criteria_type": "album,artist,track,playlist"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        criteria_type?: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Include External
-         *
-         * > If 'audio' is specified it signals that the client can play externally hosted audio content, and marks the content as playable in the response. By default externally hosted audio content is marked as unplayable in the response.  Allowed values are 'audio'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "include_external": "audio"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        include_external?: string;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request, per criteria type. Paging is automatically used to retrieve all available items up to the maximum number specified per type. Default is 20.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-      }) => Promise<T>;
-      /**
-       * ### Search Artists
-       *
-       * > Get Spotify catalog information about Artists that match a keyword string.
-       */
-      search_artists: <T = unknown>(service_data?: {
-        /**
-         * ## Search Criteria
-         *
-         * > The criteria to search for.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "criteria": "MercyMe"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        criteria: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Include External
-         *
-         * > If 'audio' is specified it signals that the client can play externally hosted audio content, and marks the content as playable in the response. By default externally hosted audio content is marked as unplayable in the response.  Allowed values are 'audio'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "include_external": "audio"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        include_external?: string;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-      }) => Promise<T>;
-      /**
-       * ### Search Audiobooks
-       *
-       * > Get Spotify catalog information about Audiobooks that match a keyword string.
-       */
-      search_audiobooks: <T = unknown>(service_data?: {
-        /**
-         * ## Search Criteria
-         *
-         * > The criteria to search for.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "criteria": "The Elfstones of Shannara"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        criteria: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Include External
-         *
-         * > If 'audio' is specified it signals that the client can play externally hosted audio content, and marks the content as playable in the response. By default externally hosted audio content is marked as unplayable in the response.  Allowed values are 'audio'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "include_external": "audio"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        include_external?: string;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-      }) => Promise<T>;
-      /**
-       * ### Search Episodes
-       *
-       * > Get Spotify catalog information about Episodes that match a keyword string.
-       */
-      search_episodes: <T = unknown>(service_data?: {
-        /**
-         * ## Search Criteria
-         *
-         * > The criteria to search for.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "criteria": "Armchair Anonymous"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        criteria: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Include External
-         *
-         * > If 'audio' is specified it signals that the client can play externally hosted audio content, and marks the content as playable in the response. By default externally hosted audio content is marked as unplayable in the response.  Allowed values are 'audio'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "include_external": "audio"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        include_external?: string;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-      }) => Promise<T>;
-      /**
-       * ### Search Playlists
-       *
-       * > Get Spotify catalog information about Playlists that match a keyword string.
-       */
-      search_playlists: <T = unknown>(service_data?: {
-        /**
-         * ## Search Criteria
-         *
-         * > The criteria to search for.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "criteria": "Daily Mix"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        criteria: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Include External
-         *
-         * > If 'audio' is specified it signals that the client can play externally hosted audio content, and marks the content as playable in the response. By default externally hosted audio content is marked as unplayable in the response.  Allowed values are 'audio'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "include_external": "audio"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        include_external?: string;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-      }) => Promise<T>;
-      /**
-       * ### Search Shows (aka Podcasts)
-       *
-       * > Get Spotify catalog information about Show (aka Podcasts) that match a keyword string.
-       */
-      search_shows: <T = unknown>(service_data?: {
-        /**
-         * ## Search Criteria
-         *
-         * > The criteria to search for.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "criteria": "Dax Shepard"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        criteria: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Include External
-         *
-         * > If 'audio' is specified it signals that the client can play externally hosted audio content, and marks the content as playable in the response. By default externally hosted audio content is marked as unplayable in the response.  Allowed values are 'audio'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "include_external": "audio"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        include_external?: string;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-      }) => Promise<T>;
-      /**
-       * ### Search Tracks
-       *
-       * > Get Spotify catalog information about Tracks that match a keyword string.
-       */
-      search_tracks: <T = unknown>(service_data?: {
-        /**
-         * ## Search Criteria
-         *
-         * > The criteria to search for.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "criteria": "Dear Younger Me"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        criteria: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Include External
-         *
-         * > If 'audio' is specified it signals that the client can play externally hosted audio content, and marks the content as playable in the response. By default externally hosted audio content is marked as unplayable in the response.  Allowed values are 'audio'.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "include_external": "audio"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        include_external?: string;
-        /**
-         * ## Limit
-         *
-         * > The maximum number of items to return in a page of items when manual paging is used.  Default is 20, Range is 1 to 50.  See the limit_total argument for automatic paging option.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 50
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit?: number;
-        /**
-         * ## Limit Total
-         *
-         * > The maximum number of items to return for the request.  If specified, this argument overrides the limit and offset argument values and paging is automatically used to retrieve all available items up to the specified limit total.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "limit_total": "20"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        limit_total?: number;
-        /**
-         * ## Market / Country Code
-         *
-         * > An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.  The country associated with the Spotify user account will take priority over this parameter.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "market": "ES"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        market?: string;
-        /**
-         * ## Offset
-         *
-         * > The page index offset of the first item to return.  Use with limit to get the next set of items.  Default is 0 (the first item).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "offset": "0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 500
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        offset?: number;
-      }) => Promise<T>;
-      /**
-       * ### Test Token Expire
-       *
-       * > Forces Spotify Authorization token to expire within 10 seconds; used to test token refresh processing.
-       */
-      test_token_expire: (service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-      }) => Promise<void>;
-      /**
-       * ### Trigger Scan Interval
-       *
-       * > Triggers a scan interval sequence, which will update HA State values from content currently being played on the user's Spotify account.
-       */
-      trigger_scan_interval: (service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-      }) => Promise<void>;
-      /**
-       * ### Unfollow Artists
-       *
-       * > Remove the current user as a follower of one or more artists.
-       */
-      unfollow_artists: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify artist id's (e.g. `2CIMQHirSU0MQqyYHq0eOx,1IQ2e1buppatiN1bxUVkrk`).  A maximum of 50 id's may be specified.  If omitted, the currently playing track artist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "2CIMQHirSU0MQqyYHq0eOx,1IQ2e1buppatiN1bxUVkrk"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids?: string;
-      }) => Promise<void>;
-      /**
-       * ### Unfollow Playlist
-       *
-       * > Remove the current user as a follower of a playlist.
-       */
-      unfollow_playlist: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Playlist ID
-         *
-         * > The Spotify ID of the playlist (e.g. `3cEYpjA9oz9GiPac4AsH4n`).  If omitted, the currently playing playlist uri id value is used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "playlist_id": "3cEYpjA9oz9GiPac4AsH4n"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        playlist_id?: string;
-      }) => Promise<void>;
-      /**
-       * ### Unfollow Users
-       *
-       * > Remove the current user as a follower of one or more users.
-       */
-      unfollow_users: (service_data: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## ID's
-         *
-         * > A comma-separated list of Spotify user IDs (e.g. `smedjan,3758dfdsfjk435hjk6k79lm0n3c4`).  A maximum of 50 IDs can be sent in one request.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "ids": "smedjan,3758dfdsfjk435hjk6k79lm0n3c4"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        ids: string;
-      }) => Promise<void>;
-      /**
-       * ### Volume Set Step Level
-       *
-       * > Set level used for volume step services.
-       */
-      volume_set_step: (service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the Spotify Web API.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Level
-         *
-         * > Level percentage to adjust the volume by, expressed as a floating point number from 0.01 - 1.0.  Default is 0.10 (e.g. 10 percent), range is 0.01 to 1.00.
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0.01
-         * >   max: 1
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        level?: number;
-        /**
-         * ## Level Percentage
-         *
-         * > Level percentage to adjust the volume by. Default is 10, range is 1 to 100 (e.g. percent). level argument is ignored if this argument is specified.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "level_percent": "5"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 100
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        level_percent?: number;
-      }) => Promise<void>;
-      /**
-       * ### ZeroConf Device Connect
-       *
-       * > Calls the `addUser` Spotify Zeroconf API endpoint to issue a call to SpConnectionLoginBlob.  If successful, the associated device id is added to the Spotify Connect active device list for the specified user account.  This will also issue a `resetUsers` call prior to the `addUser` call.
-       */
-      zeroconf_device_connect: <T = unknown>(service_data?: {
-        /**
-         * ## CPath Identifier
-         *
-         * > Spotify Connect Zeroconf API CPath property value (e.g. '/zc').
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "cpath": "/zc"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        cpath: string;
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing a command to the device. This delay will give the spotify zeroconf api time to process the change before another command is issued. Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the ZeroConf service.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Device IP Port
-         *
-         * > Port number at which the Spotify Connect Zeroconf API can be reached on the Spotify Connect device (e.g. 8200).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "host_ip_port": "8200"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 65535
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        host_ip_port: number;
-        /**
-         * ## Device IPV4 Address
-         *
-         * > IPV4 address at which the Spotify Connect Zeroconf API can be reached on the Spotify Connect device (e.g. '192.168.1.81').
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "host_ipv4_address": "192.168.1.81"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        host_ipv4_address: string;
-        /**
-         * ## Spotify Login ID
-         *
-         * > Spotify Connect login id to login with (e.g. "31l77fd87g8h9j00k89f07jf87ge").  This is also known as the canonical user id value.  This MUST be the value that relates to the `username` argument. If not specified, the integration options Spotify Connect loginId value will be used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "loginid": "31l77y75hfnhk79f7gk6jkk878mg"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        loginid?: string;
-        /**
-         * ## Spotify User Password
-         *
-         * > Spotify Connect user password to login with. If not specified, the integration options Spotify Connect password value will be used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "password": "yourpassword"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        password?: string;
-        /**
-         * ## Pre Disconnect?
-         *
-         * > True if a Disconnect should be made prior to the Connect call.  This will ensure that the active user is logged out, which must be done if switching user accounts; otherwise, False to not issue a Disconnect call.  Default is False.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "pre_disconnect": "False"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        pre_disconnect?: boolean;
-        /**
-         * ## Use SSL?
-         *
-         * > True if the host device utilizes HTTPS Secure Sockets Layer (SSL) support; otherwise, False to utilize HTTP.  Default is False (HTTP).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "use_ssl": "False"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        use_ssl?: boolean;
-        /**
-         * ## Spotify User Name
-         *
-         * > Spotify user name to login with (e.g. 'yourusername@mail.com').  This MUST match the account name (or one of them) that was used to configure Spotify Connect on the manufacturer device. If not specified, the integration options Spotify Connect username value will be used.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "username": "yourusername@mail.com"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        username?: string;
-        /**
-         * ## Verify Device List Entry?
-         *
-         * > True to ensure that the device id is present in the Spotify Connect device list before issuing a call to Connect; Connect will not be called if the device id is already in the list; otherwise, False to always call Connect to add the device.  Default is False.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "verify_device_list_entry": "False"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        verify_device_list_entry?: boolean;
-        /**
-         * ## Version Indicator
-         *
-         * > Spotify Connect Zeroconf API version number that the device supports (e.g. '1.0').
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "version": "1.0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        version?: string;
-      }) => Promise<T>;
-      /**
-       * ### ZeroConf Device Disconnect
-       *
-       * > Calls the `resetUsers` Spotify Zeroconf API endpoint to issue a call to SpConnectionLogout. The currently logged in user (if any) will be logged out of Spotify Connect, and the device id removed from the active Spotify Connect device list.
-       */
-      zeroconf_device_disconnect: <T = unknown>(service_data?: {
-        /**
-         * ## CPath Identifier
-         *
-         * > Spotify Connect Zeroconf API CPath property value (e.g. '/zc').
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "cpath": "/zc"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        cpath: string;
-        /**
-         * ## Delay
-         *
-         * > Time delay (in seconds) to wait AFTER issuing a command to the device. This delay will give the spotify zeroconf api time to process the change before another command is issued. Default is 0.50; value range is 0 - 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "delay": "0.50"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 0
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        delay?: number;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the ZeroConf service.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Device IP Port
-         *
-         * > Port number at which the Spotify Connect Zeroconf API can be reached on the Spotify Connect device (e.g. 8200).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "host_ip_port": "8200"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 65535
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        host_ip_port: number;
-        /**
-         * ## Device IPV4 Address
-         *
-         * > IPV4 address at which the Spotify Connect Zeroconf API can be reached on the Spotify Connect device (e.g. '192.168.1.81').
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "host_ipv4_address": "192.168.1.81"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        host_ipv4_address: string;
-        /**
-         * ## Use SSL?
-         *
-         * > Spotify Connect Zeroconf API version number that the device supports (e.g. False).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "use_ssl": "False"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        use_ssl?: boolean;
-        /**
-         * ## Version Indicator
-         *
-         * > Spotify Connect Zeroconf API version number that the device supports (e.g. '1.0').
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "version": "1.0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        version?: string;
-      }) => Promise<T>;
-      /**
-       * ### ZeroConf Device GetInformation
-       *
-       * > Calls the `getInfo` Spotify Zeroconf API endpoint to return information about the device.
-       */
-      zeroconf_device_getinfo: <T = unknown>(service_data?: {
-        /**
-         * ## CPath Identifier
-         *
-         * > Spotify Connect Zeroconf API CPath property value (e.g. '/zc').
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "cpath": "/zc"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        cpath: string;
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the ZeroConf service.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Device IP Port
-         *
-         * > Port number at which the Spotify Connect Zeroconf API can be reached on the Spotify Connect device (e.g. 8200).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "host_ip_port": "8200"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 65535
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        host_ip_port: number;
-        /**
-         * ## Device IPV4 Address
-         *
-         * > IPV4 address at which the Spotify Connect Zeroconf API can be reached on the Spotify Connect device (e.g. '192.168.1.81').
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "host_ipv4_address": "192.168.1.81"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        host_ipv4_address: string;
-        /**
-         * ## Use SSL?
-         *
-         * > Spotify Connect Zeroconf API version number that the device supports (e.g. False).
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "use_ssl": "False"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        use_ssl?: boolean;
-        /**
-         * ## Version Indicator
-         *
-         * > Spotify Connect Zeroconf API version number that the device supports (e.g. '1.0').
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "version": "1.0"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        version?: string;
-      }) => Promise<T>;
-      /**
-       * ### ZeroConf Discover Devices
-       *
-       * > Discover Spotify Connect devices on the local network via the ZeroConf (aka MDNS) service, and return details about each device.
-       */
-      zeroconf_discover_devices: <T = unknown>(service_data?: {
-        /**
-         * ## Entity ID
-         *
-         * > Entity ID of the SpotifyPlus device that will make the request to the ZeroConf service.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "entity_id": "media_player.spotifyplus_username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: spotifyplus
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">
-          | PICK_FROM_PLATFORM<"spotifyplus", "media_player">[];
-        /**
-         * ## Timeout
-         *
-         * > Maximum amount of time to wait (in seconds) for the discovery to complete.  Default is 5, range is 1 thru 10.
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "timeout": "5"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 10
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        timeout?: number;
-      }) => Promise<T>;
-    };
     // # MARK: switch
     switch: {
       /**
@@ -27467,6 +7924,36 @@ declare module "@digital-alchemy/hass" {
         }>,
       ) => Promise<void>;
     };
+    // # MARK: synapse
+    synapse: {
+      /**
+       * ### reload
+       *
+       * > Ask synapse application to re-send the entity list. Sent to all connected by default
+       */
+      reload: (service_data?: {
+        /**
+         * ## app
+         *
+         * > The name of the app to target for the reload. If omitted, targets all apps.
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "app": "home_automation"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * >
+         * > ```
+         */
+        app?: unknown;
+      }) => Promise<void>;
+    };
     // # MARK: system_log
     system_log: {
       /**
@@ -27506,8 +7993,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         logger?: string;
@@ -27526,21 +8013,12 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         message: string;
       }) => Promise<void>;
-    };
-    // # MARK: template
-    template: {
-      /**
-       * ### reload
-       *
-       * >
-       */
-      reload: (service_data: EmptyObject) => Promise<void>;
     };
     // # MARK: text
     text: {
@@ -27566,8 +8044,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           value: string;
@@ -27680,9 +8158,8 @@ declare module "@digital-alchemy/hass" {
            * ## Selector
            *
            * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
+           * > duration:
+           * >   allow_negative: true
            * > ```
            */
           duration: string;
@@ -27770,9 +8247,7 @@ declare module "@digital-alchemy/hass" {
            * ## Selector
            *
            * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
+           * > duration: {}
            * > ```
            */
           duration?: string;
@@ -27816,8 +8291,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           description?: string;
@@ -27872,8 +8347,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           item: string;
@@ -27979,8 +8454,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           item: string;
@@ -28023,8 +8498,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           description?: string;
@@ -28079,8 +8554,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           item: string;
@@ -28099,8 +8574,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           rename?: string;
@@ -28134,264 +8609,6 @@ declare module "@digital-alchemy/hass" {
         }>,
       ) => Promise<void>;
     };
-    // # MARK: todoist
-    todoist: {
-      /**
-       * ### new_task
-       *
-       * >
-       */
-      new_task: (service_data?: {
-        /**
-         * ## assignee
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "assignee": "username"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        assignee?: string;
-        /**
-         * ## content
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "content": "Pick up the mail."
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        content: string;
-        /**
-         * ## description
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        description?: string;
-        /**
-         * ## due_date
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "due_date": "2019-10-22"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        due_date?: string;
-        /**
-         * ## due_date_lang
-         */
-        due_date_lang?:
-          | "da"
-          | "de"
-          | "en"
-          | "es"
-          | "fr"
-          | "it"
-          | "ja"
-          | "ko"
-          | "nl"
-          | "pl"
-          | "pt"
-          | "ru"
-          | "sv"
-          | "zh";
-        /**
-         * ## due_date_string
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "due_date_string": "Tomorrow"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        due_date_string?: string;
-        /**
-         * ## labels
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "labels": "Chores,Delivieries"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        labels?: string;
-        /**
-         * ## priority
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 4
-         * >   step: 1
-         * >   mode: slider
-         * > ```
-         */
-        priority?: number;
-        /**
-         * ## project
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "project": "Errands"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > "Inbox"
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        project?: string;
-        /**
-         * ## reminder_date
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "reminder_date": "2019-10-22T10:30:00"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        reminder_date?: string;
-        /**
-         * ## reminder_date_lang
-         */
-        reminder_date_lang?:
-          | "da"
-          | "de"
-          | "en"
-          | "es"
-          | "fr"
-          | "it"
-          | "ja"
-          | "ko"
-          | "nl"
-          | "pl"
-          | "pt"
-          | "ru"
-          | "sv"
-          | "zh";
-        /**
-         * ## reminder_date_string
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "reminder_date_string": "Tomorrow"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        reminder_date_string?: string;
-        /**
-         * ## section
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "section": "Deliveries"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        section?: string;
-      }) => Promise<void>;
-    };
     // # MARK: tts
     tts: {
       /**
@@ -28406,69 +8623,6 @@ declare module "@digital-alchemy/hass" {
        * > Say something using text-to-speech on a media player with cloud.
        */
       cloud_say: (service_data?: {
-        /**
-         * ## cache
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         */
-        cache?: boolean;
-        /**
-         * ## entity_id
-         */
-        entity_id: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
-        /**
-         * ## language
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "language": "ru"
-         * > }
-         * > ```
-         */
-        language?: string;
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "My name is hanna"
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## options
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "options": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        options?: unknown;
-      }) => Promise<void>;
-      /**
-       * ### Say a TTS message with google_translate
-       *
-       * > Say something using text-to-speech on a media player with google_translate.
-       */
-      google_translate_say: (service_data?: {
         /**
          * ## cache
          *
@@ -28564,8 +8718,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           language?: string;
@@ -28578,8 +8732,8 @@ declare module "@digital-alchemy/hass" {
            * > entity:
            * >   domain:
            * >     - media_player
-           * >   multiple: false
            * >   reorder: false
+           * >   multiple: false
            * > ```
            */
           media_player_entity_id: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
@@ -28598,8 +8752,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           message: string;
@@ -28693,8 +8847,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           version?: string;
@@ -28729,318 +8883,6 @@ declare module "@digital-alchemy/hass" {
            * > ```
            */
           entity_id: PICK_ENTITY<"update"> | PICK_ENTITY<"update">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-    };
-    // # MARK: utility_meter
-    utility_meter: {
-      /**
-       * ### calibrate
-       *
-       * >
-       */
-      calibrate: (
-        service_data: {
-          /**
-           * ## value
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "value": "100"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          value: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - sensor
-           * >     integration: utility_meter
-           * > ```
-           */
-          entity_id:
-            | PICK_FROM_PLATFORM<"utility_meter", "sensor">
-            | PICK_FROM_PLATFORM<"utility_meter", "sensor">[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### reset
-       *
-       * >
-       */
-      reset: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - select
-           * >     integration: utility_meter
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-    };
-    // # MARK: vacuum
-    vacuum: {
-      /**
-       * ### clean_spot
-       *
-       * >
-       */
-      clean_spot: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - vacuum
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### locate
-       *
-       * >
-       */
-      locate: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - vacuum
-           * >     supported_features:
-           * >       - 512
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### pause
-       *
-       * >
-       */
-      pause: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - vacuum
-           * >     supported_features:
-           * >       - 4
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### return_to_base
-       *
-       * >
-       */
-      return_to_base: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - vacuum
-           * >     supported_features:
-           * >       - 16
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### send_command
-       *
-       * >
-       */
-      send_command: (
-        service_data?: {
-          /**
-           * ## command
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "command": "set_dnd_timer"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          command: string;
-          /**
-           * ## params
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "params": "{ \"key\": \"value\" }"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > object:
-           * >   multiple: false
-           * > ```
-           */
-          params?: Record<string, unknown> | unknown[];
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - vacuum
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### set_fan_speed
-       *
-       * >
-       */
-      set_fan_speed: (
-        service_data: {
-          /**
-           * ## fan_speed
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "fan_speed": "low"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          fan_speed: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - vacuum
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### start
-       *
-       * >
-       */
-      start: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - vacuum
-           * >     supported_features:
-           * >       - 8192
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### stop
-       *
-       * >
-       */
-      stop: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - vacuum
-           * >     supported_features:
-           * >       - 8
-           * > ```
-           */
-          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -29181,491 +9023,6 @@ declare module "@digital-alchemy/hass" {
         }>,
       ) => Promise<void>;
     };
-    // # MARK: wake_on_lan
-    wake_on_lan: {
-      /**
-       * ### send_magic_packet
-       *
-       * >
-       */
-      send_magic_packet: (service_data?: {
-        /**
-         * ## broadcast_address
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "broadcast_address": "192.168.255.255"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        broadcast_address?: string;
-        /**
-         * ## broadcast_port
-         *
-         * ### Default
-         *
-         * > ```json
-         * > 9
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > number:
-         * >   min: 1
-         * >   max: 65535
-         * >   mode: box
-         * >   step: 1
-         * > ```
-         */
-        broadcast_port?: number;
-        /**
-         * ## mac
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "mac": "aa:bb:cc:dd:ee:ff"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        mac: string;
-      }) => Promise<void>;
-    };
-    // # MARK: watchman
-    watchman: {
-      /**
-       * ### report
-       *
-       * > Run watchman report
-       */
-      report: (service_data?: {
-        /**
-         * ## advanced_options
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * >
-         * > ```
-         */
-        advanced_options?: unknown;
-        /**
-         * ## parse_config
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "parse_config": "true"
-         * > }
-         * > ```
-         *
-         * ### Default
-         *
-         * > ```json
-         * > false
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        parse_config?: boolean;
-      }) => Promise<void>;
-    };
-    // # MARK: water_heater
-    water_heater: {
-      /**
-       * ### set_away_mode
-       *
-       * >
-       */
-      set_away_mode: (
-        service_data: {
-          /**
-           * ## away_mode
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > boolean: {}
-           * > ```
-           */
-          away_mode: boolean;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - water_heater
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### set_operation_mode
-       *
-       * >
-       */
-      set_operation_mode: (
-        service_data: {
-          /**
-           * ## operation_mode
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "operation_mode": "eco"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          operation_mode: string;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - water_heater
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### set_temperature
-       *
-       * >
-       */
-      set_temperature: (
-        service_data?: {
-          /**
-           * ## operation_mode
-           *
-           * ### Example
-           *
-           * > ```json
-           * > {
-           * >   "operation_mode": "eco"
-           * > }
-           * > ```
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > text:
-           * >   multiple: false
-           * >   multiline: false
-           * > ```
-           */
-          operation_mode?: string;
-          /**
-           * ## temperature
-           *
-           * ## Selector
-           *
-           * > ```yaml
-           * > number:
-           * >   min: 0
-           * >   max: 250
-           * >   step: 0.5
-           * >   mode: box
-           * >   unit_of_measurement: °
-           * > ```
-           */
-          temperature: number;
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - water_heater
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### turn_off
-       *
-       * >
-       */
-      turn_off: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - water_heater
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-      /**
-       * ### turn_on
-       *
-       * >
-       */
-      turn_on: (
-        service_data: RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - water_heater
-           * > ```
-           */
-          entity_id: never | never[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<void>;
-    };
-    // # MARK: weather
-    weather: {
-      /**
-       * ### get_forecasts
-       *
-       * >
-       */
-      get_forecasts: <
-        ENTITIES extends PICK_ENTITY<"weather">,
-        T = Record<
-          ENTITIES,
-          {
-            forecast: WeatherGetForecasts[];
-          }
-        >,
-      >(
-        service_data: {
-          /**
-           * ## type
-           */
-          type: "daily" | "hourly" | "twice_daily";
-        } & RequireAtLeastOne<{
-          /**
-           * Assisted definition
-           * > ```yaml
-           * > entity:
-           * >   - domain:
-           * >       - weather
-           * >     supported_features:
-           * >       - 1
-           * >       - 2
-           * >       - 4
-           * > ```
-           */
-          entity_id: ENTITIES | ENTITIES[];
-          device_id: TDeviceId | TDeviceId[];
-          label_id: TLabelId | TLabelId[];
-          area_id: TAreaId | TAreaId[];
-        }>,
-      ) => Promise<T>;
-    };
-    // # MARK: webostv
-    webostv: {
-      /**
-       * ### button
-       *
-       * >
-       */
-      button: (service_data: {
-        /**
-         * ## button
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "button": "LEFT"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        button: string;
-        /**
-         * ## entity_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: webostv
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"webostv", "media_player">
-          | PICK_FROM_PLATFORM<"webostv", "media_player">[];
-      }) => Promise<void>;
-      /**
-       * ### command
-       *
-       * >
-       */
-      command: <T = unknown>(service_data?: {
-        /**
-         * ## command
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "command": "system.launcher/open"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        command: string;
-        /**
-         * ## entity_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: webostv
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"webostv", "media_player">
-          | PICK_FROM_PLATFORM<"webostv", "media_player">[];
-        /**
-         * ## payload
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "payload": "target: https://www.google.com"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object:
-         * >   multiple: false
-         * > ```
-         */
-        payload?: Record<string, unknown> | unknown[];
-      }) => Promise<T>;
-      /**
-       * ### select_sound_output
-       *
-       * >
-       */
-      select_sound_output: <T = unknown>(service_data: {
-        /**
-         * ## entity_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: webostv
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id:
-          | PICK_FROM_PLATFORM<"webostv", "media_player">
-          | PICK_FROM_PLATFORM<"webostv", "media_player">[];
-        /**
-         * ## sound_output
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "sound_output": "external_speaker"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > text:
-         * >   multiple: false
-         * >   multiline: false
-         * > ```
-         */
-        sound_output: string;
-      }) => Promise<T>;
-    };
     // # MARK: zone
     zone: {
       /**
@@ -29746,8 +9103,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         endpoint?: string;
@@ -29788,8 +9145,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         parameter: string;
@@ -29813,6 +9170,49 @@ declare module "@digital-alchemy/hass" {
          */
         value: Record<string, unknown> | unknown[];
       }) => Promise<void>;
+      /**
+       * ### clear_lock_usercode
+       *
+       * >
+       */
+      clear_lock_usercode: (
+        service_data: {
+          /**
+           * ## code_slot
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "code_slot": "1"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          code_slot: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - lock
+           * >     integration: zwave_js
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
       /**
        * ### invoke_cc_api
        *
@@ -29855,8 +9255,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         command_class: string;
@@ -29896,8 +9296,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         endpoint?: string;
@@ -29938,8 +9338,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         method_name: string;
@@ -30023,8 +9423,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         command_class: string;
@@ -30064,8 +9464,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         endpoint?: string;
@@ -30117,8 +9517,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         property: string;
@@ -30137,8 +9537,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         property_key?: string;
@@ -30393,6 +9793,123 @@ declare module "@digital-alchemy/hass" {
         refresh_all_values?: boolean;
       }) => Promise<void>;
       /**
+       * ### reset_meter
+       *
+       * >
+       */
+      reset_meter: (service_data?: {
+        /**
+         * ## area_id
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "area_id": "living_room"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > area:
+         * >   entity:
+         * >     - integration: zwave_js
+         * >       domain:
+         * >         - sensor
+         * >   multiple: true
+         * > ```
+         */
+        area_id?: TAreaId[];
+        /**
+         * ## device_id
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "device_id": "8f4219cfa57e23f6f669c4616c2205e2"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > device:
+         * >   entity:
+         * >     - integration: zwave_js
+         * >       domain:
+         * >         - sensor
+         * >   multiple: true
+         * > ```
+         */
+        device_id?: TDeviceId[];
+        /**
+         * ## entity_id
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "entity_id": "sensor.living_room_temperature"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   filter:
+         * >     - integration: zwave_js
+         * >       domain:
+         * >         - sensor
+         * >   multiple: true
+         * >   reorder: false
+         * > ```
+         */
+        entity_id?: PICK_ENTITY | PICK_ENTITY[];
+        /**
+         * ## meter_type
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "meter_type": "1"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        meter_type?: string;
+        /**
+         * ## value
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "value": "5"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        value?: string;
+      }) => Promise<void>;
+      /**
        * ### set_config_parameter
        *
        * >
@@ -30426,8 +9943,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         bitmask?: string;
@@ -30473,8 +9990,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         endpoint?: string;
@@ -30515,8 +10032,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         parameter: string;
@@ -30535,8 +10052,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         value: string;
@@ -30586,6 +10103,209 @@ declare module "@digital-alchemy/hass" {
         value_size?: number;
       }) => Promise<void>;
       /**
+       * ### set_lock_configuration
+       *
+       * >
+       */
+      set_lock_configuration: (
+        service_data?: {
+          /**
+           * ## auto_relock_time
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "auto_relock_time": "1"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 0
+           * >   max: 65535
+           * >   unit_of_measurement: sec
+           * >   step: 1
+           * >   mode: slider
+           * > ```
+           */
+          auto_relock_time?: number;
+          /**
+           * ## block_to_block
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "block_to_block": "true"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          block_to_block?: boolean;
+          /**
+           * ## hold_and_release_time
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "hold_and_release_time": "1"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 0
+           * >   max: 65535
+           * >   unit_of_measurement: sec
+           * >   step: 1
+           * >   mode: slider
+           * > ```
+           */
+          hold_and_release_time?: number;
+          /**
+           * ## lock_timeout
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "lock_timeout": "1"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 0
+           * >   max: 65535
+           * >   unit_of_measurement: sec
+           * >   step: 1
+           * >   mode: slider
+           * > ```
+           */
+          lock_timeout?: number;
+          /**
+           * ## operation_type
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "operation_type": "timed"
+           * > }
+           * > ```
+           */
+          operation_type: "constant" | "timed";
+          /**
+           * ## twist_assist
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "twist_assist": "true"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          twist_assist?: boolean;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - lock
+           * >     integration: zwave_js
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### set_lock_usercode
+       *
+       * >
+       */
+      set_lock_usercode: (
+        service_data: {
+          /**
+           * ## code_slot
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "code_slot": "1"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          code_slot: string;
+          /**
+           * ## usercode
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "usercode": "1234"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          usercode: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - lock
+           * >     integration: zwave_js
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
        * ### set_value
        *
        * >
@@ -30627,8 +10347,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         command_class: string;
@@ -30668,8 +10388,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         endpoint?: string;
@@ -30721,8 +10441,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         property: string;
@@ -30741,8 +10461,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         property_key?: string;
