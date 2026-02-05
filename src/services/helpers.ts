@@ -13,13 +13,13 @@ export function HelpersService({ hass }: TServiceParams) {
 
   const turnOffAll = async (switches: PICK_ENTITY<"switch" | "light">[]) => {
     await Promise.all(
-      switches.map(hass.refBy.id).map(async (theThing) => await theThing.turn_on()),
+      switches.map(hass.refBy.id).map(async (theThing) => await theThing.turn_off()),
     );
   };
 
   const turnOnAll = async (switches: PICK_ENTITY<"switch" | "light">[]) => {
     await Promise.all(
-      switches.map(hass.refBy.id).map(async (theThing) => await theThing.turn_off()),
+      switches.map(hass.refBy.id).map(async (theThing) => await theThing.turn_on()),
     );
   };
 
