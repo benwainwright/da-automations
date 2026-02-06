@@ -14,7 +14,7 @@
     "format": "oxfmt src/",
     "lint": "oxlint src/",
     "rollback": "./scripts/rollback.sh",
-    "type-writer": "npx type-writer",
+    "type-writer": "type-writer",
     "upgrade": "./scripts/update_deps.sh",
     "prepare": "husky"
   },

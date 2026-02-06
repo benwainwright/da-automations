@@ -12,12 +12,12 @@ declare module "@digital-alchemy/hass" {
       | "light.kitchen_sink"
       | "light.kitchen_oven"
       | "light.kitchen_fridge"
-      | "switch.living_room_motion_sensor"
       | "light.living_room_tv_wall"
       | "light.living_room_lights"
       | "switch.living_room_heaters"
       | "climate.living_room"
-      | "switch.tv_mode"
+      | "switch.blinds_default_closed_2"
+      | "switch.living_room_motion_sensor_2"
       | "sensor.living_room_audio_input_format"
       | "binary_sensor.living_room_microphone"
       | "select.living_room_speech_enhancement"
@@ -123,8 +123,8 @@ declare module "@digital-alchemy/hass" {
       | "media_player.living_room";
     _bedroom:
       | "light.bedroom_lights"
-      | "switch.bedroom_motion_sensor"
       | "climate.bedroom"
+      | "switch.bedroom_motion_sensor"
       | "binary_sensor.bedroom_speaker_microphone"
       | "switch.bedroom_speaker_crossfade"
       | "switch.bedroom_speaker_loudness"
@@ -162,10 +162,10 @@ declare module "@digital-alchemy/hass" {
       | "media_player.bedroom_sonos"
       | "media_player.bedroom";
     _hallway:
-      | "switch.halllway_motion_sensor"
       | "light.hallway_lights"
       | "switch.adaptive_lighting_adapt_brightness_hallway"
       | "climate.hallway"
+      | "switch.halllway_motion_sensor_2"
       | "light.hallway_door"
       | "select.hallway_door_power_on_behavior"
       | "update.hallway_door"
@@ -359,14 +359,15 @@ declare module "@digital-alchemy/hass" {
     _1429a7af2b663b42e9b30c0565c9885c: "update.hacs_update";
     _85bb84fa59bee08be31e2e0120e30bf4: "update.digital_alchemy_synapse_update";
     _f986128d654b7aaeb306c4aee39b1184:
-      | "switch.living_room_motion_sensor"
-      | "switch.halllway_motion_sensor"
-      | "binary_sensor.flat_occupied"
-      | "switch.sleep_mode"
-      | "switch.tv_mode"
+      | "switch.blinds_default_closed_2"
+      | "switch.sleep_mode_2"
+      | "switch.tv_mode_2"
+      | "switch.autoplay_music_2"
+      | "switch.living_room_motion_sensor_2"
+      | "switch.halllway_motion_sensor_2"
       | "switch.bedroom_motion_sensor"
       | "switch.bathroom_motion_sensor"
-      | "switch.blinds_default_closed";
+      | "binary_sensor.flat_occupied";
     _a99b90a33d1c2a2ef4f0c99aa897c922:
       | "light.living_room_floor_lamp_middle"
       | "select.living_room_floor_lamp_middle_power_on_behavior"
@@ -627,6 +628,7 @@ declare module "@digital-alchemy/hass" {
       | "button.192_168_1_120_favorite_current_song"
       | "media_player.192_168_1_120";
     _bd024d63486658b42eb558a8c967bbdf: "button.flat_favorite_current_song" | "media_player.flat";
+    _012d993cf686e22f904c08ff237cb55a: "update.piper_update";
   }
   export interface HassLabelMapping {}
   export interface HassPlatformMapping {
@@ -651,7 +653,8 @@ declare module "@digital-alchemy/hass" {
       | "update.code_runner_update"
       | "update.code_glue_dev_update"
       | "update.hakit_update"
-      | "update.music_assistant_update";
+      | "update.music_assistant_update"
+      | "update.piper_update";
     _backup:
       | "event.backup_automatic_backup"
       | "sensor.backup_backup_manager_state"
@@ -817,14 +820,15 @@ declare module "@digital-alchemy/hass" {
       | "update.scheduler_card_update";
     _synapse:
       | "binary_sensor.bens_flat_online"
-      | "switch.living_room_motion_sensor"
-      | "switch.halllway_motion_sensor"
-      | "binary_sensor.flat_occupied"
-      | "switch.sleep_mode"
-      | "switch.tv_mode"
+      | "switch.blinds_default_closed_2"
+      | "switch.sleep_mode_2"
+      | "switch.tv_mode_2"
+      | "switch.autoplay_music_2"
+      | "switch.living_room_motion_sensor_2"
+      | "switch.halllway_motion_sensor_2"
       | "switch.bedroom_motion_sensor"
       | "switch.bathroom_motion_sensor"
-      | "switch.blinds_default_closed";
+      | "binary_sensor.flat_occupied";
     _mobile_app:
       | "device_tracker.bens_phone"
       | "sensor.bens_phone_battery_level"
@@ -977,6 +981,7 @@ declare module "@digital-alchemy/hass" {
       | "button.flat_favorite_current_song"
       | "media_player.flat";
     _openai_conversation: "ai_task.openai_ai_task" | "conversation.openai_conversation";
+    _wyoming: "tts.piper";
   }
   export interface HassUniqueIdMapping {
     "01KGNB1SM9Q5V950Y0CGGYJ87D-solar_rising": "binary_sensor.sun_solar_rising";
@@ -1198,7 +1203,6 @@ declare module "@digital-alchemy/hass" {
     "758618069": "switch.digital_alchemy_synapse_pre_release";
     "172733314": "switch.hacs_pre_release";
     "532be3cf-5023-49bd-95f4-f3abfc1b0357-online": "binary_sensor.bens_flat_online";
-    "5278507b3f23bb3965487e20b2b05ab05e29e9ade5f772f9640e8c33626e9f2d": "switch.living_room_motion_sensor";
     "0x001788010d30881a_light_zigbee2mqtt": "light.living_room_floor_lamp_middle";
     "0x001788010d30881a_power_on_behavior_zigbee2mqtt": "select.living_room_floor_lamp_middle_power_on_behavior";
     "0x001788010d30881a_effect_zigbee2mqtt": "select.0x001788010d30881a_effect";
@@ -1277,7 +1281,6 @@ declare module "@digital-alchemy/hass" {
     "0x001788010cd84294_illuminance_zigbee2mqtt": "sensor.hallway_illuminance";
     "0x001788010cd84294_linkquality_zigbee2mqtt": "sensor.0x001788010cd84294_linkquality";
     "0x001788010cd84294_update_zigbee2mqtt": "update.hallway";
-    f819e25ade48ac15f1871f121f9185ca592de941af01578454590f6c6ad2daab: "switch.halllway_motion_sensor";
     "3313780416.13-48-0-Motion": "binary_sensor.slim_multi_sensor_pir_temperature_illumination_sensor_state_motion";
     "3313780416.13-48-0-Tamper": "binary_sensor.slim_multi_sensor_pir_temperature_illumination_sensor_state_tamper";
     "3313780416.13-49-0-Air temperature": "sensor.slim_multi_sensor_pir_temperature_illumination_air_temperature";
@@ -1601,11 +1604,6 @@ declare module "@digital-alchemy/hass" {
     "3f718f42_code_runner_version_latest": "sensor.code_runner_newest_version";
     "3f718f42_code_runner_cpu_percent": "sensor.code_runner_cpu_percent";
     "3f718f42_code_runner_memory_percent": "sensor.code_runner_memory_percent";
-    "3142b85c004aafca717a5a0333ad0cd97021284606691915868b3a8df743922e": "binary_sensor.flat_occupied";
-    "54936d7fe35103294d97d663eb99d674033a8c67381f29210dc9d690859bcb73": "switch.sleep_mode";
-    a496c115601f5887597008685412612902ca4e990b77e7d05ac6f0e4644e122e: "switch.tv_mode";
-    e73759f16d64b3d053ae8b7fc68da00fef9abb1eaa53ea20ce908a315b3e62c0: "switch.bedroom_motion_sensor";
-    "8d0bbb5de01392130686049f513cd51d0eb5784ebca184a9cc8d3fe5bef6b208": "switch.bathroom_motion_sensor";
     "hallway-thermostat": "climate.hallway";
     "bedroom-thermostat": "climate.bedroom";
     "3494546B71AD-cloud": "binary_sensor.shellycolorbulb_3494546b71ad_cloud";
@@ -1657,11 +1655,25 @@ declare module "@digital-alchemy/hass" {
     "ma_companion_5fc8cae1-3ee9-48d8-977a-66e4f17e0c0f_favorite_now_playing": "button.192_168_1_120_favorite_current_song";
     "ma_companion_5fc8cae1-3ee9-48d8-977a-66e4f17e0c0f": "media_player.192_168_1_120";
     "A0DD6C2B3A6C-switch:0": "switch.hallway_heater";
-    dcc511d0cbab59f47daec4573e61b3be00d5baebee27b9387a05423b5f8cdf47: "switch.blinds_default_closed";
     RINCON_C4387512E6C501400: "media_player.living_room_sonos";
     RINCON_48A6B8D11B5601400: "media_player.bedroom_sonos";
     syncgroup_onoznqnd_favorite_now_playing: "button.flat_favorite_current_song";
     syncgroup_onoznqnd: "media_player.flat";
+    d6a8678cffe6a7c6da25005e0bf591e6a1b178bc55bb2c2a21da827fcb25fb9e: "switch.blinds_default_closed_2";
+    b3e8ac02b9049c19e31a235e2b9f76eeb796b1b7538b0c9a4efa2ada53ef9928: "switch.sleep_mode_2";
+    d36d44e78d8ddc735d0eac875805faf3d19133c02aff60ad4463a5d768055b15: "switch.tv_mode_2";
+    "759325e96cd4ab9666acd234c967d6ee10f4be12ba604c0889046aafe3042ac1": "switch.autoplay_music_2";
+    e7ae0357dd9cb3d4c735a6194c81e6429148ddf6464e8a570a02254afbbde494: "switch.living_room_motion_sensor_2";
+    c50bc6a5c07c24daeb8f868319ee3a002171167a6bd940d10c78ebb270ea70eb: "switch.halllway_motion_sensor_2";
+    "85784855f9a8b4c3c412b71e5cefc8957dcc33136dacf75fb1c69821903b7084": "switch.bedroom_motion_sensor";
+    "9af714690c95733543e122ff124ad35b801c731468b1faea15e6af639b2c6207": "switch.bathroom_motion_sensor";
+    "01KGSVRH1C4W71KKZYMTZBT2HP-tts": "tts.piper";
+    core_piper_state: "binary_sensor.piper_running";
+    core_piper_version: "sensor.piper_version";
+    core_piper_version_latest: "sensor.piper_newest_version";
+    core_piper_cpu_percent: "sensor.piper_cpu_percent";
+    core_piper_memory_percent: "sensor.piper_memory_percent";
+    d18aa064f3676985648dd083ac659928fa8441a60df6c1e605487ebb75685d0a: "binary_sensor.flat_occupied";
   }
   export interface HassZoneMapping {}
   export interface HassFloorMapping {}
@@ -1707,14 +1719,15 @@ declare module "@digital-alchemy/hass" {
       | "switch.hallway_led_indication"
       | "switch.bedroom_sensor_led_indication"
       | "switch.bathroom_sensor_led_indication"
-      | "switch.living_room_motion_sensor"
-      | "switch.halllway_motion_sensor"
-      | "switch.sleep_mode"
-      | "switch.tv_mode"
-      | "switch.bedroom_motion_sensor"
-      | "switch.bathroom_motion_sensor"
       | "switch.hallway_heater"
-      | "switch.blinds_default_closed";
+      | "switch.blinds_default_closed_2"
+      | "switch.sleep_mode_2"
+      | "switch.tv_mode_2"
+      | "switch.autoplay_music_2"
+      | "switch.living_room_motion_sensor_2"
+      | "switch.halllway_motion_sensor_2"
+      | "switch.bedroom_motion_sensor"
+      | "switch.bathroom_motion_sensor";
     update:
       | "update.home_assistant_supervisor_update"
       | "update.home_assistant_core_update"
@@ -1765,7 +1778,8 @@ declare module "@digital-alchemy/hass" {
       | "update.hallway"
       | "update.living_room_tv_wall"
       | "update.bedroom_sensor"
-      | "update.bathroom_sensor";
+      | "update.bathroom_sensor"
+      | "update.piper_update";
     conversation: "conversation.home_assistant" | "conversation.openai_conversation";
     event: "event.backup_automatic_backup";
     sensor:
@@ -1904,7 +1918,7 @@ declare module "@digital-alchemy/hass" {
       | "binary_sensor.bathroom_occupancy"
       | "binary_sensor.flat_occupied";
     stt: "stt.home_assistant_cloud";
-    tts: "tts.home_assistant_cloud" | "tts.google_translate_en_com";
+    tts: "tts.home_assistant_cloud" | "tts.google_translate_en_com" | "tts.piper";
     light:
       | "light.living_room_lights"
       | "light.bedroom_lights"

@@ -11,6 +11,7 @@ export const InstalledAddons = {
   "Matter Server": "core_matter_server",
   "Mosquitto broker": "core_mosquitto",
   "Music Assistant": "d5369777_music_assistant",
+  Piper: "core_piper",
   "Studio Code Server": "a0d7b954_vscode",
   "Z-Wave JS": "core_zwave_js",
   Zigbee2MQTT: "45df7312_zigbee2mqtt",
@@ -1289,6 +1290,324 @@ declare module "@digital-alchemy/hass" {
            * >       - alarm_control_panel
            * >     supported_features:
            * >       - 8
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
+    // # MARK: assist_satellite
+    assist_satellite: {
+      /**
+       * ### announce
+       *
+       * >
+       */
+      announce: (
+        service_data?: {
+          /**
+           * ## media_id
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > media:
+           * >   accept:
+           * >     - audio/*
+           * >   multiple: false
+           * > ```
+           */
+          media_id?: string;
+          /**
+           * ## message
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "message": "Time to wake up!"
+           * > }
+           * > ```
+           *
+           * ### Default
+           *
+           * > ```json
+           * > ""
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          message?: string;
+          /**
+           * ## preannounce
+           *
+           * ### Default
+           *
+           * > ```json
+           * > true
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          preannounce?: boolean;
+          /**
+           * ## preannounce_media_id
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > media:
+           * >   accept:
+           * >     - audio/*
+           * >   multiple: false
+           * > ```
+           */
+          preannounce_media_id?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - assist_satellite
+           * >     supported_features:
+           * >       - 1
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### ask_question
+       *
+       * >
+       */
+      ask_question: <T = unknown>(service_data?: {
+        /**
+         * ## answers
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   label_field: sentences
+         * >   description_field: id
+         * >   multiple: true
+         * >   translation_key: answers
+         * >   fields:
+         * >     id:
+         * >       required: true
+         * >       selector:
+         * >         text:
+         * >           multiline: false
+         * >           multiple: false
+         * >     sentences:
+         * >       required: true
+         * >       selector:
+         * >         text:
+         * >           multiple: true
+         * >           multiline: false
+         * > ```
+         */
+        answers?: Record<string, unknown> | unknown[];
+        /**
+         * ## entity_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   filter:
+         * >     - domain:
+         * >         - assist_satellite
+         * >       supported_features:
+         * >         - 2
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id: PICK_ENTITY | PICK_ENTITY[];
+        /**
+         * ## preannounce
+         *
+         * ### Default
+         *
+         * > ```json
+         * > true
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        preannounce?: boolean;
+        /**
+         * ## preannounce_media_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > media:
+         * >   accept:
+         * >     - audio/*
+         * >   multiple: false
+         * > ```
+         */
+        preannounce_media_id?: string;
+        /**
+         * ## question
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "question": "What kind of music would you like to play?"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > ""
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        question?: string;
+        /**
+         * ## question_media_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > media:
+         * >   accept:
+         * >     - audio/*
+         * >   multiple: false
+         * > ```
+         */
+        question_media_id?: string;
+      }) => Promise<T>;
+      /**
+       * ### start_conversation
+       *
+       * >
+       */
+      start_conversation: (
+        service_data?: {
+          /**
+           * ## extra_system_prompt
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          extra_system_prompt?: string;
+          /**
+           * ## preannounce
+           *
+           * ### Default
+           *
+           * > ```json
+           * > true
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          preannounce?: boolean;
+          /**
+           * ## preannounce_media_id
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > media:
+           * >   accept:
+           * >     - audio/*
+           * >   multiple: false
+           * > ```
+           */
+          preannounce_media_id?: string;
+          /**
+           * ## start_media_id
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > media:
+           * >   accept:
+           * >     - audio/*
+           * >   multiple: false
+           * > ```
+           */
+          start_media_id?: string;
+          /**
+           * ## start_message
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "start_message": "You left the lights on in the living room. Turn them off?"
+           * > }
+           * > ```
+           *
+           * ### Default
+           *
+           * > ```json
+           * > ""
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          start_message?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - assist_satellite
+           * >     supported_features:
+           * >       - 2
            * > ```
            */
           entity_id: never | never[];
@@ -4235,7 +4554,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGQJYD31F0M99SWDVT2JW5PS"
           | "01KGQNW1RQ05GTVV2A0X562VBR"
           | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
-          | "01KGQX5ESRK2J8G1MFYXQ9M68B";
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B"
+          | "01KGSVRH1C4W71KKZYMTZBT2HP";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -6752,7 +7072,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGQJYD31F0M99SWDVT2JW5PS"
           | "01KGQNW1RQ05GTVV2A0X562VBR"
           | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
-          | "01KGQX5ESRK2J8G1MFYXQ9M68B";
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B"
+          | "01KGSVRH1C4W71KKZYMTZBT2HP";
         /**
          * ## favorite
          *
@@ -7248,7 +7569,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGQJYD31F0M99SWDVT2JW5PS"
           | "01KGQNW1RQ05GTVV2A0X562VBR"
           | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
-          | "01KGQX5ESRK2J8G1MFYXQ9M68B";
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B"
+          | "01KGSVRH1C4W71KKZYMTZBT2HP";
         /**
          * ## library_only
          *
@@ -7891,7 +8213,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGQJYD31F0M99SWDVT2JW5PS"
           | "01KGQNW1RQ05GTVV2A0X562VBR"
           | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
-          | "01KGQX5ESRK2J8G1MFYXQ9M68B";
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B"
+          | "01KGSVRH1C4W71KKZYMTZBT2HP";
         /**
          * ## filenames
          *
@@ -7991,7 +8314,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGQJYD31F0M99SWDVT2JW5PS"
           | "01KGQNW1RQ05GTVV2A0X562VBR"
           | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
-          | "01KGQX5ESRK2J8G1MFYXQ9M68B";
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B"
+          | "01KGSVRH1C4W71KKZYMTZBT2HP";
         /**
          * ## prompt
          *
