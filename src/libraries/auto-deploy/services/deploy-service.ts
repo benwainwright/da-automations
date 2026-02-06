@@ -34,6 +34,8 @@ export function DeployService({ config, hass, logger }: TServiceParams) {
     logger.info(`Repo cloned. Installing dependencies`);
 
     await execa(`bun`, [`install`], { cwd: `${clonePath}/` });
+
+    logger.info(`Deploying code...`);
     await execa(`bun`, [`run`, `build`], { cwd: `${clonePath}/` });
 
     logger.info(`Deploy complete`);
