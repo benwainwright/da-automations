@@ -1,4 +1,5 @@
 import { TServiceParams } from "@digital-alchemy/core";
+import { execa } from "execa";
 
 export function MonitorService({
   config,
@@ -14,7 +15,8 @@ export function MonitorService({
         if (data.ref === "refs/heads/main") {
           logger.info(`Someone pushed to main. Deploying the latest version`);
           await deploy.deploy();
-          await deploy.restart();
+          logger.info(`Code deployed exiting so that I restart. See you soon!`);
+          await execa`kill 1`;
         }
       },
     });
