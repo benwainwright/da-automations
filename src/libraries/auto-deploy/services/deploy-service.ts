@@ -7,19 +7,26 @@ import http from "isomorphic-git/http/node";
 
 export function DeployService({ config, hass, logger }: TServiceParams) {
   const restartAddon = async () => {
-    await hass.fetch.fetch({
-      headers: {
-        Authorization: `Bearer ${process.env["SUPERVISOR_TOKEN"]}`,
-        "Content-Type": "Application/json",
+    const headers = new Headers();
+    headers.set("Authorization", `Bearer ${process.env["SUPERVISOR_TOKEN"]}`);
+    headers.set("Content-Type", "Application/json");
+
+    const result = await fetch(
+      `http://supervisor/addons/${config.auto_deploy.ADDON_SLUG}/restart"`,
+      {
+        headers,
+        method: "post",
       },
-      method: "post",
-      baseUrl: `http://supervisor`,
-      url: `/addons/${config.auto_deploy.ADDON_SLUG}/restart"`,
-    });
+    );
+
+    if (!result.ok) {
+      throw new Error(await result.text());
+    }
   };
 
   const deploy = async () => {
     logger.info(`Starting code deploy!`);
+    hass.diagnostics.fetch;
 
     const CLONE_FOLDER_NAME = "cloned-repo";
 
