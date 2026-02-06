@@ -20,45 +20,19 @@
     "oxfmt": {
       "initialization_options": {
         "settings": {
-          "configPath": null,
+          "configPath": ".oxfmtrc.json",
           "run": "onSave"
         }
       }
     }
   },
   "languages": {
-    "CSS": {
-      "format_on_save": "on",
-      "prettier": {
-        "allowed": false
-      },
-      "formatter": [
-        {
-          "language_server": {
-            "name": "oxfmt"
-          }
-        }
-      ]
-    },
-    "HTML": {
-      "format_on_save": "on",
-      "prettier": {
-        "allowed": false
-      },
-      "formatter": [
-        {
-          "language_server": {
-            "name": "oxfmt"
-          }
-        }
-      ]
-    },
     "JavaScript": {
       "format_on_save": "on",
       "prettier": {
         "allowed": false
       },
-      "language_servers": ["vtsls", "!eslint"],
+      "language_servers": ["vtsls", "oxfmt", "oxllint", "!eslint"],
       "formatter": [
         {
           "language_server": {
@@ -88,6 +62,7 @@
       "prettier": {
         "allowed": false
       },
+      "language_servers": ["vtsls", "oxfmt", "oxlint", "!eslint"],
       "formatter": [
         {
           "language_server": {
@@ -114,21 +89,7 @@
       "prettier": {
         "allowed": false
       },
-      "language_servers": ["vtsls", "!eslint"],
-      "formatter": [
-        {
-          "language_server": {
-            "name": "oxfmt"
-          }
-        }
-      ]
-    },
-    "TSX": {
-      "language_servers": ["vtsls", "!eslint"],
-      "format_on_save": "on",
-      "prettier": {
-        "allowed": false
-      },
+      "language_servers": ["vtsls", "oxfmt", "oxlint", "!eslint"],
       "formatter": [
         {
           "language_server": {

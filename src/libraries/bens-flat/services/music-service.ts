@@ -71,6 +71,7 @@ export function MusicService({
   };
 
   motion.anywhere(async () => {
+    logger.trace(`Motion detected in flat`);
     const wholeFlatPlayer = hass.refBy.id("media_player.flat");
 
     if (

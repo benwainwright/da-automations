@@ -12,12 +12,13 @@ import {
   PresenceDetectionService,
   SleepModeService,
   TVModeService,
-} from "@services";
+} from "./services/index.ts";
 
-export const BENS_FLAT = CreateLibrary({
+export const LIB_BENS_FLAT = CreateLibrary({
   depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION],
   name: "bens_flat",
   priorityInit: ["motion", "blinds", "helpers", "lights", "sleepMode", "tvMode"],
+
   services: {
     music: MusicService,
     motion: MotionService,
@@ -33,6 +34,6 @@ export const BENS_FLAT = CreateLibrary({
 
 declare module "@digital-alchemy/core" {
   export interface LoadedModules {
-    bens_flat: typeof BENS_FLAT;
+    bens_flat: typeof LIB_BENS_FLAT;
   }
 }

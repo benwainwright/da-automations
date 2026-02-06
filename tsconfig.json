@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@services": ["./src/services/index.ts"],
-      "@test-helpers": ["./src/test-helpers/index.ts"],
-      "@libraries": ["./src/libraries/index.ts"]
+      "@libraries": ["./src/libraries/index.ts"],
+      "@test-helpers": ["./src/test-helpers/index.ts"]
     },
     "allowJs": false,
     "alwaysStrict": false,
