@@ -7,6 +7,7 @@ import http from "isomorphic-git/http/node";
 
 export function DeployService({ config, hass, logger }: TServiceParams) {
   const restartAddon = async () => {
+    logger.info(`Restarting addon`);
     const headers = new Headers();
     headers.set("Authorization", `Bearer ${process.env["SUPERVISOR_TOKEN"]}`);
     headers.set("Content-Type", "Application/json");
