@@ -6,25 +6,6 @@ import fs from "fs";
 import http from "isomorphic-git/http/node";
 
 export function DeployService({ config, hass, logger }: TServiceParams) {
-  const restartAddon = async () => {
-    logger.info(`Restarting addon`);
-    const headers = new Headers();
-    headers.set("Authorization", `Bearer ${process.env["SUPERVISOR_TOKEN"]}`);
-    headers.set("Content-Type", "Application/json");
-
-    const result = await fetch(
-      `http://supervisor/addons/${config.auto_deploy.ADDON_SLUG}/restart"`,
-      {
-        headers,
-        method: "post",
-      },
-    );
-
-    if (!result.ok) {
-      throw new Error(await result.text());
-    }
-  };
-
   const deploy = async () => {
     logger.info(`Starting code deploy!`);
     hass.diagnostics.fetch;
@@ -47,5 +28,5 @@ export function DeployService({ config, hass, logger }: TServiceParams) {
     logger.info(`Deploy complete`);
   };
 
-  return { deploy, restartAddon };
+  return { deploy };
 }
