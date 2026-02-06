@@ -1,6 +1,9 @@
 export { HelpersService } from "./helpers.ts";
 export { CoreModule } from "./core.ts";
-export { LightsService as CreateMotionLightService } from "./lights-service.ts";
+export { LightsService } from "./lights-service.ts";
+export { PresenceDetectionService } from "./presence-detection-service.ts";
+export { MotionService } from "./motion-service.ts";
+export { MusicService } from "./music-service.ts";
 export { SleepModeService } from "./sleep-mode-service.ts";
 export { TVModeService } from "./tv-mode-service.ts";
 export { BlindsService } from "./blinds-service.ts";

@@ -1,6 +1,6 @@
-import { HOME_AUTOMATION } from "./app.module.ts";
+import { APP } from "./app.module.ts";
 
-void HOME_AUTOMATION.bootstrap({
+void APP.bootstrap({
   bootLibrariesFirst: false,
   configuration: {
     boilerplate: {

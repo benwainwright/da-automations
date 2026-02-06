@@ -4,4 +4,5 @@ deploy
 previous_deploy.tar.gz
 .yarn/install-state.gz
 .env
+fixtures.json
 synapse_storage.db
