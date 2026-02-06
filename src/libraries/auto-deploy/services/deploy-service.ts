@@ -10,14 +10,16 @@ export function DeployService({ config, hass, logger }: TServiceParams) {
     await hass.fetch.fetch({
       headers: {
         Authorization: `Bearer ${process.env["SUPERVISOR_TOKEN"]}`,
+        "Content-Type": "Application/json",
       },
       method: "post",
+      baseUrl: `http://supervisor`,
       url: `/addons/${config.auto_deploy.ADDON_SLUG}/restart"`,
     });
   };
 
   const deploy = async () => {
-    logger.info(`Starting deploy`);
+    logger.info(`Starting code deploy`);
 
     const CLONE_FOLDER_NAME = "cloned-repo";
 
@@ -28,19 +30,14 @@ export function DeployService({ config, hass, logger }: TServiceParams) {
     const clonePath = join(process.cwd(), CLONE_FOLDER_NAME);
 
     await execa("rm", [`-rf`, clonePath]);
-
     await git.clone({ fs, http, dir: clonePath, url: repo });
-
     logger.info(`Repo cloned. Installing dependencies`);
-
     await execa(`bun`, [`install`], { cwd: `${clonePath}/` });
-
     logger.info(`Deploying code...`);
     await execa(`bun`, [`run`, `build`], { cwd: `${clonePath}/` });
 
     logger.info(`Deploy complete`);
-    await restartAddon();
   };
 
-  return { deploy };
+  return { deploy, restartAddon };
 }

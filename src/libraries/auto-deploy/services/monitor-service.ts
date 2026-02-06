@@ -12,8 +12,9 @@ export function MonitorService({
       repo: config.auto_deploy.GITHUB_REPO,
       callback: async (data) => {
         if (data.ref === "refs/heads/main") {
-          logger.info(`Someone pushed to main. Getting the latest version`);
+          logger.info(`Someone pushed to main. Deploying the latest version`);
           await deploy.deploy();
+          await deploy.restartAddon();
         }
       },
     });

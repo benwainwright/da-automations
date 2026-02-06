@@ -65,5 +65,5 @@ export function WebhookService({ hass, logger }: TServiceParams) {
     });
   };
 
-  return { webhook: register };
+  return { register };
 }

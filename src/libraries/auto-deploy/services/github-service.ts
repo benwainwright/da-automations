@@ -14,7 +14,7 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
   const monitorRepo = async ({ repo, owner, callback }: MonitorRepoConfig) => {
     const webhookId = v7();
 
-    await auto_deploy.webhook.webhook({
+    await auto_deploy.webhook.register({
       allowedMethods: ["POST"],
       localOnly: false,
       webhookId,
