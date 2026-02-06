@@ -54,6 +54,7 @@ export function LightsService({
   }: IMotionSwitchConfig) => {
     const theSwitch = synapse.switch({
       name: switchName,
+      unique_id: switchName.replace(/[^a-zA-Z0-9]/gi, ""),
       attributes: {
         area,
       },

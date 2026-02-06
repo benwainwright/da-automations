@@ -29,6 +29,8 @@ export function MusicService({
   const autoplaySwitch = synapse.switch({
     name: "Autoplay Music",
     icon: "mdi:music",
+    unique_id: "autoplay_music_switch",
+    suggested_object_id: "autoplay_music",
     context,
   });
 

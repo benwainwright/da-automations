@@ -14,6 +14,8 @@ export function SleepModeService({
     name: "Sleep Mode",
     context,
     icon: "mdi:sleep",
+    unique_id: "sleep_mode_switch",
+    suggested_object_id: "sleep_mode",
   });
 
   hass.socket.onEvent({
@@ -48,7 +50,7 @@ export function SleepModeService({
   });
 
   const isOn = () => {
-    const sleepModeState = sleepMode.is_on;
+    const sleepModeState = Boolean(sleepMode.is_on);
     logger.info(`Checking sleep mode is on: ${sleepModeState}`);
     return sleepModeState;
   };

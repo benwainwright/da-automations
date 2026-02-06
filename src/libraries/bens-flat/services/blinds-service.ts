@@ -12,6 +12,8 @@ export function BlindsService({
   const { motion } = bens_flat;
   const blindsDefaultClosed = synapse.switch({
     name: "Blinds default closed",
+    unique_id: "blinds_default_closed_switch",
+    suggested_object_id: "blinds_default_closed",
     context,
   });
 

@@ -4,6 +4,8 @@ export function TVModeService({ hass, synapse, context, logger }: TServiceParams
   const tvMode = synapse.switch({
     name: "TV Mode",
     context,
+    unique_id: "tv_mode_switch",
+    suggested_object_id: "tv_mode",
     icon: "mdi:television",
   });
 
@@ -45,7 +47,7 @@ export function TVModeService({ hass, synapse, context, logger }: TServiceParams
   });
 
   const isOn = () => {
-    const tvModeState = tvMode.is_on;
+    const tvModeState = Boolean(tvMode.is_on);
     logger.info(`Checking tv mode is on: ${tvModeState}`);
     return tvModeState;
   };

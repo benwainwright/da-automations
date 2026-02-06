@@ -11,6 +11,8 @@ export function PresenceDetectionService({
 
   const flatIsOccupied = synapse.binary_sensor({
     name: "Flat Occupied",
+    unique_id: "flat_occupied_switch",
+    suggested_object_id: "flat_occupied",
     context,
   });
 
