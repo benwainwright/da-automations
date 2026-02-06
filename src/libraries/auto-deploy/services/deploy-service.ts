@@ -19,7 +19,7 @@ export function DeployService({ config, hass, logger }: TServiceParams) {
   };
 
   const deploy = async () => {
-    logger.info(`Starting code deploy`);
+    logger.info(`Starting code deploy!`);
 
     const CLONE_FOLDER_NAME = "cloned-repo";
 
