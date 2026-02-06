@@ -1,6 +1,6 @@
 import { TServiceParams } from "@digital-alchemy/core";
-import { join } from "node:path/win32";
 import { execa } from "execa";
+import { join } from "path";
 import { simpleGit } from "simple-git";
 
 export function DeployService({ config, hass, logger }: TServiceParams) {
