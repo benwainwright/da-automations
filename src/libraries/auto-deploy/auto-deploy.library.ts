@@ -2,6 +2,7 @@ import { CreateLibrary } from "@digital-alchemy/core";
 import { WebhookService } from "./services/webhook-service.ts";
 import { MonitorService } from "./services/monitor-service.ts";
 import { GithubService } from "./services/github-service.ts";
+import { DeployService } from "./services/deploy-service.ts";
 
 export const LIB_AUTO_DEPLOY = CreateLibrary({
   depends: [],
@@ -29,7 +30,12 @@ export const LIB_AUTO_DEPLOY = CreateLibrary({
       description: "The slug of the addon you need to restart after deploy",
     },
   },
-  services: { webhook: WebhookService, monitor: MonitorService, github: GithubService },
+  services: {
+    webhook: WebhookService,
+    monitor: MonitorService,
+    github: GithubService,
+    deploy: DeployService,
+  },
 });
 
 declare module "@digital-alchemy/core" {

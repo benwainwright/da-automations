@@ -3,7 +3,7 @@ import { join } from "node:path/win32";
 import { execa } from "execa";
 import { simpleGit } from "simple-git";
 
-export function DeployService({ config, hass }: TServiceParams) {
+export function DeployService({ config, hass, logger }: TServiceParams) {
   const restartAddon = async () => {
     await hass.fetch.fetch({
       headers: {
@@ -15,15 +15,25 @@ export function DeployService({ config, hass }: TServiceParams) {
   };
 
   const deploy = async () => {
+    logger.info(`Starting deploy`);
     const git = simpleGit();
 
-    const CLONE_PATH = "cloned-repo";
+    const CLONE_FOLDER_NAME = "cloned-repo";
 
-    git.clone(config.auto_deploy.GITHUB_REPO, [CLONE_PATH]);
+    const repo = `https://github.com/${config.auto_deploy.GITHUB_REPO_OWNER}/${config.auto_deploy.GITHUB_REPO}`;
 
-    process.chdir(join(process.cwd(), CLONE_PATH));
-    await execa`bun install;`;
-    await execa`bun run build`;
+    logger.info(`Clearing previous`);
+
+    const clonePath = join(process.cwd(), CLONE_FOLDER_NAME);
+
+    await execa(`rm -rf ${clonePath}`);
+
+    git.clone(repo, [CLONE_FOLDER_NAME]);
+    logger.info(`Repo cloned`);
+
+    await execa(`bun install;`, { cwd: clonePath });
+    await execa(`bun run build`, { cwd: clonePath });
+
     await restartAddon();
   };
 
