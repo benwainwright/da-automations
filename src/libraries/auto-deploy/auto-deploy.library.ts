@@ -29,11 +29,6 @@ export const LIB_AUTO_DEPLOY = CreateLibrary({
       required: true,
       description: "A personal access token that can be used to create a repository webhook",
     },
-    ADDON_SLUG: {
-      type: "string",
-      required: true,
-      description: "The slug of the addon you need to restart after deploy",
-    },
   },
   services: {
     webhook: WebhookService,
