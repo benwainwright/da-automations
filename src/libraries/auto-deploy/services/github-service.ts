@@ -30,6 +30,7 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
     const instance = config.auto_deploy.EXTERNAL_URL;
 
     const url = `${instance}/api/webhook/${webhookId}`;
+    logger.info(`Creating repository webhook for ${url}`);
 
     await github.rest.repos.createWebhook({
       repo,
