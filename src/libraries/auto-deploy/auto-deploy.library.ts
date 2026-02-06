@@ -11,7 +11,7 @@ export const LIB_AUTO_DEPLOY = CreateLibrary({
   configuration: {
     EXTERNAL_URL: {
       type: "string",
-      description: "The external URL of your HA instance",
+      description: "The external URL of your Home Assistant instance",
     },
     GITHUB_REPO: {
       type: "string",
