@@ -1,5 +1,5 @@
 import type { TServiceParams, TOffset } from "@digital-alchemy/core";
-import type { PICK_ENTITY, TAreaId } from "@digital-alchemy/hass";
+import type { PICK_ENTITY, RemoveCallback, TAreaId } from "@digital-alchemy/hass";
 
 interface IMotionSwitchConfig {
   /**
@@ -60,6 +60,8 @@ export function LightsService({
       context,
     });
 
+    let remove: RemoveCallback | undefined;
+
     const theSensor = hass.refBy.id(sensorId);
 
     theSensor.onUpdate(async (newState) => {
@@ -73,9 +75,10 @@ export function LightsService({
 
       if (newState.state === "on" && theSwitch.is_on && !anyBlockSwitchIsOn) {
         logger.info(`Turning ${area} lights on`);
+        remove?.remove();
         await hass.call.light.turn_on({ area_id: area });
-        scheduler.setTimeout(async () => {
-          logger.info(`Turning ${area} lights on`);
+        remove = scheduler.setTimeout(async () => {
+          logger.info(`Turning ${area} lights off`);
           await hass.call.light.turn_off({ area_id: area });
         }, timeout);
       }

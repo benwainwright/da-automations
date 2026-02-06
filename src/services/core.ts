@@ -8,7 +8,7 @@ export function CoreModule({ bens_flat, hass, lifecycle }: TServiceParams) {
       area: "living_room",
       sensorId: "binary_sensor.living_room_occupancy",
       blockSwitches: [tvMode.tvModeSwitch.entity_id],
-      timeout: "10m",
+      timeout: "30m",
     });
 
     lights.setupMotionTrigger({
