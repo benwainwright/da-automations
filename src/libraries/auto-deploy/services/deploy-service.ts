@@ -1,7 +1,9 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { execa } from "execa";
 import { join } from "path";
-import { simpleGit } from "simple-git";
+import git from "isomorphic-git";
+import fs from "fs";
+import http from "isomorphic-git/http/node";
 
 export function DeployService({ config, hass, logger }: TServiceParams) {
   const restartAddon = async () => {
@@ -16,7 +18,6 @@ export function DeployService({ config, hass, logger }: TServiceParams) {
 
   const deploy = async () => {
     logger.info(`Starting deploy`);
-    const git = simpleGit();
 
     const CLONE_FOLDER_NAME = "cloned-repo";
 
@@ -28,7 +29,8 @@ export function DeployService({ config, hass, logger }: TServiceParams) {
 
     await execa("rm", [`-rf`, clonePath]);
 
-    await git.clone(repo, CLONE_FOLDER_NAME);
+    await git.clone({ fs, http, dir: clonePath, url: repo });
+
     logger.info(`Repo cloned. Installing dependencies`);
 
     await execa(`bun`, [`install`], { cwd: `${clonePath}/` });
