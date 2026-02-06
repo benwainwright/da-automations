@@ -26,13 +26,13 @@ export function DeployService({ config, hass, logger }: TServiceParams) {
 
     const clonePath = join(process.cwd(), CLONE_FOLDER_NAME);
 
-    await execa(`rm -rf ${clonePath}`);
+    await execa("rm", [`-rf`, clonePath]);
 
     git.clone(repo, [CLONE_FOLDER_NAME]);
     logger.info(`Repo cloned. Installing dependencies`);
 
-    await execa(`bun install;`, { cwd: clonePath });
-    await execa(`bun run build`, { cwd: clonePath });
+    await execa(`bun`[`install`], { cwd: clonePath });
+    await execa(`bun`, [`run`, `build`], { cwd: clonePath });
 
     logger.info(`Deploy complete`);
     await restartAddon();
