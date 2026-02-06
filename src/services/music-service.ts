@@ -68,7 +68,7 @@ export function MusicService({ hass, bens_flat, synapse, context, logger }: TSer
       wholeFlatPlayer.state !== "playing" &&
       autoplaySwitch.is_on
     ) {
-      logger.info(`Autoplay is on playing some background music`);
+      logger.info(`Autoplay is on, playing some background music`);
       await playRandomFavouritePlaylist();
     }
   });
