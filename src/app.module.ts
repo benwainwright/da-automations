@@ -11,8 +11,8 @@ import { LightsService } from "./services/lights-service.ts";
 import { SleepModeService } from "./services/sleep-mode-service.ts";
 import { CoreModule } from "./services/core.ts";
 import { HelpersService } from "./services/helpers.ts";
-import { BlindsService } from "@services";
 import { MotionService } from "./services/motion-service.ts";
+import { BlindsService } from "./services/blinds-service.ts";
 
 const HOME_AUTOMATION = CreateApplication({
   configuration: {},
