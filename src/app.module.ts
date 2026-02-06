@@ -21,7 +21,7 @@ const HOME_AUTOMATION = CreateApplication({
   name: "bens_flat",
   priorityInit: ["motion", "blinds", "helpers", "lights", "sleepMode", "tvMode"],
   services: {
-    MusicService: MusicService,
+    music: MusicService,
     motion: MotionService,
     blinds: BlindsService,
     tvMode: TVModeService,

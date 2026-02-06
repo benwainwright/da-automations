@@ -16,7 +16,14 @@ interface PlayConfig {
   volume?: number;
 }
 
-export function MusicService({ hass, bens_flat, synapse, context, logger }: TServiceParams) {
+export function MusicService({
+  hass,
+  bens_flat,
+  synapse,
+  context,
+  logger,
+  lifecycle,
+}: TServiceParams) {
   const { tvMode, sleepMode, motion } = bens_flat;
 
   const autoplaySwitch = synapse.switch({
@@ -59,6 +66,10 @@ export function MusicService({ hass, bens_flat, synapse, context, logger }: TSer
     }
   };
 
+  const pause = async () => {
+    await hass.refBy.id("media_player.flat").media_pause();
+  };
+
   motion.anywhere(async () => {
     const wholeFlatPlayer = hass.refBy.id("media_player.flat");
 
@@ -72,4 +83,15 @@ export function MusicService({ hass, bens_flat, synapse, context, logger }: TSer
       await playRandomFavouritePlaylist();
     }
   });
+
+  lifecycle.onReady(() => {
+    tvMode.tvModeSwitch.getEntity().onUpdate(async (newState, oldState) => {
+      if (!newState) return;
+      if (newState.state === "on" && oldState.state === "off") {
+        await pause();
+      }
+    });
+  });
+
+  return { pause };
 }
