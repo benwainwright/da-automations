@@ -2471,7 +2471,7 @@ declare module "@digital-alchemy/hass" {
          * > conversation_agent: {}
          * > ```
          */
-        agent_id?: "conversation.home_assistant" | "conversation.openai_conversation";
+        agent_id?: "conversation.home_assistant";
         /**
          * ## conversation_id
          *
@@ -2556,7 +2556,7 @@ declare module "@digital-alchemy/hass" {
          * > conversation_agent: {}
          * > ```
          */
-        agent_id?: "conversation.home_assistant" | "conversation.openai_conversation";
+        agent_id?: "conversation.home_assistant";
         /**
          * ## language
          *

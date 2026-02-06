@@ -23,7 +23,7 @@ export function BlindsService({
   });
 
   motion.livingRoom(async () => {
-    if (time.isAfter(FIVE_AM)) {
+    if (time.isAfter(FIVE_AM) && solar.isBefore("sunset")) {
       blindsDefaultClosed.is_on = false;
     }
   });
