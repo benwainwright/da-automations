@@ -29,11 +29,12 @@ export function DeployService({ config, hass, logger }: TServiceParams) {
     await execa(`rm -rf ${clonePath}`);
 
     git.clone(repo, [CLONE_FOLDER_NAME]);
-    logger.info(`Repo cloned`);
+    logger.info(`Repo cloned. Installing dependencies`);
 
     await execa(`bun install;`, { cwd: clonePath });
     await execa(`bun run build`, { cwd: clonePath });
 
+    logger.info(`Deploy complete`);
     await restartAddon();
   };
 
