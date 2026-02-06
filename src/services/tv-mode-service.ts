@@ -1,6 +1,6 @@
 import { TServiceParams } from "@digital-alchemy/core";
 
-export function TVModeService({ hass, synapse, context }: TServiceParams) {
+export function TVModeService({ hass, synapse, context, logger }: TServiceParams) {
   const tvMode = synapse.switch({
     name: "TV Mode",
     context,
@@ -44,5 +44,11 @@ export function TVModeService({ hass, synapse, context }: TServiceParams) {
     }
   });
 
-  return { tvModeSwitch: tvMode };
+  const isOn = () => {
+    const tvModeState = tvMode.is_on;
+    logger.info(`Checking tv mode is on: ${tvModeState}`);
+    return tvModeState;
+  };
+
+  return { tvModeSwitch: tvMode, isOn };
 }

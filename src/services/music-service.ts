@@ -74,8 +74,8 @@ export function MusicService({
     const wholeFlatPlayer = hass.refBy.id("media_player.flat");
 
     if (
-      !tvMode.tvModeSwitch.is_on &&
-      !sleepMode.sleepModeSwitch.is_on &&
+      !tvMode.isOn() &&
+      !sleepMode.isOn() &&
       wholeFlatPlayer.state !== "playing" &&
       autoplaySwitch.is_on
     ) {

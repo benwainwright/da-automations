@@ -7,6 +7,7 @@ export function SleepModeService({
   context,
   synapse,
   bens_flat: { helpers, lights, motion },
+  logger,
   automation: { time },
 }: TServiceParams) {
   const sleepMode = synapse.switch({
@@ -46,5 +47,11 @@ export function SleepModeService({
     }
   });
 
-  return { sleepModeSwitch: sleepMode };
+  const isOn = () => {
+    const sleepModeState = sleepMode.is_on;
+    logger.info(`Checking sleep mode is on: ${sleepModeState}`);
+    return sleepModeState;
+  };
+
+  return { sleepModeSwitch: sleepMode, isOn };
 }

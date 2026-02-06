@@ -1,15 +1,13 @@
 import { TServiceParams } from "@digital-alchemy/core";
-import { RemoveCallback } from "@digital-alchemy/hass";
 
 export function PresenceDetectionService({
   hass,
   bens_flat,
-  scheduler,
   synapse,
   context,
   lifecycle,
 }: TServiceParams) {
-  const { motion } = bens_flat;
+  const { motion, helpers } = bens_flat;
 
   const flatIsOccupied = synapse.binary_sensor({
     name: "Flat Occupied",
@@ -17,15 +15,12 @@ export function PresenceDetectionService({
   });
 
   let allowZoneExit = true;
-  let callback: RemoveCallback | undefined;
 
   motion.anywhere(() => {
     if (flatIsOccupied.is_on) {
       allowZoneExit = false;
-      callback = scheduler.setTimeout(() => {
+      helpers.setDebouncedInterval(() => {
         allowZoneExit = true;
-        callback?.remove();
-        callback = undefined;
       }, "5m");
     } else {
       flatIsOccupied.is_on = true;

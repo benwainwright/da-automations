@@ -1,8 +1,8 @@
 import { TShortTime } from "@digital-alchemy/automation";
-import type { TServiceParams } from "@digital-alchemy/core";
-import { PICK_ENTITY, TAreaId } from "@digital-alchemy/hass";
+import type { TOffset, TServiceParams } from "@digital-alchemy/core";
+import { PICK_ENTITY, RemoveCallback, TAreaId } from "@digital-alchemy/hass";
 
-export function HelpersService({ hass }: TServiceParams) {
+export function HelpersService({ hass, scheduler }: TServiceParams) {
   const allAreas: TAreaId[] = ["bathroom", "bathroom", "bedroom", "hallway", "living_room"];
 
   const fiveAm: TShortTime = "AM5:00";
@@ -19,10 +19,17 @@ export function HelpersService({ hass }: TServiceParams) {
     );
   };
 
+  let clear: RemoveCallback | undefined;
+  const setDebouncedInterval = (callback: () => void | Promise<void>, offset: TOffset) => {
+    clear?.remove();
+    clear = scheduler.setTimeout(callback, offset);
+  };
+
   return {
     turnOffAll,
     turnOnAll,
     allAreas,
     fiveAm,
+    setDebouncedInterval,
   };
 }
