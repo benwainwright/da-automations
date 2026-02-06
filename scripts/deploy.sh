@@ -21,7 +21,7 @@ cd "$DEPLOY_ROOT" || exit
 tar -czf "$BACKUP_ARCHIVE" .
 cd - || exit
 
-cp -r src package.json "$DEPLOY_ROOT"
-rm -rf "$DEPLOY_ROOT/node_modules" "$DEPLOY_ROOT/yarn.lock" "$DEPLOY_ROOT/package-lock.json"
+cp -r src package.json tsconfig.json "$DEPLOY_ROOT"
+rm -rf "$DEPLOY_ROOT/node_modules" "$DEPLOY_ROOT/bun.lock" "$DEPLOY_ROOT/package-lock.json"
 
-figlet -f "Pagga" "Complete" | npx lolcatjs
+figlet -f "Pagga" "Complete" | bunx lolcatjs
