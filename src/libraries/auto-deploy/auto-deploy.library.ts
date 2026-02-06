@@ -7,7 +7,7 @@ import { DeployService } from "./services/deploy-service.ts";
 export const LIB_AUTO_DEPLOY = CreateLibrary({
   depends: [],
   name: "auto_deploy",
-  priorityInit: ["github", "webhook"],
+  priorityInit: ["deploy", "github", "webhook"],
   configuration: {
     EXTERNAL_URL: {
       type: "string",
