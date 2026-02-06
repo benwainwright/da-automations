@@ -87,7 +87,7 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
     });
 
     await writeId(webhookId, response.data.id);
-    logger.info(`Github repo ${owner}/${repo} webhook created for ${url}`);
+    logger.info(`Repo ${owner}/${repo} webhook created for ${url}`);
   };
 
   return { monitorRepo };
