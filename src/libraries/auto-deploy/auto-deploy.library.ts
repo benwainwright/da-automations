@@ -11,22 +11,27 @@ export const LIB_AUTO_DEPLOY = CreateLibrary({
   configuration: {
     EXTERNAL_URL: {
       type: "string",
+      required: true,
       description: "The external URL of your Home Assistant instance",
     },
     GITHUB_REPO: {
       type: "string",
+      required: true,
       description: "The github repository name to deploy from",
     },
     GITHUB_REPO_OWNER: {
       type: "string",
+      required: true,
       description: "The github repository owner",
     },
     GITHUB_PAT: {
       type: "string",
+      required: true,
       description: "A personal access token that can be used to create a repository webhook",
     },
     ADDON_SLUG: {
       type: "string",
+      required: true,
       description: "The slug of the addon you need to restart after deploy",
     },
   },
