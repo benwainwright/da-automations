@@ -17,7 +17,7 @@ import {
 export const BENS_FLAT = CreateLibrary({
   depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION],
   name: "bens_flat",
-  priorityInit: ["motion", "blinds", "helpers", "lights", "sleepMode", "tvMode"],
+  priorityInit: ["motion", "blinds", "helpers", "lights", "sleepMode", "tvMode", "music"],
   services: {
     music: MusicService,
     motion: MotionService,
