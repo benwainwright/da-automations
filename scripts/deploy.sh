@@ -8,8 +8,8 @@ DEPLOY_ROOT="/share/digital_alchemy"
 export PATH="./node_modules/figlet-cli/bin/:$PATH"
 
 # 🪄
-figlet -f "Elite" "Digital Alchemy" | npx lolcatjs
-figlet -f "Pagga" "Create Deploy" | npx lolcatjs
+figlet -f "Elite" "Digital Alchemy" | bunx lolcatjs
+figlet -f "Pagga" "Create Deploy" | bunx lolcatjs
 
 # create or continue with no error
 mkdir -p "$DEPLOY_ROOT"
