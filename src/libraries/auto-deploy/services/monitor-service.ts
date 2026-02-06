@@ -14,8 +14,7 @@ export function MonitorService({
         if (data.ref === "refs/heads/main") {
           logger.info(`Someone pushed to main. Deploying the latest version`);
           await deploy.deploy();
-          logger.info(`Code deployed exiting so that I restart. See you soon!`);
-          process.exit();
+          await deploy.restart();
         }
       },
     });
