@@ -13,13 +13,15 @@ import { CoreModule } from "./services/core.ts";
 import { HelpersService } from "./services/helpers.ts";
 import { MotionService } from "./services/motion-service.ts";
 import { BlindsService } from "./services/blinds-service.ts";
+import { MusicService } from "./services/music-service.ts";
 
 const HOME_AUTOMATION = CreateApplication({
   configuration: {},
   libraries: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION],
   name: "bens_flat",
-  priorityInit: ["motion", "blinds", "helpers", "lights", "sleepMode"],
+  priorityInit: ["motion", "blinds", "helpers", "lights", "sleepMode", "tvMode"],
   services: {
+    MusicService: MusicService,
     motion: MotionService,
     blinds: BlindsService,
     tvMode: TVModeService,

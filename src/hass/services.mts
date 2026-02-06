@@ -3,10 +3,14 @@
 import "@digital-alchemy/hass";
 
 export const InstalledAddons = {
+  "Code Glue (Dev)": "62ac2746_code_glue_dev",
+  "Code Runner": "3f718f42_code_runner",
   "File editor": "core_configurator",
   "Get HACS": "cb646a50_get",
+  Hakit: "5c36e1c9_hakit",
   "Matter Server": "core_matter_server",
   "Mosquitto broker": "core_mosquitto",
+  "Music Assistant": "d5369777_music_assistant",
   "Studio Code Server": "a0d7b954_vscode",
   "Z-Wave JS": "core_zwave_js",
   Zigbee2MQTT: "45df7312_zigbee2mqtt",
@@ -808,6 +812,182 @@ declare module "@digital-alchemy/hass" {
          */
         manual_control?: boolean;
       }) => Promise<void>;
+    };
+    // # MARK: ai_task
+    ai_task: {
+      /**
+       * ### generate_data
+       *
+       * >
+       */
+      generate_data: <T = unknown>(service_data?: {
+        /**
+         * ## attachments
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > media:
+         * >   accept:
+         * >     - '*'
+         * >   multiple: true
+         * > ```
+         */
+        attachments?: string;
+        /**
+         * ## entity_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   filter:
+         * >     - domain:
+         * >         - ai_task
+         * >       supported_features:
+         * >         - 1
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id?: PICK_ENTITY | PICK_ENTITY[];
+        /**
+         * ## instructions
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "instructions": "Generate a funny notification that the garage door was left open"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: true
+         * >   multiple: false
+         * > ```
+         */
+        instructions: string;
+        /**
+         * ## structure
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "structure": "{ \"name\": { \"selector\": { \"text\": }, \"description\": \"Name of the user\", \"required\": \"True\" } } }, \"age\": { \"selector\": { \"number\": }, \"description\": \"Age of the user\" } }"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        structure?: Record<string, unknown> | unknown[];
+        /**
+         * ## task_name
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "task_name": "home summary"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        task_name: string;
+      }) => Promise<T>;
+      /**
+       * ### generate_image
+       *
+       * >
+       */
+      generate_image: <T = unknown>(service_data?: {
+        /**
+         * ## attachments
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > media:
+         * >   accept:
+         * >     - '*'
+         * >   multiple: true
+         * > ```
+         */
+        attachments?: string;
+        /**
+         * ## entity_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   filter:
+         * >     - domain:
+         * >         - ai_task
+         * >       supported_features:
+         * >         - 4
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id: PICK_ENTITY | PICK_ENTITY[];
+        /**
+         * ## instructions
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "instructions": "Generate a high quality square image of a dog on transparent background"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: true
+         * >   multiple: false
+         * > ```
+         */
+        instructions: string;
+        /**
+         * ## task_name
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "task_name": "picture of a dog"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        task_name: string;
+      }) => Promise<T>;
     };
     // # MARK: alarm_control_panel
     alarm_control_panel: {
@@ -1972,7 +2152,7 @@ declare module "@digital-alchemy/hass" {
          * > conversation_agent: {}
          * > ```
          */
-        agent_id?: "conversation.home_assistant";
+        agent_id?: "conversation.home_assistant" | "conversation.openai_conversation";
         /**
          * ## conversation_id
          *
@@ -2057,7 +2237,7 @@ declare module "@digital-alchemy/hass" {
          * > conversation_agent: {}
          * > ```
          */
-        agent_id?: "conversation.home_assistant";
+        agent_id?: "conversation.home_assistant" | "conversation.openai_conversation";
         /**
          * ## language
          *
@@ -4049,7 +4229,13 @@ declare module "@digital-alchemy/hass" {
           | "01KGQ81R7DCYNP5KX4SFGAWVB6"
           | "01KGQ8JRQWYNZES8JQA8250S97"
           | "01KGQANDBGAPKSV8W2PPJ8JCMX"
-          | "01KGQAR09X8VNMTE6F55440WPX";
+          | "01KGQAR09X8VNMTE6F55440WPX"
+          | "01KGQJ8YCWV1J45SFQ1ACGK5M2"
+          | "01KGQJ9A2ZSEGQ0GDETS9YA5EV"
+          | "01KGQJYD31F0M99SWDVT2JW5PS"
+          | "01KGQNW1RQ05GTVV2A0X562VBR"
+          | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -6470,75 +6656,755 @@ declare module "@digital-alchemy/hass" {
        */
       reload: (service_data: EmptyObject) => Promise<void>;
     };
+    // # MARK: music_assistant
+    music_assistant: {
+      /**
+       * ### get_library
+       *
+       * >
+       */
+      get_library: <T = unknown>(service_data?: {
+        /**
+         * ## album_artists_only
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "album_artists_only": "true"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > false
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        album_artists_only?: boolean;
+        /**
+         * ## album_type
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "album_type": "single"
+         * > }
+         * > ```
+         */
+        album_type?: ("album" | "single" | "compilation" | "ep" | "unknown")[];
+        /**
+         * ## config_entry_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > config_entry:
+         * >   integration: music_assistant
+         * > ```
+         */
+        config_entry_id:
+          | "01KGNB1SM9Q5V950Y0CGGYJ87D"
+          | "01KGNB1SVBWDW2MXPH647M1HER"
+          | "01KGNB1SVJRGREE6JMR645H58Y"
+          | "01KGNB1T2FM0NT8R23MXD4PNZ4"
+          | "01KGNB1W1CS8SP4CVVBPDS5B37"
+          | "01KGNB1W73VP590M9DEP49C16A"
+          | "01KGNB1X9QWNJJ2B2DFM0F6HQ8"
+          | "01KGNB4WB89SBTYRTA7CRC1CNE"
+          | "01KGNB68Y8B88TF39H0FMD0854"
+          | "01KGNB692NWHW6V4JX7PCA7T8D"
+          | "01KGNB692P1T3MYR9SP5KABMVF"
+          | "01KGNEJ1VW5W0MBQQFBVT56DY1"
+          | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
+          | "01KGNHDASVCXZRP69JW51W7AWT"
+          | "01KGNHKVG40WJN1NZQRSTWQHFK"
+          | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
+          | "01KGP9Z70JSRJCRV4T3V0GX4G0"
+          | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
+          | "01KGPDQQB2C6ZWJ9HPN4BZSVW3"
+          | "01KGPDST4QFKXS0PZKN00QK01M"
+          | "01KGPDTX6H3W2C727F7DRH0TET"
+          | "01KGPDV5H7N3HF1RZNSDFHTB7A"
+          | "01KGQ2PXFHSBENFKYFR4QYRMFZ"
+          | "01KGQ2Q02S1VPGDZNDDE24A1YM"
+          | "01KGQ31C7SJ84Q4DACFK99STK6"
+          | "01KGQ33T2WVF93PC45JP1DWHY4"
+          | "01KGQ3DRCV68YGMKKNTS1RNPBM"
+          | "01KGQ5A47AGX11BWF92W401JH9"
+          | "01KGQ5BMAJXFXEGYBX7S9Q39QF"
+          | "01KGQ5GQ9JA6ZDH9NBG0A9QDZX"
+          | "01KGQ5GS3WWW437ZWZZFBPBXN4"
+          | "01KGQ6T1E82G5VR8XD6KXEW717"
+          | "01KGQ81R7DCYNP5KX4SFGAWVB6"
+          | "01KGQ8JRQWYNZES8JQA8250S97"
+          | "01KGQANDBGAPKSV8W2PPJ8JCMX"
+          | "01KGQAR09X8VNMTE6F55440WPX"
+          | "01KGQJ8YCWV1J45SFQ1ACGK5M2"
+          | "01KGQJ9A2ZSEGQ0GDETS9YA5EV"
+          | "01KGQJYD31F0M99SWDVT2JW5PS"
+          | "01KGQNW1RQ05GTVV2A0X562VBR"
+          | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B";
+        /**
+         * ## favorite
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "favorite": "true"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > false
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        favorite?: boolean;
+        /**
+         * ## limit
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "limit": "25"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > 25
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > number:
+         * >   min: 1
+         * >   max: 500
+         * >   step: 1
+         * >   mode: slider
+         * > ```
+         */
+        limit?: number;
+        /**
+         * ## media_type
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "media_type": "playlist"
+         * > }
+         * > ```
+         */
+        media_type: "artist" | "album" | "audiobook" | "playlist" | "podcast" | "track" | "radio";
+        /**
+         * ## offset
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "offset": "25"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > 0
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > number:
+         * >   min: 1
+         * >   max: 1000000
+         * >   step: 1
+         * >   mode: slider
+         * > ```
+         */
+        offset?: number;
+        /**
+         * ## order_by
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "order_by": "random"
+         * > }
+         * > ```
+         */
+        order_by?:
+          | "name"
+          | "name_desc"
+          | "sort_name"
+          | "sort_name_desc"
+          | "timestamp_added"
+          | "timestamp_added_desc"
+          | "last_played"
+          | "last_played_desc"
+          | "play_count"
+          | "play_count_desc"
+          | "year"
+          | "year_desc"
+          | "position"
+          | "position_desc"
+          | "artist_name"
+          | "artist_name_desc"
+          | "random"
+          | "random_play_count";
+        /**
+         * ## search
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "search": "We Are The Champions"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        search?: string;
+      }) => Promise<T>;
+      /**
+       * ### get_queue
+       *
+       * >
+       */
+      get_queue: <T = unknown>(
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - media_player
+           * >     integration: music_assistant
+           * >     supported_features:
+           * >       - 512
+           * > ```
+           */
+          entity_id:
+            | PICK_FROM_PLATFORM<"music_assistant", "media_player">
+            | PICK_FROM_PLATFORM<"music_assistant", "media_player">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<T>;
+      /**
+       * ### play_announcement
+       *
+       * >
+       */
+      play_announcement: (
+        service_data?: {
+          /**
+           * ## announce_volume
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "announce_volume": "75"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 1
+           * >   max: 100
+           * >   step: 1
+           * >   mode: slider
+           * > ```
+           */
+          announce_volume?: number;
+          /**
+           * ## pre_announce_url
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "pre_announce_url": "http://someremotesite.com/chime.mp3"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          pre_announce_url?: string;
+          /**
+           * ## url
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "url": "http://someremotesite.com/doorbell.mp3"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          url: string;
+          /**
+           * ## use_pre_announce
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "use_pre_announce": "true"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          use_pre_announce?: boolean;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - media_player
+           * >     integration: music_assistant
+           * >     supported_features:
+           * >       - 512
+           * >       - 1048576
+           * > ```
+           */
+          entity_id:
+            | PICK_FROM_PLATFORM<"music_assistant", "media_player">
+            | PICK_FROM_PLATFORM<"music_assistant", "media_player">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### play_media
+       *
+       * >
+       */
+      play_media: (
+        service_data?: {
+          /**
+           * ## album
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "album": "News of the world"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          album?: string;
+          /**
+           * ## artist
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "artist": "Queen"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          artist?: string;
+          /**
+           * ## enqueue
+           */
+          enqueue?: "play" | "replace" | "next" | "replace_next" | "add";
+          /**
+           * ## media_id
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "media_id": "spotify://playlist/aabbccddeeff"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > object:
+           * >   multiple: false
+           * > ```
+           */
+          media_id: Record<string, unknown> | unknown[];
+          /**
+           * ## media_type
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "media_type": "playlist"
+           * > }
+           * > ```
+           */
+          media_type?:
+            | "artist"
+            | "album"
+            | "audiobook"
+            | "folder"
+            | "playlist"
+            | "podcast"
+            | "track"
+            | "radio";
+          /**
+           * ## radio_mode
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          radio_mode?: boolean;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - media_player
+           * >     integration: music_assistant
+           * >     supported_features:
+           * >       - 512
+           * > ```
+           */
+          entity_id:
+            | PICK_FROM_PLATFORM<"music_assistant", "media_player">
+            | PICK_FROM_PLATFORM<"music_assistant", "media_player">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### search
+       *
+       * >
+       */
+      search: <T = unknown>(service_data?: {
+        /**
+         * ## album
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "album": "News of the world"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        album?: string;
+        /**
+         * ## artist
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "artist": "Queen"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        artist?: string;
+        /**
+         * ## config_entry_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > config_entry:
+         * >   integration: music_assistant
+         * > ```
+         */
+        config_entry_id:
+          | "01KGNB1SM9Q5V950Y0CGGYJ87D"
+          | "01KGNB1SVBWDW2MXPH647M1HER"
+          | "01KGNB1SVJRGREE6JMR645H58Y"
+          | "01KGNB1T2FM0NT8R23MXD4PNZ4"
+          | "01KGNB1W1CS8SP4CVVBPDS5B37"
+          | "01KGNB1W73VP590M9DEP49C16A"
+          | "01KGNB1X9QWNJJ2B2DFM0F6HQ8"
+          | "01KGNB4WB89SBTYRTA7CRC1CNE"
+          | "01KGNB68Y8B88TF39H0FMD0854"
+          | "01KGNB692NWHW6V4JX7PCA7T8D"
+          | "01KGNB692P1T3MYR9SP5KABMVF"
+          | "01KGNEJ1VW5W0MBQQFBVT56DY1"
+          | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
+          | "01KGNHDASVCXZRP69JW51W7AWT"
+          | "01KGNHKVG40WJN1NZQRSTWQHFK"
+          | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
+          | "01KGP9Z70JSRJCRV4T3V0GX4G0"
+          | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
+          | "01KGPDQQB2C6ZWJ9HPN4BZSVW3"
+          | "01KGPDST4QFKXS0PZKN00QK01M"
+          | "01KGPDTX6H3W2C727F7DRH0TET"
+          | "01KGPDV5H7N3HF1RZNSDFHTB7A"
+          | "01KGQ2PXFHSBENFKYFR4QYRMFZ"
+          | "01KGQ2Q02S1VPGDZNDDE24A1YM"
+          | "01KGQ31C7SJ84Q4DACFK99STK6"
+          | "01KGQ33T2WVF93PC45JP1DWHY4"
+          | "01KGQ3DRCV68YGMKKNTS1RNPBM"
+          | "01KGQ5A47AGX11BWF92W401JH9"
+          | "01KGQ5BMAJXFXEGYBX7S9Q39QF"
+          | "01KGQ5GQ9JA6ZDH9NBG0A9QDZX"
+          | "01KGQ5GS3WWW437ZWZZFBPBXN4"
+          | "01KGQ6T1E82G5VR8XD6KXEW717"
+          | "01KGQ81R7DCYNP5KX4SFGAWVB6"
+          | "01KGQ8JRQWYNZES8JQA8250S97"
+          | "01KGQANDBGAPKSV8W2PPJ8JCMX"
+          | "01KGQAR09X8VNMTE6F55440WPX"
+          | "01KGQJ8YCWV1J45SFQ1ACGK5M2"
+          | "01KGQJ9A2ZSEGQ0GDETS9YA5EV"
+          | "01KGQJYD31F0M99SWDVT2JW5PS"
+          | "01KGQNW1RQ05GTVV2A0X562VBR"
+          | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B";
+        /**
+         * ## library_only
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "library_only": "true"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > false
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        library_only?: boolean;
+        /**
+         * ## limit
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "limit": "25"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > 5
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > number:
+         * >   min: 1
+         * >   max: 100
+         * >   step: 1
+         * >   mode: slider
+         * > ```
+         */
+        limit?: number;
+        /**
+         * ## media_type
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "media_type": "playlist"
+         * > }
+         * > ```
+         */
+        media_type?: (
+          | "artist"
+          | "album"
+          | "audiobook"
+          | "playlist"
+          | "podcast"
+          | "track"
+          | "radio"
+        )[];
+        /**
+         * ## name
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "name": "We Are The Champions"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        name: string;
+      }) => Promise<T>;
+      /**
+       * ### transfer_queue
+       *
+       * >
+       */
+      transfer_queue: (
+        service_data?: {
+          /**
+           * ## auto_play
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "auto_play": "true"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          auto_play?: boolean;
+          /**
+           * ## source_player
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > entity:
+           * >   domain:
+           * >     - media_player
+           * >   integration: music_assistant
+           * >   reorder: false
+           * >   multiple: false
+           * > ```
+           */
+          source_player?:
+            | PICK_FROM_PLATFORM<"music_assistant", "media_player">
+            | PICK_FROM_PLATFORM<"music_assistant", "media_player">[];
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - media_player
+           * >     integration: music_assistant
+           * > ```
+           */
+          entity_id:
+            | PICK_FROM_PLATFORM<"music_assistant", "media_player">
+            | PICK_FROM_PLATFORM<"music_assistant", "media_player">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
     // # MARK: notify
     notify: {
-      /**
-       * ### Send a notification with lg_webos_tv_oled55c8pla
-       *
-       * > Sends a notification message using the lg_webos_tv_oled55c8pla service.
-       */
-      lg_webos_tv_oled55c8pla: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
       /**
        * ### Send a notification via mobile_app_bens_imac_pro
        *
@@ -6852,6 +7718,73 @@ declare module "@digital-alchemy/hass" {
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
+      /**
+       * ### Send a notification with tv
+       *
+       * > Sends a notification message using the tv service.
+       */
+      tv: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
     };
     // # MARK: number
     number: {
@@ -6897,6 +7830,235 @@ declare module "@digital-alchemy/hass" {
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
+    };
+    // # MARK: openai_conversation
+    openai_conversation: {
+      /**
+       * ### generate_content
+       *
+       * >
+       */
+      generate_content: <T = unknown>(service_data?: {
+        /**
+         * ## config_entry
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > config_entry:
+         * >   integration: openai_conversation
+         * > ```
+         */
+        config_entry:
+          | "01KGNB1SM9Q5V950Y0CGGYJ87D"
+          | "01KGNB1SVBWDW2MXPH647M1HER"
+          | "01KGNB1SVJRGREE6JMR645H58Y"
+          | "01KGNB1T2FM0NT8R23MXD4PNZ4"
+          | "01KGNB1W1CS8SP4CVVBPDS5B37"
+          | "01KGNB1W73VP590M9DEP49C16A"
+          | "01KGNB1X9QWNJJ2B2DFM0F6HQ8"
+          | "01KGNB4WB89SBTYRTA7CRC1CNE"
+          | "01KGNB68Y8B88TF39H0FMD0854"
+          | "01KGNB692NWHW6V4JX7PCA7T8D"
+          | "01KGNB692P1T3MYR9SP5KABMVF"
+          | "01KGNEJ1VW5W0MBQQFBVT56DY1"
+          | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
+          | "01KGNHDASVCXZRP69JW51W7AWT"
+          | "01KGNHKVG40WJN1NZQRSTWQHFK"
+          | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
+          | "01KGP9Z70JSRJCRV4T3V0GX4G0"
+          | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
+          | "01KGPDQQB2C6ZWJ9HPN4BZSVW3"
+          | "01KGPDST4QFKXS0PZKN00QK01M"
+          | "01KGPDTX6H3W2C727F7DRH0TET"
+          | "01KGPDV5H7N3HF1RZNSDFHTB7A"
+          | "01KGQ2PXFHSBENFKYFR4QYRMFZ"
+          | "01KGQ2Q02S1VPGDZNDDE24A1YM"
+          | "01KGQ31C7SJ84Q4DACFK99STK6"
+          | "01KGQ33T2WVF93PC45JP1DWHY4"
+          | "01KGQ3DRCV68YGMKKNTS1RNPBM"
+          | "01KGQ5A47AGX11BWF92W401JH9"
+          | "01KGQ5BMAJXFXEGYBX7S9Q39QF"
+          | "01KGQ5GQ9JA6ZDH9NBG0A9QDZX"
+          | "01KGQ5GS3WWW437ZWZZFBPBXN4"
+          | "01KGQ6T1E82G5VR8XD6KXEW717"
+          | "01KGQ81R7DCYNP5KX4SFGAWVB6"
+          | "01KGQ8JRQWYNZES8JQA8250S97"
+          | "01KGQANDBGAPKSV8W2PPJ8JCMX"
+          | "01KGQAR09X8VNMTE6F55440WPX"
+          | "01KGQJ8YCWV1J45SFQ1ACGK5M2"
+          | "01KGQJ9A2ZSEGQ0GDETS9YA5EV"
+          | "01KGQJYD31F0M99SWDVT2JW5PS"
+          | "01KGQNW1RQ05GTVV2A0X562VBR"
+          | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B";
+        /**
+         * ## filenames
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "filenames": "- /path/to/file1.txt\n- /path/to/file2.txt\n"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: true
+         * >   multiple: false
+         * > ```
+         */
+        filenames?: string;
+        /**
+         * ## prompt
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "prompt": "Hello, how can I help you?"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: true
+         * >   multiple: false
+         * > ```
+         */
+        prompt: string;
+      }) => Promise<T>;
+      /**
+       * ### generate_image
+       *
+       * >
+       */
+      generate_image: <T = unknown>(service_data?: {
+        /**
+         * ## config_entry
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > config_entry:
+         * >   integration: openai_conversation
+         * > ```
+         */
+        config_entry:
+          | "01KGNB1SM9Q5V950Y0CGGYJ87D"
+          | "01KGNB1SVBWDW2MXPH647M1HER"
+          | "01KGNB1SVJRGREE6JMR645H58Y"
+          | "01KGNB1T2FM0NT8R23MXD4PNZ4"
+          | "01KGNB1W1CS8SP4CVVBPDS5B37"
+          | "01KGNB1W73VP590M9DEP49C16A"
+          | "01KGNB1X9QWNJJ2B2DFM0F6HQ8"
+          | "01KGNB4WB89SBTYRTA7CRC1CNE"
+          | "01KGNB68Y8B88TF39H0FMD0854"
+          | "01KGNB692NWHW6V4JX7PCA7T8D"
+          | "01KGNB692P1T3MYR9SP5KABMVF"
+          | "01KGNEJ1VW5W0MBQQFBVT56DY1"
+          | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
+          | "01KGNHDASVCXZRP69JW51W7AWT"
+          | "01KGNHKVG40WJN1NZQRSTWQHFK"
+          | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
+          | "01KGP9Z70JSRJCRV4T3V0GX4G0"
+          | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
+          | "01KGPDQQB2C6ZWJ9HPN4BZSVW3"
+          | "01KGPDST4QFKXS0PZKN00QK01M"
+          | "01KGPDTX6H3W2C727F7DRH0TET"
+          | "01KGPDV5H7N3HF1RZNSDFHTB7A"
+          | "01KGQ2PXFHSBENFKYFR4QYRMFZ"
+          | "01KGQ2Q02S1VPGDZNDDE24A1YM"
+          | "01KGQ31C7SJ84Q4DACFK99STK6"
+          | "01KGQ33T2WVF93PC45JP1DWHY4"
+          | "01KGQ3DRCV68YGMKKNTS1RNPBM"
+          | "01KGQ5A47AGX11BWF92W401JH9"
+          | "01KGQ5BMAJXFXEGYBX7S9Q39QF"
+          | "01KGQ5GQ9JA6ZDH9NBG0A9QDZX"
+          | "01KGQ5GS3WWW437ZWZZFBPBXN4"
+          | "01KGQ6T1E82G5VR8XD6KXEW717"
+          | "01KGQ81R7DCYNP5KX4SFGAWVB6"
+          | "01KGQ8JRQWYNZES8JQA8250S97"
+          | "01KGQANDBGAPKSV8W2PPJ8JCMX"
+          | "01KGQAR09X8VNMTE6F55440WPX"
+          | "01KGQJ8YCWV1J45SFQ1ACGK5M2"
+          | "01KGQJ9A2ZSEGQ0GDETS9YA5EV"
+          | "01KGQJYD31F0M99SWDVT2JW5PS"
+          | "01KGQNW1RQ05GTVV2A0X562VBR"
+          | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B";
+        /**
+         * ## prompt
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: true
+         * >   multiple: false
+         * > ```
+         */
+        prompt: string;
+        /**
+         * ## quality
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "quality": "standard"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > "standard"
+         * > ```
+         */
+        quality?: "standard" | "hd";
+        /**
+         * ## size
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "size": "1024x1024"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > "1024x1024"
+         * > ```
+         */
+        size?: "1024x1024" | "1024x1792" | "1792x1024";
+        /**
+         * ## style
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "style": "vivid"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > "vivid"
+         * > ```
+         */
+        style?: "vivid" | "natural";
+      }) => Promise<T>;
     };
     // # MARK: persistent_notification
     persistent_notification: {
@@ -7797,7 +8959,7 @@ declare module "@digital-alchemy/hass" {
            * >       - scene
            * > ```
            */
-          entity_id: PICK_ENTITY<"scene"> | PICK_ENTITY<"scene">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7833,6 +8995,458 @@ declare module "@digital-alchemy/hass" {
        * >
        */
       reload: (service_data: EmptyObject) => Promise<void>;
+    };
+    // # MARK: scheduler
+    scheduler: {
+      /**
+       * ### Add
+       *
+       * > Create a new schedule entity
+       */
+      add: (service_data?: {
+        /**
+         * ## End date
+         *
+         * > Date until which schedule should be executed
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "end_date": "[\"2021-12-31\"]"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        end_date?: Record<string, unknown> | unknown[];
+        /**
+         * ## Name
+         *
+         * > Friendly name for the schedule
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "name": "My schedule"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        name?: string;
+        /**
+         * ## Repeat Type
+         *
+         * > Control what happens after the schedule is triggered
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "repeat_type": "\"repeat\""
+         * > }
+         * > ```
+         */
+        repeat_type: "repeat" | "single" | "pause";
+        /**
+         * ## Start date
+         *
+         * > Date from which schedule should be executed
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "start_date": "[\"2021-01-01\"]"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        start_date?: Record<string, unknown> | unknown[];
+        /**
+         * ## Timeslots
+         *
+         * > list of timeslots with their actions and optionally conditions (should be kept the same for all timeslots)
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "timeslots": "[{start: \"12:00\", stop: \"13:00\", actions: [{service: \"light.turn_on\", entity_id: \"light.my_lamp\", service_data: {brightness: 200}}]}]"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        timeslots: Record<string, unknown> | unknown[];
+        /**
+         * ## Weekdays
+         *
+         * > Days of the week for which the schedule should be repeated
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "weekdays": "[\"daily\"]"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        weekdays?: Record<string, unknown> | unknown[];
+      }) => Promise<void>;
+      /**
+       * ### Copy
+       *
+       * > Duplicate a schedule entity
+       */
+      copy: (service_data?: {
+        /**
+         * ## Entity
+         *
+         * > Identifier of the scheduler entity.
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "entity_id": "switch.schedule_abcdef"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   integration: scheduler
+         * >   domain:
+         * >     - switch
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id:
+          | PICK_FROM_PLATFORM<"scheduler", "switch">
+          | PICK_FROM_PLATFORM<"scheduler", "switch">[];
+        /**
+         * ## Name
+         *
+         * > Friendly name for the copied schedule
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "name": "My schedule"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        name?: string;
+      }) => Promise<void>;
+      /**
+       * ### Disable All
+       *
+       * > Disables all schedules
+       */
+      disable_all: (service_data: EmptyObject) => Promise<void>;
+      /**
+       * ### Edit
+       *
+       * > Edit a schedule entity
+       */
+      edit: (service_data?: {
+        /**
+         * ## End date
+         *
+         * > Date until which schedule should be executed
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "end_date": "[\"2021-12-31\"]"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        end_date?: Record<string, unknown> | unknown[];
+        /**
+         * ## Entity
+         *
+         * > Identifier of the scheduler entity.
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "entity_id": "switch.schedule_abcdef"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   integration: scheduler
+         * >   domain:
+         * >     - switch
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id:
+          | PICK_FROM_PLATFORM<"scheduler", "switch">
+          | PICK_FROM_PLATFORM<"scheduler", "switch">[];
+        /**
+         * ## Name
+         *
+         * > Friendly name for the schedule
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "name": "My schedule"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        name?: string;
+        /**
+         * ## Repeat Type
+         *
+         * > Control what happens after the schedule is triggered
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "repeat_type": "\"repeat\""
+         * > }
+         * > ```
+         */
+        repeat_type?: "repeat" | "single" | "pause";
+        /**
+         * ## Start date
+         *
+         * > Date from which schedule should be executed
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "start_date": "[\"2021-01-01\"]"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        start_date?: Record<string, unknown> | unknown[];
+        /**
+         * ## Timeslots
+         *
+         * > list of timeslots with their actions and optionally conditions (should be kept the same for all timeslots)
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "timeslots": "[{start: \"12:00\", stop: \"13:00\", actions: [{service: \"light.turn_on\", entity_id: \"light.my_lamp\", service_data: {brightness: 200}}]}]"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        timeslots?: Record<string, unknown> | unknown[];
+        /**
+         * ## Weekdays
+         *
+         * > Days of the week for which the schedule should be repeated
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "weekdays": "[\"daily\"]"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object:
+         * >   multiple: false
+         * > ```
+         */
+        weekdays?: Record<string, unknown> | unknown[];
+      }) => Promise<void>;
+      /**
+       * ### Enable All
+       *
+       * > Enables all schedules
+       */
+      enable_all: (service_data: EmptyObject) => Promise<void>;
+      /**
+       * ### Remove
+       *
+       * > Remove a schedule entity
+       */
+      remove: (service_data: {
+        /**
+         * ## Entity
+         *
+         * > Identifier of the scheduler entity.
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "entity_id": "switch.schedule_abcdef"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   integration: scheduler
+         * >   domain:
+         * >     - switch
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id:
+          | PICK_FROM_PLATFORM<"scheduler", "switch">
+          | PICK_FROM_PLATFORM<"scheduler", "switch">[];
+      }) => Promise<void>;
+      /**
+       * ### Run Action
+       *
+       * > Execute the action of a schedule, optionally at a given time.
+       */
+      run_action: (service_data?: {
+        /**
+         * ## Entity
+         *
+         * > Identifier of the scheduler entity.
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "entity_id": "switch.schedule_abcdef"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   integration: scheduler
+         * >   domain:
+         * >     - switch
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id:
+          | PICK_FROM_PLATFORM<"scheduler", "switch">
+          | PICK_FROM_PLATFORM<"scheduler", "switch">[];
+        /**
+         * ## Skip Conditions
+         *
+         * > Whether the conditions of the schedule should be skipped or not
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        skip_conditions?: boolean;
+        /**
+         * ## Time
+         *
+         * > Time for which to evaluate the action (only useful for schedules with multiple timeslot)
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "time": "\"12:00\""
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > time: {}
+         * > ```
+         */
+        time?: string;
+      }) => Promise<void>;
     };
     // # MARK: script
     script: {

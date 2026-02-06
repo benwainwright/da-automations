@@ -17,9 +17,9 @@ declare module "@digital-alchemy/hass" {
       | "light.living_room_lights"
       | "switch.living_room_heaters"
       | "climate.living_room"
+      | "switch.tv_mode"
       | "sensor.living_room_audio_input_format"
       | "binary_sensor.living_room_microphone"
-      | "media_player.living_room"
       | "select.living_room_speech_enhancement"
       | "number.living_room_audio_delay"
       | "number.living_room_bass"
@@ -117,10 +117,20 @@ declare module "@digital-alchemy/hass" {
       | "switch.living_room_heater_bookcase"
       | "media_player.tv"
       | "button.living_room_blinds_my_position"
-      | "cover.living_room_blinds";
+      | "cover.living_room_blinds"
+      | "button.living_room_favorite_current_song"
+      | "media_player.living_room_sonos"
+      | "media_player.living_room";
     _bedroom:
       | "light.bedroom_lights"
       | "switch.bedroom_motion_sensor"
+      | "climate.bedroom"
+      | "binary_sensor.bedroom_speaker_microphone"
+      | "switch.bedroom_speaker_crossfade"
+      | "switch.bedroom_speaker_loudness"
+      | "number.bedroom_speaker_bass"
+      | "number.bedroom_speaker_balance"
+      | "number.bedroom_speaker_treble"
       | "light.bedroom_wall_right"
       | "select.bedroom_wall_right_power_on_behavior"
       | "update.bedroom_wall_right"
@@ -147,11 +157,15 @@ declare module "@digital-alchemy/hass" {
       | "switch.adaptive_lighting_adapt_brightness_bedroom"
       | "switch.adaptive_lighting_adapt_color_bedroom"
       | "switch.adaptive_lighting_sleep_mode_bedroom"
-      | "switch.adaptive_bedroom";
+      | "switch.adaptive_bedroom"
+      | "button.bedroom_speaker_favorite_current_song"
+      | "media_player.bedroom_sonos"
+      | "media_player.bedroom";
     _hallway:
       | "switch.halllway_motion_sensor"
       | "light.hallway_lights"
       | "switch.adaptive_lighting_adapt_brightness_hallway"
+      | "climate.hallway"
       | "light.hallway_door"
       | "select.hallway_door_power_on_behavior"
       | "update.hallway_door"
@@ -187,7 +201,6 @@ declare module "@digital-alchemy/hass" {
       | "button.shellyplus1pm_a0dd6c2b3a6c_restart"
       | "sensor.shellyplus1pm_a0dd6c2b3a6c_power"
       | "sensor.shellyplus1pm_a0dd6c2b3a6c_energy"
-      | "switch.shellyplus1pm_a0dd6c2b3a6c"
       | "update.shellyplus1pm_a0dd6c2b3a6c_firmware"
       | "switch.adaptive_lighting_hallway"
       | "switch.adaptive_lighting_sleep_mode_hallway"
@@ -198,8 +211,8 @@ declare module "@digital-alchemy/hass" {
       | "sensor.smart_lock_pro_battery"
       | "sensor.smart_lock_pro_battery_type"
       | "device_tracker.nuki"
-      | "sensor.nuki_estimated_distance";
-    _spare_room: never;
+      | "sensor.nuki_estimated_distance"
+      | "switch.hallway_heater";
     _bathroom:
       | "light.bathroom_lights"
       | "switch.bathroom_motion_sensor"
@@ -221,6 +234,11 @@ declare module "@digital-alchemy/hass" {
       | "switch.adaptive_lighting_adapt_color_bathroom"
       | "switch.adaptive_lighting_sleep_mode_bathroom"
       | "switch.adaptive_lighting_bathroom";
+    _spare_room:
+      | "button.shellycolorbulb_3494546b71ad_restart"
+      | "light.shellycolorbulb_3494546b71ad"
+      | "button.shellycolorbulb_3494546b4c3d_restart"
+      | "light.shellycolorbulb_3494546b4c3d";
   }
   export interface HassDeviceMapping {
     _4231922e1216248df748e818fedb24dc:
@@ -243,16 +261,15 @@ declare module "@digital-alchemy/hass" {
     _2325ffd4213373fcd49e6f9891beeb25: never;
     _9e1a390f3de7373039a85397724cca5c:
       | "binary_sensor.bedroom_speaker_microphone"
-      | "media_player.bedroom_speaker"
       | "switch.bedroom_speaker_crossfade"
       | "switch.bedroom_speaker_loudness"
       | "number.bedroom_speaker_bass"
       | "number.bedroom_speaker_balance"
-      | "number.bedroom_speaker_treble";
+      | "number.bedroom_speaker_treble"
+      | "media_player.bedroom_sonos";
     _9846fc55a3dd29e716b72a6547eaa0b5:
       | "sensor.living_room_audio_input_format"
       | "binary_sensor.living_room_microphone"
-      | "media_player.living_room"
       | "select.living_room_speech_enhancement"
       | "number.living_room_audio_delay"
       | "number.living_room_bass"
@@ -265,7 +282,8 @@ declare module "@digital-alchemy/hass" {
       | "switch.living_room_surround_music_full_volume"
       | "switch.living_room_night_sound"
       | "switch.living_room_speech_enhancement"
-      | "switch.living_room_surround_enabled";
+      | "switch.living_room_surround_enabled"
+      | "media_player.living_room_sonos";
     _23aaf53cefb4b0ad0e4f1023fb9a6fdb: "update.mosquitto_broker_update";
     _ed25f9b6d9f9efd23e4b82acd122c2e5: "update.studio_code_server_update";
     _9d485d8b47d4182e6f605e0ff980fb71: "update.file_editor_update";
@@ -343,9 +361,12 @@ declare module "@digital-alchemy/hass" {
     _f986128d654b7aaeb306c4aee39b1184:
       | "switch.living_room_motion_sensor"
       | "switch.halllway_motion_sensor"
-      | "scene.sleep_mode"
+      | "binary_sensor.flat_occupied"
+      | "switch.sleep_mode"
+      | "switch.tv_mode"
       | "switch.bedroom_motion_sensor"
-      | "switch.bathroom_motion_sensor";
+      | "switch.bathroom_motion_sensor"
+      | "switch.blinds_default_closed";
     _a99b90a33d1c2a2ef4f0c99aa897c922:
       | "light.living_room_floor_lamp_middle"
       | "select.living_room_floor_lamp_middle_power_on_behavior"
@@ -475,8 +496,8 @@ declare module "@digital-alchemy/hass" {
       | "button.shellyplus1pm_a0dd6c2b3a6c_restart"
       | "sensor.shellyplus1pm_a0dd6c2b3a6c_power"
       | "sensor.shellyplus1pm_a0dd6c2b3a6c_energy"
-      | "switch.shellyplus1pm_a0dd6c2b3a6c"
-      | "update.shellyplus1pm_a0dd6c2b3a6c_firmware";
+      | "update.shellyplus1pm_a0dd6c2b3a6c_firmware"
+      | "switch.hallway_heater";
     _560937a32ebcded66b2dd1fe0b2d1d65:
       | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_input_0"
       | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overheating"
@@ -575,6 +596,37 @@ declare module "@digital-alchemy/hass" {
       | "switch.adaptive_lighting_adapt_color_bathroom"
       | "switch.adaptive_lighting_sleep_mode_bathroom"
       | "switch.adaptive_lighting_bathroom";
+    _c3b886485d656f7ba88f15b9e1e2dfd1: "update.code_runner_update";
+    _2c0195e85e97809293ef07c791aaf483:
+      | "button.shellycolorbulb_3494546b71ad_restart"
+      | "light.shellycolorbulb_3494546b71ad";
+    _ea363195b8a37a55876dcdcbe095054b:
+      | "button.shellycolorbulb_3494546b4c3d_restart"
+      | "light.shellycolorbulb_3494546b4c3d";
+    _c2ebb01df712948b5089086d35136731: "update.scheduler_component_update";
+    _99456cfc6b5af9727d7fe552a59d7f4b: "update.scheduler_card_update";
+    _7d78ffd6a2993979a5d0268119a1d67d: "update.code_glue_dev_update";
+    _dc3229e50df406ccae5f6ba33b8f155f:
+      | "switch.schedule_6bd03a"
+      | "switch.schedule_02093c"
+      | "switch.schedule_a8cd23"
+      | "switch.schedule_917e46"
+      | "switch.schedule_living_room_weekend_heating_schedulel"
+      | "switch.schedule_7c0687";
+    _0e6df70cbea23a5a5ed7f2a760069e95: "update.hakit_update";
+    _8277f71a1b14bbb907aaf3f5b8719919: "update.music_assistant_update";
+    _9d3f69e65a8f5a3caa9dbe6554b9e38a:
+      | "button.bedroom_speaker_favorite_current_song"
+      | "media_player.bedroom";
+    _b78e623e12b2da93234d094b9039541b:
+      | "button.living_room_favorite_current_song"
+      | "media_player.living_room";
+    _6ad0767e04ac4032981d54dc67540c2e: "ai_task.openai_ai_task";
+    _8e8505742ebf4dd744134ea266189ab3: "conversation.openai_conversation";
+    _7d3c6e6cf28c9baa2ab00e503134fd55:
+      | "button.192_168_1_120_favorite_current_song"
+      | "media_player.192_168_1_120";
+    _bd024d63486658b42eb558a8c967bbdf: "button.flat_favorite_current_song" | "media_player.flat";
   }
   export interface HassLabelMapping {}
   export interface HassPlatformMapping {
@@ -595,7 +647,11 @@ declare module "@digital-alchemy/hass" {
       | "update.zigbee2mqtt_update"
       | "update.z_wave_js_update"
       | "update.get_hacs_update"
-      | "update.matter_server_update";
+      | "update.matter_server_update"
+      | "update.code_runner_update"
+      | "update.code_glue_dev_update"
+      | "update.hakit_update"
+      | "update.music_assistant_update";
     _backup:
       | "event.backup_automatic_backup"
       | "sensor.backup_backup_manager_state"
@@ -604,7 +660,6 @@ declare module "@digital-alchemy/hass" {
       | "sensor.backup_last_attempted_automatic_backup";
     _sonos:
       | "binary_sensor.bedroom_speaker_microphone"
-      | "media_player.bedroom_speaker"
       | "switch.bedroom_speaker_crossfade"
       | "switch.bedroom_speaker_loudness"
       | "number.bedroom_speaker_bass"
@@ -612,7 +667,6 @@ declare module "@digital-alchemy/hass" {
       | "number.bedroom_speaker_treble"
       | "sensor.living_room_audio_input_format"
       | "binary_sensor.living_room_microphone"
-      | "media_player.living_room"
       | "select.living_room_speech_enhancement"
       | "number.living_room_audio_delay"
       | "number.living_room_bass"
@@ -625,7 +679,9 @@ declare module "@digital-alchemy/hass" {
       | "switch.living_room_surround_music_full_volume"
       | "switch.living_room_night_sound"
       | "switch.living_room_speech_enhancement"
-      | "switch.living_room_surround_enabled";
+      | "switch.living_room_surround_enabled"
+      | "media_player.living_room_sonos"
+      | "media_player.bedroom_sonos";
     _cloud: "binary_sensor.remote_ui" | "stt.home_assistant_cloud" | "tts.home_assistant_cloud";
     _person: "person.ben";
     _shopping_list: "todo.shopping_list";
@@ -756,14 +812,19 @@ declare module "@digital-alchemy/hass" {
     _hacs:
       | "update.hacs_update"
       | "update.digital_alchemy_synapse_update"
-      | "update.adaptive_lighting_update";
+      | "update.adaptive_lighting_update"
+      | "update.scheduler_component_update"
+      | "update.scheduler_card_update";
     _synapse:
       | "binary_sensor.bens_flat_online"
       | "switch.living_room_motion_sensor"
       | "switch.halllway_motion_sensor"
-      | "scene.sleep_mode"
+      | "binary_sensor.flat_occupied"
+      | "switch.sleep_mode"
+      | "switch.tv_mode"
       | "switch.bedroom_motion_sensor"
-      | "switch.bathroom_motion_sensor";
+      | "switch.bathroom_motion_sensor"
+      | "switch.blinds_default_closed";
     _mobile_app:
       | "device_tracker.bens_phone"
       | "sensor.bens_phone_battery_level"
@@ -835,7 +896,6 @@ declare module "@digital-alchemy/hass" {
       | "button.shellyplus1pm_a0dd6c2b3a6c_restart"
       | "sensor.shellyplus1pm_a0dd6c2b3a6c_power"
       | "sensor.shellyplus1pm_a0dd6c2b3a6c_energy"
-      | "switch.shellyplus1pm_a0dd6c2b3a6c"
       | "update.shellyplus1pm_a0dd6c2b3a6c_firmware"
       | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_input_0"
       | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overheating"
@@ -860,7 +920,12 @@ declare module "@digital-alchemy/hass" {
       | "sensor.shellyplus1pm_a0dd6c27e768_energy"
       | "update.shellyplus1pm_a0dd6c27e768_firmware"
       | "switch.living_room_heater_window"
-      | "switch.living_room_heater_bookcase";
+      | "switch.living_room_heater_bookcase"
+      | "button.shellycolorbulb_3494546b71ad_restart"
+      | "light.shellycolorbulb_3494546b71ad"
+      | "button.shellycolorbulb_3494546b4c3d_restart"
+      | "light.shellycolorbulb_3494546b4c3d"
+      | "switch.hallway_heater";
     _adaptive_lighting:
       | "switch.adaptive_lighting_hallway"
       | "switch.adaptive_lighting_living_room"
@@ -892,8 +957,26 @@ declare module "@digital-alchemy/hass" {
       | "sensor.smart_lock_pro_battery_type";
     _webostv: "media_player.tv";
     _overkiz: "button.living_room_blinds_my_position" | "cover.living_room_blinds";
-    _generic_thermostat: "climate.living_room";
+    _generic_thermostat: "climate.living_room" | "climate.hallway" | "climate.bedroom";
     _ibeacon: "device_tracker.nuki" | "sensor.nuki_estimated_distance";
+    _scheduler:
+      | "switch.schedule_6bd03a"
+      | "switch.schedule_02093c"
+      | "switch.schedule_a8cd23"
+      | "switch.schedule_917e46"
+      | "switch.schedule_living_room_weekend_heating_schedulel"
+      | "switch.schedule_7c0687";
+    _tag: "tag.sleep_mode";
+    _music_assistant:
+      | "button.bedroom_speaker_favorite_current_song"
+      | "button.living_room_favorite_current_song"
+      | "button.192_168_1_120_favorite_current_song"
+      | "media_player.192_168_1_120"
+      | "media_player.living_room"
+      | "media_player.bedroom"
+      | "button.flat_favorite_current_song"
+      | "media_player.flat";
+    _openai_conversation: "ai_task.openai_ai_task" | "conversation.openai_conversation";
   }
   export interface HassUniqueIdMapping {
     "01KGNB1SM9Q5V950Y0CGGYJ87D-solar_rising": "binary_sensor.sun_solar_rising";
@@ -925,7 +1008,6 @@ declare module "@digital-alchemy/hass" {
     last_attempted_automatic_backup: "sensor.backup_last_attempted_automatic_backup";
     "Sonos_ZlaW12cIMaN9B472Sw2NUnrIqF-favorites": "sensor.sonos_favorites";
     "RINCON_48A6B8D11B5601400-microphone": "binary_sensor.bedroom_speaker_microphone";
-    RINCON_48A6B8D11B5601400: "media_player.bedroom_speaker";
     "RINCON_48A6B8D11B5601400-buttons_enabled": "switch.bedroom_speaker_touch_controls";
     "RINCON_48A6B8D11B5601400-cross_fade": "switch.bedroom_speaker_crossfade";
     "RINCON_48A6B8D11B5601400-loudness": "switch.bedroom_speaker_loudness";
@@ -935,7 +1017,6 @@ declare module "@digital-alchemy/hass" {
     "RINCON_48A6B8D11B5601400-treble": "number.bedroom_speaker_treble";
     "RINCON_C4387512E6C501400-audio-format": "sensor.living_room_audio_input_format";
     "RINCON_C4387512E6C501400-microphone": "binary_sensor.living_room_microphone";
-    RINCON_C4387512E6C501400: "media_player.living_room";
     "RINCON_C4387512E6C501400-speech_dialog_level": "select.living_room_speech_enhancement";
     "RINCON_C4387512E6C501400-audio_delay": "number.living_room_audio_delay";
     "RINCON_C4387512E6C501400-bass": "number.living_room_bass";
@@ -1366,7 +1447,6 @@ declare module "@digital-alchemy/hass" {
     "A0DD6C2B3A6C-switch:0-temperature": "sensor.shellyplus1pm_a0dd6c2b3a6c_temperature";
     "A0DD6C2B3A6C-wifi-rssi": "sensor.shellyplus1pm_a0dd6c2b3a6c_signal_strength";
     "A0DD6C2B3A6C-sys-uptime": "sensor.shellyplus1pm_a0dd6c2b3a6c_last_restart";
-    "A0DD6C2B3A6C-switch:0": "switch.shellyplus1pm_a0dd6c2b3a6c";
     "A0DD6C2B3A6C-sys-fwupdate": "update.shellyplus1pm_a0dd6c2b3a6c_firmware";
     "A0DD6C2B3A6C-sys-fwupdate_beta": "update.shellyplus1pm_a0dd6c2b3a6c_beta_firmware";
     "A0DD6C2B6CF4-input:0-input": "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_input_0";
@@ -1516,9 +1596,72 @@ declare module "@digital-alchemy/hass" {
     "Adaptive Lighting Bathroom_adapt_color": "switch.adaptive_lighting_adapt_color_bathroom";
     "Adaptive Lighting Bathroom_sleep_mode": "switch.adaptive_lighting_sleep_mode_bathroom";
     "Adaptive Lighting Bathroom": "switch.adaptive_lighting_bathroom";
-    "54936d7fe35103294d97d663eb99d674033a8c67381f29210dc9d690859bcb73": "scene.sleep_mode";
+    "3f718f42_code_runner_state": "binary_sensor.code_runner_running";
+    "3f718f42_code_runner_version": "sensor.code_runner_version";
+    "3f718f42_code_runner_version_latest": "sensor.code_runner_newest_version";
+    "3f718f42_code_runner_cpu_percent": "sensor.code_runner_cpu_percent";
+    "3f718f42_code_runner_memory_percent": "sensor.code_runner_memory_percent";
+    "3142b85c004aafca717a5a0333ad0cd97021284606691915868b3a8df743922e": "binary_sensor.flat_occupied";
+    "54936d7fe35103294d97d663eb99d674033a8c67381f29210dc9d690859bcb73": "switch.sleep_mode";
+    a496c115601f5887597008685412612902ca4e990b77e7d05ac6f0e4644e122e: "switch.tv_mode";
     e73759f16d64b3d053ae8b7fc68da00fef9abb1eaa53ea20ce908a315b3e62c0: "switch.bedroom_motion_sensor";
     "8d0bbb5de01392130686049f513cd51d0eb5784ebca184a9cc8d3fe5bef6b208": "switch.bathroom_motion_sensor";
+    "hallway-thermostat": "climate.hallway";
+    "bedroom-thermostat": "climate.bedroom";
+    "3494546B71AD-cloud": "binary_sensor.shellycolorbulb_3494546b71ad_cloud";
+    "3494546B71AD-reboot": "button.shellycolorbulb_3494546b71ad_restart";
+    "3494546B71AD-light_0": "light.shellycolorbulb_3494546b71ad";
+    "3494546B71AD-light_0-power": "sensor.shellycolorbulb_3494546b71ad_power";
+    "3494546B71AD-light_0-energy": "sensor.shellycolorbulb_3494546b71ad_energy";
+    "3494546B71AD-rssi": "sensor.shellycolorbulb_3494546b71ad_signal_strength";
+    "3494546B71AD-uptime": "sensor.shellycolorbulb_3494546b71ad_last_restart";
+    "3494546B71AD-fwupdate": "update.shellycolorbulb_3494546b71ad_firmware";
+    "3494546B71AD-fwupdate_beta": "update.shellycolorbulb_3494546b71ad_beta_firmware";
+    "3494546B4C3D-cloud": "binary_sensor.shellycolorbulb_3494546b4c3d_cloud";
+    "3494546B4C3D-reboot": "button.shellycolorbulb_3494546b4c3d_restart";
+    "3494546B4C3D-light_0": "light.shellycolorbulb_3494546b4c3d";
+    "3494546B4C3D-light_0-power": "sensor.shellycolorbulb_3494546b4c3d_power";
+    "3494546B4C3D-light_0-energy": "sensor.shellycolorbulb_3494546b4c3d_energy";
+    "3494546B4C3D-rssi": "sensor.shellycolorbulb_3494546b4c3d_signal_strength";
+    "3494546B4C3D-uptime": "sensor.shellycolorbulb_3494546b4c3d_last_restart";
+    "3494546B4C3D-fwupdate": "update.shellycolorbulb_3494546b4c3d_firmware";
+    "3494546B4C3D-fwupdate_beta": "update.shellycolorbulb_3494546b4c3d_beta_firmware";
+    "286186485": "switch.scheduler_component_pre_release";
+    "286270157": "switch.scheduler_card_pre_release";
+    "62ac2746_code_glue_dev_state": "binary_sensor.code_glue_dev_running";
+    "62ac2746_code_glue_dev_version": "sensor.code_glue_dev_version";
+    "62ac2746_code_glue_dev_version_latest": "sensor.code_glue_dev_newest_version";
+    "62ac2746_code_glue_dev_cpu_percent": "sensor.code_glue_dev_cpu_percent";
+    "62ac2746_code_glue_dev_memory_percent": "sensor.code_glue_dev_memory_percent";
+    "5c36e1c9_hakit_state": "binary_sensor.hakit_running";
+    "5c36e1c9_hakit_version": "sensor.hakit_version";
+    "5c36e1c9_hakit_version_latest": "sensor.hakit_newest_version";
+    "5c36e1c9_hakit_cpu_percent": "sensor.hakit_cpu_percent";
+    "5c36e1c9_hakit_memory_percent": "sensor.hakit_memory_percent";
+    "6bd03a": "switch.schedule_6bd03a";
+    "02093c": "switch.schedule_02093c";
+    a8cd23: "switch.schedule_a8cd23";
+    "917e46": "switch.schedule_917e46";
+    "88e42e": "switch.schedule_living_room_weekend_heating_schedulel";
+    "7c0687": "switch.schedule_7c0687";
+    "92598448-f1a2-4707-a355-875f6e2520d9": "tag.sleep_mode";
+    d5369777_music_assistant_state: "binary_sensor.music_assistant_running";
+    d5369777_music_assistant_version: "sensor.music_assistant_version";
+    d5369777_music_assistant_version_latest: "sensor.music_assistant_newest_version";
+    d5369777_music_assistant_cpu_percent: "sensor.music_assistant_cpu_percent";
+    d5369777_music_assistant_memory_percent: "sensor.music_assistant_memory_percent";
+    RINCON_48A6B8D11B5601400_favorite_now_playing: "button.bedroom_speaker_favorite_current_song";
+    RINCON_C4387512E6C501400_favorite_now_playing: "button.living_room_favorite_current_song";
+    "01KGQX5ESRDDPJ2ZHED7X142BR": "ai_task.openai_ai_task";
+    "01KGQX5ESR6J05KSJ5TN1K200F": "conversation.openai_conversation";
+    "ma_companion_5fc8cae1-3ee9-48d8-977a-66e4f17e0c0f_favorite_now_playing": "button.192_168_1_120_favorite_current_song";
+    "ma_companion_5fc8cae1-3ee9-48d8-977a-66e4f17e0c0f": "media_player.192_168_1_120";
+    "A0DD6C2B3A6C-switch:0": "switch.hallway_heater";
+    dcc511d0cbab59f47daec4573e61b3be00d5baebee27b9387a05423b5f8cdf47: "switch.blinds_default_closed";
+    RINCON_C4387512E6C501400: "media_player.living_room_sonos";
+    RINCON_48A6B8D11B5601400: "media_player.bedroom_sonos";
+    syncgroup_onoznqnd_favorite_now_playing: "button.flat_favorite_current_song";
+    syncgroup_onoznqnd: "media_player.flat";
   }
   export interface HassZoneMapping {}
   export interface HassFloorMapping {}
@@ -1533,36 +1676,45 @@ declare module "@digital-alchemy/hass" {
       | "switch.adaptive_lighting_adapt_color_hallway"
       | "switch.adaptive_lighting_adapt_brightness_hallway"
       | "switch.adaptive_lighting_hallway"
+      | "switch.adaptive_lighting_sleep_mode_bedroom"
+      | "switch.adaptive_lighting_adapt_color_bedroom"
+      | "switch.adaptive_lighting_adapt_brightness_bedroom"
+      | "switch.adaptive_bedroom"
+      | "switch.adaptive_lighting_sleep_mode_bathroom"
+      | "switch.adaptive_lighting_adapt_color_bathroom"
+      | "switch.adaptive_lighting_adapt_brightness_bathroom"
+      | "switch.adaptive_lighting_bathroom"
+      | "switch.schedule_a8cd23"
+      | "switch.schedule_6bd03a"
+      | "switch.schedule_02093c"
+      | "switch.schedule_living_room_weekend_heating_schedulel"
+      | "switch.schedule_917e46"
+      | "switch.schedule_7c0687"
       | "switch.living_room_heater_tv"
-      | "switch.living_room_heater_bookcase"
-      | "switch.shellyplus1pm_a0dd6c2b3a6c"
       | "switch.living_room_heater_window"
       | "switch.shellyem_a4e57cba73f5"
+      | "switch.living_room_heater_bookcase"
       | "switch.bedroom_heater"
-      | "switch.bedroom_speaker_crossfade"
-      | "switch.bedroom_speaker_loudness"
       | "switch.living_room_crossfade"
       | "switch.living_room_loudness"
       | "switch.living_room_surround_music_full_volume"
       | "switch.living_room_night_sound"
       | "switch.living_room_speech_enhancement"
       | "switch.living_room_surround_enabled"
+      | "switch.bedroom_speaker_crossfade"
+      | "switch.bedroom_speaker_loudness"
       | "switch.zigbee2mqtt_bridge_permit_join"
-      | "switch.living_room_motion_sensor"
       | "switch.hallway_led_indication"
-      | "switch.halllway_motion_sensor"
       | "switch.bedroom_sensor_led_indication"
       | "switch.bathroom_sensor_led_indication"
-      | "switch.adaptive_lighting_adapt_brightness_bedroom"
-      | "switch.adaptive_lighting_adapt_color_bedroom"
-      | "switch.adaptive_lighting_sleep_mode_bedroom"
-      | "switch.adaptive_bedroom"
-      | "switch.adaptive_lighting_adapt_brightness_bathroom"
-      | "switch.adaptive_lighting_adapt_color_bathroom"
-      | "switch.adaptive_lighting_sleep_mode_bathroom"
-      | "switch.adaptive_lighting_bathroom"
+      | "switch.living_room_motion_sensor"
+      | "switch.halllway_motion_sensor"
+      | "switch.sleep_mode"
+      | "switch.tv_mode"
       | "switch.bedroom_motion_sensor"
-      | "switch.bathroom_motion_sensor";
+      | "switch.bathroom_motion_sensor"
+      | "switch.hallway_heater"
+      | "switch.blinds_default_closed";
     update:
       | "update.home_assistant_supervisor_update"
       | "update.home_assistant_core_update"
@@ -1573,14 +1725,20 @@ declare module "@digital-alchemy/hass" {
       | "update.z_wave_js_update"
       | "update.get_hacs_update"
       | "update.matter_server_update"
+      | "update.code_runner_update"
+      | "update.code_glue_dev_update"
+      | "update.hakit_update"
+      | "update.music_assistant_update"
       | "update.home_assistant_operating_system_update"
-      | "update.hacs_update"
-      | "update.digital_alchemy_synapse_update"
-      | "update.adaptive_lighting_update"
-      | "update.shelly_plus_pm_firmware"
-      | "update.shellyplus1pm_a0dd6c27e768_firmware"
       | "update.shellyplus1pm_a0dd6c2b3a6c_firmware"
+      | "update.shelly_plus_pm_firmware"
       | "update.shellyplus1pm_a0dd6c2b6cf4_firmware"
+      | "update.shellyplus1pm_a0dd6c27e768_firmware"
+      | "update.digital_alchemy_synapse_update"
+      | "update.hacs_update"
+      | "update.adaptive_lighting_update"
+      | "update.scheduler_card_update"
+      | "update.scheduler_component_update"
       | "update.z_stick_gen5_usb_controller_firmware"
       | "update.slim_multi_sensor_pir_temperature_illumination_firmware_2"
       | "update.slim_multi_sensor_pir_temperature_illumination_firmware"
@@ -1608,29 +1766,27 @@ declare module "@digital-alchemy/hass" {
       | "update.living_room_tv_wall"
       | "update.bedroom_sensor"
       | "update.bathroom_sensor";
-    conversation: "conversation.home_assistant";
+    conversation: "conversation.home_assistant" | "conversation.openai_conversation";
     event: "event.backup_automatic_backup";
     sensor:
       | "sensor.backup_backup_manager_state"
       | "sensor.backup_next_scheduled_automatic_backup"
       | "sensor.backup_last_successful_automatic_backup"
       | "sensor.backup_last_attempted_automatic_backup"
-      | "sensor.smart_lock_pro_battery"
-      | "sensor.smart_lock_pro_battery_type"
       | "sensor.sun_next_dawn"
       | "sensor.sun_next_dusk"
       | "sensor.sun_next_midnight"
       | "sensor.sun_next_noon"
       | "sensor.sun_next_rising"
       | "sensor.sun_next_setting"
+      | "sensor.smart_lock_pro_battery"
+      | "sensor.smart_lock_pro_battery_type"
+      | "sensor.shellyplus1pm_a0dd6c2b3a6c_power"
+      | "sensor.shellyplus1pm_a0dd6c2b3a6c_energy"
       | "sensor.shelly_plus_pm_power"
       | "sensor.living_room_heater_tv_voltage"
       | "sensor.lliving_room_heater_tv_current"
       | "sensor.living_room_heater_tv_energy"
-      | "sensor.shellyplus1pm_a0dd6c27e768_power"
-      | "sensor.shellyplus1pm_a0dd6c27e768_energy"
-      | "sensor.shellyplus1pm_a0dd6c2b3a6c_power"
-      | "sensor.shellyplus1pm_a0dd6c2b3a6c_energy"
       | "sensor.shellyplus1pm_a0dd6c2b6cf4_power"
       | "sensor.shellyplus1pm_a0dd6c2b6cf4_energy"
       | "sensor.shellyem_a4e57cba73f5_channel_1_power"
@@ -1643,6 +1799,8 @@ declare module "@digital-alchemy/hass" {
       | "sensor.shellyem_a4e57cba73f5_channel_2_energy_returned"
       | "sensor.shellyem_a4e57cba73f5_channel_2_voltage"
       | "sensor.shellyem_a4e57cba73f5_channel_2_power_factor"
+      | "sensor.shellyplus1pm_a0dd6c27e768_power"
+      | "sensor.shellyplus1pm_a0dd6c27e768_energy"
       | "sensor.bens_phone_battery_level"
       | "sensor.bens_phone_ssid"
       | "sensor.bens_phone_battery_state"
@@ -1671,18 +1829,18 @@ declare module "@digital-alchemy/hass" {
       | "sensor.bens_imac_pro_last_update_trigger"
       | "sensor.bens_imac_pro_app_version"
       | "sensor.bens_imac_pro_location_permission"
-      | "sensor.z_stick_gen5_usb_controller_status"
       | "sensor.upnp_igd_external_ip"
       | "sensor.router_download_speed"
       | "sensor.router_upload_speed"
+      | "sensor.z_stick_gen5_usb_controller_status"
       | "sensor.node_12_node_status"
+      | "sensor.node_13_node_status"
+      | "sensor.living_room_sensor_node_status"
+      | "sensor.bedroom_heater_node_status"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_air_temperature_2"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance_2"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_home_security_unknown_2"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level_2"
-      | "sensor.node_13_node_status"
-      | "sensor.living_room_sensor_node_status"
-      | "sensor.bedroom_heater_node_status"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_air_temperature"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_home_security_unknown"
@@ -1696,40 +1854,40 @@ declare module "@digital-alchemy/hass" {
       | "sensor.hallway_temperature"
       | "sensor.hallway_battery"
       | "sensor.hallway_illuminance"
+      | "sensor.bedroom_temperature"
       | "sensor.bedroom_sensor_battery"
       | "sensor.bedroom_illuminance"
-      | "sensor.bedroom_temperature"
+      | "sensor.bathroom_temperature"
       | "sensor.bathroom_sensor_battery"
-      | "sensor.bathroom_illuminance"
-      | "sensor.bathroom_temperature";
+      | "sensor.bathroom_illuminance";
     binary_sensor:
       | "binary_sensor.remote_ui"
-      | "binary_sensor.bens_flat_online"
-      | "binary_sensor.shelly_plus_pm_overheating"
-      | "binary_sensor.shelly_plus_pm_overpowering"
-      | "binary_sensor.shelly_plus_pm_overvoltage"
-      | "binary_sensor.shelly_plus_pm_overcurrent"
-      | "binary_sensor.shellyplus1pm_a0dd6c27e768_input_0"
-      | "binary_sensor.shellyplus1pm_a0dd6c27e768_overheating"
-      | "binary_sensor.shellyplus1pm_a0dd6c27e768_overpowering"
-      | "binary_sensor.shellyplus1pm_a0dd6c27e768_overvoltage"
-      | "binary_sensor.shellyplus1pm_a0dd6c27e768_overcurrent"
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_input_0"
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overheating"
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overpowering"
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overvoltage"
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overcurrent"
+      | "binary_sensor.shelly_plus_pm_overheating"
+      | "binary_sensor.shelly_plus_pm_overpowering"
+      | "binary_sensor.shelly_plus_pm_overvoltage"
+      | "binary_sensor.shelly_plus_pm_overcurrent"
       | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_input_0"
       | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overheating"
       | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overpowering"
       | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overvoltage"
       | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overcurrent"
       | "binary_sensor.shellyem_a4e57cba73f5_overpowering"
+      | "binary_sensor.shellyplus1pm_a0dd6c27e768_input_0"
+      | "binary_sensor.shellyplus1pm_a0dd6c27e768_overheating"
+      | "binary_sensor.shellyplus1pm_a0dd6c27e768_overpowering"
+      | "binary_sensor.shellyplus1pm_a0dd6c27e768_overvoltage"
+      | "binary_sensor.shellyplus1pm_a0dd6c27e768_overcurrent"
       | "binary_sensor.bens_imac_pro_camera_in_use"
       | "binary_sensor.bens_imac_pro_audio_input_in_use"
       | "binary_sensor.bens_imac_pro_audio_output_in_use"
       | "binary_sensor.bens_imac_pro_active"
       | "binary_sensor.bens_imac_pro_focus"
+      | "binary_sensor.bens_flat_online"
       | "binary_sensor.upnp_igd_wan_status"
       | "binary_sensor.slim_multi_sensor_pir_temperature_illumination_sensor_state_motion_2"
       | "binary_sensor.slim_multi_sensor_pir_temperature_illumination_tampering_product_cover_removed_2"
@@ -1738,12 +1896,13 @@ declare module "@digital-alchemy/hass" {
       | "binary_sensor.slim_multi_sensor_pir_temperature_illumination_motion_detection"
       | "binary_sensor.living_room_occupancy"
       | "binary_sensor.living_room_sensor_tampering_product_cover_removed"
-      | "binary_sensor.bedroom_speaker_microphone"
       | "binary_sensor.living_room_microphone"
+      | "binary_sensor.bedroom_speaker_microphone"
       | "binary_sensor.zigbee2mqtt_bridge_connection_state"
       | "binary_sensor.hallway_occupancy"
       | "binary_sensor.bedroom_occupancy"
-      | "binary_sensor.bathroom_occupancy";
+      | "binary_sensor.bathroom_occupancy"
+      | "binary_sensor.flat_occupied";
     stt: "stt.home_assistant_cloud";
     tts: "tts.home_assistant_cloud" | "tts.google_translate_en_com";
     light:
@@ -1751,6 +1910,8 @@ declare module "@digital-alchemy/hass" {
       | "light.bedroom_lights"
       | "light.hallway_lights"
       | "light.bathroom_lights"
+      | "light.shellycolorbulb_3494546b71ad"
+      | "light.shellycolorbulb_3494546b4c3d"
       | "light.living_room_back_wall_right"
       | "light.living_room_back_wall_left"
       | "light.living_room_back_wall_middle"
@@ -1773,19 +1934,27 @@ declare module "@digital-alchemy/hass" {
       | "light.living_room_tv_wall";
     zone: "zone.home";
     person: "person.ben";
+    sun: "sun.sun";
+    tag: "tag.sleep_mode";
     button:
       | "button.smart_lock_pro_identify"
-      | "button.shelly_plus_pm_restart"
-      | "button.shellyplus1pm_a0dd6c27e768_restart"
+      | "button.living_room_blinds_my_position"
       | "button.shellyplus1pm_a0dd6c2b3a6c_restart"
+      | "button.shelly_plus_pm_restart"
       | "button.shellyplus1pm_a0dd6c2b6cf4_restart"
+      | "button.shellycolorbulb_3494546b71ad_restart"
+      | "button.shellycolorbulb_3494546b4c3d_restart"
       | "button.shellyem_a4e57cba73f5_restart"
+      | "button.shellyplus1pm_a0dd6c27e768_restart"
+      | "button.bedroom_speaker_favorite_current_song"
+      | "button.living_room_favorite_current_song"
       | "button.node_12_ping"
       | "button.node_13_ping"
       | "button.living_room_sensor_ping"
       | "button.bedroom_heater_ping"
-      | "button.living_room_blinds_my_position"
-      | "button.zigbee2mqtt_bridge_restart";
+      | "button.zigbee2mqtt_bridge_restart"
+      | "button.192_168_1_120_favorite_current_song"
+      | "button.flat_favorite_current_song";
     lock: "lock.smart_lock_pro";
     select:
       | "select.smart_lock_pro_operating_mode"
@@ -1814,33 +1983,36 @@ declare module "@digital-alchemy/hass" {
       | "select.living_room_tv_wall_power_on_behavior"
       | "select.bedroom_sensor_motion_sensitivity"
       | "select.bathroom_sensor_motion_sensitivity";
-    sun: "sun.sun";
-    climate: "climate.living_room";
+    climate: "climate.living_room" | "climate.hallway" | "climate.bedroom";
+    media_player:
+      | "media_player.apple_tv"
+      | "media_player.tv"
+      | "media_player.192_168_1_120"
+      | "media_player.living_room_sonos"
+      | "media_player.living_room"
+      | "media_player.bedroom_sonos"
+      | "media_player.bedroom"
+      | "media_player.flat";
+    remote: "remote.bens_apple_tv";
+    cover: "cover.living_room_blinds";
     device_tracker:
       | "device_tracker.bens_phone"
       | "device_tracker.bens_imac_pro"
       | "device_tracker.nuki";
-    media_player:
-      | "media_player.apple_tv"
-      | "media_player.tv"
-      | "media_player.bedroom_speaker"
-      | "media_player.living_room";
-    remote: "remote.bens_apple_tv";
+    ai_task: "ai_task.openai_ai_task";
     todo: "todo.shopping_list";
-    cover: "cover.living_room_blinds";
     number:
-      | "number.bedroom_speaker_bass"
-      | "number.bedroom_speaker_balance"
-      | "number.bedroom_speaker_treble"
       | "number.living_room_audio_delay"
       | "number.living_room_bass"
       | "number.living_room_balance"
       | "number.living_room_treble"
       | "number.living_room_surround_level"
       | "number.living_room_music_surround_level"
+      | "number.bedroom_speaker_bass"
+      | "number.bedroom_speaker_balance"
+      | "number.bedroom_speaker_treble"
       | "number.hallway_occupancy_timeout"
       | "number.bedroom_sensor_occupancy_timeout"
       | "number.bathroom_sensor_occupancy_timeout";
-    scene: "scene.sleep_mode";
   }
 }

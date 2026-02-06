@@ -9,7 +9,7 @@ export function NotificationService({ hass }: TServiceParams) {
   const tv = hass.refBy.id("media_player.tv");
   const notify = async ({ message, title }: NotifyConfig) => {
     if (tv.state === "on") {
-      hass.call.notify.lg_webos_tv_oled55c8pla({
+      hass.call.notify.tv({
         message,
         title,
       });
@@ -20,7 +20,7 @@ export function NotificationService({ hass }: TServiceParams) {
 
   const notifyCritical = async ({ message, title }: NotifyConfig) => {
     if (tv.state === "on") {
-      hass.call.notify.lg_webos_tv_oled55c8pla({
+      hass.call.notify.tv({
         message,
         title,
         data: {

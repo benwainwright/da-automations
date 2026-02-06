@@ -6,11 +6,9 @@ export function SleepModeService({
   hass,
   context,
   synapse,
-  bens_flat,
+  bens_flat: { helpers, lights, motion },
   automation: { time },
 }: TServiceParams) {
-  const { helpers, lights, motion } = bens_flat;
-
   const sleepMode = synapse.switch({
     name: "Sleep Mode",
     context,
@@ -42,8 +40,9 @@ export function SleepModeService({
   });
 
   motion.livingRoom(async () => {
-    if (time.isAfter(FIVE_AM)) {
-      await hass.call.switch.turn_off(sleepMode);
+    const sleepModeEntity = sleepMode.entity_id;
+    if (time.isAfter(FIVE_AM) && sleepModeEntity) {
+      await hass.call.switch.turn_off({ entity_id: sleepModeEntity });
     }
   });
 
