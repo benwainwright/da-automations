@@ -1,7 +1,7 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 
-export function CoreModule({ bens_flat, hass, lifecycle }: TServiceParams) {
-  const { lights, sleepMode, tvMode, presence } = bens_flat;
+export function CoreModule({ bens_flat, lifecycle }: TServiceParams) {
+  const { lights, sleepMode, tvMode, presence, blinds } = bens_flat;
   lifecycle.onReady(() => {
     lights.setupMotionTrigger({
       switchName: "Living room motion sensor",
@@ -34,9 +34,21 @@ export function CoreModule({ bens_flat, hass, lifecycle }: TServiceParams) {
     });
 
     presence.flatIsOccupied.getEntity().onUpdate(async (newState, oldState) => {
+      if (!newState) return;
       if (oldState.state === "on" && newState.state === "off") {
         await lights.turnOffAll();
-        await hass.call.cover.close_cover({ entity_id: "cover.living_room_blinds" });
+        await blinds.close();
+      } else if (oldState.state === "off" && newState.state === "on") {
+        await blinds.openIfDefaultIsOpen();
+      }
+    });
+
+    tvMode.tvModeSwitch.getEntity().onUpdate(async (newState, oldState) => {
+      if (!newState) return;
+      if (oldState.state === "off" && newState.state === "on") {
+        await blinds.close();
+      } else if (oldState.state === "on" && newState.state === "off") {
+        await blinds.openIfDefaultIsOpen();
       }
     });
   });

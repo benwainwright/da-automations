@@ -1,8 +1,15 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 import type { PICK_ENTITY } from "@digital-alchemy/hass";
+import { FIVE_AM } from "./constants.ts";
 
-export function SleepModeService({ hass, context, synapse, bens_flat }: TServiceParams) {
-  const { helpers, lights } = bens_flat;
+export function SleepModeService({
+  hass,
+  context,
+  synapse,
+  bens_flat,
+  automation: { time },
+}: TServiceParams) {
+  const { helpers, lights, motion } = bens_flat;
 
   const sleepMode = synapse.switch({
     name: "Sleep Mode",
@@ -32,6 +39,12 @@ export function SleepModeService({ hass, context, synapse, bens_flat }: TService
 
   sleepMode.onTurnOff(async () => {
     await helpers.turnOffAll(adaptiveLightingSleepModeSwitches);
+  });
+
+  motion.livingRoom(async () => {
+    if (time.isAfter(FIVE_AM)) {
+      await hass.call.switch.turn_off(sleepMode);
+    }
   });
 
   return { sleepModeSwitch: sleepMode };

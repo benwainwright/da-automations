@@ -11,13 +11,17 @@ import { LightsService } from "./services/lights-service.ts";
 import { SleepModeService } from "./services/sleep-mode-service.ts";
 import { CoreModule } from "./services/core.ts";
 import { HelpersService } from "./services/helpers.ts";
+import { BlindsService } from "@services";
+import { MotionService } from "./services/motion-service.ts";
 
 const HOME_AUTOMATION = CreateApplication({
   configuration: {},
   libraries: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION],
   name: "bens_flat",
-  priorityInit: ["helpers", "lights", "sleepMode"],
+  priorityInit: ["motion", "blinds", "helpers", "lights", "sleepMode"],
   services: {
+    motion: MotionService,
+    blinds: BlindsService,
     tvMode: TVModeService,
     presence: PresenceDetectionService,
     lights: LightsService,

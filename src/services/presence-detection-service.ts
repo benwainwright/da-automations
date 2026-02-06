@@ -9,7 +9,7 @@ export function PresenceDetectionService({
   context,
   lifecycle,
 }: TServiceParams) {
-  const { helpers } = bens_flat;
+  const { motion } = bens_flat;
 
   const flatIsOccupied = synapse.binary_sensor({
     name: "Flat Occupied",
@@ -19,17 +19,14 @@ export function PresenceDetectionService({
   let allowZoneExit = true;
   let callback: RemoveCallback | undefined;
 
-  helpers.allMotionSensors.forEach((sensorId) => {
+  motion.anywhere(() => {
     if (flatIsOccupied.is_on) {
-      const sensor = hass.refBy.id(sensorId);
-      sensor.onUpdate(() => {
-        allowZoneExit = false;
-        callback = scheduler.setTimeout(() => {
-          allowZoneExit = true;
-          callback?.remove();
-          callback = undefined;
-        }, "5m");
-      });
+      allowZoneExit = false;
+      callback = scheduler.setTimeout(() => {
+        allowZoneExit = true;
+        callback?.remove();
+        callback = undefined;
+      }, "5m");
     } else {
       flatIsOccupied.is_on = true;
     }
