@@ -11,6 +11,7 @@
         "@digital-alchemy/mqtt-extension": "25.1.1",
         "@digital-alchemy/synapse": "^26.1.11",
         "@googleapis/calendar": "^14.2.0",
+        "@octokit/webhooks-types": "^7.6.1",
         "@types/bun": "^1.3.8",
         "dayjs": "1.11.13",
         "dotenv": "16.5.0",
@@ -217,6 +218,8 @@
     "@octokit/webhooks": ["@octokit/webhooks@14.2.0", "", { "dependencies": { "@octokit/openapi-webhooks-types": "12.1.0", "@octokit/request-error": "^7.0.0", "@octokit/webhooks-methods": "^6.0.0" } }, "sha512-da6KbdNCV5sr1/txD896V+6W0iamFWrvVl8cHkBSPT+YlvmT3DwXa4jxZnQc+gnuTEqSWbBeoSZYTayXH9wXcw=="],
 
     "@octokit/webhooks-methods": ["@octokit/webhooks-methods@6.0.0", "", {}, "sha512-MFlzzoDJVw/GcbfzVC1RLR36QqkTLUf79vLVO3D+xn7r0QgxnFoLZgtrzxiQErAjFUOdH6fas2KeQJ1yr/qaXQ=="],
+
+    "@octokit/webhooks-types": ["@octokit/webhooks-types@7.6.1", "", {}, "sha512-S8u2cJzklBC0FgTwWVLaM8tMrDuDMVE4xiTK4EYXM9GntyvrdbSoxqDQa+Fh57CCNApyIpyeqPhhFEmHPfrXgw=="],
 
     "@oxfmt/darwin-arm64": ["@oxfmt/darwin-arm64@0.28.0", "", { "os": "darwin", "cpu": "arm64" }, "sha512-jmUfF7cNJPw57bEK7sMIqrYRgn4LH428tSgtgLTCtjuGuu1ShREyrkeB7y8HtkXRfhBs4lVY+HMLhqElJvZ6ww=="],
 

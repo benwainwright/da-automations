@@ -2,11 +2,13 @@ import { TServiceParams } from "@digital-alchemy/core";
 import { Octokit } from "octokit";
 import { v7 } from "uuid";
 
+import type { PushEvent } from "@octokit/webhooks-types";
+
 export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
   interface MonitorRepoConfig {
     repo: string;
     owner: string;
-    callback: (data: Record<string, unknown>) => void | Promise<void>;
+    callback: (data: PushEvent) => void | Promise<void>;
   }
 
   const monitorRepo = async ({ repo, owner, callback }: MonitorRepoConfig) => {
@@ -16,7 +18,9 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
       allowedMethods: ["POST"],
       localOnly: false,
       webhookId,
-      callback,
+      callback: async (data) => {
+        await callback(data as unknown as PushEvent);
+      },
     });
 
     const github = new Octokit({

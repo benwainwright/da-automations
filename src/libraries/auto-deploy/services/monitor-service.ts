@@ -11,7 +11,9 @@ export function MonitorService({
       owner: config.auto_deploy.GITHUB_REPO_OWNER,
       repo: config.auto_deploy.GITHUB_REPO,
       callback: (data) => {
-        logger.info(data);
+        if (data.ref === "refs/heads/main") {
+          logger.info(`Someone pushed to main`);
+        }
       },
     });
   });
