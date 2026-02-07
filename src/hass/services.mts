@@ -154,8 +154,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         transition?: string;
@@ -203,8 +203,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         adapt_delay?: string;
@@ -225,8 +225,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         autoreset_control_seconds?: string;
@@ -261,8 +261,8 @@ declare module "@digital-alchemy/hass" {
          * > entity:
          * >   domain:
          * >     - switch
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id: PICK_ENTITY<"switch"> | PICK_ENTITY<"switch">[];
@@ -295,8 +295,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         initial_transition?: string;
@@ -317,8 +317,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         max_brightness?: string;
@@ -339,8 +339,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         max_color_temp?: string;
@@ -373,8 +373,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         min_brightness?: string;
@@ -395,8 +395,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         min_color_temp?: string;
@@ -509,8 +509,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         sleep_brightness?: string;
@@ -531,8 +531,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         sleep_color_temp?: string;
@@ -579,8 +579,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         sleep_transition?: string;
@@ -699,8 +699,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         transition?: string;
@@ -847,8 +847,8 @@ declare module "@digital-alchemy/hass" {
          * >         - ai_task
          * >       supported_features:
          * >         - 1
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id?: PICK_ENTITY | PICK_ENTITY[];
@@ -906,8 +906,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         task_name: string;
@@ -943,8 +943,8 @@ declare module "@digital-alchemy/hass" {
          * >         - ai_task
          * >       supported_features:
          * >         - 4
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id: PICK_ENTITY | PICK_ENTITY[];
@@ -983,8 +983,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         task_name: string;
@@ -1014,8 +1014,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -1058,8 +1058,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -1102,8 +1102,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -1146,8 +1146,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -1190,8 +1190,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -1234,8 +1234,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -1276,8 +1276,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -1342,8 +1342,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           message?: string;
@@ -1415,8 +1415,8 @@ declare module "@digital-alchemy/hass" {
          * >       required: true
          * >       selector:
          * >         text:
-         * >           multiple: false
          * >           multiline: false
+         * >           multiple: false
          * >     sentences:
          * >       required: true
          * >       selector:
@@ -1438,8 +1438,8 @@ declare module "@digital-alchemy/hass" {
          * >         - assist_satellite
          * >       supported_features:
          * >         - 2
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id: PICK_ENTITY | PICK_ENTITY[];
@@ -1493,8 +1493,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         question?: string;
@@ -1526,8 +1526,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           extra_system_prompt?: string;
@@ -1594,8 +1594,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           start_message?: string;
@@ -1847,8 +1847,8 @@ declare module "@digital-alchemy/hass" {
            * > entity:
            * >   domain:
            * >     - media_player
-           * >   reorder: false
            * >   multiple: false
+           * >   reorder: false
            * > ```
            */
           media_player: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
@@ -1910,8 +1910,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           filename: string;
@@ -1973,8 +1973,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           filename: string;
@@ -2060,8 +2060,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           fan_mode: string;
@@ -2179,8 +2179,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           preset_mode: string;
@@ -2223,8 +2223,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           swing_horizontal_mode: string;
@@ -2267,8 +2267,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           swing_mode: string;
@@ -2487,8 +2487,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         conversation_id?: string;
@@ -2507,8 +2507,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         language?: string;
@@ -2527,8 +2527,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         text: string;
@@ -2572,8 +2572,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         language?: string;
@@ -3070,8 +3070,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         dev_id?: string;
@@ -3123,8 +3123,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         host_name?: string;
@@ -3143,8 +3143,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         location_name?: string;
@@ -3163,8 +3163,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         mac?: string;
@@ -3373,8 +3373,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           preset_mode: string;
@@ -3476,8 +3476,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           preset_mode?: string;
@@ -3517,8 +3517,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id?: never | never[];
@@ -3539,8 +3539,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id?: never | never[];
@@ -3561,8 +3561,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id?: never | never[];
@@ -3603,8 +3603,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         file_name?: string;
@@ -3796,8 +3796,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name?: string;
@@ -3816,8 +3816,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         object_id: string;
@@ -4127,8 +4127,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name?: string;
@@ -4147,8 +4147,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         password?: string;
@@ -4291,8 +4291,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name?: string;
@@ -4311,8 +4311,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         password?: string;
@@ -4350,8 +4350,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         password?: string;
@@ -4362,8 +4362,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         slug: string;
@@ -4456,8 +4456,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         password?: string;
@@ -4468,8 +4468,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         slug: string;
@@ -4554,7 +4554,10 @@ declare module "@digital-alchemy/hass" {
           | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
           | "01KGQX5ESRK2J8G1MFYXQ9M68B"
           | "01KGSVRH1C4W71KKZYMTZBT2HP"
-          | "01KGVT0Z9WJRH513E7CS86EBA4";
+          | "01KGVT0Z9WJRH513E7CS86EBA4"
+          | "01KGVV88BYMVDGDK15VG0D9KYR"
+          | "01KGVWA098JKVPMQCCR0G9DQQG"
+          | "01KGVXDX214ECNJB1KHJFSJC6W";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -4756,8 +4759,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           mode: string;
@@ -4974,8 +4977,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           date?: string;
@@ -4994,8 +4997,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           datetime?: string;
@@ -5377,8 +5380,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           value: string;
@@ -5452,8 +5455,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           effect?: string;
@@ -5619,8 +5622,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           effect?: string;
@@ -5697,8 +5700,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -5739,8 +5742,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -5783,8 +5786,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code?: string;
@@ -5827,8 +5830,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         domain?: string;
@@ -5839,8 +5842,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > entity:
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id?: PICK_ENTITY | PICK_ENTITY[];
@@ -5859,8 +5862,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         message: string;
@@ -5879,8 +5882,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name: string;
@@ -6012,8 +6015,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           media_content_id?: string;
@@ -6032,8 +6035,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           media_content_type?: string;
@@ -6414,8 +6417,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           media_content_id?: string;
@@ -6434,8 +6437,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           media_content_type?: string;
@@ -6474,8 +6477,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           search_query: string;
@@ -6518,8 +6521,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           sound_mode?: string;
@@ -6562,8 +6565,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           source: string;
@@ -6875,8 +6878,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         topic?: string;
@@ -6962,8 +6965,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         topic: string;
@@ -7071,7 +7074,10 @@ declare module "@digital-alchemy/hass" {
           | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
           | "01KGQX5ESRK2J8G1MFYXQ9M68B"
           | "01KGSVRH1C4W71KKZYMTZBT2HP"
-          | "01KGVT0Z9WJRH513E7CS86EBA4";
+          | "01KGVT0Z9WJRH513E7CS86EBA4"
+          | "01KGVV88BYMVDGDK15VG0D9KYR"
+          | "01KGVWA098JKVPMQCCR0G9DQQG"
+          | "01KGVXDX214ECNJB1KHJFSJC6W";
         /**
          * ## favorite
          *
@@ -7209,8 +7215,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         search?: string;
@@ -7285,8 +7291,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           pre_announce_url?: string;
@@ -7305,8 +7311,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           url: string;
@@ -7371,8 +7377,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           album?: string;
@@ -7391,8 +7397,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           artist?: string;
@@ -7490,8 +7496,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         album?: string;
@@ -7510,8 +7516,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         artist?: string;
@@ -7567,7 +7573,10 @@ declare module "@digital-alchemy/hass" {
           | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
           | "01KGQX5ESRK2J8G1MFYXQ9M68B"
           | "01KGSVRH1C4W71KKZYMTZBT2HP"
-          | "01KGVT0Z9WJRH513E7CS86EBA4";
+          | "01KGVT0Z9WJRH513E7CS86EBA4"
+          | "01KGVV88BYMVDGDK15VG0D9KYR"
+          | "01KGVWA098JKVPMQCCR0G9DQQG"
+          | "01KGVXDX214ECNJB1KHJFSJC6W";
         /**
          * ## library_only
          *
@@ -7655,8 +7664,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name: string;
@@ -7696,8 +7705,8 @@ declare module "@digital-alchemy/hass" {
            * >   domain:
            * >     - media_player
            * >   integration: music_assistant
-           * >   reorder: false
            * >   multiple: false
+           * >   reorder: false
            * > ```
            */
           source_player?:
@@ -7965,8 +7974,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         message: string;
@@ -7985,8 +7994,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         title?: string;
@@ -8005,8 +8014,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           message: string;
@@ -8017,8 +8026,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           title?: string;
@@ -8129,8 +8138,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           value: string;
@@ -8210,7 +8219,10 @@ declare module "@digital-alchemy/hass" {
           | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
           | "01KGQX5ESRK2J8G1MFYXQ9M68B"
           | "01KGSVRH1C4W71KKZYMTZBT2HP"
-          | "01KGVT0Z9WJRH513E7CS86EBA4";
+          | "01KGVT0Z9WJRH513E7CS86EBA4"
+          | "01KGVV88BYMVDGDK15VG0D9KYR"
+          | "01KGVWA098JKVPMQCCR0G9DQQG"
+          | "01KGVXDX214ECNJB1KHJFSJC6W";
         /**
          * ## filenames
          *
@@ -8310,7 +8322,10 @@ declare module "@digital-alchemy/hass" {
           | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
           | "01KGQX5ESRK2J8G1MFYXQ9M68B"
           | "01KGSVRH1C4W71KKZYMTZBT2HP"
-          | "01KGVT0Z9WJRH513E7CS86EBA4";
+          | "01KGVT0Z9WJRH513E7CS86EBA4"
+          | "01KGVV88BYMVDGDK15VG0D9KYR"
+          | "01KGVWA098JKVPMQCCR0G9DQQG"
+          | "01KGVXDX214ECNJB1KHJFSJC6W";
         /**
          * ## prompt
          *
@@ -8402,8 +8417,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         message: string;
@@ -8422,8 +8437,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         notification_id?: string;
@@ -8442,8 +8457,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         title?: string;
@@ -8469,8 +8484,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         notification_id: string;
@@ -8786,8 +8801,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           device?: string;
@@ -8867,8 +8882,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           device?: string;
@@ -8964,8 +8979,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           device?: string;
@@ -9089,8 +9104,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           activity?: string;
@@ -9193,8 +9208,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         scene_id: string;
@@ -9361,8 +9376,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name?: string;
@@ -9470,8 +9485,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id:
@@ -9494,8 +9509,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name?: string;
@@ -9553,8 +9568,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id:
@@ -9577,8 +9592,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name?: string;
@@ -9692,8 +9707,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id:
@@ -9726,8 +9741,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id:
@@ -10031,8 +10046,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         key: string;
@@ -10062,8 +10077,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         key: string;
@@ -10103,8 +10118,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name: string;
@@ -10142,8 +10157,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name: string;
@@ -10175,8 +10190,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name: string;
@@ -10202,8 +10217,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         name: string;
@@ -10302,8 +10317,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           duration?: string;
@@ -10322,8 +10337,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           tone?: string;
@@ -10511,8 +10526,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: sonos
          * >   domain:
          * >     - media_player
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id?:
@@ -10591,8 +10606,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: sonos
          * >   domain:
          * >     - media_player
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id?:
@@ -10842,8 +10857,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         logger?: string;
@@ -10862,8 +10877,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         message: string;
@@ -10893,8 +10908,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           value: string;
@@ -11140,8 +11155,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           description?: string;
@@ -11196,8 +11211,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           item: string;
@@ -11303,8 +11318,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           item: string;
@@ -11347,8 +11362,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           description?: string;
@@ -11403,8 +11418,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           item: string;
@@ -11423,8 +11438,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           rename?: string;
@@ -11567,8 +11582,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           language?: string;
@@ -11581,8 +11596,8 @@ declare module "@digital-alchemy/hass" {
            * > entity:
            * >   domain:
            * >     - media_player
-           * >   reorder: false
            * >   multiple: false
+           * >   reorder: false
            * > ```
            */
           media_player_entity_id: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
@@ -11601,8 +11616,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           message: string;
@@ -11696,8 +11711,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           version?: string;
@@ -11852,8 +11867,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           command: string;
@@ -11913,8 +11928,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           fan_speed: string;
@@ -12170,8 +12185,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           operation_mode: string;
@@ -12212,8 +12227,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           operation_mode?: string;
@@ -12313,8 +12328,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         button: string;
@@ -12328,8 +12343,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: webostv
          * >   domain:
          * >     - media_player
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id:
@@ -12357,8 +12372,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         command: string;
@@ -12372,8 +12387,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: webostv
          * >   domain:
          * >     - media_player
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id:
@@ -12415,8 +12430,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: webostv
          * >   domain:
          * >     - media_player
-         * >   reorder: false
          * >   multiple: false
+         * >   reorder: false
          * > ```
          */
         entity_id:
@@ -12437,8 +12452,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         sound_output: string;
@@ -12524,8 +12539,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         endpoint?: string;
@@ -12566,8 +12581,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         parameter: string;
@@ -12613,8 +12628,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code_slot: string;
@@ -12676,8 +12691,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         command_class: string;
@@ -12717,8 +12732,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         endpoint?: string;
@@ -12759,8 +12774,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         method_name: string;
@@ -12844,8 +12859,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         command_class: string;
@@ -12885,8 +12900,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         endpoint?: string;
@@ -12938,8 +12953,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         property: string;
@@ -12958,8 +12973,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         property_key?: string;
@@ -13304,8 +13319,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         meter_type?: string;
@@ -13324,8 +13339,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         value?: string;
@@ -13364,8 +13379,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         bitmask?: string;
@@ -13411,8 +13426,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         endpoint?: string;
@@ -13453,8 +13468,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         parameter: string;
@@ -13473,8 +13488,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         value: string;
@@ -13685,8 +13700,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           code_slot: string;
@@ -13705,8 +13720,8 @@ declare module "@digital-alchemy/hass" {
            *
            * > ```yaml
            * > text:
-           * >   multiple: false
            * >   multiline: false
+           * >   multiple: false
            * > ```
            */
           usercode: string;
@@ -13768,8 +13783,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         command_class: string;
@@ -13809,8 +13824,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         endpoint?: string;
@@ -13862,8 +13877,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         property: string;
@@ -13882,8 +13897,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > text:
-         * >   multiple: false
          * >   multiline: false
+         * >   multiple: false
          * > ```
          */
         property_key?: string;

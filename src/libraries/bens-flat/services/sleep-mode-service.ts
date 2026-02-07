@@ -31,6 +31,7 @@ export function SleepModeService({
     "switch.adaptive_lighting_sleep_mode_living_room",
     "switch.adaptive_lighting_sleep_mode_bathroom",
     "switch.adaptive_lighting_sleep_mode_hallway",
+    "switch.adaptive_lighting_adapt_brightness_spare_room",
   ];
 
   sleepMode.onTurnOn(async () => {
