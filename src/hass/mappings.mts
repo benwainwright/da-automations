@@ -153,7 +153,26 @@ declare module "@digital-alchemy/hass" {
       | "sensor.relative_pressure"
       | "sensor.frank_soil_moisture"
       | "sensor.ecowit_gateway_soil_moisture_1"
-      | "sensor.ecowit_gateway_soil_battery_1";
+      | "sensor.ecowit_gateway_soil_battery_1"
+      | "binary_sensor.xbox_network"
+      | "binary_sensor.xbox_network_in_game"
+      | "binary_sensor.xbox_network_subscribed_to_xbox_game_pass"
+      | "image.xbox_network_gamerpic"
+      | "image.xbox_network_now_playing"
+      | "image.xbox_network_avatar"
+      | "sensor.xbox_network_status"
+      | "sensor.xbox_network_gamerscore"
+      | "sensor.xbox_network_last_online"
+      | "sensor.xbox_network_following"
+      | "sensor.xbox_network_follower"
+      | "sensor.xbox_network_now_playing"
+      | "sensor.xbox_network_friends"
+      | "sensor.xbox_network_in_party"
+      | "sensor.xbox_network_party_join_restrictions"
+      | "media_player.xbox"
+      | "remote.xbox"
+      | "sensor.xbox_total_space_internal_storage"
+      | "sensor.xbox_free_space_internal_storage";
     _bedroom:
       | "light.bedroom_lights"
       | "climate.bedroom"
@@ -382,16 +401,6 @@ declare module "@digital-alchemy/hass" {
       | "update.slim_multi_sensor_pir_temperature_illumination_firmware_2"
       | "binary_sensor.spare_room_occupancy"
       | "sensor.spare_room_temperature";
-    _f52fe2d182fdf0d8b65c9b4b8679333c:
-      | "sensor.node_13_node_status"
-      | "button.node_13_ping"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_air_temperature"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance"
-      | "binary_sensor.slim_multi_sensor_pir_temperature_illumination_tampering_product_cover_removed"
-      | "binary_sensor.slim_multi_sensor_pir_temperature_illumination_motion_detection"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_home_security_unknown"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level"
-      | "update.slim_multi_sensor_pir_temperature_illumination_firmware";
     _4763b3e4d0103b101adafd01ffb3f194: "update.z_wave_js_update";
     _b10cea57c9d3ee00b61310eedaafba78:
       | "light.living_room_bookcase"
@@ -690,6 +699,28 @@ declare module "@digital-alchemy/hass" {
       | "sensor.frank_soil_moisture"
       | "sensor.ecowit_gateway_soil_moisture_1"
       | "sensor.ecowit_gateway_soil_battery_1";
+    _82a44fb57675466e9adefbe91835611e: "update.battery_state_card_entity_row_update";
+    _05a1c0396b6dc9cb23619da08f3d8ef5:
+      | "binary_sensor.xbox_network"
+      | "binary_sensor.xbox_network_in_game"
+      | "binary_sensor.xbox_network_subscribed_to_xbox_game_pass"
+      | "image.xbox_network_gamerpic"
+      | "image.xbox_network_now_playing"
+      | "image.xbox_network_avatar"
+      | "sensor.xbox_network_status"
+      | "sensor.xbox_network_gamerscore"
+      | "sensor.xbox_network_last_online"
+      | "sensor.xbox_network_following"
+      | "sensor.xbox_network_follower"
+      | "sensor.xbox_network_now_playing"
+      | "sensor.xbox_network_friends"
+      | "sensor.xbox_network_in_party"
+      | "sensor.xbox_network_party_join_restrictions";
+    _0554f96e834c36444419a942821e73af:
+      | "media_player.xbox"
+      | "remote.xbox"
+      | "sensor.xbox_total_space_internal_storage"
+      | "sensor.xbox_free_space_internal_storage";
   }
   export interface HassLabelMapping {
     _reviewed:
@@ -735,14 +766,18 @@ declare module "@digital-alchemy/hass" {
       | "switch.adaptive_lighting_sleep_mode_spare_room"
       | "switch.adaptive_lighting_adapt_color_spare_room"
       | "switch.adaptive_lighting_adapt_brightness_spare_room"
-      | "switch.adaptive_lighting_spare_room";
+      | "switch.adaptive_lighting_spare_room"
+      | "media_player.xbox"
+      | "remote.xbox";
     _requires_internet:
       | "tts.home_assistant_cloud"
       | "tts.google_translate_en_com"
       | "update.adaptive_lighting_update"
       | "remote.bens_apple_tv"
       | "media_player.apple_tv"
-      | "switch.autoplay_music";
+      | "switch.autoplay_music"
+      | "media_player.xbox"
+      | "remote.xbox";
     _local:
       | "switch.adaptive_lighting_hallway"
       | "switch.adaptive_lighting_living_room"
@@ -931,15 +966,6 @@ declare module "@digital-alchemy/hass" {
       | "update.z_stick_gen5_usb_controller_firmware"
       | "sensor.node_12_node_status"
       | "button.node_12_ping"
-      | "sensor.node_13_node_status"
-      | "button.node_13_ping"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_air_temperature"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance"
-      | "binary_sensor.slim_multi_sensor_pir_temperature_illumination_tampering_product_cover_removed"
-      | "binary_sensor.slim_multi_sensor_pir_temperature_illumination_motion_detection"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_home_security_unknown"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level"
-      | "update.slim_multi_sensor_pir_temperature_illumination_firmware"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance_2"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level_2"
       | "update.slim_multi_sensor_pir_temperature_illumination_firmware_2"
@@ -960,7 +986,8 @@ declare module "@digital-alchemy/hass" {
       | "update.digital_alchemy_synapse_update"
       | "update.adaptive_lighting_update"
       | "update.scheduler_component_update"
-      | "update.scheduler_card_update";
+      | "update.scheduler_card_update"
+      | "update.battery_state_card_entity_row_update";
     _synapse:
       | "binary_sensor.bens_flat_online"
       | "switch.blinds_default_closed"
@@ -1145,6 +1172,26 @@ declare module "@digital-alchemy/hass" {
       | "sensor.frank_soil_moisture"
       | "sensor.ecowit_gateway_soil_moisture_1"
       | "sensor.ecowit_gateway_soil_battery_1";
+    _xbox:
+      | "binary_sensor.xbox_network"
+      | "binary_sensor.xbox_network_in_game"
+      | "binary_sensor.xbox_network_subscribed_to_xbox_game_pass"
+      | "image.xbox_network_gamerpic"
+      | "image.xbox_network_now_playing"
+      | "image.xbox_network_avatar"
+      | "sensor.xbox_network_status"
+      | "sensor.xbox_network_gamerscore"
+      | "sensor.xbox_network_last_online"
+      | "sensor.xbox_network_following"
+      | "sensor.xbox_network_follower"
+      | "sensor.xbox_network_now_playing"
+      | "sensor.xbox_network_friends"
+      | "sensor.xbox_network_in_party"
+      | "sensor.xbox_network_party_join_restrictions"
+      | "media_player.xbox"
+      | "remote.xbox"
+      | "sensor.xbox_total_space_internal_storage"
+      | "sensor.xbox_free_space_internal_storage";
   }
   export interface HassUniqueIdMapping {
     "01KGNB1SM9Q5V950Y0CGGYJ87D-solar_rising": "binary_sensor.sun_solar_rising";
@@ -1338,16 +1385,6 @@ declare module "@digital-alchemy/hass" {
     "3313780416.12.statistics_rtt": "sensor.node_12_round_trip_time";
     "3313780416.12.statistics_rssi": "sensor.node_12_signal_strength";
     "3313780416.12.statistics_last_seen": "sensor.node_12_last_seen";
-    "3313780416.13.node_status": "sensor.node_13_node_status";
-    "3313780416.13.ping": "button.node_13_ping";
-    "3313780416.13.statistics_commands_rx": "sensor.node_13_successful_commands_rx";
-    "3313780416.13.statistics_commands_tx": "sensor.node_13_successful_commands_tx";
-    "3313780416.13.statistics_commands_dropped_rx": "sensor.node_13_commands_dropped_rx";
-    "3313780416.13.statistics_commands_dropped_tx": "sensor.node_13_commands_dropped_tx";
-    "3313780416.13.statistics_timeout_response": "sensor.node_13_timed_out_responses";
-    "3313780416.13.statistics_rtt": "sensor.node_13_round_trip_time";
-    "3313780416.13.statistics_rssi": "sensor.node_13_signal_strength";
-    "3313780416.13.statistics_last_seen": "sensor.node_13_last_seen";
     core_zwave_js_state: "binary_sensor.z_wave_js_running";
     core_zwave_js_version: "sensor.z_wave_js_version";
     core_zwave_js_version_latest: "sensor.z_wave_js_newest_version";
@@ -1444,40 +1481,6 @@ declare module "@digital-alchemy/hass" {
     "0x001788010cd84294_illuminance_zigbee2mqtt": "sensor.hallway_illuminance";
     "0x001788010cd84294_linkquality_zigbee2mqtt": "sensor.0x001788010cd84294_linkquality";
     "0x001788010cd84294_update_zigbee2mqtt": "update.hallway";
-    "3313780416.13-48-0-Motion": "binary_sensor.slim_multi_sensor_pir_temperature_illumination_sensor_state_motion";
-    "3313780416.13-48-0-Tamper": "binary_sensor.slim_multi_sensor_pir_temperature_illumination_sensor_state_tamper";
-    "3313780416.13-49-0-Air temperature": "sensor.slim_multi_sensor_pir_temperature_illumination_air_temperature";
-    "3313780416.13-49-0-Illuminance": "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance";
-    "3313780416.13-112-0-2": "number.slim_multi_sensor_pir_temperature_illumination_basic_set_level";
-    "3313780416.13-112-0-3": "number.slim_multi_sensor_pir_temperature_illumination_pir_sensitivity";
-    "3313780416.13-112-0-4": "number.slim_multi_sensor_pir_temperature_illumination_light_threshold";
-    "3313780416.13-112-0-5-2": "select.slim_multi_sensor_pir_temperature_illumination_test_mode";
-    "3313780416.13-112-0-5-8": "select.slim_multi_sensor_pir_temperature_illumination_temperature_scale";
-    "3313780416.13-112-0-5-16": "select.slim_multi_sensor_pir_temperature_illumination_illumination_report_on_trigger";
-    "3313780416.13-112-0-5-32": "select.slim_multi_sensor_pir_temperature_illumination_temperature_report_on_trigger";
-    "3313780416.13-112-0-6": "select.slim_multi_sensor_pir_temperature_illumination_pir_integrate_illumination";
-    "3313780416.13-112-0-7-2": "select.slim_multi_sensor_pir_temperature_illumination_send_motion_off_report";
-    "3313780416.13-112-0-7-4": "select.slim_multi_sensor_pir_temperature_illumination_pir_super_sensitivity_mode";
-    "3313780416.13-112-0-7-16": "select.slim_multi_sensor_pir_temperature_illumination_notification_type";
-    "3313780416.13-112-0-7-32": "select.slim_multi_sensor_pir_temperature_illumination_multi_command_encapsulated_auto_reports";
-    "3313780416.13-112-0-7-64": "select.slim_multi_sensor_pir_temperature_illumination_report_battery_state_when_triggered";
-    "3313780416.13-112-0-8": "number.slim_multi_sensor_pir_temperature_illumination_pir_re_detect_interval_time";
-    "3313780416.13-112-0-9": "number.slim_multi_sensor_pir_temperature_illumination_turn_off_light_time";
-    "3313780416.13-112-0-10": "number.slim_multi_sensor_pir_temperature_illumination_auto_report_battery_time";
-    "3313780416.13-112-0-12": "number.slim_multi_sensor_pir_temperature_illumination_auto_report_illumination_time";
-    "3313780416.13-112-0-13": "number.slim_multi_sensor_pir_temperature_illumination_auto_report_temperature_time";
-    "3313780416.13-112-0-20": "number.slim_multi_sensor_pir_temperature_illumination_auto_report_tick_interval";
-    "3313780416.13-112-0-21": "number.slim_multi_sensor_pir_temperature_illumination_temperature_differential_report";
-    "3313780416.13-112-0-22": "number.slim_multi_sensor_pir_temperature_illumination_illumination_differential_report";
-    "3313780416.13-113-0-Home Security-Cover status.notification_idle": "button.slim_multi_sensor_pir_temperature_illumination_idle_home_security_cover_status";
-    "3313780416.13-113-0-Home Security-Cover status.3": "binary_sensor.slim_multi_sensor_pir_temperature_illumination_tampering_product_cover_removed";
-    "3313780416.13-113-0-Home Security-Motion sensor status.notification_idle": "button.slim_multi_sensor_pir_temperature_illumination_idle_home_security_motion_sensor_status";
-    "3313780416.13-113-0-Home Security-Motion sensor status.8": "binary_sensor.slim_multi_sensor_pir_temperature_illumination_motion_detection";
-    "3313780416.13-113-0-alarmType": "sensor.slim_multi_sensor_pir_temperature_illumination_alarm_type";
-    "3313780416.13-113-0-alarmLevel": "sensor.slim_multi_sensor_pir_temperature_illumination_alarm_level";
-    "3313780416.13-113-0-Home Security-unknown": "sensor.slim_multi_sensor_pir_temperature_illumination_home_security_unknown";
-    "3313780416.13-128-0-level": "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level";
-    "3313780416.13.firmware_update": "update.slim_multi_sensor_pir_temperature_illumination_firmware";
     "3313780416.12-48-0-Tamper": "binary_sensor.slim_multi_sensor_pir_temperature_illumination_sensor_state_tamper_2";
     "3313780416.12-49-0-Illuminance": "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance_2";
     "3313780416.12-112-0-2": "number.slim_multi_sensor_pir_temperature_illumination_basic_set_level_2";
@@ -1856,6 +1859,24 @@ declare module "@digital-alchemy/hass" {
     "EE03FB32A454775BE41A2D3E3E4E4E25-soilmoisture3": "sensor.frank_soil_moisture";
     "EE03FB32A454775BE41A2D3E3E4E4E25-soilmoisture1": "sensor.ecowit_gateway_soil_moisture_1";
     "EE03FB32A454775BE41A2D3E3E4E4E25-soilbatt1": "sensor.ecowit_gateway_soil_battery_1";
+    "256292682": "update.battery_state_card_entity_row_update";
+    "2535447166467507_online": "binary_sensor.xbox_network";
+    "2535447166467507_in_game": "binary_sensor.xbox_network_in_game";
+    "2535447166467507_has_game_pass": "binary_sensor.xbox_network_subscribed_to_xbox_game_pass";
+    "2535447166467507_gamerpic": "image.xbox_network_gamerpic";
+    "2535447166467507_now_playing": "image.xbox_network_now_playing";
+    "2535447166467507_avatar": "image.xbox_network_avatar";
+    "2535447166467507_status": "sensor.xbox_network_status";
+    "2535447166467507_gamer_score": "sensor.xbox_network_gamerscore";
+    "2535447166467507_last_online": "sensor.xbox_network_last_online";
+    "2535447166467507_following": "sensor.xbox_network_following";
+    "2535447166467507_follower": "sensor.xbox_network_follower";
+    "2535447166467507_friends": "sensor.xbox_network_friends";
+    "2535447166467507_in_party": "sensor.xbox_network_in_party";
+    "2535447166467507_join_restrictions": "sensor.xbox_network_party_join_restrictions";
+    F4000F4150AF7487: "media_player.xbox";
+    "F4000F4150AF7487_A89ECE52-7E8E-444F-BBD0-C68B76C2ECA4_total_storage": "sensor.xbox_total_space_internal_storage";
+    "F4000F4150AF7487_A89ECE52-7E8E-444F-BBD0-C68B76C2ECA4_free_storage": "sensor.xbox_free_space_internal_storage";
   }
   export interface HassZoneMapping {}
   export interface HassFloorMapping {}
@@ -1933,7 +1954,6 @@ declare module "@digital-alchemy/hass" {
       | "update.home_assistant_operating_system_update"
       | "update.z_stick_gen5_usb_controller_firmware"
       | "update.slim_multi_sensor_pir_temperature_illumination_firmware_2"
-      | "update.slim_multi_sensor_pir_temperature_illumination_firmware"
       | "update.living_room_sensor_firmware"
       | "update.shelly_plus_pm_firmware"
       | "update.shellyplus1pm_a0dd6c2b6cf4_firmware"
@@ -1966,7 +1986,8 @@ declare module "@digital-alchemy/hass" {
       | "update.living_room_tv_wall"
       | "update.bedroom_sensor"
       | "update.bathroom_sensor"
-      | "update.shellyplus1pm_a0dd6c2b3a6c_firmware";
+      | "update.shellyplus1pm_a0dd6c2b3a6c_firmware"
+      | "update.battery_state_card_entity_row_update";
     conversation: "conversation.home_assistant" | "conversation.openai_conversation";
     event: "event.backup_automatic_backup";
     sensor:
@@ -2012,16 +2033,11 @@ declare module "@digital-alchemy/hass" {
       | "sensor.imac_pro_audio_output"
       | "sensor.z_stick_gen5_usb_controller_status"
       | "sensor.node_12_node_status"
-      | "sensor.node_13_node_status"
       | "sensor.living_room_sensor_node_status"
       | "sensor.bedroom_heater_node_status"
       | "sensor.spare_room_temperature"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance_2"
       | "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level_2"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_air_temperature"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_home_security_unknown"
-      | "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level"
       | "sensor.living_room_temperature"
       | "sensor.living_room_illumination"
       | "sensor.living_room_sensor_battery_level"
@@ -2072,7 +2088,18 @@ declare module "@digital-alchemy/hass" {
       | "sensor.relative_pressure"
       | "sensor.frank_soil_moisture"
       | "sensor.ecowit_gateway_soil_moisture_1"
-      | "sensor.ecowit_gateway_soil_battery_1";
+      | "sensor.ecowit_gateway_soil_battery_1"
+      | "sensor.xbox_network_status"
+      | "sensor.xbox_network_gamerscore"
+      | "sensor.xbox_network_last_online"
+      | "sensor.xbox_network_following"
+      | "sensor.xbox_network_follower"
+      | "sensor.xbox_network_now_playing"
+      | "sensor.xbox_network_friends"
+      | "sensor.xbox_network_in_party"
+      | "sensor.xbox_network_party_join_restrictions"
+      | "sensor.xbox_total_space_internal_storage"
+      | "sensor.xbox_free_space_internal_storage";
     binary_sensor:
       | "binary_sensor.remote_ui"
       | "binary_sensor.bens_imac_pro_camera_in_use"
@@ -2081,8 +2108,6 @@ declare module "@digital-alchemy/hass" {
       | "binary_sensor.imac_active"
       | "binary_sensor.imac_audio_input_in_use"
       | "binary_sensor.spare_room_occupancy"
-      | "binary_sensor.slim_multi_sensor_pir_temperature_illumination_tampering_product_cover_removed"
-      | "binary_sensor.slim_multi_sensor_pir_temperature_illumination_motion_detection"
       | "binary_sensor.living_room_occupancy"
       | "binary_sensor.shelly_plus_pm_overheating"
       | "binary_sensor.shelly_plus_pm_overpowering"
@@ -2112,7 +2137,10 @@ declare module "@digital-alchemy/hass" {
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overpowering"
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overvoltage"
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overcurrent"
-      | "binary_sensor.flat_occupied";
+      | "binary_sensor.flat_occupied"
+      | "binary_sensor.xbox_network"
+      | "binary_sensor.xbox_network_in_game"
+      | "binary_sensor.xbox_network_subscribed_to_xbox_game_pass";
     stt: "stt.home_assistant_cloud";
     tts: "tts.home_assistant_cloud" | "tts.google_translate_en_com" | "tts.piper";
     light:
@@ -2150,7 +2178,6 @@ declare module "@digital-alchemy/hass" {
     button:
       | "button.smart_lock_pro_identify"
       | "button.node_12_ping"
-      | "button.node_13_ping"
       | "button.living_room_sensor_ping"
       | "button.bedroom_heater_ping"
       | "button.living_room_blinds_my_position"
@@ -2210,7 +2237,8 @@ declare module "@digital-alchemy/hass" {
       | "media_player.192_168_1_120"
       | "media_player.living_room"
       | "media_player.bedroom"
-      | "media_player.flat";
+      | "media_player.flat"
+      | "media_player.xbox";
     number:
       | "number.hallway_occupancy_timeout"
       | "number.bedroom_sensor_occupancy_timeout"
@@ -2224,6 +2252,10 @@ declare module "@digital-alchemy/hass" {
       | "number.living_room_treble"
       | "number.living_room_surround_level"
       | "number.living_room_music_surround_level";
-    remote: "remote.bens_apple_tv";
+    remote: "remote.bens_apple_tv" | "remote.xbox";
+    image:
+      | "image.xbox_network_gamerpic"
+      | "image.xbox_network_now_playing"
+      | "image.xbox_network_avatar";
   }
 }

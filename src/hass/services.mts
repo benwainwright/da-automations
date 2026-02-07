@@ -4557,7 +4557,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGVT0Z9WJRH513E7CS86EBA4"
           | "01KGVV88BYMVDGDK15VG0D9KYR"
           | "01KGVWA098JKVPMQCCR0G9DQQG"
-          | "01KGVXDX214ECNJB1KHJFSJC6W";
+          | "01KGVXDX214ECNJB1KHJFSJC6W"
+          | "01KGWE7QF985TGXFP8JS847MCQ";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -4839,6 +4840,51 @@ declare module "@digital-alchemy/hass" {
            * > ```
            */
           entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
+    // # MARK: image
+    image: {
+      /**
+       * ### snapshot
+       *
+       * >
+       */
+      snapshot: (
+        service_data: {
+          /**
+           * ## filename
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "filename": "/tmp/image_snapshot.jpg"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          filename: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - image
+           * > ```
+           */
+          entity_id: PICK_ENTITY<"image"> | PICK_ENTITY<"image">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7077,7 +7123,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGVT0Z9WJRH513E7CS86EBA4"
           | "01KGVV88BYMVDGDK15VG0D9KYR"
           | "01KGVWA098JKVPMQCCR0G9DQQG"
-          | "01KGVXDX214ECNJB1KHJFSJC6W";
+          | "01KGVXDX214ECNJB1KHJFSJC6W"
+          | "01KGWE7QF985TGXFP8JS847MCQ";
         /**
          * ## favorite
          *
@@ -7576,7 +7623,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGVT0Z9WJRH513E7CS86EBA4"
           | "01KGVV88BYMVDGDK15VG0D9KYR"
           | "01KGVWA098JKVPMQCCR0G9DQQG"
-          | "01KGVXDX214ECNJB1KHJFSJC6W";
+          | "01KGVXDX214ECNJB1KHJFSJC6W"
+          | "01KGWE7QF985TGXFP8JS847MCQ";
         /**
          * ## library_only
          *
@@ -8222,7 +8270,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGVT0Z9WJRH513E7CS86EBA4"
           | "01KGVV88BYMVDGDK15VG0D9KYR"
           | "01KGVWA098JKVPMQCCR0G9DQQG"
-          | "01KGVXDX214ECNJB1KHJFSJC6W";
+          | "01KGVXDX214ECNJB1KHJFSJC6W"
+          | "01KGWE7QF985TGXFP8JS847MCQ";
         /**
          * ## filenames
          *
@@ -8325,7 +8374,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGVT0Z9WJRH513E7CS86EBA4"
           | "01KGVV88BYMVDGDK15VG0D9KYR"
           | "01KGVWA098JKVPMQCCR0G9DQQG"
-          | "01KGVXDX214ECNJB1KHJFSJC6W";
+          | "01KGVXDX214ECNJB1KHJFSJC6W"
+          | "01KGWE7QF985TGXFP8JS847MCQ";
         /**
          * ## prompt
          *

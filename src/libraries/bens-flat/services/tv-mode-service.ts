@@ -9,16 +9,16 @@ export function TVModeService({ hass, synapse, context, logger }: TServiceParams
     icon: "mdi:television",
   });
 
-  // const xboxInGame = hass.refBy.id("binary_sensor.sordidhydra4706_in_game");
+  const xboxInGame = hass.refBy.id("binary_sensor.xbox_network_in_game");
   const appleTv = hass.refBy.id("media_player.apple_tv");
 
-  // xboxInGame.onUpdate(async (oldState, newState) => {
-  //   if (oldState.state === "off" && newState.state === "on") {
-  //     await tvMode.getEntity().turn_on();
-  //   } else if (oldState.state === "on" && newState.state === "off") {
-  //     await tvMode.getEntity().turn_off();
-  //   }
-  // });
+  xboxInGame.onUpdate(async (oldState, newState) => {
+    if (oldState.state === "off" && newState.state === "on") {
+      await tvMode.getEntity().turn_on();
+    } else if (oldState.state === "on" && newState.state === "off") {
+      await tvMode.getEntity().turn_off();
+    }
+  });
 
   // ps5Console.onUpdate(async (oldState, newState) => {
   //   if (oldState.state === "off" && newState.state === "on") {
