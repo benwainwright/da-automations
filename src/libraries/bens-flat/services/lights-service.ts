@@ -66,7 +66,7 @@ export function LightsService({
     const theSensor = hass.refBy.id(sensorId);
 
     theSensor.onUpdate(async (newState) => {
-      logger.info(`${sensorId} sensor triggered`);
+      logger.trace(`${sensorId} sensor triggered`);
       if (!newState) {
         return;
       }
