@@ -43,11 +43,15 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
 
       if (getResponse.data) {
         logger.info(`Found, deleting...`);
-        await github.rest.repos.deleteWebhook({
-          repo,
-          owner,
-          hook_id: id,
-        });
+        try {
+          await github.rest.repos.deleteWebhook({
+            repo,
+            owner,
+            hook_id: id,
+          });
+        } catch {
+          // NOOP - doesn't matter if the webhook has allready been deleted
+        }
       }
     }
   };
