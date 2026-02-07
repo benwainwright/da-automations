@@ -14,6 +14,9 @@ export function BlindsService({
     name: "Blinds default closed",
     unique_id: "blinds_default_closed_switch",
     suggested_object_id: "blinds_default_closed",
+    attributes: {
+      area: "living_room",
+    },
     context,
   });
 

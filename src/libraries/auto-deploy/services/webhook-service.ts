@@ -39,19 +39,13 @@ export function WebhookService({ hass, logger }: TServiceParams) {
     };
     await hass.socket.sendMessage(data);
 
-    const hasId = (thing: unknown): thing is { id: number } => {
-      return Boolean(
-        thing && typeof thing === "object" && "id" in thing && typeof thing.id === "number",
-      );
-    };
-
     let registered = false;
 
     hass.socket.registerMessageHandler<{ id: number; type: "result" }>("result", async (result) => {
       if (result.id === data.id && !registered) {
         logger.info(`Websocket registered at /api/websocket/${config.webhookId}`);
         hass.socket.registerMessageHandler<WebhookTriggerEvent>("event", async (data) => {
-          if (hasId(data) && data.id === result.id) {
+          if (data.id === result.id) {
             const { json } = data.event.variables.trigger;
             if (!json) {
               logger.info(`Webhook payload did not contain valid JSON`);
