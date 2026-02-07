@@ -12,6 +12,7 @@ import {
   PresenceDetectionService,
   SleepModeService,
   TVModeService,
+  NotificationService,
 } from "./services/index.ts";
 
 export const LIB_BENS_FLAT = CreateLibrary({
@@ -27,6 +28,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
     presence: PresenceDetectionService,
     lights: LightsService,
     sleepMode: SleepModeService,
+    notify: NotificationService,
     core: CoreModule,
     helpers: HelpersService,
   },

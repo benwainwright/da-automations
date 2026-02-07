@@ -40,7 +40,7 @@ export function CoreModule({ bens_flat, lifecycle }: TServiceParams) {
       timeout: "2m",
     });
 
-    presence.flatIsOccupied.getEntity().onUpdate(async (newState, oldState) => {
+    presence.flatIsOccupiedSwitch.getEntity().onUpdate(async (newState, oldState) => {
       if (!newState) return;
       if (oldState.state === "on" && newState.state === "off") {
         await lights.turnOffAll();

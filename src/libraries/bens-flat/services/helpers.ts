@@ -20,7 +20,7 @@ export function HelpersService({ hass, scheduler }: TServiceParams) {
   };
 
   let clear: RemoveCallback | undefined;
-  const setDebouncedInterval = (callback: () => void | Promise<void>, offset: TOffset) => {
+  const setDebouncedTimeout = (callback: () => void | Promise<void>, offset: TOffset) => {
     clear?.remove();
     clear = scheduler.setTimeout(callback, offset);
   };
@@ -30,6 +30,6 @@ export function HelpersService({ hass, scheduler }: TServiceParams) {
     turnOnAll,
     allAreas,
     fiveAm,
-    setDebouncedInterval,
+    setDebouncedTimeout,
   };
 }
