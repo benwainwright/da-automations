@@ -19,6 +19,13 @@ export function CoreModule({ bens_flat, lifecycle }: TServiceParams) {
     });
 
     lights.setupMotionTrigger({
+      switchName: "Spare room motion sensor",
+      area: "spare_room",
+      sensorId: "binary_sensor.spare_room_occupancy",
+      timeout: "5m",
+    });
+
+    lights.setupMotionTrigger({
       switchName: "Bedroom motion sensor",
       area: "bedroom",
       blockSwitches: [sleepMode.sleepModeSwitch.getEntity().entity_id],
