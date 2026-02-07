@@ -34,24 +34,24 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
     });
     const id = await getHookId(webhookId);
     if (id) {
-      logger.info(`Checking for existing webhook`);
-      const getResponse = await github.rest.repos.getWebhook({
-        repo,
-        owner,
-        hook_id: id,
-      });
+      try {
+        logger.info(`Checking for existing webhook`);
+        const getResponse = await github.rest.repos.getWebhook({
+          repo,
+          owner,
+          hook_id: id,
+        });
 
-      if (getResponse.data) {
-        logger.info(`Found, deleting...`);
-        try {
+        if (getResponse.data) {
+          logger.info(`Found, deleting...`);
           await github.rest.repos.deleteWebhook({
             repo,
             owner,
             hook_id: id,
           });
-        } catch {
-          // NOOP - doesn't matter if the webhook has allready been deleted
         }
+      } catch {
+        // NOOP - doesn't matter if the webhook has allready been deleted
       }
     }
   };
