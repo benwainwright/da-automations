@@ -6,3 +6,4 @@ previous_deploy.tar.gz
 .env
 fixtures.json
 synapse_storage.db
+hooks.json

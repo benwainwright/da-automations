@@ -9,6 +9,7 @@ export function MonitorService({
   logger,
 }: TServiceParams) {
   const onPush = async (data: PushEvent) => {
+    logger.info(`Push event received`);
     if (data.ref === "refs/heads/main") {
       logger.info(`Someone pushed to main. Deploying the latest version`);
       await deploy.deploy();

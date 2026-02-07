@@ -70,6 +70,7 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
     logger.info(`Creating repository webhook for ${url}`);
 
     await deleteHookIfItExists(webhookId, owner, repo);
+
     const github = new Octokit({
       auth: config.auto_deploy.GITHUB_PAT,
     });
