@@ -261,8 +261,8 @@ declare module "@digital-alchemy/hass" {
          * > entity:
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id: PICK_ENTITY<"switch"> | PICK_ENTITY<"switch">[];
@@ -847,8 +847,8 @@ declare module "@digital-alchemy/hass" {
          * >         - ai_task
          * >       supported_features:
          * >         - 1
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: PICK_ENTITY | PICK_ENTITY[];
@@ -943,8 +943,8 @@ declare module "@digital-alchemy/hass" {
          * >         - ai_task
          * >       supported_features:
          * >         - 4
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id: PICK_ENTITY | PICK_ENTITY[];
@@ -1438,8 +1438,8 @@ declare module "@digital-alchemy/hass" {
          * >         - assist_satellite
          * >       supported_features:
          * >         - 2
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id: PICK_ENTITY | PICK_ENTITY[];
@@ -1847,8 +1847,8 @@ declare module "@digital-alchemy/hass" {
            * > entity:
            * >   domain:
            * >     - media_player
-           * >   multiple: false
            * >   reorder: false
+           * >   multiple: false
            * > ```
            */
           media_player: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
@@ -3517,8 +3517,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: never | never[];
@@ -3539,8 +3539,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: never | never[];
@@ -3561,8 +3561,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: never | never[];
@@ -4558,7 +4558,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGVV88BYMVDGDK15VG0D9KYR"
           | "01KGVWA098JKVPMQCCR0G9DQQG"
           | "01KGVXDX214ECNJB1KHJFSJC6W"
-          | "01KGWE7QF985TGXFP8JS847MCQ";
+          | "01KGWE7QF985TGXFP8JS847MCQ"
+          | "01KGWJE8X722GR755ZKJA81EY8";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -5888,8 +5889,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > entity:
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: PICK_ENTITY | PICK_ENTITY[];
@@ -7124,7 +7125,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGVV88BYMVDGDK15VG0D9KYR"
           | "01KGVWA098JKVPMQCCR0G9DQQG"
           | "01KGVXDX214ECNJB1KHJFSJC6W"
-          | "01KGWE7QF985TGXFP8JS847MCQ";
+          | "01KGWE7QF985TGXFP8JS847MCQ"
+          | "01KGWJE8X722GR755ZKJA81EY8";
         /**
          * ## favorite
          *
@@ -7624,7 +7626,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGVV88BYMVDGDK15VG0D9KYR"
           | "01KGVWA098JKVPMQCCR0G9DQQG"
           | "01KGVXDX214ECNJB1KHJFSJC6W"
-          | "01KGWE7QF985TGXFP8JS847MCQ";
+          | "01KGWE7QF985TGXFP8JS847MCQ"
+          | "01KGWJE8X722GR755ZKJA81EY8";
         /**
          * ## library_only
          *
@@ -7753,8 +7756,8 @@ declare module "@digital-alchemy/hass" {
            * >   domain:
            * >     - media_player
            * >   integration: music_assistant
-           * >   multiple: false
            * >   reorder: false
+           * >   multiple: false
            * > ```
            */
           source_player?:
@@ -8271,7 +8274,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGVV88BYMVDGDK15VG0D9KYR"
           | "01KGVWA098JKVPMQCCR0G9DQQG"
           | "01KGVXDX214ECNJB1KHJFSJC6W"
-          | "01KGWE7QF985TGXFP8JS847MCQ";
+          | "01KGWE7QF985TGXFP8JS847MCQ"
+          | "01KGWJE8X722GR755ZKJA81EY8";
         /**
          * ## filenames
          *
@@ -8375,7 +8379,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGVV88BYMVDGDK15VG0D9KYR"
           | "01KGVWA098JKVPMQCCR0G9DQQG"
           | "01KGVXDX214ECNJB1KHJFSJC6W"
-          | "01KGWE7QF985TGXFP8JS847MCQ";
+          | "01KGWE7QF985TGXFP8JS847MCQ"
+          | "01KGWJE8X722GR755ZKJA81EY8";
         /**
          * ## prompt
          *
@@ -9535,8 +9540,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -9618,8 +9623,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -9757,8 +9762,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -9791,8 +9796,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -10576,8 +10581,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: sonos
          * >   domain:
          * >     - media_player
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?:
@@ -10656,8 +10661,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: sonos
          * >   domain:
          * >     - media_player
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?:
@@ -11646,8 +11651,8 @@ declare module "@digital-alchemy/hass" {
            * > entity:
            * >   domain:
            * >     - media_player
-           * >   multiple: false
            * >   reorder: false
+           * >   multiple: false
            * > ```
            */
           media_player_entity_id: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
@@ -12393,8 +12398,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: webostv
          * >   domain:
          * >     - media_player
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -12437,8 +12442,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: webostv
          * >   domain:
          * >     - media_player
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -12480,8 +12485,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: webostv
          * >   domain:
          * >     - media_player
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
