@@ -2,13 +2,13 @@ import { PICK_ENTITY, TAreaId } from "@digital-alchemy/hass";
 import { testRunner } from "@test-helpers";
 import { expect, spyOn, test } from "bun:test";
 
-test.each<
-  [
-    occupancySensor: PICK_ENTITY<"binary_sensor">,
-    enableSwitch: PICK_ENTITY<"switch">,
-    area: TAreaId,
-  ]
->([
+type MotionSensorTestConfig = [
+  occupancySensor: PICK_ENTITY<"binary_sensor">,
+  enableSwitch: PICK_ENTITY<"switch">,
+  area: TAreaId,
+];
+
+test.each<MotionSensorTestConfig>([
   ["binary_sensor.bathroom_occupancy", "switch.bathroom_motion_sensor", "bathroom"],
   ["binary_sensor.living_room_occupancy", "switch.living_room_motion_sensor", "living_room"],
   ["binary_sensor.hallway_occupancy", "switch.halllway_motion_sensor", "hallway"],
@@ -40,13 +40,7 @@ test.each<
   },
 );
 
-test.each<
-  [
-    occupancySensor: PICK_ENTITY<"binary_sensor">,
-    enableSwitch: PICK_ENTITY<"switch">,
-    area: TAreaId,
-  ]
->([
+test.each<MotionSensorTestConfig>([
   ["binary_sensor.bathroom_occupancy", "switch.bathroom_motion_sensor", "bathroom"],
   ["binary_sensor.living_room_occupancy", "switch.living_room_motion_sensor", "living_room"],
   ["binary_sensor.hallway_occupancy", "switch.halllway_motion_sensor", "hallway"],
