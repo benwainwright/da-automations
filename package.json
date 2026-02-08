@@ -28,7 +28,7 @@
     "@octokit/webhooks-types": "^7.6.1",
     "@types/bun": "^1.3.8",
     "dayjs": "1.11.13",
-    "dotenv": "16.5.0",
+    "dotenv": "17.2.4",
     "execa": "^9.6.1",
     "ini": "5.0.0",
     "isomorphic-git": "^1.36.3",
