@@ -1,4 +1,5 @@
 import { dirname, join } from "node:path";
+import { execa } from "execa";
 
 export const generateHassFixtures = async () => {
   const path = Bun.resolveSync("@digital-alchemy/hass", import.meta.dir);
@@ -7,5 +8,6 @@ export const generateHassFixtures = async () => {
 
   process.env["LOG_LEVEL"] = "info";
 
-  await import(thePath);
+  await execa`bun run ${thePath}`;
+  console.log(`Generated fixtures.json`);
 };

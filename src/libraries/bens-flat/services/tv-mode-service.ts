@@ -14,6 +14,7 @@ export function TVModeService({ hass, synapse, context, logger }: TServiceParams
   const ps5NowPlaying = hass.refBy.id("sensor.ps5_now_playing");
 
   xboxInGame.onUpdate(async (newState, oldState) => {
+    if (!newState) return;
     if (oldState.state === "off" && newState.state === "on") {
       await tvMode.getEntity().turn_on();
     } else if (oldState.state === "on" && newState.state === "off") {
@@ -22,6 +23,7 @@ export function TVModeService({ hass, synapse, context, logger }: TServiceParams
   });
 
   ps5NowPlaying.onUpdate(async (newState, oldState) => {
+    if (!newState) return;
     if (oldState.state === "unknown" && newState.state !== "unknown") {
       await tvMode.getEntity().turn_on();
     } else if (oldState.state !== "unknown" && newState.state === "unknown") {

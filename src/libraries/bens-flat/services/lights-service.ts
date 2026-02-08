@@ -66,7 +66,6 @@ export function LightsService({
     const theSensor = hass.refBy.id(sensorId);
 
     theSensor.onUpdate(async (newState) => {
-      logger.trace(`${sensorId} sensor triggered`);
       if (!newState) {
         return;
       }
@@ -74,7 +73,7 @@ export function LightsService({
         ?.map(hass.refBy.id)
         .some((theSwitch) => theSwitch.state === "on");
 
-      if (newState.state === "on" && theSwitch.is_on && !anyBlockSwitchIsOn) {
+      if (newState.state === "on" && theSwitch.getEntity().state === "on" && !anyBlockSwitchIsOn) {
         logger.info(`Turning ${area} lights on`);
         remove?.remove();
         await hass.call.light.turn_on({ area_id: area });
