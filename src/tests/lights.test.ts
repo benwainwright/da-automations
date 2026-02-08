@@ -52,7 +52,7 @@ test.each<
   ["binary_sensor.hallway_occupancy", "switch.halllway_motion_sensor", "hallway"],
   ["binary_sensor.bedroom_occupancy", "switch.bedroom_motion_sensor", "bedroom"],
 ])(
-  "when %s switches on and %s is off then lights turn on in the %s",
+  "when %s switches on and %s is off then no lights turn on",
   async (occupancySensor, enableSwitch) => {
     await testRunner
       .bootLibrariesFirst()
