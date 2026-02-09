@@ -5,7 +5,7 @@ export interface NotifyConfig {
   message: string;
 }
 
-export function NotificationService({ hass }: TServiceParams) {
+export function NotificationService({ hass, bens_flat: { lights } }: TServiceParams) {
   const tv = hass.refBy.id("media_player.tv");
 
   const bedroomSonos = hass.refBy.id("media_player.bedroom_sonos");
@@ -38,6 +38,7 @@ export function NotificationService({ hass }: TServiceParams) {
 
   const notifyCritical = async ({ message, title }: NotifyConfig) => {
     if (tv.state === "on") {
+      await lights.flash();
       hass.call.notify.tv({
         message,
         title,

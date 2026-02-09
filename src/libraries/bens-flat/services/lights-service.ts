@@ -45,6 +45,13 @@ export function LightsService({
     await helpers.turnOffAll(lights.map((entity) => entity.entity_id));
   };
 
+  const flash = async () => {
+    await hass.call.light.turn_on({
+      effect: "okay",
+      area_id: ["bathroom", "bedroom", "hallway", "bathroom", "spare_room"],
+    });
+  };
+
   const setupMotionTrigger = ({
     switchName,
     sensorId,
@@ -85,5 +92,5 @@ export function LightsService({
     });
   };
 
-  return { setupMotionTrigger, turnOffAll };
+  return { setupMotionTrigger, turnOffAll, flash };
 }
