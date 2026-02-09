@@ -1,6 +1,6 @@
 import { TServiceParams } from "@digital-alchemy/core";
 
-interface NotifyConfig {
+export interface NotifyConfig {
   title: string;
   message: string;
 }

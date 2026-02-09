@@ -1,31 +1,35 @@
 import { TServiceParams } from "@digital-alchemy/core";
-import { ByIdProxy, PICK_ENTITY } from "@digital-alchemy/hass";
+import { NotifyConfig } from "./notification.ts";
 
-type BatteryEntity = Omit<ByIdProxy<PICK_ENTITY<"sensor">>, "attributes"> & {
-  attributes: Extract<ByIdProxy<PICK_ENTITY<"sensor">>["attributes"], { device_class: "battery" }>;
-};
-
-export const NagService = ({
-  hass,
-  bens_flat: { presence, sleepMode, notify, tvMode },
-  scheduler,
-}: TServiceParams) => {
-  const getVeryLowBatteries = () =>
-    hass.refBy
-      .domain("sensor")
-      .filter((sensor): sensor is BatteryEntity => sensor.attributes["device_class"] === "battery")
-      .filter((sensor) => Number(sensor.state) < 30);
+export function NagService({ bens_flat: { notify }, scheduler }: TServiceParams) {
+  const nags: {
+    callback: () => boolean | Promise<boolean>;
+    message: NotifyConfig;
+  }[] = [];
 
   scheduler.setTimeout(async () => {
-    if (presence.flatIsOccupied() && !sleepMode.isOn() && !tvMode.isOn()) {
-      const veryLowBatteries = getVeryLowBatteries();
+    for (const nag of nags) {
+      const { callback, message } = nag;
+      const doNag = await callback();
 
-      if (veryLowBatteries.length > 0) {
-        await notify.notifyCritical({
-          title: "Battery low",
-          message: "You have some batteries below 30%",
-        });
+      if (doNag) {
+        await notify.notifyCritical(message);
       }
     }
   }, "30m");
-};
+
+  const add = ({
+    trigger: callback,
+    notification,
+  }: {
+    trigger: () => boolean | Promise<boolean>;
+    notification: NotifyConfig;
+  }) => {
+    nags.push({
+      callback,
+      message: notification,
+    });
+  };
+
+  return { add };
+}

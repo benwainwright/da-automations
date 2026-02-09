@@ -4,6 +4,8 @@ export { LightsService } from "./lights-service.ts";
 export { NotificationService } from "./notification.ts";
 export { PresenceDetectionService } from "./presence-detection-service.ts";
 export { MotionService } from "./motion-service.ts";
+export { NagService } from "./nag-service.ts";
+export { PlantsService } from "./plants-service.ts";
 export { MusicService } from "./music-service.ts";
 export { SleepModeService } from "./sleep-mode-service.ts";
 export { TVModeService } from "./tv-mode-service.ts";

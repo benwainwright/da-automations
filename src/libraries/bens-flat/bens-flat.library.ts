@@ -13,6 +13,8 @@ import {
   SleepModeService,
   TVModeService,
   NotificationService,
+  NagService,
+  PlantsService,
 } from "./services/index.ts";
 
 export const LIB_BENS_FLAT = CreateLibrary({
@@ -21,9 +23,11 @@ export const LIB_BENS_FLAT = CreateLibrary({
   priorityInit: ["motion", "blinds", "helpers", "lights", "sleepMode", "tvMode"],
 
   services: {
+    nags: NagService,
     music: MusicService,
     motion: MotionService,
     blinds: BlindsService,
+    plants: PlantsService,
     tvMode: TVModeService,
     presence: PresenceDetectionService,
     lights: LightsService,

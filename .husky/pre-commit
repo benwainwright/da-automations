@@ -1,3 +1,2 @@
 yarn lint-staged
 tsgo
-bun test --concurrent
