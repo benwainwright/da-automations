@@ -115,10 +115,10 @@ declare module "@digital-alchemy/hass" {
            * > configuration: {}
            * > ```
            */ configuration: object;
-          manual_control: [];
+          manual_control: ("light.hallway_door" | "light.hallway_middle")[];
           /**
            * > ```yaml
-           * > brightness_pct: 66.94627640753347
+           * > brightness_pct: 25.542757684355124
            * > ```
            */ brightness_pct: number;
           /**
@@ -136,7 +136,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.33387599588350025
+           * > sun_position: -0.7520933567236856
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -190,10 +190,15 @@ declare module "@digital-alchemy/hass" {
            * > configuration: {}
            * > ```
            */ configuration: object;
-          manual_control: [];
+          manual_control: (
+            | "light.bedroom_door"
+            | "light.bedroom_mirror"
+            | "light.bedroom_wall_left"
+            | "light.bedroom_wall_right"
+          )[];
           /**
            * > ```yaml
-           * > brightness_pct: 66.94622967152101
+           * > brightness_pct: 25.542735130593716
            * > ```
            */ brightness_pct: number;
           /**
@@ -211,7 +216,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.33387646796443426
+           * > sun_position: -0.7520935845394574
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -268,7 +273,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 66.94620447437536
+           * > brightness_pct: 25.542709822200475
            * > ```
            */ brightness_pct: number;
           /**
@@ -286,7 +291,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.33387672248105693
+           * > sun_position: -0.7520938401797932
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -340,10 +345,10 @@ declare module "@digital-alchemy/hass" {
            * > configuration: {}
            * > ```
            */ configuration: object;
-          manual_control: [];
+          manual_control: ("light.spare_room_left_wall" | "light.spare_room_right_wall")[];
           /**
            * > ```yaml
-           * > brightness_pct: 66.94617861744626
+           * > brightness_pct: 25.54269447760645
            * > ```
            */ brightness_pct: number;
           /**
@@ -361,7 +366,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.333876983662159
+           * > sun_position: -0.7520939951756924
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -507,17 +512,17 @@ declare module "@digital-alchemy/hass" {
           actions: [];
           /**
            * > ```yaml
-           * > current_slot: 1
+           * > current_slot: 2
            * > ```
            */ current_slot: number;
           /**
            * > ```yaml
-           * > next_slot: 2
+           * > next_slot: 0
            * > ```
            */ next_slot: number;
           /**
            * > ```yaml
-           * > next_trigger: '2026-02-09T20:00:00+00:00'
+           * > next_trigger: '2026-02-10T00:00:00+00:00'
            * > ```
            */ next_trigger: string;
           tags: [];
@@ -3159,7 +3164,7 @@ declare module "@digital-alchemy/hass" {
         {
           unit_of_measurement: "%";
           device_class: "battery";
-          icon: "mdi:battery-70";
+          icon: "mdi:battery-60";
           friendly_name: "Bens Phone";
         }
       >;
@@ -3180,7 +3185,7 @@ declare module "@digital-alchemy/hass" {
         "sensor.bens_phone_battery_state",
         {
           "Low Power Mode": boolean;
-          icon: "mdi:battery-70";
+          icon: "mdi:battery-60";
           friendly_name: "Bens Phone Battery State";
         }
       >;
@@ -3292,17 +3297,17 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > Available: 615.62 GB
+           * > Available: 615.06 GB
            * > ```
            */ Available: string;
           /**
            * > ```yaml
-           * > Available (Important): 666.00 GB
+           * > Available (Important): 665.45 GB
            * > ```
            */ "Available (Important)": string;
           /**
            * > ```yaml
-           * > Available (Opportunistic): 638.61 GB
+           * > Available (Opportunistic): 638.05 GB
            * > ```
            */ "Available (Opportunistic)": string;
           /**
@@ -4815,39 +4820,39 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: 23
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 2022
+           * > color_temp_kelvin: 2046
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: 494
+           * > color_temp: 488
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 30.503
-           * >   - 93.365
+           * >   - 30.399
+           * >   - 92.104
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 138
-           * >   - 17
+           * >   - 139
+           * >   - 20
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.596
-           * >   - 0.384
+           * >   - 0.594
+           * >   - 0.385
            * > ```
            */ xy_color: [x: number, y: number];
           entity_id: (
@@ -4942,37 +4947,44 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: null
+           * > color_mode: color_temp
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: null
+           * > brightness: 161
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: null
+           * > color_temp_kelvin: 2000
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: null
+           * > color_temp: 500
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
-           * > hs_color: null
+           * > hs_color:
+           * >   - 30.601
+           * >   - 94.547
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color: null
+           * > rgb_color:
+           * >   - 255
+           * >   - 137
+           * >   - 14
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color: null
+           * > xy_color:
+           * >   - 0.598
+           * >   - 0.383
            * > ```
            */ xy_color: [x: number, y: number];
           entity_id: (
@@ -5028,42 +5040,49 @@ declare module "@digital-alchemy/hass" {
           supported_color_modes: ("color_temp" | "rgb")[];
           /**
            * > ```yaml
-           * > effect: null
+           * > effect: 'Off'
            * > ```
            */ effect: "Flash" | "Gradual Change" | "Meteor Shower" | "Off";
           /**
            * > ```yaml
-           * > color_mode: null
+           * > color_mode: color_temp
            * > ```
            */ color_mode: "color_temp" | "rgb";
           /**
            * > ```yaml
-           * > brightness: null
+           * > brightness: 97
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: null
+           * > color_temp_kelvin: 3000
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: null
+           * > color_temp: 333
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
-           * > hs_color: null
+           * > hs_color:
+           * >   - 27.825
+           * >   - 56.895
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color: null
+           * > rgb_color:
+           * >   - 255
+           * >   - 177
+           * >   - 110
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color: null
+           * > xy_color:
+           * >   - 0.496
+           * >   - 0.383
            * > ```
            */ xy_color: [x: number, y: number];
           entity_id: ("light.spare_room_right_wall" | "light.spare_room_left_wall")[];
@@ -5150,7 +5169,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 171
+           * > brightness: 161
            * > ```
            */ brightness: number;
           /**
@@ -5345,42 +5364,49 @@ declare module "@digital-alchemy/hass" {
           supported_color_modes: ("color_temp" | "rgb")[];
           /**
            * > ```yaml
-           * > effect: null
+           * > effect: 'Off'
            * > ```
            */ effect: "Off" | "Meteor Shower" | "Gradual Change" | "Flash";
           /**
            * > ```yaml
-           * > color_mode: null
+           * > color_mode: color_temp
            * > ```
            */ color_mode: "color_temp" | "rgb";
           /**
            * > ```yaml
-           * > brightness: null
+           * > brightness: 97
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: null
+           * > color_temp_kelvin: 3000
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: null
+           * > color_temp: 333
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
-           * > hs_color: null
+           * > hs_color:
+           * >   - 27.825
+           * >   - 56.895
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color: null
+           * > rgb_color:
+           * >   - 255
+           * >   - 177
+           * >   - 110
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color: null
+           * > xy_color:
+           * >   - 0.496
+           * >   - 0.383
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Wall Light (Left)";
@@ -5429,42 +5455,49 @@ declare module "@digital-alchemy/hass" {
           supported_color_modes: ("color_temp" | "rgb")[];
           /**
            * > ```yaml
-           * > effect: null
+           * > effect: 'Off'
            * > ```
            */ effect: "Off" | "Meteor Shower" | "Gradual Change" | "Flash";
           /**
            * > ```yaml
-           * > color_mode: null
+           * > color_mode: color_temp
            * > ```
            */ color_mode: "color_temp" | "rgb";
           /**
            * > ```yaml
-           * > brightness: null
+           * > brightness: 97
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: null
+           * > color_temp_kelvin: 3000
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: null
+           * > color_temp: 333
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
-           * > hs_color: null
+           * > hs_color:
+           * >   - 27.825
+           * >   - 56.895
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color: null
+           * > rgb_color:
+           * >   - 255
+           * >   - 177
+           * >   - 110
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color: null
+           * > xy_color:
+           * >   - 0.496
+           * >   - 0.383
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Wall Light (Right)";
@@ -5549,39 +5582,39 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: 26
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 2000
+           * > color_temp_kelvin: 2024
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: 500
+           * > color_temp: 494
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 30.601
-           * >   - 94.547
+           * >   - 30.495
+           * >   - 93.259
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 137
-           * >   - 14
+           * >   - 138
+           * >   - 17
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.598
-           * >   - 0.383
+           * >   - 0.596
+           * >   - 0.384
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "living room back wall (right)";
@@ -5666,39 +5699,39 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: 26
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 2000
+           * > color_temp_kelvin: 2024
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: 500
+           * > color_temp: 494
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 30.601
-           * >   - 94.547
+           * >   - 30.495
+           * >   - 93.259
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 137
-           * >   - 14
+           * >   - 138
+           * >   - 17
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.598
-           * >   - 0.383
+           * >   - 0.596
+           * >   - 0.384
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room back wall (left)";
@@ -5783,39 +5816,39 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: 26
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 2000
+           * > color_temp_kelvin: 2024
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: 500
+           * > color_temp: 494
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 30.601
-           * >   - 94.547
+           * >   - 30.495
+           * >   - 93.259
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 137
-           * >   - 14
+           * >   - 138
+           * >   - 17
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.598
-           * >   - 0.383
+           * >   - 0.596
+           * >   - 0.384
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room back wall (middlle)";
@@ -5900,39 +5933,39 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: 26
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 2000
+           * > color_temp_kelvin: 2024
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: 500
+           * > color_temp: 494
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 30.601
-           * >   - 94.547
+           * >   - 30.495
+           * >   - 93.259
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 137
-           * >   - 14
+           * >   - 138
+           * >   - 17
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.598
-           * >   - 0.383
+           * >   - 0.596
+           * >   - 0.384
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Washing Machine)";
@@ -6017,39 +6050,39 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: 26
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 2000
+           * > color_temp_kelvin: 2024
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: 500
+           * > color_temp: 494
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 30.601
-           * >   - 94.547
+           * >   - 30.495
+           * >   - 93.259
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 137
-           * >   - 14
+           * >   - 138
+           * >   - 17
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.598
-           * >   - 0.383
+           * >   - 0.596
+           * >   - 0.384
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Sink)";
@@ -6134,39 +6167,39 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: 26
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 2000
+           * > color_temp_kelvin: 2024
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: 500
+           * > color_temp: 494
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 30.601
-           * >   - 94.547
+           * >   - 30.495
+           * >   - 93.259
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 137
-           * >   - 14
+           * >   - 138
+           * >   - 17
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.598
-           * >   - 0.383
+           * >   - 0.596
+           * >   - 0.384
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Oven)";
@@ -6251,39 +6284,39 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: 26
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 2000
+           * > color_temp_kelvin: 2024
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: 500
+           * > color_temp: 494
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 30.601
-           * >   - 94.547
+           * >   - 30.495
+           * >   - 93.259
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 137
-           * >   - 14
+           * >   - 138
+           * >   - 17
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.598
-           * >   - 0.383
+           * >   - 0.596
+           * >   - 0.384
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Fridge)";
@@ -6362,7 +6395,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: 3
            * > ```
            */ brightness: number;
           /**
@@ -6448,12 +6481,12 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: brightness
+           * > color_mode: null
            * > ```
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: null
            * > ```
            */ brightness: number;
           friendly_name: "Living room floor lamp (Middle)";
@@ -6507,12 +6540,12 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: brightness
+           * > color_mode: null
            * > ```
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: null
            * > ```
            */ brightness: number;
           friendly_name: "Living Room floor lamp (bottom)";
@@ -6566,12 +6599,12 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: brightness
+           * > color_mode: null
            * > ```
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: null
            * > ```
            */ brightness: number;
           friendly_name: "Living room floor lamp (top)";
@@ -6876,7 +6909,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 171
+           * > brightness: 161
            * > ```
            */ brightness: number;
           /**
@@ -6993,7 +7026,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 171
+           * > brightness: 161
            * > ```
            */ brightness: number;
           /**
@@ -7105,37 +7138,44 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: null
+           * > color_mode: color_temp
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: null
+           * > brightness: 161
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: null
+           * > color_temp_kelvin: 2000
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: null
+           * > color_temp: 500
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
-           * > hs_color: null
+           * > hs_color:
+           * >   - 30.601
+           * >   - 94.547
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color: null
+           * > rgb_color:
+           * >   - 255
+           * >   - 137
+           * >   - 14
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color: null
+           * > xy_color:
+           * >   - 0.598
+           * >   - 0.383
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Bedroom wall (right)";
@@ -7215,37 +7255,44 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: null
+           * > color_mode: color_temp
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: null
+           * > brightness: 161
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: null
+           * > color_temp_kelvin: 2000
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: null
+           * > color_temp: 500
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
-           * > hs_color: null
+           * > hs_color:
+           * >   - 30.601
+           * >   - 94.547
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color: null
+           * > rgb_color:
+           * >   - 255
+           * >   - 137
+           * >   - 14
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color: null
+           * > xy_color:
+           * >   - 0.598
+           * >   - 0.383
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Left wall";
@@ -7325,37 +7372,44 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: null
+           * > color_mode: color_temp
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: null
+           * > brightness: 161
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: null
+           * > color_temp_kelvin: 2000
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: null
+           * > color_temp: 500
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
-           * > hs_color: null
+           * > hs_color:
+           * >   - 30.601
+           * >   - 94.547
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color: null
+           * > rgb_color:
+           * >   - 255
+           * >   - 137
+           * >   - 14
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color: null
+           * > xy_color:
+           * >   - 0.598
+           * >   - 0.383
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Mirror light";
@@ -7435,37 +7489,44 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: null
+           * > color_mode: color_temp
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: null
+           * > brightness: 161
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: null
+           * > color_temp_kelvin: 2000
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: null
+           * > color_temp: 500
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
-           * > hs_color: null
+           * > hs_color:
+           * >   - 30.601
+           * >   - 94.547
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color: null
+           * > rgb_color:
+           * >   - 255
+           * >   - 137
+           * >   - 14
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color: null
+           * > xy_color:
+           * >   - 0.598
+           * >   - 0.383
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Boor light";
@@ -7545,44 +7606,37 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: color_temp
+           * > color_mode: null
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 187
+           * > brightness: null
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 2000
+           * > color_temp_kelvin: null
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp: 500
+           * > color_temp: null
            * > ```
            */ color_temp: number;
           /**
            * > ```yaml
-           * > hs_color:
-           * >   - 30.601
-           * >   - 94.547
+           * > hs_color: null
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color:
-           * >   - 255
-           * >   - 137
-           * >   - 14
+           * > rgb_color: null
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color:
-           * >   - 0.598
-           * >   - 0.383
+           * > xy_color: null
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room (TV wall)";
@@ -7636,17 +7690,17 @@ declare module "@digital-alchemy/hass" {
           device_trackers: ("device_tracker.bens_phone" | "device_tracker.bens_imac_pro")[];
           /**
            * > ```yaml
-           * > latitude: 53.479268931721556
+           * > latitude: 53.479268898397805
            * > ```
            */ latitude: number;
           /**
            * > ```yaml
-           * > longitude: -2.2208807155286934
+           * > longitude: -2.2208808399459397
            * > ```
            */ longitude: number;
           /**
            * > ```yaml
-           * > gps_accuracy: 5
+           * > gps_accuracy: 11
            * > ```
            */ gps_accuracy: number;
           /**
@@ -7715,12 +7769,12 @@ declare module "@digital-alchemy/hass" {
            */ next_setting: string;
           /**
            * > ```yaml
-           * > elevation: -12
+           * > elevation: -29.73
            * > ```
            */ elevation: number;
           /**
            * > ```yaml
-           * > azimuth: 261.82
+           * > azimuth: 286.75
            * > ```
            */ azimuth: number;
           rising: boolean;
@@ -7937,7 +7991,7 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > changed_by: Unknown
+           * > changed_by: Remote
            * > ```
            */ changed_by: string;
           friendly_name: "Front Door Lock";
@@ -8327,7 +8381,7 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 18
+           * > current_temperature: 17.9
            * > ```
            */ current_temperature: number;
           /**
@@ -8378,12 +8432,12 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 15.3
+           * > current_temperature: 19.1
            * > ```
            */ current_temperature: number;
           /**
            * > ```yaml
-           * > temperature: 4
+           * > temperature: 18
            * > ```
            */ temperature: number;
           /**
@@ -8393,7 +8447,7 @@ declare module "@digital-alchemy/hass" {
            */ hvac_action: string;
           /**
            * > ```yaml
-           * > preset_mode: away
+           * > preset_mode: sleep
            * > ```
            */ preset_mode: "none" | "away" | "comfort" | "sleep";
           friendly_name: "Bedroom";
@@ -8432,7 +8486,7 @@ declare module "@digital-alchemy/hass" {
            */ volume_level: number;
           /**
            * > ```yaml
-           * > media_content_id: spotify--VvV7nv7V://track/0oWraSo5ASJ0h1BEagTyEw
+           * > media_content_id: spotify--VvV7nv7V://track/2OBSEst95stRvJ95q6QMpy
            * > ```
            */ media_content_id: string;
           /**
@@ -8442,7 +8496,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 225
+           * > media_duration: 193
            * > ```
            */ media_duration: number;
           /**
@@ -8452,22 +8506,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-09T18:27:28.541334+00:00'
+           * > media_position_updated_at: '2026-02-09T20:44:57.988531+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Hold My Hand
+           * > media_title: Mirage (PIANIKA Remix)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Lady Gaga
+           * > media_artist: Aguava/PIANIKA
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: 'Hold My Hand (Music From The Motion Picture "Top Gun: Maverick")'
+           * > media_album_name: Mirage
            * > ```
            */ media_album_name: string;
           /**
@@ -8489,7 +8543,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.flat?token=1d43dfff91dc22c34f0ff544d465e6ad4d942740ae6560881950412f071df92c&cache=e158c33f54172d02
+           * >   /api/media_player_proxy/media_player.flat?token=1d43dfff91dc22c34f0ff544d465e6ad4d942740ae6560881950412f071df92c&cache=9ab4681ba14bbbc9
            * > ```
            */ entity_picture_local: string;
           /**
@@ -8505,7 +8559,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273b7e7edfee5626b7b1f15192a
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273fd2015866a3f8c49ae4925c9
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker-multiple";
@@ -8533,7 +8587,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: spotify--VvV7nv7V://track/0oWraSo5ASJ0h1BEagTyEw
+           * > media_content_id: spotify--VvV7nv7V://track/2OBSEst95stRvJ95q6QMpy
            * > ```
            */ media_content_id: string;
           /**
@@ -8543,7 +8597,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 225
+           * > media_duration: 193
            * > ```
            */ media_duration: number;
           /**
@@ -8553,22 +8607,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-09T18:27:28.541334+00:00'
+           * > media_position_updated_at: '2026-02-09T20:44:57.988531+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Hold My Hand
+           * > media_title: Mirage (PIANIKA Remix)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Lady Gaga
+           * > media_artist: Aguava/PIANIKA
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: 'Hold My Hand (Music From The Motion Picture "Top Gun: Maverick")'
+           * > media_album_name: Mirage
            * > ```
            */ media_album_name: string;
           /**
@@ -8585,7 +8639,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bedroom?token=eadde97af5572a658a46023e72798e978687e6cf9649f2299c4edd610ed1f48c&cache=e158c33f54172d02
+           * >   /api/media_player_proxy/media_player.bedroom?token=eadde97af5572a658a46023e72798e978687e6cf9649f2299c4edd610ed1f48c&cache=9ab4681ba14bbbc9
            * > ```
            */ entity_picture_local: string;
           /**
@@ -8601,7 +8655,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273b7e7edfee5626b7b1f15192a
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273fd2015866a3f8c49ae4925c9
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -8629,7 +8683,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: spotify--VvV7nv7V://track/0oWraSo5ASJ0h1BEagTyEw
+           * > media_content_id: spotify--VvV7nv7V://track/2OBSEst95stRvJ95q6QMpy
            * > ```
            */ media_content_id: string;
           /**
@@ -8639,7 +8693,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 225
+           * > media_duration: 193
            * > ```
            */ media_duration: number;
           /**
@@ -8649,22 +8703,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-09T18:27:28.541334+00:00'
+           * > media_position_updated_at: '2026-02-09T20:44:57.988531+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Hold My Hand
+           * > media_title: Mirage (PIANIKA Remix)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Lady Gaga
+           * > media_artist: Aguava/PIANIKA
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: 'Hold My Hand (Music From The Motion Picture "Top Gun: Maverick")'
+           * > media_album_name: Mirage
            * > ```
            */ media_album_name: string;
           /**
@@ -8681,7 +8735,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.living_room?token=b80002c9678426c94fa22f9b865a406b5249e903d7c07f37fd01b4bf92d18b81&cache=e158c33f54172d02
+           * >   /api/media_player_proxy/media_player.living_room?token=b80002c9678426c94fa22f9b865a406b5249e903d7c07f37fd01b4bf92d18b81&cache=9ab4681ba14bbbc9
            * > ```
            */ entity_picture_local: string;
           /**
@@ -8697,7 +8751,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273b7e7edfee5626b7b1f15192a
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273fd2015866a3f8c49ae4925c9
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -8742,7 +8796,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/8aTuaHcn/syncgroup_nyvpnj8n/3ff3ee98977b4171813d3582ff26457a.flac
+           * >   http://192.168.1.143:8097/single/LQMmG5cT/syncgroup_nyvpnj8n/dd26fc8ea4fa4a82833646340981dff6.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -8752,7 +8806,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 225
+           * > media_duration: 193
            * > ```
            */ media_duration: number;
           /**
@@ -8762,22 +8816,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-09T18:27:28.335712+00:00'
+           * > media_position_updated_at: '2026-02-09T20:44:57.332842+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Hold My Hand
+           * > media_title: Mirage
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Lady Gaga
+           * > media_artist: Aguava/PIANIKA
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: 'Hold My Hand (Music From The Motion Picture "Top Gun: Maverick")'
+           * > media_album_name: Mirage
            * > ```
            */ media_album_name: string;
           /**
@@ -8793,19 +8847,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 5
+           * > queue_position: 3
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 10
+           * > queue_size: 8
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=08fa2d6d3ab23f1237be33fd3d39353c71512876bae9a43764095620e7318cf2&cache=2bc77e2036df308e
+           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=08fa2d6d3ab23f1237be33fd3d39353c71512876bae9a43764095620e7318cf2&cache=e17188f56cd1f2d7
            * > ```
            */ entity_picture: string;
           friendly_name: "Bedroom Speaker";
@@ -8832,7 +8886,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/8aTuaHcn/syncgroup_nyvpnj8n/3ff3ee98977b4171813d3582ff26457a.flac
+           * >   http://192.168.1.143:8097/single/LQMmG5cT/syncgroup_nyvpnj8n/dd26fc8ea4fa4a82833646340981dff6.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -8842,7 +8896,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 225
+           * > media_duration: 193
            * > ```
            */ media_duration: number;
           /**
@@ -8852,22 +8906,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-09T18:27:28.335712+00:00'
+           * > media_position_updated_at: '2026-02-09T20:44:57.332842+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Hold My Hand
+           * > media_title: Mirage
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Lady Gaga
+           * > media_artist: Aguava/PIANIKA
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: 'Hold My Hand (Music From The Motion Picture "Top Gun: Maverick")'
+           * > media_album_name: Mirage
            * > ```
            */ media_album_name: string;
           /**
@@ -8883,19 +8937,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 5
+           * > queue_position: 3
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 10
+           * > queue_size: 8
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.living_room_sonos?token=3fd5f135e5903d4f82d01161814b30af37c347560a89f6bf88bcf36a42e9fce0&cache=2bc77e2036df308e
+           * >   /api/media_player_proxy/media_player.living_room_sonos?token=3fd5f135e5903d4f82d01161814b30af37c347560a89f6bf88bcf36a42e9fce0&cache=e17188f56cd1f2d7
            * > ```
            */ entity_picture: string;
           friendly_name: "Living Room";
@@ -8969,6 +9023,52 @@ declare module "@digital-alchemy/hass" {
             | "WOW"
             | "YouTube"
           )[];
+          /**
+           * > ```yaml
+           * > media_content_id: episode_m002pwmr
+           * > ```
+           */ media_content_id: string;
+          /**
+           * > ```yaml
+           * > media_content_type: video
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_duration: 3680
+           * > ```
+           */ media_duration: number;
+          /**
+           * > ```yaml
+           * > media_position: 54
+           * > ```
+           */ media_position: number;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-02-09T20:37:37.232306+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          /**
+           * > ```yaml
+           * > media_title: The Traitors
+           * > ```
+           */ media_title: string;
+          /**
+           * > ```yaml
+           * > app_id: uk.co.bbc.iplayer
+           * > ```
+           */ app_id: string;
+          /**
+           * > ```yaml
+           * > app_name: BBC iPlayer
+           * > ```
+           */ app_name: string;
+          /**
+           * > ```yaml
+           * > entity_picture: >-
+           * >   /api/media_player_proxy/media_player.apple_tv?token=6446a0dec45d98ff384813419e9ba6ced70c706e50fed400b3d126e814a5b423&cache=episode_m002pwmr
+           * > ```
+           */ entity_picture: string;
           friendly_name: "Apple TV";
           /**
            * > ```yaml
@@ -9032,27 +9132,27 @@ declare module "@digital-alchemy/hass" {
           source_type: "gps";
           /**
            * > ```yaml
-           * > battery_level: 70
+           * > battery_level: 60
            * > ```
            */ battery_level: number;
           /**
            * > ```yaml
-           * > latitude: 53.479268931721556
+           * > latitude: 53.479268898397805
            * > ```
            */ latitude: number;
           /**
            * > ```yaml
-           * > longitude: -2.2208807155286934
+           * > longitude: -2.2208808399459397
            * > ```
            */ longitude: number;
           /**
            * > ```yaml
-           * > gps_accuracy: 5
+           * > gps_accuracy: 11
            * > ```
            */ gps_accuracy: number;
           /**
            * > ```yaml
-           * > altitude: 50.09733192486354
+           * > altitude: 51.17681877178737
            * > ```
            */ altitude: number;
           /**
@@ -9885,13 +9985,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: ace8bf3efa6308a95c10174b8efc6f502e55730c4f6b5f415d72b63c57e2f38
+           * > access_token: a15e83667f2bad1ebbd1083a945ee9f5adfcd14f3b0cd4fd4fc3cef9ba7c35ec
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.xbox_network_now_playing?token=ace8bf3efa6308a95c10174b8efc6f502e55730c4f6b5f415d72b63c57e2f38
+           * >   /api/image_proxy/image.xbox_network_now_playing?token=a15e83667f2bad1ebbd1083a945ee9f5adfcd14f3b0cd4fd4fc3cef9ba7c35ec
            * > ```
            */ entity_picture: string;
           friendly_name: "Xbox Network Now playing";
@@ -9973,7 +10073,7 @@ declare module "@digital-alchemy/hass" {
            */ species: string;
           /**
            * > ```yaml
-           * > moisture_status: ok
+           * > moisture_status: High
            * > ```
            */ moisture_status: string;
           /**
@@ -10007,6 +10107,36 @@ declare module "@digital-alchemy/hass" {
            * > ```
            */ entity_picture: string;
           friendly_name: "Monroe";
+        }
+      >;
+    };
+    "scene.tv_mode": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "scene.tv_mode",
+        {
+          entity_id: (
+            | "light.living_room_back_wall_left"
+            | "light.living_room_back_wall_middle"
+            | "light.living_room_back_wall_right"
+            | "light.living_room_tv_wall"
+            | "light.living_room_bookcase"
+            | "light.kitchen_fridge"
+            | "light.kitchen_oven"
+            | "light.kitchen_sink"
+            | "light.kitchen_washing_machine"
+            | "light.living_room_floor_lamp_bottom"
+            | "light.living_room_floor_lamp_top"
+            | "light.living_room_floor_lamp_middle"
+            | "switch.adaptive_lighting_living_room"
+          )[];
+          /**
+           * > ```yaml
+           * > id: '1770669634457'
+           * > ```
+           */ id: string;
+          icon: "mdi:television";
+          friendly_name: "TV Mode";
         }
       >;
     };

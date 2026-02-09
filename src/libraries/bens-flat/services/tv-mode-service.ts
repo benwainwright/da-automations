@@ -1,4 +1,6 @@
 import { TServiceParams } from "@digital-alchemy/core";
+import { PICK_ENTITY } from "@digital-alchemy/hass";
+import { v7 } from "uuid";
 
 export function TVModeService({ hass, synapse, context, logger }: TServiceParams) {
   const tvMode = synapse.switch({
@@ -46,6 +48,67 @@ export function TVModeService({ hass, synapse, context, logger }: TServiceParams
       await tvMode.getEntity().turn_on();
     } else if (oldState.state === "playing" && newState.state !== "playing") {
       await tvMode.getEntity().turn_off();
+    }
+  });
+
+  const toggleScene = ({
+    scene,
+    snapshot,
+  }: {
+    scene: PICK_ENTITY<"scene">;
+    snapshot: PICK_ENTITY | PICK_ENTITY[];
+  }) => {
+    const id = v7();
+
+    const on = async () => {
+      await hass.call.scene.create({
+        scene_id: id,
+        snapshot_entities: snapshot,
+      });
+
+      await hass.call.scene.turn_on({
+        entity_id: scene,
+      });
+    };
+
+    const off = async () => {
+      await hass.call.scene.turn_on({
+        entity_id: `scene.${id}` as PICK_ENTITY<"scene">,
+      });
+
+      await hass.call.scene.delete({
+        entity_id: `scene.${id}` as PICK_ENTITY<"scene">,
+      });
+    };
+
+    return { on, off };
+  };
+
+  tvMode.getEntity().onUpdate(async (newState, oldState) => {
+    const toggler = toggleScene({
+      scene: "scene.tv_mode",
+      snapshot: [
+        "light.living_room_floor_lamp_bottom",
+        "light.living_room_floor_lamp_middle",
+        "light.living_room_floor_lamp_top",
+        "light.kitchen_fridge",
+        "light.kitchen_oven",
+        "light.kitchen_sink",
+        "light.kitchen_washing_machine",
+        "light.living_room_tv_wall",
+        "light.living_room_bookcase",
+        "light.living_room_back_wall_left",
+        "light.living_room_back_wall_middle",
+        "light.living_room_back_wall_right",
+        "switch.adaptive_lighting_living_room",
+        "switch.autoplay_music",
+        "media_player.flat",
+      ],
+    });
+    if (newState.state === "on" && oldState.state !== "on") {
+      await toggler.on();
+    } else if (newState.state === "off" && oldState.state !== "off") {
+      await toggler.off();
     }
   });
 

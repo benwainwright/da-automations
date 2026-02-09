@@ -18,6 +18,7 @@ declare module "@digital-alchemy/hass" {
       | "climate.living_room"
       | "switch.tv_mode"
       | "switch.living_room_motion_sensor"
+      | "scene.tv_mode"
       | "sensor.living_room_audio_input_format"
       | "binary_sensor.living_room_microphone"
       | "select.living_room_speech_enhancement"
@@ -1287,6 +1288,7 @@ declare module "@digital-alchemy/hass" {
       | "sensor.monroe_air_humidity"
       | "sensor.monroe_soil_temperature"
       | "plant.monroe";
+    _homeassistant: "scene.tv_mode";
   }
   export interface HassUniqueIdMapping {
     "01KGNB1SM9Q5V950Y0CGGYJ87D-solar_rising": "binary_sensor.sun_solar_rising";
@@ -2082,6 +2084,7 @@ declare module "@digital-alchemy/hass" {
     "01KH1SH05457MYPF8BZMY7MFDJ-dli": "sensor.monroe_dli";
     "01KH1SH05457MYPF8BZMY7MFDJ-dli-24h": "sensor.monroe_dli_24h";
     "01KH1SH05457MYPF8BZMY7MFDJ": "plant.monroe";
+    "1770669634457": "scene.tv_mode";
   }
   export interface HassZoneMapping {}
   export interface HassFloorMapping {}
@@ -2496,5 +2499,6 @@ declare module "@digital-alchemy/hass" {
     image: "image.xbox_network_now_playing";
     remote: "remote.bens_apple_tv";
     plant: "plant.marlin" | "plant.monroe";
+    scene: "scene.tv_mode";
   }
 }

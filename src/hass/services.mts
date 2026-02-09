@@ -9386,7 +9386,9 @@ declare module "@digital-alchemy/hass" {
            * >       - scene
            * > ```
            */
-          entity_id: never | never[];
+          entity_id:
+            | PICK_FROM_PLATFORM<"homeassistant", "scene">
+            | PICK_FROM_PLATFORM<"homeassistant", "scene">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -9429,7 +9431,7 @@ declare module "@digital-alchemy/hass" {
            * >       - scene
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"scene"> | PICK_ENTITY<"scene">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
