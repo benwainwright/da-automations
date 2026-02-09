@@ -1,8 +1,13 @@
 import { TServiceParams } from "@digital-alchemy/core";
-import { PICK_ENTITY } from "@digital-alchemy/hass";
-import { v7 } from "uuid";
 
-export function TVModeService({ hass, synapse, context, logger, lifecycle }: TServiceParams) {
+export function TVModeService({
+  hass,
+  synapse,
+  context,
+  logger,
+  lifecycle,
+  bens_flat: { scene },
+}: TServiceParams) {
   const tvMode = synapse.switch({
     name: "TV Mode",
     context,
@@ -51,45 +56,13 @@ export function TVModeService({ hass, synapse, context, logger, lifecycle }: TSe
     }
   });
 
-  const toggleScene = ({
-    scene,
-    snapshot,
-  }: {
-    scene: PICK_ENTITY<"scene">;
-    snapshot: PICK_ENTITY | PICK_ENTITY[];
-  }) => {
-    const id = v7();
-
-    const on = async () => {
-      await hass.call.scene.create({
-        scene_id: id,
-        snapshot_entities: snapshot,
-      });
-
-      await hass.call.scene.turn_on({
-        entity_id: scene,
-      });
-    };
-
-    const off = async () => {
-      await hass.call.scene.turn_on({
-        entity_id: `scene.${id}` as PICK_ENTITY<"scene">,
-      });
-
-      await hass.call.scene.delete({
-        entity_id: `scene.${id}` as PICK_ENTITY<"scene">,
-      });
-    };
-
-    return { on, off };
-  };
-
   lifecycle.onReady(() => {
     tvMode.getEntity().onUpdate(async (newState, oldState) => {
-      const toggler = toggleScene({
+      const toggler = scene.toggle({
         scene: "scene.tv_mode",
         snapshot: [
           "light.living_room_floor_lamp_bottom",
+          "cover.living_room_blinds",
           "light.living_room_floor_lamp_middle",
           "light.living_room_floor_lamp_top",
           "light.kitchen_fridge",

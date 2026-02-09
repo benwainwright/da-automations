@@ -54,7 +54,8 @@ export function BlindsService({
   };
 
   const openIfDefaultIsOpen = async () => {
-    if (!blindsDefaultClosed.is_on) {
+    const entity = blindsDefaultClosed.getEntity();
+    if (entity.state !== "on") {
       await blinds.open_cover();
     }
   };
