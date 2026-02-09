@@ -2,7 +2,7 @@ import { TServiceParams } from "@digital-alchemy/core";
 import { PICK_ENTITY } from "@digital-alchemy/hass";
 import { v7 } from "uuid";
 
-export function TVModeService({ hass, synapse, context, logger }: TServiceParams) {
+export function TVModeService({ hass, synapse, context, logger, lifecycle }: TServiceParams) {
   const tvMode = synapse.switch({
     name: "TV Mode",
     context,
@@ -84,32 +84,34 @@ export function TVModeService({ hass, synapse, context, logger }: TServiceParams
     return { on, off };
   };
 
-  tvMode.getEntity().onUpdate(async (newState, oldState) => {
-    const toggler = toggleScene({
-      scene: "scene.tv_mode",
-      snapshot: [
-        "light.living_room_floor_lamp_bottom",
-        "light.living_room_floor_lamp_middle",
-        "light.living_room_floor_lamp_top",
-        "light.kitchen_fridge",
-        "light.kitchen_oven",
-        "light.kitchen_sink",
-        "light.kitchen_washing_machine",
-        "light.living_room_tv_wall",
-        "light.living_room_bookcase",
-        "light.living_room_back_wall_left",
-        "light.living_room_back_wall_middle",
-        "light.living_room_back_wall_right",
-        "switch.adaptive_lighting_living_room",
-        "switch.autoplay_music",
-        "media_player.flat",
-      ],
+  lifecycle.onReady(() => {
+    tvMode.getEntity().onUpdate(async (newState, oldState) => {
+      const toggler = toggleScene({
+        scene: "scene.tv_mode",
+        snapshot: [
+          "light.living_room_floor_lamp_bottom",
+          "light.living_room_floor_lamp_middle",
+          "light.living_room_floor_lamp_top",
+          "light.kitchen_fridge",
+          "light.kitchen_oven",
+          "light.kitchen_sink",
+          "light.kitchen_washing_machine",
+          "light.living_room_tv_wall",
+          "light.living_room_bookcase",
+          "light.living_room_back_wall_left",
+          "light.living_room_back_wall_middle",
+          "light.living_room_back_wall_right",
+          "switch.adaptive_lighting_living_room",
+          "switch.autoplay_music",
+          "media_player.flat",
+        ],
+      });
+      if (newState.state === "on" && oldState.state !== "on") {
+        await toggler.on();
+      } else if (newState.state === "off" && oldState.state !== "off") {
+        await toggler.off();
+      }
     });
-    if (newState.state === "on" && oldState.state !== "on") {
-      await toggler.on();
-    } else if (newState.state === "off" && oldState.state !== "off") {
-      await toggler.off();
-    }
   });
 
   const isOn = () => {
