@@ -42,9 +42,9 @@ export function TVModeService({ hass, synapse, context, logger }: TServiceParams
     const isYoutube = attributes.app_id === "com.google.ios.youtube";
     const isSpotify = attributes.app_id === "com.spotify.client";
 
-    if (oldState.state === "off" && newState.state === "on" && !isYoutube && !isSpotify) {
+    if (oldState.state !== "playing" && newState.state === "playing" && !isYoutube && !isSpotify) {
       await tvMode.getEntity().turn_on();
-    } else if (oldState.state === "on" && newState.state === "off") {
+    } else if (oldState.state === "playing" && newState.state !== "playing") {
       await tvMode.getEntity().turn_off();
     }
   });
