@@ -59,6 +59,7 @@ export function TVModeService({
   lifecycle.onReady(() => {
     tvMode.getEntity().onUpdate(async (newState, oldState) => {
       const toggler = scene.toggle({
+        transition: 3,
         scene: "scene.tv_mode",
         snapshot: [
           "light.living_room_floor_lamp_bottom",
@@ -80,6 +81,9 @@ export function TVModeService({
         ],
       });
       if (newState.state === "on" && oldState.state !== "on") {
+        await hass.call.media_player.media_pause({
+          entity_id: "media_player.living_room",
+        });
         await toggler.on();
       } else if (newState.state === "off" && oldState.state !== "off") {
         await toggler.off();
