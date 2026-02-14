@@ -77,7 +77,6 @@ export function TVModeService({
           "light.living_room_back_wall_right",
           "switch.adaptive_lighting_living_room",
           "switch.autoplay_music",
-          "media_player.flat",
         ],
       });
       if (newState.state === "on" && oldState.state !== "on") {
