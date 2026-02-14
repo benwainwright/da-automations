@@ -1,6 +1,7 @@
 import { type TServiceParams } from "@digital-alchemy/core";
+import { RemoveCallback } from "@digital-alchemy/hass";
 
-export function CoreModule({ bens_flat, lifecycle }: TServiceParams) {
+export function CoreModule({ bens_flat, lifecycle, scheduler }: TServiceParams) {
   const { lights, sleepMode, tvMode, presence, blinds } = bens_flat;
   lifecycle.onReady(() => {
     lights.setupMotionTrigger({
@@ -50,11 +51,15 @@ export function CoreModule({ bens_flat, lifecycle }: TServiceParams) {
       }
     });
 
+    let schedulerCallback: RemoveCallback | undefined;
+
     tvMode.tvModeSwitch.getEntity().onUpdate(async (newState, oldState) => {
       if (!newState) return;
       if (oldState.state === "off" && newState.state === "on") {
+        schedulerCallback?.remove();
         await blinds.close();
       } else if (oldState.state === "on" && newState.state === "off") {
+        schedulerCallback = scheduler.setTimeout(() => {}, "5m");
         await blinds.openIfDefaultIsOpen();
       }
     });
