@@ -57,42 +57,46 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
   };
 
   const monitorRepo = async ({ repo, owner, callback }: MonitorRepoConfig) => {
-    const webhookId = `github-repo-monitor-${owner}-${repo}`;
+    try {
+      const webhookId = `github-repo-monitor-${owner}-${repo}`;
 
-    await auto_deploy.webhook.register({
-      allowedMethods: ["POST"],
-      localOnly: false,
-      webhookId,
-      callback: async (data) => {
-        await callback(data as unknown as PushEvent);
-      },
-    });
+      await auto_deploy.webhook.register({
+        allowedMethods: ["POST"],
+        localOnly: false,
+        webhookId,
+        callback: async (data) => {
+          await callback(data as unknown as PushEvent);
+        },
+      });
 
-    const instance = config.auto_deploy.EXTERNAL_URL;
+      const instance = config.auto_deploy.EXTERNAL_URL;
 
-    const url = `${instance}/api/webhook/${webhookId}`;
-    logger.info(`Creating repository webhook for ${url}`);
+      const url = `${instance}/api/webhook/${webhookId}`;
+      logger.info(`Creating repository webhook for ${url}`);
 
-    await deleteHookIfItExists(webhookId, owner, repo);
+      await deleteHookIfItExists(webhookId, owner, repo);
 
-    const github = new Octokit({
-      auth: config.auto_deploy.GITHUB_PAT,
-    });
+      const github = new Octokit({
+        auth: config.auto_deploy.GITHUB_PAT,
+      });
 
-    const response = await github.rest.repos.createWebhook({
-      repo,
-      owner,
-      name: "web",
-      config: {
-        content_type: "json",
-        url,
-      },
-      events: ["push"],
-      active: true,
-    });
+      const response = await github.rest.repos.createWebhook({
+        repo,
+        owner,
+        name: "web",
+        config: {
+          content_type: "json",
+          url,
+        },
+        events: ["push"],
+        active: true,
+      });
 
-    await writeId(webhookId, response.data.id);
-    logger.info(`Repo ${owner}/${repo} webhook created for ${url}`);
+      await writeId(webhookId, response.data.id);
+      logger.info(`Repo ${owner}/${repo} webhook created for ${url}`);
+    } catch (error) {
+      logger.error(`Failed to register webhook`, error);
+    }
   };
 
   return { monitorRepo };
