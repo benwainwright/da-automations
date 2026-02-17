@@ -1,7 +1,13 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 import { RemoveCallback } from "@digital-alchemy/hass";
 
-export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TServiceParams) {
+export function CoreModule({
+  bens_flat,
+  lifecycle,
+  scheduler,
+  auto_deploy,
+  logger,
+}: TServiceParams) {
   const { lights, sleepMode, tvMode, presence, blinds, notify } = bens_flat;
   lifecycle.onReady(async () => {
     const autoDeployNotificationId = "auto_deploy_status";
@@ -32,13 +38,17 @@ export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TSe
       }
     });
 
+    const tvModeEntityId = tvMode.tvModeSwitch.entity_id;
     lights.setupMotionTrigger({
       switchName: "Living room motion sensor",
       area: "living_room",
       sensorId: "binary_sensor.living_room_occupancy",
-      blockSwitches: [tvMode.tvModeSwitch.entity_id],
+      ...(tvModeEntityId ? { blockSwitches: [tvModeEntityId] } : {}),
       timeout: "30m",
     });
+    if (!tvModeEntityId) {
+      logger.warn(`TV mode switch entity is unavailable; living room block switch disabled`);
+    }
 
     lights.setupMotionTrigger({
       switchName: "Hallway motion sensor",
@@ -54,13 +64,17 @@ export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TSe
       timeout: "5m",
     });
 
+    const sleepModeEntityId = sleepMode.sleepModeSwitch.getEntity()?.entity_id;
     lights.setupMotionTrigger({
       switchName: "Bedroom motion sensor",
       area: "bedroom",
-      blockSwitches: [sleepMode.sleepModeSwitch.getEntity().entity_id],
+      ...(sleepModeEntityId ? { blockSwitches: [sleepModeEntityId] } : {}),
       sensorId: "binary_sensor.bedroom_occupancy",
       timeout: "10m",
     });
+    if (!sleepModeEntityId) {
+      logger.warn(`Sleep mode switch entity is unavailable; bedroom block switch disabled`);
+    }
 
     lights.setupMotionTrigger({
       switchName: "Bathroom motion sensor",
@@ -69,7 +83,13 @@ export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TSe
       timeout: "2m",
     });
 
-    presence.flatIsOccupiedSwitch.getEntity().onUpdate(async (newState, oldState) => {
+    const flatIsOccupiedEntity = presence.flatIsOccupiedSwitch.getEntity();
+    if (!flatIsOccupiedEntity) {
+      logger.warn(`Flat occupancy switch entity is unavailable; occupancy reactions disabled`);
+      return;
+    }
+
+    flatIsOccupiedEntity.onUpdate(async (newState, oldState) => {
       if (!newState) return;
       if (oldState.state === "on" && newState.state === "off") {
         await lights.turnOffAll();
@@ -81,7 +101,13 @@ export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TSe
 
     let schedulerCallback: RemoveCallback | undefined;
 
-    tvMode.tvModeSwitch.getEntity().onUpdate(async (newState, oldState) => {
+    const tvModeEntity = tvMode.tvModeSwitch.getEntity();
+    if (!tvModeEntity) {
+      logger.warn(`TV mode switch entity is unavailable; blind sync disabled`);
+      return;
+    }
+
+    tvModeEntity.onUpdate(async (newState, oldState) => {
       if (!newState) return;
       if (oldState.state === "off" && newState.state === "on") {
         schedulerCallback?.remove();

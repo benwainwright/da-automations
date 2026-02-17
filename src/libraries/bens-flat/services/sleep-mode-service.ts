@@ -22,7 +22,13 @@ export function SleepModeService({
     context,
     event: "sleep_mode_event",
     async exec() {
-      await sleepMode.getEntity().turn_on();
+      const sleepModeEntity = sleepMode.getEntity();
+      if (!sleepModeEntity) {
+        logger.warn(`Skipping sleep mode event; entity is unavailable`);
+        return;
+      }
+
+      await sleepModeEntity.turn_on();
     },
   });
 
