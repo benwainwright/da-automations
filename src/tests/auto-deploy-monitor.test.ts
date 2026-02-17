@@ -1,15 +1,14 @@
 import { beforeEach, expect, mock, test } from "bun:test";
 
-const execa = mock(async () => {});
-
-mock.module("execa", () => ({
-  execa,
-}));
-
 const { MonitorService } = await import("../libraries/auto-deploy/services/monitor-service.ts");
+
+const exitSpy = mock(() => {
+  throw new Error("exit called");
+});
 
 beforeEach(() => {
   mock.clearAllMocks();
+  process.exit = exitSpy as typeof process.exit;
 });
 
 test("registers GitHub monitor on ready with configured owner/repo", async () => {
@@ -78,12 +77,15 @@ test("deploys and triggers restart when main branch push arrives", async () => {
   } as any);
 
   await onReady?.();
-  await pushCallback?.({ ref: "refs/heads/main" });
+  try {
+    await pushCallback?.({ ref: "refs/heads/main" });
+  } catch (error) {
+    expect((error as Error).message).toBe("exit called");
+  }
 
   expect(deploy).toHaveBeenCalledTimes(1);
-  expect(execa).toHaveBeenCalledTimes(1);
-  const execaCalls = (execa as any).mock.calls as Array<[TemplateStringsArray]>;
-  expect(execaCalls[0]?.[0]?.[0]).toBe("kill 1");
+  expect(exitSpy).toHaveBeenCalledTimes(1);
+  expect(exitSpy).toHaveBeenCalledWith(1);
 });
 
 test("ignores non-main push events", async () => {
@@ -119,5 +121,5 @@ test("ignores non-main push events", async () => {
   await pushCallback?.({ ref: "refs/heads/feature/test" });
 
   expect(deploy).not.toHaveBeenCalled();
-  expect(execa).not.toHaveBeenCalled();
+  expect(exitSpy).not.toHaveBeenCalled();
 });

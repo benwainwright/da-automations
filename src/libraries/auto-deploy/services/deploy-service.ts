@@ -5,10 +5,9 @@ import git from "isomorphic-git";
 import fs from "fs";
 import http from "isomorphic-git/http/node";
 
-export function DeployService({ config, hass, logger }: TServiceParams) {
+export function DeployService({ config, logger }: TServiceParams) {
   const deploy = async () => {
     logger.info(`Starting code deploy!`);
-    hass.diagnostics.fetch;
 
     const CLONE_FOLDER_NAME = "cloned-repo";
 

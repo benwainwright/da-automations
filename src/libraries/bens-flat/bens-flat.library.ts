@@ -16,27 +16,14 @@ import {
   NagService,
   PlantsService,
   SceneService,
-  CalendarService,
 } from "./services/index.ts";
 
 export const LIB_BENS_FLAT = CreateLibrary({
   depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION],
   name: "bens_flat",
   priorityInit: ["scene", "motion", "blinds", "helpers", "lights", "sleepMode", "tvMode"],
-  configuration: {
-    GOOGLE_CALENDAR_TOKEN: {
-      type: "string",
-      required: false,
-      description: "Google calendar API token",
-    },
-    GOOGLE_CALENDAR_ID: {
-      type: "string",
-      required: false,
-      description: "ID of calendar to pull events from",
-    },
-  },
+  configuration: {},
   services: {
-    calendar: CalendarService,
     nags: NagService,
     music: MusicService,
     motion: MotionService,
