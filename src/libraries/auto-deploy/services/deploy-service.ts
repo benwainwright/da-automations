@@ -6,7 +6,22 @@ import fs from "fs";
 import http from "isomorphic-git/http/node";
 
 export function DeployService({ config, logger }: TServiceParams) {
+  const DEPLOY_CANCELLED = "DEPLOY_CANCELLED";
+  let runNonce = 0;
+
+  const ensureCurrentRun = (runId: number) => {
+    if (runId !== runNonce) {
+      throw new Error(DEPLOY_CANCELLED);
+    }
+  };
+
+  const cancel = () => {
+    runNonce += 1;
+    logger.warn(`Cancelling in-progress deploy`);
+  };
+
   const deploy = async () => {
+    const runId = ++runNonce;
     logger.info(`Starting code deploy!`);
 
     const CLONE_FOLDER_NAME = "cloned-repo";
@@ -18,14 +33,21 @@ export function DeployService({ config, logger }: TServiceParams) {
     const clonePath = join(process.cwd(), CLONE_FOLDER_NAME);
 
     await execa("rm", [`-rf`, clonePath]);
+    ensureCurrentRun(runId);
+
     await git.clone({ fs, http, dir: clonePath, url: repo });
+    ensureCurrentRun(runId);
+
     logger.info(`Repo cloned. Installing dependencies`);
     await execa(`bun`, [`install`], { cwd: `${clonePath}/` });
+    ensureCurrentRun(runId);
+
     logger.info(`Deploying code...`);
     await execa(`bun`, [`run`, `build`], { cwd: `${clonePath}/` });
+    ensureCurrentRun(runId);
 
     logger.info(`Deploy complete!`);
   };
 
-  return { deploy };
+  return { cancel, deploy, DEPLOY_CANCELLED };
 }

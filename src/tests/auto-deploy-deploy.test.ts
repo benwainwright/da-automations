@@ -45,3 +45,29 @@ test("clones, installs, and builds in deployment order", async () => {
     }),
   );
 });
+
+test("cancel() aborts in-progress deploy shell commands", async () => {
+  let resolveFirst: (() => void) | undefined;
+  execa.mockImplementationOnce(
+    () =>
+      new Promise<void>((resolve) => {
+        resolveFirst = resolve;
+      }),
+  );
+
+  const service = DeployService({
+    config: {
+      auto_deploy: {
+        GITHUB_REPO: "da-automations",
+        GITHUB_REPO_OWNER: "benwainwright",
+      },
+    },
+    logger: { info: mock(() => {}), warn: mock(() => {}) },
+  } as any);
+
+  const deployPromise = service.deploy();
+  service.cancel();
+  resolveFirst?.();
+
+  await expect(deployPromise).rejects.toThrow("DEPLOY_CANCELLED");
+});

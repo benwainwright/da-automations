@@ -12,7 +12,6 @@ export function SceneService({ hass, lifecycle }: TServiceParams) {
     snapshot: PICK_ENTITY | PICK_ENTITY[];
   }) => {
     const id = `${scene.split(".")[1]}_off`;
-
     let removeOffCallback: RemoveCallback | undefined;
     let hasOffScene = false;
     const onCallbacks: (() => Promise<void> | void)[] = [];
