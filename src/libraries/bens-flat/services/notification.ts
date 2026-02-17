@@ -5,7 +5,7 @@ export interface NotifyConfig {
   message: string;
 }
 
-export function NotificationService({ hass, bens_flat: { lights } }: TServiceParams) {
+export function NotificationService({ hass, bens_flat: { lights }, logger }: TServiceParams) {
   const tv = hass.refBy.id("media_player.tv");
 
   const bedroomSonos = hass.refBy.id("media_player.bedroom_sonos");
@@ -62,9 +62,17 @@ export function NotificationService({ hass, bens_flat: { lights } }: TServicePar
     title,
     message,
   }: NotifyConfig & { notificationId: string }) => {
-    await hass.call.persistent_notification.dismiss({
-      notification_id: notificationId,
-    });
+    try {
+      await hass.call.persistent_notification.dismiss({
+        notification_id: notificationId,
+      });
+    } catch (error) {
+      logger.debug(
+        { error, notificationId },
+        `Persistent notification did not exist before replace; continuing with create`,
+      );
+    }
+
     await hass.call.persistent_notification.create({
       notification_id: notificationId,
       title,
