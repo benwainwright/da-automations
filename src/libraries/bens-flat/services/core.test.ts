@@ -65,13 +65,13 @@ test("subscribes to auto-deploy lifecycle and updates persistent notifications",
   expect(replacePersistentNotification).toHaveBeenCalledWith({
     notificationId: "auto_deploy_status",
     title: "Auto Deploy",
-    message: "Deploy triggered. Pulling and building latest automation code.",
+    message: "Deploy triggered. Pulling and building latest automation code...",
   });
 
   await lifecycleListener?.({ type: "restart.requested" });
   expect(replacePersistentNotification).toHaveBeenCalledWith({
     notificationId: "auto_deploy_status",
     title: "Auto Deploy",
-    message: "Deploy finished. Restarting automation application now.",
+    message: "Deploy finished. Restarting automation application now...",
   });
 });

@@ -18,7 +18,7 @@ export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TSe
         await notify.replacePersistentNotification({
           notificationId: autoDeployNotificationId,
           title: autoDeployNotificationTitle,
-          message: "Deploy triggered. Pulling and building latest automation code.",
+          message: "Deploy triggered. Pulling and building latest automation code...",
         });
       }
 
@@ -26,7 +26,7 @@ export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TSe
         await notify.replacePersistentNotification({
           notificationId: autoDeployNotificationId,
           title: autoDeployNotificationTitle,
-          message: "Deploy finished. Restarting automation application now.",
+          message: "Deploy finished. Restarting automation application now...",
         });
       }
     });
