@@ -3,7 +3,7 @@ import type { TOffset, TServiceParams } from "@digital-alchemy/core";
 import { PICK_ENTITY, RemoveCallback, TAreaId } from "@digital-alchemy/hass";
 
 export function HelpersService({ hass, scheduler }: TServiceParams) {
-  const allAreas: TAreaId[] = ["bathroom", "bathroom", "bedroom", "hallway", "living_room"];
+  const allAreas: TAreaId[] = ["bathroom", "bedroom", "hallway", "living_room", "spare_room"];
 
   const fiveAm: TShortTime = "AM5:00";
 

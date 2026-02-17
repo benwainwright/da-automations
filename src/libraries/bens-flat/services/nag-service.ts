@@ -7,7 +7,7 @@ export function NagService({ bens_flat: { notify }, scheduler }: TServiceParams)
     message: NotifyConfig;
   }[] = [];
 
-  scheduler.setTimeout(async () => {
+  scheduler.setInterval(async () => {
     for (const nag of nags) {
       const { callback, message } = nag;
       const doNag = await callback();

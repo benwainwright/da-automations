@@ -6,16 +6,36 @@ export function MotionService({ hass }: TServiceParams) {
   const livingRoom = hass.refBy.id("binary_sensor.living_room_occupancy");
   const bathroom = hass.refBy.id("binary_sensor.bathroom_occupancy");
 
-  const onBedroom = (callback: () => void | Promise<void>) => bedroom.onUpdate(callback);
-  const onHallway = (callback: () => void | Promise<void>) => hallway.onUpdate(callback);
-  const onLivingRoom = (callback: () => void | Promise<void>) => livingRoom.onUpdate(callback);
-  const onBathroom = (callback: () => void | Promise<void>) => bathroom.onUpdate(callback);
+  const onBedroom = (callback: () => void | Promise<void>) =>
+    bedroom.onUpdate(async (newState) => {
+      if (newState?.state === "on") {
+        await callback();
+      }
+    });
+  const onHallway = (callback: () => void | Promise<void>) =>
+    hallway.onUpdate(async (newState) => {
+      if (newState?.state === "on") {
+        await callback();
+      }
+    });
+  const onLivingRoom = (callback: () => void | Promise<void>) =>
+    livingRoom.onUpdate(async (newState) => {
+      if (newState?.state === "on") {
+        await callback();
+      }
+    });
+  const onBathroom = (callback: () => void | Promise<void>) =>
+    bathroom.onUpdate(async (newState) => {
+      if (newState?.state === "on") {
+        await callback();
+      }
+    });
 
   const anywhere = (callback: () => void | Promise<void>) => {
-    bedroom.onUpdate(callback);
-    hallway.onUpdate(callback);
-    livingRoom.onUpdate(callback);
-    bathroom.onUpdate(callback);
+    onBedroom(callback);
+    onHallway(callback);
+    onLivingRoom(callback);
+    onBathroom(callback);
   };
 
   return {
