@@ -1,3 +1,5 @@
 import { generateHassFixtures } from "./generate-hass-fixtures.ts";
 
-await generateHassFixtures();
+if (process.env["SKIP_HASS_FIXTURE_SETUP"] !== "1") {
+  await generateHassFixtures();
+}

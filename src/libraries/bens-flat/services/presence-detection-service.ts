@@ -20,6 +20,11 @@ export function PresenceDetectionService({
   let allowZoneExit = true;
 
   const home = hass.refBy.id("zone.home");
+  const homeHasPeople = (state: unknown) => {
+    const count = Number(state);
+    if (!Number.isNaN(count)) return count > 0;
+    return false;
+  };
 
   motion.anywhere(() => {
     logger.info(`Motion detected, checking if flat is occupied`);
@@ -30,7 +35,7 @@ export function PresenceDetectionService({
       helpers.setDebouncedTimeout(() => {
         logger.info(`Zone exits enabled`);
         allowZoneExit = true;
-        if (home.state === 0) {
+        if (!homeHasPeople(home.state)) {
           logger.info(`Setting flat occupied to false`);
           flatIsOccupiedSwitch.is_on = false;
         }
@@ -43,7 +48,7 @@ export function PresenceDetectionService({
 
   lifecycle.onReady(() => {
     home.onUpdate((newState, oldState) => {
-      if (oldState.state > 0 && newState.state === 0 && allowZoneExit) {
+      if (homeHasPeople(oldState.state) && !homeHasPeople(newState.state) && allowZoneExit) {
         flatIsOccupiedSwitch.is_on = false;
       }
     });
