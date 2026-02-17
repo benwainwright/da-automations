@@ -7,7 +7,8 @@ void APP.bootstrap({
       LOG_LEVEL: "info",
     },
     synapse: {
-      METADATA_UNIQUE_ID: "532be3cf-5023-49bd-95f4-f3abfc1b0357",
+      HEARTBEAT_INTERVAL: 30,
+      METADATA_UNIQUE_ID: "1971e4ed-1a2c-4c24-b3a0-503c87d142ef",
     },
   },
 });

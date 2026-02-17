@@ -4568,7 +4568,9 @@ declare module "@digital-alchemy/hass" {
           | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
           | "01KH1RG56MRQGSD9V2WA52RZ4N"
           | "01KH1SH05457MYPF8BZMY7MFDJ"
-          | "01KHNBWD0MWEFFNEY8K217WMHV";
+          | "01KHNBWD0MWEFFNEY8K217WMHV"
+          | "01KHPJGT8R803RDRPBFA88EDSD"
+          | "01KHPN768069X63NPKXV3D3PF1";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -7140,7 +7142,9 @@ declare module "@digital-alchemy/hass" {
           | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
           | "01KH1RG56MRQGSD9V2WA52RZ4N"
           | "01KH1SH05457MYPF8BZMY7MFDJ"
-          | "01KHNBWD0MWEFFNEY8K217WMHV";
+          | "01KHNBWD0MWEFFNEY8K217WMHV"
+          | "01KHPJGT8R803RDRPBFA88EDSD"
+          | "01KHPN768069X63NPKXV3D3PF1";
         /**
          * ## favorite
          *
@@ -7646,7 +7650,9 @@ declare module "@digital-alchemy/hass" {
           | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
           | "01KH1RG56MRQGSD9V2WA52RZ4N"
           | "01KH1SH05457MYPF8BZMY7MFDJ"
-          | "01KHNBWD0MWEFFNEY8K217WMHV";
+          | "01KHNBWD0MWEFFNEY8K217WMHV"
+          | "01KHPJGT8R803RDRPBFA88EDSD"
+          | "01KHPN768069X63NPKXV3D3PF1";
         /**
          * ## library_only
          *
@@ -8299,7 +8305,9 @@ declare module "@digital-alchemy/hass" {
           | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
           | "01KH1RG56MRQGSD9V2WA52RZ4N"
           | "01KH1SH05457MYPF8BZMY7MFDJ"
-          | "01KHNBWD0MWEFFNEY8K217WMHV";
+          | "01KHNBWD0MWEFFNEY8K217WMHV"
+          | "01KHPJGT8R803RDRPBFA88EDSD"
+          | "01KHPN768069X63NPKXV3D3PF1";
         /**
          * ## filenames
          *
@@ -8409,7 +8417,9 @@ declare module "@digital-alchemy/hass" {
           | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
           | "01KH1RG56MRQGSD9V2WA52RZ4N"
           | "01KH1SH05457MYPF8BZMY7MFDJ"
-          | "01KHNBWD0MWEFFNEY8K217WMHV";
+          | "01KHNBWD0MWEFFNEY8K217WMHV"
+          | "01KHPJGT8R803RDRPBFA88EDSD"
+          | "01KHPN768069X63NPKXV3D3PF1";
         /**
          * ## prompt
          *

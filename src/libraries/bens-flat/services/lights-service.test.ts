@@ -89,3 +89,50 @@ test("setupMotionTrigger does not throw when motion switch entity is unavailable
   expect(turnOn).not.toHaveBeenCalled();
   expect(warn).toHaveBeenCalled();
 });
+
+test("setupMotionTrigger uses normalized lowercase unique_id", () => {
+  let capturedUniqueId = "";
+
+  const service = LightsService({
+    bens_flat: {
+      helpers: {
+        turnOffAll: mock(async () => {}),
+      },
+    },
+    context: {},
+    hass: {
+      call: {
+        light: {
+          turn_on: mock(async () => {}),
+          turn_off: mock(async () => {}),
+        },
+      },
+      refBy: {
+        domain: () => [],
+        id: () => ({
+          onUpdate: () => {},
+          state: "off",
+        }),
+      },
+    },
+    logger: { info: mock(() => {}), warn: mock(() => {}) },
+    scheduler: { setTimeout: () => ({ remove: () => {} }) },
+    synapse: {
+      switch: (config: { unique_id: string }) => {
+        capturedUniqueId = config.unique_id;
+        return {
+          getEntity: () => ({ state: "on" }),
+        };
+      },
+    },
+  } as any);
+
+  service.setupMotionTrigger({
+    area: "living_room",
+    sensorId: "binary_sensor.living_room_occupancy",
+    switchName: "Living room motion sensor",
+    timeout: "2m",
+  });
+
+  expect(capturedUniqueId).toBe("living_room_motion_sensor");
+});

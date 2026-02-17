@@ -1,5 +1,6 @@
 import type { TServiceParams, TOffset } from "@digital-alchemy/core";
 import type { PICK_ENTITY, RemoveCallback, TAreaId } from "@digital-alchemy/hass";
+import { toSynapseUniqueId } from "./unique-id.ts";
 
 interface IMotionSwitchConfig {
   /**
@@ -61,7 +62,8 @@ export function LightsService({
   }: IMotionSwitchConfig) => {
     const motionSwitch = synapse.switch({
       name: switchName,
-      unique_id: switchName.replace(/[^a-zA-Z0-9]/gi, ""),
+      unique_id: toSynapseUniqueId(switchName),
+      suggested_object_id: toSynapseUniqueId(switchName),
       attributes: {
         area,
       },
@@ -81,12 +83,13 @@ export function LightsService({
         .some((theSwitch) => theSwitch.state === "on");
 
       const switchEntity = motionSwitch?.getEntity?.();
+      const switchIsOn = switchEntity?.state === "on";
       if (!switchEntity) {
         logger.warn(`Skipping motion trigger for ${area}; switch entity is unavailable`);
         return;
       }
 
-      if (newState.state === "on" && switchEntity.state === "on" && !anyBlockSwitchIsOn) {
+      if (newState.state === "on" && switchIsOn && !anyBlockSwitchIsOn) {
         logger.info(`Turning ${area} lights on`);
         remove?.remove();
         await hass.call.light.turn_on({ area_id: area });
