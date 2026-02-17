@@ -28,32 +28,18 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
     await writeFile("hooks.json", JSON.stringify({ ...data, [webhookId]: githubWebhookId }));
   };
 
-  const deleteHookIfItExists = async (webhookId: string, owner: string, repo: string) => {
-    const github = new Octokit({
-      auth: config.auto_deploy.GITHUB_PAT,
+  const findExistingWebhookByUrl = async (
+    github: Octokit,
+    owner: string,
+    repo: string,
+    url: string,
+  ) => {
+    const response = await github.rest.repos.listWebhooks({
+      owner,
+      per_page: 100,
+      repo,
     });
-    const id = await getHookId(webhookId);
-    if (id) {
-      try {
-        logger.info(`Checking for existing webhook`);
-        const getResponse = await github.rest.repos.getWebhook({
-          repo,
-          owner,
-          hook_id: id,
-        });
-
-        if (getResponse.data) {
-          logger.info(`Found, deleting...`);
-          await github.rest.repos.deleteWebhook({
-            repo,
-            owner,
-            hook_id: id,
-          });
-        }
-      } catch {
-        // NOOP - doesn't matter if the webhook has allready been deleted
-      }
-    }
+    return response.data.find((hook) => hook.config.url === url);
   };
 
   const monitorRepo = async ({ repo, owner, callback }: MonitorRepoConfig) => {
@@ -74,13 +60,50 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
       const url = `${instance}/api/webhook/${webhookId}`;
       logger.info(`Creating repository webhook for ${url}`);
 
-      await deleteHookIfItExists(webhookId, owner, repo);
-
       const github = new Octokit({
         auth: config.auto_deploy.GITHUB_PAT,
       });
 
-      const response = await github.rest.repos.createWebhook({
+      let existingHookId = await getHookId(webhookId);
+      if (existingHookId) {
+        try {
+          const existing = await github.rest.repos.getWebhook({
+            hook_id: existingHookId,
+            owner,
+            repo,
+          });
+          if (existing.data.config.url !== url) {
+            existingHookId = undefined;
+          }
+        } catch {
+          existingHookId = undefined;
+        }
+      }
+
+      if (!existingHookId) {
+        const existingByUrl = await findExistingWebhookByUrl(github, owner, repo, url);
+        existingHookId = existingByUrl?.id;
+      }
+
+      if (existingHookId) {
+        logger.info(`Existing webhook found on repository, updating ${existingHookId}`);
+        await github.rest.repos.updateWebhook({
+          active: true,
+          config: {
+            content_type: "json",
+            url,
+          },
+          events: ["push"],
+          hook_id: existingHookId,
+          owner,
+          repo,
+        });
+        await writeId(webhookId, existingHookId);
+        logger.info(`Repo ${owner}/${repo} webhook updated for ${url}`);
+        return;
+      }
+
+      const created = await github.rest.repos.createWebhook({
         repo,
         owner,
         name: "web",
@@ -92,7 +115,7 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
         active: true,
       });
 
-      await writeId(webhookId, response.data.id);
+      await writeId(webhookId, created.data.id);
       logger.info(`Repo ${owner}/${repo} webhook created for ${url}`);
     } catch (error) {
       logger.error(`Failed to register webhook`, error);

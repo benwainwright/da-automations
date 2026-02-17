@@ -1,8 +1,13 @@
 import { beforeEach, expect, mock, test } from "bun:test";
 
-const getWebhook = mock(async () => ({ data: { id: 123 } }));
-const deleteWebhook = mock(async () => {});
+const getWebhook = mock(async () => ({
+  data: { config: { url: "https://example.com/hook" }, id: 123 },
+}));
 const createWebhook = mock(async () => ({ data: { id: 999 } }));
+const updateWebhook = mock(async () => ({ data: { id: 555 } }));
+const listWebhooks = mock(async () => ({
+  data: [] as Array<{ id: number; config: { url?: string } }>,
+}));
 const readFile = mock(async () => "{}");
 const writeFile = mock(async () => {});
 
@@ -12,8 +17,9 @@ mock.module("octokit", () => ({
     rest = {
       repos: {
         createWebhook,
-        deleteWebhook,
         getWebhook,
+        listWebhooks,
+        updateWebhook,
       },
     };
   },
@@ -30,11 +36,8 @@ beforeEach(() => {
   mock.clearAllMocks();
 });
 
-test("registers local webhook endpoint and creates a GitHub webhook", async () => {
-  let registeredConfig: any;
-  const webhookRegister = mock(async (config: any) => {
-    registeredConfig = config;
-  });
+test("registers local endpoint and creates webhook when none exists", async () => {
+  const webhookRegister = mock(async (_config: any) => {});
   const callback = mock(() => {});
   const service = GithubService({
     auto_deploy: { webhook: { register: webhookRegister } },
@@ -57,36 +60,80 @@ test("registers local webhook endpoint and creates a GitHub webhook", async () =
   });
 
   expect(webhookRegister).toHaveBeenCalledTimes(1);
-  expect(registeredConfig.webhookId).toBe("github-repo-monitor-benwainwright-da-automations");
-  expect(registeredConfig.allowedMethods).toEqual(["POST"]);
-  expect(registeredConfig.localOnly).toBe(false);
-  expect(typeof registeredConfig.callback).toBe("function");
-
   expect(createWebhook).toHaveBeenCalledTimes(1);
-  expect(createWebhook).toHaveBeenCalledWith({
+  expect(updateWebhook).not.toHaveBeenCalled();
+  expect(writeFile).toHaveBeenCalledTimes(1);
+
+  const writeFileCalls = (writeFile as any).mock.calls as Array<[string, string]>;
+  expect(JSON.parse(String(writeFileCalls[0]?.[1]))).toEqual({
+    "github-repo-monitor-benwainwright-da-automations": 999,
+  });
+});
+
+test("local-dev case: missing local hook id but existing GitHub webhook is updated and reused", async () => {
+  listWebhooks.mockResolvedValueOnce({
+    data: [
+      {
+        id: 44,
+        config: {
+          url: "https://example.com/api/webhook/github-repo-monitor-benwainwright-da-automations",
+        },
+      },
+    ],
+  });
+
+  const service = GithubService({
+    auto_deploy: { webhook: { register: mock(async () => {}) } },
+    config: {
+      auto_deploy: {
+        EXTERNAL_URL: "https://example.com",
+        GITHUB_PAT: "token",
+      },
+    },
+    logger: {
+      error: mock(() => {}),
+      info: mock(() => {}),
+    },
+  } as any);
+
+  await service.monitorRepo({
+    callback: mock(() => {}),
+    owner: "benwainwright",
+    repo: "da-automations",
+  });
+
+  expect(createWebhook).not.toHaveBeenCalled();
+  expect(updateWebhook).toHaveBeenCalledWith({
     active: true,
     config: {
       content_type: "json",
       url: "https://example.com/api/webhook/github-repo-monitor-benwainwright-da-automations",
     },
     events: ["push"],
-    name: "web",
+    hook_id: 44,
     owner: "benwainwright",
     repo: "da-automations",
   });
 
-  expect(writeFile).toHaveBeenCalledTimes(1);
   const writeFileCalls = (writeFile as any).mock.calls as Array<[string, string]>;
-  expect(writeFileCalls[0]?.[0]).toBe("hooks.json");
   expect(JSON.parse(String(writeFileCalls[0]?.[1]))).toEqual({
-    "github-repo-monitor-benwainwright-da-automations": 999,
+    "github-repo-monitor-benwainwright-da-automations": 44,
   });
 });
 
-test("deletes previously stored webhook id before creating a new one", async () => {
+test("reuses stored hook id when it exists and target url still matches", async () => {
   readFile.mockResolvedValueOnce(
-    JSON.stringify({ "github-repo-monitor-benwainwright-da-automations": 44 }),
+    JSON.stringify({ "github-repo-monitor-benwainwright-da-automations": 77 }),
   );
+  getWebhook.mockResolvedValueOnce({
+    data: {
+      config: {
+        url: "https://example.com/api/webhook/github-repo-monitor-benwainwright-da-automations",
+      },
+      id: 77,
+    },
+  });
+
   const service = GithubService({
     auto_deploy: { webhook: { register: mock(async () => {}) } },
     config: {
@@ -108,15 +155,18 @@ test("deletes previously stored webhook id before creating a new one", async () 
   });
 
   expect(getWebhook).toHaveBeenCalledWith({
-    hook_id: 44,
+    hook_id: 77,
     owner: "benwainwright",
     repo: "da-automations",
   });
-  expect(deleteWebhook).toHaveBeenCalledWith({
-    hook_id: 44,
-    owner: "benwainwright",
-    repo: "da-automations",
-  });
+  expect(updateWebhook).toHaveBeenCalledWith(
+    expect.objectContaining({
+      hook_id: 77,
+      owner: "benwainwright",
+      repo: "da-automations",
+    }),
+  );
+  expect(createWebhook).not.toHaveBeenCalled();
 });
 
 test("logs and swallows errors while registering repository webhook", async () => {
