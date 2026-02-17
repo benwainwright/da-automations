@@ -93,13 +93,7 @@ export function TVModeService({
       ],
     });
 
-    const tvModeEntity = tvMode.getEntity();
-    if (!tvModeEntity) {
-      logger.warn(`Skipping TV mode scene listener; entity is unavailable`);
-      return;
-    }
-
-    tvModeEntity.onUpdate(async (newState, oldState) => {
+    tvMode.onUpdate(async (newState, oldState) => {
       if (newState.state === "on" && oldState.state !== "on") {
         await hass.call.media_player.media_pause({
           entity_id: "media_player.living_room",

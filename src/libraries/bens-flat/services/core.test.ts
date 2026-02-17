@@ -29,22 +29,17 @@ test("subscribes to auto-deploy lifecycle and updates persistent notifications",
       },
       presence: {
         flatIsOccupiedSwitch: {
-          getEntity: () => ({
-            onUpdate: (_callback: unknown) => {},
-          }),
+          onUpdate: (_callback: unknown) => {},
         },
       },
       sleepMode: {
         sleepModeSwitch: {
-          getEntity: () => ({ entity_id: "switch.sleep_mode" }),
+          onUpdate: (_callback: unknown) => {},
         },
       },
       tvMode: {
         tvModeSwitch: {
-          entity_id: "switch.tv_mode",
-          getEntity: () => ({
-            onUpdate: (_callback: unknown) => {},
-          }),
+          onUpdate: (_callback: unknown) => {},
         },
       },
     },

@@ -88,13 +88,7 @@ export function MusicService({
   });
 
   lifecycle.onReady(() => {
-    const tvModeEntity = tvMode.tvModeSwitch.getEntity();
-    if (!tvModeEntity) {
-      logger.warn(`Skipping TV mode pause listener; entity is unavailable`);
-      return;
-    }
-
-    tvModeEntity.onUpdate(async (newState, oldState) => {
+    tvMode.tvModeSwitch.onUpdate(async (newState, oldState) => {
       if (!newState) return;
       if (newState.state === "on" && oldState.state === "off") {
         await pause();
