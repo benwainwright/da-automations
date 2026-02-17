@@ -1,5 +1,5 @@
 import { beforeEach, expect, mock, test } from "bun:test";
-import { SleepModeService } from "../libraries/bens-flat/services/sleep-mode-service.ts";
+import { SleepModeService } from "./sleep-mode-service.ts";
 
 beforeEach(() => {
   mock.clearAllMocks();

@@ -1,5 +1,5 @@
 import { expect, mock, test } from "bun:test";
-import { WebhookService } from "../libraries/auto-deploy/services/webhook-service.ts";
+import { WebhookService } from "./webhook-service.ts";
 
 test("translates webhook registration into a socket-trigger registration", async () => {
   const register = mock(async () => {});

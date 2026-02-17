@@ -19,7 +19,7 @@ mock.module("octokit", () => ({
   },
 }));
 
-const { GithubService } = await import("../libraries/auto-deploy/services/github-service.ts");
+const { GithubService } = await import("./github-service.ts");
 
 beforeEach(() => {
   mock.clearAllMocks();

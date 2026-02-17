@@ -1,5 +1,5 @@
 import { beforeEach, expect, mock, test } from "bun:test";
-import { NagService } from "../libraries/bens-flat/services/nag-service.ts";
+import { NagService } from "./nag-service.ts";
 
 beforeEach(() => {
   mock.clearAllMocks();

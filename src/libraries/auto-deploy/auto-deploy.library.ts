@@ -4,11 +4,12 @@ import { MonitorService } from "./services/monitor-service.ts";
 import { GithubService } from "./services/github-service.ts";
 import { DeployService } from "./services/deploy-service.ts";
 import { SocketTriggerService } from "./services/socket-trigger-service.ts";
+import { LifecycleEventsService } from "./services/lifecycle-events-service.ts";
 
 export const LIB_AUTO_DEPLOY = CreateLibrary({
   depends: [],
   name: "auto_deploy",
-  priorityInit: ["deploy", "github", "socketTrigger", "webhook"],
+  priorityInit: ["lifecycle", "deploy", "github", "socketTrigger", "webhook"],
   configuration: {
     EXTERNAL_URL: {
       type: "string",
@@ -32,6 +33,7 @@ export const LIB_AUTO_DEPLOY = CreateLibrary({
     },
   },
   services: {
+    lifecycle: LifecycleEventsService,
     socketTrigger: SocketTriggerService,
     webhook: WebhookService,
     monitor: MonitorService,

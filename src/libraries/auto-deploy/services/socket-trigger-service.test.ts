@@ -1,5 +1,5 @@
 import { beforeEach, expect, mock, test } from "bun:test";
-import { SocketTriggerService } from "../libraries/auto-deploy/services/socket-trigger-service.ts";
+import { SocketTriggerService } from "./socket-trigger-service.ts";
 
 const logger = {
   error: mock(() => {}),

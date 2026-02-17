@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { HelpersService } from "../libraries/bens-flat/services/helpers.ts";
+import { HelpersService } from "./helpers.ts";
 
 test("allAreas includes each room exactly once including spare_room", () => {
   const helpers = HelpersService({

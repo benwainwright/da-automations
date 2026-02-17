@@ -1,6 +1,6 @@
 import { beforeEach, expect, mock, test } from "bun:test";
 
-const { MonitorService } = await import("../libraries/auto-deploy/services/monitor-service.ts");
+const { MonitorService } = await import("./monitor-service.ts");
 
 const exitSpy = mock(() => {
   throw new Error("exit called");

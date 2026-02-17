@@ -52,6 +52,13 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
 
       const url = `${instance}/api/webhook/${webhookId}`;
       logger.info(`Creating repository webhook for ${url}`);
+      await auto_deploy.lifecycle?.emit({
+        type: "github.webhook.sync.started",
+        owner,
+        repo,
+        url,
+        webhookId,
+      });
 
       const github = new Octokit({
         auth: config.auto_deploy.GITHUB_PAT,
@@ -73,6 +80,13 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
           repo,
         });
         logger.info(`Repo ${owner}/${repo} webhook updated for ${url}`);
+        await auto_deploy.lifecycle?.emit({
+          type: "github.webhook.updated",
+          owner,
+          repo,
+          url,
+          hookId: existingHookId,
+        });
         return;
       }
 
@@ -88,8 +102,20 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
         active: true,
       });
       logger.info(`Repo ${owner}/${repo} webhook created for ${url}`);
+      await auto_deploy.lifecycle?.emit({
+        type: "github.webhook.created",
+        owner,
+        repo,
+        url,
+      });
     } catch (error) {
       logger.error(`Failed to register webhook`, error);
+      await auto_deploy.lifecycle?.emit({
+        type: "github.webhook.error",
+        owner,
+        repo,
+        error: error instanceof Error ? error.message : String(error),
+      });
     }
   };
 

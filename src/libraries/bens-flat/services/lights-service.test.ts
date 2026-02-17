@@ -1,5 +1,5 @@
 import { expect, mock, test } from "bun:test";
-import { LightsService } from "../libraries/bens-flat/services/lights-service.ts";
+import { LightsService } from "./lights-service.ts";
 
 test("flash() targets each expected area once", async () => {
   const turnOn = mock(async () => {});

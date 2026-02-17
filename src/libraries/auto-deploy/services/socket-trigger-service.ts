@@ -23,7 +23,7 @@ interface SocketTriggerConfig {
   callback: (data: Record<string, unknown>) => Promise<void> | void;
 }
 
-export function SocketTriggerService({ hass, logger }: TServiceParams) {
+export function SocketTriggerService({ hass, logger, auto_deploy }: TServiceParams) {
   const allTriggers = new Map<string, SocketTriggerConfig>();
   const pendingByMessageId = new Map<number, string>();
   const activeByMessageId = new Map<number, string>();
@@ -39,6 +39,10 @@ export function SocketTriggerService({ hass, logger }: TServiceParams) {
       pendingByMessageId.delete(result.id);
       activeByMessageId.set(result.id, triggerId);
       logger.info(`Socket trigger registered: ${triggerId}`);
+      void auto_deploy?.lifecycle?.emit({
+        type: "socket.trigger.registered",
+        triggerId,
+      });
     });
 
     hass.socket.registerMessageHandler<SocketTriggerEventMessage>("event", async (data) => {
@@ -51,6 +55,10 @@ export function SocketTriggerService({ hass, logger }: TServiceParams) {
         logger.info(`Socket trigger payload was not valid JSON: ${triggerId}`);
         return;
       }
+      void auto_deploy?.lifecycle?.emit({
+        type: "socket.trigger.invoked",
+        triggerId,
+      });
       await config.callback(json);
     });
   };
@@ -64,6 +72,11 @@ export function SocketTriggerService({ hass, logger }: TServiceParams) {
     await hass.socket.sendMessage(data, false);
     if (!data.id) {
       logger.error(`Failed to subscribe trigger: ${config.id} (missing socket message id)`);
+      void auto_deploy?.lifecycle?.emit({
+        type: "socket.trigger.error",
+        triggerId: config.id,
+        reason: "missing_socket_message_id",
+      });
       return;
     }
     pendingByMessageId.set(data.id, config.id);

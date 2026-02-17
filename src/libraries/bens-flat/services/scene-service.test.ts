@@ -1,5 +1,5 @@
 import { beforeEach, expect, mock, test } from "bun:test";
-import { SceneService } from "../libraries/bens-flat/services/scene-service.ts";
+import { SceneService } from "./scene-service.ts";
 
 type UpdateHandler = () => Promise<void> | void;
 

@@ -1,4 +1,4 @@
-import { expect, mock, test } from "bun:test";
+import { beforeEach, expect, mock, test } from "bun:test";
 
 const clone = mock(async () => {});
 const execa = mock(async () => {});
@@ -11,7 +11,11 @@ mock.module("execa", () => ({
   execa,
 }));
 
-const { DeployService } = await import("../libraries/auto-deploy/services/deploy-service.ts");
+const { DeployService } = await import("./deploy-service.ts");
+
+beforeEach(() => {
+  mock.clearAllMocks();
+});
 
 test("clones, installs, and builds in deployment order", async () => {
   const logger = {
@@ -66,6 +70,9 @@ test("cancel() aborts in-progress deploy shell commands", async () => {
   } as any);
 
   const deployPromise = service.deploy();
+  while (!resolveFirst) {
+    await new Promise((resolve) => setTimeout(resolve, 0));
+  }
   service.cancel();
   resolveFirst?.();
 

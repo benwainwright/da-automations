@@ -1,5 +1,5 @@
 import { beforeEach, expect, mock, test } from "bun:test";
-import { MotionService } from "../libraries/bens-flat/services/motion-service.ts";
+import { MotionService } from "./motion-service.ts";
 
 type UpdateCallback = (newState?: { state?: string }) => Promise<void> | void;
 
