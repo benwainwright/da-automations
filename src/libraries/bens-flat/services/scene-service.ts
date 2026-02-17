@@ -14,6 +14,7 @@ export function SceneService({ hass, lifecycle }: TServiceParams) {
     const id = `${scene.split(".")[1]}_off`;
 
     let removeOffCallback: RemoveCallback | undefined;
+    let hasOffScene = false;
     const onCallbacks: (() => Promise<void> | void)[] = [];
     const offCallbacks: (() => Promise<void> | void)[] = [];
 
@@ -22,6 +23,7 @@ export function SceneService({ hass, lifecycle }: TServiceParams) {
         scene_id: id,
         snapshot_entities: snapshot,
       });
+      hasOffScene = true;
 
       await hass.call.scene.turn_on({
         transition,
@@ -38,6 +40,7 @@ export function SceneService({ hass, lifecycle }: TServiceParams) {
     };
 
     const off = async () => {
+      if (!hasOffScene) return;
       await hass.call.scene.turn_on({
         transition,
         entity_id: `scene.${id}` as PICK_ENTITY<"scene">,
@@ -47,6 +50,8 @@ export function SceneService({ hass, lifecycle }: TServiceParams) {
         entity_id: `scene.${id}` as PICK_ENTITY<"scene">,
       });
       removeOffCallback?.remove();
+      removeOffCallback = undefined;
+      hasOffScene = false;
     };
 
     const theScene = hass.refBy.id(scene);

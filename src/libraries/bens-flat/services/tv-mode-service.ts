@@ -57,28 +57,29 @@ export function TVModeService({
   });
 
   lifecycle.onReady(() => {
+    const toggler = scene.toggle({
+      transition: 3,
+      scene: "scene.tv_mode",
+      snapshot: [
+        "light.living_room_floor_lamp_bottom",
+        "cover.living_room_blinds",
+        "light.living_room_floor_lamp_middle",
+        "light.living_room_floor_lamp_top",
+        "light.kitchen_fridge",
+        "light.kitchen_oven",
+        "light.kitchen_sink",
+        "light.kitchen_washing_machine",
+        "light.living_room_tv_wall",
+        "light.living_room_bookcase",
+        "light.living_room_back_wall_left",
+        "light.living_room_back_wall_middle",
+        "light.living_room_back_wall_right",
+        "switch.adaptive_lighting_living_room",
+        "switch.autoplay_music",
+      ],
+    });
+
     tvMode.getEntity().onUpdate(async (newState, oldState) => {
-      const toggler = scene.toggle({
-        transition: 3,
-        scene: "scene.tv_mode",
-        snapshot: [
-          "light.living_room_floor_lamp_bottom",
-          "cover.living_room_blinds",
-          "light.living_room_floor_lamp_middle",
-          "light.living_room_floor_lamp_top",
-          "light.kitchen_fridge",
-          "light.kitchen_oven",
-          "light.kitchen_sink",
-          "light.kitchen_washing_machine",
-          "light.living_room_tv_wall",
-          "light.living_room_bookcase",
-          "light.living_room_back_wall_left",
-          "light.living_room_back_wall_middle",
-          "light.living_room_back_wall_right",
-          "switch.adaptive_lighting_living_room",
-          "switch.autoplay_music",
-        ],
-      });
       if (newState.state === "on" && oldState.state !== "on") {
         await hass.call.media_player.media_pause({
           entity_id: "media_player.living_room",
