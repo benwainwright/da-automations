@@ -33,7 +33,7 @@
     "googleapis": "^171.4.0",
     "ini": "5.0.0",
     "isomorphic-git": "^1.36.3",
-    "node-cron": "4.0.2",
+    "node-cron": "4.2.1",
     "octokit": "^5.0.5",
     "poll-until-promise": "^4.2.0",
     "simple-git": "^3.30.0",
