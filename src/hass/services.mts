@@ -8,11 +8,15 @@ export const InstalledAddons = {
   "File editor": "core_configurator",
   "Get HACS": "cb646a50_get",
   Hakit: "5c36e1c9_hakit",
+  "Jellyfin Server (Host Network)": "3ce0ef5e_jellyfinserverhn",
   "Matter Server": "core_matter_server",
   "Mosquitto broker": "core_mosquitto",
   "Music Assistant": "d5369777_music_assistant",
   Piper: "core_piper",
+  Radarr: "a0d7b954_radarr",
+  "SQLite Web": "a0d7b954_sqlite-web",
   "Studio Code Server": "a0d7b954_vscode",
+  Whisparr: "a0d7b954_whisparr",
   "Z-Wave JS": "core_zwave_js",
   Zigbee2MQTT: "45df7312_zigbee2mqtt",
 } as const;
@@ -4563,7 +4567,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGYWMBMEHV3XRQMZB4J0DCKZ"
           | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
           | "01KH1RG56MRQGSD9V2WA52RZ4N"
-          | "01KH1SH05457MYPF8BZMY7MFDJ";
+          | "01KH1SH05457MYPF8BZMY7MFDJ"
+          | "01KHNBWD0MWEFFNEY8K217WMHV";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -5765,7 +5770,7 @@ declare module "@digital-alchemy/hass" {
            * >       - lock
            * > ```
            */
-          entity_id: PICK_ENTITY<"lock"> | PICK_ENTITY<"lock">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -5809,7 +5814,7 @@ declare module "@digital-alchemy/hass" {
            * >       - 1
            * > ```
            */
-          entity_id: PICK_ENTITY<"lock"> | PICK_ENTITY<"lock">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -5851,7 +5856,7 @@ declare module "@digital-alchemy/hass" {
            * >       - lock
            * > ```
            */
-          entity_id: PICK_ENTITY<"lock"> | PICK_ENTITY<"lock">[];
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -7134,7 +7139,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGYWMBMEHV3XRQMZB4J0DCKZ"
           | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
           | "01KH1RG56MRQGSD9V2WA52RZ4N"
-          | "01KH1SH05457MYPF8BZMY7MFDJ";
+          | "01KH1SH05457MYPF8BZMY7MFDJ"
+          | "01KHNBWD0MWEFFNEY8K217WMHV";
         /**
          * ## favorite
          *
@@ -7639,7 +7645,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGYWMBMEHV3XRQMZB4J0DCKZ"
           | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
           | "01KH1RG56MRQGSD9V2WA52RZ4N"
-          | "01KH1SH05457MYPF8BZMY7MFDJ";
+          | "01KH1SH05457MYPF8BZMY7MFDJ"
+          | "01KHNBWD0MWEFFNEY8K217WMHV";
         /**
          * ## library_only
          *
@@ -8291,7 +8298,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGYWMBMEHV3XRQMZB4J0DCKZ"
           | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
           | "01KH1RG56MRQGSD9V2WA52RZ4N"
-          | "01KH1SH05457MYPF8BZMY7MFDJ";
+          | "01KH1SH05457MYPF8BZMY7MFDJ"
+          | "01KHNBWD0MWEFFNEY8K217WMHV";
         /**
          * ## filenames
          *
@@ -8400,7 +8408,8 @@ declare module "@digital-alchemy/hass" {
           | "01KGYWMBMEHV3XRQMZB4J0DCKZ"
           | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
           | "01KH1RG56MRQGSD9V2WA52RZ4N"
-          | "01KH1SH05457MYPF8BZMY7MFDJ";
+          | "01KH1SH05457MYPF8BZMY7MFDJ"
+          | "01KHNBWD0MWEFFNEY8K217WMHV";
         /**
          * ## prompt
          *

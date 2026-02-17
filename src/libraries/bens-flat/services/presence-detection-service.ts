@@ -23,6 +23,7 @@ export function PresenceDetectionService({
 
   motion.anywhere(() => {
     logger.info(`Motion detected, checking if flat is occupied`);
+
     if (flatIsOccupiedSwitch.is_on) {
       logger.info(`Flat is occupied, turn off zone exits`);
       allowZoneExit = false;
