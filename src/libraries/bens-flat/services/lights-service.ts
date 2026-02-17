@@ -59,7 +59,7 @@ export function LightsService({
     timeout,
     blockSwitches,
   }: IMotionSwitchConfig) => {
-    const theSwitch = synapse.switch({
+    const motionSwitch = synapse.switch({
       name: switchName,
       unique_id: switchName.replace(/[^a-zA-Z0-9]/gi, ""),
       attributes: {
@@ -80,7 +80,13 @@ export function LightsService({
         ?.map(hass.refBy.id)
         .some((theSwitch) => theSwitch.state === "on");
 
-      if (newState.state === "on" && theSwitch.getEntity().state === "on" && !anyBlockSwitchIsOn) {
+      const switchEntity = motionSwitch?.getEntity?.();
+      if (!switchEntity) {
+        logger.warn(`Skipping motion trigger for ${area}; switch entity is unavailable`);
+        return;
+      }
+
+      if (newState.state === "on" && switchEntity.state === "on" && !anyBlockSwitchIsOn) {
         logger.info(`Turning ${area} lights on`);
         remove?.remove();
         await hass.call.light.turn_on({ area_id: area });
