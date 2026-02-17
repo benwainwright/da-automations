@@ -1,9 +1,37 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 import { RemoveCallback } from "@digital-alchemy/hass";
 
-export function CoreModule({ bens_flat, lifecycle, scheduler }: TServiceParams) {
-  const { lights, sleepMode, tvMode, presence, blinds } = bens_flat;
-  lifecycle.onReady(() => {
+export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TServiceParams) {
+  const { lights, sleepMode, tvMode, presence, blinds, notify } = bens_flat;
+  lifecycle.onReady(async () => {
+    const autoDeployNotificationId = "auto_deploy_status";
+    const autoDeployNotificationTitle = "Auto Deploy";
+
+    await notify.replacePersistentNotificationIfExists({
+      notificationId: autoDeployNotificationId,
+      title: autoDeployNotificationTitle,
+      message: "Automation application restarted after deploy.",
+    });
+
+    // Keep auto-deploy status messaging in core without coupling auto-deploy to flat-specific services.
+    auto_deploy?.lifecycle?.listen(async (event) => {
+      if (event.type === "deploy.started") {
+        await notify.replacePersistentNotification({
+          notificationId: autoDeployNotificationId,
+          title: autoDeployNotificationTitle,
+          message: "Deploy triggered. Pulling and building latest automation code.",
+        });
+      }
+
+      if (event.type === "restart.requested") {
+        await notify.replacePersistentNotification({
+          notificationId: autoDeployNotificationId,
+          title: autoDeployNotificationTitle,
+          message: "Deploy finished. Restarting automation application now.",
+        });
+      }
+    });
+
     lights.setupMotionTrigger({
       switchName: "Living room motion sensor",
       area: "living_room",

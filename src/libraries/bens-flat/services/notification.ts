@@ -52,5 +52,43 @@ export function NotificationService({ hass, bens_flat: { lights } }: TServicePar
     await speak(message);
   };
 
-  return { notify, notifyCritical, speak };
+  const hasPersistentNotification = (notificationId: string) => {
+    const entityId = `persistent_notification.${notificationId}`;
+    return Boolean(hass.entity.getCurrentState(entityId as never));
+  };
+
+  const replacePersistentNotification = async ({
+    notificationId,
+    title,
+    message,
+  }: NotifyConfig & { notificationId: string }) => {
+    await hass.call.persistent_notification.dismiss({
+      notification_id: notificationId,
+    });
+    await hass.call.persistent_notification.create({
+      notification_id: notificationId,
+      title,
+      message,
+    });
+  };
+
+  const replacePersistentNotificationIfExists = async ({
+    notificationId,
+    title,
+    message,
+  }: NotifyConfig & { notificationId: string }) => {
+    if (!hasPersistentNotification(notificationId)) {
+      return;
+    }
+    await replacePersistentNotification({ notificationId, title, message });
+  };
+
+  return {
+    hasPersistentNotification,
+    replacePersistentNotification,
+    replacePersistentNotificationIfExists,
+    notify,
+    notifyCritical,
+    speak,
+  };
 }

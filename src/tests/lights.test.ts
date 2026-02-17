@@ -35,7 +35,7 @@ test.each<MotionSensorTestConfig>([
           expect(turnOnSpy).toHaveBeenCalledWith({
             area_id: area,
           });
-        });
+        }, -1);
       });
   },
 );
@@ -70,7 +70,7 @@ test.each<MotionSensorTestConfigWithSwitchOff>([
           });
 
           expect(turnOnSpy).not.toHaveBeenCalled();
-        });
+        }, -1);
       });
   },
 );
@@ -105,7 +105,7 @@ test.each<MotionSensorTestConfigWithBlockingSwitch>([
           });
 
           expect(turnOnSpy).not.toHaveBeenCalled();
-        });
+        }, -1);
       });
   },
 );
