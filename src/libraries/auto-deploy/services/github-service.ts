@@ -2,7 +2,6 @@ import { TServiceParams } from "@digital-alchemy/core";
 import { Octokit } from "octokit";
 
 import type { PushEvent } from "@octokit/webhooks-types";
-import { readFile, writeFile } from "fs/promises";
 
 export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
   interface MonitorRepoConfig {
@@ -10,23 +9,6 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
     owner: string;
     callback: (data: PushEvent) => void | Promise<void>;
   }
-
-  const getHooksFile = async () => {
-    try {
-      return JSON.parse(await readFile("hooks.json", "utf-8"));
-    } catch {
-      return {};
-    }
-  };
-
-  const getHookId = async (webhookId: string): Promise<number | undefined> => {
-    return (await getHooksFile())[webhookId];
-  };
-
-  const writeId = async (webhookId: string, githubWebhookId: number) => {
-    const data = await getHooksFile();
-    await writeFile("hooks.json", JSON.stringify({ ...data, [webhookId]: githubWebhookId }));
-  };
 
   const findExistingWebhookByUrl = async (
     github: Octokit,
@@ -64,26 +46,7 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
         auth: config.auto_deploy.GITHUB_PAT,
       });
 
-      let existingHookId = await getHookId(webhookId);
-      if (existingHookId) {
-        try {
-          const existing = await github.rest.repos.getWebhook({
-            hook_id: existingHookId,
-            owner,
-            repo,
-          });
-          if (existing.data.config.url !== url) {
-            existingHookId = undefined;
-          }
-        } catch {
-          existingHookId = undefined;
-        }
-      }
-
-      if (!existingHookId) {
-        const existingByUrl = await findExistingWebhookByUrl(github, owner, repo, url);
-        existingHookId = existingByUrl?.id;
-      }
+      const existingHookId = (await findExistingWebhookByUrl(github, owner, repo, url))?.id;
 
       if (existingHookId) {
         logger.info(`Existing webhook found on repository, updating ${existingHookId}`);
@@ -98,12 +61,11 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
           owner,
           repo,
         });
-        await writeId(webhookId, existingHookId);
         logger.info(`Repo ${owner}/${repo} webhook updated for ${url}`);
         return;
       }
 
-      const created = await github.rest.repos.createWebhook({
+      await github.rest.repos.createWebhook({
         repo,
         owner,
         name: "web",
@@ -114,8 +76,6 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
         events: ["push"],
         active: true,
       });
-
-      await writeId(webhookId, created.data.id);
       logger.info(`Repo ${owner}/${repo} webhook created for ${url}`);
     } catch (error) {
       logger.error(`Failed to register webhook`, error);
