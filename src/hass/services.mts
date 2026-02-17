@@ -13,6 +13,7 @@ export const InstalledAddons = {
   "Mosquitto broker": "core_mosquitto",
   "Music Assistant": "d5369777_music_assistant",
   Piper: "core_piper",
+  "Postgres 17": "db21ed7f_postgres_latest",
   Radarr: "a0d7b954_radarr",
   "SQLite Web": "a0d7b954_sqlite-web",
   "Studio Code Server": "a0d7b954_vscode",
@@ -4530,7 +4531,6 @@ declare module "@digital-alchemy/hass" {
           | "01KGNEJ1VW5W0MBQQFBVT56DY1"
           | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
           | "01KGNHDASVCXZRP69JW51W7AWT"
-          | "01KGNHKVG40WJN1NZQRSTWQHFK"
           | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
           | "01KGP9Z70JSRJCRV4T3V0GX4G0"
           | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
@@ -4570,7 +4570,7 @@ declare module "@digital-alchemy/hass" {
           | "01KH1SH05457MYPF8BZMY7MFDJ"
           | "01KHNBWD0MWEFFNEY8K217WMHV"
           | "01KHPJGT8R803RDRPBFA88EDSD"
-          | "01KHPN768069X63NPKXV3D3PF1";
+          | "01KHPR32WETT9ZK6JJ42TE5E4R";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -7104,7 +7104,6 @@ declare module "@digital-alchemy/hass" {
           | "01KGNEJ1VW5W0MBQQFBVT56DY1"
           | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
           | "01KGNHDASVCXZRP69JW51W7AWT"
-          | "01KGNHKVG40WJN1NZQRSTWQHFK"
           | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
           | "01KGP9Z70JSRJCRV4T3V0GX4G0"
           | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
@@ -7144,7 +7143,7 @@ declare module "@digital-alchemy/hass" {
           | "01KH1SH05457MYPF8BZMY7MFDJ"
           | "01KHNBWD0MWEFFNEY8K217WMHV"
           | "01KHPJGT8R803RDRPBFA88EDSD"
-          | "01KHPN768069X63NPKXV3D3PF1";
+          | "01KHPR32WETT9ZK6JJ42TE5E4R";
         /**
          * ## favorite
          *
@@ -7612,7 +7611,6 @@ declare module "@digital-alchemy/hass" {
           | "01KGNEJ1VW5W0MBQQFBVT56DY1"
           | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
           | "01KGNHDASVCXZRP69JW51W7AWT"
-          | "01KGNHKVG40WJN1NZQRSTWQHFK"
           | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
           | "01KGP9Z70JSRJCRV4T3V0GX4G0"
           | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
@@ -7652,7 +7650,7 @@ declare module "@digital-alchemy/hass" {
           | "01KH1SH05457MYPF8BZMY7MFDJ"
           | "01KHNBWD0MWEFFNEY8K217WMHV"
           | "01KHPJGT8R803RDRPBFA88EDSD"
-          | "01KHPN768069X63NPKXV3D3PF1";
+          | "01KHPR32WETT9ZK6JJ42TE5E4R";
         /**
          * ## library_only
          *
@@ -8267,7 +8265,6 @@ declare module "@digital-alchemy/hass" {
           | "01KGNEJ1VW5W0MBQQFBVT56DY1"
           | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
           | "01KGNHDASVCXZRP69JW51W7AWT"
-          | "01KGNHKVG40WJN1NZQRSTWQHFK"
           | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
           | "01KGP9Z70JSRJCRV4T3V0GX4G0"
           | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
@@ -8307,7 +8304,7 @@ declare module "@digital-alchemy/hass" {
           | "01KH1SH05457MYPF8BZMY7MFDJ"
           | "01KHNBWD0MWEFFNEY8K217WMHV"
           | "01KHPJGT8R803RDRPBFA88EDSD"
-          | "01KHPN768069X63NPKXV3D3PF1";
+          | "01KHPR32WETT9ZK6JJ42TE5E4R";
         /**
          * ## filenames
          *
@@ -8379,7 +8376,6 @@ declare module "@digital-alchemy/hass" {
           | "01KGNEJ1VW5W0MBQQFBVT56DY1"
           | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
           | "01KGNHDASVCXZRP69JW51W7AWT"
-          | "01KGNHKVG40WJN1NZQRSTWQHFK"
           | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
           | "01KGP9Z70JSRJCRV4T3V0GX4G0"
           | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
@@ -8419,7 +8415,7 @@ declare module "@digital-alchemy/hass" {
           | "01KH1SH05457MYPF8BZMY7MFDJ"
           | "01KHNBWD0MWEFFNEY8K217WMHV"
           | "01KHPJGT8R803RDRPBFA88EDSD"
-          | "01KHPN768069X63NPKXV3D3PF1";
+          | "01KHPR32WETT9ZK6JJ42TE5E4R";
         /**
          * ## prompt
          *

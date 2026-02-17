@@ -62,10 +62,23 @@ declare module "@digital-alchemy/hass" {
            * > configuration: {}
            * > ```
            */ configuration: object;
-          manual_control: [];
+          manual_control: (
+            | "light.kitchen_fridge"
+            | "light.kitchen_oven"
+            | "light.kitchen_sink"
+            | "light.kitchen_washing_machine"
+            | "light.living_room_back_wall_left"
+            | "light.living_room_back_wall_middle"
+            | "light.living_room_back_wall_right"
+            | "light.living_room_bookcase"
+            | "light.living_room_floor_lamp_bottom"
+            | "light.living_room_floor_lamp_middle"
+            | "light.living_room_floor_lamp_top"
+            | "light.living_room_tv_wall"
+          )[];
           /**
            * > ```yaml
-           * > brightness_pct: 28.572062488420862
+           * > brightness_pct: 9.780897286489413
            * > ```
            */ brightness_pct: number;
           /**
@@ -83,7 +96,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7214943182987792
+           * > sun_position: -0.9113040678132382
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -140,7 +153,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 28.4368579766583
+           * > brightness_pct: 9.704630222288127
            * > ```
            */ brightness_pct: number;
           /**
@@ -158,7 +171,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.722860020437795
+           * > sun_position: -0.9120744421991098
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -245,7 +258,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 49.51255774778831
+           * > brightness_pct: 36.21836801285884
            * > ```
            */ brightness_pct: number;
           /**
@@ -263,7 +276,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7212491750315956
+           * > sun_position: -0.9111661712448738
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -320,7 +333,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 28.63648064724214
+           * > brightness_pct: 9.817228488582076
            * > ```
            */ brightness_pct: number;
           /**
@@ -338,7 +351,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7208436298258369
+           * > sun_position: -0.9109370859739184
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -369,17 +382,17 @@ declare module "@digital-alchemy/hass" {
           actions: [];
           /**
            * > ```yaml
-           * > current_slot: 3
+           * > current_slot: 4
            * > ```
            */ current_slot: number;
           /**
            * > ```yaml
-           * > next_slot: 4
+           * > next_slot: 0
            * > ```
            */ next_slot: number;
           /**
            * > ```yaml
-           * > next_trigger: '2026-02-17T21:00:00+00:00'
+           * > next_trigger: '2026-02-18T00:00:00+00:00'
            * > ```
            */ next_trigger: string;
           tags: [];
@@ -405,17 +418,17 @@ declare module "@digital-alchemy/hass" {
           actions: [];
           /**
            * > ```yaml
-           * > current_slot: 3
+           * > current_slot: 4
            * > ```
            */ current_slot: number;
           /**
            * > ```yaml
-           * > next_slot: 4
+           * > next_slot: 0
            * > ```
            */ next_slot: number;
           /**
            * > ```yaml
-           * > next_trigger: '2026-02-17T21:30:00+00:00'
+           * > next_trigger: '2026-02-18T00:00:00+00:00'
            * > ```
            */ next_trigger: string;
           tags: [];
@@ -816,7 +829,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 28.34085645401061
+           * > brightness_pct: 9.862145212957286
            * > ```
            */ brightness_pct: number;
           /**
@@ -834,7 +847,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7238297327877716
+           * > sun_position: -0.9104833816873001
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -853,6 +866,11 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.blinds_default_closed",
         {
+          /**
+           * > ```yaml
+           * > area: living_room
+           * > ```
+           */ area: string;
           friendly_name: "Blinds default closed";
         }
       >;
@@ -892,16 +910,26 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.living_room_motion_sensor",
         {
+          /**
+           * > ```yaml
+           * > area: living_room
+           * > ```
+           */ area: string;
           friendly_name: "Living room motion sensor";
         }
       >;
     };
-    "switch.halllway_motion_sensor": {
+    "switch.hallway_motion_sensor": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
-        "switch.halllway_motion_sensor",
+        "switch.hallway_motion_sensor",
         {
-          friendly_name: "Halllway motion sensor";
+          /**
+           * > ```yaml
+           * > area: hallway
+           * > ```
+           */ area: string;
+          friendly_name: "Hallway motion sensor";
         }
       >;
     };
@@ -910,6 +938,11 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.spare_room_motion_sensor",
         {
+          /**
+           * > ```yaml
+           * > area: spare_room
+           * > ```
+           */ area: string;
           friendly_name: "Spare room motion sensor";
         }
       >;
@@ -919,6 +952,11 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.bedroom_motion_sensor",
         {
+          /**
+           * > ```yaml
+           * > area: bedroom
+           * > ```
+           */ area: string;
           friendly_name: "Bedroom motion sensor";
         }
       >;
@@ -928,6 +966,11 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.bathroom_motion_sensor",
         {
+          /**
+           * > ```yaml
+           * > area: bathroom
+           * > ```
+           */ area: string;
           friendly_name: "Bathroom motion sensor";
         }
       >;
@@ -3154,6 +3197,39 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "update.postgres_17_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.postgres_17_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "17.4-13";
+          in_progress: boolean;
+          latest_version: "17.4-13";
+          release_summary: null;
+          release_url: null;
+          skipped_version: null;
+          title: "Postgres 17";
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: /api/hassio/addons/db21ed7f_postgres_latest/icon
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Postgres 17 Update";
+          /**
+           * > ```yaml
+           * > supported_features: 29
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
     "conversation.home_assistant": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -3307,7 +3383,7 @@ declare module "@digital-alchemy/hass" {
         {
           unit_of_measurement: "%";
           device_class: "battery";
-          icon: "mdi:battery-60";
+          icon: "mdi:battery-50";
           friendly_name: "Bens Phone";
         }
       >;
@@ -3328,7 +3404,7 @@ declare module "@digital-alchemy/hass" {
         "sensor.bens_phone_battery_state",
         {
           "Low Power Mode": boolean;
-          icon: "mdi:battery-60";
+          icon: "mdi:battery-50";
           friendly_name: "Bens Phone Battery State";
         }
       >;
@@ -3421,7 +3497,7 @@ declare module "@digital-alchemy/hass" {
           Location: [];
           /**
            * > ```yaml
-           * > Name: Block B, 12 Pollard Street
+           * > Name: Block C, 12 Pollard Street
            * > ```
            */ Name: string;
           /**
@@ -3431,7 +3507,7 @@ declare module "@digital-alchemy/hass" {
            */ Ocean: string;
           /**
            * > ```yaml
-           * > Postal Code: M4 7AJ
+           * > Postal Code: M4 7AL
            * > ```
            */ "Postal Code": string;
           /**
@@ -3441,7 +3517,7 @@ declare module "@digital-alchemy/hass" {
            */ "Sub Administrative Area": string;
           /**
            * > ```yaml
-           * > Sub Locality: City Centre
+           * > Sub Locality: Bradford
            * > ```
            */ "Sub Locality": string;
           /**
@@ -3512,17 +3588,17 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > Available: 583.83 GB
+           * > Available: 577.43 GB
            * > ```
            */ Available: string;
           /**
            * > ```yaml
-           * > Available (Important): 634.65 GB
+           * > Available (Important): 628.25 GB
            * > ```
            */ "Available (Important)": string;
           /**
            * > ```yaml
-           * > Available (Opportunistic): 609.88 GB
+           * > Available (Opportunistic): 603.48 GB
            * > ```
            */ "Available (Opportunistic)": string;
           /**
@@ -3642,13 +3718,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > Bundle Identifier: com.github.wez.wezterm
+           * > Bundle Identifier: dev.zed.Zed
            * > ```
            */ "Bundle Identifier": string;
           "Is Hidden": boolean;
           /**
            * > ```yaml
-           * > Launch Date: '2026-02-13T13:38:01Z'
+           * > Launch Date: '2026-02-17T20:28:43Z'
            * > ```
            */ "Launch Date": string;
           "Owns Menu Bar": boolean;
@@ -5188,10 +5264,10 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > application_unique_id: 1971e4ed-1a2c-4c24-b3a0-503c87d142ef
+           * > application_unique_id: 551e4cc1-3a68-460e-a3ff-9f70ba752c46
            * > ```
            */ application_unique_id: string;
-          icon: "mdi:server-outline";
+          icon: "mdi:server";
           friendly_name: "app Online";
         }
       >;
@@ -5347,7 +5423,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           /**
@@ -5865,7 +5941,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           /**
@@ -5982,7 +6058,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           /**
@@ -6099,7 +6175,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           /**
@@ -6216,7 +6292,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           /**
@@ -6333,7 +6409,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           /**
@@ -6450,7 +6526,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           /**
@@ -6567,7 +6643,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           /**
@@ -6678,7 +6754,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           /**
@@ -6769,7 +6845,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           friendly_name: "Living room floor lamp (Middle)";
@@ -6828,7 +6904,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           friendly_name: "Living Room floor lamp (bottom)";
@@ -6887,7 +6963,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           friendly_name: "Living room floor lamp (top)";
@@ -7852,7 +7928,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 73
+           * > brightness: 39
            * > ```
            */ brightness: number;
           /**
@@ -7924,6 +8000,62 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "zone.work": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "zone.work",
+        {
+          /**
+           * > ```yaml
+           * > latitude: 53.480494
+           * > ```
+           */ latitude: number;
+          /**
+           * > ```yaml
+           * > longitude: -2.246643
+           * > ```
+           */ longitude: number;
+          /**
+           * > ```yaml
+           * > radius: 87
+           * > ```
+           */ radius: number;
+          passive: boolean;
+          persons: [];
+          editable: boolean;
+          icon: "mdi:map-marker";
+          friendly_name: "Work";
+        }
+      >;
+    };
+    "zone.gym": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "zone.gym",
+        {
+          /**
+           * > ```yaml
+           * > latitude: 53.483564043384725
+           * > ```
+           */ latitude: number;
+          /**
+           * > ```yaml
+           * > longitude: -2.228808403015137
+           * > ```
+           */ longitude: number;
+          /**
+           * > ```yaml
+           * > radius: 73
+           * > ```
+           */ radius: number;
+          passive: boolean;
+          persons: [];
+          editable: boolean;
+          icon: "mdi:map-marker";
+          friendly_name: "Gym";
+        }
+      >;
+    };
     "person.ben": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -7938,17 +8070,17 @@ declare module "@digital-alchemy/hass" {
           device_trackers: ("device_tracker.bens_phone" | "device_tracker.bens_imac_pro")[];
           /**
            * > ```yaml
-           * > latitude: 53.47926043695751
+           * > latitude: 53.47925037351987
            * > ```
            */ latitude: number;
           /**
            * > ```yaml
-           * > longitude: -2.2209543151016957
+           * > longitude: -2.2206790976711557
            * > ```
            */ longitude: number;
           /**
            * > ```yaml
-           * > gps_accuracy: 10
+           * > gps_accuracy: 16
            * > ```
            */ gps_accuracy: number;
           /**
@@ -8017,12 +8149,12 @@ declare module "@digital-alchemy/hass" {
            */ next_setting: string;
           /**
            * > ```yaml
-           * > elevation: -29.54
+           * > elevation: -39.6
            * > ```
            */ elevation: number;
           /**
            * > ```yaml
-           * > azimuth: 291.86
+           * > azimuth: 312.36
            * > ```
            */ azimuth: number;
           rising: boolean;
@@ -8054,12 +8186,12 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 21
+           * > current_temperature: 19.5
            * > ```
            */ current_temperature: number;
           /**
            * > ```yaml
-           * > temperature: 21
+           * > temperature: 4
            * > ```
            */ temperature: number;
           /**
@@ -8069,7 +8201,7 @@ declare module "@digital-alchemy/hass" {
            */ hvac_action: string;
           /**
            * > ```yaml
-           * > preset_mode: comfort
+           * > preset_mode: sleep
            * > ```
            */ preset_mode: "none" | "away" | "comfort" | "sleep";
           friendly_name: "Living Room";
@@ -8105,12 +8237,12 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 18.7
+           * > current_temperature: 17.6
            * > ```
            */ current_temperature: number;
           /**
            * > ```yaml
-           * > temperature: 18
+           * > temperature: 14
            * > ```
            */ temperature: number;
           /**
@@ -8120,7 +8252,7 @@ declare module "@digital-alchemy/hass" {
            */ hvac_action: string;
           /**
            * > ```yaml
-           * > preset_mode: comfort
+           * > preset_mode: sleep
            * > ```
            */ preset_mode: "none" | "away" | "comfort" | "sleep";
           friendly_name: "Hallway";
@@ -8156,7 +8288,7 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 19.2
+           * > current_temperature: 17.9
            * > ```
            */ current_temperature: number;
           /**
@@ -8191,32 +8323,32 @@ declare module "@digital-alchemy/hass" {
           source_type: "gps";
           /**
            * > ```yaml
-           * > battery_level: 60
+           * > battery_level: 55
            * > ```
            */ battery_level: number;
           /**
            * > ```yaml
-           * > latitude: 53.47926043695751
+           * > latitude: 53.47925037351987
            * > ```
            */ latitude: number;
           /**
            * > ```yaml
-           * > longitude: -2.2209543151016957
+           * > longitude: -2.2206790976711557
            * > ```
            */ longitude: number;
           /**
            * > ```yaml
-           * > gps_accuracy: 10
+           * > gps_accuracy: 16
            * > ```
            */ gps_accuracy: number;
           /**
            * > ```yaml
-           * > altitude: 49.766211279340546
+           * > altitude: 53.4113259451629
            * > ```
            */ altitude: number;
           /**
            * > ```yaml
-           * > vertical_accuracy: 94
+           * > vertical_accuracy: 30
            * > ```
            */ vertical_accuracy: number;
           friendly_name: "Bens Phone";
@@ -8495,7 +8627,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/i6rsgc6D/syncgroup_nyvpnj8n/6a001d5bb2a649f19010c7a611c1f18c.flac
+           * >   http://192.168.1.143:8097/single/oBvFg9aS/syncgroup_nyvpnj8n/f075108b5de1471fa781b004a2260753.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -8505,7 +8637,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 196
+           * > media_duration: 250
            * > ```
            */ media_duration: number;
           /**
@@ -8515,22 +8647,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-17T20:38:45.494394+00:00'
+           * > media_position_updated_at: '2026-02-17T22:13:49.681692+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Kyle (i found you)
+           * > media_title: Delilah (pull me out of this)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Fred again..
+           * > media_artist: Fred again../Delilah Montagu
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Actual Life (April 14 - December 17 2020)
+           * > media_album_name: Delilah (pull me out of this)
            * > ```
            */ media_album_name: string;
           /**
@@ -8546,19 +8678,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 3
+           * > queue_position: 2
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 8
+           * > queue_size: 7
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=14366ea2007c9a26b238d29f5bcb46eabe10d21af28f0bda1d83ae87607fae03&cache=b4451e1cb285c554
+           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=14366ea2007c9a26b238d29f5bcb46eabe10d21af28f0bda1d83ae87607fae03&cache=848fb7b25ae24074
            * > ```
            */ entity_picture: string;
           friendly_name: "Bedroom Speaker";
@@ -8589,7 +8721,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/i6rsgc6D/syncgroup_nyvpnj8n/6a001d5bb2a649f19010c7a611c1f18c.flac
+           * >   http://192.168.1.143:8097/single/oBvFg9aS/syncgroup_nyvpnj8n/f075108b5de1471fa781b004a2260753.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -8599,7 +8731,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 196
+           * > media_duration: 250
            * > ```
            */ media_duration: number;
           /**
@@ -8609,22 +8741,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-17T20:38:45.494394+00:00'
+           * > media_position_updated_at: '2026-02-17T22:13:49.681692+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Kyle (i found you)
+           * > media_title: Delilah (pull me out of this)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Fred again..
+           * > media_artist: Fred again../Delilah Montagu
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Actual Life (April 14 - December 17 2020)
+           * > media_album_name: Delilah (pull me out of this)
            * > ```
            */ media_album_name: string;
           /**
@@ -8640,19 +8772,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 3
+           * > queue_position: 2
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 8
+           * > queue_size: 7
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.living_room_sonos?token=c11d941a3972608072cb1643807e6f43f5d51e171350aba21352f0a7b3791c7a&cache=b4451e1cb285c554
+           * >   /api/media_player_proxy/media_player.living_room_sonos?token=c11d941a3972608072cb1643807e6f43f5d51e171350aba21352f0a7b3791c7a&cache=848fb7b25ae24074
            * > ```
            */ entity_picture: string;
           friendly_name: "Living Room";
@@ -8795,7 +8927,7 @@ declare module "@digital-alchemy/hass" {
            */ volume_level: number;
           /**
            * > ```yaml
-           * > media_content_id: library://track/142
+           * > media_content_id: spotify--VvV7nv7V://track/0Ftrkz2waaHcjKb4qYvLmz
            * > ```
            */ media_content_id: string;
           /**
@@ -8805,7 +8937,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 196
+           * > media_duration: 250
            * > ```
            */ media_duration: number;
           /**
@@ -8815,29 +8947,24 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-17T20:38:46.330455+00:00'
+           * > media_position_updated_at: '2026-02-17T22:13:50.448382+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Kyle (i found you)
+           * > media_title: Delilah (pull me out of this)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Fred again..
+           * > media_artist: Fred again../Delilah Montagu
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Actual Life (April 14 - December 17 2020)
+           * > media_album_name: Delilah (pull me out of this)
            * > ```
            */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > media_album_artist: Fred again..
-           * > ```
-           */ media_album_artist: string;
           /**
            * > ```yaml
            * > app_id: music_assistant
@@ -8857,7 +8984,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.flat?token=5c4338f92f9dd08b5c33070dac7776c274bf1b0c4b8cddfa517366b39fe268e5&cache=a9a805c48d699318
+           * >   /api/media_player_proxy/media_player.flat?token=5c4338f92f9dd08b5c33070dac7776c274bf1b0c4b8cddfa517366b39fe268e5&cache=0f631152c9ce3e53
            * > ```
            */ entity_picture_local: string;
           /**
@@ -8873,7 +9000,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2730f0e63e38a0ea92314ab9d7f
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273c652ae235973f4731ec6ac50
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker-multiple";
@@ -8905,7 +9032,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: library://track/142
+           * > media_content_id: spotify--VvV7nv7V://track/0Ftrkz2waaHcjKb4qYvLmz
            * > ```
            */ media_content_id: string;
           /**
@@ -8915,7 +9042,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 196
+           * > media_duration: 250
            * > ```
            */ media_duration: number;
           /**
@@ -8925,29 +9052,24 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-17T20:38:46.330455+00:00'
+           * > media_position_updated_at: '2026-02-17T22:13:50.448382+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Kyle (i found you)
+           * > media_title: Delilah (pull me out of this)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Fred again..
+           * > media_artist: Fred again../Delilah Montagu
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Actual Life (April 14 - December 17 2020)
+           * > media_album_name: Delilah (pull me out of this)
            * > ```
            */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > media_album_artist: Fred again..
-           * > ```
-           */ media_album_artist: string;
           /**
            * > ```yaml
            * > app_id: music_assistant
@@ -8962,7 +9084,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.living_room?token=99609a1d7fbb704827b124ebf00e5eb2dac67014e179e4109475551946ac15b7&cache=a9a805c48d699318
+           * >   /api/media_player_proxy/media_player.living_room?token=99609a1d7fbb704827b124ebf00e5eb2dac67014e179e4109475551946ac15b7&cache=0f631152c9ce3e53
            * > ```
            */ entity_picture_local: string;
           /**
@@ -8978,7 +9100,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2730f0e63e38a0ea92314ab9d7f
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273c652ae235973f4731ec6ac50
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -9010,7 +9132,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: library://track/142
+           * > media_content_id: spotify--VvV7nv7V://track/0Ftrkz2waaHcjKb4qYvLmz
            * > ```
            */ media_content_id: string;
           /**
@@ -9020,7 +9142,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 196
+           * > media_duration: 250
            * > ```
            */ media_duration: number;
           /**
@@ -9030,29 +9152,24 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-17T20:38:46.330455+00:00'
+           * > media_position_updated_at: '2026-02-17T22:13:50.448382+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Kyle (i found you)
+           * > media_title: Delilah (pull me out of this)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Fred again..
+           * > media_artist: Fred again../Delilah Montagu
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Actual Life (April 14 - December 17 2020)
+           * > media_album_name: Delilah (pull me out of this)
            * > ```
            */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > media_album_artist: Fred again..
-           * > ```
-           */ media_album_artist: string;
           /**
            * > ```yaml
            * > app_id: music_assistant
@@ -9067,7 +9184,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bedroom?token=6648c23a9afd9422ab4daff577ab32aa61bbdec69ac5c82b41bfac8dc8ac79dc&cache=a9a805c48d699318
+           * >   /api/media_player_proxy/media_player.bedroom?token=6648c23a9afd9422ab4daff577ab32aa61bbdec69ac5c82b41bfac8dc8ac79dc&cache=0f631152c9ce3e53
            * > ```
            */ entity_picture_local: string;
           /**
@@ -9083,7 +9200,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2730f0e63e38a0ea92314ab9d7f
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273c652ae235973f4731ec6ac50
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -9146,7 +9263,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/i6rsgc6D/syncgroup_nyvpnj8n/6a001d5bb2a649f19010c7a611c1f18c.flac
+           * >   http://192.168.1.143:8097/single/oBvFg9aS/syncgroup_nyvpnj8n/f075108b5de1471fa781b004a2260753.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -9156,7 +9273,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 196
+           * > media_duration: 250
            * > ```
            */ media_duration: number;
           /**
@@ -9166,22 +9283,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-17T20:38:45.494394+00:00'
+           * > media_position_updated_at: '2026-02-17T22:13:49.681692+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Kyle (i found you)
+           * > media_title: Delilah (pull me out of this)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Fred again..
+           * > media_artist: Fred again../Delilah Montagu
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Actual Life (April 14 - December 17 2020)
+           * > media_album_name: Delilah (pull me out of this)
            * > ```
            */ media_album_name: string;
           /**
@@ -9197,19 +9314,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 3
+           * > queue_position: 2
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 8
+           * > queue_size: 7
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.office?token=bd238179b88575f9fb20144baaf0b24b837d9e86e5c42dd17c9b686208bb3b38&cache=b4451e1cb285c554
+           * >   /api/media_player_proxy/media_player.office?token=bd238179b88575f9fb20144baaf0b24b837d9e86e5c42dd17c9b686208bb3b38&cache=848fb7b25ae24074
            * > ```
            */ entity_picture: string;
           friendly_name: "Bathroom";
@@ -9240,7 +9357,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: library://track/142
+           * > media_content_id: spotify--VvV7nv7V://track/0Ftrkz2waaHcjKb4qYvLmz
            * > ```
            */ media_content_id: string;
           /**
@@ -9250,7 +9367,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 196
+           * > media_duration: 250
            * > ```
            */ media_duration: number;
           /**
@@ -9260,29 +9377,24 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-17T20:38:46.330455+00:00'
+           * > media_position_updated_at: '2026-02-17T22:13:50.448382+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Kyle (i found you)
+           * > media_title: Delilah (pull me out of this)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Fred again..
+           * > media_artist: Fred again../Delilah Montagu
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Actual Life (April 14 - December 17 2020)
+           * > media_album_name: Delilah (pull me out of this)
            * > ```
            */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > media_album_artist: Fred again..
-           * > ```
-           */ media_album_artist: string;
           /**
            * > ```yaml
            * > app_id: music_assistant
@@ -9297,7 +9409,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bathroom?token=e0a9740752b944ca36cff52fa32d037b988dbc5615262593841d3712c09db063&cache=a9a805c48d699318
+           * >   /api/media_player_proxy/media_player.bathroom?token=e0a9740752b944ca36cff52fa32d037b988dbc5615262593841d3712c09db063&cache=0f631152c9ce3e53
            * > ```
            */ entity_picture_local: string;
           /**
@@ -9313,7 +9425,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2730f0e63e38a0ea92314ab9d7f
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273c652ae235973f4731ec6ac50
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -10847,13 +10959,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 409b18eede5fede2d78d699fba2a01685798e609c678714129fa15f7d3311b02
+           * > access_token: ba86bc2870d607bc8cf7e26c91b07bbc1df2246f9a0b5d4de0fdad9659b3a8d4
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.xbox_network_now_playing?token=409b18eede5fede2d78d699fba2a01685798e609c678714129fa15f7d3311b02
+           * >   /api/image_proxy/image.xbox_network_now_playing?token=ba86bc2870d607bc8cf7e26c91b07bbc1df2246f9a0b5d4de0fdad9659b3a8d4
            * > ```
            */ entity_picture: string;
           friendly_name: "Xbox Network Now playing";

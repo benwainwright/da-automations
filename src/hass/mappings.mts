@@ -16,8 +16,8 @@ declare module "@digital-alchemy/hass" {
       | "light.living_room_lights"
       | "switch.living_room_heaters"
       | "climate.living_room"
-      | "switch.tv_mode"
       | "scene.tv_mode"
+      | "switch.tv_mode"
       | "sensor.living_room_audio_input_format"
       | "binary_sensor.living_room_microphone"
       | "select.living_room_speech_enhancement"
@@ -434,7 +434,6 @@ declare module "@digital-alchemy/hass" {
     _d88d02073176fd314fb5bbaeaf6022a3: "update.get_hacs_update";
     _1429a7af2b663b42e9b30c0565c9885c: "update.hacs_update";
     _85bb84fa59bee08be31e2e0120e30bf4: "update.digital_alchemy_synapse_update";
-    _f986128d654b7aaeb306c4aee39b1184: never;
     _a99b90a33d1c2a2ef4f0c99aa897c922:
       | "light.living_room_floor_lamp_middle"
       | "select.living_room_floor_lamp_middle_power_on_behavior"
@@ -807,14 +806,15 @@ declare module "@digital-alchemy/hass" {
       | "sensor.home_proximity_nearest_direction_of_travel"
       | "sensor.home_proximity_ben_distance"
       | "sensor.home_proximity_ben_direction_of_travel";
-    _d6cd53e1e2e902ea93b9672f4b4c66e2:
+    _a4f46c584c2b9eacaa4438243c169c6a: "update.postgres_17_update";
+    _fb126900d3de319778c681cc0f13a120:
+      | "binary_sensor.flat_occupied"
       | "switch.blinds_default_closed"
       | "switch.sleep_mode"
       | "switch.tv_mode"
       | "switch.autoplay_music"
-      | "binary_sensor.flat_occupied"
       | "switch.living_room_motion_sensor"
-      | "switch.halllway_motion_sensor"
+      | "switch.hallway_motion_sensor"
       | "switch.spare_room_motion_sensor"
       | "switch.bedroom_motion_sensor"
       | "switch.bathroom_motion_sensor";
@@ -849,8 +849,6 @@ declare module "@digital-alchemy/hass" {
       | "media_player.bedroom_sonos"
       | "media_player.bedroom"
       | "tts.piper"
-      | "switch.blinds_default_closed"
-      | "switch.autoplay_music"
       | "media_player.flat"
       | "ai_task.openai"
       | "binary_sensor.imac_active"
@@ -860,15 +858,17 @@ declare module "@digital-alchemy/hass" {
       | "switch.adaptive_lighting_adapt_color_spare_room"
       | "switch.adaptive_lighting_adapt_brightness_spare_room"
       | "switch.adaptive_lighting_spare_room"
-      | "binary_sensor.xbox_network_in_game";
+      | "binary_sensor.xbox_network_in_game"
+      | "switch.blinds_default_closed"
+      | "switch.autoplay_music";
     _requires_internet:
       | "tts.home_assistant_cloud"
       | "tts.google_translate_en_com"
       | "update.adaptive_lighting_update"
       | "remote.bens_apple_tv"
       | "media_player.apple_tv"
-      | "switch.autoplay_music"
-      | "binary_sensor.xbox_network_in_game";
+      | "binary_sensor.xbox_network_in_game"
+      | "switch.autoplay_music";
     _local:
       | "light.bathoom_shower"
       | "switch.adaptive_lighting_hallway"
@@ -893,12 +893,12 @@ declare module "@digital-alchemy/hass" {
       | "media_player.bedroom_sonos"
       | "media_player.bedroom"
       | "tts.piper"
-      | "switch.blinds_default_closed"
       | "media_player.flat"
       | "switch.adaptive_lighting_sleep_mode_spare_room"
       | "switch.adaptive_lighting_adapt_color_spare_room"
       | "switch.adaptive_lighting_adapt_brightness_spare_room"
-      | "switch.adaptive_lighting_spare_room";
+      | "switch.adaptive_lighting_spare_room"
+      | "switch.blinds_default_closed";
   }
   export interface HassPlatformMapping {
     _sun:
@@ -927,7 +927,8 @@ declare module "@digital-alchemy/hass" {
       | "update.jellyfin_server_host_network_update"
       | "update.radarr_update"
       | "update.sqlite_web_update"
-      | "update.whisparr_update";
+      | "update.whisparr_update"
+      | "update.postgres_17_update";
     _backup:
       | "event.backup_automatic_backup"
       | "sensor.backup_backup_manager_state"
@@ -1122,18 +1123,6 @@ declare module "@digital-alchemy/hass" {
       | "update.home_generative_agent_update"
       | "update.music_assistant_player_card_update"
       | "update.timeline_card_update";
-    _synapse:
-      | "switch.blinds_default_closed"
-      | "switch.sleep_mode"
-      | "switch.tv_mode"
-      | "switch.autoplay_music"
-      | "binary_sensor.flat_occupied"
-      | "switch.living_room_motion_sensor"
-      | "switch.halllway_motion_sensor"
-      | "switch.spare_room_motion_sensor"
-      | "switch.bedroom_motion_sensor"
-      | "switch.bathroom_motion_sensor"
-      | "binary_sensor.app_online";
     _mobile_app:
       | "device_tracker.bens_phone"
       | "sensor.bens_phone_battery_level"
@@ -1345,6 +1334,19 @@ declare module "@digital-alchemy/hass" {
       | "sensor.home_proximity_nearest_direction_of_travel"
       | "sensor.home_proximity_ben_distance"
       | "sensor.home_proximity_ben_direction_of_travel";
+    _synapse:
+      | "binary_sensor.app_online"
+      | "binary_sensor.flat_occupied"
+      | "switch.blinds_default_closed"
+      | "switch.sleep_mode"
+      | "switch.tv_mode"
+      | "switch.autoplay_music"
+      | "switch.living_room_motion_sensor"
+      | "switch.hallway_motion_sensor"
+      | "switch.spare_room_motion_sensor"
+      | "switch.bedroom_motion_sensor"
+      | "switch.bathroom_motion_sensor";
+    _zone: "zone.work" | "zone.gym";
   }
   export interface HassUniqueIdMapping {
     "01KGNB1SM9Q5V950Y0CGGYJ87D-solar_rising": "binary_sensor.sun_solar_rising";
@@ -1555,7 +1557,6 @@ declare module "@digital-alchemy/hass" {
     cb646a50_get_memory_percent: "sensor.get_hacs_memory_percent";
     "758618069": "switch.digital_alchemy_synapse_pre_release";
     "172733314": "switch.hacs_pre_release";
-    "532be3cf-5023-49bd-95f4-f3abfc1b0357-online": "binary_sensor.bens_flat_online";
     "0x001788010d30881a_light_zigbee2mqtt": "light.living_room_floor_lamp_middle";
     "0x001788010d30881a_power_on_behavior_zigbee2mqtt": "select.living_room_floor_lamp_middle_power_on_behavior";
     "0x001788010d30881a_effect_zigbee2mqtt": "select.0x001788010d30881a_effect";
@@ -1963,11 +1964,6 @@ declare module "@digital-alchemy/hass" {
     core_piper_version_latest: "sensor.piper_newest_version";
     core_piper_cpu_percent: "sensor.piper_cpu_percent";
     core_piper_memory_percent: "sensor.piper_memory_percent";
-    blinds_default_closed_switch: "switch.blinds_default_closed";
-    sleep_mode_switch: "switch.sleep_mode";
-    tv_mode_switch: "switch.tv_mode";
-    autoplay_music_switch: "switch.autoplay_music";
-    flat_occupied_switch: "binary_sensor.flat_occupied";
     syncgroup_nyvpnj8n_favorite_now_playing: "button.flat_favorite_current_song";
     syncgroup_nyvpnj8n: "media_player.flat";
     "01KGQX5ESRDDPJ2ZHED7X142BR": "ai_task.openai";
@@ -2193,14 +2189,29 @@ declare module "@digital-alchemy/hass" {
     "01KHNBWD0MWEFFNEY8K217WMHV_dir_of_travel": "sensor.home_proximity_nearest_direction_of_travel";
     "01KHNBWD0MWEFFNEY8K217WMHV_6ddbd172184942748445e2cccbd22d79_dist_to_zone": "sensor.home_proximity_ben_distance";
     "01KHNBWD0MWEFFNEY8K217WMHV_6ddbd172184942748445e2cccbd22d79_dir_of_travel": "sensor.home_proximity_ben_direction_of_travel";
+    db21ed7f_postgres_latest_state: "binary_sensor.postgres_17_running";
+    db21ed7f_postgres_latest_version: "sensor.postgres_17_version";
+    db21ed7f_postgres_latest_version_latest: "sensor.postgres_17_newest_version";
+    db21ed7f_postgres_latest_cpu_percent: "sensor.postgres_17_cpu_percent";
+    db21ed7f_postgres_latest_memory_percent: "sensor.postgres_17_memory_percent";
+    "551e4cc1-3a68-460e-a3ff-9f70ba752c46-online": "binary_sensor.app_online";
+    flat_occupied_switch: "binary_sensor.flat_occupied";
+    blinds_default_closed_switch: "switch.blinds_default_closed";
+    sleep_mode_switch: "switch.sleep_mode";
+    tv_mode_switch: "switch.tv_mode";
+    autoplay_music_switch: "switch.autoplay_music";
     living_room_motion_sensor: "switch.living_room_motion_sensor";
-    halllway_motion_sensor: "switch.halllway_motion_sensor";
+    hallway_motion_sensor: "switch.hallway_motion_sensor";
     spare_room_motion_sensor: "switch.spare_room_motion_sensor";
     bedroom_motion_sensor: "switch.bedroom_motion_sensor";
     bathroom_motion_sensor: "switch.bathroom_motion_sensor";
-    "1971e4ed-1a2c-4c24-b3a0-503c87d142ef-online": "binary_sensor.app_online";
+    work: "zone.work";
+    gym: "zone.gym";
   }
-  export interface HassZoneMapping {}
+  export interface HassZoneMapping {
+    _work: true;
+    _gym: true;
+  }
   export interface HassFloorMapping {}
   export interface HassDomainMapping {
     switch:
@@ -2264,7 +2275,7 @@ declare module "@digital-alchemy/hass" {
       | "switch.tv_mode"
       | "switch.autoplay_music"
       | "switch.living_room_motion_sensor"
-      | "switch.halllway_motion_sensor"
+      | "switch.hallway_motion_sensor"
       | "switch.spare_room_motion_sensor"
       | "switch.bedroom_motion_sensor"
       | "switch.bathroom_motion_sensor";
@@ -2334,7 +2345,8 @@ declare module "@digital-alchemy/hass" {
       | "update.bathroom_sensor"
       | "update.boiler_boost_switch_firmware"
       | "update.sqlite_web_update"
-      | "update.whisparr_update";
+      | "update.whisparr_update"
+      | "update.postgres_17_update";
     conversation: "conversation.home_assistant" | "conversation.openai_conversation";
     event: "event.backup_automatic_backup";
     sensor:
@@ -2535,7 +2547,7 @@ declare module "@digital-alchemy/hass" {
       | "light.living_room_tv_wall"
       | "light.spare_room_right_wall"
       | "light.spare_room_left_wall";
-    zone: "zone.home";
+    zone: "zone.home" | "zone.work" | "zone.gym";
     person: "person.ben";
     tag: "tag.sleep_mode";
     sun: "sun.sun";

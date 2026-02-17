@@ -5,6 +5,8 @@ import { LIB_SYNAPSE } from "@digital-alchemy/synapse";
 import {
   BlindsService,
   CoreModule,
+  GoingHomeRecorderService,
+  GoingHomeService,
   HelpersService,
   LightsService,
   MotionService,
@@ -21,7 +23,17 @@ import {
 export const LIB_BENS_FLAT = CreateLibrary({
   depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION],
   name: "bens_flat",
-  priorityInit: ["scene", "motion", "blinds", "helpers", "lights", "sleepMode", "tvMode"],
+  priorityInit: [
+    "scene",
+    "motion",
+    "blinds",
+    "helpers",
+    "lights",
+    "sleepMode",
+    "tvMode",
+    "goingHome",
+    "goingHomeRecorder",
+  ],
   configuration: {},
   services: {
     nags: NagService,
@@ -34,6 +46,8 @@ export const LIB_BENS_FLAT = CreateLibrary({
     presence: PresenceDetectionService,
     lights: LightsService,
     sleepMode: SleepModeService,
+    goingHome: GoingHomeService,
+    goingHomeRecorder: GoingHomeRecorderService,
     notify: NotificationService,
     core: CoreModule,
     helpers: HelpersService,
