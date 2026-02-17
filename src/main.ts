@@ -8,7 +8,7 @@ void APP.bootstrap({
     },
     synapse: {
       HEARTBEAT_INTERVAL: 30,
-      METADATA_UNIQUE_ID: "1971e4ed-1a2c-4c24-b3a0-503c87d142ef",
+      METADATA_UNIQUE_ID: "551e4cc1-3a68-460e-a3ff-9f70ba752c46",
       ENTITY_CLEANUP_METHOD: "delete",
       REBUILD_ON_ENTITY_CHANGE: true,
     },
