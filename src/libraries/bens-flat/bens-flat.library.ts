@@ -24,6 +24,8 @@ export const LIB_BENS_FLAT = CreateLibrary({
   depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION],
   name: "bens_flat",
   priorityInit: [
+    "notify",
+    "nags",
     "scene",
     "motion",
     "blinds",
