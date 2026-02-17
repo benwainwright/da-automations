@@ -51,8 +51,7 @@ export function GoingHomeRecorderService({
   let lastWrittenAt = 0;
   let lastSample: SampleShape | undefined;
   let writeChain = Promise.resolve();
-
-  const getSampleDir = () => process.env.GOING_HOME_SAMPLE_DIR ?? "data/going-home";
+  const sampleDir = process.env.GOING_HOME_SAMPLE_DIR ?? "data/going-home";
 
   const csvEscape = (value: unknown) => {
     const stringValue = String(value ?? "");
@@ -64,14 +63,14 @@ export function GoingHomeRecorderService({
 
   const getDailyFilePath = (now = new Date()) => {
     const date = now.toISOString().slice(0, 10);
-    return join(getSampleDir(), `going-home-samples-${date}.csv`);
+    return join(sampleDir, `going-home-samples-${date}.csv`);
   };
 
   const ensureHeader = (filePath: string) => {
     if (existsSync(filePath)) {
       return;
     }
-    mkdirSync(getSampleDir(), { recursive: true });
+    mkdirSync(sampleDir, { recursive: true });
     appendFileSync(filePath, `${CSV_COLUMNS.join(",")}\n`, "utf8");
   };
 
@@ -129,6 +128,7 @@ export function GoingHomeRecorderService({
     if (!shouldWrite(sample, force)) {
       return;
     }
+    logger.info(`Writing sample`);
 
     const filePath = getDailyFilePath(now);
     ensureHeader(filePath);
