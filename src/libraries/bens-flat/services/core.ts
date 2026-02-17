@@ -41,7 +41,7 @@ export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TSe
     });
 
     lights.setupMotionTrigger({
-      switchName: "Halllway motion sensor",
+      switchName: "Hallway motion sensor",
       area: "hallway",
       sensorId: "binary_sensor.hallway_occupancy",
       timeout: "2m",
