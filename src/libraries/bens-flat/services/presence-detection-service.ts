@@ -41,7 +41,7 @@ export function PresenceDetectionService({
   });
 
   lifecycle.onReady(() => {
-    home.onUpdate((oldState, newState) => {
+    home.onUpdate((newState, oldState) => {
       if (oldState.state > 0 && newState.state === 0 && allowZoneExit) {
         flatIsOccupiedSwitch.is_on = false;
       }
