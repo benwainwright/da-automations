@@ -48,7 +48,7 @@ export function LightsService({
   const flash = async () => {
     await hass.call.light.turn_on({
       effect: "okay",
-      area_id: ["bathroom", "bedroom", "hallway", "bathroom", "spare_room"],
+      area_id: ["bathroom", "bedroom", "hallway", "spare_room"],
     });
   };
 

@@ -16,12 +16,23 @@ export function GithubService({ auto_deploy, config, logger }: TServiceParams) {
     repo: string,
     url: string,
   ) => {
-    const response = await github.rest.repos.listWebhooks({
-      owner,
-      per_page: 100,
-      repo,
-    });
-    return response.data.find((hook) => hook.config.url === url);
+    let page = 1;
+    while (true) {
+      const response = await github.rest.repos.listWebhooks({
+        owner,
+        per_page: 100,
+        repo,
+        page,
+      });
+      const found = response.data.find((hook) => hook.config.url === url);
+      if (found) {
+        return found;
+      }
+      if (response.data.length < 100) {
+        return undefined;
+      }
+      page += 1;
+    }
   };
 
   const monitorRepo = async ({ repo, owner, callback }: MonitorRepoConfig) => {

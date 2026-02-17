@@ -92,6 +92,8 @@ test("on() creates off snapshot and activates target scene", async () => {
     transition: 3,
     entity_id: "scene.tv_mode",
   });
+
+  await harness.emitSceneUpdate("scene.tv_mode_off");
 });
 
 test("off() restores, deletes snapshot scene, and removes off listener after on()", async () => {
@@ -143,6 +145,6 @@ test("onOn and onOff callbacks fire from their respective scene updates", async 
   expect(onCallback).toHaveBeenCalledTimes(1);
 
   await toggler.on();
-  await harness.emitSceneUpdate("tv_mode_off");
+  await harness.emitSceneUpdate("scene.tv_mode_off");
   expect(offCallback).toHaveBeenCalledTimes(1);
 });

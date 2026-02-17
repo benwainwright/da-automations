@@ -29,7 +29,7 @@ export function SceneService({ hass, lifecycle }: TServiceParams) {
         entity_id: scene,
       });
 
-      const theOffScene = hass.refBy.id(id as PICK_ENTITY<"scene">);
+      const theOffScene = hass.refBy.id(`scene.${id}` as PICK_ENTITY<"scene">);
 
       removeOffCallback = theOffScene.onUpdate(async () => {
         for (const callback of offCallbacks) {

@@ -123,9 +123,70 @@ test("always resolves hooks from GitHub by callback url (stateless)", async () =
 
   expect(listWebhooks).toHaveBeenCalledWith({
     owner: "benwainwright",
+    page: 1,
     per_page: 100,
     repo: "da-automations",
   });
+});
+
+test("scans multiple webhook pages when first page has no url match", async () => {
+  listWebhooks
+    .mockResolvedValueOnce({
+      data: Array.from({ length: 100 }).map((_, index) => ({
+        id: index + 1,
+        config: { url: `https://example.com/other-${index}` },
+      })),
+    })
+    .mockResolvedValueOnce({
+      data: [
+        {
+          id: 200,
+          config: {
+            url: "https://example.com/api/webhook/github-repo-monitor-benwainwright-da-automations",
+          },
+        },
+      ],
+    });
+
+  const service = GithubService({
+    auto_deploy: { webhook: { register: mock(async () => {}) } },
+    config: {
+      auto_deploy: {
+        EXTERNAL_URL: "https://example.com",
+        GITHUB_PAT: "token",
+      },
+    },
+    logger: {
+      error: mock(() => {}),
+      info: mock(() => {}),
+    },
+  } as any);
+
+  await service.monitorRepo({
+    callback: mock(() => {}),
+    owner: "benwainwright",
+    repo: "da-automations",
+  });
+
+  expect(listWebhooks).toHaveBeenCalledTimes(2);
+  expect(listWebhooks).toHaveBeenNthCalledWith(1, {
+    owner: "benwainwright",
+    page: 1,
+    per_page: 100,
+    repo: "da-automations",
+  });
+  expect(listWebhooks).toHaveBeenNthCalledWith(2, {
+    owner: "benwainwright",
+    page: 2,
+    per_page: 100,
+    repo: "da-automations",
+  });
+  expect(updateWebhook).toHaveBeenCalledWith(
+    expect.objectContaining({
+      hook_id: 200,
+    }),
+  );
+  expect(createWebhook).not.toHaveBeenCalled();
 });
 
 test("logs and swallows errors while registering repository webhook", async () => {
