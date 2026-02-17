@@ -27,29 +27,32 @@ export function NotificationService({ hass, bens_flat: { lights }, logger }: TSe
 
   const notify = async ({ message, title }: NotifyConfig) => {
     if (tv.state === "on") {
-      hass.call.notify.tv({
-        message,
-        title,
-      });
-
-      await hass.call.notify.mobile_app_bens_phone.call({ message, title });
+      await Promise.all([
+        hass.call.notify.tv({
+          message,
+          title,
+        }),
+        hass.call.notify.mobile_app_bens_phone.call({ message, title }),
+      ]);
     }
   };
 
   const notifyCritical = async ({ message, title }: NotifyConfig) => {
     if (tv.state === "on") {
-      await lights.flash();
-      hass.call.notify.tv({
-        message,
-        title,
-        data: {
-          push: {
-            interruption_level: "critical",
+      await Promise.all([
+        lights.flash(),
+        hass.call.notify.tv({
+          message,
+          title,
+          data: {
+            push: {
+              interruption_level: "critical",
+            },
           },
-        },
-      });
+        }),
+        speak(message),
+      ]);
     }
-    await speak(message);
   };
 
   const hasPersistentNotification = (notificationId: string) => {
