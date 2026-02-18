@@ -30,7 +30,11 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
       briefing: { read: mock(async () => {}) },
       helpers: { turnOffAll: mock(async () => {}), turnOnAll, latch },
       lights: { turnOffAll: mock(async () => {}) },
-      motion: { livingRoom: (_cb: () => Promise<void> | void) => {} },
+      motion: {
+        livingRoom: (_cb: () => Promise<void> | void) => {},
+        hallway: (_cb: () => Promise<void> | void) => {},
+        bathroom: (_cb: () => Promise<void> | void) => {},
+      },
     },
     context: {},
     hass: {

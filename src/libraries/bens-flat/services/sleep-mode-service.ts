@@ -51,13 +51,17 @@ export function SleepModeService({
     await helpers.turnOffAll(adaptiveLightingSleepModeSwitches);
   });
 
-  motion.livingRoom(async () => {
+  const morningTrigger = async () => {
     const sleepModeEntity = sleepMode.entity_id;
     if (time.isAfter(FIVE_AM) && sleepModeEntity) {
       await hass.call.switch.turn_off({ entity_id: sleepModeEntity });
       await readBriefing();
     }
-  });
+  };
+
+  motion.livingRoom(morningTrigger);
+  motion.hallway(morningTrigger);
+  motion.livingRoom(morningTrigger);
 
   const isOn = () => {
     const sleepModeState = Boolean(sleepMode.is_on);
