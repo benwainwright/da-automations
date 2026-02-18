@@ -5034,7 +5034,11 @@ declare module "@digital-alchemy/hass" {
           | "01KHS633DCFXG31Z3MRREX23XS"
           | "01KHS7BNGYMAT3J8CJWB3EWHQT"
           | "01KHS7G1H795CQG23VH10AW6SQ"
-          | "01KHS8YSXFZND22GQDTRBQQX61";
+          | "01KHS8YSXFZND22GQDTRBQQX61"
+          | "01KHSBJSBXNP6NVHKYGTB5TVA9"
+          | "01KHSC2S8WVH6QX7EWTDH6XETT"
+          | "01KHSC4D9PYA25FYQHP50RYEDH"
+          | "01KHSCHHDZCRACHJQ57Y63R36Z";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -7612,7 +7616,11 @@ declare module "@digital-alchemy/hass" {
           | "01KHS633DCFXG31Z3MRREX23XS"
           | "01KHS7BNGYMAT3J8CJWB3EWHQT"
           | "01KHS7G1H795CQG23VH10AW6SQ"
-          | "01KHS8YSXFZND22GQDTRBQQX61";
+          | "01KHS8YSXFZND22GQDTRBQQX61"
+          | "01KHSBJSBXNP6NVHKYGTB5TVA9"
+          | "01KHSC2S8WVH6QX7EWTDH6XETT"
+          | "01KHSC4D9PYA25FYQHP50RYEDH"
+          | "01KHSCHHDZCRACHJQ57Y63R36Z";
         /**
          * ## favorite
          *
@@ -8124,7 +8132,11 @@ declare module "@digital-alchemy/hass" {
           | "01KHS633DCFXG31Z3MRREX23XS"
           | "01KHS7BNGYMAT3J8CJWB3EWHQT"
           | "01KHS7G1H795CQG23VH10AW6SQ"
-          | "01KHS8YSXFZND22GQDTRBQQX61";
+          | "01KHS8YSXFZND22GQDTRBQQX61"
+          | "01KHSBJSBXNP6NVHKYGTB5TVA9"
+          | "01KHSC2S8WVH6QX7EWTDH6XETT"
+          | "01KHSC4D9PYA25FYQHP50RYEDH"
+          | "01KHSCHHDZCRACHJQ57Y63R36Z";
         /**
          * ## library_only
          *
@@ -8783,7 +8795,11 @@ declare module "@digital-alchemy/hass" {
           | "01KHS633DCFXG31Z3MRREX23XS"
           | "01KHS7BNGYMAT3J8CJWB3EWHQT"
           | "01KHS7G1H795CQG23VH10AW6SQ"
-          | "01KHS8YSXFZND22GQDTRBQQX61";
+          | "01KHS8YSXFZND22GQDTRBQQX61"
+          | "01KHSBJSBXNP6NVHKYGTB5TVA9"
+          | "01KHSC2S8WVH6QX7EWTDH6XETT"
+          | "01KHSC4D9PYA25FYQHP50RYEDH"
+          | "01KHSCHHDZCRACHJQ57Y63R36Z";
         /**
          * ## filenames
          *
@@ -8899,7 +8915,11 @@ declare module "@digital-alchemy/hass" {
           | "01KHS633DCFXG31Z3MRREX23XS"
           | "01KHS7BNGYMAT3J8CJWB3EWHQT"
           | "01KHS7G1H795CQG23VH10AW6SQ"
-          | "01KHS8YSXFZND22GQDTRBQQX61";
+          | "01KHS8YSXFZND22GQDTRBQQX61"
+          | "01KHSBJSBXNP6NVHKYGTB5TVA9"
+          | "01KHSC2S8WVH6QX7EWTDH6XETT"
+          | "01KHSC4D9PYA25FYQHP50RYEDH"
+          | "01KHSCHHDZCRACHJQ57Y63R36Z";
         /**
          * ## prompt
          *
@@ -12389,6 +12409,264 @@ declare module "@digital-alchemy/hass" {
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
+    };
+    // # MARK: todoist
+    todoist: {
+      /**
+       * ### new_task
+       *
+       * >
+       */
+      new_task: (service_data?: {
+        /**
+         * ## assignee
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "assignee": "username"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        assignee?: string;
+        /**
+         * ## content
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "content": "Pick up the mail."
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        content: string;
+        /**
+         * ## description
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        description?: string;
+        /**
+         * ## due_date
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "due_date": "2019-10-22"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        due_date?: string;
+        /**
+         * ## due_date_lang
+         */
+        due_date_lang?:
+          | "da"
+          | "de"
+          | "en"
+          | "es"
+          | "fr"
+          | "it"
+          | "ja"
+          | "ko"
+          | "nl"
+          | "pl"
+          | "pt"
+          | "ru"
+          | "sv"
+          | "zh";
+        /**
+         * ## due_date_string
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "due_date_string": "Tomorrow"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        due_date_string?: string;
+        /**
+         * ## labels
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "labels": "Chores,Delivieries"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        labels?: string;
+        /**
+         * ## priority
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > number:
+         * >   min: 1
+         * >   max: 4
+         * >   step: 1
+         * >   mode: slider
+         * > ```
+         */
+        priority?: number;
+        /**
+         * ## project
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "project": "Errands"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > "Inbox"
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        project?: string;
+        /**
+         * ## reminder_date
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "reminder_date": "2019-10-22T10:30:00"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        reminder_date?: string;
+        /**
+         * ## reminder_date_lang
+         */
+        reminder_date_lang?:
+          | "da"
+          | "de"
+          | "en"
+          | "es"
+          | "fr"
+          | "it"
+          | "ja"
+          | "ko"
+          | "nl"
+          | "pl"
+          | "pt"
+          | "ru"
+          | "sv"
+          | "zh";
+        /**
+         * ## reminder_date_string
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "reminder_date_string": "Tomorrow"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        reminder_date_string?: string;
+        /**
+         * ## section
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "section": "Deliveries"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: false
+         * >   multiple: false
+         * > ```
+         */
+        section?: string;
+      }) => Promise<void>;
     };
     // # MARK: tts
     tts: {

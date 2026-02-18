@@ -15,6 +15,19 @@ type GetCalendarResponse<TCalendar extends PICK_ENTITY<"calendar">> = {
   };
 };
 
+interface TodoItem {
+  summary: string;
+  status: string;
+  uuid: string;
+  due?: string;
+}
+
+type GetTodoItemsResponse<TTodoList extends PICK_ENTITY<"todo"> = PICK_ENTITY<"todo">> = {
+  [K in TTodoList]: {
+    items: TodoItem[];
+  };
+};
+
 export function BriefingService({
   hass,
   synapse,
@@ -57,11 +70,62 @@ export function BriefingService({
   const getDateAndTimeString = () => {
     const now = dayjs();
 
+    const getOrdinal = (day: number) => {
+      if (day > 3 && day < 21) return "th";
+      switch (day % 10) {
+        case 1:
+          return "st";
+        case 2:
+          return "nd";
+        case 3:
+          return "rd";
+        default:
+          return "th";
+      }
+    };
+
     const time = now.format("h:mm A");
     const day = now.format("dddd");
-    const date = now.format("Do MMMM");
+    const dateNumber = now.date();
+    const month = now.format("MMMM");
 
-    return `The time is ${time} on ${day} the ${date}.`;
+    return `The time is ${time} on ${day} the ${dateNumber}${getOrdinal(dateNumber)} of ${month}.`;
+  };
+
+  const getTodoListString = async () => {
+    const today = dayjs();
+    const items = Object.values(
+      await hass.call.todo.get_items<GetTodoItemsResponse>({
+        entity_id: [
+          "todo.admin",
+          "todo.domestic",
+          "todo.health",
+          "todo.hobbies",
+          "todo.inbox",
+          "todo.personal",
+          "todo.personal",
+          "todo.shopping_list",
+          "todo.social",
+          "todo.wishlist",
+        ],
+      }),
+    )
+      .flatMap((item) => item.items)
+      .filter((item) => {
+        if (!item.due) return false;
+
+        return dayjs(item.due).isSame(today, "day") || dayjs(item.due).isBefore(today);
+      });
+
+    const countString = `You have ${items.length} items in your todo list: `;
+
+    const itemsString = items.map((item) => item.summary).join(", ");
+
+    if (items.length === 0) {
+      return `You have nothing in your todo list`;
+    }
+
+    return `${countString} ${itemsString}`;
   };
 
   const getReadCalendarString = async () => {
@@ -90,6 +154,7 @@ export function BriefingService({
       getDateAndTimeString(),
       formatWeatherForSpeech("weather.home"),
       await getReadCalendarString(),
+      await getTodoListString(),
     ];
 
     await notify.speak(briefingStringParts.join(" "));
