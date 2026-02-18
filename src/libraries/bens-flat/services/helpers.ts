@@ -25,11 +25,30 @@ export function HelpersService({ hass, scheduler }: TServiceParams) {
     clear = scheduler.setTimeout(callback, offset);
   };
 
+  const latch = (callback: () => void | Promise<void>, start = false) => {
+    let triggered = start;
+
+    const trigger = async () => {
+      if (triggered) {
+        return;
+      }
+      triggered = true;
+      await callback();
+    };
+
+    const reset = async () => {
+      triggered = false;
+    };
+
+    return { trigger, reset };
+  };
+
   return {
     turnOffAll,
     turnOnAll,
     allAreas,
     fiveAm,
     setDebouncedTimeout,
+    latch,
   };
 }

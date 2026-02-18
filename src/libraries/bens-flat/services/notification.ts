@@ -8,21 +8,22 @@ export interface NotifyConfig {
 export function NotificationService({ hass, bens_flat: { lights }, logger }: TServiceParams) {
   const tv = hass.refBy.id("media_player.tv");
 
-  const bedroomSonos = hass.refBy.id("media_player.bedroom_sonos");
-  const livingRoomSonos = hass.refBy.id("media_player.living_room_sonos");
-
   const speak = async (message: string) => {
-    await hass.call.media_player.join({
-      entity_id: bedroomSonos.entity_id,
-      group_members: [livingRoomSonos.entity_id],
-    });
-
-    await hass.call.tts.speak({
-      message,
-      media_player_entity_id: bedroomSonos.entity_id,
-      cache: true,
-      entity_id: "tts.home_assistant_cloud",
-    });
+    logger.info(`Speaking: ${message}`);
+    try {
+      await hass.call.openai_tts.say({
+        message,
+        tts_entity: "tts.openai_tts_gpt_40",
+        entity_id: "media_player.flat",
+      });
+    } catch {
+      await hass.call.tts.speak({
+        message,
+        media_player_entity_id: "media_player.flat",
+        cache: true,
+        entity_id: "tts.home_assistant_cloud",
+      });
+    }
   };
 
   const notify = async ({ message, title }: NotifyConfig) => {

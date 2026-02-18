@@ -6,7 +6,7 @@ export function SleepModeService({
   hass,
   context,
   synapse,
-  bens_flat: { helpers, lights, motion },
+  bens_flat: { helpers, lights, motion, briefing },
   logger,
   automation: { time },
 }: TServiceParams) {
@@ -39,9 +39,12 @@ export function SleepModeService({
     "switch.adaptive_lighting_sleep_mode_spare_room",
   ];
 
+  const { trigger: readBriefing, reset: resetBriefing } = helpers.latch(briefing.read, true);
+
   sleepMode.onTurnOn(async () => {
     await lights.turnOffAll();
     await helpers.turnOnAll(adaptiveLightingSleepModeSwitches);
+    resetBriefing();
   });
 
   sleepMode.onTurnOff(async () => {
@@ -52,6 +55,7 @@ export function SleepModeService({
     const sleepModeEntity = sleepMode.entity_id;
     if (time.isAfter(FIVE_AM) && sleepModeEntity) {
       await hass.call.switch.turn_off({ entity_id: sleepModeEntity });
+      await readBriefing();
     }
   });
 

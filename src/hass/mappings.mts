@@ -308,12 +308,12 @@ declare module "@digital-alchemy/hass" {
       | "switch.adaptive_lighting_sleep_mode_bathroom"
       | "switch.adaptive_lighting_bathroom"
       | "binary_sensor.office_microphone"
-      | "media_player.office"
       | "number.office_bass"
       | "number.office_balance"
       | "number.office_treble"
       | "switch.office_crossfade"
-      | "switch.office_loudness";
+      | "switch.office_loudness"
+      | "media_player.bathroom_sonos";
     _spare_room:
       | "light.spare_room"
       | "sensor.node_12_node_status"
@@ -767,12 +767,12 @@ declare module "@digital-alchemy/hass" {
     _c022861e837ad7513fb3d2d79426dc8b: "update.radarr_update";
     _a21364bc33567f3e87766a37e7373dd3:
       | "binary_sensor.office_microphone"
-      | "media_player.office"
       | "number.office_bass"
       | "number.office_balance"
       | "number.office_treble"
       | "switch.office_crossfade"
-      | "switch.office_loudness";
+      | "switch.office_loudness"
+      | "media_player.bathroom_sonos";
     _3d101594b3cb96ed837bc06133950e4b:
       | "button.bathroom_favorite_current_song"
       | "media_player.bathroom";
@@ -817,7 +817,12 @@ declare module "@digital-alchemy/hass" {
       | "switch.hallway_motion_sensor"
       | "switch.spare_room_motion_sensor"
       | "switch.bedroom_motion_sensor"
-      | "switch.bathroom_motion_sensor";
+      | "switch.bathroom_motion_sensor"
+      | "button.briefing";
+    _c8307c897fb8b39937b6331521c665ce: "update.openai_gpt_4o_mini_tts_update";
+    _a1193edf514b59a06a5e35fd93c9fe21: "update.chime_tts_update";
+    _49585b6d7f7c01ccfb36c309febed92d: "update.openai_tts_speech_service_update";
+    _54a08f919fe7174bb939608dd07ad0b0: "tts.openai_tts_gpt_40";
   }
   export interface HassLabelMapping {
     _reviewed:
@@ -962,7 +967,6 @@ declare module "@digital-alchemy/hass" {
       | "media_player.living_room_sonos"
       | "media_player.bedroom_sonos"
       | "binary_sensor.office_microphone"
-      | "media_player.office"
       | "number.office_bass"
       | "number.office_balance"
       | "number.office_treble"
@@ -981,7 +985,8 @@ declare module "@digital-alchemy/hass" {
       | "switch.living_room_crossfade_3"
       | "switch.living_room_loudness_3"
       | "binary_sensor.living_room_microphone_2"
-      | "binary_sensor.living_room_microphone_3";
+      | "binary_sensor.living_room_microphone_3"
+      | "media_player.bathroom_sonos";
     _cloud: "binary_sensor.remote_ui" | "stt.home_assistant_cloud" | "tts.home_assistant_cloud";
     _person: "person.ben";
     _shopping_list: "todo.shopping_list";
@@ -1122,7 +1127,10 @@ declare module "@digital-alchemy/hass" {
       | "update.card_mod_update"
       | "update.home_generative_agent_update"
       | "update.music_assistant_player_card_update"
-      | "update.timeline_card_update";
+      | "update.timeline_card_update"
+      | "update.openai_gpt_4o_mini_tts_update"
+      | "update.chime_tts_update"
+      | "update.openai_tts_speech_service_update";
     _mobile_app:
       | "device_tracker.bens_phone"
       | "sensor.bens_phone_battery_level"
@@ -1345,7 +1353,8 @@ declare module "@digital-alchemy/hass" {
       | "switch.hallway_motion_sensor"
       | "switch.spare_room_motion_sensor"
       | "switch.bedroom_motion_sensor"
-      | "switch.bathroom_motion_sensor";
+      | "switch.bathroom_motion_sensor"
+      | "button.briefing";
     _zone: "zone.work" | "zone.gym";
     _google:
       | "calendar.tom_n_wainwright_gmail_com"
@@ -1359,6 +1368,8 @@ declare module "@digital-alchemy/hass" {
       | "calendar.skedpal"
       | "calendar.personal_calendar"
       | "calendar.birthdays";
+    _openai_gpt4o_tts: "tts.openai_gpt_4o_mini_tts";
+    _openai_tts: "tts.openai_tts_gpt_40";
   }
   export interface HassUniqueIdMapping {
     "01KGNB1SM9Q5V950Y0CGGYJ87D-solar_rising": "binary_sensor.sun_solar_rising";
@@ -2156,7 +2167,6 @@ declare module "@digital-alchemy/hass" {
     a0d7b954_radarr_memory_percent: "sensor.radarr_memory_percent";
     "A4E57CBA73F5-emeter_0-energy": "sensor.flat_energy";
     "RINCON_48A6B8D3D92401400-microphone": "binary_sensor.office_microphone";
-    RINCON_48A6B8D3D92401400: "media_player.office";
     "RINCON_48A6B8D3D92401400-bass": "number.office_bass";
     "RINCON_48A6B8D3D92401400-balance": "number.office_balance";
     "RINCON_48A6B8D3D92401400-treble": "number.office_treble";
@@ -2165,6 +2175,7 @@ declare module "@digital-alchemy/hass" {
     "RINCON_48A6B8D3D92401400-loudness": "switch.office_loudness";
     "RINCON_48A6B8D3D92401400-status_light": "switch.office_status_light";
     RINCON_48A6B8D3D92401400_favorite_now_playing: "button.bathroom_favorite_current_song";
+    RINCON_48A6B8D3D92401400: "media_player.bathroom";
     RINCON_804AF292C8DC01400_favorite_now_playing: "button.living_room_favorite_current_song_2";
     RINCON_804AF292C8DC01400: "media_player.living_room_2";
     RINCON_804AF292C6B601400_favorite_now_playing: "button.living_room_favorite_current_song_3";
@@ -2231,6 +2242,12 @@ declare module "@digital-alchemy/hass" {
     "bwainwright28@gmail.com-bwainwright28@gmail.com": "calendar.personal_calendar";
     "bwainwright28@gmail.com-bwainwright28@gmail.com-birthdays": "calendar.birthdays";
     "bwainwright28@gmail.com-bwainwright28@gmail.com-work-location": "calendar.working_location";
+    "trigger-briefing": "button.briefing";
+    "952692578": "switch.openai_gpt_4o_mini_tts_pre_release";
+    "01KHS633DCFXG31Z3MRREX23XS-tts": "tts.openai_gpt_4o_mini_tts";
+    "646875198": "switch.chime_tts_pre_release";
+    "716917337": "switch.openai_tts_speech_service_pre_release";
+    "7d780904-0fd9-430e-8ac7-88cae235f6b7": "tts.openai_tts_gpt_40";
   }
   export interface HassZoneMapping {
     _work: true;
@@ -2260,24 +2277,24 @@ declare module "@digital-alchemy/hass" {
       | "switch.adaptive_lighting_adapt_color_spare_room"
       | "switch.adaptive_lighting_adapt_brightness_spare_room"
       | "switch.adaptive_lighting_spare_room"
+      | "switch.living_room_heater_window"
       | "switch.hallway_heater"
       | "switch.living_room_heater_tv"
-      | "switch.living_room_heater_window"
       | "switch.shellyem_a4e57cba73f5"
       | "switch.living_room_heater_bookcase"
+      | "switch.bedroom_heater"
       | "switch.schedule_a8cd23"
       | "switch.schedule_6bd03a"
       | "switch.schedule_02093c"
       | "switch.schedule_living_room_weekend_heating_schedulel"
       | "switch.schedule_917e46"
       | "switch.schedule_7c0687"
+      | "switch.office_crossfade"
+      | "switch.office_loudness"
       | "switch.bedroom_speaker_touch_controls"
       | "switch.bedroom_speaker_crossfade"
       | "switch.bedroom_speaker_loudness"
       | "switch.bedroom_speaker_status_light"
-      | "switch.office_crossfade"
-      | "switch.office_loudness"
-      | "switch.bedroom_heater"
       | "switch.living_room_crossfade"
       | "switch.living_room_loudness"
       | "switch.living_room_surround_music_full_volume"
@@ -2322,27 +2339,30 @@ declare module "@digital-alchemy/hass" {
       | "update.whisparr_update"
       | "update.postgres_17_update"
       | "update.home_assistant_operating_system_update"
+      | "update.shellyplus1pm_a0dd6c2b6cf4_firmware"
       | "update.shellyplus1pm_a0dd6c2b3a6c_firmware"
       | "update.shelly_plus_pm_firmware"
-      | "update.shellyplus1pm_a0dd6c2b6cf4_firmware"
       | "update.shellyplus1pm_a0dd6c27e768_firmware"
-      | "update.hacs_update"
-      | "update.scheduler_card_update"
-      | "update.home_generative_agent_update"
-      | "update.adaptive_lighting_update"
-      | "update.timeline_card_update"
-      | "update.battery_state_card_entity_row_update"
-      | "update.home_assistant_plant_update"
-      | "update.yet_another_media_player_update"
-      | "update.ultra_card_update"
-      | "update.flower_card_update"
-      | "update.card_mod_update"
-      | "update.sonos_card_update"
-      | "update.scheduler_component_update"
-      | "update.music_assistant_player_card_update"
-      | "update.openplantbook_update"
-      | "update.digital_alchemy_synapse_update"
       | "update.z_stick_gen5_usb_controller_firmware"
+      | "update.chime_tts_update"
+      | "update.openai_tts_speech_service_update"
+      | "update.yet_another_media_player_update"
+      | "update.openplantbook_update"
+      | "update.home_assistant_plant_update"
+      | "update.adaptive_lighting_update"
+      | "update.ultra_card_update"
+      | "update.card_mod_update"
+      | "update.scheduler_component_update"
+      | "update.hacs_update"
+      | "update.music_assistant_player_card_update"
+      | "update.home_generative_agent_update"
+      | "update.openai_gpt_4o_mini_tts_update"
+      | "update.digital_alchemy_synapse_update"
+      | "update.flower_card_update"
+      | "update.battery_state_card_entity_row_update"
+      | "update.timeline_card_update"
+      | "update.sonos_card_update"
+      | "update.scheduler_card_update"
       | "update.slim_multi_sensor_pir_temperature_illumination_firmware_2"
       | "update.living_room_sensor_firmware"
       | "update.living_room_back_wall_right"
@@ -2409,22 +2429,14 @@ declare module "@digital-alchemy/hass" {
       | "sensor.bens_imac_pro_location_permission"
       | "sensor.imac_active_audio_input"
       | "sensor.imac_pro_audio_output"
-      | "sensor.marlin_soil_moisture_2"
-      | "sensor.marlin_temperature_2"
-      | "sensor.marlin_air_humidity"
-      | "sensor.marlin_soil_temperature"
-      | "sensor.monroe_soil_moisture_2"
-      | "sensor.monroe_temperature_2"
-      | "sensor.monroe_air_humidity"
-      | "sensor.monroe_soil_temperature"
+      | "sensor.shellyplus1pm_a0dd6c2b6cf4_power"
+      | "sensor.shellyplus1pm_a0dd6c2b6cf4_energy"
       | "sensor.shellyplus1pm_a0dd6c2b3a6c_power"
       | "sensor.shellyplus1pm_a0dd6c2b3a6c_energy"
       | "sensor.shelly_plus_pm_power"
       | "sensor.living_room_heater_tv_voltage"
       | "sensor.lliving_room_heater_tv_current"
       | "sensor.living_room_heater_tv_energy"
-      | "sensor.shellyplus1pm_a0dd6c2b6cf4_power"
-      | "sensor.shellyplus1pm_a0dd6c2b6cf4_energy"
       | "sensor.shellyem_a4e57cba73f5_channel_1_power"
       | "sensor.flat_energy"
       | "sensor.shellyem_a4e57cba73f5_channel_1_energy_returned"
@@ -2437,12 +2449,6 @@ declare module "@digital-alchemy/hass" {
       | "sensor.shellyem_a4e57cba73f5_channel_2_power_factor"
       | "sensor.shellyplus1pm_a0dd6c27e768_power"
       | "sensor.shellyplus1pm_a0dd6c27e768_energy"
-      | "sensor.home_proximity_nearest_device"
-      | "sensor.home_proximity_nearest_distance"
-      | "sensor.home_proximity_nearest_direction_of_travel"
-      | "sensor.home_proximity_ben_distance"
-      | "sensor.home_proximity_ben_direction_of_travel"
-      | "sensor.living_room_audio_input_format"
       | "sensor.z_stick_gen5_usb_controller_status"
       | "sensor.node_12_node_status"
       | "sensor.living_room_sensor_node_status"
@@ -2453,10 +2459,31 @@ declare module "@digital-alchemy/hass" {
       | "sensor.living_room_temperature"
       | "sensor.living_room_illumination"
       | "sensor.living_room_sensor_battery_level"
-      | "sensor.nuki_estimated_distance"
       | "sensor.upnp_igd_external_ip"
       | "sensor.router_download_speed"
       | "sensor.router_upload_speed"
+      | "sensor.marlin_soil_moisture_2"
+      | "sensor.marlin_temperature_2"
+      | "sensor.marlin_air_humidity"
+      | "sensor.marlin_soil_temperature"
+      | "sensor.monroe_soil_moisture_2"
+      | "sensor.monroe_temperature_2"
+      | "sensor.monroe_air_humidity"
+      | "sensor.monroe_soil_temperature"
+      | "sensor.indoor_humidity"
+      | "sensor.ecowit_gateway_soil_moisture_2"
+      | "sensor.ecowit_gateway_soil_battery_2"
+      | "sensor.indoor_temperature"
+      | "sensor.relative_pressure"
+      | "sensor.absolute_pressure"
+      | "sensor.indoor_dewpoint"
+      | "sensor.home_proximity_nearest_device"
+      | "sensor.home_proximity_nearest_distance"
+      | "sensor.home_proximity_nearest_direction_of_travel"
+      | "sensor.home_proximity_ben_distance"
+      | "sensor.home_proximity_ben_direction_of_travel"
+      | "sensor.living_room_audio_input_format"
+      | "sensor.nuki_estimated_distance"
       | "sensor.zigbee2mqtt_bridge_version"
       | "sensor.hallway_temperature"
       | "sensor.hallway_battery"
@@ -2479,16 +2506,9 @@ declare module "@digital-alchemy/hass" {
       | "sensor.xbox_network_now_playing"
       | "sensor.ps5_online_status"
       | "sensor.ps5_now_playing"
-      | "sensor.ecowit_gateway_soil_moisture_2"
       | "sensor.ecowit_gateway_soil_moisture_4"
-      | "sensor.ecowit_gateway_soil_battery_2"
       | "sensor.ecowit_gateway_soil_battery_3"
       | "sensor.ecowit_gateway_soil_battery_4"
-      | "sensor.absolute_pressure"
-      | "sensor.indoor_dewpoint"
-      | "sensor.indoor_humidity"
-      | "sensor.indoor_temperature"
-      | "sensor.relative_pressure"
       | "sensor.frank_soil_moisture"
       | "sensor.ecowit_gateway_soil_moisture_1"
       | "sensor.ecowit_gateway_soil_battery_1";
@@ -2499,7 +2519,11 @@ declare module "@digital-alchemy/hass" {
       | "binary_sensor.bens_imac_pro_focus"
       | "binary_sensor.imac_active"
       | "binary_sensor.imac_audio_input_in_use"
-      | "binary_sensor.app_online"
+      | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_input_0"
+      | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overheating"
+      | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overpowering"
+      | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overvoltage"
+      | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overcurrent"
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_input_0"
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overheating"
       | "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overpowering"
@@ -2509,23 +2533,19 @@ declare module "@digital-alchemy/hass" {
       | "binary_sensor.shelly_plus_pm_overpowering"
       | "binary_sensor.shelly_plus_pm_overvoltage"
       | "binary_sensor.shelly_plus_pm_overcurrent"
-      | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_input_0"
-      | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overheating"
-      | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overpowering"
-      | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overvoltage"
-      | "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overcurrent"
       | "binary_sensor.shellyem_a4e57cba73f5_overpowering"
       | "binary_sensor.shellyplus1pm_a0dd6c27e768_input_0"
       | "binary_sensor.shellyplus1pm_a0dd6c27e768_overheating"
       | "binary_sensor.shellyplus1pm_a0dd6c27e768_overpowering"
       | "binary_sensor.shellyplus1pm_a0dd6c27e768_overvoltage"
       | "binary_sensor.shellyplus1pm_a0dd6c27e768_overcurrent"
-      | "binary_sensor.bedroom_speaker_microphone"
-      | "binary_sensor.office_microphone"
-      | "binary_sensor.living_room_microphone"
       | "binary_sensor.spare_room_occupancy"
       | "binary_sensor.living_room_occupancy"
       | "binary_sensor.upnp_igd_wan_status"
+      | "binary_sensor.office_microphone"
+      | "binary_sensor.bedroom_speaker_microphone"
+      | "binary_sensor.app_online"
+      | "binary_sensor.living_room_microphone"
       | "binary_sensor.zigbee2mqtt_bridge_connection_state"
       | "binary_sensor.hallway_occupancy"
       | "binary_sensor.bedroom_occupancy"
@@ -2535,7 +2555,13 @@ declare module "@digital-alchemy/hass" {
       | "binary_sensor.living_room_microphone_3"
       | "binary_sensor.flat_occupied";
     stt: "stt.home_assistant_cloud";
-    tts: "tts.home_assistant_cloud" | "tts.google_translate_en_com" | "tts.piper";
+    tts:
+      | "tts.home_assistant_cloud"
+      | "tts.openai_gpt_4o_mini_tts"
+      | "tts.google_translate_en_com"
+      | "tts.piper"
+      | "tts.openai_tts_gpt_40";
+    scene: "scene.tv_mode";
     light:
       | "light.living_room_lights"
       | "light.bedroom_lights"
@@ -2562,21 +2588,43 @@ declare module "@digital-alchemy/hass" {
       | "light.bedroom_mirror"
       | "light.bedroom_door"
       | "light.living_room_tv_wall";
-    scene: "scene.tv_mode";
     zone: "zone.work" | "zone.gym" | "zone.home";
     person: "person.ben";
     tag: "tag.sleep_mode";
     sun: "sun.sun";
     climate: "climate.living_room" | "climate.hallway" | "climate.bedroom";
+    device_tracker:
+      | "device_tracker.bens_phone"
+      | "device_tracker.bens_imac_pro"
+      | "device_tracker.nuki";
+    button:
+      | "button.shellyplus1pm_a0dd6c2b6cf4_restart"
+      | "button.shellyplus1pm_a0dd6c2b3a6c_restart"
+      | "button.shelly_plus_pm_restart"
+      | "button.shellyem_a4e57cba73f5_restart"
+      | "button.shellyplus1pm_a0dd6c27e768_restart"
+      | "button.node_12_ping"
+      | "button.living_room_sensor_ping"
+      | "button.bedroom_heater_ping"
+      | "button.living_room_blinds_my_position"
+      | "button.flat_favorite_current_song"
+      | "button.bathroom_favorite_current_song"
+      | "button.living_room_favorite_current_song"
+      | "button.bedroom_speaker_favorite_current_song"
+      | "button.zigbee2mqtt_bridge_restart"
+      | "button.192_168_1_120_favorite_current_song"
+      | "button.living_room_favorite_current_song_2"
+      | "button.living_room_favorite_current_song_3"
+      | "button.briefing";
     media_player:
       | "media_player.tv"
+      | "media_player.bathroom_sonos"
       | "media_player.apple_tv"
       | "media_player.flat"
       | "media_player.bathroom"
       | "media_player.living_room"
       | "media_player.bedroom"
       | "media_player.bedroom_sonos"
-      | "media_player.office"
       | "media_player.living_room_sonos"
       | "media_player.playstation_5"
       | "media_player.192_168_1_120"
@@ -2584,12 +2632,13 @@ declare module "@digital-alchemy/hass" {
       | "media_player.living_room_3"
       | "media_player.living_room_4"
       | "media_player.living_room_5";
+    todo: "todo.shopping_list";
+    cover: "cover.living_room_blinds";
     remote: "remote.bens_apple_tv";
-    device_tracker:
-      | "device_tracker.bens_phone"
-      | "device_tracker.bens_imac_pro"
-      | "device_tracker.nuki";
     number:
+      | "number.office_bass"
+      | "number.office_balance"
+      | "number.office_treble"
       | "number.marlin_max_soil_moisture"
       | "number.marlin_min_soil_moisture"
       | "number.marlin_max_temperature"
@@ -2609,9 +2658,6 @@ declare module "@digital-alchemy/hass" {
       | "number.bedroom_speaker_bass"
       | "number.bedroom_speaker_balance"
       | "number.bedroom_speaker_treble"
-      | "number.office_bass"
-      | "number.office_balance"
-      | "number.office_treble"
       | "number.living_room_audio_delay"
       | "number.living_room_bass"
       | "number.living_room_balance"
@@ -2628,27 +2674,7 @@ declare module "@digital-alchemy/hass" {
       | "number.living_room_balance_3"
       | "number.living_room_treble_3";
     plant: "plant.marlin" | "plant.monroe";
-    todo: "todo.shopping_list";
-    button:
-      | "button.shellyplus1pm_a0dd6c2b3a6c_restart"
-      | "button.shelly_plus_pm_restart"
-      | "button.shellyplus1pm_a0dd6c2b6cf4_restart"
-      | "button.shellyem_a4e57cba73f5_restart"
-      | "button.shellyplus1pm_a0dd6c27e768_restart"
-      | "button.flat_favorite_current_song"
-      | "button.bathroom_favorite_current_song"
-      | "button.living_room_favorite_current_song"
-      | "button.bedroom_speaker_favorite_current_song"
-      | "button.living_room_blinds_my_position"
-      | "button.node_12_ping"
-      | "button.living_room_sensor_ping"
-      | "button.bedroom_heater_ping"
-      | "button.zigbee2mqtt_bridge_restart"
-      | "button.192_168_1_120_favorite_current_song"
-      | "button.living_room_favorite_current_song_2"
-      | "button.living_room_favorite_current_song_3";
     ai_task: "ai_task.openai";
-    cover: "cover.living_room_blinds";
     select:
       | "select.living_room_speech_enhancement"
       | "select.zigbee2mqtt_bridge_log_level"
@@ -2677,7 +2703,6 @@ declare module "@digital-alchemy/hass" {
       | "select.bathroom_sensor_motion_sensitivity"
       | "select.marlin_temperature_unit"
       | "select.monroe_temperature_unit";
-    image: "image.xbox_network_now_playing";
     calendar:
       | "calendar.tom_n_wainwright_gmail_com"
       | "calendar.leelam98_hotmail_co_uk"
@@ -2687,8 +2712,9 @@ declare module "@digital-alchemy/hass" {
       | "calendar.on_call_schedule_for_ben_wainwright"
       | "calendar.holidays_in_united_kingdom"
       | "calendar.events"
-      | "calendar.skedpal"
       | "calendar.personal_calendar"
-      | "calendar.birthdays";
+      | "calendar.birthdays"
+      | "calendar.skedpal";
+    image: "image.xbox_network_now_playing";
   }
 }

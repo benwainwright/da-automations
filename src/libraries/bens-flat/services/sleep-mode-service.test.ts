@@ -8,16 +8,35 @@ beforeEach(() => {
 test("turning sleep mode on enables the expected adaptive-lighting sleep switches", async () => {
   let onTurnOn: (() => Promise<void>) | undefined;
   const turnOnAll = mock(async () => {});
+  const latch = (_callback: () => Promise<void> | void, start = false) => {
+    let triggered = start;
+    return {
+      trigger: async () => {
+        if (triggered) {
+          return;
+        }
+        triggered = true;
+        await _callback();
+      },
+      reset: async () => {
+        triggered = false;
+      },
+    };
+  };
 
   SleepModeService({
     automation: { time: { isAfter: () => false } },
     bens_flat: {
-      helpers: { turnOffAll: mock(async () => {}), turnOnAll },
+      briefing: { read: mock(async () => {}) },
+      helpers: { turnOffAll: mock(async () => {}), turnOnAll, latch },
       lights: { turnOffAll: mock(async () => {}) },
       motion: { livingRoom: (_cb: () => Promise<void> | void) => {} },
     },
     context: {},
-    hass: { socket: { onEvent: (_config: unknown) => {} } },
+    hass: {
+      call: { switch: { turn_off: mock(async () => {}) } },
+      socket: { onEvent: (_config: unknown) => {} },
+    },
     logger: { info: mock(() => {}) },
     synapse: {
       switch: () => ({
