@@ -5033,7 +5033,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHS1NC5XFR2Y6Z0HZN9R2Q45"
           | "01KHS633DCFXG31Z3MRREX23XS"
           | "01KHS7BNGYMAT3J8CJWB3EWHQT"
-          | "01KHS7G1H795CQG23VH10AW6SQ";
+          | "01KHS7G1H795CQG23VH10AW6SQ"
+          | "01KHS8YSXFZND22GQDTRBQQX61";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -7610,7 +7611,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHS1NC5XFR2Y6Z0HZN9R2Q45"
           | "01KHS633DCFXG31Z3MRREX23XS"
           | "01KHS7BNGYMAT3J8CJWB3EWHQT"
-          | "01KHS7G1H795CQG23VH10AW6SQ";
+          | "01KHS7G1H795CQG23VH10AW6SQ"
+          | "01KHS8YSXFZND22GQDTRBQQX61";
         /**
          * ## favorite
          *
@@ -8121,7 +8123,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHS1NC5XFR2Y6Z0HZN9R2Q45"
           | "01KHS633DCFXG31Z3MRREX23XS"
           | "01KHS7BNGYMAT3J8CJWB3EWHQT"
-          | "01KHS7G1H795CQG23VH10AW6SQ";
+          | "01KHS7G1H795CQG23VH10AW6SQ"
+          | "01KHS8YSXFZND22GQDTRBQQX61";
         /**
          * ## library_only
          *
@@ -8779,7 +8782,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHS1NC5XFR2Y6Z0HZN9R2Q45"
           | "01KHS633DCFXG31Z3MRREX23XS"
           | "01KHS7BNGYMAT3J8CJWB3EWHQT"
-          | "01KHS7G1H795CQG23VH10AW6SQ";
+          | "01KHS7G1H795CQG23VH10AW6SQ"
+          | "01KHS8YSXFZND22GQDTRBQQX61";
         /**
          * ## filenames
          *
@@ -8894,7 +8898,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHS1NC5XFR2Y6Z0HZN9R2Q45"
           | "01KHS633DCFXG31Z3MRREX23XS"
           | "01KHS7BNGYMAT3J8CJWB3EWHQT"
-          | "01KHS7G1H795CQG23VH10AW6SQ";
+          | "01KHS7G1H795CQG23VH10AW6SQ"
+          | "01KHS8YSXFZND22GQDTRBQQX61";
         /**
          * ## prompt
          *
@@ -13216,6 +13221,47 @@ declare module "@digital-alchemy/hass" {
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
+    };
+    // # MARK: weather
+    weather: {
+      /**
+       * ### get_forecasts
+       *
+       * >
+       */
+      get_forecasts: <
+        ENTITIES extends PICK_ENTITY<"weather">,
+        T = Record<
+          ENTITIES,
+          {
+            forecast: WeatherGetForecasts[];
+          }
+        >,
+      >(
+        service_data: {
+          /**
+           * ## type
+           */
+          type: "daily" | "hourly" | "twice_daily";
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - weather
+           * >     supported_features:
+           * >       - 1
+           * >       - 2
+           * >       - 4
+           * > ```
+           */
+          entity_id: ENTITIES | ENTITIES[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<T>;
     };
     // # MARK: webostv
     webostv: {

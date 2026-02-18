@@ -823,6 +823,7 @@ declare module "@digital-alchemy/hass" {
     _a1193edf514b59a06a5e35fd93c9fe21: "update.chime_tts_update";
     _49585b6d7f7c01ccfb36c309febed92d: "update.openai_tts_speech_service_update";
     _54a08f919fe7174bb939608dd07ad0b0: "tts.openai_tts_gpt_40";
+    _5f1f24c497d5eb4f1ad2f5a0298c78dd: "weather.home";
   }
   export interface HassLabelMapping {
     _reviewed:
@@ -1370,6 +1371,7 @@ declare module "@digital-alchemy/hass" {
       | "calendar.birthdays";
     _openai_gpt4o_tts: "tts.openai_gpt_4o_mini_tts";
     _openai_tts: "tts.openai_tts_gpt_40";
+    _open_meteo: "weather.home";
   }
   export interface HassUniqueIdMapping {
     "01KGNB1SM9Q5V950Y0CGGYJ87D-solar_rising": "binary_sensor.sun_solar_rising";
@@ -2242,12 +2244,13 @@ declare module "@digital-alchemy/hass" {
     "bwainwright28@gmail.com-bwainwright28@gmail.com": "calendar.personal_calendar";
     "bwainwright28@gmail.com-bwainwright28@gmail.com-birthdays": "calendar.birthdays";
     "bwainwright28@gmail.com-bwainwright28@gmail.com-work-location": "calendar.working_location";
-    "trigger-briefing": "button.briefing";
     "952692578": "switch.openai_gpt_4o_mini_tts_pre_release";
     "01KHS633DCFXG31Z3MRREX23XS-tts": "tts.openai_gpt_4o_mini_tts";
     "646875198": "switch.chime_tts_pre_release";
     "716917337": "switch.openai_tts_speech_service_pre_release";
     "7d780904-0fd9-430e-8ac7-88cae235f6b7": "tts.openai_tts_gpt_40";
+    "trigger-briefing": "button.briefing";
+    "01KHS8YSXFZND22GQDTRBQQX61": "weather.home";
   }
   export interface HassZoneMapping {
     _work: true;
@@ -2716,5 +2719,6 @@ declare module "@digital-alchemy/hass" {
       | "calendar.birthdays"
       | "calendar.skedpal";
     image: "image.xbox_network_now_playing";
+    weather: "weather.home";
   }
 }

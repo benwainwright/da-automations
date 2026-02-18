@@ -28,12 +28,38 @@ export function BriefingService({
     context,
   });
 
+  function degreesToCompass(degrees: number): string {
+    const directions = [
+      "north",
+      "north-east",
+      "east",
+      "south-east",
+      "south",
+      "south-west",
+      "west",
+      "north-west",
+    ];
+
+    const index = Math.round(degrees / 45) % 8;
+    return directions[index];
+  }
+
+  const formatWeatherForSpeech = (weather: PICK_ENTITY<"weather">) => {
+    const { state, attributes } = hass.refBy.id(weather);
+
+    const temperature = Math.round(attributes.temperature);
+    const windSpeed = Math.round(attributes.wind_speed);
+    const windDirection = degreesToCompass(attributes.wind_bearing);
+
+    return `The weather in Manchester is ${state} and ${temperature} degrees, with ${windDirection} winds at ${windSpeed} kilometres per hour.`;
+  };
+
   const getDateAndTimeString = () => {
     const now = dayjs();
 
-    const time = now.format("h:mm A"); // 7:05 PM
-    const day = now.format("dddd"); // Tuesday
-    const date = now.format("Do MMMM"); // 18 February
+    const time = now.format("h:mm A");
+    const day = now.format("dddd");
+    const date = now.format("Do MMMM");
 
     return `The time is ${time} on ${day} the ${date}.`;
   };
@@ -62,6 +88,7 @@ export function BriefingService({
     const briefingStringParts = [
       `Good morning!`,
       getDateAndTimeString(),
+      formatWeatherForSpeech("weather.home"),
       await getReadCalendarString(),
     ];
 

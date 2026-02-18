@@ -65,7 +65,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 28.200463665552483
+           * > brightness_pct: 22.203606469498254
            * > ```
            */ brightness_pct: number;
           /**
@@ -83,7 +83,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7252478417620961
+           * > sun_position: -0.785822156873755
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -140,7 +140,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 28.200378530240982
+           * > brightness_pct: 22.20348498926124
            * > ```
            */ brightness_pct: number;
           /**
@@ -158,7 +158,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7252487017147375
+           * > sun_position: -0.7858233839468561
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -215,7 +215,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 28.20037196406421
+           * > brightness_pct: 22.203461770277297
            * > ```
            */ brightness_pct: number;
           /**
@@ -233,7 +233,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7252487680397555
+           * > sun_position: -0.7858236184820475
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -290,7 +290,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 49.23258294988156
+           * > brightness_pct: 44.99232837357696
            * > ```
            */ brightness_pct: number;
           /**
@@ -308,7 +308,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.725248815001692
+           * > sun_position: -0.785823880377472
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -365,7 +365,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 28.200352107603
+           * > brightness_pct: 22.203402793836364
            * > ```
            */ brightness_pct: number;
           /**
@@ -383,7 +383,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7252489686100707
+           * > sun_position: -0.7858242142036731
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -472,17 +472,17 @@ declare module "@digital-alchemy/hass" {
           actions: [];
           /**
            * > ```yaml
-           * > current_slot: 3
+           * > current_slot: 4
            * > ```
            */ current_slot: number;
           /**
            * > ```yaml
-           * > next_slot: 4
+           * > next_slot: 0
            * > ```
            */ next_slot: number;
           /**
            * > ```yaml
-           * > next_trigger: '2026-02-18T21:00:00+00:00'
+           * > next_trigger: '2026-02-19T00:00:00+00:00'
            * > ```
            */ next_trigger: string;
           tags: [];
@@ -853,13 +853,7 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.blinds_default_closed",
         {
-          restored: boolean;
           friendly_name: "Blinds default closed";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -868,14 +862,8 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.sleep_mode",
         {
-          restored: boolean;
           icon: "mdi:sleep";
           friendly_name: "Sleep Mode";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -884,14 +872,8 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.tv_mode",
         {
-          restored: boolean;
           icon: "mdi:television";
           friendly_name: "TV Mode";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -900,14 +882,8 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.autoplay_music",
         {
-          restored: boolean;
           icon: "mdi:music";
           friendly_name: "Autoplay Music";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -916,13 +892,7 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.living_room_motion_sensor",
         {
-          restored: boolean;
           friendly_name: "Living room motion sensor";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -931,13 +901,7 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.hallway_motion_sensor",
         {
-          restored: boolean;
           friendly_name: "Hallway motion sensor";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -946,13 +910,7 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.spare_room_motion_sensor",
         {
-          restored: boolean;
           friendly_name: "Spare room motion sensor";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -961,13 +919,7 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.bedroom_motion_sensor",
         {
-          restored: boolean;
           friendly_name: "Bedroom motion sensor";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -976,13 +928,7 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.bathroom_motion_sensor",
         {
-          restored: boolean;
           friendly_name: "Bathroom motion sensor";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -3711,17 +3657,17 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > Available: 580.59 GB
+           * > Available: 578.98 GB
            * > ```
            */ Available: string;
           /**
            * > ```yaml
-           * > Available (Important): 633.34 GB
+           * > Available (Important): 631.72 GB
            * > ```
            */ "Available (Important)": string;
           /**
            * > ```yaml
-           * > Available (Opportunistic): 606.70 GB
+           * > Available (Opportunistic): 605.08 GB
            * > ```
            */ "Available (Opportunistic)": string;
           /**
@@ -3841,13 +3787,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > Bundle Identifier: dev.zed.Zed
+           * > Bundle Identifier: com.github.wez.wezterm
            * > ```
            */ "Bundle Identifier": string;
           "Is Hidden": boolean;
           /**
            * > ```yaml
-           * > Launch Date: '2026-02-17T20:28:43Z'
+           * > Launch Date: '2026-02-13T13:38:01Z'
            * > ```
            */ "Launch Date": string;
           "Owns Menu Bar": boolean;
@@ -5400,14 +5346,8 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "binary_sensor.flat_occupied",
         {
-          restored: boolean;
           icon: "mdi:home";
           friendly_name: "Flat Occupied";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -5468,13 +5408,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > media_duration: 3216
+           * > media_duration: 15000
            * > ```
            */ media_duration: number;
           engine_active: boolean;
           /**
            * > ```yaml
-           * > message_cache_size: 1
+           * > message_cache_size: 6
            * > ```
            */ message_cache_size: number;
           available_voices: (
@@ -5613,7 +5553,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           /**
@@ -6102,7 +6042,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           /**
@@ -6219,7 +6159,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           /**
@@ -6336,7 +6276,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           /**
@@ -6453,7 +6393,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           /**
@@ -6570,7 +6510,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           /**
@@ -6687,7 +6627,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           /**
@@ -6804,7 +6744,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           /**
@@ -6915,7 +6855,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           /**
@@ -7006,7 +6946,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           friendly_name: "Living room floor lamp (Middle)";
@@ -7065,7 +7005,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           friendly_name: "Living Room floor lamp (bottom)";
@@ -7124,7 +7064,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           friendly_name: "Living room floor lamp (top)";
@@ -8089,7 +8029,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 72
+           * > brightness: 57
            * > ```
            */ brightness: number;
           /**
@@ -8310,12 +8250,12 @@ declare module "@digital-alchemy/hass" {
            */ next_setting: string;
           /**
            * > ```yaml
-           * > elevation: -28.94
+           * > elevation: -31.65
            * > ```
            */ elevation: number;
           /**
            * > ```yaml
-           * > azimuth: 291.55
+           * > azimuth: 296.28
            * > ```
            */ azimuth: number;
           rising: boolean;
@@ -8347,12 +8287,12 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 21.5
+           * > current_temperature: 20.5
            * > ```
            */ current_temperature: number;
           /**
            * > ```yaml
-           * > temperature: 21
+           * > temperature: 4
            * > ```
            */ temperature: number;
           /**
@@ -8362,7 +8302,7 @@ declare module "@digital-alchemy/hass" {
            */ hvac_action: string;
           /**
            * > ```yaml
-           * > preset_mode: comfort
+           * > preset_mode: sleep
            * > ```
            */ preset_mode: "none" | "away" | "comfort" | "sleep";
           friendly_name: "Living Room";
@@ -8760,13 +8700,7 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "button.briefing",
         {
-          restored: boolean;
           friendly_name: "Briefing";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
         }
       >;
     };
@@ -8806,7 +8740,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/agvP9ZTQ/syncgroup_nyvpnj8n/ca4d44d88dd54baeba3483f4a77f952e.flac
+           * >   http://192.168.1.143:8097/single/SfSurv6G/syncgroup_nyvpnj8n/7721008d3c7f49ae931623393eed1b36.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -8816,7 +8750,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 444
+           * > media_duration: 316
            * > ```
            */ media_duration: number;
           /**
@@ -8826,22 +8760,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T20:39:04.244763+00:00'
+           * > media_position_updated_at: '2026-02-18T21:04:23.293412+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Alter Ego
+           * > media_title: Death Stranding
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: NTO
+           * > media_artist: CHVRCHES
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Alter Ego
+           * > media_album_name: Death Stranding
            * > ```
            */ media_album_name: string;
           /**
@@ -8857,19 +8791,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 6
+           * > queue_position: 5
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 6
+           * > queue_size: 10
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bathroom_sonos?token=35d3304a1b73d406a35df4e0bf06f1f384e2fc1fc86471ac910a4d11cc3bcb36&cache=6897f1cd2cf99c26
+           * >   /api/media_player_proxy/media_player.bathroom_sonos?token=35d3304a1b73d406a35df4e0bf06f1f384e2fc1fc86471ac910a4d11cc3bcb36&cache=9bb9c6d587b062da
            * > ```
            */ entity_picture: string;
           friendly_name: "Bathroom";
@@ -8950,7 +8884,7 @@ declare module "@digital-alchemy/hass" {
            */ volume_level: number;
           /**
            * > ```yaml
-           * > media_content_id: library://track/78
+           * > media_content_id: library://track/31
            * > ```
            */ media_content_id: string;
           /**
@@ -8960,7 +8894,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 444
+           * > media_duration: 316
            * > ```
            */ media_duration: number;
           /**
@@ -8970,27 +8904,27 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T20:39:05.094480+00:00'
+           * > media_position_updated_at: '2026-02-18T21:04:23.726933+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Alter Ego
+           * > media_title: Death Stranding
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: NTO
+           * > media_artist: CHVRCHES
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Alter Ego
+           * > media_album_name: Death Stranding
            * > ```
            */ media_album_name: string;
           /**
            * > ```yaml
-           * > media_album_artist: NTO
+           * > media_album_artist: CHVRCHES
            * > ```
            */ media_album_artist: string;
           /**
@@ -9012,7 +8946,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.flat?token=13b58dced563e02115a17c2e6961fe299f2bd25b043acfcaae419d983d61c118&cache=b6511cc4f762fb1f
+           * >   /api/media_player_proxy/media_player.flat?token=13b58dced563e02115a17c2e6961fe299f2bd25b043acfcaae419d983d61c118&cache=7ad352fa5393e479
            * > ```
            */ entity_picture_local: string;
           /**
@@ -9028,7 +8962,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b27331df6c2b01c79be44601410c
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2734d52c61665177884436cb18c
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker-multiple";
@@ -9060,7 +8994,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: library://track/78
+           * > media_content_id: library://track/31
            * > ```
            */ media_content_id: string;
           /**
@@ -9070,7 +9004,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 444
+           * > media_duration: 316
            * > ```
            */ media_duration: number;
           /**
@@ -9080,27 +9014,27 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T20:39:05.094480+00:00'
+           * > media_position_updated_at: '2026-02-18T21:04:23.726933+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Alter Ego
+           * > media_title: Death Stranding
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: NTO
+           * > media_artist: CHVRCHES
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Alter Ego
+           * > media_album_name: Death Stranding
            * > ```
            */ media_album_name: string;
           /**
            * > ```yaml
-           * > media_album_artist: NTO
+           * > media_album_artist: CHVRCHES
            * > ```
            */ media_album_artist: string;
           /**
@@ -9117,7 +9051,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bathroom?token=9be1db478d877cd6a3ce064cda23bff04c6356a1810aaee92dab42a08eedee48&cache=b6511cc4f762fb1f
+           * >   /api/media_player_proxy/media_player.bathroom?token=9be1db478d877cd6a3ce064cda23bff04c6356a1810aaee92dab42a08eedee48&cache=7ad352fa5393e479
            * > ```
            */ entity_picture_local: string;
           /**
@@ -9133,7 +9067,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b27331df6c2b01c79be44601410c
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2734d52c61665177884436cb18c
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -9165,7 +9099,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: library://track/78
+           * > media_content_id: library://track/31
            * > ```
            */ media_content_id: string;
           /**
@@ -9175,7 +9109,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 444
+           * > media_duration: 316
            * > ```
            */ media_duration: number;
           /**
@@ -9185,27 +9119,27 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T20:39:05.094480+00:00'
+           * > media_position_updated_at: '2026-02-18T21:04:23.726933+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Alter Ego
+           * > media_title: Death Stranding
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: NTO
+           * > media_artist: CHVRCHES
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Alter Ego
+           * > media_album_name: Death Stranding
            * > ```
            */ media_album_name: string;
           /**
            * > ```yaml
-           * > media_album_artist: NTO
+           * > media_album_artist: CHVRCHES
            * > ```
            */ media_album_artist: string;
           /**
@@ -9222,7 +9156,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.living_room?token=3833fcd0e7deb3df7b301373e3e7350b7e59e00803524c10963704cef2074b3d&cache=b6511cc4f762fb1f
+           * >   /api/media_player_proxy/media_player.living_room?token=3833fcd0e7deb3df7b301373e3e7350b7e59e00803524c10963704cef2074b3d&cache=7ad352fa5393e479
            * > ```
            */ entity_picture_local: string;
           /**
@@ -9238,7 +9172,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b27331df6c2b01c79be44601410c
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2734d52c61665177884436cb18c
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -9270,7 +9204,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: library://track/78
+           * > media_content_id: library://track/31
            * > ```
            */ media_content_id: string;
           /**
@@ -9280,7 +9214,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 444
+           * > media_duration: 316
            * > ```
            */ media_duration: number;
           /**
@@ -9290,27 +9224,27 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T20:39:05.094480+00:00'
+           * > media_position_updated_at: '2026-02-18T21:04:23.726933+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Alter Ego
+           * > media_title: Death Stranding
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: NTO
+           * > media_artist: CHVRCHES
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Alter Ego
+           * > media_album_name: Death Stranding
            * > ```
            */ media_album_name: string;
           /**
            * > ```yaml
-           * > media_album_artist: NTO
+           * > media_album_artist: CHVRCHES
            * > ```
            */ media_album_artist: string;
           /**
@@ -9327,7 +9261,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bedroom?token=cd23a84425d42ddd87aed3214dc6fdb2e401700a98db0868db7925fb324f9982&cache=b6511cc4f762fb1f
+           * >   /api/media_player_proxy/media_player.bedroom?token=cd23a84425d42ddd87aed3214dc6fdb2e401700a98db0868db7925fb324f9982&cache=7ad352fa5393e479
            * > ```
            */ entity_picture_local: string;
           /**
@@ -9343,7 +9277,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b27331df6c2b01c79be44601410c
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2734d52c61665177884436cb18c
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -9375,7 +9309,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/agvP9ZTQ/syncgroup_nyvpnj8n/ca4d44d88dd54baeba3483f4a77f952e.flac
+           * >   http://192.168.1.143:8097/single/SfSurv6G/syncgroup_nyvpnj8n/7721008d3c7f49ae931623393eed1b36.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -9385,7 +9319,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 444
+           * > media_duration: 316
            * > ```
            */ media_duration: number;
           /**
@@ -9395,22 +9329,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T20:39:04.244763+00:00'
+           * > media_position_updated_at: '2026-02-18T21:04:23.293412+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Alter Ego
+           * > media_title: Death Stranding
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: NTO
+           * > media_artist: CHVRCHES
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Alter Ego
+           * > media_album_name: Death Stranding
            * > ```
            */ media_album_name: string;
           /**
@@ -9426,19 +9360,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 6
+           * > queue_position: 5
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 6
+           * > queue_size: 10
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=844598e7a5cb949bc82927eaedb0c40d9ef3779bafd6de449ae660201008323d&cache=6897f1cd2cf99c26
+           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=844598e7a5cb949bc82927eaedb0c40d9ef3779bafd6de449ae660201008323d&cache=9bb9c6d587b062da
            * > ```
            */ entity_picture: string;
           friendly_name: "Bedroom Speaker";
@@ -9469,7 +9403,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/agvP9ZTQ/syncgroup_nyvpnj8n/ca4d44d88dd54baeba3483f4a77f952e.flac
+           * >   http://192.168.1.143:8097/single/SfSurv6G/syncgroup_nyvpnj8n/7721008d3c7f49ae931623393eed1b36.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -9479,7 +9413,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 444
+           * > media_duration: 316
            * > ```
            */ media_duration: number;
           /**
@@ -9489,22 +9423,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T20:39:04.244763+00:00'
+           * > media_position_updated_at: '2026-02-18T21:04:23.293412+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Alter Ego
+           * > media_title: Death Stranding
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: NTO
+           * > media_artist: CHVRCHES
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Alter Ego
+           * > media_album_name: Death Stranding
            * > ```
            */ media_album_name: string;
           /**
@@ -9520,19 +9454,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 6
+           * > queue_position: 5
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 6
+           * > queue_size: 10
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.living_room_sonos?token=c9e062c3d170309bf23481cb5e49f0362dfdfb77cf909692de776044c4b39215&cache=6897f1cd2cf99c26
+           * >   /api/media_player_proxy/media_player.living_room_sonos?token=c9e062c3d170309bf23481cb5e49f0362dfdfb77cf909692de776044c4b39215&cache=9bb9c6d587b062da
            * > ```
            */ entity_picture: string;
           friendly_name: "Living Room";
@@ -11344,18 +11278,18 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > message: 'Loz coming over '
+           * > message: Work
            * > ```
            */ message: string;
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-02-18 19:00:00'
+           * > start_time: '2026-02-19 09:00:00'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-02-18 21:00:00'
+           * > end_time: '2026-02-19 17:00:00'
            * > ```
            */ end_time: string;
           /**
@@ -11441,16 +11375,50 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 96f508f130dfdbb9b8d5db68ca265e77315c957d8b7afff628b54482699562ee
+           * > access_token: 7cf3dd6ba8ece12b08779db37f8511ce7182c06140d7f54e8198710e24dda137
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.xbox_network_now_playing?token=96f508f130dfdbb9b8d5db68ca265e77315c957d8b7afff628b54482699562ee
+           * >   /api/image_proxy/image.xbox_network_now_playing?token=7cf3dd6ba8ece12b08779db37f8511ce7182c06140d7f54e8198710e24dda137
            * > ```
            */ entity_picture: string;
           friendly_name: "Xbox Network Now playing";
+        }
+      >;
+    };
+    "weather.home": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "weather.home",
+        {
+          /**
+           * > ```yaml
+           * > temperature: 3.2
+           * > ```
+           */ temperature: number;
+          temperature_unit: "\u00B0C";
+          pressure_unit: "hPa";
+          /**
+           * > ```yaml
+           * > wind_bearing: 85
+           * > ```
+           */ wind_bearing: number;
+          /**
+           * > ```yaml
+           * > wind_speed: 17.7
+           * > ```
+           */ wind_speed: number;
+          wind_speed_unit: "km/h";
+          visibility_unit: "km";
+          precipitation_unit: "mm";
+          friendly_name: "Weather";
+          /**
+           * > ```yaml
+           * > supported_features: 3
+           * > ```
+           */ supported_features: number;
         }
       >;
     };
