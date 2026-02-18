@@ -1,5 +1,5 @@
 import { LIB_AUTOMATION } from "@digital-alchemy/automation";
-import { CreateLibrary } from "@digital-alchemy/core";
+import { CreateLibrary, Scheduler } from "@digital-alchemy/core";
 import { LIB_HASS } from "@digital-alchemy/hass";
 import { LIB_SYNAPSE } from "@digital-alchemy/synapse";
 import {
@@ -41,6 +41,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
   services: {
     nags: NagService,
     music: MusicService,
+    scheduler: Scheduler,
     motion: MotionService,
     blinds: BlindsService,
     plants: PlantsService,

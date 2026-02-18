@@ -308,12 +308,12 @@ declare module "@digital-alchemy/hass" {
       | "switch.adaptive_lighting_sleep_mode_bathroom"
       | "switch.adaptive_lighting_bathroom"
       | "binary_sensor.office_microphone"
-      | "number.office_bass"
       | "number.office_balance"
       | "number.office_treble"
       | "switch.office_crossfade"
       | "switch.office_loudness"
-      | "media_player.bathroom_sonos";
+      | "media_player.bathroom_sonos"
+      | "number.bathroom_bass";
     _spare_room:
       | "light.spare_room"
       | "sensor.node_12_node_status"
@@ -767,12 +767,12 @@ declare module "@digital-alchemy/hass" {
     _c022861e837ad7513fb3d2d79426dc8b: "update.radarr_update";
     _a21364bc33567f3e87766a37e7373dd3:
       | "binary_sensor.office_microphone"
-      | "number.office_bass"
       | "number.office_balance"
       | "number.office_treble"
       | "switch.office_crossfade"
       | "switch.office_loudness"
-      | "media_player.bathroom_sonos";
+      | "media_player.bathroom_sonos"
+      | "number.bathroom_bass";
     _3d101594b3cb96ed837bc06133950e4b:
       | "button.bathroom_favorite_current_song"
       | "media_player.bathroom";
@@ -968,7 +968,6 @@ declare module "@digital-alchemy/hass" {
       | "media_player.living_room_sonos"
       | "media_player.bedroom_sonos"
       | "binary_sensor.office_microphone"
-      | "number.office_bass"
       | "number.office_balance"
       | "number.office_treble"
       | "switch.office_crossfade"
@@ -987,7 +986,8 @@ declare module "@digital-alchemy/hass" {
       | "switch.living_room_loudness_3"
       | "binary_sensor.living_room_microphone_2"
       | "binary_sensor.living_room_microphone_3"
-      | "media_player.bathroom_sonos";
+      | "media_player.bathroom_sonos"
+      | "number.bathroom_bass";
     _cloud: "binary_sensor.remote_ui" | "stt.home_assistant_cloud" | "tts.home_assistant_cloud";
     _person: "person.ben";
     _shopping_list: "todo.shopping_list";
@@ -1336,7 +1336,7 @@ declare module "@digital-alchemy/hass" {
       | "sensor.monroe_air_humidity"
       | "sensor.monroe_soil_temperature"
       | "plant.monroe";
-    _homeassistant: "scene.tv_mode";
+    _homeassistant: "scene.tv_mode" | "scene.night_audio";
     _proximity:
       | "sensor.home_proximity_nearest_device"
       | "sensor.home_proximity_nearest_distance"
@@ -2169,7 +2169,6 @@ declare module "@digital-alchemy/hass" {
     a0d7b954_radarr_memory_percent: "sensor.radarr_memory_percent";
     "A4E57CBA73F5-emeter_0-energy": "sensor.flat_energy";
     "RINCON_48A6B8D3D92401400-microphone": "binary_sensor.office_microphone";
-    "RINCON_48A6B8D3D92401400-bass": "number.office_bass";
     "RINCON_48A6B8D3D92401400-balance": "number.office_balance";
     "RINCON_48A6B8D3D92401400-treble": "number.office_treble";
     "RINCON_48A6B8D3D92401400-buttons_enabled": "switch.office_touch_controls";
@@ -2251,6 +2250,8 @@ declare module "@digital-alchemy/hass" {
     "7d780904-0fd9-430e-8ac7-88cae235f6b7": "tts.openai_tts_gpt_40";
     "trigger-briefing": "button.briefing";
     "01KHS8YSXFZND22GQDTRBQQX61": "weather.home";
+    "RINCON_48A6B8D3D92401400-bass": "number.bathroom_bass";
+    "1771450272781": "scene.night_audio";
   }
   export interface HassZoneMapping {
     _work: true;
@@ -2564,7 +2565,7 @@ declare module "@digital-alchemy/hass" {
       | "tts.google_translate_en_com"
       | "tts.piper"
       | "tts.openai_tts_gpt_40";
-    scene: "scene.tv_mode";
+    scene: "scene.tv_mode" | "scene.night_audio";
     light:
       | "light.living_room_lights"
       | "light.bedroom_lights"
@@ -2639,7 +2640,6 @@ declare module "@digital-alchemy/hass" {
     cover: "cover.living_room_blinds";
     remote: "remote.bens_apple_tv";
     number:
-      | "number.office_bass"
       | "number.office_balance"
       | "number.office_treble"
       | "number.marlin_max_soil_moisture"
@@ -2675,7 +2675,8 @@ declare module "@digital-alchemy/hass" {
       | "number.living_room_treble_2"
       | "number.living_room_bass_3"
       | "number.living_room_balance_3"
-      | "number.living_room_treble_3";
+      | "number.living_room_treble_3"
+      | "number.bathroom_bass";
     plant: "plant.marlin" | "plant.monroe";
     ai_task: "ai_task.openai";
     select:

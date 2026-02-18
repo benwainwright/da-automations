@@ -65,7 +65,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 22.203606469498254
+           * > brightness_pct: 16.38385914040772
            * > ```
            */ brightness_pct: number;
           /**
@@ -83,7 +83,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.785822156873755
+           * > sun_position: -0.8446074834302251
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -140,7 +140,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 22.20348498926124
+           * > brightness_pct: 16.383758053288098
            * > ```
            */ brightness_pct: number;
           /**
@@ -158,7 +158,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7858233839468561
+           * > sun_position: -0.8446085045122415
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -215,17 +215,17 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 22.203461770277297
+           * > brightness_pct: 1
            * > ```
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 2000
+           * > color_temp_kelvin: 1000
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 500
+           * > color_temp_mired: 1000
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -233,7 +233,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7858236184820475
+           * > sun_position: -0.8446086785876706
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -290,7 +290,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 44.99232837357696
+           * > brightness_pct: 40.877380896740156
            * > ```
            */ brightness_pct: number;
           /**
@@ -308,7 +308,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.785823880377472
+           * > sun_position: -0.8446088443322834
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -365,7 +365,7 @@ declare module "@digital-alchemy/hass" {
           manual_control: [];
           /**
            * > ```yaml
-           * > brightness_pct: 22.203402793836364
+           * > brightness_pct: 16.383702360605607
            * > ```
            */ brightness_pct: number;
           /**
@@ -383,7 +383,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: -0.7858242142036731
+           * > sun_position: -0.8446090670645898
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -508,17 +508,17 @@ declare module "@digital-alchemy/hass" {
           actions: [];
           /**
            * > ```yaml
-           * > current_slot: 3
+           * > current_slot: 4
            * > ```
            */ current_slot: number;
           /**
            * > ```yaml
-           * > next_slot: 4
+           * > next_slot: 0
            * > ```
            */ next_slot: number;
           /**
            * > ```yaml
-           * > next_trigger: '2026-02-18T21:30:00+00:00'
+           * > next_trigger: '2026-02-19T00:00:00+00:00'
            * > ```
            */ next_trigger: string;
           tags: [];
@@ -853,6 +853,11 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.blinds_default_closed",
         {
+          /**
+           * > ```yaml
+           * > area: living_room
+           * > ```
+           */ area: string;
           friendly_name: "Blinds default closed";
         }
       >;
@@ -892,6 +897,11 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.living_room_motion_sensor",
         {
+          /**
+           * > ```yaml
+           * > area: living_room
+           * > ```
+           */ area: string;
           friendly_name: "Living room motion sensor";
         }
       >;
@@ -901,6 +911,11 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.hallway_motion_sensor",
         {
+          /**
+           * > ```yaml
+           * > area: hallway
+           * > ```
+           */ area: string;
           friendly_name: "Hallway motion sensor";
         }
       >;
@@ -910,6 +925,11 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.spare_room_motion_sensor",
         {
+          /**
+           * > ```yaml
+           * > area: spare_room
+           * > ```
+           */ area: string;
           friendly_name: "Spare room motion sensor";
         }
       >;
@@ -919,6 +939,11 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.bedroom_motion_sensor",
         {
+          /**
+           * > ```yaml
+           * > area: bedroom
+           * > ```
+           */ area: string;
           friendly_name: "Bedroom motion sensor";
         }
       >;
@@ -928,6 +953,11 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.bathroom_motion_sensor",
         {
+          /**
+           * > ```yaml
+           * > area: bathroom
+           * > ```
+           */ area: string;
           friendly_name: "Bathroom motion sensor";
         }
       >;
@@ -3657,17 +3687,17 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > Available: 578.98 GB
+           * > Available: 583.06 GB
            * > ```
            */ Available: string;
           /**
            * > ```yaml
-           * > Available (Important): 631.72 GB
+           * > Available (Important): 635.81 GB
            * > ```
            */ "Available (Important)": string;
           /**
            * > ```yaml
-           * > Available (Opportunistic): 605.08 GB
+           * > Available (Opportunistic): 609.17 GB
            * > ```
            */ "Available (Opportunistic)": string;
           /**
@@ -3958,7 +3988,7 @@ declare module "@digital-alchemy/hass" {
       >;
     };
     "sensor.shellyem_a4e57cba73f5_channel_1_power": {
-      state: number;
+      state: string;
       attributes: DynamicMergeAttributes<
         "sensor.shellyem_a4e57cba73f5_channel_1_power",
         {
@@ -3970,7 +4000,7 @@ declare module "@digital-alchemy/hass" {
       >;
     };
     "sensor.flat_energy": {
-      state: number;
+      state: string;
       attributes: DynamicMergeAttributes<
         "sensor.flat_energy",
         {
@@ -3982,7 +4012,7 @@ declare module "@digital-alchemy/hass" {
       >;
     };
     "sensor.shellyem_a4e57cba73f5_channel_1_energy_returned": {
-      state: number;
+      state: string;
       attributes: DynamicMergeAttributes<
         "sensor.shellyem_a4e57cba73f5_channel_1_energy_returned",
         {
@@ -3994,7 +4024,7 @@ declare module "@digital-alchemy/hass" {
       >;
     };
     "sensor.shellyem_a4e57cba73f5_channel_1_voltage": {
-      state: number;
+      state: string;
       attributes: DynamicMergeAttributes<
         "sensor.shellyem_a4e57cba73f5_channel_1_voltage",
         {
@@ -4006,7 +4036,7 @@ declare module "@digital-alchemy/hass" {
       >;
     };
     "sensor.shellyem_a4e57cba73f5_channel_1_power_factor": {
-      state: number;
+      state: string;
       attributes: DynamicMergeAttributes<
         "sensor.shellyem_a4e57cba73f5_channel_1_power_factor",
         {
@@ -4017,7 +4047,7 @@ declare module "@digital-alchemy/hass" {
       >;
     };
     "sensor.shellyem_a4e57cba73f5_channel_2_power": {
-      state: number;
+      state: string;
       attributes: DynamicMergeAttributes<
         "sensor.shellyem_a4e57cba73f5_channel_2_power",
         {
@@ -4029,7 +4059,7 @@ declare module "@digital-alchemy/hass" {
       >;
     };
     "sensor.shellyem_a4e57cba73f5_channel_2_energy": {
-      state: number;
+      state: string;
       attributes: DynamicMergeAttributes<
         "sensor.shellyem_a4e57cba73f5_channel_2_energy",
         {
@@ -4041,7 +4071,7 @@ declare module "@digital-alchemy/hass" {
       >;
     };
     "sensor.shellyem_a4e57cba73f5_channel_2_energy_returned": {
-      state: number;
+      state: string;
       attributes: DynamicMergeAttributes<
         "sensor.shellyem_a4e57cba73f5_channel_2_energy_returned",
         {
@@ -4053,7 +4083,7 @@ declare module "@digital-alchemy/hass" {
       >;
     };
     "sensor.shellyem_a4e57cba73f5_channel_2_voltage": {
-      state: number;
+      state: string;
       attributes: DynamicMergeAttributes<
         "sensor.shellyem_a4e57cba73f5_channel_2_voltage",
         {
@@ -4065,7 +4095,7 @@ declare module "@digital-alchemy/hass" {
       >;
     };
     "sensor.shellyem_a4e57cba73f5_channel_2_power_factor": {
-      state: number;
+      state: string;
       attributes: DynamicMergeAttributes<
         "sensor.shellyem_a4e57cba73f5_channel_2_power_factor",
         {
@@ -5248,7 +5278,7 @@ declare module "@digital-alchemy/hass" {
            * > application_unique_id: 551e4cc1-3a68-460e-a3ff-9f70ba752c46
            * > ```
            */ application_unique_id: string;
-          icon: "mdi:server-outline";
+          icon: "mdi:server";
           friendly_name: "app Online";
         }
       >;
@@ -5408,13 +5438,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > media_duration: 15000
+           * > media_duration: 20256
            * > ```
            */ media_duration: number;
           engine_active: boolean;
           /**
            * > ```yaml
-           * > message_cache_size: 6
+           * > message_cache_size: 9
            * > ```
            */ message_cache_size: number;
           available_voices: (
@@ -5477,6 +5507,29 @@ declare module "@digital-alchemy/hass" {
            */ id: string;
           icon: "mdi:television";
           friendly_name: "TV Mode";
+        }
+      >;
+    };
+    "scene.night_audio": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "scene.night_audio",
+        {
+          entity_id: (
+            | "switch.adaptive_lighting_sleep_mode_bathroom"
+            | "switch.adaptive_lighting_sleep_mode_bedroom"
+            | "switch.adaptive_lighting_sleep_mode_hallway"
+            | "switch.adaptive_lighting_sleep_mode_living_room"
+            | "number.bedroom_speaker_bass"
+            | "number.bathroom_bass"
+            | "number.living_room_bass"
+          )[];
+          /**
+           * > ```yaml
+           * > id: '1771450272781'
+           * > ```
+           */ id: string;
+          friendly_name: "Night Audio";
         }
       >;
     };
@@ -5553,7 +5606,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           /**
@@ -6042,7 +6095,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           /**
@@ -6159,7 +6212,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           /**
@@ -6276,7 +6329,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           /**
@@ -6393,7 +6446,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           /**
@@ -6510,7 +6563,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           /**
@@ -6627,7 +6680,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           /**
@@ -6744,7 +6797,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           /**
@@ -6855,7 +6908,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           /**
@@ -6946,7 +6999,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           friendly_name: "Living room floor lamp (Middle)";
@@ -7005,7 +7058,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           friendly_name: "Living Room floor lamp (bottom)";
@@ -7064,7 +7117,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "brightness";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           friendly_name: "Living room floor lamp (top)";
@@ -8029,7 +8082,7 @@ declare module "@digital-alchemy/hass" {
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 57
+           * > brightness: 42
            * > ```
            */ brightness: number;
           /**
@@ -8171,22 +8224,22 @@ declare module "@digital-alchemy/hass" {
           device_trackers: ("device_tracker.bens_phone" | "device_tracker.bens_imac_pro")[];
           /**
            * > ```yaml
-           * > latitude: 53.4791647102658
+           * > latitude: 53.479257328809666
            * > ```
            */ latitude: number;
           /**
            * > ```yaml
-           * > longitude: -2.220843359369472
+           * > longitude: -2.220957720668522
            * > ```
            */ longitude: number;
           /**
            * > ```yaml
-           * > gps_accuracy: 35
+           * > gps_accuracy: 8
            * > ```
            */ gps_accuracy: number;
           /**
            * > ```yaml
-           * > source: device_tracker.bens_imac_pro
+           * > source: device_tracker.bens_phone
            * > ```
            */ source: string;
           /**
@@ -8250,12 +8303,12 @@ declare module "@digital-alchemy/hass" {
            */ next_setting: string;
           /**
            * > ```yaml
-           * > elevation: -31.65
+           * > elevation: -34.26
            * > ```
            */ elevation: number;
           /**
            * > ```yaml
-           * > azimuth: 296.28
+           * > azimuth: 301.23
            * > ```
            */ azimuth: number;
           rising: boolean;
@@ -8287,7 +8340,7 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 20.5
+           * > current_temperature: 20
            * > ```
            */ current_temperature: number;
           /**
@@ -8338,12 +8391,12 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 17.7
+           * > current_temperature: 17.8
            * > ```
            */ current_temperature: number;
           /**
            * > ```yaml
-           * > temperature: 18
+           * > temperature: 14
            * > ```
            */ temperature: number;
           /**
@@ -8353,7 +8406,7 @@ declare module "@digital-alchemy/hass" {
            */ hvac_action: string;
           /**
            * > ```yaml
-           * > preset_mode: comfort
+           * > preset_mode: sleep
            * > ```
            */ preset_mode: "none" | "away" | "comfort" | "sleep";
           friendly_name: "Hallway";
@@ -8389,7 +8442,7 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 18.7
+           * > current_temperature: 17.7
            * > ```
            */ current_temperature: number;
           /**
@@ -8429,12 +8482,12 @@ declare module "@digital-alchemy/hass" {
            */ battery_level: number;
           /**
            * > ```yaml
-           * > latitude: 53.479257353041774
+           * > latitude: 53.479257328809666
            * > ```
            */ latitude: number;
           /**
            * > ```yaml
-           * > longitude: -2.220957629293624
+           * > longitude: -2.220957720668522
            * > ```
            */ longitude: number;
           /**
@@ -8449,7 +8502,7 @@ declare module "@digital-alchemy/hass" {
            */ altitude: number;
           /**
            * > ```yaml
-           * > vertical_accuracy: 38
+           * > vertical_accuracy: 31
            * > ```
            */ vertical_accuracy: number;
           friendly_name: "Bens Phone";
@@ -8733,14 +8786,14 @@ declare module "@digital-alchemy/hass" {
           )[];
           /**
            * > ```yaml
-           * > volume_level: 0.48
+           * > volume_level: 0.18
            * > ```
            */ volume_level: number;
           is_volume_muted: boolean;
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/SfSurv6G/syncgroup_nyvpnj8n/7721008d3c7f49ae931623393eed1b36.flac
+           * >   http://192.168.1.143:8097/single/DrqzCEBb/syncgroup_nyvpnj8n/593ba9fb33ae4c8296068e4b446a891b.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -8750,7 +8803,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 316
+           * > media_duration: 216
            * > ```
            */ media_duration: number;
           /**
@@ -8760,22 +8813,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T21:04:23.293412+00:00'
+           * > media_position_updated_at: '2026-02-18T21:35:00.683368+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Death Stranding
+           * > media_title: Blackpool Boulevard
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: CHVRCHES
+           * > media_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Death Stranding
+           * > media_album_name: Blackpool Boulevard
            * > ```
            */ media_album_name: string;
           /**
@@ -8791,19 +8844,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 5
+           * > queue_position: 1
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 10
+           * > queue_size: 1
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bathroom_sonos?token=35d3304a1b73d406a35df4e0bf06f1f384e2fc1fc86471ac910a4d11cc3bcb36&cache=9bb9c6d587b062da
+           * >   /api/media_player_proxy/media_player.bathroom_sonos?token=35d3304a1b73d406a35df4e0bf06f1f384e2fc1fc86471ac910a4d11cc3bcb36&cache=7ee0921e338028b9
            * > ```
            */ entity_picture: string;
           friendly_name: "Bathroom";
@@ -8879,12 +8932,12 @@ declare module "@digital-alchemy/hass" {
           source_list: "Music Assistant Queue"[];
           /**
            * > ```yaml
-           * > volume_level: 0.5
+           * > volume_level: 0.2
            * > ```
            */ volume_level: number;
           /**
            * > ```yaml
-           * > media_content_id: library://track/31
+           * > media_content_id: library://track/8
            * > ```
            */ media_content_id: string;
           /**
@@ -8894,37 +8947,37 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 316
+           * > media_duration: 215
            * > ```
            */ media_duration: number;
           /**
            * > ```yaml
-           * > media_position: 0
+           * > media_position: 1
            * > ```
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T21:04:23.726933+00:00'
+           * > media_position_updated_at: '2026-02-18T21:35:01.780485+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Death Stranding
+           * > media_title: Blackpool Boulevard (Edit)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: CHVRCHES
+           * > media_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Death Stranding
+           * > media_album_name: Blackpool Boulevard
            * > ```
            */ media_album_name: string;
           /**
            * > ```yaml
-           * > media_album_artist: CHVRCHES
+           * > media_album_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_album_artist: string;
           /**
@@ -8946,7 +8999,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.flat?token=13b58dced563e02115a17c2e6961fe299f2bd25b043acfcaae419d983d61c118&cache=7ad352fa5393e479
+           * >   /api/media_player_proxy/media_player.flat?token=13b58dced563e02115a17c2e6961fe299f2bd25b043acfcaae419d983d61c118&cache=6a3638b02fd84d49
            * > ```
            */ entity_picture_local: string;
           /**
@@ -8962,7 +9015,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2734d52c61665177884436cb18c
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2733884a8730cf58a571eab9d00
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker-multiple";
@@ -8988,13 +9041,13 @@ declare module "@digital-alchemy/hass" {
           )[];
           /**
            * > ```yaml
-           * > volume_level: 0.48
+           * > volume_level: 0.18
            * > ```
            */ volume_level: number;
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: library://track/31
+           * > media_content_id: library://track/8
            * > ```
            */ media_content_id: string;
           /**
@@ -9004,37 +9057,37 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 316
+           * > media_duration: 215
            * > ```
            */ media_duration: number;
           /**
            * > ```yaml
-           * > media_position: 0
+           * > media_position: 1
            * > ```
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T21:04:23.726933+00:00'
+           * > media_position_updated_at: '2026-02-18T21:35:01.780485+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Death Stranding
+           * > media_title: Blackpool Boulevard (Edit)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: CHVRCHES
+           * > media_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Death Stranding
+           * > media_album_name: Blackpool Boulevard
            * > ```
            */ media_album_name: string;
           /**
            * > ```yaml
-           * > media_album_artist: CHVRCHES
+           * > media_album_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_album_artist: string;
           /**
@@ -9051,7 +9104,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bathroom?token=9be1db478d877cd6a3ce064cda23bff04c6356a1810aaee92dab42a08eedee48&cache=7ad352fa5393e479
+           * >   /api/media_player_proxy/media_player.bathroom?token=9be1db478d877cd6a3ce064cda23bff04c6356a1810aaee92dab42a08eedee48&cache=6a3638b02fd84d49
            * > ```
            */ entity_picture_local: string;
           /**
@@ -9067,7 +9120,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2734d52c61665177884436cb18c
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2733884a8730cf58a571eab9d00
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -9093,13 +9146,13 @@ declare module "@digital-alchemy/hass" {
           )[];
           /**
            * > ```yaml
-           * > volume_level: 0.58
+           * > volume_level: 0.28
            * > ```
            */ volume_level: number;
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: library://track/31
+           * > media_content_id: library://track/8
            * > ```
            */ media_content_id: string;
           /**
@@ -9109,37 +9162,37 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 316
+           * > media_duration: 215
            * > ```
            */ media_duration: number;
           /**
            * > ```yaml
-           * > media_position: 0
+           * > media_position: 1
            * > ```
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T21:04:23.726933+00:00'
+           * > media_position_updated_at: '2026-02-18T21:35:01.780485+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Death Stranding
+           * > media_title: Blackpool Boulevard (Edit)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: CHVRCHES
+           * > media_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Death Stranding
+           * > media_album_name: Blackpool Boulevard
            * > ```
            */ media_album_name: string;
           /**
            * > ```yaml
-           * > media_album_artist: CHVRCHES
+           * > media_album_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_album_artist: string;
           /**
@@ -9156,7 +9209,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.living_room?token=3833fcd0e7deb3df7b301373e3e7350b7e59e00803524c10963704cef2074b3d&cache=7ad352fa5393e479
+           * >   /api/media_player_proxy/media_player.living_room?token=3833fcd0e7deb3df7b301373e3e7350b7e59e00803524c10963704cef2074b3d&cache=6a3638b02fd84d49
            * > ```
            */ entity_picture_local: string;
           /**
@@ -9172,7 +9225,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2734d52c61665177884436cb18c
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2733884a8730cf58a571eab9d00
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -9198,13 +9251,13 @@ declare module "@digital-alchemy/hass" {
           )[];
           /**
            * > ```yaml
-           * > volume_level: 0.46
+           * > volume_level: 0.16
            * > ```
            */ volume_level: number;
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: library://track/31
+           * > media_content_id: library://track/8
            * > ```
            */ media_content_id: string;
           /**
@@ -9214,37 +9267,37 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 316
+           * > media_duration: 215
            * > ```
            */ media_duration: number;
           /**
            * > ```yaml
-           * > media_position: 0
+           * > media_position: 1
            * > ```
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T21:04:23.726933+00:00'
+           * > media_position_updated_at: '2026-02-18T21:35:01.780485+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Death Stranding
+           * > media_title: Blackpool Boulevard (Edit)
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: CHVRCHES
+           * > media_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Death Stranding
+           * > media_album_name: Blackpool Boulevard
            * > ```
            */ media_album_name: string;
           /**
            * > ```yaml
-           * > media_album_artist: CHVRCHES
+           * > media_album_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_album_artist: string;
           /**
@@ -9261,7 +9314,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bedroom?token=cd23a84425d42ddd87aed3214dc6fdb2e401700a98db0868db7925fb324f9982&cache=7ad352fa5393e479
+           * >   /api/media_player_proxy/media_player.bedroom?token=cd23a84425d42ddd87aed3214dc6fdb2e401700a98db0868db7925fb324f9982&cache=6a3638b02fd84d49
            * > ```
            */ entity_picture_local: string;
           /**
@@ -9277,7 +9330,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2734d52c61665177884436cb18c
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b2733884a8730cf58a571eab9d00
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -9302,14 +9355,14 @@ declare module "@digital-alchemy/hass" {
           )[];
           /**
            * > ```yaml
-           * > volume_level: 0.46
+           * > volume_level: 0.16
            * > ```
            */ volume_level: number;
           is_volume_muted: boolean;
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/SfSurv6G/syncgroup_nyvpnj8n/7721008d3c7f49ae931623393eed1b36.flac
+           * >   http://192.168.1.143:8097/single/DrqzCEBb/syncgroup_nyvpnj8n/593ba9fb33ae4c8296068e4b446a891b.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -9319,7 +9372,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 316
+           * > media_duration: 216
            * > ```
            */ media_duration: number;
           /**
@@ -9329,22 +9382,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T21:04:23.293412+00:00'
+           * > media_position_updated_at: '2026-02-18T21:35:00.683368+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Death Stranding
+           * > media_title: Blackpool Boulevard
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: CHVRCHES
+           * > media_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Death Stranding
+           * > media_album_name: Blackpool Boulevard
            * > ```
            */ media_album_name: string;
           /**
@@ -9360,19 +9413,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 5
+           * > queue_position: 1
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 10
+           * > queue_size: 1
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=844598e7a5cb949bc82927eaedb0c40d9ef3779bafd6de449ae660201008323d&cache=9bb9c6d587b062da
+           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=844598e7a5cb949bc82927eaedb0c40d9ef3779bafd6de449ae660201008323d&cache=7ee0921e338028b9
            * > ```
            */ entity_picture: string;
           friendly_name: "Bedroom Speaker";
@@ -9396,14 +9449,14 @@ declare module "@digital-alchemy/hass" {
           )[];
           /**
            * > ```yaml
-           * > volume_level: 0.58
+           * > volume_level: 0.28
            * > ```
            */ volume_level: number;
           is_volume_muted: boolean;
           /**
            * > ```yaml
            * > media_content_id: >-
-           * >   http://192.168.1.143:8097/single/SfSurv6G/syncgroup_nyvpnj8n/7721008d3c7f49ae931623393eed1b36.flac
+           * >   http://192.168.1.143:8097/single/DrqzCEBb/syncgroup_nyvpnj8n/593ba9fb33ae4c8296068e4b446a891b.flac
            * > ```
            */ media_content_id: string;
           /**
@@ -9413,7 +9466,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 316
+           * > media_duration: 216
            * > ```
            */ media_duration: number;
           /**
@@ -9423,22 +9476,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-02-18T21:04:23.293412+00:00'
+           * > media_position_updated_at: '2026-02-18T21:35:00.683368+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Death Stranding
+           * > media_title: Blackpool Boulevard
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: CHVRCHES
+           * > media_artist: Barry Can't Swim/Anish Kumar
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Death Stranding
+           * > media_album_name: Blackpool Boulevard
            * > ```
            */ media_album_name: string;
           /**
@@ -9454,19 +9507,19 @@ declare module "@digital-alchemy/hass" {
            */ repeat: string;
           /**
            * > ```yaml
-           * > queue_position: 5
+           * > queue_position: 1
            * > ```
            */ queue_position: number;
           /**
            * > ```yaml
-           * > queue_size: 10
+           * > queue_size: 1
            * > ```
            */ queue_size: number;
           device_class: "speaker";
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.living_room_sonos?token=c9e062c3d170309bf23481cb5e49f0362dfdfb77cf909692de776044c4b39215&cache=9bb9c6d587b062da
+           * >   /api/media_player_proxy/media_player.living_room_sonos?token=c9e062c3d170309bf23481cb5e49f0362dfdfb77cf909692de776044c4b39215&cache=7ee0921e338028b9
            * > ```
            */ entity_picture: string;
           friendly_name: "Living Room";
@@ -9614,31 +9667,6 @@ declare module "@digital-alchemy/hass" {
            * > supported_features: 0
            * > ```
            */ supported_features: number;
-        }
-      >;
-    };
-    "number.office_bass": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.office_bass",
-        {
-          /**
-           * > ```yaml
-           * > min: -10
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 10
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "auto";
-          friendly_name: "Bathroom Bass";
         }
       >;
     };
@@ -10632,6 +10660,31 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "number.bathroom_bass": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.bathroom_bass",
+        {
+          /**
+           * > ```yaml
+           * > min: -10
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 10
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Bathroom Bass";
+        }
+      >;
+    };
     "plant.marlin": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -11375,13 +11428,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 7cf3dd6ba8ece12b08779db37f8511ce7182c06140d7f54e8198710e24dda137
+           * > access_token: 4699e43c9cb9906a1f9ed2ca421f03dbf00b975cc7789855c5566869d03944f4
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.xbox_network_now_playing?token=7cf3dd6ba8ece12b08779db37f8511ce7182c06140d7f54e8198710e24dda137
+           * >   /api/image_proxy/image.xbox_network_now_playing?token=4699e43c9cb9906a1f9ed2ca421f03dbf00b975cc7789855c5566869d03944f4
            * > ```
            */ entity_picture: string;
           friendly_name: "Xbox Network Now playing";
@@ -11402,12 +11455,12 @@ declare module "@digital-alchemy/hass" {
           pressure_unit: "hPa";
           /**
            * > ```yaml
-           * > wind_bearing: 85
+           * > wind_bearing: 84
            * > ```
            */ wind_bearing: number;
           /**
            * > ```yaml
-           * > wind_speed: 17.7
+           * > wind_speed: 16.7
            * > ```
            */ wind_speed: number;
           wind_speed_unit: "km/h";
