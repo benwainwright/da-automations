@@ -14,6 +14,7 @@ export function NotificationService({ hass, bens_flat: { lights }, logger }: TSe
       await hass.call.openai_tts.say({
         message,
         tts_entity: "tts.openai_tts_gpt_40",
+        volume: 0.5,
         entity_id: "media_player.flat",
       });
     } catch {
