@@ -54,7 +54,6 @@ export interface GoingHomeRecorderSample {
   cameFromGym: number;
   movingTowardHome: number;
   accelerationMetersPerSecondSquared: number;
-  etaToHomeSeconds: number;
   isWeekend: number;
   hourOfDaySin: number;
   hourOfDayCos: number;
@@ -211,11 +210,6 @@ export class GoingHomeRecorderTrainer {
     const movingTowardHome = Number((delta10m ?? 0) < 0);
     const accelerationMetersPerSecondSquared =
       speed30s !== null && speed2m !== null ? (speed30s - speed2m) / 90 : 0;
-    const etaToHomeSeconds =
-      distanceFromHome > 0 && speedInMetersPerSecond > 0 && movingTowardHome
-        ? distanceFromHome / speedInMetersPerSecond
-        : 0;
-
     const hour = now.getHours();
     const day = now.getDay();
     const isWeekend = Number(day === 0 || day === 6);
@@ -243,7 +237,6 @@ export class GoingHomeRecorderTrainer {
       cameFromGym,
       movingTowardHome,
       accelerationMetersPerSecondSquared,
-      etaToHomeSeconds,
       isWeekend,
       hourOfDaySin,
       hourOfDayCos,
