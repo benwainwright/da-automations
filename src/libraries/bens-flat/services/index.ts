@@ -11,5 +11,4 @@ export { SleepModeService } from "./sleep-mode-service.ts";
 export { TVModeService } from "./tv-mode-service.ts";
 export { BlindsService } from "./blinds-service.ts";
 export { SceneService } from "./scene-service.ts";
-export { GoingHomeService } from "./going-home-service.ts";
-export { GoingHomeRecorderService } from "./going-home-recorder-service.ts";
+export { GoingHomeRecorderService } from "./going-home-recorder-service/going-home-recorder-service.ts";

@@ -6,7 +6,6 @@ import {
   BlindsService,
   CoreModule,
   GoingHomeRecorderService,
-  GoingHomeService,
   HelpersService,
   LightsService,
   MotionService,
@@ -19,9 +18,10 @@ import {
   PlantsService,
   SceneService,
 } from "./services/index.ts";
+import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 
 export const LIB_BENS_FLAT = CreateLibrary({
-  depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION],
+  depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION, LIB_LEARNING_SENSORS],
   name: "bens_flat",
   priorityInit: [
     "notify",
@@ -33,7 +33,6 @@ export const LIB_BENS_FLAT = CreateLibrary({
     "lights",
     "sleepMode",
     "tvMode",
-    "goingHome",
     "goingHomeRecorder",
   ],
   configuration: {},
@@ -48,7 +47,6 @@ export const LIB_BENS_FLAT = CreateLibrary({
     presence: PresenceDetectionService,
     lights: LightsService,
     sleepMode: SleepModeService,
-    goingHome: GoingHomeService,
     goingHomeRecorder: GoingHomeRecorderService,
     notify: NotificationService,
     core: CoreModule,

@@ -1782,6 +1782,251 @@ declare module "@digital-alchemy/hass" {
         }>,
       ) => Promise<void>;
     };
+    // # MARK: calendar
+    calendar: {
+      /**
+       * ### create_event
+       *
+       * >
+       */
+      create_event: (
+        service_data?: {
+          /**
+           * ## description
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "description": "Meeting to provide technical review for 'Phoenix' design."
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          description?: string;
+          /**
+           * ## end_date
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "end_date": "2022-03-23"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > date: {}
+           * > ```
+           */
+          end_date?: string;
+          /**
+           * ## end_date_time
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "end_date_time": "2022-03-22 22:00:00"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > datetime: {}
+           * > ```
+           */
+          end_date_time?: string;
+          /**
+           * ## in
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "in": "{\"days\": 2} or {\"weeks\": 2}"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * >
+           * > ```
+           */
+          in?: unknown;
+          /**
+           * ## location
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "location": "Conference Room - F123, Bldg. 002"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          location?: string;
+          /**
+           * ## start_date
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "start_date": "2022-03-22"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > date: {}
+           * > ```
+           */
+          start_date?: string;
+          /**
+           * ## start_date_time
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "start_date_time": "2022-03-22 20:00:00"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > datetime: {}
+           * > ```
+           */
+          start_date_time?: string;
+          /**
+           * ## summary
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "summary": "Department Party"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          summary: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - calendar
+           * >     supported_features:
+           * >       - 1
+           * > ```
+           */
+          entity_id: PICK_ENTITY<"calendar"> | PICK_ENTITY<"calendar">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### get_events
+       *
+       * >
+       */
+      get_events: <T = unknown>(
+        service_data?: {
+          /**
+           * ## duration
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > duration: {}
+           * > ```
+           */
+          duration?: string;
+          /**
+           * ## end_date_time
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "end_date_time": "2022-03-22 22:00:00"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > datetime: {}
+           * > ```
+           */
+          end_date_time?: string;
+          /**
+           * ## start_date_time
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "start_date_time": "2022-03-22 20:00:00"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > datetime: {}
+           * > ```
+           */
+          start_date_time?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - calendar
+           * > ```
+           */
+          entity_id: PICK_ENTITY<"calendar"> | PICK_ENTITY<"calendar">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<T>;
+    };
     // # MARK: camera
     camera: {
       /**
@@ -3678,6 +3923,193 @@ declare module "@digital-alchemy/hass" {
        */
       reload: (service_data: EmptyObject) => Promise<void>;
     };
+    // # MARK: google
+    google: {
+      /**
+       * ### create_event
+       *
+       * >
+       */
+      create_event: (
+        service_data?: {
+          /**
+           * ## description
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "description": "Birthday bowling"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          description?: string;
+          /**
+           * ## end_date
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "end_date": "2022-03-11"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          end_date?: string;
+          /**
+           * ## end_date_time
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "end_date_time": "2022-03-22 22:00:00"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          end_date_time?: string;
+          /**
+           * ## in
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "in": "\"days\": 2 or \"weeks\": 2"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > object:
+           * >   multiple: false
+           * > ```
+           */
+          in?: Record<string, unknown> | unknown[];
+          /**
+           * ## location
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "location": "Conference Room - F123, Bldg. 002"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          location?: string;
+          /**
+           * ## start_date
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "start_date": "2022-03-10"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          start_date?: string;
+          /**
+           * ## start_date_time
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "start_date_time": "2022-03-22 20:00:00"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          start_date_time?: string;
+          /**
+           * ## summary
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "summary": "Bowling"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          summary: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - integration: google
+           * >     domain:
+           * >       - calendar
+           * > ```
+           */
+          entity_id:
+            | PICK_FROM_PLATFORM<"google", "calendar">
+            | PICK_FROM_PLATFORM<"google", "calendar">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
     // # MARK: group
     group: {
       /**
@@ -4570,7 +5002,8 @@ declare module "@digital-alchemy/hass" {
           | "01KH1SH05457MYPF8BZMY7MFDJ"
           | "01KHNBWD0MWEFFNEY8K217WMHV"
           | "01KHPJGT8R803RDRPBFA88EDSD"
-          | "01KHPR32WETT9ZK6JJ42TE5E4R";
+          | "01KHPR32WETT9ZK6JJ42TE5E4R"
+          | "01KHS1NC5XFR2Y6Z0HZN9R2Q45";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -7143,7 +7576,8 @@ declare module "@digital-alchemy/hass" {
           | "01KH1SH05457MYPF8BZMY7MFDJ"
           | "01KHNBWD0MWEFFNEY8K217WMHV"
           | "01KHPJGT8R803RDRPBFA88EDSD"
-          | "01KHPR32WETT9ZK6JJ42TE5E4R";
+          | "01KHPR32WETT9ZK6JJ42TE5E4R"
+          | "01KHS1NC5XFR2Y6Z0HZN9R2Q45";
         /**
          * ## favorite
          *
@@ -7650,7 +8084,8 @@ declare module "@digital-alchemy/hass" {
           | "01KH1SH05457MYPF8BZMY7MFDJ"
           | "01KHNBWD0MWEFFNEY8K217WMHV"
           | "01KHPJGT8R803RDRPBFA88EDSD"
-          | "01KHPR32WETT9ZK6JJ42TE5E4R";
+          | "01KHPR32WETT9ZK6JJ42TE5E4R"
+          | "01KHS1NC5XFR2Y6Z0HZN9R2Q45";
         /**
          * ## library_only
          *
@@ -8304,7 +8739,8 @@ declare module "@digital-alchemy/hass" {
           | "01KH1SH05457MYPF8BZMY7MFDJ"
           | "01KHNBWD0MWEFFNEY8K217WMHV"
           | "01KHPJGT8R803RDRPBFA88EDSD"
-          | "01KHPR32WETT9ZK6JJ42TE5E4R";
+          | "01KHPR32WETT9ZK6JJ42TE5E4R"
+          | "01KHS1NC5XFR2Y6Z0HZN9R2Q45";
         /**
          * ## filenames
          *
@@ -8415,7 +8851,8 @@ declare module "@digital-alchemy/hass" {
           | "01KH1SH05457MYPF8BZMY7MFDJ"
           | "01KHNBWD0MWEFFNEY8K217WMHV"
           | "01KHPJGT8R803RDRPBFA88EDSD"
-          | "01KHPR32WETT9ZK6JJ42TE5E4R";
+          | "01KHPR32WETT9ZK6JJ42TE5E4R"
+          | "01KHS1NC5XFR2Y6Z0HZN9R2Q45";
         /**
          * ## prompt
          *
