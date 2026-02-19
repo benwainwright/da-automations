@@ -11,6 +11,10 @@
 - Tests and harness files are in `src/tests/` and `src/test-helpers/`.
 - Operational scripts live in `scripts/` (`deploy.sh`, `rollback.sh`, `update_deps.sh`, etc.).
 
+## Session Start
+
+- At the start of each session, run `WATCH_MODE=true bun run type-writer` in the backgound to ensure that all Home Assistant types are up to date if they ae changed in hass
+
 ## Build, Test, and Development Commands
 
 - This repository uses **Bun** as the primary package manager/runtime. Prefer `bun run <script>` over `yarn <script>`.
@@ -32,22 +36,20 @@
 
 ## Testing Guidelines
 
-- Framework: Vitest (`vitest.config.ts`), with global setup in `src/test-helpers/test-setup.ts`.
+- Framework: bun test with test config in `bunfig.toml`
 - Test files use `*.test.ts` naming (example: `src/tests/lights.test.ts`).
 - Add or update tests for behavior changes in automation services and edge-case state transitions.
-- Run `npx vitest run` and `bun run typecheck` before opening a PR.
 
-## Commit & Pull Request Guidelines
+## Quality Checks
+
+- Run `bun run test`, `bun run typecheck` and `bun run lint` after each change and fix any issues
+
+## Commit guidelines
 
 - Follow existing commit style: short, imperative, lowercase summaries (example: `fix presence bug`, `add calendar integration`).
 - Keep commits scoped to one logical change.
-- PRs should include:
-  - concise description of behavior changes,
-  - linked issue/task (if available),
-  - test evidence (`npx vitest run`, `bun run typecheck`, `bun run lint`),
-  - relevant logs or screenshots for Home Assistant-visible changes.
+- This repo does not use PRs. Changes are validated using commit hooks and then deployed on push
 
 ## Security & Configuration Tips
 
 - Keep secrets in `.env`; never commit credentials or tokens.
-- Review shell scripts in `scripts/` before running in production-like HAOS environments.

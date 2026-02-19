@@ -40,7 +40,8 @@ export const getTodoListString = async (hass: TServiceParams["hass"]) => {
       return dayjs(item.due).isSame(today, "day") || dayjs(item.due).isBefore(today);
     });
 
-  const countString = `You have ${items.length} items in your todo list: `;
+  const itemWord = items.length === 1 ? "item" : "items";
+  const countString = `You have ${items.length} ${itemWord} in your todo list: `;
 
   const itemsString = items.map((item) => item.summary).join(", ");
 
