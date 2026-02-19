@@ -38,7 +38,7 @@ test("returns zero-events message when no events are scheduled", async () => {
     call: { calendar: { get_events } },
   } as any);
 
-  expect(result).toBe("theer is no events in your calendar");
+  expect(result).toBe("there is no events in your calendar");
 });
 
 test("uses singular event wording when exactly one event exists", async () => {

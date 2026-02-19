@@ -28,7 +28,7 @@ export const getCalendarString = async (hass: TServiceParams["hass"]) => {
   const events = response["calendar.personal_calendar"].events;
 
   if (events.length === 0) {
-    return "theer is no events in your calendar";
+    return "there is no events in your calendar";
   }
 
   const readString = events
