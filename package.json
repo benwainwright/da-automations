@@ -10,6 +10,7 @@
     "typecheck": "tsgo --skipLibCheck --noEmit",
     "watch": "nodemon --exec tsx src/main.ts",
     "dev": "bun run src/main.ts",
+    "test": "bun test",
     "mock-assistant": "bun run --bun @digital-alchemy/hass/src/mock_assistant/main.mts",
     "format": "oxfmt src/",
     "lint": "oxlint src/",

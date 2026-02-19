@@ -20,7 +20,7 @@
 - `bun run lint`: lint `src/` with Oxlint.
 - `bun run format`: format `src/` with Oxfmt.
 - `bun run typecheck`: run TypeScript checks via `tsgo --noEmit`.
-- `npx vitest run`: execute test suite.
+- `bun test`: execute test suite.
 - `bun run type-writer`: regenerate `src/hass` types from Home Assistant.
 
 ## Coding Style & Naming Conventions
