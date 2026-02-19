@@ -1,5 +1,5 @@
 import { TServiceParams } from "@digital-alchemy/core";
-import { NotifyConfig } from "./notification.ts";
+import { NotifyConfig } from "../notification/notification.ts";
 
 export function NagService({ bens_flat: { notify }, scheduler }: TServiceParams) {
   const nags: {

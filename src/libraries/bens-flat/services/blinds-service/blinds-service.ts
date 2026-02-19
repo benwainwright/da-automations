@@ -1,5 +1,5 @@
 import { TServiceParams } from "@digital-alchemy/core";
-import { FIVE_AM } from "./constants.ts";
+import { FIVE_AM } from "../constants.ts";
 
 export function BlindsService({
   synapse,

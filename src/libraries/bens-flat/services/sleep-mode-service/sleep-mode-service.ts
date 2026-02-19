@@ -1,6 +1,6 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 import type { PICK_ENTITY } from "@digital-alchemy/hass";
-import { FIVE_AM } from "./constants.ts";
+import { FIVE_AM } from "../constants.ts";
 
 export function SleepModeService({
   hass,

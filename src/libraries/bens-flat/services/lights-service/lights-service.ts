@@ -1,6 +1,6 @@
 import type { TServiceParams, TOffset } from "@digital-alchemy/core";
 import type { PICK_ENTITY, RemoveCallback, TAreaId } from "@digital-alchemy/hass";
-import { toSynapseUniqueId } from "./unique-id.ts";
+import { toSynapseUniqueId } from "../unique-id.ts";
 
 interface IMotionSwitchConfig {
   /**
