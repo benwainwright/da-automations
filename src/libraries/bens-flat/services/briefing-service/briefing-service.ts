@@ -29,6 +29,9 @@ export function BriefingService({
     ];
 
     await notify.speak(briefingStringParts.join(" "));
+    await hass.call.media_player.media_pause({
+      entity_id: "media_player.whole_flat",
+    });
     await music.play({
       player: "media_player.whole_flat",
       id: "library://podcast/3",
