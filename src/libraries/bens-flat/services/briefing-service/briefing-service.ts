@@ -26,11 +26,6 @@ export function BriefingService({
       formatWeatherForSpeech(hass, "weather.home"),
       await getCalendarString(hass),
       await getTodoListString(hass),
-      await music.play({
-        player: "media_player.whole_flat",
-        id: "library://podcast/3",
-        type: "music",
-      }),
     ];
 
     await notify.speak(briefingStringParts.join(" "));
@@ -38,6 +33,11 @@ export function BriefingService({
 
   triggerBriefing.onPress(async () => {
     await readBriefing();
+    await music.play({
+      player: "media_player.whole_flat",
+      id: "library://podcast/3",
+      type: "music",
+    });
   });
 
   return { read: readBriefing };
