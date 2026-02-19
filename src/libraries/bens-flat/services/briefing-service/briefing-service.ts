@@ -8,7 +8,7 @@ export function BriefingService({
   hass,
   synapse,
   context,
-  bens_flat: { notify },
+  bens_flat: { notify, music },
   logger,
 }: TServiceParams) {
   const triggerBriefing = synapse.button({
@@ -26,6 +26,11 @@ export function BriefingService({
       formatWeatherForSpeech(hass, "weather.home"),
       await getCalendarString(hass),
       await getTodoListString(hass),
+      await music.play({
+        player: "media_player.whole_flat",
+        id: "library://podcast/3",
+        type: "music",
+      }),
     ];
 
     await notify.speak(briefingStringParts.join(" "));

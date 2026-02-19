@@ -15,12 +15,12 @@ export function NotificationService({ hass, bens_flat: { lights }, logger }: TSe
         message,
         tts_entity: "tts.openai_tts_gpt_40",
         volume: 0.5,
-        entity_id: "media_player.flat",
+        entity_id: "media_player.whole_flat",
       });
     } catch {
       await hass.call.tts.speak({
         message,
-        media_player_entity_id: "media_player.flat",
+        media_player_entity_id: "media_player.whole_flat",
         cache: true,
         entity_id: "tts.home_assistant_cloud",
       });

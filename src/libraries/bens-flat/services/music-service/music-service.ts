@@ -63,19 +63,19 @@ export function MusicService({
       await play({
         id: first.uri,
         type: first.media_type,
-        player: "media_player.flat",
+        player: "media_player.whole_flat",
         volume: 0.2,
       });
     }
   };
 
   const pause = async () => {
-    await hass.refBy.id("media_player.flat").media_pause();
+    await hass.refBy.id("media_player.whole_flat").media_pause();
   };
 
   motion.anywhere(async () => {
     logger.trace(`Motion detected in flat`);
-    const wholeFlatPlayer = hass.refBy.id("media_player.flat");
+    const wholeFlatPlayer = hass.refBy.id("media_player.whole_flat");
 
     if (
       !tvMode.isOn() &&
@@ -97,5 +97,5 @@ export function MusicService({
     });
   });
 
-  return { pause };
+  return { pause, play };
 }
