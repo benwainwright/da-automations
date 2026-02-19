@@ -40,9 +40,10 @@
 - Test files use `*.test.ts` naming (example: `src/tests/lights.test.ts`).
 - Add or update tests for behavior changes in automation services and edge-case state transitions.
 
-## Quality Checks
+## Contribution Guidelines
 
 - Run `bun run test`, `bun run typecheck` and `bun run lint` after each change and fix any issues
+- Once all checks pass, commit changes immediately
 
 ## Commit guidelines
 
