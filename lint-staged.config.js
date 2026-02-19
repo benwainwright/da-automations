@@ -3,7 +3,7 @@
  * @type {import('lint-staged').Configuration}
  */
 const config = {
-  "*.{ts,mts,js,mjs}": ["oxfmt", "oxlint"],
+  "*.{ts,mts,js,mjs}": ["oxfmt", "oxlint", "cspell"],
 };
 
 export default config;

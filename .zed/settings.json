@@ -32,7 +32,7 @@
       "prettier": {
         "allowed": false
       },
-      "language_servers": ["vtsls", "oxfmt", "oxllint", "!eslint"],
+      "language_servers": ["vtsls", "oxfmt", "oxlint", "!eslint", "cspell"],
       "formatter": [
         {
           "language_server": {
@@ -49,6 +49,7 @@
       "prettier": {
         "allowed": false
       },
+      "language_servers": ["vtsls", "oxfmt", "oxlint", "!eslint", "cspell"],
       "formatter": [
         {
           "language_server": {
@@ -62,7 +63,7 @@
       "prettier": {
         "allowed": false
       },
-      "language_servers": ["vtsls", "oxfmt", "oxlint", "!eslint"],
+      "language_servers": ["vtsls", "oxfmt", "oxlint", "!eslint", "cspell"],
       "formatter": [
         {
           "language_server": {
@@ -89,7 +90,7 @@
       "prettier": {
         "allowed": false
       },
-      "language_servers": ["vtsls", "oxfmt", "oxlint", "!eslint"],
+      "language_servers": ["vtsls", "oxfmt", "oxlint", "!eslint", "cspell"],
       "formatter": [
         {
           "language_server": {

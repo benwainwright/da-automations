@@ -8,7 +8,7 @@ interface IMotionSwitchConfig {
    */
   switchName: string;
   /**
-   * Lights in this area are controllled by the motion sensor
+   * Lights in this area are controlled by the motion sensor
    */
   area: TAreaId;
 

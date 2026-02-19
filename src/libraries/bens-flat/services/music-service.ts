@@ -53,6 +53,7 @@ export function MusicService({
     const result = await hass.call.music_assistant.get_library<{ items: LibraryItem[] }>({
       favorite: true,
       media_type: "playlist",
+      /* cspell:disable-next-line */
       config_entry_id: "01KGQT8ZJWTVX9DXC1KEFG8FG8",
       order_by: "random_play_count",
     });

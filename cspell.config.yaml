@@ -1,8 +1,18 @@
 version: "0.2"
-ignorePaths: []
+ignorePaths: ["src/hass/**/*", "build/**/*", "scripts/**/*", "fixtures.json"]
 dictionaryDefinitions: []
-dictionaries: []
+dictionaries: ["en-gb"]
+language: en
+locale: en-GB
 words:
   - hass
+  - tsgo
+  - bunfig.toml
+  - benwainwright
+  - HAOS
+  - oxlint
+  - lolcatjs
+  - vtsls
+  - oxfmt
 ignoreWords: []
 import: []

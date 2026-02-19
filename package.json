@@ -17,6 +17,7 @@
     "rollback": "./scripts/rollback.sh",
     "type-writer": "type-writer",
     "upgrade": "./scripts/update_deps.sh",
+    "spell": "cspell .",
     "prepare": "husky"
   },
   "dependencies": {

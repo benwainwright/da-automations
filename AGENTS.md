@@ -13,7 +13,7 @@
 
 ## Session Start
 
-- At the start of each session, run `WATCH_MODE=true bun run type-writer` in the backgound to ensure that all Home Assistant types are up to date if they ae changed in hass
+- At the start of each session, run `WATCH_MODE=true bun run type-writer` in the background to ensure that all Home Assistant types are up to date if they ae changed in hass
 
 ## Build, Test, and Development Commands
 
@@ -21,6 +21,7 @@
 - `bun run dev`: run the app (`src/main.ts`).
 - `bun run watch`: run with `nodemon` + `tsx` for auto-reload.
 - `bun run build`: run deployment build script (`./scripts/deploy.sh`).
+- `bun run spell`: check spelling
 - `bun run lint`: lint `src/` with Oxlint.
 - `bun run format`: format `src/` with Oxfmt.
 - `bun run typecheck`: run TypeScript checks via `tsgo --noEmit`.
@@ -39,6 +40,13 @@
 - Framework: bun test with test config in `bunfig.toml`
 - Test files use `*.test.ts` naming (example: `src/tests/lights.test.ts`).
 - Add or update tests for behavior changes in automation services and edge-case state transitions.
+
+## Spell Checking
+
+`cspell` is used to avoid typos. If a cspell failure genuinely needs to be ignored, you can
+
+- Add to the 'words' list in `cspell.config.yaml`
+- Add `/* cspell:disable-next-line */`
 
 ## Contribution Guidelines
 
