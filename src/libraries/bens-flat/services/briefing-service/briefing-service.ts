@@ -29,15 +29,15 @@ export function BriefingService({
     ];
 
     await notify.speak(briefingStringParts.join(" "));
-  };
-
-  triggerBriefing.onPress(async () => {
-    await readBriefing();
     await music.play({
       player: "media_player.whole_flat",
       id: "library://podcast/3",
       type: "music",
     });
+  };
+
+  triggerBriefing.onPress(async () => {
+    await readBriefing();
   });
 
   return { read: readBriefing };
