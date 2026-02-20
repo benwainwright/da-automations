@@ -18,6 +18,7 @@ import {
   PlantsService,
   SceneService,
   BriefingService,
+  VisitorModeService,
 } from "./services/index.ts";
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 
@@ -41,6 +42,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
   services: {
     nags: NagService,
     music: MusicService,
+    visitor: VisitorModeService,
     scheduler: Scheduler,
     motion: MotionService,
     blinds: BlindsService,

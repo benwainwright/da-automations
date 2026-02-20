@@ -6,7 +6,7 @@ export function SleepModeService({
   hass,
   context,
   synapse,
-  bens_flat: { helpers, lights, motion, briefing },
+  bens_flat: { helpers, lights, motion, briefing, visitor },
   logger,
   automation: { time },
 }: TServiceParams) {
@@ -53,7 +53,8 @@ export function SleepModeService({
 
   const morningTrigger = async () => {
     const sleepModeEntity = sleepMode.entity_id;
-    if (time.isAfter(FIVE_AM) && sleepModeEntity) {
+    const visitorModeEntity = visitor.visitorMode.getEntity();
+    if (time.isAfter(FIVE_AM) && sleepModeEntity && visitorModeEntity.state !== "on") {
       await hass.call.switch.turn_off({ entity_id: sleepModeEntity });
       await readBriefing();
     }

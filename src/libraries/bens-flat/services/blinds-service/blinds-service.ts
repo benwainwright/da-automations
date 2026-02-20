@@ -10,6 +10,7 @@ export function BlindsService({
   bens_flat,
 }: TServiceParams) {
   const { motion } = bens_flat;
+
   const blindsDefaultClosed = synapse.switch({
     name: "Blinds default closed",
     unique_id: "blinds_default_closed_switch",
