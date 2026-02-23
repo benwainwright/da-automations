@@ -4,6 +4,7 @@ import { IMusicPlayer, MusicPlayer } from "./music-player.ts";
 export function MusicService({
   hass,
   bens_flat,
+  scheduler,
   synapse,
   context,
   logger,
@@ -23,8 +24,11 @@ export function MusicService({
 
   const player = new MusicPlayer({
     hass,
+    scheduler,
+    mediaPlayer: "media_player.whole_flat",
     playerOnSwitch: switchEntity,
     blockIfOn: [sleepMode.sleepModeSwitch.entity_id, tvMode.tvModeSwitch.entity_id],
+    pauseAutoplayFor: [15, "minute"],
     logger,
   });
 

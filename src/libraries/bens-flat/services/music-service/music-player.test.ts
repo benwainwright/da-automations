@@ -2,11 +2,17 @@ import { beforeEach, expect, mock, test } from "bun:test";
 import type { PICK_ENTITY } from "@digital-alchemy/hass";
 import { MusicPlayer } from "./music-player.ts";
 
+type PlayerUpdateCallback = (
+  newState?: { state: string },
+  oldState?: { state: string },
+) => Promise<void> | void;
+
 type EntityState = {
   state: string;
   play_media?: (config: unknown) => Promise<void>;
   volume_set?: (config: unknown) => Promise<void>;
   media_pause?: () => Promise<void>;
+  onUpdate?: (callback: PlayerUpdateCallback) => void;
 };
 
 const makeHarness = (config?: {
@@ -19,9 +25,15 @@ const makeHarness = (config?: {
   const playMedia = mock(async (_config: unknown) => {});
   const volumeSet = mock(async (_config: unknown) => {});
   const mediaPause = mock(async () => {});
+  const removeTimeout = mock(() => {});
+  const setTimeout = mock((callback: () => void | Promise<void>, _offset: unknown) => ({
+    callback,
+    remove: removeTimeout,
+  }));
   const getLibrary = mock(async () => ({
     items: config?.libraryItems ?? [{ uri: "playlist://morning", media_type: "playlist" }],
   }));
+  let playerUpdateCallback: PlayerUpdateCallback | undefined;
 
   const entities = new Map<string, EntityState>([
     [
@@ -31,6 +43,9 @@ const makeHarness = (config?: {
         play_media: playMedia,
         volume_set: volumeSet,
         media_pause: mediaPause,
+        onUpdate: (callback) => {
+          playerUpdateCallback = callback;
+        },
       },
     ],
     ["switch.autoplay_music", { state: config?.autoplayState ?? "on" }],
@@ -57,12 +72,25 @@ const makeHarness = (config?: {
 
   const player = new MusicPlayer({
     hass: hass as any,
+    scheduler: { setTimeout } as any,
     logger: { info: mock(() => {}), trace: mock(() => {}) } as any,
+    mediaPlayer: "media_player.whole_flat" as PICK_ENTITY<"media_player">,
     playerOnSwitch: "switch.autoplay_music" as PICK_ENTITY<"switch">,
     blockIfOn: ["switch.sleep_mode", "switch.tv_mode"] as PICK_ENTITY<"switch">[],
+    pauseAutoplayFor: [5, "minute"],
   });
 
-  return { player, getLibrary, playMedia, volumeSet, mediaPause };
+  return {
+    player,
+    getLibrary,
+    playMedia,
+    volumeSet,
+    mediaPause,
+    setTimeout,
+    emitPlayerUpdate: async (newState: string, oldState: string) => {
+      await playerUpdateCallback?.({ state: newState }, { state: oldState });
+    },
+  };
 };
 
 beforeEach(() => {
@@ -107,6 +135,36 @@ test("onMotionInFlat does not play when a blocking switch is on", async () => {
 
   expect(harness.getLibrary).not.toHaveBeenCalled();
   expect(harness.playMedia).not.toHaveBeenCalled();
+});
+
+test("playing->idle event disables autoplay until configured interval ends", async () => {
+  const harness = makeHarness();
+
+  await harness.emitPlayerUpdate("idle", "playing");
+  await harness.player.onMotionInFlat();
+  expect(harness.playMedia).not.toHaveBeenCalled();
+  expect(harness.setTimeout.mock.calls.at(-1)?.[1]).toEqual([5, "minute"]);
+
+  const timeoutCallback = harness.setTimeout.mock.calls.at(-1)?.[0] as (() => void) | undefined;
+  expect(timeoutCallback).toBeDefined();
+  timeoutCallback?.();
+
+  await harness.player.onMotionInFlat();
+  expect(harness.playMedia).toHaveBeenCalledTimes(1);
+});
+
+test("repeated playing->idle events restart the autoplay disable interval", async () => {
+  const harness = makeHarness();
+
+  await harness.emitPlayerUpdate("idle", "playing");
+  await harness.emitPlayerUpdate("idle", "playing");
+
+  expect(harness.setTimeout).toHaveBeenCalledTimes(2);
+  const firstTimer = harness.setTimeout.mock.results[0]?.value as
+    | { remove: () => void }
+    | undefined;
+  const firstRemove = firstTimer?.remove;
+  expect(firstRemove).toHaveBeenCalledTimes(1);
 });
 
 test("pause() pauses the whole-flat media player", async () => {

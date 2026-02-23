@@ -1,4 +1,4 @@
-import { TServiceParams } from "@digital-alchemy/core";
+import { type TOffset, TServiceParams } from "@digital-alchemy/core";
 import { PICK_ENTITY } from "@digital-alchemy/hass";
 
 interface LibraryItem {
@@ -10,9 +10,12 @@ interface LibraryItem {
 }
 
 interface AutomaticMusicPlayerConfig {
+  mediaPlayer: PICK_ENTITY<"media_player">;
   playerOnSwitch: PICK_ENTITY<"switch">;
   blockIfOn: PICK_ENTITY<"switch">[];
+  pauseAutoplayFor: TOffset;
   hass: TServiceParams["hass"];
+  scheduler: TServiceParams["scheduler"];
   logger: TServiceParams["logger"];
 }
 
@@ -30,14 +33,24 @@ export interface IMusicPlayer {
 }
 
 export class MusicPlayer implements IMusicPlayer {
-  public constructor(private readonly config: AutomaticMusicPlayerConfig) {}
+  private autoplayPaused = false;
+
+  private pauseAutoplayTimeout?: { remove: () => void };
+
+  public constructor(private readonly config: AutomaticMusicPlayerConfig) {
+    this.setupPauseEventLockout();
+  }
 
   public async onMotionInFlat() {
     this.config.logger.trace(`Motion detected in flat`);
-    const wholeFlatPlayer = this.config.hass.refBy.id("media_player.whole_flat");
+    const wholeFlatPlayer = this.config.hass.refBy.id(this.config.mediaPlayer);
     const autoplaySwitch = this.config.hass.refBy.id(this.config.playerOnSwitch);
 
-    if (wholeFlatPlayer.state === "playing" || autoplaySwitch.state !== "on") {
+    if (
+      wholeFlatPlayer.state === "playing" ||
+      autoplaySwitch.state !== "on" ||
+      this.autoplayPaused
+    ) {
       return;
     }
 
@@ -89,13 +102,32 @@ export class MusicPlayer implements IMusicPlayer {
       await this.play({
         id: first.uri,
         type: first.media_type,
-        player: "media_player.whole_flat",
+        player: this.config.mediaPlayer,
         volume: 0.3,
       });
     }
   }
 
   public async pause() {
-    await this.config.hass.refBy.id("media_player.whole_flat").media_pause();
+    await this.config.hass.refBy.id(this.config.mediaPlayer).media_pause();
+  }
+
+  private setupPauseEventLockout() {
+    const player = this.config.hass.refBy.id(this.config.mediaPlayer);
+
+    player.onUpdate((newState, oldState) => {
+      if (!newState || !oldState) {
+        return;
+      }
+      if (!(oldState.state === "playing" && newState.state === "idle")) {
+        return;
+      }
+
+      this.autoplayPaused = true;
+      this.pauseAutoplayTimeout?.remove();
+      this.pauseAutoplayTimeout = this.config.scheduler.setTimeout(() => {
+        this.autoplayPaused = false;
+      }, this.config.pauseAutoplayFor);
+    });
   }
 }
