@@ -42,7 +42,9 @@ export function NotificationService({
           accept();
         } else {
           logger.info(`Waiting for playing`);
-          await player.waitForState("playing");
+          if (player.state !== "playing") {
+            await player.waitForState("playing");
+          }
           logger.info(`Playing found`);
           const listener = player.onUpdate((newState) => {
             logger.info(`Next state`);
