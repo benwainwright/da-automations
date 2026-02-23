@@ -9,8 +9,6 @@ type PlayerUpdateCallback = (
 
 type EntityState = {
   state: string;
-  play_media?: (config: unknown) => Promise<void>;
-  volume_set?: (config: unknown) => Promise<void>;
   media_pause?: () => Promise<void>;
   onUpdate?: (callback: PlayerUpdateCallback) => void;
 };
@@ -22,8 +20,7 @@ const makeHarness = (config?: {
   tvModeState?: "on" | "off";
   libraryItems?: Array<{ uri: string; media_type: string }>;
 }) => {
-  const playMedia = mock(async (_config: unknown) => {});
-  const volumeSet = mock(async (_config: unknown) => {});
+  const controllerPlay = mock(async (_config: unknown) => {});
   const mediaPause = mock(async () => {});
   const shuffleSet = mock(async (_config: unknown) => {});
   const removeTimeout = mock(() => {});
@@ -41,8 +38,6 @@ const makeHarness = (config?: {
       "media_player.whole_flat",
       {
         state: config?.wholeFlatState ?? "idle",
-        play_media: playMedia,
-        volume_set: volumeSet,
         media_pause: mediaPause,
         onUpdate: (callback) => {
           playerUpdateCallback = callback;
@@ -78,6 +73,7 @@ const makeHarness = (config?: {
     hass: hass as any,
     scheduler: { setTimeout } as any,
     logger: { info: mock(() => {}), trace: mock(() => {}) } as any,
+    controller: { play: controllerPlay } as any,
     mediaPlayer: "media_player.whole_flat" as PICK_ENTITY<"media_player">,
     playerOnSwitch: "switch.autoplay_music" as PICK_ENTITY<"switch">,
     blockIfOn: ["switch.sleep_mode", "switch.tv_mode"] as PICK_ENTITY<"switch">[],
@@ -87,8 +83,7 @@ const makeHarness = (config?: {
   return {
     player,
     getLibrary,
-    playMedia,
-    volumeSet,
+    controllerPlay,
     shuffleSet,
     mediaPause,
     setTimeout,
@@ -112,10 +107,11 @@ test("onMotionInFlat plays a random playlist when autoplay is on and unblocked",
     shuffle: true,
     entity_id: "media_player.whole_flat",
   });
-  expect(harness.volumeSet).toHaveBeenCalledWith({ volume_level: 0.3 });
-  expect(harness.playMedia).toHaveBeenCalledWith({
-    media_content_id: "playlist://morning",
-    media_content_type: "playlist",
+  expect(harness.controllerPlay).toHaveBeenCalledWith({
+    id: "playlist://morning",
+    type: "playlist",
+    player: "media_player.whole_flat",
+    volume: 0.3,
   });
 });
 
@@ -125,7 +121,7 @@ test("onMotionInFlat does not play while whole-flat player is already playing", 
   await harness.player.onMotionInFlat();
 
   expect(harness.getLibrary).not.toHaveBeenCalled();
-  expect(harness.playMedia).not.toHaveBeenCalled();
+  expect(harness.controllerPlay).not.toHaveBeenCalled();
 });
 
 test("onMotionInFlat does not play when autoplay switch is off", async () => {
@@ -134,7 +130,7 @@ test("onMotionInFlat does not play when autoplay switch is off", async () => {
   await harness.player.onMotionInFlat();
 
   expect(harness.getLibrary).not.toHaveBeenCalled();
-  expect(harness.playMedia).not.toHaveBeenCalled();
+  expect(harness.controllerPlay).not.toHaveBeenCalled();
 });
 
 test("onMotionInFlat does not play when a blocking switch is on", async () => {
@@ -143,7 +139,7 @@ test("onMotionInFlat does not play when a blocking switch is on", async () => {
   await harness.player.onMotionInFlat();
 
   expect(harness.getLibrary).not.toHaveBeenCalled();
-  expect(harness.playMedia).not.toHaveBeenCalled();
+  expect(harness.controllerPlay).not.toHaveBeenCalled();
 });
 
 test("playing->idle event disables autoplay until configured interval ends", async () => {
@@ -151,7 +147,7 @@ test("playing->idle event disables autoplay until configured interval ends", asy
 
   await harness.emitPlayerUpdate("idle", "playing");
   await harness.player.onMotionInFlat();
-  expect(harness.playMedia).not.toHaveBeenCalled();
+  expect(harness.controllerPlay).not.toHaveBeenCalled();
   expect(harness.setTimeout.mock.calls.at(-1)?.[1]).toEqual([5, "minute"]);
 
   const timeoutCallback = harness.setTimeout.mock.calls.at(-1)?.[0] as (() => void) | undefined;
@@ -159,7 +155,7 @@ test("playing->idle event disables autoplay until configured interval ends", asy
   timeoutCallback?.();
 
   await harness.player.onMotionInFlat();
-  expect(harness.playMedia).toHaveBeenCalledTimes(1);
+  expect(harness.controllerPlay).toHaveBeenCalledTimes(1);
 });
 
 test("repeated playing->idle events restart the autoplay disable interval", async () => {
@@ -182,4 +178,13 @@ test("pause() pauses the whole-flat media player", async () => {
   await harness.player.pause();
 
   expect(harness.mediaPause).toHaveBeenCalledTimes(1);
+});
+
+test("onMotionInFlat does not play when no library playlist is returned", async () => {
+  const harness = makeHarness({ libraryItems: [] });
+
+  await harness.player.onMotionInFlat();
+
+  expect(harness.shuffleSet).toHaveBeenCalledTimes(1);
+  expect(harness.controllerPlay).not.toHaveBeenCalled();
 });

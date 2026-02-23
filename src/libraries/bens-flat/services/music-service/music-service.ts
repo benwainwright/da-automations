@@ -1,5 +1,5 @@
 import { TServiceParams } from "@digital-alchemy/core";
-import { IMusicPlayer, MusicPlayer } from "./music-player.ts";
+import { MusicPlayer } from "./music-player.ts";
 
 export function MusicService({
   hass,
@@ -10,7 +10,7 @@ export function MusicService({
   logger,
   lifecycle,
 }: TServiceParams) {
-  const { tvMode, motion } = bens_flat;
+  const { tvMode, motion, mediaPlayer } = bens_flat;
 
   synapse.switch({
     name: "Autoplay Music",
@@ -23,6 +23,7 @@ export function MusicService({
   const player = new MusicPlayer({
     hass,
     scheduler,
+    controller: mediaPlayer,
     mediaPlayer: "media_player.whole_flat",
     playerOnSwitch: "switch.autoplay_music",
     blockIfOn: ["switch.sleep_mode", "switch.tv_mode"],
@@ -32,8 +33,6 @@ export function MusicService({
 
   motion.anywhere(() => player.onMotionInFlat());
 
-  const exportPlayer: IMusicPlayer = player;
-
   lifecycle.onReady(() => {
     tvMode.tvModeSwitch.onUpdate(async (newState, oldState) => {
       if (!newState) return;
@@ -42,6 +41,4 @@ export function MusicService({
       }
     });
   });
-
-  return { player: exportPlayer };
 }

@@ -1,28 +1,77 @@
 import { TServiceParams } from "@digital-alchemy/core";
+import { PICK_ENTITY } from "@digital-alchemy/hass";
 
 export interface NotifyConfig {
   title: string;
   message: string;
 }
 
-export function NotificationService({ hass, bens_flat: { lights }, logger }: TServiceParams) {
+export function NotificationService({
+  hass,
+  bens_flat: { lights, mediaPlayer },
+  logger,
+}: TServiceParams) {
   const tv = hass.refBy.id("media_player.tv");
 
-  const speak = async (message: string) => {
+  interface ITtsSayConfig {
+    message: string;
+    announce: boolean;
+    source: PICK_ENTITY<"tts">;
+    player: PICK_ENTITY<"media_player">;
+    volume?: number;
+  }
+
+  const ttsSay = async (config: ITtsSayConfig) => {
+    const player = hass.refBy.id(config.player);
+    const originalVolume = player.attributes["volume_level"];
+    try {
+      if (config.volume) {
+        await hass.call.media_player.volume_set({
+          volume_level: config.volume,
+          entity_id: config.player,
+        });
+      }
+      await mediaPlayer.play({
+        id: `media-source://tts/${config.source}?message=${encodeURIComponent(config.message)}`,
+        type: "provider",
+        player: config.player,
+        announce: config.announce,
+      });
+    } finally {
+      if (config.volume) {
+        await hass.call.media_player.volume_set({
+          volume_level: originalVolume,
+          entity_id: config.player,
+        });
+      }
+    }
+  };
+
+  const speak = async ({
+    message,
+    announce = false,
+    volume,
+  }: {
+    message: string;
+    announce?: boolean;
+    volume?: number;
+  }) => {
     logger.info(`Speaking: ${message}`);
     try {
-      await hass.call.openai_tts.say({
+      await ttsSay({
+        volume,
+        source: "tts.openai_tts_gpt_40",
         message,
-        tts_entity: "tts.openai_tts_gpt_40",
-        volume: 0.5,
-        entity_id: "media_player.whole_flat",
+        announce,
+        player: "media_player.whole_flat",
       });
     } catch {
-      await hass.call.tts.speak({
+      await ttsSay({
+        source: "tts.home_assistant_cloud",
+        volume,
         message,
-        media_player_entity_id: "media_player.whole_flat",
-        cache: true,
-        entity_id: "tts.home_assistant_cloud",
+        announce,
+        player: "media_player.whole_flat",
       });
     }
   };
@@ -52,7 +101,7 @@ export function NotificationService({ hass, bens_flat: { lights }, logger }: TSe
             },
           },
         }),
-        speak(message),
+        speak({ message }),
       ]);
     }
   };

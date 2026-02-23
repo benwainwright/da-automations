@@ -17,6 +17,7 @@ interface AutomaticMusicPlayerConfig {
   hass: TServiceParams["hass"];
   scheduler: TServiceParams["scheduler"];
   logger: TServiceParams["logger"];
+  controller: IMusicPlayer;
 }
 
 interface PlayConfig {
@@ -25,14 +26,14 @@ interface PlayConfig {
   player: PICK_ENTITY<"media_player">;
   enqueue?: string;
   volume?: number;
+  announce?: boolean;
 }
 
 export interface IMusicPlayer {
   play(config: PlayConfig): Promise<void>;
-  pause(): Promise<void>;
 }
 
-export class MusicPlayer implements IMusicPlayer {
+export class MusicPlayer {
   private autoplayPaused = false;
 
   private pauseAutoplayTimeout?: { remove: () => void };
@@ -67,22 +68,6 @@ export class MusicPlayer implements IMusicPlayer {
     await this.playRandomFavouritePlaylist();
   }
 
-  public async play({ player: playerId, id, type, volume }: PlayConfig) {
-    const player = this.config.hass.refBy.id(playerId);
-
-    if (volume) {
-      await player.volume_set({ volume_level: volume });
-    }
-
-    const config = {
-      media_content_id: id,
-      media_content_type: type,
-      // enqueue,
-    } as unknown as Parameters<typeof player.play_media>[0];
-
-    await player.play_media(config);
-  }
-
   private async playRandomFavouritePlaylist() {
     this.config.logger.info(`Playing music`);
     const result = await this.config.hass.call.music_assistant.get_library<{
@@ -96,7 +81,7 @@ export class MusicPlayer implements IMusicPlayer {
     });
     const [first] = result.items;
 
-    this.config.logger.info(`Playing ${first.name}`);
+    this.config.logger.info(`Playing ${first?.name}`);
 
     await this.config.hass.call.media_player.shuffle_set({
       shuffle: true,
@@ -104,7 +89,7 @@ export class MusicPlayer implements IMusicPlayer {
     });
 
     if (first) {
-      await this.play({
+      await this.config.controller.play({
         id: first.uri,
         type: first.media_type,
         player: this.config.mediaPlayer,

@@ -15,3 +15,4 @@ export { SceneService } from "./scene-service/scene-service.ts";
 export { GoingHomeRecorderService } from "./going-home-recorder-service/going-home-recorder-service.ts";
 export { BriefingService } from "./briefing-service/briefing-service.ts";
 export { SchedulerService } from "./scheduler-service/scheduler-service.ts";
+export { MediaPlayerService } from "./media-player-service/index.ts";
