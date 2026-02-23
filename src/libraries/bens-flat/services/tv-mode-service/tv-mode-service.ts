@@ -89,6 +89,7 @@ export function TVModeService({
         "light.living_room_back_wall_middle",
         "light.living_room_back_wall_right",
         "switch.adaptive_lighting_living_room",
+        "switch.living_room_motion_sensor",
         "switch.autoplay_music",
       ],
     });
