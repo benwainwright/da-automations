@@ -1,6 +1,6 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 import type { PICK_ENTITY } from "@digital-alchemy/hass";
-import { FIVE_AM } from "../constants.ts";
+import { FIVE_AM, THREE_PM } from "../constants.ts";
 
 export function SleepModeService({
   hass,
@@ -55,7 +55,7 @@ export function SleepModeService({
     const sleepModeEntity = sleepMode.entity_id;
     const visitorModeEntity = visitor?.visitorMode?.getEntity?.();
     const visitorModeIsOn = visitorModeEntity?.state === "on";
-    if (time.isAfter(FIVE_AM) && sleepModeEntity && !visitorModeIsOn) {
+    if (time.isAfter(FIVE_AM) && sleepModeEntity && !visitorModeIsOn && time.isBefore(THREE_PM)) {
       await hass.call.switch.turn_off({ entity_id: sleepModeEntity });
       await readBriefing();
     }
