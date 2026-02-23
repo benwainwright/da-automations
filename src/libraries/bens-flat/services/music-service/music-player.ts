@@ -1,0 +1,101 @@
+import { TServiceParams } from "@digital-alchemy/core";
+import { PICK_ENTITY } from "@digital-alchemy/hass";
+
+interface LibraryItem {
+  media_type: string;
+  uri: string;
+  name: string;
+  image: string;
+  favourite: boolean;
+}
+
+interface AutomaticMusicPlayerConfig {
+  playerOnSwitch: PICK_ENTITY<"switch">;
+  blockIfOn: PICK_ENTITY<"switch">[];
+  hass: TServiceParams["hass"];
+  logger: TServiceParams["logger"];
+}
+
+interface PlayConfig {
+  type: string;
+  id: string;
+  player: PICK_ENTITY<"media_player">;
+  enqueue?: string;
+  volume?: number;
+}
+
+export interface IMusicPlayer {
+  play(config: PlayConfig): Promise<void>;
+  pause(): Promise<void>;
+}
+
+export class MusicPlayer implements IMusicPlayer {
+  public constructor(private readonly config: AutomaticMusicPlayerConfig) {}
+
+  public async onMotionInFlat() {
+    this.config.logger.trace(`Motion detected in flat`);
+    const wholeFlatPlayer = this.config.hass.refBy.id("media_player.whole_flat");
+    const autoplaySwitch = this.config.hass.refBy.id(this.config.playerOnSwitch);
+
+    if (wholeFlatPlayer.state === "playing" || autoplaySwitch.state !== "on") {
+      return;
+    }
+
+    const blocked = this.config.blockIfOn.some((switchId) => {
+      const entity = this.config.hass.refBy.id(switchId);
+      return entity.state === "on";
+    });
+
+    if (blocked) {
+      return;
+    }
+
+    this.config.logger.info(`Autoplay is on, playing some background music`);
+    await this.playRandomFavouritePlaylist();
+  }
+
+  public async play({ player: playerId, id, type, volume }: PlayConfig) {
+    const player = this.config.hass.refBy.id(playerId);
+
+    if (volume) {
+      await player.volume_set({ volume_level: volume });
+    }
+
+    const config = {
+      media_content_id: id,
+      media_content_type: type,
+      // enqueue,
+    } as unknown as Parameters<typeof player.play_media>[0];
+
+    await player.play_media(config);
+  }
+
+  private async playRandomFavouritePlaylist() {
+    this.config.logger.info(`Playing music`);
+    const result = await this.config.hass.call.music_assistant.get_library<{
+      items: LibraryItem[];
+    }>({
+      favorite: true,
+      media_type: "playlist",
+      /* cspell:disable-next-line */
+      config_entry_id: "01KGQT8ZJWTVX9DXC1KEFG8FG8",
+      order_by: "random_play_count",
+    });
+    const [first] = result.items;
+
+    this.config.logger.info(`Playing ${first}`);
+
+    if (first) {
+      await this.play({
+        id: first.uri,
+        type: first.media_type,
+        player: "media_player.whole_flat",
+        volume: 0.3,
+      });
+    }
+  }
+
+  public async pause() {
+    await this.config.hass.refBy.id("media_player.whole_flat").media_pause();
+  }
+}

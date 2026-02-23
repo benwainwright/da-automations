@@ -1,21 +1,5 @@
 import { TServiceParams } from "@digital-alchemy/core";
-import { PICK_ENTITY } from "@digital-alchemy/hass";
-
-interface LibraryItem {
-  media_type: string;
-  uri: string;
-  name: string;
-  image: string;
-  favourite: boolean;
-}
-
-interface PlayConfig {
-  type: string;
-  id: string;
-  player: PICK_ENTITY<"media_player">;
-  enqueue?: string;
-  volume?: number;
-}
+import { IMusicPlayer, MusicPlayer } from "./music-player.ts";
 
 export function MusicService({
   hass,
@@ -35,72 +19,27 @@ export function MusicService({
     context,
   });
 
-  const play = async ({ player: playerId, id, type, volume }: PlayConfig) => {
-    const player = hass.refBy.id(playerId);
+  const switchEntity = autoplaySwitch.entity_id;
 
-    if (volume) {
-      await player.volume_set({ volume_level: volume });
-    }
-
-    const config = {
-      media_content_id: id,
-      media_content_type: type,
-      // enqueue,
-    } as unknown as Parameters<typeof player.play_media>[0];
-
-    await player.play_media(config);
-  };
-
-  const playRandomFavouritePlaylist = async () => {
-    logger.info(`Playing music`);
-    const result = await hass.call.music_assistant.get_library<{ items: LibraryItem[] }>({
-      favorite: true,
-      media_type: "playlist",
-      /* cspell:disable-next-line */
-      config_entry_id: "01KGQT8ZJWTVX9DXC1KEFG8FG8",
-      order_by: "random_play_count",
-    });
-    const [first] = result.items;
-
-    logger.info(`Playing ${first}`);
-
-    if (first) {
-      await play({
-        id: first.uri,
-        type: first.media_type,
-        player: "media_player.whole_flat",
-        volume: 0.3,
-      });
-    }
-  };
-
-  const pause = async () => {
-    await hass.refBy.id("media_player.whole_flat").media_pause();
-  };
-
-  motion.anywhere(async () => {
-    logger.trace(`Motion detected in flat`);
-    const wholeFlatPlayer = hass.refBy.id("media_player.whole_flat");
-
-    if (
-      !tvMode.isOn() &&
-      !sleepMode.isOn() &&
-      wholeFlatPlayer.state !== "playing" &&
-      autoplaySwitch.is_on
-    ) {
-      logger.info(`Autoplay is on, playing some background music`);
-      await playRandomFavouritePlaylist();
-    }
+  const player = new MusicPlayer({
+    hass,
+    playerOnSwitch: switchEntity,
+    blockIfOn: [sleepMode.sleepModeSwitch.entity_id, tvMode.tvModeSwitch.entity_id],
+    logger,
   });
+
+  motion.anywhere(() => player.onMotionInFlat());
+
+  const exportPlayer: IMusicPlayer = player;
 
   lifecycle.onReady(() => {
     tvMode.tvModeSwitch.onUpdate(async (newState, oldState) => {
       if (!newState) return;
       if (newState.state === "on" && oldState.state === "off") {
-        await pause();
+        await player.pause();
       }
     });
   });
 
-  return { pause, play };
+  return { player: exportPlayer };
 }

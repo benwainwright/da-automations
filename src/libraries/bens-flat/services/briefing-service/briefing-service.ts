@@ -32,7 +32,7 @@ export function BriefingService({
     await hass.call.media_player.media_pause({
       entity_id: "media_player.whole_flat",
     });
-    await music.play({
+    await music.player.play({
       player: "media_player.whole_flat",
       id: "library://podcast/3",
       type: "music",
