@@ -10,9 +10,9 @@ export function MusicService({
   logger,
   lifecycle,
 }: TServiceParams) {
-  const { tvMode, sleepMode, motion } = bens_flat;
+  const { tvMode, motion } = bens_flat;
 
-  const autoplaySwitch = synapse.switch({
+  synapse.switch({
     name: "Autoplay Music",
     icon: "mdi:music",
     unique_id: "autoplay_music_switch",
@@ -20,14 +20,12 @@ export function MusicService({
     context,
   });
 
-  const switchEntity = autoplaySwitch.entity_id;
-
   const player = new MusicPlayer({
     hass,
     scheduler,
     mediaPlayer: "media_player.whole_flat",
-    playerOnSwitch: switchEntity,
-    blockIfOn: [sleepMode.sleepModeSwitch.entity_id, tvMode.tvModeSwitch.entity_id],
+    playerOnSwitch: "switch.autoplay_music",
+    blockIfOn: ["switch.sleep_mode", "switch.tv_mode"],
     pauseAutoplayFor: [15, "minute"],
     logger,
   });

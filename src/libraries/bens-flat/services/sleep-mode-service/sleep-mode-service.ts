@@ -53,8 +53,9 @@ export function SleepModeService({
 
   const morningTrigger = async () => {
     const sleepModeEntity = sleepMode.entity_id;
-    const visitorModeEntity = visitor.visitorMode.getEntity();
-    if (time.isAfter(FIVE_AM) && sleepModeEntity && visitorModeEntity.state !== "on") {
+    const visitorModeEntity = visitor?.visitorMode?.getEntity?.();
+    const visitorModeIsOn = visitorModeEntity?.state === "on";
+    if (time.isAfter(FIVE_AM) && sleepModeEntity && !visitorModeIsOn) {
       await hass.call.switch.turn_off({ entity_id: sleepModeEntity });
       await readBriefing();
     }
@@ -62,7 +63,7 @@ export function SleepModeService({
 
   motion.livingRoom(morningTrigger);
   motion.hallway(morningTrigger);
-  motion.livingRoom(morningTrigger);
+  motion.bathroom(morningTrigger);
 
   const isOn = () => {
     const sleepModeState = Boolean(sleepMode.is_on);
