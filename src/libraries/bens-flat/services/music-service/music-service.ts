@@ -27,7 +27,7 @@ export function MusicService({
     mediaPlayer: "media_player.whole_flat",
     playerOnSwitch: "switch.autoplay_music",
     blockIfOn: ["switch.sleep_mode", "switch.tv_mode"],
-    pauseAutoplayFor: [15, "minute"],
+    pauseAutoplayFor: [5, "minute"],
     logger,
   });
 
