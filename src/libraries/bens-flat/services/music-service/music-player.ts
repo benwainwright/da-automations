@@ -98,6 +98,11 @@ export class MusicPlayer implements IMusicPlayer {
 
     this.config.logger.info(`Playing ${first.name}`);
 
+    await this.config.hass.call.media_player.shuffle_set({
+      shuffle: true,
+      entity_id: this.config.mediaPlayer,
+    });
+
     if (first) {
       await this.play({
         id: first.uri,

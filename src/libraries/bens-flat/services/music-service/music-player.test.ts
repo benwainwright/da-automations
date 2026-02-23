@@ -25,6 +25,7 @@ const makeHarness = (config?: {
   const playMedia = mock(async (_config: unknown) => {});
   const volumeSet = mock(async (_config: unknown) => {});
   const mediaPause = mock(async () => {});
+  const shuffleSet = mock(async (_config: unknown) => {});
   const removeTimeout = mock(() => {});
   const setTimeout = mock((callback: () => void | Promise<void>, _offset: unknown) => ({
     callback,
@@ -67,6 +68,9 @@ const makeHarness = (config?: {
       music_assistant: {
         get_library: getLibrary,
       },
+      media_player: {
+        shuffle_set: shuffleSet,
+      },
     },
   };
 
@@ -85,6 +89,7 @@ const makeHarness = (config?: {
     getLibrary,
     playMedia,
     volumeSet,
+    shuffleSet,
     mediaPause,
     setTimeout,
     emitPlayerUpdate: async (newState: string, oldState: string) => {
@@ -103,6 +108,10 @@ test("onMotionInFlat plays a random playlist when autoplay is on and unblocked",
   await harness.player.onMotionInFlat();
 
   expect(harness.getLibrary).toHaveBeenCalledTimes(1);
+  expect(harness.shuffleSet).toHaveBeenCalledWith({
+    shuffle: true,
+    entity_id: "media_player.whole_flat",
+  });
   expect(harness.volumeSet).toHaveBeenCalledWith({ volume_level: 0.3 });
   expect(harness.playMedia).toHaveBeenCalledWith({
     media_content_id: "playlist://morning",
