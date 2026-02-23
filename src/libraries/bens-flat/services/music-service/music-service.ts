@@ -10,7 +10,7 @@ export function MusicService({
   logger,
   lifecycle,
 }: TServiceParams) {
-  const { tvMode, motion, mediaPlayer } = bens_flat;
+  const { tvMode, motion, mediaPlayer, sleepMode } = bens_flat;
 
   synapse.switch({
     name: "Autoplay Music",
@@ -35,6 +35,13 @@ export function MusicService({
 
   lifecycle.onReady(() => {
     tvMode.tvModeSwitch.onUpdate(async (newState, oldState) => {
+      if (!newState) return;
+      if (newState.state === "on" && oldState.state === "off") {
+        await player.pause();
+      }
+    });
+
+    sleepMode.sleepModeSwitch.onUpdate(async (newState, oldState) => {
       if (!newState) return;
       if (newState.state === "on" && oldState.state === "off") {
         await player.pause();
