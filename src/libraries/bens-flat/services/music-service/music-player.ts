@@ -96,7 +96,7 @@ export class MusicPlayer implements IMusicPlayer {
     });
     const [first] = result.items;
 
-    this.config.logger.info(`Playing ${first}`);
+    this.config.logger.info(`Playing ${first.name}`);
 
     if (first) {
       await this.play({
