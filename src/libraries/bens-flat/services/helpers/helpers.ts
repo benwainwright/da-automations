@@ -25,6 +25,12 @@ export function HelpersService({ hass, scheduler }: TServiceParams) {
     clear = scheduler.setTimeout(callback, offset);
   };
 
+  /**
+   * Returns two functions, a 'trigger' (will execute the callback once only until 'reset' is called)
+   *
+   * @param callback - Callback to be executed
+   * @param start - If true, the callback needs to be reset before first execution
+   */
   const latch = (callback: () => void | Promise<void>, start = false) => {
     let triggered = start;
 

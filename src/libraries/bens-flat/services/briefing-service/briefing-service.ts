@@ -4,6 +4,9 @@ import { formatWeatherForSpeech } from "./format-weather-for-speech.ts";
 import { getCalendarString } from "./get-calendar-string.ts";
 import { getTodoListString } from "./get-todo-list-string.ts";
 
+/**
+ * Responsible for constructing and playing my morning briefing
+ */
 export function BriefingService({
   hass,
   synapse,

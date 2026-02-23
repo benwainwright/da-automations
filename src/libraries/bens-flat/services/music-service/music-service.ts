@@ -1,6 +1,10 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { MusicPlayer } from "./music-player.ts";
 
+/**
+ * Automatically plays ambient music in the flat if there is movement and there
+ * isn't already anything playing
+ */
 export function MusicService({
   hass,
   bens_flat,
