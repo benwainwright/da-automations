@@ -22,29 +22,44 @@ export function NotificationService({
   }
 
   const ttsSay = async (config: ITtsSayConfig) => {
-    const player = hass.refBy.id(config.player);
-    const originalVolume = player.attributes["volume_level"];
-    try {
-      if (config.volume) {
-        await hass.call.media_player.volume_set({
-          volume_level: config.volume,
-          entity_id: config.player,
+    return new Promise<void>(async (accept, reject) => {
+      const player = hass.refBy.id(config.player);
+      const originalVolume = player.attributes["volume_level"];
+      try {
+        if (config.volume) {
+          await hass.call.media_player.volume_set({
+            volume_level: config.volume,
+            entity_id: config.player,
+          });
+        }
+        await mediaPlayer.play({
+          id: `media-source://tts/${config.source}?message=${encodeURIComponent(config.message)}`,
+          type: "provider",
+          player: config.player,
+          announce: config.announce,
         });
+        if (config.announce) {
+          accept();
+        } else {
+          await player.waitForState("playing");
+          const listener = player.onUpdate((newState) => {
+            if (newState.state !== "playing") {
+              listener.remove();
+              accept();
+            }
+          });
+        }
+      } catch (error) {
+        reject(error);
+      } finally {
+        if (config.volume) {
+          await hass.call.media_player.volume_set({
+            volume_level: originalVolume,
+            entity_id: config.player,
+          });
+        }
       }
-      await mediaPlayer.play({
-        id: `media-source://tts/${config.source}?message=${encodeURIComponent(config.message)}`,
-        type: "provider",
-        player: config.player,
-        announce: config.announce,
-      });
-    } finally {
-      if (config.volume) {
-        await hass.call.media_player.volume_set({
-          volume_level: originalVolume,
-          entity_id: config.player,
-        });
-      }
-    }
+    });
   };
 
   const speak = async ({
