@@ -6,7 +6,7 @@ export function TVModeService({
   context,
   logger,
   lifecycle,
-  bens_flat: { scene },
+  bens_flat: { scene, blinds },
 }: TServiceParams) {
   const tvMode = synapse.switch({
     name: "TV Mode",
@@ -76,7 +76,6 @@ export function TVModeService({
       scene: "scene.tv_mode",
       snapshot: [
         "light.living_room_floor_lamp_bottom",
-        "cover.living_room_blinds",
         "light.living_room_floor_lamp_middle",
         "light.living_room_floor_lamp_top",
         "light.kitchen_fridge",
@@ -100,9 +99,22 @@ export function TVModeService({
           entity_id: "media_player.living_room",
         });
         await toggler.on();
+        await blinds.close();
       } else if (newState.state === "off" && oldState.state !== "off") {
         await toggler.off();
       }
+    });
+  });
+
+  lifecycle.onReady(() => {
+    const tvModeEntity = tvMode.getEntity();
+
+    tvModeEntity.onStateFor({
+      state: "off",
+      for: [5, "minute"],
+      exec: async () => {
+        await blinds.openIfDefaultIsOpen();
+      },
     });
   });
 
