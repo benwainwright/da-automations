@@ -8,6 +8,7 @@ export { PresenceDetectionService } from "./presence-detection-service/presence-
 export { MotionService } from "./motion-service/motion-service.ts";
 export { NagService } from "./nag-service/nag-service.ts";
 export { PlantsService } from "./plants-service/plants-service.ts";
+export { CalendarService } from "./calendar-service/index.ts";
 export { MusicService } from "./music-service/music-service.ts";
 export { SleepModeService } from "./sleep-mode-service/sleep-mode-service.ts";
 export { TVModeService } from "./tv-mode-service/tv-mode-service.ts";

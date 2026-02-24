@@ -1,6 +1,4 @@
-import { TServiceParams } from "@digital-alchemy/core";
-import { PICK_ENTITY } from "@digital-alchemy/hass";
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 
 interface CalendarEvent {
   start: string;
@@ -9,23 +7,15 @@ interface CalendarEvent {
   location?: string;
 }
 
-type GetCalendarResponse<TCalendar extends PICK_ENTITY<"calendar">> = {
-  [K in TCalendar]: {
-    events: CalendarEvent[];
-  };
-};
+type Fetcher = (config: { start: Dayjs; end: Dayjs }) => Promise<CalendarEvent[]>;
 
-export const getCalendarString = async (hass: TServiceParams["hass"]) => {
-  const startOfToday = dayjs().startOf("day").toISOString();
-  const endOfToday = dayjs().endOf("day").toISOString();
-  const response = await hass.call.calendar.get_events<
-    GetCalendarResponse<"calendar.personal_calendar">
-  >({
-    entity_id: "calendar.personal_calendar",
-    start_date_time: startOfToday,
-    end_date_time: endOfToday,
+export const getCalendarString = async (fetcher: Fetcher) => {
+  const startOfToday = dayjs().startOf("day");
+  const endOfToday = dayjs().endOf("day");
+  const events = await fetcher({
+    start: startOfToday,
+    end: endOfToday,
   });
-  const events = response["calendar.personal_calendar"].events;
 
   if (events.length === 0) {
     return "there is no events in your calendar";

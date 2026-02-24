@@ -4,6 +4,7 @@ import { LIB_HASS } from "@digital-alchemy/hass";
 import { LIB_SYNAPSE } from "@digital-alchemy/synapse";
 import {
   BlindsService,
+  CalendarService,
   CoreModule,
   GoingHomeRecorderService,
   MediaPlayerService,
@@ -45,6 +46,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
   services: {
     nags: NagService,
     music: MusicService,
+    calender: CalendarService,
     alexa: AlexaMediaPlayerService,
     visitor: VisitorModeService,
     scheduler: Scheduler,

@@ -11,7 +11,7 @@ export function BriefingService({
   hass,
   synapse,
   context,
-  bens_flat: { notify, mediaPlayer },
+  bens_flat: { notify, mediaPlayer, calender },
   logger,
 }: TServiceParams) {
   const triggerBriefing = synapse.button({
@@ -27,7 +27,7 @@ export function BriefingService({
       `Good morning!`,
       getDateAndTimeString(),
       formatWeatherForSpeech(hass, "weather.home"),
-      await getCalendarString(hass),
+      await getCalendarString(calender.getEvents),
       await getTodoListString(hass),
     ];
 
