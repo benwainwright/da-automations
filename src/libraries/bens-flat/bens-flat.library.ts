@@ -29,6 +29,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
   depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION, LIB_LEARNING_SENSORS],
   name: "bens_flat",
   priorityInit: [
+    "calender",
     "mediaPlayer",
     "notify",
     "nags",
