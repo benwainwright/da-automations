@@ -30,8 +30,8 @@ export const LIB_BENS_FLAT = CreateLibrary({
   name: "bens_flat",
   priorityInit: [
     "calender",
-    "alexa",
     "mediaPlayer",
+    "alexa",
     "notify",
     "nags",
     "scene",
