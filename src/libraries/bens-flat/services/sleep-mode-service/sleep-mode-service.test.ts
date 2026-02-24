@@ -8,6 +8,9 @@ beforeEach(() => {
 test("turning sleep mode on enables the expected adaptive-lighting sleep switches", async () => {
   let onTurnOn: (() => Promise<void>) | undefined;
   const turnOnAll = mock(async () => {});
+  const getEvents = mock(async () => []);
+  const speak = mock(async () => {});
+  const command = mock(async () => {});
   const latch = (_callback: () => Promise<void> | void, start = false) => {
     let triggered = start;
     return {
@@ -29,6 +32,14 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
     bens_flat: {
       briefing: { read: mock(async () => {}) },
       helpers: { turnOffAll: mock(async () => {}), turnOnAll, latch },
+      calender: { getEvents },
+      notify: { speak },
+      alexa: { command },
+      visitor: {
+        visitorMode: {
+          getEntity: () => ({ state: "off" }),
+        },
+      },
       lights: { turnOffAll: mock(async () => {}) },
       motion: {
         livingRoom: (_cb: () => Promise<void> | void) => {},
@@ -43,6 +54,9 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
     },
     logger: { info: mock(() => {}) },
     synapse: {
+      button: () => ({
+        onPress: (_cb: () => Promise<void>) => {},
+      }),
       switch: () => ({
         entity_id: "switch.sleep_mode",
         is_on: false,
@@ -64,4 +78,7 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
     "switch.adaptive_lighting_sleep_mode_bathroom",
     "switch.adaptive_lighting_sleep_mode_spare_room",
   ]);
+  expect(getEvents).toHaveBeenCalledTimes(1);
+  expect(speak).toHaveBeenCalledTimes(1);
+  expect(command).not.toHaveBeenCalled();
 });
