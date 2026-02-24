@@ -1306,6 +1306,172 @@ declare module "@digital-alchemy/hass" {
         }>,
       ) => Promise<void>;
     };
+    // # MARK: alexa_media
+    alexa_media: {
+      /**
+       * ### Enable network discovery
+       *
+       * > Re-enable Alexa network discovery so the next polling cycle will rediscover Alexa devices for the selected accounts.
+       * >
+       */
+      enable_network_discovery: (service_data?: {
+        /**
+                 * ## Account email(s)
+                 *
+                 * > Optional Alexa account email or list of emails. If omitted, all Alexa Media accounts will be refreshed.
+                
+                 *
+                 * ### Example
+                 *
+                 * > ```json
+                 * > {
+                 * >   "email": "email protected"
+                 * > }
+                 * > ```
+                 *
+                 * ## Selector
+                 *
+                 * > ```yaml
+                 * > text:
+                 * >   multiline: false
+                 * >   multiple: false
+                 * > ```
+                 */
+        email?: string;
+      }) => Promise<void>;
+      /**
+       * ### force_logout
+       *
+       * > Force logout of Alexa Login account and deletion of .pickle. Intended for debugging use.
+       */
+      force_logout: (service_data?: {
+        /**
+         * ## email
+         *
+         * > List of Alexa accounts to log out. If empty, will log out from all known accounts.
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "email": "my_email@alexa.com"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * >
+         * > ```
+         */
+        email?: unknown;
+      }) => Promise<void>;
+      /**
+       * ### get_history_records
+       *
+       * > Returns the last entries of all the customer history.
+       */
+      get_history_records: (service_data?: {
+        /**
+         * ## Entity
+         *
+         * > Alexa Media Player device to get history from.
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   domain:
+         * >     - media_player
+         * >   integration: alexa_media
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id:
+          | PICK_FROM_PLATFORM<"alexa_media", "media_player">
+          | PICK_FROM_PLATFORM<"alexa_media", "media_player">[];
+        /**
+         * ## Entries
+         *
+         * > Number of records to return.
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "entries": "5"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > 5
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * >
+         * > ```
+         */
+        entries?: unknown;
+      }) => Promise<void>;
+      /**
+       * ### restore_volume
+       *
+       * > Restores an Alexa Media Player volume level to the previous volume level.
+       */
+      restore_volume: (service_data: {
+        /**
+         * ## Entity
+         *
+         * > Alexa Media Player device to restore volume on.
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > entity:
+         * >   domain:
+         * >     - media_player
+         * >   integration: alexa_media
+         * >   reorder: false
+         * >   multiple: false
+         * > ```
+         */
+        entity_id:
+          | PICK_FROM_PLATFORM<"alexa_media", "media_player">
+          | PICK_FROM_PLATFORM<"alexa_media", "media_player">[];
+      }) => Promise<void>;
+      /**
+       * ### update_last_called
+       *
+       * > Forces update of last_called echo device for each Alexa account.
+       */
+      update_last_called: (service_data?: {
+        /**
+         * ## email
+         *
+         * > List of Alexa accounts to update. If empty, will update all known accounts.
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "email": "my_email@alexa.com"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * >
+         * > ```
+         */
+        email?: unknown;
+      }) => Promise<void>;
+    };
     // # MARK: assist_satellite
     assist_satellite: {
       /**
@@ -3593,7 +3759,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ0PP3VVV73Z7KHAM5M3KVSV";
+          | "01KJ0PP3VVV73Z7KHAM5M3KVSV"
+          | "01KJ7AGB4QY7TJ2QCJPM8X1J03";
         /**
          * ## organization
          *
@@ -3696,7 +3863,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ0PP3VVV73Z7KHAM5M3KVSV";
+          | "01KJ0PP3VVV73Z7KHAM5M3KVSV"
+          | "01KJ7AGB4QY7TJ2QCJPM8X1J03";
         /**
          * ## images
          *
@@ -5383,7 +5551,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ0PP3VVV73Z7KHAM5M3KVSV";
+          | "01KJ0PP3VVV73Z7KHAM5M3KVSV"
+          | "01KJ7AGB4QY7TJ2QCJPM8X1J03";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -7966,7 +8135,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ0PP3VVV73Z7KHAM5M3KVSV";
+          | "01KJ0PP3VVV73Z7KHAM5M3KVSV"
+          | "01KJ7AGB4QY7TJ2QCJPM8X1J03";
         /**
          * ## favorite
          *
@@ -8483,7 +8653,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ0PP3VVV73Z7KHAM5M3KVSV";
+          | "01KJ0PP3VVV73Z7KHAM5M3KVSV"
+          | "01KJ7AGB4QY7TJ2QCJPM8X1J03";
         /**
          * ## library_only
          *
@@ -8640,6 +8811,609 @@ declare module "@digital-alchemy/hass" {
     };
     // # MARK: notify
     notify: {
+      /**
+       * ### Send a notification with alexa_media
+       *
+       * > Sends a notification message using the alexa_media service.
+       */
+      alexa_media: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
+       * ### Send a notification via alexa_media_bathroom_2
+       *
+       * > Sends a notification message using the alexa_media_bathroom_2 integration.
+       */
+      alexa_media_bathroom_2: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
+       * ### Send a notification via alexa_media_bedroom_sonos_one
+       *
+       * > Sends a notification message using the alexa_media_bedroom_sonos_one integration.
+       */
+      alexa_media_bedroom_sonos_one: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
+       * ### Send a notification via alexa_media_bedroom_speaker
+       *
+       * > Sends a notification message using the alexa_media_bedroom_speaker integration.
+       */
+      alexa_media_bedroom_speaker: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
+       * ### Send a notification via alexa_media_ben_s_2nd_sonos_one_second_edition
+       *
+       * > Sends a notification message using the alexa_media_ben_s_2nd_sonos_one_second_edition integration.
+       */
+      alexa_media_ben_s_2nd_sonos_one_second_edition: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
+       * ### Send a notification via alexa_media_living_room_2
+       *
+       * > Sends a notification message using the alexa_media_living_room_2 integration.
+       */
+      alexa_media_living_room_2: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
+       * ### Send a notification via alexa_media_living_room_sonos_one
+       *
+       * > Sends a notification message using the alexa_media_living_room_sonos_one integration.
+       */
+      alexa_media_living_room_sonos_one: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
+       * ### Send a notification via alexa_media_sonos_arc_ultra
+       *
+       * > Sends a notification message using the alexa_media_sonos_arc_ultra integration.
+       */
+      alexa_media_sonos_arc_ultra: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
+       * ### Send a notification via alexa_media_this_device
+       *
+       * > Sends a notification message using the alexa_media_this_device integration.
+       */
+      alexa_media_this_device: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
       /**
        * ### Send a notification via mobile_app_bens_imac_pro
        *
@@ -9147,7 +9921,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ0PP3VVV73Z7KHAM5M3KVSV";
+          | "01KJ0PP3VVV73Z7KHAM5M3KVSV"
+          | "01KJ7AGB4QY7TJ2QCJPM8X1J03";
         /**
          * ## filenames
          *
@@ -9268,7 +10043,8 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ0PP3VVV73Z7KHAM5M3KVSV";
+          | "01KJ0PP3VVV73Z7KHAM5M3KVSV"
+          | "01KJ7AGB4QY7TJ2QCJPM8X1J03";
         /**
          * ## prompt
          *

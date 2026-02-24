@@ -20,6 +20,7 @@ import {
   SceneService,
   BriefingService,
   VisitorModeService,
+  AlexaMediaPlayerService,
 } from "./services/index.ts";
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 
@@ -44,6 +45,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
   services: {
     nags: NagService,
     music: MusicService,
+    alexa: AlexaMediaPlayerService,
     visitor: VisitorModeService,
     scheduler: Scheduler,
     motion: MotionService,
