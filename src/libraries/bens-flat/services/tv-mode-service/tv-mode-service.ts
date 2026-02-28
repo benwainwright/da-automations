@@ -94,13 +94,15 @@ export function TVModeService({
     });
 
     tvMode.onUpdate(async (newState, oldState) => {
-      if (newState.state === "on" && oldState.state !== "on") {
+      if (newState.state === "on" && oldState.state === "off") {
+        logger.info(`Turning TV mode on`);
         await hass.call.media_player.media_pause({
           entity_id: "media_player.living_room",
         });
         await toggler.on();
         await blinds.close();
-      } else if (newState.state === "off" && oldState.state !== "off") {
+      } else if (newState.state === "off" && oldState.state === "on") {
+        logger.info(`Turning TV mode off`);
         await toggler.off();
       }
     });
