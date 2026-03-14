@@ -18,7 +18,7 @@ export function TVModeService({
 
   const xboxInGame = hass.refBy.id("binary_sensor.xbox_network_in_game");
   const appleTv = hass.refBy.id("media_player.apple_tv");
-  const ps5NowPlaying = hass.refBy.id("sensor.ps5_now_playing");
+  // const ps5NowPlaying = hass.refBy.id("sensor.ps5_now_playing");
 
   const setTvModeState = async (state: "on" | "off", reason: string) => {
     const tvModeEntity = tvMode.getEntity();
@@ -44,14 +44,14 @@ export function TVModeService({
     }
   });
 
-  ps5NowPlaying.onUpdate(async (newState, oldState) => {
-    if (!newState) return;
-    if (oldState.state === "unknown" && newState.state !== "unknown") {
-      await setTvModeState("on", "ps5");
-    } else if (oldState.state !== "unknown" && newState.state === "unknown") {
-      await setTvModeState("off", "ps5");
-    }
-  });
+  // ps5NowPlaying.onUpdate(async (newState, oldState) => {
+  //   if (!newState) return;
+  //   if (oldState.state !== "playing" && newState.state !== "playing") {
+  //     await setTvModeState("on", "ps5");
+  //   } else if (oldState.state !== "unknown" && newState.state === "unknown") {
+  //     await setTvModeState("off", "ps5");
+  //   }
+  // });
 
   appleTv.onUpdate(async (newState, oldState) => {
     if (!newState) {
