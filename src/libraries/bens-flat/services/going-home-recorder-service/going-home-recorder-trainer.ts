@@ -453,8 +453,11 @@ export class GoingHomeRecorderTrainer {
     return Number.isFinite(timestamp) ? timestamp : null;
   }
 
-  private toDistancePoints(states: { state: unknown; last_reported: unknown }[]) {
-    return states
+  private toDistancePoints(states: unknown) {
+    const history = Array.isArray(states)
+      ? (states as { state: unknown; last_reported: unknown }[])
+      : [];
+    return history
       .map((state) => {
         const distance = Number(state.state);
         const timestamp = this.toFiniteTimestamp(state.last_reported);
