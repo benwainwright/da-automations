@@ -1,8 +1,8 @@
 import { type TServiceParams } from "@digital-alchemy/core";
-import { RemoveCallback } from "@digital-alchemy/hass";
 
-export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TServiceParams) {
-  const { lights, tvMode, presence, blinds, notify } = bens_flat;
+export function CoreModule({ bens_flat, lifecycle, auto_deploy }: TServiceParams) {
+  const { lights, presence, blinds, notify } = bens_flat;
+
   lifecycle.onReady(async () => {
     const autoDeployNotificationId = "auto_deploy_status";
     const autoDeployNotificationTitle = "Auto Deploy";
@@ -37,19 +37,6 @@ export function CoreModule({ bens_flat, lifecycle, scheduler, auto_deploy }: TSe
         await lights.turnOffAll();
         await blinds.close();
       } else if (oldState.state === "off" && newState.state === "on") {
-        await blinds.openIfDefaultIsOpen();
-      }
-    });
-
-    let schedulerCallback: RemoveCallback | undefined;
-
-    tvMode.tvModeSwitch.onUpdate(async (newState, oldState) => {
-      if (!newState) return;
-      if (oldState.state === "off" && newState.state === "on") {
-        schedulerCallback?.remove();
-        await blinds.close();
-      } else if (oldState.state === "on" && newState.state === "off") {
-        schedulerCallback = scheduler.setTimeout(() => {}, "5m");
         await blinds.openIfDefaultIsOpen();
       }
     });
