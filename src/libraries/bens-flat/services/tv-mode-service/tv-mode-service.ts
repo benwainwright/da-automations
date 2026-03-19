@@ -82,11 +82,13 @@ export function TVModeService({
       if (!newState || !oldState) return;
       if (newState.state === "on" && oldState.state === "off") {
         logger.info(`TV mode as turned on, triggering actions`);
-        await hass.call.media_player.media_pause({
-          entity_id: "media_player.living_room",
-        });
-        await toggler.on();
-        await blinds.close();
+        await Promise.allSettled([
+          hass.call.media_player.media_pause({
+            entity_id: "media_player.living_room",
+          }),
+          toggler.on(),
+          blinds.close(),
+        ]);
       } else if (newState.state === "off" && oldState.state === "on") {
         logger.info(`Turning TV mode off`);
         await toggler.off();
