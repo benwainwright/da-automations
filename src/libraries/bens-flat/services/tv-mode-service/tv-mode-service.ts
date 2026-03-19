@@ -7,6 +7,7 @@ export function TVModeService({
   logger,
   lifecycle,
   bens_flat: { scene, blinds },
+  automation,
 }: TServiceParams) {
   const tvMode = synapse.switch({
     name: "TV Mode",
@@ -20,55 +21,34 @@ export function TVModeService({
   const appleTv = hass.refBy.id("media_player.apple_tv");
   const ps5NowPlaying = hass.refBy.id("sensor.ps5_now_playing");
 
-  const setTvModeState = async (state: "on" | "off", reason: string) => {
-    const tvModeEntity = tvMode.getEntity();
-    if (!tvModeEntity) {
-      logger.warn(`Skipping tv mode ${state}; entity is unavailable`);
-      return;
+  const shouldBeOn = () => {
+    if (xboxInGame.state === "on") {
+      return true;
     }
 
-    logger.info(`Setting TV mode to ${state} [${reason}]`);
-    if (state === "on") {
-      await tvModeEntity.turn_on();
-    } else {
-      await tvModeEntity.turn_off();
+    if (ps5NowPlaying.state === "playing") {
+      return true;
     }
-  };
 
-  xboxInGame.onUpdate(async (newState, oldState) => {
-    if (!newState) return;
-    if (oldState.state === "off" && newState.state === "on") {
-      await setTvModeState("on", "xbox");
-    } else if (oldState.state === "on" && newState.state === "off") {
-      await setTvModeState("off", "xbox");
-    }
-  });
-
-  ps5NowPlaying.onUpdate(async (newState, oldState) => {
-    if (!newState) return;
-    if (oldState.state !== "playing" && newState.state !== "playing") {
-      await setTvModeState("on", "ps5");
-    } else if (oldState.state !== "unknown" && newState.state === "unknown") {
-      await setTvModeState("off", "ps5");
-    }
-  });
-
-  appleTv.onUpdate(async (newState, oldState) => {
-    if (!newState) {
-      return;
-    }
-    const attributes = newState.attributes as (typeof newState)["attributes"] & {
+    const attributes = appleTv.attributes as typeof appleTv.attributes & {
       app_id: string;
     };
 
     const isYoutube = attributes.app_id === "com.google.ios.youtube";
     const isSpotify = attributes.app_id === "com.spotify.client";
 
-    if (oldState.state !== "playing" && newState.state === "playing" && !isYoutube && !isSpotify) {
-      await setTvModeState("on", "appleTv");
-    } else if (oldState.state === "playing" && newState.state !== "playing") {
-      await setTvModeState("off", "appleTv");
+    if (appleTv.state === "playing" && !isYoutube && !isSpotify) {
+      return true;
     }
+
+    return false;
+  };
+
+  automation.managed_switch({
+    context,
+    entity_id: tvMode.entity_id,
+    shouldBeOn,
+    onUpdate: [appleTv, ps5NowPlaying, xboxInGame],
   });
 
   lifecycle.onReady(() => {
