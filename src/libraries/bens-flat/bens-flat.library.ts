@@ -22,6 +22,7 @@ import {
   BriefingService,
   VisitorModeService,
   AlexaMediaPlayerService,
+  SyncTvService,
 } from "./services/index.ts";
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 
@@ -58,6 +59,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
     briefing: BriefingService,
     scene: SceneService,
     tvMode: TVModeService,
+    tv: SyncTvService,
     presence: PresenceDetectionService,
     lights: LightsService,
     sleepMode: SleepModeService,

@@ -18,3 +18,4 @@ export { GoingHomeRecorderService } from "./going-home-recorder-service/going-ho
 export { BriefingService } from "./briefing-service/briefing-service.ts";
 export { SchedulerService } from "./scheduler-service/scheduler-service.ts";
 export { MediaPlayerService } from "./media-player-service/index.ts";
+export { SyncTvService } from "./sync-tv-service/sync-tv-service.ts";
