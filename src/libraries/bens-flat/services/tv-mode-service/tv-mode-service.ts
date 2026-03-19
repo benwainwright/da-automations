@@ -48,14 +48,14 @@ export function TVModeService({
     return false;
   };
 
-  automation.managed_switch({
-    context,
-    entity_id: tvMode.entity_id,
-    shouldBeOn,
-    onUpdate: [appleTv, ps5NowPlaying, xboxInGame],
-  });
-
   lifecycle.onReady(() => {
+    automation.managed_switch({
+      context,
+      entity_id: tvMode.entity_id,
+      shouldBeOn,
+      onUpdate: [appleTv, ps5NowPlaying, xboxInGame],
+    });
+
     const toggler = scene.toggle({
       transition: 3,
       scene: "scene.tv_mode",
