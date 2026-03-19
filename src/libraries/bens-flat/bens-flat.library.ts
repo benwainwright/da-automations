@@ -44,7 +44,6 @@ export const LIB_BENS_FLAT = CreateLibrary({
     "tvMode",
     "goingHomeRecorder",
   ],
-  configuration: {},
   services: {
     nags: NagService,
     music: MusicService,
