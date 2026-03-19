@@ -34,8 +34,7 @@ export function CoreModule({ bens_flat, lifecycle, auto_deploy }: TServiceParams
     presence.flatIsOccupiedSwitch.onUpdate(async (newState, oldState) => {
       if (!newState) return;
       if (oldState.state === "on" && newState.state === "off") {
-        await lights.turnOffAll();
-        await blinds.close();
+        await Promise.allSettled([lights.turnOffAll(), blinds.close()]);
       } else if (oldState.state === "off" && newState.state === "on") {
         await blinds.openIfDefaultIsOpen();
       }

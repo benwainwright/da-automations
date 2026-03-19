@@ -85,9 +85,8 @@ export function SleepModeService({
   });
 
   sleepMode.onTurnOn(async () => {
-    await lights.turnOffAll();
-    await helpers.turnOnAll(adaptiveLightingSleepModeSwitches);
-    await setAlarm();
+    (await lights.turnOffAll(),
+      await Promise.allSettled([helpers.turnOnAll(adaptiveLightingSleepModeSwitches), setAlarm()]));
     resetBriefing();
   });
 
