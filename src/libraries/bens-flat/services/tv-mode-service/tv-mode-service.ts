@@ -75,6 +75,7 @@ export function TVModeService({
     });
 
     tvMode.onUpdate(async (newState, oldState) => {
+      if (!newState || !oldState) return;
       if (newState.state === "on" && oldState.state === "off") {
         logger.info(`TV mode turned on`);
         await hass.call.media_player.media_pause({
