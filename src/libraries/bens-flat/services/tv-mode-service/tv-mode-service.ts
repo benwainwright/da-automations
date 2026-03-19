@@ -23,10 +23,12 @@ export function TVModeService({
 
   const shouldBeOn = () => {
     if (xboxInGame.state === "on") {
+      logger.info(`XBOX playing, turning TV mode on`);
       return true;
     }
 
     if (ps5NowPlaying.state === "playing") {
+      logger.info(`PS5 playing, turning TV mode on`);
       return true;
     }
 
@@ -38,9 +40,11 @@ export function TVModeService({
     const isSpotify = attributes.app_id === "com.spotify.client";
 
     if (appleTv.state === "playing" && !isYoutube && !isSpotify) {
+      logger.info(`Apple tv playing - turning TV mode on`);
       return true;
     }
 
+    logger.info(`TV mode is off`);
     return false;
   };
 
