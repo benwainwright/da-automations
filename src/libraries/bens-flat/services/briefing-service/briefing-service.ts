@@ -40,6 +40,7 @@ export function BriefingService({
       player: "media_player.whole_flat",
       id: "library://podcast/3",
       type: "music",
+      volume: 0.5,
     });
   };
 
