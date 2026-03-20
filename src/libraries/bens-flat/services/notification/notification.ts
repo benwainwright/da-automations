@@ -73,7 +73,7 @@ export function NotificationService({
     announce?: boolean;
     volume?: number;
   }) => {
-    logger.info(`Speaking: ${message}`);
+    logger.info(`Speaking: ${message} (announce: ${announce})`);
     try {
       await ttsSay({
         volume,

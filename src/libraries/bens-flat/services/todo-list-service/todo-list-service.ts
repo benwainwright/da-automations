@@ -14,7 +14,7 @@ export function TodoListService({ hass, synapse, context, bens_flat: { notify } 
   });
 
   readTodoListButton.onPress(async () => {
-    await notify.speak({ message: await generateTodoListString(), announce: true, volume: 0.5 });
+    await notify.speak({ message: await generateTodoListString(), announce: true, volume: 0.3 });
   });
 
   return { toString: generateTodoListString };
