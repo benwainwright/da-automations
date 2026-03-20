@@ -1,2 +1,13 @@
-export const MDI_WATER_BOILER = "mdi:water-boiler";
-export const MDI_HEAT_WAVE = "mdi:heat-wave";
+export const mdi = {
+  waterBoiler: "mdi:water-boiler",
+  heatWave: "mdi:heat-wave",
+  chat: "mdi:chat",
+  motionSensor: "mdi:motion-sensor",
+  sleep: "mdi:sleep",
+  music: "mdi:music",
+  checkCircleOutline: "mdi:check-circle-outline",
+  television: "mdi:television",
+  account: "mdi:account",
+  rollerShadesClosed: "mdi:roller-shade-closed",
+  alarm: "mdi:alarm",
+} satisfies Record<string, `mdi:${string}`>;

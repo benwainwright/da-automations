@@ -1,5 +1,6 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { getTodoListString } from "./get-todo-list-string.ts";
+import { mdi } from "../icons.ts";
 
 export function TodoListService({ hass, synapse, context, bens_flat: { notify } }: TServiceParams) {
   const generateTodoListString = async () => {
@@ -9,7 +10,7 @@ export function TodoListService({ hass, synapse, context, bens_flat: { notify } 
   const readTodoListButton = synapse.button({
     name: "Todo list",
     context,
-    icon: "mdi:check-circle-outline",
+    icon: mdi.checkCircleOutline,
     unique_id: "read-todo-list",
   });
 

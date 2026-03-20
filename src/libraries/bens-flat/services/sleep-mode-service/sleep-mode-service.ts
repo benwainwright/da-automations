@@ -2,6 +2,7 @@ import { type TServiceParams } from "@digital-alchemy/core";
 import type { PICK_ENTITY } from "@digital-alchemy/hass";
 import { FIVE_AM, THREE_PM } from "../constants.ts";
 import dayjs from "dayjs";
+import { mdi } from "../icons.ts";
 
 export function SleepModeService({
   hass,
@@ -14,7 +15,7 @@ export function SleepModeService({
   const sleepMode = synapse.switch({
     name: "Sleep Mode",
     context,
-    icon: "mdi:sleep",
+    icon: mdi.sleep,
     unique_id: "sleep_mode_switch",
     suggested_object_id: "sleep_mode",
   });
@@ -22,6 +23,7 @@ export function SleepModeService({
   const setAlarmButton = synapse.button({
     unique_id: "Set alarm",
     name: "Alarm",
+    icon: mdi.alarm,
     context,
   });
 

@@ -1,5 +1,6 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { FIVE_AM } from "../constants.ts";
+import { mdi } from "../icons.ts";
 
 export function BlindsService({
   synapse,
@@ -15,6 +16,7 @@ export function BlindsService({
     name: "Blinds default closed",
     unique_id: "blinds_default_closed_switch",
     suggested_object_id: "blinds_default_closed",
+    icon: mdi.rollerShadesClosed,
     attributes: {
       area: "living_room",
     },

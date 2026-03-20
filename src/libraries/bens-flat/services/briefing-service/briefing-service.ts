@@ -1,6 +1,7 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { getDateAndTimeString } from "./get-day-and-time-string.ts";
 import { formatWeatherForSpeech } from "./format-weather-for-speech.ts";
+import { mdi } from "../icons.ts";
 
 /**
  * Responsible for constructing and playing my morning briefing
@@ -15,6 +16,7 @@ export function BriefingService({
   const triggerBriefing = synapse.button({
     unique_id: "trigger-briefing",
     name: "Briefing",
+    icon: mdi.chat,
     context,
   });
 

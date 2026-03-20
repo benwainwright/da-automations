@@ -1,6 +1,7 @@
 import type { TServiceParams, TOffset } from "@digital-alchemy/core";
 import type { PICK_ENTITY, RemoveCallback, TAreaId } from "@digital-alchemy/hass";
 import { toSynapseUniqueId } from "../unique-id.ts";
+import { mdi } from "../icons.ts";
 
 interface IMotionSwitchConfig {
   /**
@@ -64,7 +65,7 @@ export function LightsService({
       name: switchName,
       unique_id: toSynapseUniqueId(switchName),
       suggested_object_id: toSynapseUniqueId(switchName),
-      icon: "mdi:motion-sensor",
+      icon: mdi.motionSensor,
       attributes: {
         area,
       },

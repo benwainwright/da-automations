@@ -1,4 +1,5 @@
 import { TServiceParams } from "@digital-alchemy/core";
+import { mdi } from "../icons.ts";
 
 export function TVModeService({
   hass,
@@ -14,7 +15,7 @@ export function TVModeService({
     context,
     unique_id: "tv_mode_switch",
     suggested_object_id: "tv_mode",
-    icon: "mdi:television",
+    icon: mdi.television,
   });
 
   const xboxInGame = hass.refBy.id("binary_sensor.xbox_network_in_game");

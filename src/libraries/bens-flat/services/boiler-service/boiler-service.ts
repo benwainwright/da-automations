@@ -1,5 +1,5 @@
 import { TServiceParams } from "@digital-alchemy/core";
-import { MDI_HEAT_WAVE, MDI_WATER_BOILER } from "../icons.ts";
+import { mdi } from "../icons.ts";
 import { RemoveCallback } from "@digital-alchemy/hass";
 
 /**
@@ -16,14 +16,14 @@ export function BoilerService({ hass, synapse, context, scheduler }: TServicePar
     context,
     name: "Boiler",
     suggested_object_id: "boiler",
-    icon: MDI_WATER_BOILER,
+    icon: mdi.waterBoiler,
   });
 
   const boost = synapse.switch({
     context,
     name: "Boiler Boost",
     suggested_object_id: "boiler_boost",
-    icon: MDI_HEAT_WAVE,
+    icon: mdi.heatWave,
   });
 
   boilerSwitch.onTurnOn(async () => {

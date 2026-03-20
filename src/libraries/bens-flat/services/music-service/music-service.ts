@@ -1,5 +1,6 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { MusicPlayer } from "./music-player.ts";
+import { mdi } from "../icons.ts";
 
 /**
  * Automatically plays ambient music in the flat if there is movement and there
@@ -18,7 +19,7 @@ export function MusicService({
 
   const musicPlayerSwitch = synapse.switch({
     name: "Music",
-    icon: "mdi:music",
+    icon: mdi.music,
     unique_id: "autoplay_music_switch",
     suggested_object_id: "autoplay_music",
     context,
