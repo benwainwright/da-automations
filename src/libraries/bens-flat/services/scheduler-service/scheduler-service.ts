@@ -36,7 +36,13 @@ export function SchedulerService({
 
     const [reading] = meter.state.toString().split(".");
 
-    const emailContent = `Hi there. \nPlease can you apply the following meter reading to my fuse account: ${reading}`;
+    const emailContent = `Hi there. <br />Please can you apply the following meter reading to my fuse account:
+     <br />${reading}
+     <br />
+     <br />
+     Regards </br />
+     Ben Wainwright
+     `;
 
     await email.send({
       from: "bwainwright28@gmail.com",
