@@ -64,6 +64,7 @@ export function LightsService({
       name: switchName,
       unique_id: toSynapseUniqueId(switchName),
       suggested_object_id: toSynapseUniqueId(switchName),
+      icon: "mdi:motion-sensor",
       attributes: {
         area,
       },
