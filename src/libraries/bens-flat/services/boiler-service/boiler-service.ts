@@ -8,9 +8,15 @@ import { RemoveCallback } from "@digital-alchemy/hass";
  * 1 - Provide the boost timeout behaviour, but also
  * 2 - Control the underlying switches in a way that ensures they are never on at the same time
  */
-export function BoilerService({ hass, synapse, context, scheduler }: TServiceParams) {
-  const boilerMainElement = hass.refBy.id("switch.boiler_main_element");
-  const boilerBoost = hass.refBy.id("switch.boiler_boost_switch");
+export function BoilerService({
+  hass,
+  synapse,
+  context,
+  scheduler,
+  bens_flat: { entityIds },
+}: TServiceParams) {
+  const boilerMainElement = hass.refBy.id(entityIds.switches.boilerMainElement);
+  const boilerBoost = hass.refBy.id(entityIds.switches.boilerBoost);
 
   const boilerSwitch = synapse.switch({
     context,

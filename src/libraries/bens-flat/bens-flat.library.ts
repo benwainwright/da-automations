@@ -27,6 +27,7 @@ import {
   SchedulerService,
   TodoListService,
   BoilerService,
+  EntityIdService,
 } from "./services/index.ts";
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 
@@ -34,6 +35,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
   depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION, LIB_LEARNING_SENSORS],
   name: "bens_flat",
   priorityInit: [
+    "entityIds",
     "calender",
     "mediaPlayer",
     "alexa",
@@ -58,6 +60,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
     calender: CalendarService,
     alexa: AlexaMediaPlayerService,
     visitor: VisitorModeService,
+    entityIds: EntityIdService,
     scheduler: SchedulerService,
     motion: MotionService,
     blinds: BlindsService,

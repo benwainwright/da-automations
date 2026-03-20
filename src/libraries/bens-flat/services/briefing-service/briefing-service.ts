@@ -10,7 +10,7 @@ export function BriefingService({
   hass,
   synapse,
   context,
-  bens_flat: { notify, mediaPlayer, calender, todoList },
+  bens_flat: { notify, mediaPlayer, calender, todoList, entityIds },
   logger,
 }: TServiceParams) {
   const triggerBriefing = synapse.button({
@@ -34,10 +34,10 @@ export function BriefingService({
     await notify.speak({ message: briefingStringParts.join(" "), announce: false, volume: 0.5 });
     await hass.call.media_player.shuffle_set({
       shuffle: false,
-      entity_id: "media_player.whole_flat",
+      entity_id: entityIds.mediaPlayers.wholeFlat,
     });
     await mediaPlayer.play({
-      player: "media_player.whole_flat",
+      player: entityIds.mediaPlayers.wholeFlat,
       id: "library://podcast/3",
       type: "music",
       volume: 0.5,

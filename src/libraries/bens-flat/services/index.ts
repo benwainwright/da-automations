@@ -22,3 +22,4 @@ export { MediaPlayerService } from "./media-player-service/index.ts";
 export { SyncTvService } from "./sync-tv-service/sync-tv-service.ts";
 export { TodoListService } from "./todo-list-service/todo-list-service.ts";
 export { BoilerService } from "./boiler-service/boiler-service.ts";
+export { EntityIdService } from "./entity-service/entity-service.ts";

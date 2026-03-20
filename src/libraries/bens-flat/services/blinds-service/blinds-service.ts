@@ -10,7 +10,7 @@ export function BlindsService({
   automation: { time, solar },
   bens_flat,
 }: TServiceParams) {
-  const { motion } = bens_flat;
+  const { motion, entityIds } = bens_flat;
 
   const blindsDefaultClosed = synapse.switch({
     name: "Blinds default closed",
@@ -34,7 +34,7 @@ export function BlindsService({
     }
   });
 
-  const blinds = hass.refBy.id("cover.living_room_blinds");
+  const blinds = hass.refBy.id(entityIds.blinds.livingRoom);
 
   lifecycle.onReady(() => {
     blindsDefaultClosed.onUpdate(async (nextState, oldState) => {

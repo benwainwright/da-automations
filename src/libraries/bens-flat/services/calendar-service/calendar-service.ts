@@ -21,16 +21,16 @@ type GetCalendarResponse<TCalendar extends PICK_ENTITY<"calendar">> = {
   };
 };
 
-export function CalendarService({ hass }: TServiceParams) {
+export function CalendarService({ hass, bens_flat: { entityIds } }: TServiceParams) {
   const getEvents = async ({ start, end }: IGetEventsParams) => {
     const response = await hass.call.calendar.get_events<
-      GetCalendarResponse<"calendar.personal_calendar">
+      GetCalendarResponse<typeof entityIds.calendar.personalCalendar>
     >({
-      entity_id: "calendar.personal_calendar",
+      entity_id: entityIds.calendar.personalCalendar,
       start_date_time: start.toISOString(),
       end_date_time: end.toISOString(),
     });
-    return response["calendar.personal_calendar"].events;
+    return response[entityIds.calendar.personalCalendar].events;
   };
 
   const getCalendarEventsString = async () => {
