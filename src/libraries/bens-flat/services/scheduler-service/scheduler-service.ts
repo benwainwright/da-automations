@@ -2,13 +2,7 @@ import { CronExpression, TServiceParams } from "@digital-alchemy/core";
 
 const EVERY_WEEK_MONDAY_AT_9 = "0 9 * * 1";
 
-export function SchedulerService({
-  scheduler,
-  bens_flat: { scene, email },
-  hass,
-  context,
-  synapse,
-}: TServiceParams) {
+export function SchedulerService({ scheduler, bens_flat: { scene, email }, hass }: TServiceParams) {
   const { on, off } = scene.toggle({
     scene: "scene.night_audio",
     snapshot: ["number.bathroom_bass", "number.bedroom_speaker_bass", "number.living_room_bass"],
@@ -22,13 +16,6 @@ export function SchedulerService({
   scheduler.cron({
     schedule: CronExpression.EVERY_DAY_AT_9AM,
     exec: off,
-  });
-
-  const sendMeterReadingButton = synapse.button({
-    name: "Send meter reading",
-    context,
-    unique_id: "send_reading",
-    suggested_object_id: "send_reading",
   });
 
   const sendMeterReading = async () => {
@@ -45,13 +32,11 @@ export function SchedulerService({
 
     await email.send({
       from: "bwainwright28@gmail.com",
-      to: "bwainwright28@gmail.com",
+      to: "support@fuseenergy.com",
       subject: "Meter reading",
       body: emailContent,
     });
   };
-
-  sendMeterReadingButton.onPress(sendMeterReading);
 
   scheduler.cron({
     schedule: EVERY_WEEK_MONDAY_AT_9,
