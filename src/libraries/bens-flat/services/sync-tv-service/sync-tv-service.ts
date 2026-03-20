@@ -7,6 +7,7 @@ export function SyncTvService({ hass }: TServiceParams) {
   const tv = hass.refBy.id("media_player.tv");
 
   appleTv.onUpdate(async (newState, oldState) => {
+    if (!newState || !oldState) return;
     if (newState.state === "idle" && oldState.state === "off" && tv.state !== "on") {
       await hass.call.button.press({
         entity_id: "button.turn_on_tv",
