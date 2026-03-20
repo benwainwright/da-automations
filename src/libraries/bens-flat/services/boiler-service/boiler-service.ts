@@ -31,6 +31,10 @@ export function BoilerService({ hass, synapse, context, scheduler }: TServicePar
     await boilerBoost.turn_on();
     scheduler.setTimeout(async () => {
       await boilerBoost.turn_off();
+      await boilerBoost.waitForState("off");
+      if (boilerSwitch.is_on) {
+        await boilerMainElement.turn_on();
+      }
     }, [1, "hour"]);
   });
 }
