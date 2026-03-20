@@ -1,8 +1,6 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { getDateAndTimeString } from "./get-day-and-time-string.ts";
 import { formatWeatherForSpeech } from "./format-weather-for-speech.ts";
-import { getCalendarString } from "./get-calendar-string.ts";
-import { getTodoListString } from "./get-todo-list-string.ts";
 
 /**
  * Responsible for constructing and playing my morning briefing
@@ -11,7 +9,7 @@ export function BriefingService({
   hass,
   synapse,
   context,
-  bens_flat: { notify, mediaPlayer, calender },
+  bens_flat: { notify, mediaPlayer, calender, todoList },
   logger,
 }: TServiceParams) {
   const triggerBriefing = synapse.button({
@@ -20,15 +18,15 @@ export function BriefingService({
     context,
   });
 
-  const readBriefing = async () => {
+  const readMorningBriefing = async () => {
     logger.info(`Triggering briefing`);
 
     const briefingStringParts = [
       `Good morning!`,
       getDateAndTimeString(),
       formatWeatherForSpeech(hass, "weather.home"),
-      await getCalendarString(calender.getEvents),
-      await getTodoListString(hass),
+      await calender.toString(),
+      await todoList.toString(),
     ];
 
     await notify.speak({ message: briefingStringParts.join(" "), announce: false, volume: 0.5 });
@@ -45,8 +43,8 @@ export function BriefingService({
   };
 
   triggerBriefing.onPress(async () => {
-    await readBriefing();
+    await readMorningBriefing();
   });
 
-  return { read: readBriefing };
+  return { read: readMorningBriefing };
 }

@@ -1,6 +1,7 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { PICK_ENTITY } from "@digital-alchemy/hass";
 import { Dayjs } from "dayjs";
+import { getCalendarString } from "./get-calendar-string.ts";
 
 interface IGetEventsParams {
   start: Dayjs;
@@ -31,5 +32,10 @@ export function CalendarService({ hass }: TServiceParams) {
     });
     return response["calendar.personal_calendar"].events;
   };
-  return { getEvents };
+
+  const getCalendarEventsString = async () => {
+    return await getCalendarString(getEvents);
+  };
+
+  return { getEvents, toString: getCalendarEventsString };
 }

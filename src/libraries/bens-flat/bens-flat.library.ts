@@ -25,6 +25,7 @@ import {
   SyncTvService,
   EmailService,
   SchedulerService,
+  TodoListService,
 } from "./services/index.ts";
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 
@@ -48,6 +49,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
     "goingHomeRecorder",
   ],
   services: {
+    todoList: TodoListService,
     nags: NagService,
     email: EmailService,
     music: MusicService,
