@@ -13,7 +13,7 @@ export function SleepModeService({
   automation: { time },
 }: TServiceParams) {
   const sleepMode = synapse.switch({
-    name: "Sleep Mode",
+    name: "Night Mode",
     context,
     icon: mdi.sleep,
     unique_id: "sleep_mode_switch",
