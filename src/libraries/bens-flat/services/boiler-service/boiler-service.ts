@@ -32,6 +32,10 @@ export function BoilerService({ hass, synapse, context, scheduler }: TServicePar
     await boilerMainElement.turn_on();
   });
 
+  boilerSwitch.onTurnOff(async () => {
+    await boilerMainElement.turn_off();
+  });
+
   let clearBoostOff: RemoveCallback | undefined;
 
   boost.onTurnOn(async () => {
