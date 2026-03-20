@@ -1,5 +1,6 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { MDI_HEAT_WAVE, MDI_WATER_BOILER } from "../icons.ts";
+import { RemoveCallback } from "@digital-alchemy/hass";
 
 export function BoilerService({ hass, synapse, context, scheduler }: TServiceParams) {
   const boilerMainElement = hass.refBy.id("switch.boiler_main_element");
@@ -12,7 +13,7 @@ export function BoilerService({ hass, synapse, context, scheduler }: TServicePar
     icon: MDI_WATER_BOILER,
   });
 
-  const boost = synapse.button({
+  const boost = synapse.switch({
     context,
     name: "Boiler Boost",
     suggested_object_id: "boiler_boost",
@@ -25,16 +26,27 @@ export function BoilerService({ hass, synapse, context, scheduler }: TServicePar
     await boilerMainElement.turn_on();
   });
 
-  boost.onPress(async () => {
+  let clearBoostOff: RemoveCallback | undefined;
+
+  boost.onTurnOn(async () => {
     await boilerMainElement.turn_off();
     await boilerMainElement.waitForState("off");
     await boilerBoost.turn_on();
-    scheduler.setTimeout(async () => {
+    clearBoostOff = scheduler.setTimeout(async () => {
       await boilerBoost.turn_off();
       await boilerBoost.waitForState("off");
       if (boilerSwitch.is_on) {
         await boilerMainElement.turn_on();
       }
     }, [1, "hour"]);
+  });
+
+  boost.onTurnOff(async () => {
+    clearBoostOff?.remove();
+    await boilerBoost.turn_off();
+    if (boilerSwitch.is_on) {
+      await boilerBoost.waitForState("off");
+      await boilerMainElement.turn_on();
+    }
   });
 }
