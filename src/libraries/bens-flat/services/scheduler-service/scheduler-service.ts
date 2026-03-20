@@ -28,6 +28,8 @@ export function SchedulerService({
   const sendMeterReadingButton = synapse.button({
     name: "Send meter reading",
     context,
+    unique_id: "send_reading",
+    suggested_object_id: "send_reading",
   });
 
   const sendMeterReading = async () => {
