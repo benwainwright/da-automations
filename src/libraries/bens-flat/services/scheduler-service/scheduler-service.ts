@@ -4,7 +4,6 @@ const EVERY_WEEK_MONDAY_AT_9 = "0 9 * * 1";
 
 export function SchedulerService({
   scheduler,
-
   bens_flat: { scene, email },
   hass,
   context,

@@ -1,5 +1,5 @@
 import { LIB_AUTOMATION } from "@digital-alchemy/automation";
-import { CreateLibrary, Scheduler } from "@digital-alchemy/core";
+import { CreateLibrary } from "@digital-alchemy/core";
 import { LIB_HASS } from "@digital-alchemy/hass";
 import { LIB_SYNAPSE } from "@digital-alchemy/synapse";
 import {
@@ -24,6 +24,7 @@ import {
   AlexaMediaPlayerService,
   SyncTvService,
   EmailService,
+  SchedulerService,
 } from "./services/index.ts";
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 
@@ -53,7 +54,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
     calender: CalendarService,
     alexa: AlexaMediaPlayerService,
     visitor: VisitorModeService,
-    scheduler: Scheduler,
+    scheduler: SchedulerService,
     motion: MotionService,
     blinds: BlindsService,
     plants: PlantsService,
