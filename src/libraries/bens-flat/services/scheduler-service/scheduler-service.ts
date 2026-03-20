@@ -34,12 +34,9 @@ export function SchedulerService({
   const sendMeterReading = async () => {
     const meter = hass.refBy.id("sensor.electricity_meter");
 
-    const emailContent = `
-      Hi there
+    const [reading] = meter.state.toString().split(".");
 
-      please can you apply the following meter reading to my fuse account
-
-      reading: ${meter.state}`;
+    const emailContent = `Hi there. \nPlease can you apply the following meter reading to my fuse account: ${reading}`;
 
     await email.send({
       from: "bwainwright28@gmail.com",
