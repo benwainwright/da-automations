@@ -28,7 +28,9 @@ export function BoilerService({ hass, synapse, context, scheduler }: TServicePar
 
   boilerSwitch.onTurnOn(async () => {
     await boilerBoost.turn_off();
-    await boilerBoost.waitForState("off");
+    if (boilerBoost.state !== "off") {
+      await boilerBoost.waitForState("off");
+    }
     await boilerMainElement.turn_on();
   });
 
@@ -40,7 +42,9 @@ export function BoilerService({ hass, synapse, context, scheduler }: TServicePar
 
   boost.onTurnOn(async () => {
     await boilerMainElement.turn_off();
-    await boilerMainElement.waitForState("off");
+    if (boilerMainElement.state !== "off") {
+      await boilerMainElement.waitForState("off");
+    }
     await boilerBoost.turn_on();
     clearBoostOff = scheduler.setTimeout(async () => {
       await hass.call.switch.turn_off({
@@ -53,7 +57,9 @@ export function BoilerService({ hass, synapse, context, scheduler }: TServicePar
     clearBoostOff?.remove();
     await boilerBoost.turn_off();
     if (boilerSwitch.is_on) {
-      await boilerBoost.waitForState("off");
+      if (boilerBoost.state !== "off") {
+        await boilerBoost.waitForState("off");
+      }
       await boilerMainElement.turn_on();
     }
   });
