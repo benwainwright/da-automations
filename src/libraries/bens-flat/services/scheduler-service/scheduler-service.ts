@@ -1,4 +1,5 @@
 import { CronExpression, TServiceParams } from "@digital-alchemy/core";
+import { sendMeterReading } from "./send-meter-reading.ts";
 
 const EVERY_WEEK_MONDAY_AT_9 = "0 9 * * 1";
 
@@ -18,29 +19,9 @@ export function SchedulerService({ scheduler, bens_flat: { scene, email }, hass 
     exec: off,
   });
 
-  const sendMeterReading = async () => {
-    const meter = hass.refBy.id("sensor.electricity_meter");
-
-    const [reading] = meter.state.toString().split(".");
-
-    const emailContent = `Dear Fuse support. <br /><br />Please can you apply the following meter reading to my fuse account.
-     <br /><br />Reading: ${reading}
-     <br />
-     <br />
-     Regards,<br />
-     Ben Wainwright`;
-
-    await email.send({
-      from: "bwainwright28@gmail.com",
-      to: "support@fuseenergy.com",
-      subject: "Meter reading",
-      body: emailContent,
-    });
-  };
-
   scheduler.cron({
     schedule: EVERY_WEEK_MONDAY_AT_9,
-    exec: sendMeterReading,
+    exec: sendMeterReading(hass, email),
   });
 
   scheduler.cron({
