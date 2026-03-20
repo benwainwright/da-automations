@@ -96,7 +96,7 @@ export function NotificationService({
   const notify = async ({ message, title }: NotifyConfig) => {
     if (tv.state === "on") {
       await Promise.all([
-        hass.call.notify.lg_webos_tv_oled55c8pla({
+        hass.call.notify.tv({
           message,
           title,
         }),
@@ -109,7 +109,7 @@ export function NotificationService({
     if (tv.state === "on") {
       await Promise.all([
         lights.flash(),
-        hass.call.notify.lg_webos_tv_oled55c8pla({
+        hass.call.notify.tv({
           message,
           title,
           data: {
