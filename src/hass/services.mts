@@ -4279,6 +4279,126 @@ declare module "@digital-alchemy/hass" {
         }>,
       ) => Promise<void>;
     };
+    // # MARK: google_mail
+    google_mail: {
+      /**
+       * ### set_vacation
+       *
+       * >
+       */
+      set_vacation: (
+        service_data?: {
+          /**
+           * ## enabled
+           *
+           * ### Default
+           *
+           * > ```json
+           * > true
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          enabled: boolean;
+          /**
+           * ## end
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > date: {}
+           * > ```
+           */
+          end?: string;
+          /**
+           * ## message
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          message: string;
+          /**
+           * ## plain_text
+           *
+           * ### Default
+           *
+           * > ```json
+           * > true
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          plain_text?: boolean;
+          /**
+           * ## restrict_contacts
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          restrict_contacts?: boolean;
+          /**
+           * ## restrict_domain
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          restrict_domain?: boolean;
+          /**
+           * ## start
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > date: {}
+           * > ```
+           */
+          start?: string;
+          /**
+           * ## title
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          title?: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - integration: google_mail
+           * > ```
+           */
+          entity_id: never | never[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
     // # MARK: group
     group: {
       /**
@@ -5182,7 +5302,9 @@ declare module "@digital-alchemy/hass" {
           | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
-          | "01KM3MZPA0ECG3JBH1DKQ3GVBD";
+          | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
+          | "01KM5JA5KW7WHTBP9DBS24W9CM"
+          | "01KM5JQ5DGWDX8JGPZMNPNQN75";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -7766,7 +7888,9 @@ declare module "@digital-alchemy/hass" {
           | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
-          | "01KM3MZPA0ECG3JBH1DKQ3GVBD";
+          | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
+          | "01KM5JA5KW7WHTBP9DBS24W9CM"
+          | "01KM5JQ5DGWDX8JGPZMNPNQN75";
         /**
          * ## favorite
          *
@@ -8284,7 +8408,9 @@ declare module "@digital-alchemy/hass" {
           | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
-          | "01KM3MZPA0ECG3JBH1DKQ3GVBD";
+          | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
+          | "01KM5JA5KW7WHTBP9DBS24W9CM"
+          | "01KM5JQ5DGWDX8JGPZMNPNQN75";
         /**
          * ## library_only
          *
@@ -9112,6 +9238,73 @@ declare module "@digital-alchemy/hass" {
         title?: string;
       }) => Promise<void>;
       /**
+       * ### Send a notification with bwainwright28_gmail_com
+       *
+       * > Sends a notification message using the bwainwright28_gmail_com service.
+       */
+      bwainwright28_gmail_com: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
        * ### Send a notification with lg_webos_tv_oled55c8pla
        *
        * > Sends a notification message using the lg_webos_tv_oled55c8pla service.
@@ -9558,73 +9751,6 @@ declare module "@digital-alchemy/hass" {
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
-      /**
-       * ### Send a notification with tv
-       *
-       * > Sends a notification message using the tv service.
-       */
-      tv: (service_data?: {
-        /**
-         * ## data
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "data": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
-        /**
-         * ## message
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "message": "The garage door has been open for 10 minutes."
-         * > }
-         * > ```
-         */
-        message: string;
-        /**
-         * ## target
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "target": "platform specific"
-         * > }
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > object: null
-         * > ```
-         */
-        target?: unknown;
-        /**
-         * ## title
-         *
-         * ### Example
-         *
-         * > ```json
-         * > {
-         * >   "title": "Your Garage Door Friend"
-         * > }
-         * > ```
-         */
-        title?: string;
-      }) => Promise<void>;
     };
     // # MARK: number
     number: {
@@ -9753,7 +9879,9 @@ declare module "@digital-alchemy/hass" {
           | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
-          | "01KM3MZPA0ECG3JBH1DKQ3GVBD";
+          | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
+          | "01KM5JA5KW7WHTBP9DBS24W9CM"
+          | "01KM5JQ5DGWDX8JGPZMNPNQN75";
         /**
          * ## filenames
          *
@@ -9875,7 +10003,9 @@ declare module "@digital-alchemy/hass" {
           | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
-          | "01KM3MZPA0ECG3JBH1DKQ3GVBD";
+          | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
+          | "01KM5JA5KW7WHTBP9DBS24W9CM"
+          | "01KM5JQ5DGWDX8JGPZMNPNQN75";
         /**
          * ## prompt
          *
@@ -13900,6 +14030,76 @@ declare module "@digital-alchemy/hass" {
            * > ```
            */
           entity_id: PICK_ENTITY<"update"> | PICK_ENTITY<"update">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+    };
+    // # MARK: utility_meter
+    utility_meter: {
+      /**
+       * ### calibrate
+       *
+       * >
+       */
+      calibrate: (
+        service_data: {
+          /**
+           * ## value
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "value": "100"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: false
+           * >   multiple: false
+           * > ```
+           */
+          value: string;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - sensor
+           * >     integration: utility_meter
+           * > ```
+           */
+          entity_id:
+            | PICK_FROM_PLATFORM<"utility_meter", "sensor">
+            | PICK_FROM_PLATFORM<"utility_meter", "sensor">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### reset
+       *
+       * >
+       */
+      reset: (
+        service_data: RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - select
+           * >     integration: utility_meter
+           * > ```
+           */
+          entity_id: never | never[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
