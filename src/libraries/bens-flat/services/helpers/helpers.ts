@@ -49,6 +49,23 @@ export function HelpersService({ hass, scheduler }: TServiceParams) {
     return { trigger, reset };
   };
 
+  const timedLatch = (callback: () => void | Promise<void>, timeout: TOffset, start = false) => {
+    let triggered = start;
+
+    const trigger = async () => {
+      if (triggered) {
+        return;
+      }
+      triggered = true;
+      scheduler.setTimeout(() => {
+        triggered = false;
+      }, timeout);
+      await callback();
+    };
+
+    return { trigger };
+  };
+
   return {
     turnOffAll,
     turnOnAll,
@@ -56,5 +73,6 @@ export function HelpersService({ hass, scheduler }: TServiceParams) {
     fiveAm,
     setDebouncedTimeout,
     latch,
+    timedLatch,
   };
 }

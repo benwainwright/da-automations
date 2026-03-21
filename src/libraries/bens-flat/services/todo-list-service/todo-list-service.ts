@@ -2,20 +2,32 @@ import { TServiceParams } from "@digital-alchemy/core";
 import { getTodoListString } from "./get-todo-list-string.ts";
 import { mdi } from "../icons.ts";
 
-export function TodoListService({ hass, synapse, context, bens_flat: { notify } }: TServiceParams) {
+export function TodoListService({
+  hass,
+  synapse,
+  context,
+  bens_flat: { notify, helpers, motion, sleepMode },
+  automation: { time },
+}: TServiceParams) {
   const generateTodoListString = async () => {
     return await getTodoListString(hass);
   };
 
-  const readTodoListButton = synapse.button({
-    name: "Todo list",
+  const reminders = synapse.switch({
+    name: "Reminders",
     context,
     icon: mdi.checkCircleOutline,
-    unique_id: "read-todo-list",
+    unique_id: "todo-list-reminders",
   });
 
-  readTodoListButton.onPress(async () => {
+  const { trigger } = helpers.timedLatch(async () => {
     await notify.speak({ message: await generateTodoListString(), announce: true, volume: 0.5 });
+  }, [1, "hour"]);
+
+  motion.anywhere(() => {
+    if (reminders.is_on && !sleepMode.isOn() && time.isAfter("PM01:30")) {
+      trigger();
+    }
   });
 
   return { toString: generateTodoListString };
