@@ -13,8 +13,12 @@ words:
   - bwainwright
   - HAOS
   - oxlint
+  - nuki
   - lolcatjs
   - vtsls
   - oxfmt
+  - smartlocks
+  - smartlock
+  - homekit
 ignoreWords: []
 import: []

@@ -30,9 +30,10 @@ import {
   EntityIdService,
 } from "./services/index.ts";
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
+import { LIB_NUKI } from "../nuki/nuki.library.ts";
 
 export const LIB_BENS_FLAT = CreateLibrary({
-  depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION, LIB_LEARNING_SENSORS],
+  depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION, LIB_LEARNING_SENSORS, LIB_NUKI],
   name: "bens_flat",
   priorityInit: [
     "entityIds",
