@@ -11,10 +11,10 @@ export function ApiService({ config, logger }: TServiceParams) {
 
     if (apiLock) {
       const logs = await client.getSmartlockLogs(apiLock.smartlockId, now);
-      logger.info(logs);
+      logger.info(JSON.stringify(logs, null, 2));
       setTimeout(async () => {
         const moreLogs = await client.getSmartlockLogs(apiLock.smartlockId, now);
-        logger.info(moreLogs);
+        logger.info(JSON.stringify(moreLogs, null, 2));
       }, 6000);
     }
   };
