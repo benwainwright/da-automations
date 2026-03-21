@@ -24,8 +24,18 @@ export function NotificationService({
   const ttsSay = async (config: ITtsSayConfig) => {
     return new Promise<void>(async (accept, reject) => {
       const player = hass.refBy.id(config.player);
+      if (player.state === "playing") {
+      }
       const originalVolume = player.attributes["volume_level"];
       try {
+        if (config.announce) {
+          await hass.call.tts.speak({
+            entity_id: config.source,
+            media_player_entity_id: config.player,
+            message: config.message,
+          });
+          return;
+        }
         if (config.volume) {
           await hass.call.media_player.volume_set({
             volume_level: config.volume,
@@ -36,21 +46,17 @@ export function NotificationService({
           id: `media-source://tts/${config.source}?message=${encodeURIComponent(config.message)}`,
           type: "provider",
           player: config.player,
-          announce: config.announce,
+          announce: false,
         });
-        if (config.announce) {
-          accept();
-        } else {
-          if (player.state !== "playing") {
-            await player.waitForState("playing");
-          }
-          const listener = player.onUpdate((newState) => {
-            if (newState.state !== "playing") {
-              listener.remove();
-              accept();
-            }
-          });
+        if (player.state !== "playing") {
+          await player.waitForState("playing");
         }
+        const listener = player.onUpdate((newState) => {
+          if (newState.state !== "playing") {
+            listener.remove();
+            accept();
+          }
+        });
       } catch (error) {
         reject(error);
       } finally {
