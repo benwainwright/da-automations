@@ -32,7 +32,7 @@ export function CalendarService({
     name: "Events",
     context,
     icon: mdi.calendarBlank,
-    unique_id: "todo-list-reminders",
+    unique_id: "calendar-button",
   });
 
   const getEvents = async ({ start, end }: IGetEventsParams) => {

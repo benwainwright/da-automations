@@ -17,6 +17,7 @@ export function TodoListService({
     name: "Reminders",
     context,
     icon: mdi.checkCircleOutline,
+
     unique_id: "todo-list-reminders",
   });
 
