@@ -9,8 +9,8 @@ interface CalendarEvent {
 
 type Fetcher = (config: { start: Dayjs; end: Dayjs }) => Promise<CalendarEvent[]>;
 
-export const getTodaysCalendarString = async (fetcher: Fetcher) => {
-  const startOfToday = dayjs().startOf("day");
+export const getRemainingCalendarString = async (fetcher: Fetcher) => {
+  const startOfToday = dayjs();
   const endOfToday = dayjs().endOf("day");
 
   const events = await fetcher({
@@ -19,7 +19,7 @@ export const getTodaysCalendarString = async (fetcher: Fetcher) => {
   });
 
   if (events.length === 0) {
-    return "there is no events in your calendar";
+    return null;
   }
 
   const readString = events
@@ -28,5 +28,5 @@ export const getTodaysCalendarString = async (fetcher: Fetcher) => {
 
   const eventLabel = events.length === 1 ? "event" : "events";
 
-  return `You currently have ${events.length} ${eventLabel} in your calendar: ${readString}`;
+  return `You have ${events.length} ${eventLabel} remaining in your calendar today: ${readString}`;
 };

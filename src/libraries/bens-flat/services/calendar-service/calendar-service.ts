@@ -1,8 +1,9 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { PICK_ENTITY } from "@digital-alchemy/hass";
 import { Dayjs } from "dayjs";
-import { getCalendarString } from "./get-calendar-string.ts";
+import { getTodaysCalendarString } from "./get-calendar-string.ts";
 import { mdi } from "../icons.ts";
+import { getRemainingCalendarString } from "./get-remaining-calendar-string.ts";
 
 interface IGetEventsParams {
   start: Dayjs;
@@ -47,11 +48,14 @@ export function CalendarService({
   };
 
   const getCalendarEventsString = async () => {
-    return await getCalendarString(getEvents);
+    return await getTodaysCalendarString(getEvents);
   };
 
   events.onPress(async () => {
-    await notify.speak({ announce: true, message: await getCalendarEventsString() });
+    const remaining = await getRemainingCalendarString(getEvents);
+    if (remaining) {
+      await notify.speak({ announce: true, message: remaining });
+    }
   });
 
   return { getEvents, toString: getCalendarEventsString };
