@@ -2,7 +2,22 @@ import { TServiceParams } from "@digital-alchemy/core";
 import { getClient } from "./client/get-client.ts";
 
 export function ApiService({ config }: TServiceParams) {
-  const client = getClient(config.nuki.NUKI_API_TOKEN);
+  const getLogs = async (name: string) => {
+    const now = new Date();
+    const client = getClient(config.nuki.NUKI_API_TOKEN);
+    const locks = await client.getSmartlocks();
 
-  return client;
+    const apiLock = locks.find((apiLock) => apiLock.name === name);
+
+    if (apiLock) {
+      const logs = await client.getSmartlockLogs(apiLock.smartlockId, now);
+      console.log(logs);
+      setTimeout(async () => {
+        const moreLogs = await client.getSmartlockLogs(apiLock.smartlockId, now);
+        console.log(moreLogs);
+      }, 6000);
+    }
+  };
+
+  return { getLogs };
 }
