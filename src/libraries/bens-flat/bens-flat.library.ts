@@ -31,6 +31,7 @@ import {
 } from "./services/index.ts";
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 import { LIB_NUKI } from "../nuki/nuki.library.ts";
+import { LockService } from "./services/lock-service/lock-service.ts";
 
 export const LIB_BENS_FLAT = CreateLibrary({
   depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION, LIB_LEARNING_SENSORS, LIB_NUKI],
@@ -58,6 +59,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
     nags: NagService,
     email: EmailService,
     music: MusicService,
+    lock: LockService,
     calender: CalendarService,
     alexa: AlexaMediaPlayerService,
     visitor: VisitorModeService,

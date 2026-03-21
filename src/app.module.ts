@@ -11,11 +11,11 @@ import { LIB_NUKI } from "./libraries/nuki/nuki.library.ts";
 
 const APP = CreateApplication({
   libraries: [
+    LIB_NUKI,
     LIB_HASS,
     LIB_SYNAPSE,
     LIB_AUTOMATION,
     LIB_BENS_FLAT,
-    LIB_NUKI,
     LIB_AUTO_DEPLOY,
     LIB_LEARNING_SENSORS,
   ],
