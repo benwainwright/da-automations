@@ -33,8 +33,6 @@ export class ApiClient {
     headers.set("Accept", "application/json");
     headers.set("Authorization", `Bearer ${this.token}`);
 
-    console.log({ finalUrl, headers, method });
-
     const result = await fetch(finalUrl, {
       method,
       headers,
