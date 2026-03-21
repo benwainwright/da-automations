@@ -46,7 +46,7 @@ export const getTodoListString = async (hass: TServiceParams["hass"]) => {
   const itemsString = items.map((item) => item.summary).join(", ");
 
   if (items.length === 0) {
-    return `You have nothing in your todo list`;
+    return null;
   }
 
   return `${countString} ${itemsString}`;

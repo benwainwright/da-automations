@@ -22,7 +22,10 @@ export function TodoListService({
   });
 
   const { trigger } = helpers.timedLatch(async () => {
-    await notify.speak({ message: await generateTodoListString(), announce: true, volume: 0.5 });
+    const todoListString = await generateTodoListString();
+    if (todoListString) {
+      await notify.speak({ message: todoListString, announce: true, volume: 0.5 });
+    }
   }, [1, "hour"]);
 
   motion.anywhere(() => {

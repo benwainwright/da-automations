@@ -28,7 +28,7 @@ export function BriefingService({
       getDateAndTimeString(),
       formatWeatherForSpeech(hass, "weather.home"),
       await calender.toString(),
-      await todoList.toString(),
+      (await todoList.toString()) ?? "You have nothing in your todo list",
     ];
 
     await notify.speak({ message: briefingStringParts.join(" "), announce: false, volume: 0.5 });

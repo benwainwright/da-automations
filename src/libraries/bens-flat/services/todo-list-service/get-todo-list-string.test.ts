@@ -12,7 +12,7 @@ test("returns empty todo message when no due or overdue items exist", async () =
     call: { todo: { get_items } },
   } as any);
 
-  expect(result).toBe("You have nothing in your todo list");
+  expect(result).toBe(null);
 });
 
 test("includes only due-today and overdue items", async () => {
