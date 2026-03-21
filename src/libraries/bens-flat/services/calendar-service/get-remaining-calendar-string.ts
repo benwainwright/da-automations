@@ -13,10 +13,12 @@ export const getRemainingCalendarString = async (fetcher: Fetcher) => {
   const startOfToday = dayjs();
   const endOfToday = dayjs().endOf("day");
 
-  const events = await fetcher({
-    start: startOfToday,
-    end: endOfToday,
-  });
+  const events = (
+    await fetcher({
+      start: startOfToday,
+      end: endOfToday,
+    })
+  ).filter((event) => dayjs(event.start).isAfter(dayjs()));
 
   if (events.length === 0) {
     return null;
