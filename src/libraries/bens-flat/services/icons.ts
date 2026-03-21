@@ -2,6 +2,7 @@ export const mdi = {
   waterBoiler: "mdi:water-boiler",
   heatWave: "mdi:heat-wave",
   chat: "mdi:chat",
+  calendarBlank: "mdi:calendar-blank",
   motionSensor: "mdi:motion-sensor",
   sleep: "mdi:sleep",
   music: "mdi:music",

@@ -6,7 +6,7 @@ export function TodoListService({
   hass,
   synapse,
   context,
-  bens_flat: { notify, helpers, motion, sleepMode },
+  bens_flat: { notify, helpers, motion, sleepMode, tvMode },
   automation: { time },
 }: TServiceParams) {
   const generateTodoListString = async () => {
@@ -25,7 +25,7 @@ export function TodoListService({
   }, [1, "hour"]);
 
   motion.anywhere(() => {
-    if (reminders.is_on && !sleepMode.isOn() && time.isAfter("PM01:30")) {
+    if (reminders.is_on && !sleepMode.isOn() && time.isAfter("PM01:30") && !tvMode.isOn()) {
       trigger();
     }
   });

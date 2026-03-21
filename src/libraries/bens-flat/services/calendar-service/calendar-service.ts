@@ -2,6 +2,7 @@ import { TServiceParams } from "@digital-alchemy/core";
 import { PICK_ENTITY } from "@digital-alchemy/hass";
 import { Dayjs } from "dayjs";
 import { getCalendarString } from "./get-calendar-string.ts";
+import { mdi } from "../icons.ts";
 
 interface IGetEventsParams {
   start: Dayjs;
@@ -21,7 +22,19 @@ type GetCalendarResponse<TCalendar extends PICK_ENTITY<"calendar">> = {
   };
 };
 
-export function CalendarService({ hass, bens_flat: { entityIds } }: TServiceParams) {
+export function CalendarService({
+  hass,
+  synapse,
+  context,
+  bens_flat: { entityIds, notify },
+}: TServiceParams) {
+  const events = synapse.button({
+    name: "Events",
+    context,
+    icon: mdi.calendarBlank,
+    unique_id: "todo-list-reminders",
+  });
+
   const getEvents = async ({ start, end }: IGetEventsParams) => {
     const response = await hass.call.calendar.get_events<
       GetCalendarResponse<typeof entityIds.calendar.personalCalendar>
@@ -36,6 +49,10 @@ export function CalendarService({ hass, bens_flat: { entityIds } }: TServicePara
   const getCalendarEventsString = async () => {
     return await getCalendarString(getEvents);
   };
+
+  events.onPress(async () => {
+    await notify.speak({ announce: true, message: await getCalendarEventsString() });
+  });
 
   return { getEvents, toString: getCalendarEventsString };
 }
