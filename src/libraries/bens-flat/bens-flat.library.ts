@@ -43,6 +43,7 @@ export const LIB_BENS_FLAT = CreateLibrary({
     "alexa",
     "nags",
     "scene",
+    "todoList",
     "briefing",
     "motion",
     "blinds",
