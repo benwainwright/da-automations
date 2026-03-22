@@ -8,7 +8,7 @@ export function SleepModeService({
   hass,
   context,
   synapse,
-  bens_flat: { helpers, lights, motion, briefing, visitor, calender, notify, alexa },
+  bens_flat: { helpers, lights, motion, visitor, calender, notify, alexa },
   logger,
   automation: { time },
 }: TServiceParams) {
@@ -47,8 +47,6 @@ export function SleepModeService({
     "switch.adaptive_lighting_sleep_mode_bathroom",
     "switch.adaptive_lighting_sleep_mode_spare_room",
   ];
-
-  const { trigger: readBriefing, reset: resetBriefing } = helpers.latch(briefing.read, true);
 
   const setAlarm = async () => {
     const events = await calender.getEvents({
@@ -89,7 +87,6 @@ export function SleepModeService({
   sleepMode.onTurnOn(async () => {
     (await lights.turnOffAll(),
       await Promise.allSettled([helpers.turnOnAll(adaptiveLightingSleepModeSwitches), setAlarm()]));
-    resetBriefing();
   });
 
   sleepMode.onTurnOff(async () => {
@@ -102,7 +99,6 @@ export function SleepModeService({
     const visitorModeIsOn = visitorModeEntity?.state === "on";
     if (time.isAfter(FIVE_AM) && sleepModeEntity && !visitorModeIsOn && time.isBefore(THREE_PM)) {
       await hass.call.switch.turn_off({ entity_id: sleepModeEntity });
-      await readBriefing();
     }
   };
 

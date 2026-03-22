@@ -2,6 +2,7 @@ import { TServiceParams } from "@digital-alchemy/core";
 import { getDateAndTimeString } from "./get-day-and-time-string.ts";
 import { formatWeatherForSpeech } from "./format-weather-for-speech.ts";
 import { mdi } from "../icons.ts";
+import { FIVE_AM, THREE_PM } from "../constants.ts";
 
 /**
  * Responsible for constructing and playing my morning briefing
@@ -13,6 +14,7 @@ export function BriefingService({
   bens_flat: {
     notify,
     helpers,
+    visitor,
     mediaPlayer,
     calender,
     todoList,
@@ -67,18 +69,36 @@ export function BriefingService({
     unique_id: "todo-list-reminders",
   });
 
-  const { trigger } = helpers.timedLatch(async () => {
+  const { trigger: triggerTodoList } = helpers.timedLatch(async () => {
     const todoListString = await todoList.toString();
     if (todoListString) {
       await notify.speak({ message: todoListString, announce: true, volume: 0.5 });
     }
   }, [1, "hour"]);
 
-  motion.anywhere(() => {
+  motion.anywhere(async () => {
     if (reminders.is_on && !sleepMode.isOn() && time.isAfter("PM01:30") && !tvMode.isOn()) {
-      trigger();
+      await triggerTodoList();
     }
   });
+
+  const { trigger: readBriefing, reset: resetBriefing } = helpers.latch(readMorningBriefing, true);
+
+  const morningTrigger = async () => {
+    const visitorModeEntity = visitor?.visitorMode?.getEntity?.();
+    const visitorModeIsOn = visitorModeEntity?.state === "on";
+    if (time.isAfter(FIVE_AM) && !visitorModeIsOn && time.isBefore(THREE_PM)) {
+      await readBriefing();
+    }
+  };
+
+  sleepMode.sleepModeSwitch.onTurnOn(() => {
+    resetBriefing();
+  });
+
+  motion.livingRoom(morningTrigger);
+  motion.hallway(morningTrigger);
+  motion.bathroom(morningTrigger);
 
   return { read: readMorningBriefing };
 }
