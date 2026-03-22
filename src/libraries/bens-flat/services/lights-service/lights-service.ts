@@ -80,9 +80,8 @@ export function LightsService({
       if (!newState) {
         return;
       }
-      const anyBlockSwitchIsOn = blockSwitches
-        ?.map(hass.refBy.id)
-        .some((theSwitch) => theSwitch.state === "on");
+      const anyBlockSwitchIsOn = () =>
+        blockSwitches?.map(hass.refBy.id).some((theSwitch) => theSwitch.state === "on");
 
       const switchEntity = motionSwitch?.getEntity?.();
       const switchIsOn = switchEntity?.state === "on";
@@ -91,13 +90,15 @@ export function LightsService({
         return;
       }
 
-      if (newState.state === "on" && switchIsOn && !anyBlockSwitchIsOn) {
+      if (newState.state === "on" && switchIsOn && !anyBlockSwitchIsOn()) {
         logger.info(`Turning ${area} lights on`);
         remove?.remove();
         await hass.call.light.turn_on({ area_id: area });
         remove = scheduler.setTimeout(async () => {
           logger.info(`Turning ${area} lights off`);
-          await hass.call.light.turn_off({ area_id: area });
+          if (!anyBlockSwitchIsOn()) {
+            await hass.call.light.turn_off({ area_id: area });
+          }
         }, timeout);
       }
     });
