@@ -29,6 +29,7 @@ export function SchedulerService({ scheduler, bens_flat: { scene, email }, hass 
     exec: () => {
       hass.call.switch.turn_on({
         entity_id: [
+          "switch.reminders",
           "switch.adaptive_lighting_adapt_brightness_hallway",
           "switch.adaptive_lighting_adapt_brightness_bedroom",
           "switch.adaptive_lighting_adapt_brightness_bathroom",
