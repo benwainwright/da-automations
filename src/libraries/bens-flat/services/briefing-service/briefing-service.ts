@@ -10,7 +10,18 @@ export function BriefingService({
   hass,
   synapse,
   context,
-  bens_flat: { notify, mediaPlayer, calender, todoList, entityIds },
+  bens_flat: {
+    notify,
+    helpers,
+    mediaPlayer,
+    calender,
+    todoList,
+    entityIds,
+    sleepMode,
+    motion,
+    tvMode,
+  },
+  automation: { time },
   logger,
 }: TServiceParams) {
   const triggerBriefing = synapse.button({
@@ -46,6 +57,27 @@ export function BriefingService({
 
   triggerBriefing.onPress(async () => {
     await readMorningBriefing();
+  });
+
+  const reminders = synapse.switch({
+    name: "Reminders",
+    context,
+    icon: mdi.checkCircleOutline,
+
+    unique_id: "todo-list-reminders",
+  });
+
+  const { trigger } = helpers.timedLatch(async () => {
+    const todoListString = await todoList.toString();
+    if (todoListString) {
+      await notify.speak({ message: todoListString, announce: true, volume: 0.5 });
+    }
+  }, [1, "hour"]);
+
+  motion.anywhere(() => {
+    if (reminders.is_on && !sleepMode.isOn() && time.isAfter("PM01:30") && !tvMode.isOn()) {
+      trigger();
+    }
   });
 
   return { read: readMorningBriefing };
