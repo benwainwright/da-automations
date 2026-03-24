@@ -13,6 +13,28 @@ type ServiceMapFromServiceMapWithDeps<T> =
     ? { [K in keyof T]: T[K] extends { func: ServiceFunction } ? T[K]["func"] : T[K] }
     : never;
 
+const assertNoCycle = <
+  const TServiceMap extends Record<
+    string,
+    | {
+        dependencies?: readonly (keyof TServiceMap)[];
+        func: ServiceFunction;
+      }
+    | ServiceFunction
+  >,
+>(
+  nextName: keyof TServiceMap,
+  chain?: Set<keyof TServiceMap>,
+) => {
+  if (chain?.has(nextName)) {
+    const theChain = Array.from([...chain.keys(), nextName])
+      .map((service) => (service === nextName ? chalk.blue(service) : service))
+      .join(" -> ");
+
+    throw new Error(`Cycle detected: ${nextName.toString()}: ${theChain}`);
+  }
+};
+
 const collectDependencies = <
   const TServiceMap extends Record<
     string,
@@ -36,13 +58,8 @@ const collectDependencies = <
       }
     | ServiceFunction,
 ][] => {
-  if (chain?.has(name)) {
-    const theChain = Array.from([...chain.keys(), name])
-      .map((service) => (service === name ? chalk.blue(service) : service))
-      .join(" -> ");
+  assertNoCycle<TServiceMap>(name, chain);
 
-    throw new Error(`Cycle detected: ${name.toString()}: ${theChain}`);
-  }
   if (all.has(name)) {
     return [];
   }
@@ -88,7 +105,6 @@ export const generateServiceMapWithPriorities = <
 
   const services = Object.keys(config.services).flatMap((name) => {
     const chain = new Set<keyof TServiceMapWithDeps>();
-    console.log("Start", name);
     return collectDependencies(config.services, name, all, chain);
   });
 
@@ -101,7 +117,6 @@ export const generateServiceMapWithPriorities = <
     ]),
   );
 
-  console.log(finalServices);
   return {
     priorityInit,
     services: finalServices as ServiceMapFromServiceMapWithDeps<TServiceMapWithDeps>,
