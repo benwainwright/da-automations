@@ -16,7 +16,7 @@ export function BriefingService({
     helpers,
     visitor,
     mediaPlayer,
-    calender,
+    calendar,
     todoList,
     entityIds,
     sleepMode,
@@ -40,7 +40,7 @@ export function BriefingService({
       `Good morning!`,
       getDateAndTimeString(),
       formatWeatherForSpeech(hass, "weather.home"),
-      await calender.toString(),
+      await calendar.toString(),
       (await todoList.toString()) ?? "You have nothing in your todo list",
     ];
 

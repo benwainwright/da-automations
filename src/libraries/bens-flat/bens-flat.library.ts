@@ -31,56 +31,96 @@ import {
 } from "./services/index.ts";
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 import { LIB_NUKI } from "../nuki/nuki.library.ts";
+import { generateServiceMapWithPriorities } from "./service-manager.ts";
+
+const { services, priorityInit } = generateServiceMapWithPriorities({
+  services: {
+    tv: SyncTvService,
+    boiler: {
+      func: BoilerService,
+      dependencies: ["entityIds"],
+    },
+    music: {
+      func: MusicService,
+      dependencies: ["tvMode", "motion", "mediaPlayer", "sleepMode"],
+    },
+    notify: {
+      func: NotificationService,
+      dependencies: ["lights", "mediaPlayer"],
+    },
+    calendar: {
+      func: CalendarService,
+      dependencies: ["entityIds", "notify"],
+    },
+    alexa: {
+      func: AlexaMediaPlayerService,
+      dependencies: ["mediaPlayer"],
+    },
+    lights: {
+      func: LightsService,
+      dependencies: ["helpers"],
+    },
+    briefing: {
+      func: BriefingService,
+      dependencies: [
+        "notify",
+        "helpers",
+        "visitor",
+        "mediaPlayer",
+        "calendar",
+        "todoList",
+        "entityIds",
+        "sleepMode",
+        "motion",
+        "tvMode",
+      ],
+    },
+    todoList: TodoListService,
+    helpers: HelpersService,
+    visitor: VisitorModeService,
+    presence: { func: PresenceDetectionService, dependencies: ["motion", "helpers"] },
+    goingHomeRecorder: GoingHomeRecorderService,
+    core: {
+      func: CoreModule,
+      dependencies: ["notify", "blinds", "presence", "lights"],
+    },
+    nags: {
+      func: NagService,
+      dependencies: ["notify"],
+    },
+    email: EmailService,
+    scene: SceneService,
+    motion: MotionService,
+    blinds: {
+      func: BlindsService,
+      dependencies: ["entityIds", "motion"],
+    },
+    entityIds: EntityIdService,
+    mediaPlayer: MediaPlayerService,
+    tvMode: {
+      func: TVModeService,
+      dependencies: ["blinds", "scene"],
+    },
+    scheduler: {
+      func: SchedulerService,
+      dependencies: ["scene", "email"],
+    },
+    plans: {
+      func: PlantsService,
+      dependencies: ["nags"],
+    },
+    sleepMode: {
+      func: SleepModeService,
+      dependencies: ["helpers", "lights", "motion", "visitor", "calendar", "notify", "alexa"],
+    },
+  },
+});
 
 export const LIB_BENS_FLAT = CreateLibrary({
   depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION, LIB_LEARNING_SENSORS, LIB_NUKI],
   name: "bens_flat",
-  priorityInit: [
-    "entityIds",
-    "calender",
-    "mediaPlayer",
-    "notify",
-    "alexa",
-    "nags",
-    "scene",
-    "helpers",
-    "motion",
-    "sleepMode",
-    "tvMode",
-    "todoList",
-    "briefing",
-    "blinds",
-    "lights",
-    "goingHomeRecorder",
-  ],
-  services: {
-    todoList: TodoListService,
-    boiler: BoilerService,
-    nags: NagService,
-    email: EmailService,
-    music: MusicService,
-    //lock: LockService,
-    calender: CalendarService,
-    alexa: AlexaMediaPlayerService,
-    visitor: VisitorModeService,
-    entityIds: EntityIdService,
-    scheduler: SchedulerService,
-    motion: MotionService,
-    blinds: BlindsService,
-    plants: PlantsService,
-    mediaPlayer: MediaPlayerService,
-    briefing: BriefingService,
-    scene: SceneService,
-    tvMode: TVModeService,
-    tv: SyncTvService,
-    presence: PresenceDetectionService,
-    lights: LightsService,
-    sleepMode: SleepModeService,
-    goingHomeRecorder: GoingHomeRecorderService,
-    notify: NotificationService,
-    core: CoreModule,
-    helpers: HelpersService,
-  },
+  priorityInit,
+  services,
 });
 
 declare module "@digital-alchemy/core" {

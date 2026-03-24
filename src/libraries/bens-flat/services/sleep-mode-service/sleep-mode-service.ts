@@ -8,7 +8,7 @@ export function SleepModeService({
   hass,
   context,
   synapse,
-  bens_flat: { helpers, lights, motion, visitor, calender, notify, alexa },
+  bens_flat: { helpers, lights, motion, visitor, calendar, notify, alexa },
   logger,
   automation: { time },
 }: TServiceParams) {
@@ -49,7 +49,7 @@ export function SleepModeService({
   ];
 
   const setAlarm = async () => {
-    const events = await calender.getEvents({
+    const events = await calendar.getEvents({
       start: dayjs().add(1, "day").startOf("day"),
       end: dayjs().add(1, "day").endOf("day"),
     });

@@ -32,7 +32,7 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
     bens_flat: {
       briefing: { read: mock(async () => {}) },
       helpers: { turnOffAll: mock(async () => {}), turnOnAll, latch },
-      calender: { getEvents },
+      calendar: { getEvents },
       notify: { speak },
       alexa: { command },
       visitor: {
