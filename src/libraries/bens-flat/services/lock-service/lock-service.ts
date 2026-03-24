@@ -1,7 +1,7 @@
 import { TServiceParams } from "@digital-alchemy/core";
 
-export function LockService({ hass, nuki }: TServiceParams) {
-  const lock = hass.refBy.id("lock.front_door");
+export function LockService({ hass, nuki, bens_flat: { entityIds } }: TServiceParams) {
+  const lock = hass.refBy.id(entityIds.lock.frontDoor);
 
   lock.onUpdate(async (newState, oldState) => {
     if (oldState.state === "locked" && newState.state === "unlocking") {

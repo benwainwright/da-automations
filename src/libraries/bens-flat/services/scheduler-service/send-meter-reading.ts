@@ -1,11 +1,13 @@
 import { TServiceParams } from "@digital-alchemy/core";
+import { PICK_ENTITY } from "@digital-alchemy/hass";
 
 export const sendMeterReading = (
+  meterSensor: PICK_ENTITY<"sensor">,
   hass: TServiceParams["hass"],
   email: TServiceParams["bens_flat"]["email"],
 ) => {
   return async () => {
-    const meter = hass.refBy.id("sensor.electricity_meter");
+    const meter = hass.refBy.id(meterSensor);
 
     const [reading] = meter.state.toString().split(".");
 

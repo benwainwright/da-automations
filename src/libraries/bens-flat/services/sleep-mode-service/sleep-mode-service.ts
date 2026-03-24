@@ -8,7 +8,7 @@ export function SleepModeService({
   hass,
   context,
   synapse,
-  bens_flat: { helpers, lights, motion, visitor, calendar, notify, alexa },
+  bens_flat: { helpers, lights, motion, visitor, calendar, notify, alexa, entityIds },
   logger,
   automation: { time },
 }: TServiceParams) {
@@ -75,7 +75,7 @@ export function SleepModeService({
     const timeToSetAlarmFor = dayjs(first.start).subtract(90, "minutes").format("h:mm A");
 
     await alexa.command({
-      player: "media_player.bedroom_sonos_one",
+      player: entityIds.mediaPlayers.bedroomSonos,
       command: `Set alarm for ${timeToSetAlarmFor} tomorrow morning`,
     });
   };

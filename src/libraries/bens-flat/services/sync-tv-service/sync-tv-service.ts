@@ -2,9 +2,9 @@ import { TServiceParams } from "@digital-alchemy/core";
 
 const APPLE_TV_SOURCE = "Apple TV";
 
-export function SyncTvService({ hass }: TServiceParams) {
-  const appleTv = hass.refBy.id("media_player.apple_tv");
-  const tv = hass.refBy.id("media_player.tv");
+export function SyncTvService({ hass, bens_flat: { entityIds } }: TServiceParams) {
+  const appleTv = hass.refBy.id(entityIds.mediaPlayers.appleTv);
+  const tv = hass.refBy.id(entityIds.mediaPlayers.tv);
 
   appleTv.onUpdate(async (newState, oldState) => {
     if (!newState || !oldState) return;

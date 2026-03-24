@@ -1,7 +1,7 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { PICK_ENTITY } from "@digital-alchemy/hass";
 
-export function PlantsService({ hass, bens_flat: { nags }, lifecycle }: TServiceParams) {
+export function PlantsService({ hass, bens_flat: { nags, entityIds }, lifecycle }: TServiceParams) {
   const addPlantAlert = ({ plant }: { plant: PICK_ENTITY<"plant"> }) => {
     lifecycle.onReady(() => {
       const thePlant = hass.refBy.id(plant);
@@ -17,8 +17,8 @@ export function PlantsService({ hass, bens_flat: { nags }, lifecycle }: TService
   };
 
   addPlantAlert({
-    plant: "plant.marlin",
+    plant: entityIds.plant.marlin,
   });
 
-  addPlantAlert({ plant: "plant.monroe" });
+  addPlantAlert({ plant: entityIds.plant.monroe });
 }

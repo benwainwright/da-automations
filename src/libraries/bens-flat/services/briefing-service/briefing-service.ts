@@ -100,5 +100,5 @@ export function BriefingService({
   motion.hallway(morningTrigger);
   motion.bathroom(morningTrigger);
 
-  return { read: readMorningBriefing };
+  return { read: readMorningBriefing, remindersSwitch: reminders };
 }

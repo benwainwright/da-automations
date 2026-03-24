@@ -35,18 +35,18 @@ import { generateServiceMapWithPriorities } from "./service-manager.ts";
 
 const { services, priorityInit } = generateServiceMapWithPriorities({
   services: {
-    tv: SyncTvService,
+    tv: { func: SyncTvService, dependencies: ["entityIds"] },
     boiler: {
       func: BoilerService,
       dependencies: ["entityIds"],
     },
     music: {
       func: MusicService,
-      dependencies: ["tvMode", "motion", "mediaPlayer", "sleepMode"],
+      dependencies: ["tvMode", "motion", "mediaPlayer", "sleepMode", "entityIds"],
     },
     notify: {
       func: NotificationService,
-      dependencies: ["lights", "mediaPlayer"],
+      dependencies: ["lights", "mediaPlayer", "entityIds"],
     },
     calendar: {
       func: CalendarService,
@@ -78,11 +78,14 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     todoList: TodoListService,
     helpers: HelpersService,
     visitor: VisitorModeService,
-    presence: { func: PresenceDetectionService, dependencies: ["motion", "helpers"] },
+    presence: {
+      func: PresenceDetectionService,
+      dependencies: ["motion", "helpers", "entityIds"],
+    },
     goingHomeRecorder: GoingHomeRecorderService,
     core: {
       func: CoreModule,
-      dependencies: ["notify", "blinds", "presence", "lights"],
+      dependencies: ["notify", "blinds", "presence", "lights", "entityIds", "sleepMode", "tvMode"],
     },
     nags: {
       func: NagService,
@@ -90,7 +93,10 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     },
     email: EmailService,
     scene: SceneService,
-    motion: MotionService,
+    motion: {
+      func: MotionService,
+      dependencies: ["entityIds"],
+    },
     blinds: {
       func: BlindsService,
       dependencies: ["entityIds", "motion"],
@@ -103,15 +109,24 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     },
     scheduler: {
       func: SchedulerService,
-      dependencies: ["scene", "email"],
+      dependencies: ["scene", "email", "entityIds", "briefing", "music"],
     },
-    plans: {
+    plants: {
       func: PlantsService,
-      dependencies: ["nags"],
+      dependencies: ["nags", "entityIds"],
     },
     sleepMode: {
       func: SleepModeService,
-      dependencies: ["helpers", "lights", "motion", "visitor", "calendar", "notify", "alexa"],
+      dependencies: [
+        "helpers",
+        "lights",
+        "motion",
+        "visitor",
+        "calendar",
+        "notify",
+        "alexa",
+        "entityIds",
+      ],
     },
   },
 });

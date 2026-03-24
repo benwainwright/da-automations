@@ -8,7 +8,7 @@ export function PresenceDetectionService({
   logger,
   lifecycle,
 }: TServiceParams) {
-  const { motion, helpers } = bens_flat;
+  const { motion, helpers, entityIds } = bens_flat;
 
   const flatIsOccupiedSwitch = synapse.binary_sensor({
     name: "Flat Occupied",
@@ -19,7 +19,7 @@ export function PresenceDetectionService({
 
   let allowZoneExit = true;
 
-  const home = hass.refBy.id("zone.home");
+  const home = hass.refBy.id(entityIds.zone.home);
   const homeHasPeople = (state: unknown) => {
     const count = Number(state);
     if (!Number.isNaN(count)) return count > 0;

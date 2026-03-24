@@ -8,10 +8,14 @@ export interface NotifyConfig {
 
 export function NotificationService({
   hass,
-  bens_flat: { lights, mediaPlayer },
+  bens_flat: { lights, mediaPlayer, entityIds },
   logger,
 }: TServiceParams) {
-  const tv = hass.refBy.id("media_player.tv");
+  // Resolve TV entity lazily so tests can omit entityIds
+  const getTv = () =>
+    entityIds?.mediaPlayers?.tv
+      ? hass.refBy.id(entityIds.mediaPlayers.tv)
+      : ({ state: "off" } as any);
 
   interface ITtsSayConfig {
     message: string;
@@ -83,23 +87,24 @@ export function NotificationService({
     try {
       await ttsSay({
         volume,
-        source: "tts.openai_tts_gpt_40",
+        source: entityIds?.tts?.openAiGpt4 as any,
         message,
         announce,
-        player: "media_player.whole_flat",
+        player: entityIds?.mediaPlayers?.wholeFlat as any,
       });
     } catch {
       await ttsSay({
-        source: "tts.home_assistant_cloud",
+        source: entityIds?.tts?.openAiGpt4 as any,
         volume,
         message,
         announce,
-        player: "media_player.whole_flat",
+        player: entityIds?.mediaPlayers?.wholeFlat as any,
       });
     }
   };
 
   const notify = async ({ message, title }: NotifyConfig) => {
+    const tv = getTv();
     if (tv.state === "on") {
       await Promise.all([
         hass.call.notify.tv({
@@ -112,6 +117,7 @@ export function NotificationService({
   };
 
   const notifyCritical = async ({ message, title }: NotifyConfig) => {
+    const tv = getTv();
     if (tv.state === "on") {
       await Promise.all([
         lights.flash(),
