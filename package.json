@@ -40,6 +40,7 @@
     "octokit": "^5.0.5",
     "poll-until-promise": "^4.2.0",
     "simple-git": "^3.30.0",
+    "tree-dump": "^1.1.0",
     "uuid": "^13.0.0",
     "vitest": "^4.0.18",
     "ws": "8.18.2"
