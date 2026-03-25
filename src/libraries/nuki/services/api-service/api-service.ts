@@ -15,7 +15,7 @@ export function ApiService({ config, logger }: TServiceParams) {
       setTimeout(async () => {
         const moreLogs = await client.getSmartlockLogs(apiLock.smartlockId, now);
         logger.info(JSON.stringify(moreLogs, null, 2));
-      }, 6000);
+      }, 30_000);
     }
   };
 
