@@ -35,6 +35,18 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
       calendar: { getEvents },
       notify: { speak },
       alexa: { command },
+      entityIds: {
+        switches: {
+          adaptiveLightingSleepModeBathroom: "switch.adaptive_lighting_sleep_mode_bathroom",
+          adaptiveLightingSleepModeBedroom: "switch.adaptive_lighting_sleep_mode_bedroom",
+          adaptiveLightingSleepModeHallway: "switch.adaptive_lighting_sleep_mode_hallway",
+          adaptiveLightingSleepModeLivingRoom: "switch.adaptive_lighting_sleep_mode_living_room",
+          adaptiveLightingSleepModeSpareRoom: "switch.adaptive_lighting_sleep_mode_spare_room",
+        },
+        mediaPlayers: {
+          bedroomSonos: "media_player.bedroom_sonos_one",
+        },
+      },
       visitor: {
         visitorMode: {
           getEntity: () => ({ state: "off" }),
@@ -73,9 +85,10 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
 
   expect(turnOnAll).toHaveBeenCalledTimes(1);
   expect(turnOnAll).toHaveBeenCalledWith([
+    "switch.adaptive_lighting_sleep_mode_bathroom",
+    "switch.adaptive_lighting_sleep_mode_bedroom",
     "switch.adaptive_lighting_sleep_mode_hallway",
     "switch.adaptive_lighting_sleep_mode_living_room",
-    "switch.adaptive_lighting_sleep_mode_bathroom",
     "switch.adaptive_lighting_sleep_mode_spare_room",
   ]);
   expect(getEvents).toHaveBeenCalledTimes(1);

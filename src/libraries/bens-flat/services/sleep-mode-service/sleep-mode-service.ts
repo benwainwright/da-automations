@@ -42,10 +42,11 @@ export function SleepModeService({
   });
 
   const adaptiveLightingSleepModeSwitches: PICK_ENTITY<"switch">[] = [
-    "switch.adaptive_lighting_sleep_mode_hallway",
-    "switch.adaptive_lighting_sleep_mode_living_room",
-    "switch.adaptive_lighting_sleep_mode_bathroom",
-    "switch.adaptive_lighting_sleep_mode_spare_room",
+    entityIds.switches.adaptiveLightingSleepModeBathroom,
+    entityIds.switches.adaptiveLightingSleepModeBedroom,
+    entityIds.switches.adaptiveLightingSleepModeHallway,
+    entityIds.switches.adaptiveLightingSleepModeLivingRoom,
+    entityIds.switches.adaptiveLightingSleepModeSpareRoom,
   ];
 
   const setAlarm = async () => {
