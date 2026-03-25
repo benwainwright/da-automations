@@ -7,6 +7,8 @@ export function ApiService({ config, logger }: TServiceParams) {
     const client = getClient(config.nuki.NUKI_API_TOKEN);
     const locks = await client.getSmartlocks();
 
+    console.log();
+
     const apiLock = locks.find((apiLock) => apiLock.name === name);
 
     if (apiLock) {

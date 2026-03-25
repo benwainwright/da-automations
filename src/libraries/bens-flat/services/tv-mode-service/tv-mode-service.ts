@@ -37,10 +37,11 @@ export function TVModeService({
       app_id: string;
     };
 
+    const isAirplay = attributes.app_id === "com.apple.TVAirPlay";
     const isYoutube = attributes.app_id === "com.google.ios.youtube";
     const isSpotify = attributes.app_id === "com.spotify.client";
 
-    if (appleTv.state === "playing" && !isYoutube && !isSpotify) {
+    if (appleTv.state === "playing" && !isYoutube && !isSpotify && !isAirplay) {
       logger.info(`Apple tv playing - turning TV mode on`);
       return true;
     }
