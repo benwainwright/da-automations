@@ -39,46 +39,46 @@ export function CoreModule({ bens_flat, lifecycle, auto_deploy }: TServiceParams
         await blinds.openIfDefaultIsOpen();
       }
     });
-
-    // Only set up motion triggers when entityIds are available (not required in tests)
-    const sensors = entityIds?.binarySensor;
-    if (sensors) {
-      lights.setupMotionTrigger({
-        switchName: "Living room motion sensor",
-        area: "living_room",
-        sensorId: sensors.livingRoomOccupancy,
-        blockSwitches: [tvMode.tvModeSwitch.entity_id],
-        timeout: "30m",
-      });
-
-      lights.setupMotionTrigger({
-        switchName: "Hallway motion sensor",
-        area: "hallway",
-        sensorId: sensors.hallwayOccupancy,
-        timeout: "2m",
-      });
-
-      lights.setupMotionTrigger({
-        switchName: "Spare room motion sensor",
-        area: "spare_room",
-        sensorId: sensors.spareRoomOccupancy,
-        timeout: "5m",
-      });
-
-      lights.setupMotionTrigger({
-        switchName: "Bedroom motion sensor",
-        area: "bedroom",
-        blockSwitches: [sleepMode.sleepModeSwitch.entity_id],
-        sensorId: sensors.bedroomOccupancy,
-        timeout: "10m",
-      });
-
-      lights.setupMotionTrigger({
-        switchName: "Bathroom motion sensor",
-        area: "bathroom",
-        sensorId: sensors.bathroomOccupancy,
-        timeout: "2m",
-      });
-    }
   });
+
+  // Only set up motion triggers when entityIds are available (not required in tests)
+  const sensors = entityIds?.binarySensor;
+  if (sensors) {
+    lights.setupMotionTrigger({
+      switchName: "Living room motion sensor",
+      area: "living_room",
+      sensorId: sensors.livingRoomOccupancy,
+      blockSwitches: [() => tvMode.tvModeSwitch.entity_id],
+      timeout: "30m",
+    });
+
+    lights.setupMotionTrigger({
+      switchName: "Hallway motion sensor",
+      area: "hallway",
+      sensorId: sensors.hallwayOccupancy,
+      timeout: "2m",
+    });
+
+    lights.setupMotionTrigger({
+      switchName: "Spare room motion sensor",
+      area: "spare_room",
+      sensorId: sensors.spareRoomOccupancy,
+      timeout: "5m",
+    });
+
+    lights.setupMotionTrigger({
+      switchName: "Bedroom motion sensor",
+      area: "bedroom",
+      blockSwitches: [() => sleepMode.sleepModeSwitch.entity_id],
+      sensorId: sensors.bedroomOccupancy,
+      timeout: "10m",
+    });
+
+    lights.setupMotionTrigger({
+      switchName: "Bathroom motion sensor",
+      area: "bathroom",
+      sensorId: sensors.bathroomOccupancy,
+      timeout: "2m",
+    });
+  }
 }

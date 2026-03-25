@@ -21,7 +21,7 @@ interface IMotionSwitchConfig {
   /**
    * If any of these switches are turned on, the motion sensor will *not* fire
    */
-  blockSwitches?: PICK_ENTITY<"switch">[];
+  blockSwitches?: (PICK_ENTITY<"switch"> | (() => PICK_ENTITY<"switch">))[];
 
   /**
    * The time interval before a switch is turned off
@@ -81,7 +81,10 @@ export function LightsService({
         return;
       }
       const anyBlockSwitchIsOn = () =>
-        blockSwitches?.map(hass.refBy.id).some((theSwitch) => theSwitch.state === "on");
+        blockSwitches
+          ?.map((theSwitch) => (typeof theSwitch === "function" ? theSwitch() : theSwitch))
+          .map(hass.refBy.id)
+          .some((theSwitch) => theSwitch.state === "on");
 
       const switchEntity = motionSwitch?.getEntity?.();
       const switchIsOn = switchEntity?.state === "on";
