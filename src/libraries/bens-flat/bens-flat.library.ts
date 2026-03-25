@@ -32,9 +32,11 @@ import {
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 import { LIB_NUKI } from "../nuki/nuki.library.ts";
 import { generateServiceMapWithPriorities } from "./service-manager.ts";
+import { LockService } from "./services/lock-service/lock-service.ts";
 
 const { services, priorityInit } = generateServiceMapWithPriorities({
   services: {
+    lock: { func: LockService, dependencies: ["entityIds"] },
     tv: { func: SyncTvService, dependencies: ["entityIds"] },
     boiler: {
       func: BoilerService,
