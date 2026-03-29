@@ -87,7 +87,16 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     goingHomeRecorder: GoingHomeRecorderService,
     core: {
       func: CoreModule,
-      dependencies: ["notify", "blinds", "presence", "lights", "entityIds", "sleepMode", "tvMode"],
+      dependencies: [
+        "notify",
+        "blinds",
+        "presence",
+        "lights",
+        "entityIds",
+        "sleepMode",
+        "tvMode",
+        "motion",
+      ],
     },
     nags: {
       func: NagService,

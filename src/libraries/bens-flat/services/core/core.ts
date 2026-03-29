@@ -1,7 +1,14 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 
 export function CoreModule({ bens_flat, lifecycle, auto_deploy }: TServiceParams) {
-  const { lights, presence, blinds, notify, entityIds, tvMode, sleepMode } = bens_flat;
+  const { lights, presence, blinds, notify, entityIds, tvMode, sleepMode, motion } = bens_flat;
+
+  const outOfBounds = async () => {
+    await notify.notifyCritical({ message: "someone is out of bounds", title: "alert" });
+  };
+
+  motion.spareRoom(outOfBounds);
+  motion.bedroom(outOfBounds);
 
   lifecycle.onReady(async () => {
     const autoDeployNotificationId = "auto_deploy_status";
