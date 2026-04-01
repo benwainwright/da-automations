@@ -1,10 +1,24 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 
-export function CoreModule({ bens_flat, lifecycle, auto_deploy }: TServiceParams) {
+export function CoreModule({
+  bens_flat,
+  lifecycle,
+  auto_deploy,
+  synapse,
+  context,
+}: TServiceParams) {
   const { lights, presence, blinds, notify, entityIds, tvMode, sleepMode, motion } = bens_flat;
 
+  const cdSwitch = synapse.switch({
+    name: "CD mode",
+    context,
+    suggested_object_id: "cd",
+  });
+
   const outOfBounds = async () => {
-    await notify.notifyCritical({ message: "someone is out of bounds", title: "alert" });
+    if (cdSwitch.is_on) {
+      await notify.notifyCritical({ message: "someone is out of bounds", title: "alert" });
+    }
   };
 
   motion.spareRoom(outOfBounds);
