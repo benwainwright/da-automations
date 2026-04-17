@@ -51,6 +51,7 @@
 ## Contribution Guidelines
 
 - Run `bun run test`, `bun run typecheck` and `bun run lint` after each change and fix any issues
+- If any type checks fail, try running type generation again
 - Once all checks pass, commit changes immediately
 
 ## Commit guidelines
