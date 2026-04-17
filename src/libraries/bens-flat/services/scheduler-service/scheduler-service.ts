@@ -6,7 +6,7 @@ const EVERY_WEEK_MONDAY_AT_9 = "0 9 * * 1";
 export function SchedulerService({
   scheduler,
   lifecycle,
-  bens_flat: { scene, email, entityIds, briefing, music },
+  bens_flat: { scene, email, entityIds, briefing, music, todoList },
   hass,
 }: TServiceParams) {
   const { on, off } = scene.toggle({
@@ -28,6 +28,11 @@ export function SchedulerService({
     scheduler.cron({
       schedule: CronExpression.EVERY_DAY_AT_9AM,
       exec: off,
+    });
+
+    scheduler.cron({
+      schedule: CronExpression.EVERY_DAY_AT_4AM,
+      exec: () => todoList.scheduleTodoistTasks(),
     });
 
     scheduler.cron({

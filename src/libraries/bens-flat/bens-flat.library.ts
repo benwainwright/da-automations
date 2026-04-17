@@ -120,7 +120,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     },
     scheduler: {
       func: SchedulerService,
-      dependencies: ["scene", "email", "entityIds", "briefing", "music"],
+      dependencies: ["scene", "email", "entityIds", "briefing", "music", "todoList"],
     },
     plants: {
       func: PlantsService,
