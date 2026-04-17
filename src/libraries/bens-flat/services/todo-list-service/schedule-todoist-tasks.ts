@@ -27,8 +27,10 @@ export interface TaskUpdate {
   taskId: string;
   content: string;
   dueDate: string;
+  dueDatetime: string;
   duration: Duration;
   currentDueDate: string | null;
+  currentDueDatetime: string | null;
   hadDuration: boolean;
   update: UpdateTaskArgs;
 }
@@ -57,13 +59,19 @@ interface SchedulableTask {
   size: TaskSize;
 }
 
+interface ScheduledTask extends SchedulableTask {
+  start: Dayjs;
+  end: Dayjs;
+}
+
 interface DayPlan {
   date: string;
+  events: CalendarEvent[];
   hasWork: boolean;
   hasEveningEvent: boolean;
   hasCalendarEvent: boolean;
-  scheduled: SchedulableTask[];
-  buyTasks: SchedulableTask[];
+  scheduled: ScheduledTask[];
+  buyTasks: ScheduledTask[];
 }
 
 interface TaskBuckets {
@@ -83,6 +91,8 @@ interface ScheduleContext {
 const SMALL_MINUTES = 30;
 const MEDIUM_MINUTES = 60;
 const LARGE_MINUTES = 120;
+const DAY_START_HOUR = 9;
+const DAY_END_HOUR = 22;
 const EVENING_HOUR = 18;
 const MAX_SEARCH_DAYS = 3650;
 
@@ -178,6 +188,7 @@ function createScheduleContext({
 function createDayPlan(date: string, events: CalendarEvent[]): DayPlan {
   return {
     date,
+    events,
     hasWork: events.some(isWorkEvent),
     hasEveningEvent: events.some(isEveningEvent),
     hasCalendarEvent: events.length > 0,
@@ -213,14 +224,15 @@ async function assignTasksToDays(tasks: TaskBuckets, context: ScheduleContext) {
 async function assignDeadlineTasks(tasks: SchedulableTask[], context: ScheduleContext) {
   for (const item of tasks) {
     const deadline = dayjs(item.task.deadline?.date).startOf("day");
-    const plan = await findSlot({
+    const slot = await findSlot({
       item,
       from: context.now.startOf("day"),
       until: deadline,
       getPlan: context.getPlan,
+      now: context.now,
     });
 
-    if (!plan) {
+    if (!slot) {
       skipTask(
         context.result,
         item,
@@ -229,24 +241,25 @@ async function assignDeadlineTasks(tasks: SchedulableTask[], context: ScheduleCo
       continue;
     }
 
-    plan.scheduled.push(item);
+    slot.plan.scheduled.push(toScheduledTask(item, slot.start));
   }
 }
 
 async function assignStandardTasks(tasks: SchedulableTask[], context: ScheduleContext) {
   for (const item of tasks) {
-    const plan = await findSlot({
+    const slot = await findSlot({
       item,
       from: context.now.startOf("day"),
       getPlan: context.getPlan,
+      now: context.now,
     });
 
-    if (!plan) {
+    if (!slot) {
       skipTask(context.result, item, "no available slot found");
       continue;
     }
 
-    plan.scheduled.push(item);
+    slot.plan.scheduled.push(toScheduledTask(item, slot.start));
   }
 }
 
@@ -260,7 +273,13 @@ async function assignBuyTasks(tasks: SchedulableTask[], context: ScheduleContext
       continue;
     }
 
-    plan.buyTasks.push(item);
+    const start = findOpenSlot(plan, item, dayjs(plan.date), context.now);
+    if (!start) {
+      skipTask(context.result, item, `no available slot found on ${plan.date}`);
+      continue;
+    }
+
+    plan.buyTasks.push(toScheduledTask(item, start));
   }
 }
 
@@ -338,8 +357,8 @@ function getSkipReason(task: Task) {
 }
 
 function toSchedulableTask(task: Task): SchedulableTask {
-  const duration = task.duration ?? inferDuration(task);
-  const durationMinutes = duration.unit === "day" ? LARGE_MINUTES : duration.amount;
+  const duration = normalizeDuration(task.duration ?? inferDuration(task));
+  const durationMinutes = duration.amount;
 
   return {
     task,
@@ -347,6 +366,11 @@ function toSchedulableTask(task: Task): SchedulableTask {
     durationMinutes,
     size: getTaskSize(durationMinutes),
   };
+}
+
+function normalizeDuration(duration: Duration): Duration {
+  if (duration.unit === "day") return { amount: LARGE_MINUTES, unit: "minute" };
+  return duration;
 }
 
 function inferDuration(task: Task): Duration {
@@ -383,17 +407,20 @@ async function findSlot({
   from,
   until,
   getPlan,
+  now,
 }: {
   item: SchedulableTask;
   from: Dayjs;
   until?: Dayjs;
   getPlan: (date: Dayjs) => Promise<DayPlan>;
+  now: Dayjs;
 }) {
   const last = until ?? from.add(MAX_SEARCH_DAYS, "day");
 
   for (let date = from; !date.isAfter(last, "day"); date = date.add(1, "day")) {
     const plan = await getPlan(date);
-    if (canSchedule(plan, item, date)) return plan;
+    const start = findOpenSlot(plan, item, date, now);
+    if (start) return { plan, start };
   }
 
   return null;
@@ -443,24 +470,117 @@ function isEmptyWeekend(plan: DayPlan, date: Dayjs) {
 function canSchedule(plan: DayPlan, item: SchedulableTask, date: Dayjs) {
   if (isBlocked(plan)) return false;
 
+  const scheduledTasks = getScheduledTasks(plan);
+
   if (plan.hasWork) {
     if (item.size === "large") return false;
-    if (item.size === "medium") return plan.scheduled.length === 0;
+    if (item.size === "medium") return scheduledTasks.length === 0;
     return (
-      plan.scheduled.every((scheduled) => scheduled.size === "small") && plan.scheduled.length < 2
+      scheduledTasks.every((scheduled) => scheduled.size === "small") && scheduledTasks.length < 2
     );
   }
 
   if (item.size === "large" && ![0, 6].includes(date.day())) return false;
 
-  const scheduledMinutes = plan.scheduled.reduce(
+  const scheduledMinutes = scheduledTasks.reduce(
     (total, scheduled) => total + scheduled.durationMinutes,
     0,
   );
   const limit = [0, 6].includes(date.day()) ? 240 : 90;
   const taskLimit = [0, 6].includes(date.day()) ? 4 : 2;
 
-  return scheduledMinutes + item.durationMinutes <= limit && plan.scheduled.length < taskLimit;
+  return scheduledMinutes + item.durationMinutes <= limit && scheduledTasks.length < taskLimit;
+}
+
+function findOpenSlot(plan: DayPlan, item: SchedulableTask, date: Dayjs, now: Dayjs) {
+  if (!canSchedule(plan, item, date)) return null;
+
+  const windowStart = getSchedulingWindowStart(date, now);
+  const windowEnd = date.hour(DAY_END_HOUR).minute(0).second(0).millisecond(0);
+  if (!windowStart.isBefore(windowEnd)) return null;
+
+  const busy = getBusyIntervals(plan, date, windowStart, windowEnd);
+  let cursor = windowStart;
+
+  for (const interval of busy) {
+    if (!cursor.add(item.durationMinutes, "minute").isAfter(interval.start)) return cursor;
+    if (interval.end.isAfter(cursor)) cursor = interval.end;
+  }
+
+  return !cursor.add(item.durationMinutes, "minute").isAfter(windowEnd) ? cursor : null;
+}
+
+function getSchedulingWindowStart(date: Dayjs, now: Dayjs) {
+  const dayStart = date.hour(DAY_START_HOUR).minute(0).second(0).millisecond(0);
+  if (!date.isSame(now, "day")) return dayStart;
+  return maxDayjs(dayStart, roundUpToNextQuarterHour(now));
+}
+
+function roundUpToNextQuarterHour(date: Dayjs) {
+  const minute = date.minute();
+  const remainder = minute % 15;
+  const rounded = remainder === 0 ? date : date.add(15 - remainder, "minute");
+  return rounded.second(0).millisecond(0);
+}
+
+function getBusyIntervals(plan: DayPlan, date: Dayjs, windowStart: Dayjs, windowEnd: Dayjs) {
+  const intervals = [
+    ...plan.events.map((event) => toEventInterval(event, date, windowStart, windowEnd)),
+    ...getScheduledTasks(plan).map(({ start, end }) => ({ start, end })),
+  ]
+    .filter((interval): interval is { start: Dayjs; end: Dayjs } => Boolean(interval))
+    .filter(({ start, end }) => end.isAfter(windowStart) && start.isBefore(windowEnd))
+    .map(({ start, end }) => ({
+      start: maxDayjs(start, windowStart),
+      end: minDayjs(end, windowEnd),
+    }))
+    .sort((a, b) => a.start.valueOf() - b.start.valueOf());
+
+  return mergeIntervals(intervals);
+}
+
+function toEventInterval(event: CalendarEvent, date: Dayjs, windowStart: Dayjs, windowEnd: Dayjs) {
+  if (!event.start.includes("T")) return { start: windowStart, end: windowEnd };
+
+  const start = dayjs(event.start);
+  const end = dayjs(event.end);
+  if (!start.isValid() || !end.isValid() || !end.isAfter(start)) return null;
+
+  if (end.isBefore(date.startOf("day")) || start.isAfter(date.endOf("day"))) return null;
+  return { start, end };
+}
+
+function mergeIntervals(intervals: Array<{ start: Dayjs; end: Dayjs }>) {
+  return intervals.reduce<Array<{ start: Dayjs; end: Dayjs }>>((merged, interval) => {
+    const previous = merged.at(-1);
+    if (!previous || interval.start.isAfter(previous.end)) {
+      merged.push(interval);
+      return merged;
+    }
+
+    previous.end = maxDayjs(previous.end, interval.end);
+    return merged;
+  }, []);
+}
+
+function getScheduledTasks(plan: DayPlan) {
+  return [...plan.scheduled, ...plan.buyTasks];
+}
+
+function toScheduledTask(item: SchedulableTask, start: Dayjs): ScheduledTask {
+  return {
+    ...item,
+    start,
+    end: start.add(item.durationMinutes, "minute"),
+  };
+}
+
+function maxDayjs(a: Dayjs, b: Dayjs) {
+  return a.isAfter(b) ? a : b;
+}
+
+function minDayjs(a: Dayjs, b: Dayjs) {
+  return a.isBefore(b) ? a : b;
 }
 
 function isBlocked(plan: DayPlan) {
@@ -476,28 +596,33 @@ function isEveningEvent(event: CalendarEvent) {
   return dayjs(event.start).hour() >= EVENING_HOUR || dayjs(event.end).hour() >= EVENING_HOUR;
 }
 
-function toTaskUpdate(item: SchedulableTask, dueDate: string): TaskUpdate {
-  const update = item.task.duration
-    ? ({ dueDate } satisfies UpdateTaskArgs)
-    : ({
-        dueDate,
-        duration: item.duration.amount,
-        durationUnit: item.duration.unit,
-      } satisfies UpdateTaskArgs);
+function toTaskUpdate(item: ScheduledTask, dueDate: string): TaskUpdate {
+  const dueDatetime = item.start.format("YYYY-MM-DDTHH:mm:ssZ");
+  const update = {
+    dueDatetime,
+    duration: item.duration.amount,
+    durationUnit: item.duration.unit,
+  } satisfies UpdateTaskArgs;
 
   return {
     taskId: item.task.id,
     content: item.task.content,
     dueDate,
+    dueDatetime,
     duration: item.duration,
     currentDueDate: item.task.due?.date ?? null,
+    currentDueDatetime: item.task.due?.datetime ?? null,
     hadDuration: Boolean(item.task.duration),
     update,
   };
 }
 
 function isUnchanged(update: TaskUpdate) {
-  return update.currentDueDate === update.dueDate && update.hadDuration;
+  return (
+    update.currentDueDatetime !== null &&
+    dayjs(update.currentDueDatetime).isSame(dayjs(update.dueDatetime)) &&
+    update.hadDuration
+  );
 }
 
 function createCalendarCache(
@@ -514,8 +639,9 @@ function createCalendarCache(
       const events = await getCalendarEvents({ start: rangeStart, end: rangeEnd });
 
       for (const event of events) {
-        const key = dayjs(event.start).format("YYYY-MM-DD");
-        eventsByDate.set(key, [...(eventsByDate.get(key) ?? []), event]);
+        for (const key of getEventDateKeys(event)) {
+          eventsByDate.set(key, [...(eventsByDate.get(key) ?? []), event]);
+        }
       }
 
       loadedThrough = rangeEnd;
@@ -528,4 +654,24 @@ function createCalendarCache(
       return eventsByDate.get(date.format("YYYY-MM-DD")) ?? [];
     },
   };
+}
+
+function getEventDateKeys(event: CalendarEvent) {
+  const start = dayjs(event.start);
+  const end = dayjs(event.end);
+  const keys: string[] = [];
+
+  if (!start.isValid()) return keys;
+
+  const allDayEnd = !event.start.includes("T") && end.isValid() && end.isAfter(start);
+  const last = allDayEnd
+    ? end.subtract(1, "day")
+    : end.isValid() && end.isAfter(start)
+      ? end
+      : start;
+  for (let date = start.startOf("day"); !date.isAfter(last, "day"); date = date.add(1, "day")) {
+    keys.push(date.format("YYYY-MM-DD"));
+  }
+
+  return keys;
 }

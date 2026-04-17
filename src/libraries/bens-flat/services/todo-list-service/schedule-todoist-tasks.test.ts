@@ -68,6 +68,28 @@ test("does not schedule tasks on days with work and an evening event", async () 
   expect(result.updated[0]?.dueDate).toBe("2026-05-05");
 });
 
+test("schedules tasks into timed calendar gaps with an actual duration", async () => {
+  const result = await scheduleTodoistTasks({
+    client: client([task({ id: "small", content: "Small", labels: ["small"] })]),
+    dryRun: true,
+    getCalendarEvents: events({
+      "2026-05-04": [
+        event("2026-05-04T09:00:00", "2026-05-04T10:00:00", "Appointment"),
+        event("2026-05-04T10:30:00", "2026-05-04T11:30:00", "Call"),
+      ],
+    }),
+    now: dayjs("2026-05-04"),
+  });
+
+  expect(result.updated[0]?.dueDate).toBe("2026-05-04");
+  expect(result.updated[0]?.dueDatetime.slice(0, 19)).toBe("2026-05-04T10:00:00");
+  expect(result.updated[0]?.update).toMatchObject({
+    duration: 30,
+    durationUnit: "minute",
+  });
+  expect(result.updated[0]?.update).toHaveProperty("dueDatetime");
+});
+
 test("allows at most two small tasks after work", async () => {
   const result = await scheduleTodoistTasks({
     client: client([
@@ -86,6 +108,11 @@ test("allows at most two small tasks after work", async () => {
     ["a", "2026-05-04"],
     ["b", "2026-05-04"],
     ["c", "2026-05-05"],
+  ]);
+  expect(result.updated.map((update) => update.dueDatetime.slice(0, 19))).toEqual([
+    "2026-05-04T17:00:00",
+    "2026-05-04T17:30:00",
+    "2026-05-05T09:00:00",
   ]);
 });
 
