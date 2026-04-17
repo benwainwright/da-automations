@@ -5329,7 +5329,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -5377,7 +5376,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -6972,7 +6972,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -7020,7 +7019,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## Album URI
          *
@@ -7118,7 +7118,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -7166,7 +7165,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## page
          *
@@ -7286,7 +7286,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -7334,7 +7333,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## Artist URI
          *
@@ -7432,7 +7432,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -7480,7 +7479,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## page
          *
@@ -7626,7 +7626,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -7674,7 +7673,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## Playlist URI
          *
@@ -7772,7 +7772,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -7820,7 +7819,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## page
          *
@@ -7940,7 +7940,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -7988,7 +7987,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## Podcast URI
          *
@@ -8086,7 +8086,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -8134,7 +8133,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## Podcast URI
          *
@@ -8558,7 +8558,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -8606,7 +8605,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## playlist_id
          *
@@ -8758,7 +8758,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -8806,7 +8805,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## Data
          *
@@ -10402,7 +10402,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -10450,7 +10449,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## favorite
          *
@@ -10962,7 +10962,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -11010,7 +11009,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## library_only
          *
@@ -11441,6 +11441,73 @@ declare module "@digital-alchemy/hass" {
        * > Sends a notification message using the alexa_media_ben_s_2nd_sonos_one_second_edition integration.
        */
       alexa_media_ben_s_2nd_sonos_one_second_edition: (service_data?: {
+        /**
+         * ## data
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "data": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        data?: NotificationData & (AndroidNotificationData | AppleNotificationData);
+        /**
+         * ## message
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "The garage door has been open for 10 minutes."
+         * > }
+         * > ```
+         */
+        message: string;
+        /**
+         * ## target
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "target": "platform specific"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > object: null
+         * > ```
+         */
+        target?: unknown;
+        /**
+         * ## title
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "title": "Your Garage Door Friend"
+         * > }
+         * > ```
+         */
+        title?: string;
+      }) => Promise<void>;
+      /**
+       * ### Send a notification via alexa_media_last_called
+       *
+       * > Sends a notification message using the alexa_media_last_called integration.
+       */
+      alexa_media_last_called: (service_data?: {
         /**
          * ## data
          *
@@ -12540,7 +12607,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -12588,7 +12654,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## filenames
          *
@@ -12704,7 +12771,6 @@ declare module "@digital-alchemy/hass" {
           | "01KHSC4D9PYA25FYQHP50RYEDH"
           | "01KHSCHHDZCRACHJQ57Y63R36Z"
           | "01KHVF98X94ZBE7TX5291F3BZV"
-          | "01KJ7AGB4QY7TJ2QCJPM8X1J03"
           | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
           | "01KM3MP2KJYCZGP3PJTES7BDMD"
           | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
@@ -12752,7 +12818,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMJ7X01SE2VDJAPVRDYK7QRC"
           | "01KMJ834WA3JF99NSRHB6S0E5D"
           | "01KMKAK76QR7ZV40AERG9089JC"
-          | "01KNCB33CNCJ2ZHYSJWJXNMP66";
+          | "01KNCB33CNCJ2ZHYSJWJXNMP66"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1";
         /**
          * ## prompt
          *

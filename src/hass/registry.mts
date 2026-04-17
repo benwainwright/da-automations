@@ -70,12 +70,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5295
+           * > color_temp_kelvin: 5345
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 188
+           * > color_temp_mired: 187
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -83,7 +83,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.9416939711983814
+           * > sun_position: 0.9561463099283307
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -145,12 +145,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5300
+           * > color_temp_kelvin: 5350
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 188
+           * > color_temp_mired: 186
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -158,7 +158,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.9421599534077183
+           * > sun_position: 0.9565504180336086
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -220,12 +220,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5295
+           * > color_temp_kelvin: 5345
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 188
+           * > color_temp_mired: 187
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -233,7 +233,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.9411992050422078
+           * > sun_position: 0.9557171755814643
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -295,12 +295,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5300
+           * > color_temp_kelvin: 5350
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 188
+           * > color_temp_mired: 186
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -308,7 +308,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.942294954390871
+           * > sun_position: 0.9566673828630601
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -370,12 +370,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5300
+           * > color_temp_kelvin: 5350
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 188
+           * > color_temp_mired: 186
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -383,7 +383,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.94216027580996
+           * > sun_position: 0.9565506817140795
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -852,281 +852,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "switch.bedroom_alexa_do_not_disturb": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bedroom_alexa_do_not_disturb",
-        {
-          device_class: "switch";
-          icon: "mdi:minus-circle-off";
-          friendly_name: "Bedroom Alexa Do not disturb";
-        }
-      >;
-    };
-    "switch.bedroom_alexa_shuffle": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bedroom_alexa_shuffle",
-        {
-          device_class: "switch";
-          icon: "mdi:shuffle-disabled";
-          friendly_name: "Bedroom Alexa Shuffle";
-        }
-      >;
-    };
-    "switch.bedroom_alexa_repeat": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bedroom_alexa_repeat",
-        {
-          device_class: "switch";
-          icon: "mdi:repeat-off";
-          friendly_name: "Bedroom Alexa Repeat";
-        }
-      >;
-    };
-    "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb",
-        {
-          device_class: "switch";
-          icon: "mdi:minus-circle-off";
-          friendly_name: "Ben's 2nd Sonos One Second Edition Do not disturb";
-        }
-      >;
-    };
-    "switch.ben_s_2nd_sonos_one_second_edition_shuffle": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.ben_s_2nd_sonos_one_second_edition_shuffle",
-        {
-          device_class: "switch";
-          icon: "mdi:shuffle-disabled";
-          friendly_name: "Ben's 2nd Sonos One Second Edition Shuffle";
-        }
-      >;
-    };
-    "switch.ben_s_2nd_sonos_one_second_edition_repeat": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.ben_s_2nd_sonos_one_second_edition_repeat",
-        {
-          device_class: "switch";
-          icon: "mdi:repeat-off";
-          friendly_name: "Ben's 2nd Sonos One Second Edition Repeat";
-        }
-      >;
-    };
-    "switch.living_room_sonos_one_do_not_disturb": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_sonos_one_do_not_disturb",
-        {
-          device_class: "switch";
-          icon: "mdi:minus-circle-off";
-          friendly_name: "Living Room Sonos One Do not disturb";
-        }
-      >;
-    };
-    "switch.living_room_sonos_one_shuffle": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_sonos_one_shuffle",
-        {
-          device_class: "switch";
-          icon: "mdi:shuffle-disabled";
-          friendly_name: "Living Room Sonos One Shuffle";
-        }
-      >;
-    };
-    "switch.living_room_sonos_one_repeat": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_sonos_one_repeat",
-        {
-          device_class: "switch";
-          icon: "mdi:repeat-off";
-          friendly_name: "Living Room Sonos One Repeat";
-        }
-      >;
-    };
-    "switch.living_room_do_not_disturb_2": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_do_not_disturb_2",
-        {
-          device_class: "switch";
-          icon: "mdi:minus-circle-off";
-          friendly_name: "Living Room  Do not disturb";
-        }
-      >;
-    };
-    "switch.living_room_shuffle_2": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_shuffle_2",
-        {
-          device_class: "switch";
-          icon: "mdi:shuffle-disabled";
-          friendly_name: "Living Room  Shuffle";
-        }
-      >;
-    };
-    "switch.living_room_repeat_2": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_repeat_2",
-        {
-          device_class: "switch";
-          icon: "mdi:repeat-off";
-          friendly_name: "Living Room  Repeat";
-        }
-      >;
-    };
-    "switch.living_room_alexa_do_not_disturb": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_alexa_do_not_disturb",
-        {
-          device_class: "switch";
-          icon: "mdi:minus-circle-off";
-          friendly_name: "Living Room Alexa Do not disturb";
-        }
-      >;
-    };
-    "switch.living_room_alexa_shuffle": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_alexa_shuffle",
-        {
-          device_class: "switch";
-          icon: "mdi:shuffle-disabled";
-          friendly_name: "Living Room Alexa Shuffle";
-        }
-      >;
-    };
-    "switch.living_room_alexa_repeat": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_alexa_repeat",
-        {
-          device_class: "switch";
-          icon: "mdi:repeat-off";
-          friendly_name: "Living Room Alexa Repeat";
-        }
-      >;
-    };
-    "switch.bathroom_alexa_do_not_disturb": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bathroom_alexa_do_not_disturb",
-        {
-          device_class: "switch";
-          icon: "mdi:minus-circle-off";
-          friendly_name: "Bathroom Alexa Do not disturb";
-        }
-      >;
-    };
-    "switch.bathroom_alexa_shuffle": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bathroom_alexa_shuffle",
-        {
-          device_class: "switch";
-          icon: "mdi:shuffle-disabled";
-          friendly_name: "Bathroom Alexa Shuffle";
-        }
-      >;
-    };
-    "switch.bathroom_alexa_repeat": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bathroom_alexa_repeat",
-        {
-          device_class: "switch";
-          icon: "mdi:repeat-off";
-          friendly_name: "Bathroom Alexa Repeat";
-        }
-      >;
-    };
-    "switch.bedroom_alexa_do_not_disturb_2": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bedroom_alexa_do_not_disturb_2",
-        {
-          device_class: "switch";
-          icon: "mdi:minus-circle-off";
-          friendly_name: "Bedroom Alexa Do not disturb";
-        }
-      >;
-    };
-    "switch.bedroom_alexa_shuffle_2": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bedroom_alexa_shuffle_2",
-        {
-          device_class: "switch";
-          icon: "mdi:shuffle-disabled";
-          friendly_name: "Bedroom Alexa Shuffle";
-        }
-      >;
-    };
-    "switch.bedroom_alexa_repeat_2": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bedroom_alexa_repeat_2",
-        {
-          device_class: "switch";
-          icon: "mdi:repeat-off";
-          friendly_name: "Bedroom Alexa Repeat";
-        }
-      >;
-    };
-    "switch.living_room_sonos_do_not_disturb": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_sonos_do_not_disturb",
-        {
-          device_class: "switch";
-          icon: "mdi:minus-circle-off";
-          friendly_name: "Living Room Sonos Do not disturb";
-        }
-      >;
-    };
-    "switch.living_room_sonos_shuffle": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_sonos_shuffle",
-        {
-          device_class: "switch";
-          icon: "mdi:shuffle-disabled";
-          friendly_name: "Living Room Sonos Shuffle";
-        }
-      >;
-    };
-    "switch.living_room_sonos_repeat": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_sonos_repeat",
-        {
-          device_class: "switch";
-          icon: "mdi:repeat-off";
-          friendly_name: "Living Room Sonos Repeat";
-        }
-      >;
-    };
-    "switch.this_device_do_not_disturb": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.this_device_do_not_disturb",
-        {
-          device_class: "switch";
-          icon: "mdi:minus-circle-off";
-          friendly_name: "This Device Do not disturb";
-        }
-      >;
-    };
     "switch.tumble_dryer": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
@@ -1502,6 +1227,281 @@ declare module "@digital-alchemy/hass" {
         "switch.nag_mode",
         {
           friendly_name: "Nag Mode";
+        }
+      >;
+    };
+    "switch.bedroom_alexa_do_not_disturb": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_alexa_do_not_disturb",
+        {
+          device_class: "switch";
+          icon: "mdi:minus-circle-off";
+          friendly_name: "Bedroom Alexa Do not disturb";
+        }
+      >;
+    };
+    "switch.bedroom_alexa_shuffle": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_alexa_shuffle",
+        {
+          device_class: "switch";
+          icon: "mdi:shuffle-disabled";
+          friendly_name: "Bedroom Alexa Shuffle";
+        }
+      >;
+    };
+    "switch.bedroom_alexa_repeat": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_alexa_repeat",
+        {
+          device_class: "switch";
+          icon: "mdi:repeat-off";
+          friendly_name: "Bedroom Alexa Repeat";
+        }
+      >;
+    };
+    "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb",
+        {
+          device_class: "switch";
+          icon: "mdi:minus-circle-off";
+          friendly_name: "Ben's 2nd Sonos One Second Edition Do not disturb";
+        }
+      >;
+    };
+    "switch.ben_s_2nd_sonos_one_second_edition_shuffle": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.ben_s_2nd_sonos_one_second_edition_shuffle",
+        {
+          device_class: "switch";
+          icon: "mdi:shuffle-disabled";
+          friendly_name: "Ben's 2nd Sonos One Second Edition Shuffle";
+        }
+      >;
+    };
+    "switch.ben_s_2nd_sonos_one_second_edition_repeat": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.ben_s_2nd_sonos_one_second_edition_repeat",
+        {
+          device_class: "switch";
+          icon: "mdi:repeat-off";
+          friendly_name: "Ben's 2nd Sonos One Second Edition Repeat";
+        }
+      >;
+    };
+    "switch.living_room_sonos_one_do_not_disturb": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_sonos_one_do_not_disturb",
+        {
+          device_class: "switch";
+          icon: "mdi:minus-circle-off";
+          friendly_name: "Living Room Sonos One Do not disturb";
+        }
+      >;
+    };
+    "switch.living_room_sonos_one_shuffle": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_sonos_one_shuffle",
+        {
+          device_class: "switch";
+          icon: "mdi:shuffle-disabled";
+          friendly_name: "Living Room Sonos One Shuffle";
+        }
+      >;
+    };
+    "switch.living_room_sonos_one_repeat": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_sonos_one_repeat",
+        {
+          device_class: "switch";
+          icon: "mdi:repeat-off";
+          friendly_name: "Living Room Sonos One Repeat";
+        }
+      >;
+    };
+    "switch.living_room_do_not_disturb_2": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_do_not_disturb_2",
+        {
+          device_class: "switch";
+          icon: "mdi:minus-circle-off";
+          friendly_name: "Living Room  Do not disturb";
+        }
+      >;
+    };
+    "switch.living_room_shuffle_2": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_shuffle_2",
+        {
+          device_class: "switch";
+          icon: "mdi:shuffle-disabled";
+          friendly_name: "Living Room  Shuffle";
+        }
+      >;
+    };
+    "switch.living_room_repeat_2": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_repeat_2",
+        {
+          device_class: "switch";
+          icon: "mdi:repeat-off";
+          friendly_name: "Living Room  Repeat";
+        }
+      >;
+    };
+    "switch.living_room_alexa_do_not_disturb": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_alexa_do_not_disturb",
+        {
+          device_class: "switch";
+          icon: "mdi:minus-circle-off";
+          friendly_name: "Living Room Alexa Do not disturb";
+        }
+      >;
+    };
+    "switch.living_room_alexa_shuffle": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_alexa_shuffle",
+        {
+          device_class: "switch";
+          icon: "mdi:shuffle-disabled";
+          friendly_name: "Living Room Alexa Shuffle";
+        }
+      >;
+    };
+    "switch.living_room_alexa_repeat": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_alexa_repeat",
+        {
+          device_class: "switch";
+          icon: "mdi:repeat-off";
+          friendly_name: "Living Room Alexa Repeat";
+        }
+      >;
+    };
+    "switch.bathroom_alexa_do_not_disturb": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bathroom_alexa_do_not_disturb",
+        {
+          device_class: "switch";
+          icon: "mdi:minus-circle-off";
+          friendly_name: "Bathroom Alexa Do not disturb";
+        }
+      >;
+    };
+    "switch.bathroom_alexa_shuffle": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bathroom_alexa_shuffle",
+        {
+          device_class: "switch";
+          icon: "mdi:shuffle-disabled";
+          friendly_name: "Bathroom Alexa Shuffle";
+        }
+      >;
+    };
+    "switch.bathroom_alexa_repeat": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bathroom_alexa_repeat",
+        {
+          device_class: "switch";
+          icon: "mdi:repeat-off";
+          friendly_name: "Bathroom Alexa Repeat";
+        }
+      >;
+    };
+    "switch.bedroom_alexa_do_not_disturb_2": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_alexa_do_not_disturb_2",
+        {
+          device_class: "switch";
+          icon: "mdi:minus-circle-off";
+          friendly_name: "Bedroom Alexa Do not disturb";
+        }
+      >;
+    };
+    "switch.bedroom_alexa_shuffle_2": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_alexa_shuffle_2",
+        {
+          device_class: "switch";
+          icon: "mdi:shuffle-disabled";
+          friendly_name: "Bedroom Alexa Shuffle";
+        }
+      >;
+    };
+    "switch.bedroom_alexa_repeat_2": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_alexa_repeat_2",
+        {
+          device_class: "switch";
+          icon: "mdi:repeat-off";
+          friendly_name: "Bedroom Alexa Repeat";
+        }
+      >;
+    };
+    "switch.living_room_sonos_do_not_disturb": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_sonos_do_not_disturb",
+        {
+          device_class: "switch";
+          icon: "mdi:minus-circle-off";
+          friendly_name: "Living Room Sonos Do not disturb";
+        }
+      >;
+    };
+    "switch.living_room_sonos_shuffle": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_sonos_shuffle",
+        {
+          device_class: "switch";
+          icon: "mdi:shuffle-disabled";
+          friendly_name: "Living Room Sonos Shuffle";
+        }
+      >;
+    };
+    "switch.living_room_sonos_repeat": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_sonos_repeat",
+        {
+          device_class: "switch";
+          icon: "mdi:repeat-off";
+          friendly_name: "Living Room Sonos Repeat";
+        }
+      >;
+    };
+    "switch.this_device_do_not_disturb": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.this_device_do_not_disturb",
+        {
+          device_class: "switch";
+          icon: "mdi:minus-circle-off";
+          friendly_name: "This Device Do not disturb";
         }
       >;
     };
@@ -4874,7 +4874,7 @@ declare module "@digital-alchemy/hass" {
            */ last_period: string;
           /**
            * > ```yaml
-           * > last_valid_state: '1532.5026'
+           * > last_valid_state: '1532.605'
            * > ```
            */ last_valid_state: string;
           /**
@@ -6687,374 +6687,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "sensor.bedroom_alexa_next_alarm": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bedroom_alexa_next_alarm",
-        {
-          device_class: "timestamp";
-          icon: "mdi:alarm";
-          friendly_name: "Bedroom Alexa Next alarm";
-        }
-      >;
-    };
-    "sensor.bedroom_alexa_next_timer": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bedroom_alexa_next_timer",
-        {
-          device_class: "timestamp";
-          icon: "mdi:timer-outline";
-          friendly_name: "Bedroom Alexa Next timer";
-        }
-      >;
-    };
-    "sensor.bedroom_alexa_next_reminder": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bedroom_alexa_next_reminder",
-        {
-          device_class: "timestamp";
-          icon: "mdi:reminder";
-          friendly_name: "Bedroom Alexa Next reminder";
-        }
-      >;
-    };
-    "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm",
-        {
-          device_class: "timestamp";
-          icon: "mdi:alarm";
-          friendly_name: "Ben's 2nd Sonos One Second Edition Next alarm";
-        }
-      >;
-    };
-    "sensor.ben_s_2nd_sonos_one_second_edition_next_timer": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.ben_s_2nd_sonos_one_second_edition_next_timer",
-        {
-          device_class: "timestamp";
-          icon: "mdi:timer-outline";
-          friendly_name: "Ben's 2nd Sonos One Second Edition Next timer";
-        }
-      >;
-    };
-    "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder",
-        {
-          device_class: "timestamp";
-          icon: "mdi:reminder";
-          friendly_name: "Ben's 2nd Sonos One Second Edition Next reminder";
-        }
-      >;
-    };
-    "sensor.living_room_sonos_one_next_alarm": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_sonos_one_next_alarm",
-        {
-          device_class: "timestamp";
-          icon: "mdi:alarm";
-          friendly_name: "Living Room Sonos One Next alarm";
-        }
-      >;
-    };
-    "sensor.living_room_sonos_one_next_timer": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_sonos_one_next_timer",
-        {
-          device_class: "timestamp";
-          icon: "mdi:timer-outline";
-          friendly_name: "Living Room Sonos One Next timer";
-        }
-      >;
-    };
-    "sensor.living_room_sonos_one_next_reminder": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_sonos_one_next_reminder",
-        {
-          device_class: "timestamp";
-          icon: "mdi:reminder";
-          friendly_name: "Living Room Sonos One Next reminder";
-        }
-      >;
-    };
-    "sensor.living_room_next_alarm_2": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_next_alarm_2",
-        {
-          device_class: "timestamp";
-          icon: "mdi:alarm";
-          friendly_name: "Living Room  Next alarm";
-        }
-      >;
-    };
-    "sensor.living_room_next_timer_2": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_next_timer_2",
-        {
-          device_class: "timestamp";
-          icon: "mdi:timer-outline";
-          friendly_name: "Living Room  Next timer";
-        }
-      >;
-    };
-    "sensor.living_room_next_reminder_2": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_next_reminder_2",
-        {
-          device_class: "timestamp";
-          icon: "mdi:reminder";
-          friendly_name: "Living Room  Next reminder";
-        }
-      >;
-    };
-    "sensor.living_room_alexa_next_alarm": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_alexa_next_alarm",
-        {
-          device_class: "timestamp";
-          icon: "mdi:alarm";
-          friendly_name: "Living Room Alexa Next alarm";
-        }
-      >;
-    };
-    "sensor.living_room_alexa_next_timer": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_alexa_next_timer",
-        {
-          device_class: "timestamp";
-          icon: "mdi:timer-outline";
-          friendly_name: "Living Room Alexa Next timer";
-        }
-      >;
-    };
-    "sensor.living_room_alexa_next_reminder": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_alexa_next_reminder",
-        {
-          device_class: "timestamp";
-          icon: "mdi:reminder";
-          friendly_name: "Living Room Alexa Next reminder";
-        }
-      >;
-    };
-    "sensor.bathroom_alexa_next_alarm": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bathroom_alexa_next_alarm",
-        {
-          device_class: "timestamp";
-          icon: "mdi:alarm";
-          friendly_name: "Bathroom Alexa Next alarm";
-        }
-      >;
-    };
-    "sensor.bathroom_alexa_next_timer": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bathroom_alexa_next_timer",
-        {
-          device_class: "timestamp";
-          icon: "mdi:timer-outline";
-          friendly_name: "Bathroom Alexa Next timer";
-        }
-      >;
-    };
-    "sensor.bathroom_alexa_next_reminder": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bathroom_alexa_next_reminder",
-        {
-          device_class: "timestamp";
-          icon: "mdi:reminder";
-          friendly_name: "Bathroom Alexa Next reminder";
-        }
-      >;
-    };
-    "sensor.bedroom_alexa_next_alarm_2": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bedroom_alexa_next_alarm_2",
-        {
-          device_class: "timestamp";
-          icon: "mdi:alarm";
-          friendly_name: "Bedroom Alexa Next alarm";
-        }
-      >;
-    };
-    "sensor.bedroom_alexa_next_timer_2": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bedroom_alexa_next_timer_2",
-        {
-          device_class: "timestamp";
-          icon: "mdi:timer-outline";
-          friendly_name: "Bedroom Alexa Next timer";
-        }
-      >;
-    };
-    "sensor.bedroom_alexa_next_reminder_2": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bedroom_alexa_next_reminder_2",
-        {
-          device_class: "timestamp";
-          icon: "mdi:reminder";
-          friendly_name: "Bedroom Alexa Next reminder";
-        }
-      >;
-    };
-    "sensor.living_room_sonos_next_alarm": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_sonos_next_alarm",
-        {
-          device_class: "timestamp";
-          icon: "mdi:alarm";
-          friendly_name: "Living Room Sonos Next alarm";
-        }
-      >;
-    };
-    "sensor.living_room_sonos_next_timer": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_sonos_next_timer",
-        {
-          device_class: "timestamp";
-          icon: "mdi:timer-outline";
-          friendly_name: "Living Room Sonos Next timer";
-        }
-      >;
-    };
-    "sensor.living_room_sonos_next_reminder": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_sonos_next_reminder",
-        {
-          device_class: "timestamp";
-          icon: "mdi:reminder";
-          friendly_name: "Living Room Sonos Next reminder";
-        }
-      >;
-    };
-    "sensor.this_device_next_alarm": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.this_device_next_alarm",
-        {
-          recurrence: null;
-          /**
-           * > ```yaml
-           * > process_timestamp: '2026-04-17T11:18:21.450875+01:00'
-           * > ```
-           */ process_timestamp: string;
-          prior_value: null;
-          /**
-           * > ```yaml
-           * > total_active: 0
-           * > ```
-           */ total_active: number;
-          /**
-           * > ```yaml
-           * > total_all: 0
-           * > ```
-           */ total_all: number;
-          /**
-           * > ```yaml
-           * > status: 'OFF'
-           * > ```
-           */ status: string;
-          dismissed: null;
-          device_class: "timestamp";
-          icon: "mdi:alarm";
-          friendly_name: "This Device Next alarm";
-        }
-      >;
-    };
-    "sensor.this_device_next_timer": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.this_device_next_timer",
-        {
-          recurrence: null;
-          /**
-           * > ```yaml
-           * > process_timestamp: '2026-04-17T11:18:21.450875+01:00'
-           * > ```
-           */ process_timestamp: string;
-          prior_value: null;
-          /**
-           * > ```yaml
-           * > total_active: 0
-           * > ```
-           */ total_active: number;
-          /**
-           * > ```yaml
-           * > total_all: 0
-           * > ```
-           */ total_all: number;
-          /**
-           * > ```yaml
-           * > status: 'OFF'
-           * > ```
-           */ status: string;
-          dismissed: null;
-          timer: null;
-          device_class: "timestamp";
-          icon: "mdi:timer-outline";
-          friendly_name: "This Device Next timer";
-        }
-      >;
-    };
-    "sensor.this_device_next_reminder": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.this_device_next_reminder",
-        {
-          recurrence: null;
-          /**
-           * > ```yaml
-           * > process_timestamp: '2026-04-17T11:18:21.450875+01:00'
-           * > ```
-           */ process_timestamp: string;
-          prior_value: null;
-          /**
-           * > ```yaml
-           * > total_active: 0
-           * > ```
-           */ total_active: number;
-          /**
-           * > ```yaml
-           * > total_all: 0
-           * > ```
-           */ total_all: number;
-          /**
-           * > ```yaml
-           * > status: 'OFF'
-           * > ```
-           */ status: string;
-          dismissed: null;
-          reminder: null;
-          device_class: "timestamp";
-          icon: "mdi:reminder";
-          friendly_name: "This Device Next reminder";
-        }
-      >;
-    };
     "sensor.bedroom_speaker_power": {
       state: number;
       attributes: DynamicMergeAttributes<
@@ -8758,6 +8390,640 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "sensor.bedroom_alexa_next_alarm": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_alexa_next_alarm",
+        {
+          /**
+           * > ```yaml
+           * > recurrence: Never Repeat
+           * > ```
+           */ recurrence: string;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 1
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 7
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'ON'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          /**
+           * > ```yaml
+           * > brief:
+           * >   active:
+           * >     - id: >-
+           * >         AVD3HM0HOJAAL-b5596c4d11df47da8e9ce2942f35b3a8-8c3e1c0f-9825-3d0a-9141-925ff9265f06
+           * >       label: null
+           * >       status: 'ON'
+           * >       type: Alarm
+           * >       version: '2'
+           * >       date_time: '2026-04-17T12:00:00+01:00'
+           * >       lastUpdatedDate: 1776422261811
+           * >   all:
+           * >     - id: >-
+           * >         AVD3HM0HOJAAL-b5596c4d11df47da8e9ce2942f35b3a8-0a597fb4-96b4-376c-bbf6-6f3061a6266c
+           * >       label: null
+           * >       status: 'OFF'
+           * >       type: Alarm
+           * >       version: '41'
+           * >       date_time: '2026-02-20T06:00... [truncated]
+           * > ```
+           */ brief: object;
+          sorted_all: [];
+          sorted_active: [];
+          alarm: null;
+          device_class: "timestamp";
+          icon: "mdi:alarm";
+          friendly_name: "Bedroom Alexa Next alarm";
+        }
+      >;
+    };
+    "sensor.bedroom_alexa_next_timer": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_alexa_next_timer",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 0
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          timer: null;
+          device_class: "timestamp";
+          icon: "mdi:timer-outline";
+          friendly_name: "Bedroom Alexa Next timer";
+        }
+      >;
+    };
+    "sensor.bedroom_alexa_next_reminder": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_alexa_next_reminder",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 0
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          reminder: null;
+          device_class: "timestamp";
+          icon: "mdi:reminder";
+          friendly_name: "Bedroom Alexa Next reminder";
+        }
+      >;
+    };
+    "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 0
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          device_class: "timestamp";
+          icon: "mdi:alarm";
+          friendly_name: "Ben's 2nd Sonos One Second Edition Next alarm";
+        }
+      >;
+    };
+    "sensor.ben_s_2nd_sonos_one_second_edition_next_timer": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.ben_s_2nd_sonos_one_second_edition_next_timer",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 0
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          timer: null;
+          device_class: "timestamp";
+          icon: "mdi:timer-outline";
+          friendly_name: "Ben's 2nd Sonos One Second Edition Next timer";
+        }
+      >;
+    };
+    "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 0
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          reminder: null;
+          device_class: "timestamp";
+          icon: "mdi:reminder";
+          friendly_name: "Ben's 2nd Sonos One Second Edition Next reminder";
+        }
+      >;
+    };
+    "sensor.living_room_sonos_one_next_alarm": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_sonos_one_next_alarm",
+        {
+          device_class: "timestamp";
+          icon: "mdi:alarm";
+          friendly_name: "Living Room Sonos One Next alarm";
+        }
+      >;
+    };
+    "sensor.living_room_sonos_one_next_timer": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_sonos_one_next_timer",
+        {
+          device_class: "timestamp";
+          icon: "mdi:timer-outline";
+          friendly_name: "Living Room Sonos One Next timer";
+        }
+      >;
+    };
+    "sensor.living_room_sonos_one_next_reminder": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_sonos_one_next_reminder",
+        {
+          device_class: "timestamp";
+          icon: "mdi:reminder";
+          friendly_name: "Living Room Sonos One Next reminder";
+        }
+      >;
+    };
+    "sensor.living_room_next_alarm_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_next_alarm_2",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 3
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          /**
+           * > ```yaml
+           * > brief:
+           * >   active: []
+           * >   all:
+           * >     - id: >-
+           * >         A158JKDPZX2CRP-5edbb233b18845e39bdb432dd91be055-d6e7b0f3-a92e-3eda-85e1-ea7882a41625
+           * >       label: null
+           * >       status: 'OFF'
+           * >       type: Alarm
+           * >       version: '3'
+           * >       date_time: '2025-05-27T08:27:00+01:00'
+           * >       lastUpdatedDate: 1748330824299
+           * >     - id: >-
+           * >         A158JKDPZX2CRP-5edbb233b18845e39bdb432dd91be055-1f75b8b3-8487-33f6-83d4-f18bc4af6c14
+           * >       label: null
+           * >       status: 'OFF'
+           * >       type: Alarm
+           * >       version: '5'
+           * >       date_time: '2025-09-20T... [truncated]
+           * > ```
+           */ brief: object;
+          sorted_all: [];
+          sorted_active: [];
+          device_class: "timestamp";
+          icon: "mdi:alarm";
+          friendly_name: "Living Room  Next alarm";
+        }
+      >;
+    };
+    "sensor.living_room_next_timer_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_next_timer_2",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 0
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          timer: null;
+          device_class: "timestamp";
+          icon: "mdi:timer-outline";
+          friendly_name: "Living Room  Next timer";
+        }
+      >;
+    };
+    "sensor.living_room_next_reminder_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_next_reminder_2",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 0
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          reminder: null;
+          device_class: "timestamp";
+          icon: "mdi:reminder";
+          friendly_name: "Living Room  Next reminder";
+        }
+      >;
+    };
+    "sensor.living_room_alexa_next_alarm": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_alexa_next_alarm",
+        {
+          device_class: "timestamp";
+          icon: "mdi:alarm";
+          friendly_name: "Living Room Alexa Next alarm";
+        }
+      >;
+    };
+    "sensor.living_room_alexa_next_timer": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_alexa_next_timer",
+        {
+          device_class: "timestamp";
+          icon: "mdi:timer-outline";
+          friendly_name: "Living Room Alexa Next timer";
+        }
+      >;
+    };
+    "sensor.living_room_alexa_next_reminder": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_alexa_next_reminder",
+        {
+          device_class: "timestamp";
+          icon: "mdi:reminder";
+          friendly_name: "Living Room Alexa Next reminder";
+        }
+      >;
+    };
+    "sensor.bathroom_alexa_next_alarm": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.bathroom_alexa_next_alarm",
+        {
+          device_class: "timestamp";
+          icon: "mdi:alarm";
+          friendly_name: "Bathroom Alexa Next alarm";
+        }
+      >;
+    };
+    "sensor.bathroom_alexa_next_timer": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.bathroom_alexa_next_timer",
+        {
+          device_class: "timestamp";
+          icon: "mdi:timer-outline";
+          friendly_name: "Bathroom Alexa Next timer";
+        }
+      >;
+    };
+    "sensor.bathroom_alexa_next_reminder": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.bathroom_alexa_next_reminder",
+        {
+          device_class: "timestamp";
+          icon: "mdi:reminder";
+          friendly_name: "Bathroom Alexa Next reminder";
+        }
+      >;
+    };
+    "sensor.bedroom_alexa_next_alarm_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_alexa_next_alarm_2",
+        {
+          device_class: "timestamp";
+          icon: "mdi:alarm";
+          friendly_name: "Bedroom Alexa Next alarm";
+        }
+      >;
+    };
+    "sensor.bedroom_alexa_next_timer_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_alexa_next_timer_2",
+        {
+          device_class: "timestamp";
+          icon: "mdi:timer-outline";
+          friendly_name: "Bedroom Alexa Next timer";
+        }
+      >;
+    };
+    "sensor.bedroom_alexa_next_reminder_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_alexa_next_reminder_2",
+        {
+          device_class: "timestamp";
+          icon: "mdi:reminder";
+          friendly_name: "Bedroom Alexa Next reminder";
+        }
+      >;
+    };
+    "sensor.living_room_sonos_next_alarm": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_sonos_next_alarm",
+        {
+          device_class: "timestamp";
+          icon: "mdi:alarm";
+          friendly_name: "Living Room Sonos Next alarm";
+        }
+      >;
+    };
+    "sensor.living_room_sonos_next_timer": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_sonos_next_timer",
+        {
+          device_class: "timestamp";
+          icon: "mdi:timer-outline";
+          friendly_name: "Living Room Sonos Next timer";
+        }
+      >;
+    };
+    "sensor.living_room_sonos_next_reminder": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_sonos_next_reminder",
+        {
+          device_class: "timestamp";
+          icon: "mdi:reminder";
+          friendly_name: "Living Room Sonos Next reminder";
+        }
+      >;
+    };
+    "sensor.this_device_next_alarm": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.this_device_next_alarm",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 0
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          device_class: "timestamp";
+          icon: "mdi:alarm";
+          friendly_name: "This Device Next alarm";
+        }
+      >;
+    };
+    "sensor.this_device_next_timer": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.this_device_next_timer",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 0
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          timer: null;
+          device_class: "timestamp";
+          icon: "mdi:timer-outline";
+          friendly_name: "This Device Next timer";
+        }
+      >;
+    };
+    "sensor.this_device_next_reminder": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.this_device_next_reminder",
+        {
+          recurrence: null;
+          /**
+           * > ```yaml
+           * > process_timestamp: '2026-04-17T11:37:42.039514+01:00'
+           * > ```
+           */ process_timestamp: string;
+          prior_value: null;
+          /**
+           * > ```yaml
+           * > total_active: 0
+           * > ```
+           */ total_active: number;
+          /**
+           * > ```yaml
+           * > total_all: 0
+           * > ```
+           */ total_all: number;
+          /**
+           * > ```yaml
+           * > status: 'OFF'
+           * > ```
+           */ status: string;
+          dismissed: null;
+          reminder: null;
+          device_class: "timestamp";
+          icon: "mdi:reminder";
+          friendly_name: "This Device Next reminder";
+        }
+      >;
+    };
     "event.backup_automatic_backup": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -9487,29 +9753,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5228
+           * > color_temp_kelvin: 5253
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.309
-           * >   - 16.232
+           * >   - 27.352
+           * >   - 15.911
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 232
+           * >   - 233
            * >   - 214
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.363
-           * >   - 0.346
+           * >   - 0.362
+           * >   - 0.347
            * > ```
            */ xy_color: [x: number, y: number];
           entity_id: (
@@ -9932,21 +10198,21 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5319
+           * > color_temp_kelvin: 5347
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.479
-           * >   - 15.075
+           * >   - 27.539
+           * >   - 14.724
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 234
+           * >   - 235
            * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
@@ -9954,7 +10220,7 @@ declare module "@digital-alchemy/hass" {
            * > ```yaml
            * > xy_color:
            * >   - 0.359
-           * >   - 0.345
+           * >   - 0.346
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "living room back wall (right)";
@@ -10034,21 +10300,21 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5319
+           * > color_temp_kelvin: 5347
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.479
-           * >   - 15.075
+           * >   - 27.539
+           * >   - 14.724
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 234
+           * >   - 235
            * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
@@ -10056,7 +10322,7 @@ declare module "@digital-alchemy/hass" {
            * > ```yaml
            * > xy_color:
            * >   - 0.359
-           * >   - 0.345
+           * >   - 0.346
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room back wall (left)";
@@ -10136,21 +10402,21 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5319
+           * > color_temp_kelvin: 5347
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.479
-           * >   - 15.075
+           * >   - 27.539
+           * >   - 14.724
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 234
+           * >   - 235
            * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
@@ -10158,7 +10424,7 @@ declare module "@digital-alchemy/hass" {
            * > ```yaml
            * > xy_color:
            * >   - 0.359
-           * >   - 0.345
+           * >   - 0.346
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room back wall (middlle)";
@@ -10238,21 +10504,21 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5319
+           * > color_temp_kelvin: 5347
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.479
-           * >   - 15.075
+           * >   - 27.539
+           * >   - 14.724
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 234
+           * >   - 235
            * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
@@ -10260,7 +10526,7 @@ declare module "@digital-alchemy/hass" {
            * > ```yaml
            * > xy_color:
            * >   - 0.359
-           * >   - 0.345
+           * >   - 0.346
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Washing Machine)";
@@ -10340,21 +10606,21 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5319
+           * > color_temp_kelvin: 5347
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.479
-           * >   - 15.075
+           * >   - 27.539
+           * >   - 14.724
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 234
+           * >   - 235
            * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
@@ -10362,7 +10628,7 @@ declare module "@digital-alchemy/hass" {
            * > ```yaml
            * > xy_color:
            * >   - 0.359
-           * >   - 0.345
+           * >   - 0.346
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Sink)";
@@ -10442,21 +10708,21 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5319
+           * > color_temp_kelvin: 5347
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.479
-           * >   - 15.075
+           * >   - 27.539
+           * >   - 14.724
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 234
+           * >   - 235
            * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
@@ -10464,7 +10730,7 @@ declare module "@digital-alchemy/hass" {
            * > ```yaml
            * > xy_color:
            * >   - 0.359
-           * >   - 0.345
+           * >   - 0.346
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Oven)";
@@ -10544,21 +10810,21 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5319
+           * > color_temp_kelvin: 5347
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.479
-           * >   - 15.075
+           * >   - 27.539
+           * >   - 14.724
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 234
+           * >   - 235
            * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
@@ -10566,7 +10832,7 @@ declare module "@digital-alchemy/hass" {
            * > ```yaml
            * > xy_color:
            * >   - 0.359
-           * >   - 0.345
+           * >   - 0.346
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Fridge)";
@@ -11679,21 +11945,21 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5319
+           * > color_temp_kelvin: 5347
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.479
-           * >   - 15.075
+           * >   - 27.539
+           * >   - 14.724
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 234
+           * >   - 235
            * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
@@ -11701,7 +11967,7 @@ declare module "@digital-alchemy/hass" {
            * > ```yaml
            * > xy_color:
            * >   - 0.359
-           * >   - 0.345
+           * >   - 0.346
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room (TV wall)";
@@ -12026,12 +12292,12 @@ declare module "@digital-alchemy/hass" {
            */ next_setting: string;
           /**
            * > ```yaml
-           * > elevation: 42.16
+           * > elevation: 43.48
            * > ```
            */ elevation: number;
           /**
            * > ```yaml
-           * > azimuth: 143.77
+           * > azimuth: 148.82
            * > ```
            */ azimuth: number;
           rising: boolean;
@@ -12901,7 +13167,7 @@ declare module "@digital-alchemy/hass" {
            */ target_temp_step: number;
           /**
            * > ```yaml
-           * > current_temperature: 44.8
+           * > current_temperature: 44.7
            * > ```
            */ current_temperature: number;
           /**
@@ -13041,7 +13307,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 232
+           * > media_duration: 294
            * > ```
            */ media_duration: number;
           /**
@@ -13051,22 +13317,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-04-17T10:24:26.885508+00:00'
+           * > media_position_updated_at: '2026-04-17T10:37:37.902417+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Let You Go
+           * > media_title: Midnight
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: RY X
+           * > media_artist: Coldplay
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Blood Moon
+           * > media_album_name: Ghost Stories
            * > ```
            */ media_album_name: string;
           /**
@@ -13089,7 +13355,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=1974fd073b7c946cdb319e192a0ddd651bb67aa6cf53547cba8285e071391cf0&cache=91f4e6828182e69e
+           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=1974fd073b7c946cdb319e192a0ddd651bb67aa6cf53547cba8285e071391cf0&cache=7746ff605f97a7cf
            * > ```
            */ entity_picture: string;
           friendly_name: "Bedroom Speaker";
@@ -13131,7 +13397,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 232
+           * > media_duration: 294
            * > ```
            */ media_duration: number;
           /**
@@ -13141,22 +13407,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-04-17T10:24:26.885508+00:00'
+           * > media_position_updated_at: '2026-04-17T10:37:37.902417+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Let You Go
+           * > media_title: Midnight
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: RY X
+           * > media_artist: Coldplay
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Blood Moon
+           * > media_album_name: Ghost Stories
            * > ```
            */ media_album_name: string;
           /**
@@ -13179,7 +13445,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.living_room_sonos?token=22e75a33cb0b43f021b4e0f1fa901f1dc9184deec2cc38dbd1828620060613d0&cache=91f4e6828182e69e
+           * >   /api/media_player_proxy/media_player.living_room_sonos?token=22e75a33cb0b43f021b4e0f1fa901f1dc9184deec2cc38dbd1828620060613d0&cache=7746ff605f97a7cf
            * > ```
            */ entity_picture: string;
           friendly_name: "Living Room";
@@ -13221,7 +13487,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 232
+           * > media_duration: 294
            * > ```
            */ media_duration: number;
           /**
@@ -13231,22 +13497,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-04-17T10:24:26.885508+00:00'
+           * > media_position_updated_at: '2026-04-17T10:37:37.902417+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Let You Go
+           * > media_title: Midnight
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: RY X
+           * > media_artist: Coldplay
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Blood Moon
+           * > media_album_name: Ghost Stories
            * > ```
            */ media_album_name: string;
           /**
@@ -13269,7 +13535,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bathroom_sonos?token=7d4c1dc0c5f084f896e2f3b0d736948352543ffd5241af00de8526c92b4e5dc5&cache=91f4e6828182e69e
+           * >   /api/media_player_proxy/media_player.bathroom_sonos?token=7d4c1dc0c5f084f896e2f3b0d736948352543ffd5241af00de8526c92b4e5dc5&cache=7746ff605f97a7cf
            * > ```
            */ entity_picture: string;
           friendly_name: "Bathroom";
@@ -13311,7 +13577,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 232
+           * > media_duration: 294
            * > ```
            */ media_duration: number;
           /**
@@ -13321,22 +13587,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-04-17T10:24:26.885508+00:00'
+           * > media_position_updated_at: '2026-04-17T10:37:37.902417+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Let You Go
+           * > media_title: Midnight
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: RY X
+           * > media_artist: Coldplay
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Blood Moon
+           * > media_album_name: Ghost Stories
            * > ```
            */ media_album_name: string;
           /**
@@ -13359,7 +13625,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.hallway?token=fd6da53d76ea3b3286aed206b67e94afec19ca406201b675ab621b54ac5baded&cache=91f4e6828182e69e
+           * >   /api/media_player_proxy/media_player.hallway?token=fd6da53d76ea3b3286aed206b67e94afec19ca406201b675ab621b54ac5baded&cache=7746ff605f97a7cf
            * > ```
            */ entity_picture: string;
           friendly_name: "Hallway";
@@ -13383,7 +13649,7 @@ declare module "@digital-alchemy/hass" {
            */ volume_level: number;
           /**
            * > ```yaml
-           * > media_content_id: spotify:track:2DHDuADAHoUW6n0z80RLQF
+           * > media_content_id: spotify:track:2pK3jFRZt9Yqpl1mAEwcEr
            * > ```
            */ media_content_id: string;
           /**
@@ -13393,7 +13659,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 241
+           * > media_duration: 232
            * > ```
            */ media_duration: number;
           /**
@@ -13403,22 +13669,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-04-17T09:51:45.298323+00:00'
+           * > media_position_updated_at: '2026-04-17T10:24:27.111917+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Pieces
+           * > media_title: Let You Go
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Andrew Belle
+           * > media_artist: RY X
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Black Bear
+           * > media_album_name: Blood Moon
            * > ```
            */ media_album_name: string;
           /**
@@ -13434,7 +13700,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.whole_flat?token=a480b18a0c22fb93144bbba34d465bb68686ab3462fce7f8613883b4412c9062&cache=accb76944e2b0cc0
+           * >   /api/media_player_proxy/media_player.whole_flat?token=a480b18a0c22fb93144bbba34d465bb68686ab3462fce7f8613883b4412c9062&cache=91f4e6828182e69e
            * > ```
            */ entity_picture_local: string;
           /**
@@ -13446,7 +13712,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b27341b7816b18a155061e097c7d
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273ef8d7f1571d79f3a6ede43ad
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker-multiple";
@@ -13518,12 +13784,50 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "media_player.lg_webos_tv_oled55c8pla",
         {
+          /**
+           * > ```yaml
+           * > volume_level: 0.77
+           * > ```
+           */ volume_level: number;
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_type: music
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > app_id: music_assistant
+           * > ```
+           */ app_id: string;
+          /**
+           * > ```yaml
+           * > source: Music Assistant Queue
+           * > ```
+           */ source: string;
+          shuffle: boolean;
+          /**
+           * > ```yaml
+           * > repeat: 'off'
+           * > ```
+           */ repeat: string;
+          entity_picture_local: null;
+          /**
+           * > ```yaml
+           * > mass_player_type: player
+           * > ```
+           */ mass_player_type: string;
+          /**
+           * > ```yaml
+           * > active_queue: upa823feb0f20a
+           * > ```
+           */ active_queue: string;
           device_class: "speaker";
           icon: "mdi:speaker";
           friendly_name: "[LG] webOS TV OLED55C8PLA";
           /**
            * > ```yaml
-           * > supported_features: 7795251
+           * > supported_features: 7796287
            * > ```
            */ supported_features: number;
         }
@@ -13565,7 +13869,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: spotify:track:2DHDuADAHoUW6n0z80RLQF
+           * > media_content_id: spotify:track:2pK3jFRZt9Yqpl1mAEwcEr
            * > ```
            */ media_content_id: string;
           /**
@@ -13575,7 +13879,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 241
+           * > media_duration: 232
            * > ```
            */ media_duration: number;
           /**
@@ -13590,17 +13894,17 @@ declare module "@digital-alchemy/hass" {
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Pieces
+           * > media_title: Let You Go
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Andrew Belle
+           * > media_artist: RY X
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Black Bear
+           * > media_album_name: Blood Moon
            * > ```
            */ media_album_name: string;
           /**
@@ -13611,7 +13915,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bedroom?token=d2b767bf1b60653aa5fe53f917592146a836574374b99673f27c7a34356a07d8&cache=accb76944e2b0cc0
+           * >   /api/media_player_proxy/media_player.bedroom?token=d2b767bf1b60653aa5fe53f917592146a836574374b99673f27c7a34356a07d8&cache=91f4e6828182e69e
            * > ```
            */ entity_picture_local: string;
           /**
@@ -13623,7 +13927,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b27341b7816b18a155061e097c7d
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273ef8d7f1571d79f3a6ede43ad
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -13656,7 +13960,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: spotify:track:2DHDuADAHoUW6n0z80RLQF
+           * > media_content_id: spotify:track:2pK3jFRZt9Yqpl1mAEwcEr
            * > ```
            */ media_content_id: string;
           /**
@@ -13666,7 +13970,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 241
+           * > media_duration: 232
            * > ```
            */ media_duration: number;
           /**
@@ -13681,17 +13985,17 @@ declare module "@digital-alchemy/hass" {
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Pieces
+           * > media_title: Let You Go
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Andrew Belle
+           * > media_artist: RY X
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Black Bear
+           * > media_album_name: Blood Moon
            * > ```
            */ media_album_name: string;
           /**
@@ -13702,7 +14006,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bathroom?token=5cc2c26e1e939ed64ae2df12ed2d838bfae4ca148b806ee04253d52b6f338686&cache=accb76944e2b0cc0
+           * >   /api/media_player_proxy/media_player.bathroom?token=5cc2c26e1e939ed64ae2df12ed2d838bfae4ca148b806ee04253d52b6f338686&cache=91f4e6828182e69e
            * > ```
            */ entity_picture_local: string;
           /**
@@ -13714,7 +14018,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b27341b7816b18a155061e097c7d
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273ef8d7f1571d79f3a6ede43ad
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -13747,7 +14051,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: spotify:track:2DHDuADAHoUW6n0z80RLQF
+           * > media_content_id: spotify:track:2pK3jFRZt9Yqpl1mAEwcEr
            * > ```
            */ media_content_id: string;
           /**
@@ -13757,7 +14061,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 241
+           * > media_duration: 232
            * > ```
            */ media_duration: number;
           /**
@@ -13772,17 +14076,17 @@ declare module "@digital-alchemy/hass" {
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Pieces
+           * > media_title: Let You Go
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Andrew Belle
+           * > media_artist: RY X
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Black Bear
+           * > media_album_name: Blood Moon
            * > ```
            */ media_album_name: string;
           /**
@@ -13798,7 +14102,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.living_room?token=bea3cafde88c34315fb181e3da1fff48137203637d2dee38c768f2bfdf58d94b&cache=accb76944e2b0cc0
+           * >   /api/media_player_proxy/media_player.living_room?token=bea3cafde88c34315fb181e3da1fff48137203637d2dee38c768f2bfdf58d94b&cache=91f4e6828182e69e
            * > ```
            */ entity_picture_local: string;
           /**
@@ -13810,7 +14114,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b27341b7816b18a155061e097c7d
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273ef8d7f1571d79f3a6ede43ad
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -13843,7 +14147,7 @@ declare module "@digital-alchemy/hass" {
           is_volume_muted: boolean;
           /**
            * > ```yaml
-           * > media_content_id: spotify:track:2DHDuADAHoUW6n0z80RLQF
+           * > media_content_id: spotify:track:2pK3jFRZt9Yqpl1mAEwcEr
            * > ```
            */ media_content_id: string;
           /**
@@ -13853,7 +14157,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 241
+           * > media_duration: 232
            * > ```
            */ media_duration: number;
           /**
@@ -13863,22 +14167,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-04-17T09:51:45.298323+00:00'
+           * > media_position_updated_at: '2026-04-17T10:24:27.111917+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Pieces
+           * > media_title: Let You Go
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Andrew Belle
+           * > media_artist: RY X
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Black Bear
+           * > media_album_name: Blood Moon
            * > ```
            */ media_album_name: string;
           /**
@@ -13894,7 +14198,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.unnamed_room_2?token=fa631ff02f052c006e226b89b4467f61cfe37b2d2919dfd0a665b820d495e1a3&cache=accb76944e2b0cc0
+           * >   /api/media_player_proxy/media_player.unnamed_room_2?token=fa631ff02f052c006e226b89b4467f61cfe37b2d2919dfd0a665b820d495e1a3&cache=91f4e6828182e69e
            * > ```
            */ entity_picture_local: string;
           /**
@@ -13906,7 +14210,7 @@ declare module "@digital-alchemy/hass" {
           device_class: "speaker";
           /**
            * > ```yaml
-           * > entity_picture: https://i.scdn.co/image/ab67616d0000b27341b7816b18a155061e097c7d
+           * > entity_picture: https://i.scdn.co/image/ab67616d0000b273ef8d7f1571d79f3a6ede43ad
            * > ```
            */ entity_picture: string;
           icon: "mdi:speaker";
@@ -14006,152 +14310,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "media_player.bedroom_sonos_one": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.bedroom_sonos_one",
-        {
-          friendly_name: "Bedroom Alexa Bedroom Sonos One";
-          /**
-           * > ```yaml
-           * > supported_features: 318399
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.ben_s_2nd_sonos_one_second_edition": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.ben_s_2nd_sonos_one_second_edition",
-        {
-          friendly_name: "Ben's 2nd Sonos One Second Edition";
-          /**
-           * > ```yaml
-           * > supported_features: 318399
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.living_room_sonos_one": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.living_room_sonos_one",
-        {
-          friendly_name: "Living Room Sonos One";
-          /**
-           * > ```yaml
-           * > supported_features: 318399
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.sonos_arc_ultra": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.sonos_arc_ultra",
-        {
-          friendly_name: "Living Room  Sonos Arc Ultra";
-          /**
-           * > ```yaml
-           * > supported_features: 318399
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.living_room_2": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.living_room_2",
-        {
-          friendly_name: "Living Room Alexa Living Room";
-          /**
-           * > ```yaml
-           * > supported_features: 318399
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.bathroom_2": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.bathroom_2",
-        {
-          friendly_name: "Bathroom Alexa Bathroom";
-          /**
-           * > ```yaml
-           * > supported_features: 318399
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.bedroom_speaker": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.bedroom_speaker",
-        {
-          friendly_name: "Bedroom Alexa Bedroom Speaker";
-          /**
-           * > ```yaml
-           * > supported_features: 318399
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.living_room_sonos_2": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.living_room_sonos_2",
-        {
-          friendly_name: "Living Room Sonos";
-          /**
-           * > ```yaml
-           * > supported_features: 318399
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.this_device": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.this_device",
-        {
-          is_volume_muted: boolean;
-          /**
-           * > ```yaml
-           * > media_content_type: idle
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > media_position_updated_at: '2026-04-13T23:51:06.074747+00:00'
-           * > ```
-           */ media_position_updated_at: string;
-          available: boolean;
-          last_called: null;
-          last_called_timestamp: null;
-          last_called_summary: null;
-          last_called_response: null;
-          connected_bluetooth: null;
-          bluetooth_list: [];
-          history_records: [];
-          previous_volume: null;
-          friendly_name: "This Device";
-          /**
-           * > ```yaml
-           * > supported_features: 318399
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
     "media_player.xbox": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -14238,6 +14396,220 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > supported_features: 8320575
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.bedroom_sonos_one": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.bedroom_sonos_one",
+        {
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_type: idle
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-04-17T10:35:24.548266+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          available: boolean;
+          last_called: boolean;
+          last_called_timestamp: null;
+          last_called_summary: null;
+          last_called_response: null;
+          connected_bluetooth: null;
+          bluetooth_list: [];
+          history_records: [];
+          previous_volume: null;
+          friendly_name: "Bedroom Alexa Bedroom Sonos One";
+          /**
+           * > ```yaml
+           * > supported_features: 318399
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.ben_s_2nd_sonos_one_second_edition": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.ben_s_2nd_sonos_one_second_edition",
+        {
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_type: idle
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-04-17T10:35:24.611193+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          available: boolean;
+          last_called: boolean;
+          last_called_timestamp: null;
+          last_called_summary: null;
+          last_called_response: null;
+          connected_bluetooth: null;
+          bluetooth_list: [];
+          history_records: [];
+          previous_volume: null;
+          friendly_name: "Ben's 2nd Sonos One Second Edition";
+          /**
+           * > ```yaml
+           * > supported_features: 318399
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.living_room_sonos_one": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.living_room_sonos_one",
+        {
+          friendly_name: "Living Room Sonos One";
+          /**
+           * > ```yaml
+           * > supported_features: 318399
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.sonos_arc_ultra": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.sonos_arc_ultra",
+        {
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_type: idle
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-04-17T10:35:24.743259+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          available: boolean;
+          last_called: boolean;
+          /**
+           * > ```yaml
+           * > last_called_timestamp: 1776419234519
+           * > ```
+           */ last_called_timestamp: number;
+          /**
+           * > ```yaml
+           * > last_called_summary: play some music
+           * > ```
+           */ last_called_summary: string;
+          last_called_response: null;
+          connected_bluetooth: null;
+          bluetooth_list: [];
+          history_records: [];
+          previous_volume: null;
+          friendly_name: "Living Room  Sonos Arc Ultra";
+          /**
+           * > ```yaml
+           * > supported_features: 318399
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.living_room_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.living_room_2",
+        {
+          friendly_name: "Living Room Alexa Living Room";
+          /**
+           * > ```yaml
+           * > supported_features: 318399
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.bathroom_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.bathroom_2",
+        {
+          friendly_name: "Bathroom Alexa Bathroom";
+          /**
+           * > ```yaml
+           * > supported_features: 318399
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.bedroom_speaker": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.bedroom_speaker",
+        {
+          friendly_name: "Bedroom Alexa Bedroom Speaker";
+          /**
+           * > ```yaml
+           * > supported_features: 318399
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.living_room_sonos_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.living_room_sonos_2",
+        {
+          friendly_name: "Living Room Sonos";
+          /**
+           * > ```yaml
+           * > supported_features: 318399
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.this_device": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.this_device",
+        {
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_type: idle
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-04-17T10:35:24.745542+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          available: boolean;
+          last_called: boolean;
+          last_called_timestamp: null;
+          last_called_summary: null;
+          last_called_response: null;
+          connected_bluetooth: null;
+          bluetooth_list: [];
+          history_records: [];
+          previous_volume: null;
+          friendly_name: "This Device";
+          /**
+           * > ```yaml
+           * > supported_features: 318399
            * > ```
            */ supported_features: number;
         }
@@ -15558,12 +15930,12 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 14.379999999888
+           * > online_time: 129.37999999989
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 13327551003
+           * > traffic_usage: 13327556831
            * > ```
            */ traffic_usage: number;
           icon: "mdi:lan-connect";
@@ -15612,12 +15984,12 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 1241128.38
+           * > online_time: 1241903.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 69274351357
+           * > traffic_usage: 69274463288
            * > ```
            */ traffic_usage: number;
           icon: "mdi:lan-connect";
@@ -15656,22 +16028,22 @@ declare module "@digital-alchemy/hass" {
           packets_received: null;
           /**
            * > ```yaml
-           * > up_speed: 0
+           * > up_speed: 66
            * > ```
            */ up_speed: number;
           /**
            * > ```yaml
-           * > down_speed: 0
+           * > down_speed: 776
            * > ```
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 596996.38
+           * > online_time: 597771.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 218405621010
+           * > traffic_usage: 218409768068
            * > ```
            */ traffic_usage: number;
           icon: "mdi:lan-connect";
@@ -15712,12 +16084,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 1199119
+           * > packets_sent: 1199583
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 5475172
+           * > packets_received: 5477207
            * > ```
            */ packets_received: number;
           /**
@@ -15737,17 +16109,17 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 72222
+           * > rx_rate: 65000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1991137.38
+           * > online_time: 1991912.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 2700595
+           * > traffic_usage: 2701539
            * > ```
            */ traffic_usage: number;
           /**
@@ -15793,12 +16165,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 2616706
+           * > packets_sent: 2617970
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 16674861
+           * > packets_received: 16677503
            * > ```
            */ packets_received: number;
           /**
@@ -15823,12 +16195,12 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1844362.38
+           * > online_time: 1845137.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 203911982
+           * > traffic_usage: 203921030
            * > ```
            */ traffic_usage: number;
           /**
@@ -15874,12 +16246,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 671339
+           * > packets_sent: 671811
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4925325
+           * > packets_received: 4927364
            * > ```
            */ packets_received: number;
           /**
@@ -15899,22 +16271,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 65000
+           * > rx_rate: 72222
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1109915.38
+           * > online_time: 1110690.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 2845301
+           * > traffic_usage: 2846245
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -56
+           * > signal: -57
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -15955,12 +16327,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 22449702
+           * > packets_sent: 22451532
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 27085816
+           * > packets_received: 27126319
            * > ```
            */ packets_received: number;
           /**
@@ -15980,17 +16352,17 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 1200950
+           * > rx_rate: 960730
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1100343.38
+           * > online_time: 1101118.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 211301566
+           * > traffic_usage: 211310437
            * > ```
            */ traffic_usage: number;
           /**
@@ -16036,12 +16408,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 662765
+           * > packets_sent: 663230
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4917526
+           * > packets_received: 4919562
            * > ```
            */ packets_received: number;
           /**
@@ -16061,22 +16433,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 72222
+           * > rx_rate: 65000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1097831.38
+           * > online_time: 1098606.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 2753825
+           * > traffic_usage: 2754827
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -44
+           * > signal: -45
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16117,12 +16489,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 419700
+           * > packets_sent: 419855
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4483213
+           * > packets_received: 4484857
            * > ```
            */ packets_received: number;
           /**
@@ -16142,22 +16514,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 6000
+           * > rx_rate: 72222
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1991148.38
+           * > online_time: 1991923.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 22672154
+           * > traffic_usage: 22678223
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -52
+           * > signal: -53
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16198,12 +16570,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 369160
+           * > packets_sent: 369301
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4404893
+           * > packets_received: 4406512
            * > ```
            */ packets_received: number;
           /**
@@ -16228,7 +16600,7 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1991148.38
+           * > online_time: 1991923.38
            * > ```
            */ online_time: number;
           /**
@@ -16279,12 +16651,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 124717
+           * > packets_sent: 124852
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4277267
+           * > packets_received: 4278860
            * > ```
            */ packets_received: number;
           /**
@@ -16304,12 +16676,12 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 52000
+           * > rx_rate: 6000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 680875.38
+           * > online_time: 681650.38
            * > ```
            */ online_time: number;
           /**
@@ -16360,12 +16732,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 22922
+           * > packets_sent: 23912
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4250393
+           * > packets_received: 4252601
            * > ```
            */ packets_received: number;
           /**
@@ -16390,17 +16762,17 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1991138.38
+           * > online_time: 1991913.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 36658428
+           * > traffic_usage: 36671744
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -25
+           * > signal: -24
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16441,12 +16813,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 8756
+           * > packets_sent: 10233
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 5382348
+           * > packets_received: 5385445
            * > ```
            */ packets_received: number;
           /**
@@ -16461,7 +16833,7 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > tx_rate: 600440
+           * > tx_rate: 567080
            * > ```
            */ tx_rate: number;
           /**
@@ -16471,7 +16843,7 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 175.37999999989
+           * > online_time: 950.37999999989
            * > ```
            */ online_time: number;
           /**
@@ -16522,22 +16894,22 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 46320187
+           * > packets_sent: 46367428
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 49669740
+           * > packets_received: 49695921
            * > ```
            */ packets_received: number;
           /**
            * > ```yaml
-           * > up_speed: 0
+           * > up_speed: 396
            * > ```
            */ up_speed: number;
           /**
            * > ```yaml
-           * > down_speed: 66
+           * > down_speed: 78130
            * > ```
            */ down_speed: number;
           /**
@@ -16552,12 +16924,12 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1844362.38
+           * > online_time: 1845137.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 1558526341
+           * > traffic_usage: 1591344960
            * > ```
            */ traffic_usage: number;
           /**
@@ -16603,12 +16975,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 261585
+           * > packets_sent: 264560
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4243625
+           * > packets_received: 4245263
            * > ```
            */ packets_received: number;
           /**
@@ -16633,17 +17005,17 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 295.37999999989
+           * > online_time: 1070.3799999999
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 250773020
+           * > traffic_usage: 250777304
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -46
+           * > signal: -45
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16684,12 +17056,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 122155
+           * > packets_sent: 122301
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4300544
+           * > packets_received: 4302169
            * > ```
            */ packets_received: number;
           /**
@@ -16714,7 +17086,7 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 601720.38
+           * > online_time: 602495.38
            * > ```
            */ online_time: number;
           /**
@@ -16724,7 +17096,7 @@ declare module "@digital-alchemy/hass" {
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -40
+           * > signal: -39
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16765,12 +17137,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 6530461
+           * > packets_sent: 6532777
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4842691
+           * > packets_received: 4844491
            * > ```
            */ packets_received: number;
           /**
@@ -16795,12 +17167,12 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 9624.3799999999
+           * > online_time: 10399.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 159658
+           * > traffic_usage: 160068
            * > ```
            */ traffic_usage: number;
           /**
@@ -16846,12 +17218,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 919865
+           * > packets_sent: 921607
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4330416
+           * > packets_received: 4332213
            * > ```
            */ packets_received: number;
           /**
@@ -16866,7 +17238,7 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > tx_rate: 39000
+           * > tx_rate: 19500
            * > ```
            */ tx_rate: number;
           /**
@@ -16876,7 +17248,7 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 349971.38
+           * > online_time: 350746.38
            * > ```
            */ online_time: number;
           /**
@@ -16886,7 +17258,7 @@ declare module "@digital-alchemy/hass" {
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -69
+           * > signal: -70
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16927,22 +17299,22 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 1015850
+           * > packets_sent: 1042062
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 6670115
+           * > packets_received: 6705519
            * > ```
            */ packets_received: number;
           /**
            * > ```yaml
-           * > up_speed: 24445
+           * > up_speed: 19568
            * > ```
            */ up_speed: number;
           /**
            * > ```yaml
-           * > down_speed: 4892
+           * > down_speed: 12874
            * > ```
            */ down_speed: number;
           /**
@@ -16952,17 +17324,17 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 650000
+           * > rx_rate: 24000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1719182.38
+           * > online_time: 1719957.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 101534437240
+           * > traffic_usage: 101578368452
            * > ```
            */ traffic_usage: number;
           /**
@@ -17008,12 +17380,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 122124
+           * > packets_sent: 122264
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4300457
+           * > packets_received: 4302078
            * > ```
            */ packets_received: number;
           /**
@@ -17028,7 +17400,7 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > tx_rate: 52000
+           * > tx_rate: 39000
            * > ```
            */ tx_rate: number;
           /**
@@ -17038,7 +17410,7 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 601720.38
+           * > online_time: 602495.38
            * > ```
            */ online_time: number;
           /**
@@ -17048,7 +17420,7 @@ declare module "@digital-alchemy/hass" {
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -49
+           * > signal: -48
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -17089,22 +17461,22 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 3942656
+           * > packets_sent: 3944245
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 20312509
+           * > packets_received: 20315475
            * > ```
            */ packets_received: number;
           /**
            * > ```yaml
-           * > up_speed: 0
+           * > up_speed: 167
            * > ```
            */ up_speed: number;
           /**
            * > ```yaml
-           * > down_speed: 0
+           * > down_speed: 97
            * > ```
            */ down_speed: number;
           /**
@@ -17114,22 +17486,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 6000
+           * > rx_rate: 104000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1844362.38
+           * > online_time: 1845137.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 4148780845
+           * > traffic_usage: 4148821730
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -56
+           * > signal: -54
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -17256,12 +17628,12 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 14.379999999888
+           * > online_time: 789.37999999989
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 216771510
+           * > traffic_usage: 216915652
            * > ```
            */ traffic_usage: number;
           icon: "mdi:lan-connect";
@@ -17838,7 +18210,7 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 11:25:59'
+           * > start_time: '2026-04-17 11:38:59'
            * > ```
            */ start_time: string;
           /**
@@ -17890,12 +18262,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 11:25:59'
+           * > start_time: '2026-04-17 11:38:59'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-04-17 12:25:59'
+           * > end_time: '2026-04-17 12:38:59'
            * > ```
            */ end_time: string;
           /**
@@ -17939,7 +18311,7 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 11:25:59'
+           * > start_time: '2026-04-17 11:38:59'
            * > ```
            */ start_time: string;
           /**
@@ -17983,7 +18355,7 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 11:25:59'
+           * > start_time: '2026-04-17 11:38:59'
            * > ```
            */ start_time: string;
           /**
@@ -18036,7 +18408,7 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 11:25:59'
+           * > start_time: '2026-04-17 11:38:59'
            * > ```
            */ start_time: string;
           /**
@@ -18089,12 +18461,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 11:25:59'
+           * > start_time: '2026-04-17 11:38:59'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-04-17 12:25:59'
+           * > end_time: '2026-04-17 12:38:59'
            * > ```
            */ end_time: string;
           /**
@@ -18133,12 +18505,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 11:25:59'
+           * > start_time: '2026-04-17 11:38:59'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-04-17 12:25:59'
+           * > end_time: '2026-04-17 12:38:59'
            * > ```
            */ end_time: string;
           /**
@@ -18570,13 +18942,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 403a675cb3841f92cbfb31ab37f99f18957a0fa68130bf58170ee5672a1106ac
+           * > access_token: ae71784d32e285b51acab262155d343c62943aa48d7a6fc6e80e490c02e1e134
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.xbox_network_now_playing?token=403a675cb3841f92cbfb31ab37f99f18957a0fa68130bf58170ee5672a1106ac
+           * >   /api/image_proxy/image.xbox_network_now_playing?token=ae71784d32e285b51acab262155d343c62943aa48d7a6fc6e80e490c02e1e134
            * > ```
            */ entity_picture: string;
           friendly_name: "Xbox Network Now playing";

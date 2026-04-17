@@ -1,14 +1,23 @@
-import { beforeEach, expect, mock, test } from "bun:test";
+import { afterEach, beforeEach, expect, mock, setSystemTime, test } from "bun:test";
+import type { Dayjs } from "dayjs";
 import { SleepModeService } from "./sleep-mode-service.ts";
 
 beforeEach(() => {
   mock.clearAllMocks();
 });
 
-test("turning sleep mode on enables the expected adaptive-lighting sleep switches", async () => {
+afterEach(() => {
+  setSystemTime();
+});
+
+type CalendarEvent = { start: string; end: string; summary: string };
+type GetEventsParams = { start: Dayjs; end: Dayjs };
+
+function setupSleepModeService(events: CalendarEvent[] = []) {
   let onTurnOn: (() => Promise<void>) | undefined;
+  let onAlarmPress: (() => Promise<void>) | undefined;
   const turnOnAll = mock(async () => {});
-  const getEvents = mock(async () => []);
+  const getEvents = mock(async (_params: GetEventsParams) => events);
   const speak = mock(async () => {});
   const command = mock(async () => {});
   const turnOffSwitch = mock(async () => {});
@@ -69,7 +78,9 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
     logger: { info: mock(() => {}) },
     synapse: {
       button: () => ({
-        onPress: (_cb: () => Promise<void>) => {},
+        onPress: (cb: () => Promise<void>) => {
+          onAlarmPress = cb;
+        },
       }),
       switch: () => ({
         entity_id: "switch.sleep_mode",
@@ -82,6 +93,20 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
       }),
     },
   } as any);
+
+  return {
+    command,
+    getEvents,
+    onAlarmPress: () => onAlarmPress?.(),
+    onTurnOn,
+    speak,
+    turnOffSwitch,
+    turnOnAll,
+  };
+}
+
+test("turning sleep mode on enables the expected adaptive-lighting sleep switches", async () => {
+  const { getEvents, onTurnOn, speak, turnOffSwitch, turnOnAll, command } = setupSleepModeService();
 
   await onTurnOn?.();
 
@@ -97,4 +122,59 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
   expect(speak).toHaveBeenCalledTimes(1);
   expect(command).not.toHaveBeenCalled();
   expect(turnOffSwitch).toHaveBeenCalledWith({ entity_id: "switch.autoplay_music" });
+});
+
+test("set alarm uses today's calendar when triggered after midnight before morning", async () => {
+  setSystemTime(new Date("2026-05-05T00:30:00"));
+  const { command, getEvents, onAlarmPress } = setupSleepModeService([
+    {
+      start: "2026-05-05T09:00:00",
+      end: "2026-05-05T10:00:00",
+      summary: "Work",
+    },
+  ]);
+
+  await onAlarmPress();
+
+  const [{ start, end }] = getEvents.mock.calls[0];
+  expect(start.format("YYYY-MM-DD")).toBe("2026-05-05");
+  expect(end.format("YYYY-MM-DD")).toBe("2026-05-05");
+  expect(command).toHaveBeenCalledWith({
+    player: "media_player.bedroom_sonos_one",
+    command: "Set alarm for 7:30 AM this morning",
+  });
+});
+
+test("set alarm says today when there are no events after midnight before morning", async () => {
+  setSystemTime(new Date("2026-05-05T00:30:00"));
+  const { onAlarmPress, speak } = setupSleepModeService();
+
+  await onAlarmPress();
+
+  expect(speak).toHaveBeenCalledWith({
+    message: "No events in calendar today. Goodnight!",
+    announce: false,
+    volume: 0.5,
+  });
+});
+
+test("set alarm uses tomorrow's calendar before midnight", async () => {
+  setSystemTime(new Date("2026-05-04T23:30:00"));
+  const { command, getEvents, onAlarmPress } = setupSleepModeService([
+    {
+      start: "2026-05-05T09:00:00",
+      end: "2026-05-05T10:00:00",
+      summary: "Work",
+    },
+  ]);
+
+  await onAlarmPress();
+
+  const [{ start, end }] = getEvents.mock.calls[0];
+  expect(start.format("YYYY-MM-DD")).toBe("2026-05-05");
+  expect(end.format("YYYY-MM-DD")).toBe("2026-05-05");
+  expect(command).toHaveBeenCalledWith({
+    player: "media_player.bedroom_sonos_one",
+    command: "Set alarm for 7:30 AM tomorrow morning",
+  });
 });

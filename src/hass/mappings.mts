@@ -180,27 +180,6 @@ declare module "@digital-alchemy/hass" {
       | "light.home_assistant_voice_0a0883_led_ring"
       | "event.home_assistant_voice_0a0883_button_press"
       | "assist_satellite.home_assistant_voice_0a0883_assist_satellite"
-      | "media_player.ben_s_2nd_sonos_one_second_edition"
-      | "media_player.sonos_arc_ultra"
-      | "media_player.living_room_2"
-      | "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb"
-      | "switch.ben_s_2nd_sonos_one_second_edition_shuffle"
-      | "switch.ben_s_2nd_sonos_one_second_edition_repeat"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_timer"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder"
-      | "switch.living_room_do_not_disturb_2"
-      | "switch.living_room_shuffle_2"
-      | "switch.living_room_repeat_2"
-      | "sensor.living_room_next_alarm_2"
-      | "sensor.living_room_next_timer_2"
-      | "sensor.living_room_next_reminder_2"
-      | "switch.living_room_alexa_do_not_disturb"
-      | "switch.living_room_alexa_shuffle"
-      | "switch.living_room_alexa_repeat"
-      | "sensor.living_room_alexa_next_alarm"
-      | "sensor.living_room_alexa_next_timer"
-      | "sensor.living_room_alexa_next_reminder"
       | "button.living_room_blinds_my_position"
       | "cover.living_room_blinds"
       | "media_player.tv"
@@ -288,7 +267,35 @@ declare module "@digital-alchemy/hass" {
       | "device_tracker.lgwebostv"
       | "update.home_assistant_connect_zbt_2_firmware"
       | "device_tracker.80_4a_f2_92_c8_dc"
-      | "device_tracker.80_4a_f2_92_c6_b6";
+      | "device_tracker.80_4a_f2_92_c6_b6"
+      | "media_player.ben_s_2nd_sonos_one_second_edition"
+      | "media_player.living_room_sonos_one"
+      | "media_player.sonos_arc_ultra"
+      | "media_player.living_room_2"
+      | "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb"
+      | "switch.ben_s_2nd_sonos_one_second_edition_shuffle"
+      | "switch.ben_s_2nd_sonos_one_second_edition_repeat"
+      | "switch.living_room_sonos_one_do_not_disturb"
+      | "switch.living_room_sonos_one_shuffle"
+      | "switch.living_room_sonos_one_repeat"
+      | "switch.living_room_do_not_disturb_2"
+      | "switch.living_room_shuffle_2"
+      | "switch.living_room_repeat_2"
+      | "switch.living_room_alexa_do_not_disturb"
+      | "switch.living_room_alexa_shuffle"
+      | "switch.living_room_alexa_repeat"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_timer"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder"
+      | "sensor.living_room_sonos_one_next_alarm"
+      | "sensor.living_room_sonos_one_next_timer"
+      | "sensor.living_room_sonos_one_next_reminder"
+      | "sensor.living_room_next_alarm_2"
+      | "sensor.living_room_next_timer_2"
+      | "sensor.living_room_next_reminder_2"
+      | "sensor.living_room_alexa_next_alarm"
+      | "sensor.living_room_alexa_next_timer"
+      | "sensor.living_room_alexa_next_reminder";
     _bedroom:
       | "light.bedroom_lights"
       | "climate.bedroom"
@@ -331,20 +338,6 @@ declare module "@digital-alchemy/hass" {
       | "media_player.bedroom_sonos"
       | "media_player.bedroom"
       | "switch.adaptive_lighting_bedroom"
-      | "media_player.bedroom_sonos_one"
-      | "media_player.bedroom_speaker"
-      | "switch.bedroom_alexa_do_not_disturb"
-      | "switch.bedroom_alexa_shuffle"
-      | "switch.bedroom_alexa_repeat"
-      | "sensor.bedroom_alexa_next_alarm"
-      | "sensor.bedroom_alexa_next_timer"
-      | "sensor.bedroom_alexa_next_reminder"
-      | "switch.bedroom_alexa_do_not_disturb_2"
-      | "switch.bedroom_alexa_shuffle_2"
-      | "switch.bedroom_alexa_repeat_2"
-      | "sensor.bedroom_alexa_next_alarm_2"
-      | "sensor.bedroom_alexa_next_timer_2"
-      | "sensor.bedroom_alexa_next_reminder_2"
       | "sensor.bedroom_speaker_power"
       | "sensor.bedroom_speaker_energy"
       | "sensor.bedroom_wall_right_power"
@@ -355,7 +348,21 @@ declare module "@digital-alchemy/hass" {
       | "sensor.door_light_power"
       | "sensor.bedroom_mirror_light_energy"
       | "sensor.bedroom_mirror_light_power"
-      | "device_tracker.bedroomsonos";
+      | "device_tracker.bedroomsonos"
+      | "media_player.bedroom_sonos_one"
+      | "media_player.bedroom_speaker"
+      | "switch.bedroom_alexa_do_not_disturb"
+      | "switch.bedroom_alexa_shuffle"
+      | "switch.bedroom_alexa_repeat"
+      | "switch.bedroom_alexa_do_not_disturb_2"
+      | "switch.bedroom_alexa_shuffle_2"
+      | "switch.bedroom_alexa_repeat_2"
+      | "sensor.bedroom_alexa_next_alarm"
+      | "sensor.bedroom_alexa_next_timer"
+      | "sensor.bedroom_alexa_next_reminder"
+      | "sensor.bedroom_alexa_next_alarm_2"
+      | "sensor.bedroom_alexa_next_timer_2"
+      | "sensor.bedroom_alexa_next_reminder_2";
     _hallway:
       | "light.hallway_lights"
       | "climate.hallway"
@@ -472,20 +479,20 @@ declare module "@digital-alchemy/hass" {
       | "media_player.bathroom"
       | "media_player.bathroom_sonos"
       | "number.bathroom_bass"
-      | "media_player.bathroom_2"
-      | "switch.bathroom_alexa_do_not_disturb"
-      | "switch.bathroom_alexa_shuffle"
-      | "switch.bathroom_alexa_repeat"
-      | "sensor.bathroom_alexa_next_alarm"
-      | "sensor.bathroom_alexa_next_timer"
-      | "sensor.bathroom_alexa_next_reminder"
       | "sensor.bathoom_shower_power"
       | "sensor.bathoom_shower_energy"
       | "sensor.bathroom_power"
       | "sensor.bathroom_speaker_energy"
       | "sensor.bathroom_ceiling_light_energy"
       | "sensor.bathroom_ceiing_light_power"
-      | "device_tracker.bathroomsonos";
+      | "device_tracker.bathroomsonos"
+      | "media_player.bathroom_2"
+      | "switch.bathroom_alexa_do_not_disturb"
+      | "switch.bathroom_alexa_shuffle"
+      | "switch.bathroom_alexa_repeat"
+      | "sensor.bathroom_alexa_next_alarm"
+      | "sensor.bathroom_alexa_next_timer"
+      | "sensor.bathroom_alexa_next_reminder";
     _spare_room:
       | "light.spare_room"
       | "switch.spare_room_motion_sensor"
@@ -1043,68 +1050,6 @@ declare module "@digital-alchemy/hass" {
       | "media_player.192_168_1_120";
     _83180bcdf23d0475904d6ff6291687a5: "update.openclaw_assistant_update";
     _e80508e28f6ef5b2eb99e2317d3a41b8: "update.extended_openai_conversation_update";
-    _c40d9478865484bd765acd66d529a27c:
-      | "media_player.bedroom_sonos_one"
-      | "switch.bedroom_alexa_do_not_disturb"
-      | "switch.bedroom_alexa_shuffle"
-      | "switch.bedroom_alexa_repeat"
-      | "sensor.bedroom_alexa_next_alarm"
-      | "sensor.bedroom_alexa_next_timer"
-      | "sensor.bedroom_alexa_next_reminder";
-    _e8e26a46e9696a53c70962d9b82ea1a4:
-      | "media_player.ben_s_2nd_sonos_one_second_edition"
-      | "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb"
-      | "switch.ben_s_2nd_sonos_one_second_edition_shuffle"
-      | "switch.ben_s_2nd_sonos_one_second_edition_repeat"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_timer"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder";
-    _44ceea717bb80c5605313cf35352c51b:
-      | "media_player.living_room_sonos_one"
-      | "switch.living_room_sonos_one_do_not_disturb"
-      | "switch.living_room_sonos_one_shuffle"
-      | "switch.living_room_sonos_one_repeat"
-      | "sensor.living_room_sonos_one_next_alarm"
-      | "sensor.living_room_sonos_one_next_timer"
-      | "sensor.living_room_sonos_one_next_reminder";
-    _e94c42362635d65eb952256847610b75:
-      | "media_player.sonos_arc_ultra"
-      | "switch.living_room_do_not_disturb_2"
-      | "switch.living_room_shuffle_2"
-      | "switch.living_room_repeat_2"
-      | "sensor.living_room_next_alarm_2"
-      | "sensor.living_room_next_timer_2"
-      | "sensor.living_room_next_reminder_2";
-    _29314de046502d77a476eec8e335b82d:
-      | "media_player.living_room_2"
-      | "switch.living_room_alexa_do_not_disturb"
-      | "switch.living_room_alexa_shuffle"
-      | "switch.living_room_alexa_repeat"
-      | "sensor.living_room_alexa_next_alarm"
-      | "sensor.living_room_alexa_next_timer"
-      | "sensor.living_room_alexa_next_reminder";
-    _9c18cf1e32c1a7f716a9725fe22d7ff6:
-      | "media_player.bathroom_2"
-      | "switch.bathroom_alexa_do_not_disturb"
-      | "switch.bathroom_alexa_shuffle"
-      | "switch.bathroom_alexa_repeat"
-      | "sensor.bathroom_alexa_next_alarm"
-      | "sensor.bathroom_alexa_next_timer"
-      | "sensor.bathroom_alexa_next_reminder";
-    _a5320bdd4b249829eb88791648155449:
-      | "media_player.bedroom_speaker"
-      | "switch.bedroom_alexa_do_not_disturb_2"
-      | "switch.bedroom_alexa_shuffle_2"
-      | "switch.bedroom_alexa_repeat_2"
-      | "sensor.bedroom_alexa_next_alarm_2"
-      | "sensor.bedroom_alexa_next_timer_2"
-      | "sensor.bedroom_alexa_next_reminder_2";
-    _30b06076a215e39a00349610db9e7646:
-      | "media_player.this_device"
-      | "switch.this_device_do_not_disturb"
-      | "sensor.this_device_next_alarm"
-      | "sensor.this_device_next_timer"
-      | "sensor.this_device_next_reminder";
     _f36a595e33adf5e05e56bbae0cd28b31:
       | "device_tracker.bens_iphone"
       | "sensor.bens_iphone_battery_level"
@@ -1133,14 +1078,6 @@ declare module "@digital-alchemy/hass" {
     _f4922dd9ef35c2341178c7815a9424e6:
       | "button.unnamed_room_favorite_current_song"
       | "media_player.unnamed_room_2";
-    _8c54403bb0710363ecb1fdc1991feeaf:
-      | "media_player.living_room_sonos_2"
-      | "switch.living_room_sonos_do_not_disturb"
-      | "switch.living_room_sonos_shuffle"
-      | "switch.living_room_sonos_repeat"
-      | "sensor.living_room_sonos_next_alarm"
-      | "sensor.living_room_sonos_next_timer"
-      | "sensor.living_room_sonos_next_reminder";
     _31fed89359731c0d276cbe182da34156:
       | "light.hallway_spare_room"
       | "select.hallway_spare_room_power_on_behavior"
@@ -1288,6 +1225,76 @@ declare module "@digital-alchemy/hass" {
       | "sensor.bens_iphone_last_update_trigger_2"
       | "sensor.bens_iphone_location_permission_2";
     _1f79633dccdee9a2f404c900d218d713: "button.xbox_favorite_current_song" | "media_player.xbox_2";
+    _c40d9478865484bd765acd66d529a27c:
+      | "media_player.bedroom_sonos_one"
+      | "switch.bedroom_alexa_do_not_disturb"
+      | "switch.bedroom_alexa_shuffle"
+      | "switch.bedroom_alexa_repeat"
+      | "sensor.bedroom_alexa_next_alarm"
+      | "sensor.bedroom_alexa_next_timer"
+      | "sensor.bedroom_alexa_next_reminder";
+    _e8e26a46e9696a53c70962d9b82ea1a4:
+      | "media_player.ben_s_2nd_sonos_one_second_edition"
+      | "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb"
+      | "switch.ben_s_2nd_sonos_one_second_edition_shuffle"
+      | "switch.ben_s_2nd_sonos_one_second_edition_repeat"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_timer"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder";
+    _44ceea717bb80c5605313cf35352c51b:
+      | "media_player.living_room_sonos_one"
+      | "switch.living_room_sonos_one_do_not_disturb"
+      | "switch.living_room_sonos_one_shuffle"
+      | "switch.living_room_sonos_one_repeat"
+      | "sensor.living_room_sonos_one_next_alarm"
+      | "sensor.living_room_sonos_one_next_timer"
+      | "sensor.living_room_sonos_one_next_reminder";
+    _e94c42362635d65eb952256847610b75:
+      | "media_player.sonos_arc_ultra"
+      | "switch.living_room_do_not_disturb_2"
+      | "switch.living_room_shuffle_2"
+      | "switch.living_room_repeat_2"
+      | "sensor.living_room_next_alarm_2"
+      | "sensor.living_room_next_timer_2"
+      | "sensor.living_room_next_reminder_2";
+    _29314de046502d77a476eec8e335b82d:
+      | "media_player.living_room_2"
+      | "switch.living_room_alexa_do_not_disturb"
+      | "switch.living_room_alexa_shuffle"
+      | "switch.living_room_alexa_repeat"
+      | "sensor.living_room_alexa_next_alarm"
+      | "sensor.living_room_alexa_next_timer"
+      | "sensor.living_room_alexa_next_reminder";
+    _9c18cf1e32c1a7f716a9725fe22d7ff6:
+      | "media_player.bathroom_2"
+      | "switch.bathroom_alexa_do_not_disturb"
+      | "switch.bathroom_alexa_shuffle"
+      | "switch.bathroom_alexa_repeat"
+      | "sensor.bathroom_alexa_next_alarm"
+      | "sensor.bathroom_alexa_next_timer"
+      | "sensor.bathroom_alexa_next_reminder";
+    _a5320bdd4b249829eb88791648155449:
+      | "media_player.bedroom_speaker"
+      | "switch.bedroom_alexa_do_not_disturb_2"
+      | "switch.bedroom_alexa_shuffle_2"
+      | "switch.bedroom_alexa_repeat_2"
+      | "sensor.bedroom_alexa_next_alarm_2"
+      | "sensor.bedroom_alexa_next_timer_2"
+      | "sensor.bedroom_alexa_next_reminder_2";
+    _8c54403bb0710363ecb1fdc1991feeaf:
+      | "media_player.living_room_sonos_2"
+      | "switch.living_room_sonos_do_not_disturb"
+      | "switch.living_room_sonos_shuffle"
+      | "switch.living_room_sonos_repeat"
+      | "sensor.living_room_sonos_next_alarm"
+      | "sensor.living_room_sonos_next_timer"
+      | "sensor.living_room_sonos_next_reminder";
+    _f2686f48271f33c7d83094e85ecabd6e:
+      | "media_player.this_device"
+      | "switch.this_device_do_not_disturb"
+      | "sensor.this_device_next_alarm"
+      | "sensor.this_device_next_timer"
+      | "sensor.this_device_next_reminder";
   }
   export interface HassLabelMapping {
     _reviewed:
@@ -1949,68 +1956,6 @@ declare module "@digital-alchemy/hass" {
       | "light.home_assistant_voice_0a0883_led_ring"
       | "event.home_assistant_voice_0a0883_button_press"
       | "assist_satellite.home_assistant_voice_0a0883_assist_satellite";
-    _alexa_media:
-      | "media_player.bedroom_sonos_one"
-      | "media_player.ben_s_2nd_sonos_one_second_edition"
-      | "media_player.living_room_sonos_one"
-      | "media_player.sonos_arc_ultra"
-      | "media_player.living_room_2"
-      | "media_player.bathroom_2"
-      | "media_player.bedroom_speaker"
-      | "media_player.this_device"
-      | "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb"
-      | "switch.ben_s_2nd_sonos_one_second_edition_shuffle"
-      | "switch.ben_s_2nd_sonos_one_second_edition_repeat"
-      | "switch.living_room_sonos_one_do_not_disturb"
-      | "switch.living_room_sonos_one_shuffle"
-      | "switch.living_room_sonos_one_repeat"
-      | "switch.this_device_do_not_disturb"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_timer"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder"
-      | "sensor.living_room_sonos_one_next_alarm"
-      | "sensor.living_room_sonos_one_next_timer"
-      | "sensor.living_room_sonos_one_next_reminder"
-      | "sensor.this_device_next_alarm"
-      | "sensor.this_device_next_timer"
-      | "sensor.this_device_next_reminder"
-      | "switch.bedroom_alexa_do_not_disturb"
-      | "switch.bedroom_alexa_shuffle"
-      | "switch.bedroom_alexa_repeat"
-      | "sensor.bedroom_alexa_next_alarm"
-      | "sensor.bedroom_alexa_next_timer"
-      | "sensor.bedroom_alexa_next_reminder"
-      | "switch.living_room_do_not_disturb_2"
-      | "switch.living_room_shuffle_2"
-      | "switch.living_room_repeat_2"
-      | "sensor.living_room_next_alarm_2"
-      | "sensor.living_room_next_timer_2"
-      | "sensor.living_room_next_reminder_2"
-      | "switch.bedroom_alexa_do_not_disturb_2"
-      | "switch.bedroom_alexa_shuffle_2"
-      | "switch.bedroom_alexa_repeat_2"
-      | "sensor.bedroom_alexa_next_alarm_2"
-      | "sensor.bedroom_alexa_next_timer_2"
-      | "sensor.bedroom_alexa_next_reminder_2"
-      | "switch.bathroom_alexa_do_not_disturb"
-      | "switch.bathroom_alexa_shuffle"
-      | "switch.bathroom_alexa_repeat"
-      | "sensor.bathroom_alexa_next_alarm"
-      | "sensor.bathroom_alexa_next_timer"
-      | "sensor.bathroom_alexa_next_reminder"
-      | "switch.living_room_alexa_do_not_disturb"
-      | "switch.living_room_alexa_shuffle"
-      | "switch.living_room_alexa_repeat"
-      | "sensor.living_room_alexa_next_alarm"
-      | "sensor.living_room_alexa_next_timer"
-      | "sensor.living_room_alexa_next_reminder"
-      | "media_player.living_room_sonos_2"
-      | "switch.living_room_sonos_do_not_disturb"
-      | "switch.living_room_sonos_shuffle"
-      | "switch.living_room_sonos_repeat"
-      | "sensor.living_room_sonos_next_alarm"
-      | "sensor.living_room_sonos_next_timer"
-      | "sensor.living_room_sonos_next_reminder";
     _overkiz: "button.living_room_blinds_my_position" | "cover.living_room_blinds";
     _webostv: "media_player.tv";
     _wake_on_lan: "button.turn_on_tv";
@@ -2162,6 +2107,68 @@ declare module "@digital-alchemy/hass" {
       | "sensor.front_door_lock_battery"
       | "sensor.front_door_lock_battery_type"
       | "lock.front_door";
+    _alexa_media:
+      | "media_player.bedroom_sonos_one"
+      | "media_player.ben_s_2nd_sonos_one_second_edition"
+      | "media_player.living_room_sonos_one"
+      | "media_player.sonos_arc_ultra"
+      | "media_player.living_room_2"
+      | "media_player.bathroom_2"
+      | "media_player.bedroom_speaker"
+      | "media_player.living_room_sonos_2"
+      | "media_player.this_device"
+      | "switch.bedroom_alexa_do_not_disturb"
+      | "switch.bedroom_alexa_shuffle"
+      | "switch.bedroom_alexa_repeat"
+      | "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb"
+      | "switch.ben_s_2nd_sonos_one_second_edition_shuffle"
+      | "switch.ben_s_2nd_sonos_one_second_edition_repeat"
+      | "switch.living_room_sonos_one_do_not_disturb"
+      | "switch.living_room_sonos_one_shuffle"
+      | "switch.living_room_sonos_one_repeat"
+      | "switch.living_room_do_not_disturb_2"
+      | "switch.living_room_shuffle_2"
+      | "switch.living_room_repeat_2"
+      | "switch.living_room_alexa_do_not_disturb"
+      | "switch.living_room_alexa_shuffle"
+      | "switch.living_room_alexa_repeat"
+      | "switch.bathroom_alexa_do_not_disturb"
+      | "switch.bathroom_alexa_shuffle"
+      | "switch.bathroom_alexa_repeat"
+      | "switch.bedroom_alexa_do_not_disturb_2"
+      | "switch.bedroom_alexa_shuffle_2"
+      | "switch.bedroom_alexa_repeat_2"
+      | "switch.living_room_sonos_do_not_disturb"
+      | "switch.living_room_sonos_shuffle"
+      | "switch.living_room_sonos_repeat"
+      | "switch.this_device_do_not_disturb"
+      | "sensor.bedroom_alexa_next_alarm"
+      | "sensor.bedroom_alexa_next_timer"
+      | "sensor.bedroom_alexa_next_reminder"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_timer"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder"
+      | "sensor.living_room_sonos_one_next_alarm"
+      | "sensor.living_room_sonos_one_next_timer"
+      | "sensor.living_room_sonos_one_next_reminder"
+      | "sensor.living_room_next_alarm_2"
+      | "sensor.living_room_next_timer_2"
+      | "sensor.living_room_next_reminder_2"
+      | "sensor.living_room_alexa_next_alarm"
+      | "sensor.living_room_alexa_next_timer"
+      | "sensor.living_room_alexa_next_reminder"
+      | "sensor.bathroom_alexa_next_alarm"
+      | "sensor.bathroom_alexa_next_timer"
+      | "sensor.bathroom_alexa_next_reminder"
+      | "sensor.bedroom_alexa_next_alarm_2"
+      | "sensor.bedroom_alexa_next_timer_2"
+      | "sensor.bedroom_alexa_next_reminder_2"
+      | "sensor.living_room_sonos_next_alarm"
+      | "sensor.living_room_sonos_next_timer"
+      | "sensor.living_room_sonos_next_reminder"
+      | "sensor.this_device_next_alarm"
+      | "sensor.this_device_next_timer"
+      | "sensor.this_device_next_reminder";
   }
   export interface HassUniqueIdMapping {
     "01KGNB1SM9Q5V950Y0CGGYJ87D-solar_rising": "binary_sensor.sun_solar_rising";
@@ -3097,60 +3104,6 @@ declare module "@digital-alchemy/hass" {
     "17e0cc66_openclaw_assistant_cpu_percent": "sensor.openclaw_assistant_cpu_percent";
     "17e0cc66_openclaw_assistant_memory_percent": "sensor.openclaw_assistant_memory_percent";
     "700780425": "switch.extended_openai_conversation_pre_release";
-    b5596c4d11df47da8e9ce2942f35b3a8: "media_player.bedroom_sonos_one";
-    "09fc0efbfb08414d9f9788833322304b": "media_player.ben_s_2nd_sonos_one_second_edition";
-    "7416948c140241128d0b9ee78430bdeb": "media_player.living_room_sonos_one";
-    "5edbb233b18845e39bdb432dd91be055": "media_player.sonos_arc_ultra";
-    cba2bfef02a6460d98f6d5ce975fad18: "media_player.living_room_2";
-    e7dc22892dc74ae085cfc83bbb87b713: "media_player.bathroom_2";
-    "0d026aaef06144768107c703ecd11f54": "media_player.bedroom_speaker";
-    "5123bf5d723957886f92508c87ef845c": "media_player.this_device";
-    "09fc0efbfb08414d9f9788833322304b_do not disturb": "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb";
-    "09fc0efbfb08414d9f9788833322304b_shuffle": "switch.ben_s_2nd_sonos_one_second_edition_shuffle";
-    "09fc0efbfb08414d9f9788833322304b_repeat": "switch.ben_s_2nd_sonos_one_second_edition_repeat";
-    "7416948c140241128d0b9ee78430bdeb_do not disturb": "switch.living_room_sonos_one_do_not_disturb";
-    "7416948c140241128d0b9ee78430bdeb_shuffle": "switch.living_room_sonos_one_shuffle";
-    "7416948c140241128d0b9ee78430bdeb_repeat": "switch.living_room_sonos_one_repeat";
-    "5123bf5d723957886f92508c87ef845c_do not disturb": "switch.this_device_do_not_disturb";
-    "09fc0efbfb08414d9f9788833322304b_next Alarm": "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm";
-    "09fc0efbfb08414d9f9788833322304b_next Timer": "sensor.ben_s_2nd_sonos_one_second_edition_next_timer";
-    "09fc0efbfb08414d9f9788833322304b_next Reminder": "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder";
-    "7416948c140241128d0b9ee78430bdeb_next Alarm": "sensor.living_room_sonos_one_next_alarm";
-    "7416948c140241128d0b9ee78430bdeb_next Timer": "sensor.living_room_sonos_one_next_timer";
-    "7416948c140241128d0b9ee78430bdeb_next Reminder": "sensor.living_room_sonos_one_next_reminder";
-    "5123bf5d723957886f92508c87ef845c_next Alarm": "sensor.this_device_next_alarm";
-    "5123bf5d723957886f92508c87ef845c_next Timer": "sensor.this_device_next_timer";
-    "5123bf5d723957886f92508c87ef845c_next Reminder": "sensor.this_device_next_reminder";
-    "b5596c4d11df47da8e9ce2942f35b3a8_do not disturb": "switch.bedroom_alexa_do_not_disturb";
-    b5596c4d11df47da8e9ce2942f35b3a8_shuffle: "switch.bedroom_alexa_shuffle";
-    b5596c4d11df47da8e9ce2942f35b3a8_repeat: "switch.bedroom_alexa_repeat";
-    "b5596c4d11df47da8e9ce2942f35b3a8_next Alarm": "sensor.bedroom_alexa_next_alarm";
-    "b5596c4d11df47da8e9ce2942f35b3a8_next Timer": "sensor.bedroom_alexa_next_timer";
-    "b5596c4d11df47da8e9ce2942f35b3a8_next Reminder": "sensor.bedroom_alexa_next_reminder";
-    "5edbb233b18845e39bdb432dd91be055_do not disturb": "switch.living_room_do_not_disturb_2";
-    "5edbb233b18845e39bdb432dd91be055_shuffle": "switch.living_room_shuffle_2";
-    "5edbb233b18845e39bdb432dd91be055_repeat": "switch.living_room_repeat_2";
-    "5edbb233b18845e39bdb432dd91be055_next Alarm": "sensor.living_room_next_alarm_2";
-    "5edbb233b18845e39bdb432dd91be055_next Timer": "sensor.living_room_next_timer_2";
-    "5edbb233b18845e39bdb432dd91be055_next Reminder": "sensor.living_room_next_reminder_2";
-    "0d026aaef06144768107c703ecd11f54_do not disturb": "switch.bedroom_alexa_do_not_disturb_2";
-    "0d026aaef06144768107c703ecd11f54_shuffle": "switch.bedroom_alexa_shuffle_2";
-    "0d026aaef06144768107c703ecd11f54_repeat": "switch.bedroom_alexa_repeat_2";
-    "0d026aaef06144768107c703ecd11f54_next Alarm": "sensor.bedroom_alexa_next_alarm_2";
-    "0d026aaef06144768107c703ecd11f54_next Timer": "sensor.bedroom_alexa_next_timer_2";
-    "0d026aaef06144768107c703ecd11f54_next Reminder": "sensor.bedroom_alexa_next_reminder_2";
-    "e7dc22892dc74ae085cfc83bbb87b713_do not disturb": "switch.bathroom_alexa_do_not_disturb";
-    e7dc22892dc74ae085cfc83bbb87b713_shuffle: "switch.bathroom_alexa_shuffle";
-    e7dc22892dc74ae085cfc83bbb87b713_repeat: "switch.bathroom_alexa_repeat";
-    "e7dc22892dc74ae085cfc83bbb87b713_next Alarm": "sensor.bathroom_alexa_next_alarm";
-    "e7dc22892dc74ae085cfc83bbb87b713_next Timer": "sensor.bathroom_alexa_next_timer";
-    "e7dc22892dc74ae085cfc83bbb87b713_next Reminder": "sensor.bathroom_alexa_next_reminder";
-    "cba2bfef02a6460d98f6d5ce975fad18_do not disturb": "switch.living_room_alexa_do_not_disturb";
-    cba2bfef02a6460d98f6d5ce975fad18_shuffle: "switch.living_room_alexa_shuffle";
-    cba2bfef02a6460d98f6d5ce975fad18_repeat: "switch.living_room_alexa_repeat";
-    "cba2bfef02a6460d98f6d5ce975fad18_next Alarm": "sensor.living_room_alexa_next_alarm";
-    "cba2bfef02a6460d98f6d5ce975fad18_next Timer": "sensor.living_room_alexa_next_timer";
-    "cba2bfef02a6460d98f6d5ce975fad18_next Reminder": "sensor.living_room_alexa_next_reminder";
     "Set alarm": "button.alarm";
     "22E1FE20-B43D-412C-8948-DEADCD38C531": "device_tracker.bens_iphone";
     a0a4e6ca21ae4f13c8633e4420cf00dfe64c6da94481a730a63554a542e23276_battery_level: "sensor.bens_iphone_battery_level";
@@ -3176,13 +3129,6 @@ declare module "@digital-alchemy/hass" {
     "RINCON_7828CAEEAD2A01400-treble": "number.hallway_treble";
     "RINCON_7828CAEEAD2A01400-microphone": "binary_sensor.hallway_microphone";
     "RINCON_7828CAEEAD2A01400-status_light": "switch.hallway_status_light";
-    "9bfea6b0cfb349cab98230f0f78402b9": "media_player.living_room_sonos_2";
-    "9bfea6b0cfb349cab98230f0f78402b9_do not disturb": "switch.living_room_sonos_do_not_disturb";
-    "9bfea6b0cfb349cab98230f0f78402b9_shuffle": "switch.living_room_sonos_shuffle";
-    "9bfea6b0cfb349cab98230f0f78402b9_repeat": "switch.living_room_sonos_repeat";
-    "9bfea6b0cfb349cab98230f0f78402b9_next Alarm": "sensor.living_room_sonos_next_alarm";
-    "9bfea6b0cfb349cab98230f0f78402b9_next Timer": "sensor.living_room_sonos_next_timer";
-    "9bfea6b0cfb349cab98230f0f78402b9_next Reminder": "sensor.living_room_sonos_next_reminder";
     "0x001788010ceeb603_light_zigbee2mqtt": "light.hallway_spare_room";
     "0x001788010ceeb603_power_on_behavior_zigbee2mqtt": "select.hallway_spare_room_power_on_behavior";
     "0x001788010ceeb603_effect_zigbee2mqtt": "select.0x001788010ceeb603_effect";
@@ -3466,6 +3412,67 @@ declare module "@digital-alchemy/hass" {
     upa04a5e060689: "media_player.xbox_2";
     "01KMGVV2ZJ67SG5YSJB55NAXMW_tplink_router_22-DD-92-3D-D3-0F": "device_tracker.22_dd_92_3d_d3_0f";
     "schedule-todoist": "button.schedule_todoist";
+    b5596c4d11df47da8e9ce2942f35b3a8: "media_player.bedroom_sonos_one";
+    "09fc0efbfb08414d9f9788833322304b": "media_player.ben_s_2nd_sonos_one_second_edition";
+    "7416948c140241128d0b9ee78430bdeb": "media_player.living_room_sonos_one";
+    "5edbb233b18845e39bdb432dd91be055": "media_player.sonos_arc_ultra";
+    cba2bfef02a6460d98f6d5ce975fad18: "media_player.living_room_2";
+    e7dc22892dc74ae085cfc83bbb87b713: "media_player.bathroom_2";
+    "0d026aaef06144768107c703ecd11f54": "media_player.bedroom_speaker";
+    "9bfea6b0cfb349cab98230f0f78402b9": "media_player.living_room_sonos_2";
+    "5a068ca4ed42c88999a5214d255fc15e": "media_player.this_device";
+    "b5596c4d11df47da8e9ce2942f35b3a8_do not disturb": "switch.bedroom_alexa_do_not_disturb";
+    b5596c4d11df47da8e9ce2942f35b3a8_shuffle: "switch.bedroom_alexa_shuffle";
+    b5596c4d11df47da8e9ce2942f35b3a8_repeat: "switch.bedroom_alexa_repeat";
+    "09fc0efbfb08414d9f9788833322304b_do not disturb": "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb";
+    "09fc0efbfb08414d9f9788833322304b_shuffle": "switch.ben_s_2nd_sonos_one_second_edition_shuffle";
+    "09fc0efbfb08414d9f9788833322304b_repeat": "switch.ben_s_2nd_sonos_one_second_edition_repeat";
+    "7416948c140241128d0b9ee78430bdeb_do not disturb": "switch.living_room_sonos_one_do_not_disturb";
+    "7416948c140241128d0b9ee78430bdeb_shuffle": "switch.living_room_sonos_one_shuffle";
+    "7416948c140241128d0b9ee78430bdeb_repeat": "switch.living_room_sonos_one_repeat";
+    "5edbb233b18845e39bdb432dd91be055_do not disturb": "switch.living_room_do_not_disturb_2";
+    "5edbb233b18845e39bdb432dd91be055_shuffle": "switch.living_room_shuffle_2";
+    "5edbb233b18845e39bdb432dd91be055_repeat": "switch.living_room_repeat_2";
+    "cba2bfef02a6460d98f6d5ce975fad18_do not disturb": "switch.living_room_alexa_do_not_disturb";
+    cba2bfef02a6460d98f6d5ce975fad18_shuffle: "switch.living_room_alexa_shuffle";
+    cba2bfef02a6460d98f6d5ce975fad18_repeat: "switch.living_room_alexa_repeat";
+    "e7dc22892dc74ae085cfc83bbb87b713_do not disturb": "switch.bathroom_alexa_do_not_disturb";
+    e7dc22892dc74ae085cfc83bbb87b713_shuffle: "switch.bathroom_alexa_shuffle";
+    e7dc22892dc74ae085cfc83bbb87b713_repeat: "switch.bathroom_alexa_repeat";
+    "0d026aaef06144768107c703ecd11f54_do not disturb": "switch.bedroom_alexa_do_not_disturb_2";
+    "0d026aaef06144768107c703ecd11f54_shuffle": "switch.bedroom_alexa_shuffle_2";
+    "0d026aaef06144768107c703ecd11f54_repeat": "switch.bedroom_alexa_repeat_2";
+    "9bfea6b0cfb349cab98230f0f78402b9_do not disturb": "switch.living_room_sonos_do_not_disturb";
+    "9bfea6b0cfb349cab98230f0f78402b9_shuffle": "switch.living_room_sonos_shuffle";
+    "9bfea6b0cfb349cab98230f0f78402b9_repeat": "switch.living_room_sonos_repeat";
+    "5a068ca4ed42c88999a5214d255fc15e_do not disturb": "switch.this_device_do_not_disturb";
+    "b5596c4d11df47da8e9ce2942f35b3a8_next Alarm": "sensor.bedroom_alexa_next_alarm";
+    "b5596c4d11df47da8e9ce2942f35b3a8_next Timer": "sensor.bedroom_alexa_next_timer";
+    "b5596c4d11df47da8e9ce2942f35b3a8_next Reminder": "sensor.bedroom_alexa_next_reminder";
+    "09fc0efbfb08414d9f9788833322304b_next Alarm": "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm";
+    "09fc0efbfb08414d9f9788833322304b_next Timer": "sensor.ben_s_2nd_sonos_one_second_edition_next_timer";
+    "09fc0efbfb08414d9f9788833322304b_next Reminder": "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder";
+    "7416948c140241128d0b9ee78430bdeb_next Alarm": "sensor.living_room_sonos_one_next_alarm";
+    "7416948c140241128d0b9ee78430bdeb_next Timer": "sensor.living_room_sonos_one_next_timer";
+    "7416948c140241128d0b9ee78430bdeb_next Reminder": "sensor.living_room_sonos_one_next_reminder";
+    "5edbb233b18845e39bdb432dd91be055_next Alarm": "sensor.living_room_next_alarm_2";
+    "5edbb233b18845e39bdb432dd91be055_next Timer": "sensor.living_room_next_timer_2";
+    "5edbb233b18845e39bdb432dd91be055_next Reminder": "sensor.living_room_next_reminder_2";
+    "cba2bfef02a6460d98f6d5ce975fad18_next Alarm": "sensor.living_room_alexa_next_alarm";
+    "cba2bfef02a6460d98f6d5ce975fad18_next Timer": "sensor.living_room_alexa_next_timer";
+    "cba2bfef02a6460d98f6d5ce975fad18_next Reminder": "sensor.living_room_alexa_next_reminder";
+    "e7dc22892dc74ae085cfc83bbb87b713_next Alarm": "sensor.bathroom_alexa_next_alarm";
+    "e7dc22892dc74ae085cfc83bbb87b713_next Timer": "sensor.bathroom_alexa_next_timer";
+    "e7dc22892dc74ae085cfc83bbb87b713_next Reminder": "sensor.bathroom_alexa_next_reminder";
+    "0d026aaef06144768107c703ecd11f54_next Alarm": "sensor.bedroom_alexa_next_alarm_2";
+    "0d026aaef06144768107c703ecd11f54_next Timer": "sensor.bedroom_alexa_next_timer_2";
+    "0d026aaef06144768107c703ecd11f54_next Reminder": "sensor.bedroom_alexa_next_reminder_2";
+    "9bfea6b0cfb349cab98230f0f78402b9_next Alarm": "sensor.living_room_sonos_next_alarm";
+    "9bfea6b0cfb349cab98230f0f78402b9_next Timer": "sensor.living_room_sonos_next_timer";
+    "9bfea6b0cfb349cab98230f0f78402b9_next Reminder": "sensor.living_room_sonos_next_reminder";
+    "5a068ca4ed42c88999a5214d255fc15e_next Alarm": "sensor.this_device_next_alarm";
+    "5a068ca4ed42c88999a5214d255fc15e_next Timer": "sensor.this_device_next_timer";
+    "5a068ca4ed42c88999a5214d255fc15e_next Reminder": "sensor.this_device_next_reminder";
   }
   export interface HassZoneMapping {
     _work: true;
@@ -3528,31 +3535,6 @@ declare module "@digital-alchemy/hass" {
       | "switch.schedule_f9f0dd"
       | "switch.home_assistant_voice_0a0883_mute"
       | "switch.home_assistant_voice_0a0883_wake_sound"
-      | "switch.bedroom_alexa_do_not_disturb"
-      | "switch.bedroom_alexa_shuffle"
-      | "switch.bedroom_alexa_repeat"
-      | "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb"
-      | "switch.ben_s_2nd_sonos_one_second_edition_shuffle"
-      | "switch.ben_s_2nd_sonos_one_second_edition_repeat"
-      | "switch.living_room_sonos_one_do_not_disturb"
-      | "switch.living_room_sonos_one_shuffle"
-      | "switch.living_room_sonos_one_repeat"
-      | "switch.living_room_do_not_disturb_2"
-      | "switch.living_room_shuffle_2"
-      | "switch.living_room_repeat_2"
-      | "switch.living_room_alexa_do_not_disturb"
-      | "switch.living_room_alexa_shuffle"
-      | "switch.living_room_alexa_repeat"
-      | "switch.bathroom_alexa_do_not_disturb"
-      | "switch.bathroom_alexa_shuffle"
-      | "switch.bathroom_alexa_repeat"
-      | "switch.bedroom_alexa_do_not_disturb_2"
-      | "switch.bedroom_alexa_shuffle_2"
-      | "switch.bedroom_alexa_repeat_2"
-      | "switch.living_room_sonos_do_not_disturb"
-      | "switch.living_room_sonos_shuffle"
-      | "switch.living_room_sonos_repeat"
-      | "switch.this_device_do_not_disturb"
       | "switch.tumble_dryer"
       | "switch.mac"
       | "switch.hass_server"
@@ -3588,7 +3570,32 @@ declare module "@digital-alchemy/hass" {
       | "switch.bedroom_motion_sensor"
       | "switch.bathroom_motion_sensor"
       | "switch.cd"
-      | "switch.nag_mode";
+      | "switch.nag_mode"
+      | "switch.bedroom_alexa_do_not_disturb"
+      | "switch.bedroom_alexa_shuffle"
+      | "switch.bedroom_alexa_repeat"
+      | "switch.ben_s_2nd_sonos_one_second_edition_do_not_disturb"
+      | "switch.ben_s_2nd_sonos_one_second_edition_shuffle"
+      | "switch.ben_s_2nd_sonos_one_second_edition_repeat"
+      | "switch.living_room_sonos_one_do_not_disturb"
+      | "switch.living_room_sonos_one_shuffle"
+      | "switch.living_room_sonos_one_repeat"
+      | "switch.living_room_do_not_disturb_2"
+      | "switch.living_room_shuffle_2"
+      | "switch.living_room_repeat_2"
+      | "switch.living_room_alexa_do_not_disturb"
+      | "switch.living_room_alexa_shuffle"
+      | "switch.living_room_alexa_repeat"
+      | "switch.bathroom_alexa_do_not_disturb"
+      | "switch.bathroom_alexa_shuffle"
+      | "switch.bathroom_alexa_repeat"
+      | "switch.bedroom_alexa_do_not_disturb_2"
+      | "switch.bedroom_alexa_shuffle_2"
+      | "switch.bedroom_alexa_repeat_2"
+      | "switch.living_room_sonos_do_not_disturb"
+      | "switch.living_room_sonos_shuffle"
+      | "switch.living_room_sonos_repeat"
+      | "switch.this_device_do_not_disturb";
     update:
       | "update.home_assistant_supervisor_update"
       | "update.home_assistant_core_update"
@@ -3822,33 +3829,6 @@ declare module "@digital-alchemy/hass" {
       | "sensor.monroe_soil_moisture_2"
       | "sensor.monroe_temperature_2"
       | "sensor.monroe_soil_temperature"
-      | "sensor.bedroom_alexa_next_alarm"
-      | "sensor.bedroom_alexa_next_timer"
-      | "sensor.bedroom_alexa_next_reminder"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_timer"
-      | "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder"
-      | "sensor.living_room_sonos_one_next_alarm"
-      | "sensor.living_room_sonos_one_next_timer"
-      | "sensor.living_room_sonos_one_next_reminder"
-      | "sensor.living_room_next_alarm_2"
-      | "sensor.living_room_next_timer_2"
-      | "sensor.living_room_next_reminder_2"
-      | "sensor.living_room_alexa_next_alarm"
-      | "sensor.living_room_alexa_next_timer"
-      | "sensor.living_room_alexa_next_reminder"
-      | "sensor.bathroom_alexa_next_alarm"
-      | "sensor.bathroom_alexa_next_timer"
-      | "sensor.bathroom_alexa_next_reminder"
-      | "sensor.bedroom_alexa_next_alarm_2"
-      | "sensor.bedroom_alexa_next_timer_2"
-      | "sensor.bedroom_alexa_next_reminder_2"
-      | "sensor.living_room_sonos_next_alarm"
-      | "sensor.living_room_sonos_next_timer"
-      | "sensor.living_room_sonos_next_reminder"
-      | "sensor.this_device_next_alarm"
-      | "sensor.this_device_next_timer"
-      | "sensor.this_device_next_reminder"
       | "sensor.bedroom_speaker_power"
       | "sensor.bedroom_speaker_energy"
       | "sensor.bathroom_power"
@@ -3923,7 +3903,34 @@ declare module "@digital-alchemy/hass" {
       | "sensor.ps5_now_playing"
       | "sensor.system_ha_global_health_score"
       | "sensor.all_standby_power"
-      | "sensor.all_standby_energy";
+      | "sensor.all_standby_energy"
+      | "sensor.bedroom_alexa_next_alarm"
+      | "sensor.bedroom_alexa_next_timer"
+      | "sensor.bedroom_alexa_next_reminder"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_alarm"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_timer"
+      | "sensor.ben_s_2nd_sonos_one_second_edition_next_reminder"
+      | "sensor.living_room_sonos_one_next_alarm"
+      | "sensor.living_room_sonos_one_next_timer"
+      | "sensor.living_room_sonos_one_next_reminder"
+      | "sensor.living_room_next_alarm_2"
+      | "sensor.living_room_next_timer_2"
+      | "sensor.living_room_next_reminder_2"
+      | "sensor.living_room_alexa_next_alarm"
+      | "sensor.living_room_alexa_next_timer"
+      | "sensor.living_room_alexa_next_reminder"
+      | "sensor.bathroom_alexa_next_alarm"
+      | "sensor.bathroom_alexa_next_timer"
+      | "sensor.bathroom_alexa_next_reminder"
+      | "sensor.bedroom_alexa_next_alarm_2"
+      | "sensor.bedroom_alexa_next_timer_2"
+      | "sensor.bedroom_alexa_next_reminder_2"
+      | "sensor.living_room_sonos_next_alarm"
+      | "sensor.living_room_sonos_next_timer"
+      | "sensor.living_room_sonos_next_reminder"
+      | "sensor.this_device_next_alarm"
+      | "sensor.this_device_next_timer"
+      | "sensor.this_device_next_reminder";
     event: "event.backup_automatic_backup" | "event.home_assistant_voice_0a0883_button_press";
     binary_sensor:
       | "binary_sensor.remote_ui"
@@ -4099,6 +4106,12 @@ declare module "@digital-alchemy/hass" {
       | "media_player.bens_apple_tv"
       | "media_player.apple_tv"
       | "media_player.home_assistant_voice_0a0883_media_player"
+      | "media_player.xbox"
+      | "media_player.playstation_5"
+      | "media_player.living_room_4"
+      | "media_player.living_room_5"
+      | "media_player.home_assistant_voice_0a0883"
+      | "media_player.192_168_1_120"
       | "media_player.bedroom_sonos_one"
       | "media_player.ben_s_2nd_sonos_one_second_edition"
       | "media_player.living_room_sonos_one"
@@ -4107,13 +4120,7 @@ declare module "@digital-alchemy/hass" {
       | "media_player.bathroom_2"
       | "media_player.bedroom_speaker"
       | "media_player.living_room_sonos_2"
-      | "media_player.this_device"
-      | "media_player.xbox"
-      | "media_player.playstation_5"
-      | "media_player.living_room_4"
-      | "media_player.living_room_5"
-      | "media_player.home_assistant_voice_0a0883"
-      | "media_player.192_168_1_120";
+      | "media_player.this_device";
     number:
       | "number.bedroom_speaker_bass"
       | "number.bedroom_speaker_balance"
