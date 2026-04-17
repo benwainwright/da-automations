@@ -8,17 +8,15 @@ export function SyncTvService({ hass, bens_flat: { entityIds } }: TServiceParams
 
   appleTv.onUpdate(async (newState, oldState) => {
     if (!newState || !oldState) return;
+    const tvSource = "source" in tv.attributes ? tv.attributes.source : undefined;
+
     if (newState.state === "idle" && oldState.state === "off" && tv.state !== "on") {
       await hass.call.button.press({
         entity_id: "button.turn_on_tv",
       });
       await tv.waitForState("on");
       await tv.select_source({ source: APPLE_TV_SOURCE });
-    } else if (
-      newState.state === "off" &&
-      tv.state !== "off" &&
-      tv.attributes.source === APPLE_TV_SOURCE
-    ) {
+    } else if (newState.state === "off" && tv.state !== "off" && tvSource === APPLE_TV_SOURCE) {
       await tv.turn_off();
     }
   });
