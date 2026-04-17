@@ -10,8 +10,9 @@ export interface PlayConfig {
   announce?: boolean;
 }
 
-export function MediaPlayerService({ hass }: TServiceParams) {
+export function MediaPlayerService({ hass, logger }: TServiceParams) {
   const play = async ({ player: playerId, id, type, volume }: PlayConfig) => {
+    logger.info(`Executing play: ${playerId}, ${type} (volume=${volume})`);
     const player = hass.refBy.id(playerId);
 
     if (volume) {
