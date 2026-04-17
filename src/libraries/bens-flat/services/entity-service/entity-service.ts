@@ -50,6 +50,10 @@ export function EntityIdService() {
 
   const mediaPlayers = {
     wholeFlat: "media_player.whole_flat",
+    bedroom: "media_player.bedroom",
+    hallway: "media_player.hallway",
+    bathroom: "media_player.bathroom",
+    livingRoom: "media_player.living_room",
     bedroomSonos: "media_player.bedroom_sonos_one",
     appleTv: "media_player.apple_tv",
     tv: "media_player.tv",

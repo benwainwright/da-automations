@@ -50,7 +50,12 @@ export function BriefingService({
       entity_id: entityIds.mediaPlayers.wholeFlat,
     });
     await mediaPlayer.play({
-      player: entityIds.mediaPlayers.wholeFlat,
+      player: [
+        entityIds.mediaPlayers.hallway,
+        entityIds.mediaPlayers.bathroom,
+        entityIds.mediaPlayers.bedroom,
+        entityIds.mediaPlayers.livingRoom,
+      ],
       id: "library://podcast/3",
       type: "music",
       volume: 0.5,
@@ -72,7 +77,11 @@ export function BriefingService({
   const { trigger: triggerTodoList } = helpers.timedLatch(async () => {
     const todoListString = await todoList.toString();
     if (todoListString) {
-      await notify.speak({ message: todoListString, announce: true, volume: 0.5 });
+      await notify.speak({
+        message: todoListString,
+        announce: true,
+        volume: 0.5,
+      });
     }
   }, [1, "hour"]);
 

@@ -83,6 +83,7 @@ test("replacePersistentNotificationIfExists only updates when notification exist
 
 test("speak resolves after an announce TTS call", async () => {
   const speak = mock(async () => {});
+  const play = mock(async () => {});
   const service = NotificationService({
     bens_flat: {
       entityIds: {
@@ -90,7 +91,7 @@ test("speak resolves after an announce TTS call", async () => {
         tts: { openAiGpt4: "tts.openai_tts_gpt_40" },
       },
       lights: { flash: mock(async () => {}) },
-      mediaPlayer: { play: mock(async () => {}) },
+      mediaPlayer: { play },
     },
     hass: {
       call: {
@@ -108,11 +109,13 @@ test("speak resolves after an announce TTS call", async () => {
 
   await waitWithTimeout(service.speak({ message: "hello", announce: true }));
 
-  expect(speak).toHaveBeenCalledWith({
-    entity_id: "tts.openai_tts_gpt_40",
-    media_player_entity_id: "media_player.whole_flat",
-    message: "hello",
+  expect(play).toHaveBeenCalledWith({
+    id: "media-source://tts/tts.openai_tts_gpt_40?message=hello",
+    type: "provider",
+    player: "media_player.whole_flat",
+    announce: true,
   });
+  expect(speak).not.toHaveBeenCalled();
 });
 
 test("speak resolves when non-announce playback stops", async () => {
@@ -163,4 +166,45 @@ test("speak resolves when non-announce playback stops", async () => {
     announce: false,
   });
   expect(remove).toHaveBeenCalledTimes(1);
+});
+
+test("speak does not warn when non-announce playback does not report playing", async () => {
+  const play = mock(async () => {});
+  const warn = mock(() => {});
+  const service = NotificationService({
+    bens_flat: {
+      entityIds: {
+        mediaPlayers: { wholeFlat: "media_player.whole_flat" },
+        tts: { openAiGpt4: "tts.openai_tts_gpt_40" },
+      },
+      lights: { flash: mock(async () => {}) },
+      mediaPlayer: { play },
+    },
+    hass: {
+      call: {
+        media_player: { volume_set: mock(async () => {}) },
+        notify: { mobile_app_bens_phone: { call: mock(async () => {}) }, tv: mock(async () => {}) },
+        persistent_notification: { create: mock(async () => {}), dismiss: mock(async () => {}) },
+        tts: { speak: mock(async () => {}) },
+      },
+      refBy: {
+        id: (_id: string) => ({
+          attributes: { volume_level: 0.3 },
+          entity_id: _id,
+          state: "idle",
+        }),
+      },
+    },
+    logger: { info: mock(() => {}), warn },
+  } as any);
+
+  await waitWithTimeout(service.speak({ message: "hello", announce: false }));
+
+  expect(play).toHaveBeenCalledWith({
+    id: "media-source://tts/tts.openai_tts_gpt_40?message=hello",
+    type: "provider",
+    player: "media_player.whole_flat",
+    announce: false,
+  });
+  expect(warn).not.toHaveBeenCalled();
 });

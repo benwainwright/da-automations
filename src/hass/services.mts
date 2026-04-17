@@ -25,7 +25,6 @@ export const InstalledAddons = {
   Zigbee2MQTT: "45df7312_zigbee2mqtt",
 } as const;
 
-
 import {
   AndroidNotificationData,
   AppleNotificationData,
@@ -2456,6 +2455,1033 @@ declare module "@digital-alchemy/hass" {
           area_id: TAreaId | TAreaId[];
         }>,
       ) => Promise<void>;
+    };
+    // # MARK: chime_tts
+    chime_tts: {
+      /**
+       * ### Clear Cache
+       *
+       * > Remove text-to-speech cache files from Chime TTS and/or Home Assistant.
+       */
+      clear_cache: (service_data?: {
+        /**
+         * ## Temporary Chimes Cache
+         *
+         * > Remove the cached local chime files downloaded by Chime TTS
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "clear_chimes_cache": "True"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > true
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        clear_chimes_cache?: boolean;
+        /**
+         * ## Home Assistant TTS Cache
+         *
+         * > Remove the TTS audio files stored in the Home Assistant TTS cache
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "clear_ha_tts_cache": "True"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > true
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        clear_ha_tts_cache?: boolean;
+        /**
+         * ## Temporary Chime TTS Cache
+         *
+         * > Remove the local temporary audio files stored in the Chime TTS cache
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "clear_temp_tts_cache": "True"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > true
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        clear_temp_tts_cache?: boolean;
+        /**
+         * ## Publicly Accessible Chime TTS Cache
+         *
+         * > Remove the publicly accessible audio files stored in the Chime TTS cache
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "clear_www_tts_cache": "True"
+         * > }
+         * > ```
+         *
+         * ### Default
+         *
+         * > ```json
+         * > true
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        clear_www_tts_cache?: boolean;
+      }) => Promise<void>;
+      /**
+       * ### Replay
+       *
+       * > Replay the last service call to chime_tts.say with the same parameters
+       */
+      replay: (service_data: EmptyObject) => Promise<void>;
+      /**
+       * ### Say
+       *
+       * > Play an audio file before TTS audio
+       */
+      say: (
+        service_data?: {
+          /**
+           * ## Announce
+           *
+           * > Reduce volume of currently playing audio during during announcement (on supported devices)
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "announce": "True"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          announce?: boolean;
+          /**
+           * ## Audio Conversion
+           *
+           * > Convert the audio to match Alexa speaker requirements, or use your own FFmpeg arguments
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "audio_conversion": "Alexa"
+           * > }
+           * > ```
+           */
+          audio_conversion?: LiteralUnion<"Alexa" | "Volume 100%" | "Custom", string>;
+          /**
+           * ## Cache
+           *
+           * > Whether or not to save/reuse the generated audio file in a local cache
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "cache": "True"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          cache?: boolean;
+          /**
+           * ## Chime Path
+           *
+           * > A preset or custom audio file to be played before TTS audio
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "chime_path": "custom_components/chime_tts/mp3s/bells.mp3"
+           * > }
+           * > ```
+           */
+          chime_path?: LiteralUnion<
+            | "ba_dum_tss"
+            | "bells"
+            | "bells_2"
+            | "bright"
+            | "chirp"
+            | "choir"
+            | "chord"
+            | "classical"
+            | "crickets"
+            | "ding_dong"
+            | "drumroll"
+            | "dun_dun_dun"
+            | "error"
+            | "fanfare"
+            | "glockenspiel"
+            | "hail"
+            | "knock"
+            | "marimba"
+            | "mario_coin"
+            | "microphone_tap"
+            | "sad_trombone"
+            | "soft"
+            | "tada"
+            | "toast"
+            | "twenty_four"
+            | "whistle"
+            | "",
+            string
+          >;
+          /**
+           * ## Crossfade
+           *
+           * > Crossfade (in milliseconds) between audio segments
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "crossfade": "1000"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   min: 0
+           * >   mode: box
+           * >   step: 1
+           * >   unit_of_measurement: ms
+           * > ```
+           */
+          crossfade?: number;
+          /**
+           * ## End Chime Path
+           *
+           * > A preset or custom audio file to be played after TTS audio
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "end_chime_path": "custom_components/chime_tts/mp3s/tada.mp3"
+           * > }
+           * > ```
+           */
+          end_chime_path?: LiteralUnion<
+            | "ba_dum_tss"
+            | "bells"
+            | "bells_2"
+            | "bright"
+            | "chirp"
+            | "choir"
+            | "chord"
+            | "classical"
+            | "crickets"
+            | "ding_dong"
+            | "drumroll"
+            | "dun_dun_dun"
+            | "error"
+            | "fanfare"
+            | "glockenspiel"
+            | "hail"
+            | "knock"
+            | "marimba"
+            | "mario_coin"
+            | "microphone_tap"
+            | "sad_trombone"
+            | "soft"
+            | "tada"
+            | "toast"
+            | "twenty_four"
+            | "whistle"
+            | "",
+            string
+          >;
+          /**
+           * ## Fade Audio
+           *
+           * > Fade out playing audio during announcement, fade back in when completed (on supported devices)
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "fade_audio": "True"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          fade_audio?: boolean;
+          /**
+           * ## Final Delay
+           *
+           * > Final delay (in milliseconds) added to the end of the audio
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "final_delay": "100"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   max: 10000
+           * >   min: 0
+           * >   mode: box
+           * >   step: 1
+           * >   unit_of_measurement: ms
+           * > ```
+           */
+          final_delay?: number;
+          /**
+           * ## Join Players
+           *
+           * > Join media_players for simultaneous playback (for supported speakers)
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "join_players": "True"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          join_players?: boolean;
+          /**
+           * ## Language
+           *
+           * > The TTS language (supported by Google Translate, Microsoft Edge TTS, Amazon Polly and Nabu Casa Cloud TTS)
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "language": "en"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          language?: string;
+          /**
+           * ## Message
+           *
+           * > Text converted into TTS audio
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "message": "Hello world!"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > template: {}
+           * > ```
+           */
+          message?: string;
+          /**
+           * ## Offset
+           *
+           * > Adds a delay between audio segments when value > 0, or overlays audio segments when value < 0.
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "offset": "450"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   max: 10000
+           * >   min: -10000
+           * >   mode: box
+           * >   step: 10
+           * >   unit_of_measurement: ms
+           * > ```
+           */
+          offset?: number;
+          /**
+           * ## Options
+           *
+           * > YAML Options to pass to TTS services (will override `tld` and `voice` fields)
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "options": "tld: com.au\u000boice: en-AU"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiline: true
+           * >   multiple: false
+           * > ```
+           */
+          options?: string;
+          /**
+           * ## TLD
+           *
+           * > The dialect (supported by Google Translate)
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "tld": "com.au"
+           * > }
+           * > ```
+           */
+          tld?:
+            | "com"
+            | "co.uk"
+            | "com.au"
+            | "ca"
+            | "co.in"
+            | "ie"
+            | "co.za"
+            | "fr"
+            | "com.br"
+            | "pt"
+            | "es";
+          /**
+           * ## TTS Pitch
+           *
+           * > Change the the TTS pitch in semitones. Negative values for lower, positive for higher
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "tts_pitch": "3"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   max: 100
+           * >   min: -100
+           * >   mode: slider
+           * >   step: 1
+           * >   unit_of_measurement: semitones
+           * > ```
+           */
+          tts_pitch?: number;
+          /**
+           * ## TTS Platform
+           *
+           * > TTS platform used to generate TTS audio
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "tts_platform": "google_translate"
+           * > }
+           * > ```
+           */
+          tts_platform?: LiteralUnion<
+            | "amazon_polly"
+            | "baidu"
+            | "tts.elevenlabs"
+            | "google_cloud"
+            | "google_translate"
+            | "watson_tts"
+            | "marytts"
+            | "edge_tts"
+            | "microsoft"
+            | "cloud"
+            | "openai_tts"
+            | "picotts"
+            | "tts.piper"
+            | "voicerss"
+            | "yandextts",
+            string
+          >;
+          /**
+           * ## TTS Speed
+           *
+           * > Set the speed of the TTS audio to between 1% and 500% of the original
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "tts_speed": "125"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   max: 500
+           * >   min: 1
+           * >   mode: slider
+           * >   step: 5
+           * >   unit_of_measurement: '%'
+           * > ```
+           */
+          tts_speed?: number;
+          /**
+           * ## Unjoin Players
+           *
+           * > Release the joined media_players after playback
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "unjoin_players": "True"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          unjoin_players?: boolean;
+          /**
+           * ## Voice
+           *
+           * > Define the voice for the TTS audio (on supported TTS platforms)
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "voice": "en-AU"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > text:
+           * >   multiple: false
+           * >   multiline: false
+           * > ```
+           */
+          voice?: string;
+          /**
+           * ## Volume Level
+           *
+           * > The volume to use when playing audio
+           *
+           * ### Example
+           *
+           * > ```json
+           * > {
+           * >   "volume_level": "0.75"
+           * > }
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > number:
+           * >   max: 1
+           * >   min: 0
+           * >   mode: slider
+           * >   step: 0.01
+           * > ```
+           */
+          volume_level?: number;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - domain:
+           * >       - media_player
+           * >     supported_features:
+           * >       - 512
+           * > ```
+           */
+          entity_id: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
+      /**
+       * ### Say URL
+       *
+       * > Generates an audio file with the `chime_tts.say` service and returns either an external URL or a local file path, depending on the folder set in the configuration
+       */
+      say_url: <T = unknown>(service_data?: {
+        /**
+         * ## Audio Conversion
+         *
+         * > Convert the audio to match Alexa speaker requirements, or use your own FFmpeg arguments
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "audio_conversion": "Alexa"
+         * > }
+         * > ```
+         */
+        audio_conversion?: LiteralUnion<"Alexa" | "Volume 100%" | "Custom", string>;
+        /**
+         * ## Cache
+         *
+         * > Whether or not to save/reuse the generated audio file in a local cache
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "cache": "True"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > boolean: {}
+         * > ```
+         */
+        cache?: boolean;
+        /**
+         * ## Chime Path
+         *
+         * > A preset or custom audio file to be played before TTS audio
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "chime_path": "custom_components/chime_tts/mp3s/bells.mp3"
+         * > }
+         * > ```
+         */
+        chime_path?: LiteralUnion<
+          | "ba_dum_tss"
+          | "bells"
+          | "bells_2"
+          | "bright"
+          | "chirp"
+          | "choir"
+          | "chord"
+          | "classical"
+          | "crickets"
+          | "ding_dong"
+          | "drumroll"
+          | "dun_dun_dun"
+          | "error"
+          | "fanfare"
+          | "glockenspiel"
+          | "hail"
+          | "knock"
+          | "marimba"
+          | "mario_coin"
+          | "microphone_tap"
+          | "sad_trombone"
+          | "soft"
+          | "tada"
+          | "toast"
+          | "twenty_four"
+          | "whistle"
+          | "",
+          string
+        >;
+        /**
+         * ## Crossfade
+         *
+         * > Crossfade (in milliseconds) between audio segments
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "crossfade": "1000"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > number:
+         * >   min: 0
+         * >   mode: box
+         * >   step: 1
+         * >   unit_of_measurement: ms
+         * > ```
+         */
+        crossfade?: number;
+        /**
+         * ## End Chime Path
+         *
+         * > A preset or custom audio file to be played after TTS audio
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "end_chime_path": "custom_components/chime_tts/mp3s/tada.mp3"
+         * > }
+         * > ```
+         */
+        end_chime_path?: LiteralUnion<
+          | "ba_dum_tss"
+          | "bells"
+          | "bells_2"
+          | "bright"
+          | "chirp"
+          | "choir"
+          | "chord"
+          | "classical"
+          | "crickets"
+          | "ding_dong"
+          | "drumroll"
+          | "dun_dun_dun"
+          | "error"
+          | "fanfare"
+          | "glockenspiel"
+          | "hail"
+          | "knock"
+          | "marimba"
+          | "mario_coin"
+          | "microphone_tap"
+          | "sad_trombone"
+          | "soft"
+          | "tada"
+          | "toast"
+          | "twenty_four"
+          | "whistle"
+          | "",
+          string
+        >;
+        /**
+         * ## Final Delay
+         *
+         * > Final delay (in milliseconds) added to the end of the audio
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "final_delay": "100"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > number:
+         * >   max: 10000
+         * >   min: 0
+         * >   mode: box
+         * >   step: 1
+         * >   unit_of_measurement: ms
+         * > ```
+         */
+        final_delay?: number;
+        /**
+         * ## Language
+         *
+         * > The TTS language (supported by Google Translate, Microsoft Edge TTS and Nabu Casa Cloud TTS)
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "language": "en"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiple: false
+         * >   multiline: false
+         * > ```
+         */
+        language?: string;
+        /**
+         * ## Message
+         *
+         * > Text converted into TTS audio
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "message": "Hello world!"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > template: {}
+         * > ```
+         */
+        message?: string;
+        /**
+         * ## Offset
+         *
+         * > Adds a delay between audio segments when value > 0, or overlays audio segments when value < 0.
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "offset": "450"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > number:
+         * >   max: 10000
+         * >   min: -10000
+         * >   mode: box
+         * >   step: 10
+         * >   unit_of_measurement: ms
+         * > ```
+         */
+        offset?: number;
+        /**
+         * ## Options
+         *
+         * > YAML Options to pass to TTS services (will override `tld` and `voice` fields)
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "options": "tld: com.au\u000boice: en-AU"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiline: true
+         * >   multiple: false
+         * > ```
+         */
+        options?: string;
+        /**
+         * ## TLD
+         *
+         * > The dialect (supported by Google Translate)
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "tld": "com.au"
+         * > }
+         * > ```
+         */
+        tld?:
+          | "com"
+          | "co.uk"
+          | "com.au"
+          | "ca"
+          | "co.in"
+          | "ie"
+          | "co.za"
+          | "fr"
+          | "com.br"
+          | "pt"
+          | "es";
+        /**
+         * ## TTS Pitch
+         *
+         * > Change the the TTS pitch in semitones. Negative values for lower, positive for higher
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "tts_pitch": "3"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > number:
+         * >   max: 100
+         * >   min: -100
+         * >   mode: slider
+         * >   step: 1
+         * >   unit_of_measurement: semitones
+         * > ```
+         */
+        tts_pitch?: number;
+        /**
+         * ## TTS Platform
+         *
+         * > TTS platform used to generate TTS audio
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "tts_platform": "google_translate"
+         * > }
+         * > ```
+         */
+        tts_platform?: LiteralUnion<
+          | "amazon_polly"
+          | "baidu"
+          | "tts.elevenlabs"
+          | "google_cloud"
+          | "google_translate"
+          | "watson_tts"
+          | "marytts"
+          | "edge_tts"
+          | "microsoft"
+          | "cloud"
+          | "openai_tts"
+          | "picotts"
+          | "tts.piper"
+          | "voicerss"
+          | "yandextts",
+          string
+        >;
+        /**
+         * ## TTS Speed
+         *
+         * > Set the speed of the TTS audio to between 1% and 500% of the original
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "tts_speed": "125"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > number:
+         * >   max: 500
+         * >   min: 1
+         * >   mode: slider
+         * >   step: 5
+         * >   unit_of_measurement: '%'
+         * > ```
+         */
+        tts_speed?: number;
+        /**
+         * ## Voice
+         *
+         * > Define the voice for the TTS audio (on supported TTS platforms)
+         *
+         * ### Example
+         *
+         * > ```json
+         * > {
+         * >   "voice": "en-AU"
+         * > }
+         * > ```
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiple: false
+         * >   multiline: false
+         * > ```
+         */
+        voice?: string;
+      }) => Promise<T>;
     };
     // # MARK: climate
     climate: {
@@ -5376,7 +6402,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -7018,7 +8045,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## Album URI
          *
@@ -7163,7 +8191,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## page
          *
@@ -7330,7 +8359,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## Artist URI
          *
@@ -7475,7 +8505,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## page
          *
@@ -7668,7 +8699,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## Playlist URI
          *
@@ -7813,7 +8845,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## page
          *
@@ -7980,7 +9013,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## Podcast URI
          *
@@ -8125,7 +9159,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## Podcast URI
          *
@@ -8596,7 +9631,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## playlist_id
          *
@@ -8795,7 +9831,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## Data
          *
@@ -10438,7 +11475,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## favorite
          *
@@ -10997,7 +12035,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## library_only
          *
@@ -12641,7 +13680,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## filenames
          *
@@ -12804,7 +13844,8 @@ declare module "@digital-alchemy/hass" {
           | "01KMKAK76QR7ZV40AERG9089JC"
           | "01KNCB33CNCJ2ZHYSJWJXNMP66"
           | "01KPDG4JTMWY9CJ8NWAERHSSA1"
-          | "01KPDM4WVS8M5N2DA2FRN8K44C";
+          | "01KPDM4WVS8M5N2DA2FRN8K44C"
+          | "01KPDT1865K7GZBMS40ASQ7E9M";
         /**
          * ## prompt
          *

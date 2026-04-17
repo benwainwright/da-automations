@@ -24,7 +24,7 @@ export function NotificationService({
     message: string;
     announce: boolean;
     source: PICK_ENTITY<"tts">;
-    player: PICK_ENTITY<"media_player">;
+    player: PICK_ENTITY<"media_player">[] | PICK_ENTITY<"media_player">;
     volume?: number;
   }
 
@@ -33,6 +33,10 @@ export function NotificationService({
     expectedState: string,
     timeoutMs: number,
   ) => {
+    if (!("waitForState" in player)) {
+      return false;
+    }
+
     let timeout: ReturnType<typeof setTimeout> | undefined;
     let didReachState = false;
     await Promise.race([
@@ -80,7 +84,6 @@ export function NotificationService({
     if (player.state !== "playing") {
       const didStart = await waitForStateChange(player, "playing", TTS_START_TIMEOUT_MS);
       if (!didStart && player.state !== "playing") {
-        logger.warn(`Timed out waiting for TTS playback to start`);
         return;
       }
     }
@@ -88,19 +91,13 @@ export function NotificationService({
   };
 
   const ttsSay = async (config: ITtsSayConfig) => {
-    const player = hass.refBy.id(config.player);
-    const originalVolume = player.attributes?.["volume_level"];
+    const playerIds = Array.isArray(config.player) ? config.player : [config.player];
+
+    const [lead] = playerIds;
+    const leadEntity = hass.refBy.id(lead);
+    const originalVolume = leadEntity.attributes?.["volume_level"];
 
     try {
-      if (config.announce) {
-        await hass.call.tts.speak({
-          entity_id: config.source,
-          media_player_entity_id: config.player,
-          message: config.message,
-        });
-        return;
-      }
-
       if (config.volume) {
         await hass.call.media_player.volume_set({
           volume_level: config.volume,
@@ -112,10 +109,10 @@ export function NotificationService({
         id: `media-source://tts/${config.source}?message=${encodeURIComponent(config.message)}`,
         type: "provider",
         player: config.player,
-        announce: false,
+        announce: config.announce,
       });
 
-      await waitForPlayback(player);
+      await waitForPlayback(leadEntity);
     } finally {
       if (config.volume && originalVolume !== undefined) {
         await hass.call.media_player.volume_set({
