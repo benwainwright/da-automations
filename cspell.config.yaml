@@ -20,5 +20,9 @@ words:
   - smartlocks
   - smartlock
   - homekit
+  - schedulable
+  - doist
+  - dontmove
+  - uncompletable
 ignoreWords: []
 import: []

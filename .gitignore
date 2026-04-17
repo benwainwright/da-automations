@@ -7,3 +7,4 @@ previous_deploy.tar.gz
 fixtures.json
 synapse_storage.db
 hooks.json
+.token

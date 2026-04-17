@@ -27,6 +27,10 @@ test("subscribes to auto-deploy lifecycle and updates persistent notifications",
         replacePersistentNotification,
         replacePersistentNotificationIfExists,
       },
+      motion: {
+        bedroom: mock(() => {}),
+        spareRoom: mock(() => {}),
+      },
       presence: {
         flatIsOccupiedSwitch: {
           onUpdate: (_callback: unknown) => {},
@@ -50,6 +54,9 @@ test("subscribes to auto-deploy lifecycle and updates persistent notifications",
     },
     scheduler: {
       setTimeout: () => ({ remove: () => {} }),
+    },
+    synapse: {
+      switch: mock(() => ({ is_on: false })),
     },
   } as any);
 

@@ -21,6 +21,9 @@ test("runs nag checks on interval and only notifies for truthy triggers", async 
         return { remove: () => {} };
       },
     },
+    synapse: {
+      switch: mock(() => ({ is_on: true })),
+    },
   } as any);
 
   service.add({

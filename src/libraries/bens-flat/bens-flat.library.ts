@@ -77,7 +77,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
         "tvMode",
       ],
     },
-    todoList: TodoListService,
+    todoList: { func: TodoListService, dependencies: ["calendar", "notify"] },
     helpers: HelpersService,
     visitor: VisitorModeService,
     presence: {
@@ -145,6 +145,13 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
 export const LIB_BENS_FLAT = CreateLibrary({
   depends: [LIB_HASS, LIB_SYNAPSE, LIB_AUTOMATION, LIB_LEARNING_SENSORS, LIB_NUKI],
   name: "bens_flat",
+  configuration: {
+    TODOIST_TOKEN: {
+      description: "Todoist API token used to reschedule open tasks",
+      required: true,
+      type: "string",
+    },
+  },
   priorityInit,
   services,
 });
