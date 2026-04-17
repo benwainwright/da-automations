@@ -16,7 +16,7 @@ export function MediaPlayerService({ hass, logger }: TServiceParams) {
     const playerIds = Array.isArray(playerId) ? playerId : [playerId];
 
     const [lead, ...rest] = playerIds;
-    if (playerId.length > 1) {
+    if (Array.isArray(playerId) && playerId.length > 1) {
       await hass.call.media_player.join({
         entity_id: lead,
         group_members: rest,
