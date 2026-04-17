@@ -70,12 +70,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5140
+           * > color_temp_kelvin: 5295
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 194
+           * > color_temp_mired: 188
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -83,7 +83,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.8977148636963063
+           * > sun_position: 0.9416939711983814
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -145,12 +145,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5145
+           * > color_temp_kelvin: 5300
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 194
+           * > color_temp_mired: 188
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -158,7 +158,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.8983324358370253
+           * > sun_position: 0.9421599534077183
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -220,12 +220,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5140
+           * > color_temp_kelvin: 5295
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 194
+           * > color_temp_mired: 188
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -233,7 +233,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.897059957353051
+           * > sun_position: 0.9411992050422078
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -295,12 +295,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5145
+           * > color_temp_kelvin: 5300
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 194
+           * > color_temp_mired: 188
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -308,7 +308,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.8985114561508337
+           * > sun_position: 0.942294954390871
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -370,12 +370,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5145
+           * > color_temp_kelvin: 5300
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 194
+           * > color_temp_mired: 188
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -383,7 +383,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.8983329502810213
+           * > sun_position: 0.94216027580996
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -1362,11 +1362,6 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.blinds_default_closed",
         {
-          /**
-           * > ```yaml
-           * > area: living_room
-           * > ```
-           */ area: string;
           icon: "mdi:roller-shade-closed";
           friendly_name: "Blinds default closed";
         }
@@ -1447,11 +1442,6 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.living_room_motion_sensor",
         {
-          /**
-           * > ```yaml
-           * > area: living_room
-           * > ```
-           */ area: string;
           icon: "mdi:motion-sensor";
           friendly_name: "Living room motion sensor";
         }
@@ -1462,11 +1452,6 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.hallway_motion_sensor",
         {
-          /**
-           * > ```yaml
-           * > area: hallway
-           * > ```
-           */ area: string;
           icon: "mdi:motion-sensor";
           friendly_name: "Hallway motion sensor";
         }
@@ -1477,11 +1462,6 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.spare_room_motion_sensor",
         {
-          /**
-           * > ```yaml
-           * > area: spare_room
-           * > ```
-           */ area: string;
           icon: "mdi:motion-sensor";
           friendly_name: "Spare room motion sensor";
         }
@@ -1492,11 +1472,6 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.bedroom_motion_sensor",
         {
-          /**
-           * > ```yaml
-           * > area: bedroom
-           * > ```
-           */ area: string;
           icon: "mdi:motion-sensor";
           friendly_name: "Bedroom motion sensor";
         }
@@ -1507,11 +1482,6 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "switch.bathroom_motion_sensor",
         {
-          /**
-           * > ```yaml
-           * > area: bathroom
-           * > ```
-           */ area: string;
           icon: "mdi:motion-sensor";
           friendly_name: "Bathroom motion sensor";
         }
@@ -4904,7 +4874,7 @@ declare module "@digital-alchemy/hass" {
            */ last_period: string;
           /**
            * > ```yaml
-           * > last_valid_state: '1532.27'
+           * > last_valid_state: '1532.5026'
            * > ```
            */ last_valid_state: string;
           /**
@@ -6989,7 +6959,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-04-17T10:48:18.788620+01:00'
+           * > process_timestamp: '2026-04-17T11:18:21.450875+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -7023,7 +6993,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-04-17T10:48:18.788620+01:00'
+           * > process_timestamp: '2026-04-17T11:18:21.450875+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -7058,7 +7028,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-04-17T10:48:18.788620+01:00'
+           * > process_timestamp: '2026-04-17T11:18:21.450875+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -9190,7 +9160,7 @@ declare module "@digital-alchemy/hass" {
            * > application_unique_id: 551e4cc1-3a68-460e-a3ff-9f70ba752c46
            * > ```
            */ application_unique_id: string;
-          icon: "mdi:server";
+          icon: "mdi:server-outline";
           friendly_name: "app Online";
         }
       >;
@@ -9517,29 +9487,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5081
+           * > color_temp_kelvin: 5228
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.093
-           * >   - 18.154
+           * >   - 27.309
+           * >   - 16.232
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 230
-           * >   - 209
+           * >   - 232
+           * >   - 214
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.368
-           * >   - 0.349
+           * >   - 0.363
+           * >   - 0.346
            * > ```
            */ xy_color: [x: number, y: number];
           entity_id: (
@@ -9962,29 +9932,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5154
+           * > color_temp_kelvin: 5319
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.192
-           * >   - 17.191
+           * >   - 27.479
+           * >   - 15.075
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 231
-           * >   - 211
+           * >   - 234
+           * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.366
-           * >   - 0.348
+           * >   - 0.359
+           * >   - 0.345
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "living room back wall (right)";
@@ -10064,29 +10034,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5154
+           * > color_temp_kelvin: 5319
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.192
-           * >   - 17.191
+           * >   - 27.479
+           * >   - 15.075
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 231
-           * >   - 211
+           * >   - 234
+           * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.366
-           * >   - 0.348
+           * >   - 0.359
+           * >   - 0.345
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room back wall (left)";
@@ -10166,29 +10136,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5154
+           * > color_temp_kelvin: 5319
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.192
-           * >   - 17.191
+           * >   - 27.479
+           * >   - 15.075
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 231
-           * >   - 211
+           * >   - 234
+           * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.366
-           * >   - 0.348
+           * >   - 0.359
+           * >   - 0.345
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room back wall (middlle)";
@@ -10268,29 +10238,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5154
+           * > color_temp_kelvin: 5319
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.192
-           * >   - 17.191
+           * >   - 27.479
+           * >   - 15.075
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 231
-           * >   - 211
+           * >   - 234
+           * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.366
-           * >   - 0.348
+           * >   - 0.359
+           * >   - 0.345
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Washing Machine)";
@@ -10370,29 +10340,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5154
+           * > color_temp_kelvin: 5319
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.192
-           * >   - 17.191
+           * >   - 27.479
+           * >   - 15.075
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 231
-           * >   - 211
+           * >   - 234
+           * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.366
-           * >   - 0.348
+           * >   - 0.359
+           * >   - 0.345
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Sink)";
@@ -10472,29 +10442,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5154
+           * > color_temp_kelvin: 5319
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.192
-           * >   - 17.191
+           * >   - 27.479
+           * >   - 15.075
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 231
-           * >   - 211
+           * >   - 234
+           * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.366
-           * >   - 0.348
+           * >   - 0.359
+           * >   - 0.345
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Oven)";
@@ -10574,29 +10544,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5154
+           * > color_temp_kelvin: 5319
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.192
-           * >   - 17.191
+           * >   - 27.479
+           * >   - 15.075
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 231
-           * >   - 211
+           * >   - 234
+           * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.366
-           * >   - 0.348
+           * >   - 0.359
+           * >   - 0.345
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Fridge)";
@@ -11709,29 +11679,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5154
+           * > color_temp_kelvin: 5319
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.192
-           * >   - 17.191
+           * >   - 27.479
+           * >   - 15.075
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 231
-           * >   - 211
+           * >   - 234
+           * >   - 217
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.366
-           * >   - 0.348
+           * >   - 0.359
+           * >   - 0.345
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room (TV wall)";
@@ -12056,12 +12026,12 @@ declare module "@digital-alchemy/hass" {
            */ next_setting: string;
           /**
            * > ```yaml
-           * > elevation: 39.03
+           * > elevation: 42.16
            * > ```
            */ elevation: number;
           /**
            * > ```yaml
-           * > azimuth: 134.26
+           * > azimuth: 143.77
            * > ```
            */ azimuth: number;
           rising: boolean;
@@ -12354,6 +12324,16 @@ declare module "@digital-alchemy/hass" {
         {
           icon: "mdi:calendar-blank";
           friendly_name: "Events";
+        }
+      >;
+    };
+    "button.schedule_todoist": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "button.schedule_todoist",
+        {
+          icon: "mdi:check-circle-outline";
+          friendly_name: "Schedule Todoist";
         }
       >;
     };
@@ -12820,7 +12800,7 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 18.3
+           * > current_temperature: 18.1
            * > ```
            */ current_temperature: number;
           /**
@@ -12871,7 +12851,7 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 20
+           * > current_temperature: 19.7
            * > ```
            */ current_temperature: number;
           /**
@@ -12921,7 +12901,7 @@ declare module "@digital-alchemy/hass" {
            */ target_temp_step: number;
           /**
            * > ```yaml
-           * > current_temperature: 44.9
+           * > current_temperature: 44.8
            * > ```
            */ current_temperature: number;
           /**
@@ -12990,7 +12970,7 @@ declare module "@digital-alchemy/hass" {
           )[];
           /**
            * > ```yaml
-           * > volume_level: 0.77
+           * > volume_level: 0
            * > ```
            */ volume_level: number;
           is_volume_muted: boolean;
@@ -13019,7 +12999,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.tv?token=7d07d8c622079cb6b3edc15870c12709fdca6957c82f57e4a007b567fd060d65&cache=88c9066d444ec0ff
+           * >   /api/media_player_proxy/media_player.tv?token=7d07d8c622079cb6b3edc15870c12709fdca6957c82f57e4a007b567fd060d65&cache=62bfc15dcb09f7c4
            * > ```
            */ entity_picture: string;
           friendly_name: "TV";
@@ -13061,7 +13041,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 241
+           * > media_duration: 232
            * > ```
            */ media_duration: number;
           /**
@@ -13071,22 +13051,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-04-17T09:51:45.073168+00:00'
+           * > media_position_updated_at: '2026-04-17T10:24:26.885508+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Pieces
+           * > media_title: Let You Go
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Andrew Belle
+           * > media_artist: RY X
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Black Bear
+           * > media_album_name: Blood Moon
            * > ```
            */ media_album_name: string;
           /**
@@ -13109,7 +13089,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=1974fd073b7c946cdb319e192a0ddd651bb67aa6cf53547cba8285e071391cf0&cache=accb76944e2b0cc0
+           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=1974fd073b7c946cdb319e192a0ddd651bb67aa6cf53547cba8285e071391cf0&cache=91f4e6828182e69e
            * > ```
            */ entity_picture: string;
           friendly_name: "Bedroom Speaker";
@@ -13151,7 +13131,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 241
+           * > media_duration: 232
            * > ```
            */ media_duration: number;
           /**
@@ -13161,22 +13141,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-04-17T09:51:45.073168+00:00'
+           * > media_position_updated_at: '2026-04-17T10:24:26.885508+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Pieces
+           * > media_title: Let You Go
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Andrew Belle
+           * > media_artist: RY X
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Black Bear
+           * > media_album_name: Blood Moon
            * > ```
            */ media_album_name: string;
           /**
@@ -13199,7 +13179,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.living_room_sonos?token=22e75a33cb0b43f021b4e0f1fa901f1dc9184deec2cc38dbd1828620060613d0&cache=accb76944e2b0cc0
+           * >   /api/media_player_proxy/media_player.living_room_sonos?token=22e75a33cb0b43f021b4e0f1fa901f1dc9184deec2cc38dbd1828620060613d0&cache=91f4e6828182e69e
            * > ```
            */ entity_picture: string;
           friendly_name: "Living Room";
@@ -13241,7 +13221,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 241
+           * > media_duration: 232
            * > ```
            */ media_duration: number;
           /**
@@ -13251,22 +13231,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-04-17T09:51:45.073168+00:00'
+           * > media_position_updated_at: '2026-04-17T10:24:26.885508+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Pieces
+           * > media_title: Let You Go
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Andrew Belle
+           * > media_artist: RY X
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Black Bear
+           * > media_album_name: Blood Moon
            * > ```
            */ media_album_name: string;
           /**
@@ -13289,7 +13269,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bathroom_sonos?token=7d4c1dc0c5f084f896e2f3b0d736948352543ffd5241af00de8526c92b4e5dc5&cache=accb76944e2b0cc0
+           * >   /api/media_player_proxy/media_player.bathroom_sonos?token=7d4c1dc0c5f084f896e2f3b0d736948352543ffd5241af00de8526c92b4e5dc5&cache=91f4e6828182e69e
            * > ```
            */ entity_picture: string;
           friendly_name: "Bathroom";
@@ -13331,7 +13311,7 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_duration: 241
+           * > media_duration: 232
            * > ```
            */ media_duration: number;
           /**
@@ -13341,22 +13321,22 @@ declare module "@digital-alchemy/hass" {
            */ media_position: number;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-04-17T09:51:45.073168+00:00'
+           * > media_position_updated_at: '2026-04-17T10:24:26.885508+00:00'
            * > ```
            */ media_position_updated_at: string;
           /**
            * > ```yaml
-           * > media_title: Pieces
+           * > media_title: Let You Go
            * > ```
            */ media_title: string;
           /**
            * > ```yaml
-           * > media_artist: Andrew Belle
+           * > media_artist: RY X
            * > ```
            */ media_artist: string;
           /**
            * > ```yaml
-           * > media_album_name: Black Bear
+           * > media_album_name: Blood Moon
            * > ```
            */ media_album_name: string;
           /**
@@ -13379,7 +13359,7 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.hallway?token=fd6da53d76ea3b3286aed206b67e94afec19ca406201b675ab621b54ac5baded&cache=accb76944e2b0cc0
+           * >   /api/media_player_proxy/media_player.hallway?token=fd6da53d76ea3b3286aed206b67e94afec19ca406201b675ab621b54ac5baded&cache=91f4e6828182e69e
            * > ```
            */ entity_picture: string;
           friendly_name: "Hallway";
@@ -13538,50 +13518,12 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "media_player.lg_webos_tv_oled55c8pla",
         {
-          /**
-           * > ```yaml
-           * > volume_level: 0.77
-           * > ```
-           */ volume_level: number;
-          is_volume_muted: boolean;
-          /**
-           * > ```yaml
-           * > media_content_type: music
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > app_id: music_assistant
-           * > ```
-           */ app_id: string;
-          /**
-           * > ```yaml
-           * > source: Music Assistant Queue
-           * > ```
-           */ source: string;
-          shuffle: boolean;
-          /**
-           * > ```yaml
-           * > repeat: 'off'
-           * > ```
-           */ repeat: string;
-          entity_picture_local: null;
-          /**
-           * > ```yaml
-           * > mass_player_type: player
-           * > ```
-           */ mass_player_type: string;
-          /**
-           * > ```yaml
-           * > active_queue: upa823feb0f20a
-           * > ```
-           */ active_queue: string;
           device_class: "speaker";
           icon: "mdi:speaker";
           friendly_name: "[LG] webOS TV OLED55C8PLA";
           /**
            * > ```yaml
-           * > supported_features: 7796287
+           * > supported_features: 7795251
            * > ```
            */ supported_features: number;
         }
@@ -15616,12 +15558,12 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 41.370000000112
+           * > online_time: 14.379999999888
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 13327536356
+           * > traffic_usage: 13327551003
            * > ```
            */ traffic_usage: number;
           icon: "mdi:lan-connect";
@@ -15670,12 +15612,12 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 1239113.37
+           * > online_time: 1241128.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 69274270976
+           * > traffic_usage: 69274351357
            * > ```
            */ traffic_usage: number;
           icon: "mdi:lan-connect";
@@ -15724,12 +15666,12 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 594981.37
+           * > online_time: 596996.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 217982347667
+           * > traffic_usage: 218405621010
            * > ```
            */ traffic_usage: number;
           icon: "mdi:lan-connect";
@@ -15770,12 +15712,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 1197903
+           * > packets_sent: 1199119
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 5468742
+           * > packets_received: 5475172
            * > ```
            */ packets_received: number;
           /**
@@ -15800,12 +15742,12 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1989122.37
+           * > online_time: 1991137.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 2698235
+           * > traffic_usage: 2700595
            * > ```
            */ traffic_usage: number;
           /**
@@ -15851,12 +15793,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 2613646
+           * > packets_sent: 2616706
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 16667187
+           * > packets_received: 16674861
            * > ```
            */ packets_received: number;
           /**
@@ -15881,12 +15823,12 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1842347.37
+           * > online_time: 1844362.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 203867887
+           * > traffic_usage: 203911982
            * > ```
            */ traffic_usage: number;
           /**
@@ -15932,12 +15874,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 670111
+           * > packets_sent: 671339
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4918913
+           * > packets_received: 4925325
            * > ```
            */ packets_received: number;
           /**
@@ -15962,12 +15904,12 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1107900.37
+           * > online_time: 1109915.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 2842941
+           * > traffic_usage: 2845301
            * > ```
            */ traffic_usage: number;
           /**
@@ -16013,12 +15955,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 22445368
+           * > packets_sent: 22449702
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 26978874
+           * > packets_received: 27085816
            * > ```
            */ packets_received: number;
           /**
@@ -16033,27 +15975,27 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > tx_rate: 960730
+           * > tx_rate: 1080880
            * > ```
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 1080880
+           * > rx_rate: 1200950
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1098328.37
+           * > online_time: 1100343.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 211282257
+           * > traffic_usage: 211301566
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -34
+           * > signal: -46
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16094,12 +16036,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 661552
+           * > packets_sent: 662765
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4911104
+           * > packets_received: 4917526
            * > ```
            */ packets_received: number;
           /**
@@ -16124,17 +16066,17 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1095816.37
+           * > online_time: 1097831.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 2751407
+           * > traffic_usage: 2753825
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -45
+           * > signal: -44
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16175,12 +16117,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 419307
+           * > packets_sent: 419700
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4477843
+           * > packets_received: 4483213
            * > ```
            */ packets_received: number;
           /**
@@ -16200,22 +16142,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 72222
+           * > rx_rate: 6000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1989133.37
+           * > online_time: 1991148.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 22657965
+           * > traffic_usage: 22672154
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -51
+           * > signal: -52
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16256,12 +16198,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 368783
+           * > packets_sent: 369160
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4399559
+           * > packets_received: 4404893
            * > ```
            */ packets_received: number;
           /**
@@ -16281,17 +16223,17 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 65000
+           * > rx_rate: 6000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1989133.37
+           * > online_time: 1991148.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 530963
+           * > traffic_usage: 531349
            * > ```
            */ traffic_usage: number;
           /**
@@ -16337,12 +16279,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 124352
+           * > packets_sent: 124717
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4271979
+           * > packets_received: 4277267
            * > ```
            */ packets_received: number;
           /**
@@ -16362,22 +16304,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 6000
+           * > rx_rate: 52000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 678860.37
+           * > online_time: 680875.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 532503
+           * > traffic_usage: 532889
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -50
+           * > signal: -51
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16418,22 +16360,22 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 20382
+           * > packets_sent: 22922
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4243527
+           * > packets_received: 4250393
            * > ```
            */ packets_received: number;
           /**
            * > ```yaml
-           * > up_speed: 104
+           * > up_speed: 0
            * > ```
            */ up_speed: number;
           /**
            * > ```yaml
-           * > down_speed: 66
+           * > down_speed: 0
            * > ```
            */ down_speed: number;
           /**
@@ -16448,17 +16390,17 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1989123.37
+           * > online_time: 1991138.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 36623232
+           * > traffic_usage: 36658428
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -23
+           * > signal: -25
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16499,12 +16441,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 5564
+           * > packets_sent: 8756
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 5373637
+           * > packets_received: 5382348
            * > ```
            */ packets_received: number;
           /**
@@ -16529,7 +16471,7 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 2914.3700000001
+           * > online_time: 175.37999999989
            * > ```
            */ online_time: number;
           /**
@@ -16580,22 +16522,22 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 46195561
+           * > packets_sent: 46320187
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 49600058
+           * > packets_received: 49669740
            * > ```
            */ packets_received: number;
           /**
            * > ```yaml
-           * > up_speed: 198
+           * > up_speed: 0
            * > ```
            */ up_speed: number;
           /**
            * > ```yaml
-           * > down_speed: 900
+           * > down_speed: 66
            * > ```
            */ down_speed: number;
           /**
@@ -16610,12 +16552,12 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1842347.37
+           * > online_time: 1844362.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 1472276639
+           * > traffic_usage: 1558526341
            * > ```
            */ traffic_usage: number;
           /**
@@ -16661,12 +16603,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 253890
+           * > packets_sent: 261585
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4238249
+           * > packets_received: 4243625
            * > ```
            */ packets_received: number;
           /**
@@ -16691,12 +16633,12 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1312.3700000001
+           * > online_time: 295.37999999989
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 250765886
+           * > traffic_usage: 250773020
            * > ```
            */ traffic_usage: number;
           /**
@@ -16742,12 +16684,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 121787
+           * > packets_sent: 122155
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4295214
+           * > packets_received: 4300544
            * > ```
            */ packets_received: number;
           /**
@@ -16772,12 +16714,12 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 599705.37
+           * > online_time: 601720.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 2822169
+           * > traffic_usage: 2822357
            * > ```
            */ traffic_usage: number;
           /**
@@ -16823,12 +16765,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 6523562
+           * > packets_sent: 6530461
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4836974
+           * > packets_received: 4842691
            * > ```
            */ packets_received: number;
           /**
@@ -16853,7 +16795,7 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 7609.3700000001
+           * > online_time: 9624.3799999999
            * > ```
            */ online_time: number;
           /**
@@ -16904,12 +16846,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 914978
+           * > packets_sent: 919865
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4324692
+           * > packets_received: 4330416
            * > ```
            */ packets_received: number;
           /**
@@ -16924,7 +16866,7 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > tx_rate: 19500
+           * > tx_rate: 39000
            * > ```
            */ tx_rate: number;
           /**
@@ -16934,7 +16876,7 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 347956.37
+           * > online_time: 349971.38
            * > ```
            */ online_time: number;
           /**
@@ -16944,7 +16886,7 @@ declare module "@digital-alchemy/hass" {
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -68
+           * > signal: -69
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -16985,22 +16927,22 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 947126
+           * > packets_sent: 1015850
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 6582722
+           * > packets_received: 6670115
            * > ```
            */ packets_received: number;
           /**
            * > ```yaml
-           * > up_speed: 1398
+           * > up_speed: 24445
            * > ```
            */ up_speed: number;
           /**
            * > ```yaml
-           * > down_speed: 31509
+           * > down_speed: 4892
            * > ```
            */ down_speed: number;
           /**
@@ -17010,22 +16952,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 866667
+           * > rx_rate: 650000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1717167.37
+           * > online_time: 1719182.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 101450808598
+           * > traffic_usage: 101534437240
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -50
+           * > signal: -51
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -17066,12 +17008,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 121755
+           * > packets_sent: 122124
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 4295123
+           * > packets_received: 4300457
            * > ```
            */ packets_received: number;
           /**
@@ -17086,7 +17028,7 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > tx_rate: 39000
+           * > tx_rate: 52000
            * > ```
            */ tx_rate: number;
           /**
@@ -17096,17 +17038,17 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 599705.37
+           * > online_time: 601720.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 2830848
+           * > traffic_usage: 2831036
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -48
+           * > signal: -49
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -17147,12 +17089,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 3938851
+           * > packets_sent: 3942656
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 20304087
+           * > packets_received: 20312509
            * > ```
            */ packets_received: number;
           /**
@@ -17177,17 +17119,17 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1842347.37
+           * > online_time: 1844362.38
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 4148747844
+           * > traffic_usage: 4148780845
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -54
+           * > signal: -56
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -17304,22 +17246,22 @@ declare module "@digital-alchemy/hass" {
           packets_received: null;
           /**
            * > ```yaml
-           * > up_speed: 550
+           * > up_speed: 0
            * > ```
            */ up_speed: number;
           /**
            * > ```yaml
-           * > down_speed: 328
+           * > down_speed: 0
            * > ```
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 71.370000000112
+           * > online_time: 14.379999999888
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 215914125
+           * > traffic_usage: 216771510
            * > ```
            */ traffic_usage: number;
           icon: "mdi:lan-connect";
@@ -17766,19 +17708,19 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > temperature: 12.7
+           * > temperature: 12.8
            * > ```
            */ temperature: number;
           temperature_unit: "\u00B0C";
           pressure_unit: "hPa";
           /**
            * > ```yaml
-           * > wind_bearing: 176
+           * > wind_bearing: 186
            * > ```
            */ wind_bearing: number;
           /**
            * > ```yaml
-           * > wind_speed: 19.8
+           * > wind_speed: 20.2
            * > ```
            */ wind_speed: number;
           wind_speed_unit: "km/h";
@@ -17896,12 +17838,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 10:52:59'
+           * > start_time: '2026-04-17 11:25:59'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-04-17 11:52:59'
+           * > end_time: '2026-04-18 00:00:00'
            * > ```
            */ end_time: string;
           /**
@@ -17919,9 +17861,9 @@ declare module "@digital-alchemy/hass" {
           all_tasks: (
             | "Fill in patches form again"
             | "Do anki cards"
+            | "Sort out medication"
             | "Sort out fire alarms"
             | "Rave flow"
-            | "Sort out medication"
             | "Buy tickets to rhps"
             | "Shelly wall display"
           )[];
@@ -17942,18 +17884,18 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > message: Get phone camera fixed
+           * > message: Drug testing kit
            * > ```
            */ message: string;
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 10:52:59'
+           * > start_time: '2026-04-17 11:25:59'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-04-17 11:52:59'
+           * > end_time: '2026-04-17 12:25:59'
            * > ```
            */ end_time: string;
           /**
@@ -17969,8 +17911,8 @@ declare module "@digital-alchemy/hass" {
           due_today: boolean;
           overdue: boolean;
           all_tasks: (
-            | "Get phone camera fixed"
             | "Drug testing kit"
+            | "Get phone camera fixed"
             | "Organise Edinburgh fringe"
             | "Loop earplugs"
           )[];
@@ -17979,7 +17921,7 @@ declare module "@digital-alchemy/hass" {
            * > priority: 4
            * > ```
            */ priority: number;
-          labels: "large"[];
+          labels: "Buy"[];
           friendly_name: "Personal";
         }
       >;
@@ -17997,12 +17939,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 10:52:59'
+           * > start_time: '2026-04-17 11:25:59'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-04-20 00:00:00'
+           * > end_time: '2026-04-18 00:00:00'
            * > ```
            */ end_time: string;
           /**
@@ -18035,18 +17977,18 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > message: Occupancy sensors
+           * > message: Better microphones
            * > ```
            */ message: string;
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 10:52:59'
+           * > start_time: '2026-04-17 11:25:59'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-04-17 11:52:59'
+           * > end_time: '2026-04-18 00:00:00'
            * > ```
            */ end_time: string;
           /**
@@ -18062,14 +18004,14 @@ declare module "@digital-alchemy/hass" {
           due_today: boolean;
           overdue: boolean;
           all_tasks: (
+            | "Better microphones"
+            | "Female to female HDMI connector so that I can connect chromecast"
+            | "Whoop"
             | "Occupancy sensors"
             | "ESP32 boards for voice sattelites"
             | "ESP32 for bed sensor"
-            | "Door sensors for washing machine and dryer"
             | "Power sensors for dryer"
-            | "Female to female HDMI connector so that I can connect chromecast"
-            | "Better microphones"
-            | "Whoop"
+            | "Door sensors for washing machine and dryer"
           )[];
           /**
            * > ```yaml
@@ -18094,7 +18036,7 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 10:52:59'
+           * > start_time: '2026-04-17 11:25:59'
            * > ```
            */ start_time: string;
           /**
@@ -18147,12 +18089,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 10:52:59'
+           * > start_time: '2026-04-17 11:25:59'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-04-17 11:52:59'
+           * > end_time: '2026-04-17 12:25:59'
            * > ```
            */ end_time: string;
           /**
@@ -18191,12 +18133,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-04-17 10:52:59'
+           * > start_time: '2026-04-17 11:25:59'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-04-17 11:52:59'
+           * > end_time: '2026-04-17 12:25:59'
            * > ```
            */ end_time: string;
           /**
@@ -18628,13 +18570,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 4117ce7a05104dd09dda4447e5f3987f57e5becdc186205f71a3aa53693d78b0
+           * > access_token: 403a675cb3841f92cbfb31ab37f99f18957a0fa68130bf58170ee5672a1106ac
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.xbox_network_now_playing?token=4117ce7a05104dd09dda4447e5f3987f57e5becdc186205f71a3aa53693d78b0
+           * >   /api/image_proxy/image.xbox_network_now_playing?token=403a675cb3841f92cbfb31ab37f99f18957a0fa68130bf58170ee5672a1106ac
            * > ```
            */ entity_picture: string;
           friendly_name: "Xbox Network Now playing";

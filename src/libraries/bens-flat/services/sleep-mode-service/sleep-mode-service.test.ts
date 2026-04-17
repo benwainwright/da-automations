@@ -11,6 +11,7 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
   const getEvents = mock(async () => []);
   const speak = mock(async () => {});
   const command = mock(async () => {});
+  const turnOffSwitch = mock(async () => {});
   const latch = (_callback: () => Promise<void> | void, start = false) => {
     let triggered = start;
     return {
@@ -42,6 +43,7 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
           adaptiveLightingSleepModeHallway: "switch.adaptive_lighting_sleep_mode_hallway",
           adaptiveLightingSleepModeLivingRoom: "switch.adaptive_lighting_sleep_mode_living_room",
           adaptiveLightingSleepModeSpareRoom: "switch.adaptive_lighting_sleep_mode_spare_room",
+          autoplayMusic: "switch.autoplay_music",
         },
         mediaPlayers: {
           bedroomSonos: "media_player.bedroom_sonos_one",
@@ -61,7 +63,7 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
     },
     context: {},
     hass: {
-      call: { switch: { turn_off: mock(async () => {}) } },
+      call: { switch: { turn_off: turnOffSwitch } },
       socket: { onEvent: (_config: unknown) => {} },
     },
     logger: { info: mock(() => {}) },
@@ -94,4 +96,5 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
   expect(getEvents).toHaveBeenCalledTimes(1);
   expect(speak).toHaveBeenCalledTimes(1);
   expect(command).not.toHaveBeenCalled();
+  expect(turnOffSwitch).toHaveBeenCalledWith({ entity_id: "switch.autoplay_music" });
 });

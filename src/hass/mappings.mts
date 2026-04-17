@@ -1007,7 +1007,8 @@ declare module "@digital-alchemy/hass" {
       | "switch.bedroom_motion_sensor"
       | "switch.bathroom_motion_sensor"
       | "switch.cd"
-      | "switch.nag_mode";
+      | "switch.nag_mode"
+      | "button.schedule_todoist";
     _c8307c897fb8b39937b6331521c665ce: "update.openai_gpt_4o_mini_tts_update";
     _49585b6d7f7c01ccfb36c309febed92d: "update.openai_tts_speech_service_update";
     _54a08f919fe7174bb939608dd07ad0b0: "tts.openai_tts_gpt_40";
@@ -1893,7 +1894,8 @@ declare module "@digital-alchemy/hass" {
       | "switch.bedroom_motion_sensor"
       | "switch.bathroom_motion_sensor"
       | "switch.cd"
-      | "switch.nag_mode";
+      | "switch.nag_mode"
+      | "button.schedule_todoist";
     _zone: "zone.work" | "zone.gym";
     _google:
       | "calendar.tom_n_wainwright_gmail_com"
@@ -3463,6 +3465,7 @@ declare module "@digital-alchemy/hass" {
     upa04a5e060689_favorite_now_playing: "button.xbox_favorite_current_song";
     upa04a5e060689: "media_player.xbox_2";
     "01KMGVV2ZJ67SG5YSJB55NAXMW_tplink_router_22-DD-92-3D-D3-0F": "device_tracker.22_dd_92_3d_d3_0f";
+    "schedule-todoist": "button.schedule_todoist";
   }
   export interface HassZoneMapping {
     _work: true;
@@ -4040,7 +4043,8 @@ declare module "@digital-alchemy/hass" {
       | "button.home_assistant_voice_0a0883_favorite_current_song"
       | "button.192_168_1_120_favorite_current_song"
       | "button.alarm"
-      | "button.events";
+      | "button.events"
+      | "button.schedule_todoist";
     lock: "lock.front_door";
     select:
       | "select.front_door_lock_operating_mode"

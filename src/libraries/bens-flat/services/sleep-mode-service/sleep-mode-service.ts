@@ -87,7 +87,11 @@ export function SleepModeService({
 
   sleepMode.onTurnOn(async () => {
     (await lights.turnOffAll(),
-      await Promise.allSettled([helpers.turnOnAll(adaptiveLightingSleepModeSwitches), setAlarm()]));
+      await Promise.allSettled([
+        helpers.turnOnAll(adaptiveLightingSleepModeSwitches),
+        hass.call.switch.turn_off({ entity_id: entityIds.switches.autoplayMusic }),
+        setAlarm(),
+      ]));
   });
 
   sleepMode.onTurnOff(async () => {

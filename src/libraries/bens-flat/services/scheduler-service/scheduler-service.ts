@@ -6,7 +6,7 @@ const EVERY_WEEK_MONDAY_AT_9 = "0 9 * * 1";
 export function SchedulerService({
   scheduler,
   lifecycle,
-  bens_flat: { scene, email, entityIds, briefing, music, todoList },
+  bens_flat: { scene, email, entityIds, briefing, todoList },
   hass,
 }: TServiceParams) {
   const { on, off } = scene.toggle({
@@ -50,7 +50,6 @@ export function SchedulerService({
             entityIds.switches.adaptiveLightingBedroom,
             entityIds.switches.adaptiveLightingHallway,
             entityIds.switches.adaptiveLightingLivingRoom,
-            music.autoplaySwitch.entity_id,
           ],
         });
       },

@@ -12,6 +12,7 @@ export function EntityIdService() {
   const switches = {
     boilerMainElement: "switch.boiler_main_element",
     boilerBoost: "switch.boiler_boost_switch",
+    autoplayMusic: "switch.autoplay_music",
     adaptiveLightingLivingRoom: "switch.adaptive_lighting_living_room",
     adaptiveLightingBedroom: "switch.adaptive_lighting_bedroom",
     adaptiveLightingBathroom: "switch.adaptive_lighting_bathroom",
