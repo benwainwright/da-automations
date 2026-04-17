@@ -14,6 +14,13 @@ const waitWithTimeout = async (promise: Promise<void>) => {
   ]);
 };
 
+const speechPlayers = [
+  "media_player.hallway",
+  "media_player.bathroom",
+  "media_player.bedroom",
+  "media_player.living_room",
+];
+
 test("replacePersistentNotification dismisses and recreates notification", async () => {
   const dismiss = mock(async () => {});
   const create = mock(async () => {});
@@ -87,7 +94,13 @@ test("speak resolves after an announce TTS call", async () => {
   const service = NotificationService({
     bens_flat: {
       entityIds: {
-        mediaPlayers: { wholeFlat: "media_player.whole_flat" },
+        mediaPlayers: {
+          bathroom: "media_player.bathroom",
+          bedroom: "media_player.bedroom",
+          hallway: "media_player.hallway",
+          livingRoom: "media_player.living_room",
+          wholeFlat: "media_player.whole_flat",
+        },
         tts: { openAiGpt4: "tts.openai_tts_gpt_40" },
       },
       lights: { flash: mock(async () => {}) },
@@ -112,7 +125,7 @@ test("speak resolves after an announce TTS call", async () => {
   expect(play).toHaveBeenCalledWith({
     id: "media-source://tts/tts.openai_tts_gpt_40?message=hello",
     type: "provider",
-    player: "media_player.whole_flat",
+    player: speechPlayers,
     announce: true,
   });
   expect(speak).not.toHaveBeenCalled();
@@ -125,7 +138,13 @@ test("speak resolves when non-announce playback stops", async () => {
   const service = NotificationService({
     bens_flat: {
       entityIds: {
-        mediaPlayers: { wholeFlat: "media_player.whole_flat" },
+        mediaPlayers: {
+          bathroom: "media_player.bathroom",
+          bedroom: "media_player.bedroom",
+          hallway: "media_player.hallway",
+          livingRoom: "media_player.living_room",
+          wholeFlat: "media_player.whole_flat",
+        },
         tts: { openAiGpt4: "tts.openai_tts_gpt_40" },
       },
       lights: { flash: mock(async () => {}) },
@@ -162,7 +181,7 @@ test("speak resolves when non-announce playback stops", async () => {
   expect(play).toHaveBeenCalledWith({
     id: "media-source://tts/tts.openai_tts_gpt_40?message=hello",
     type: "provider",
-    player: "media_player.whole_flat",
+    player: speechPlayers,
     announce: false,
   });
   expect(remove).toHaveBeenCalledTimes(1);
@@ -174,7 +193,13 @@ test("speak does not warn when non-announce playback does not report playing", a
   const service = NotificationService({
     bens_flat: {
       entityIds: {
-        mediaPlayers: { wholeFlat: "media_player.whole_flat" },
+        mediaPlayers: {
+          bathroom: "media_player.bathroom",
+          bedroom: "media_player.bedroom",
+          hallway: "media_player.hallway",
+          livingRoom: "media_player.living_room",
+          wholeFlat: "media_player.whole_flat",
+        },
         tts: { openAiGpt4: "tts.openai_tts_gpt_40" },
       },
       lights: { flash: mock(async () => {}) },
@@ -203,7 +228,7 @@ test("speak does not warn when non-announce playback does not report playing", a
   expect(play).toHaveBeenCalledWith({
     id: "media-source://tts/tts.openai_tts_gpt_40?message=hello",
     type: "provider",
-    player: "media_player.whole_flat",
+    player: speechPlayers,
     announce: false,
   });
   expect(warn).not.toHaveBeenCalled();

@@ -132,6 +132,12 @@ export function NotificationService({
     announce?: boolean;
     volume?: number;
   }) => {
+    const players = [
+      entityIds.mediaPlayers.hallway,
+      entityIds.mediaPlayers.bathroom,
+      entityIds.mediaPlayers.bedroom,
+      entityIds.mediaPlayers.livingRoom,
+    ];
     logger.info(`Speaking: ${message} (announce: ${announce})`);
     try {
       await ttsSay({
@@ -139,7 +145,7 @@ export function NotificationService({
         source: entityIds?.tts?.openAiGpt4 as any,
         message,
         announce,
-        player: entityIds?.mediaPlayers?.wholeFlat as any,
+        player: players,
       });
     } catch {
       await ttsSay({
@@ -147,7 +153,7 @@ export function NotificationService({
         volume,
         message,
         announce,
-        player: entityIds?.mediaPlayers?.wholeFlat as any,
+        player: players,
       });
     }
   };
