@@ -18,7 +18,7 @@ const makeHarness = (config?: {
   autoplayState?: "on" | "off";
   sleepModeState?: "on" | "off";
   tvModeState?: "on" | "off";
-  libraryItems?: Array<{ uri: string; media_type: string }>;
+  libraryItems?: { uri: string; media_type: string }[];
 }) => {
   const controllerPlay = mock(async (_config: unknown) => {});
   const mediaPause = mock(async () => {});

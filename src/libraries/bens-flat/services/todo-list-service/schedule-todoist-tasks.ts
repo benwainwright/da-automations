@@ -47,7 +47,7 @@ export interface ScheduleTodoistTasksResult {
   updated: TaskUpdate[];
   unchanged: TaskUpdate[];
   skipped: SkippedTask[];
-  failed: Array<SkippedTask & { error: unknown }>;
+  failed: (SkippedTask & { error: unknown })[];
 }
 
 type TaskSize = "small" | "medium" | "large";
@@ -550,8 +550,8 @@ function toEventInterval(event: CalendarEvent, date: Dayjs, windowStart: Dayjs, 
   return { start, end };
 }
 
-function mergeIntervals(intervals: Array<{ start: Dayjs; end: Dayjs }>) {
-  return intervals.reduce<Array<{ start: Dayjs; end: Dayjs }>>((merged, interval) => {
+function mergeIntervals(intervals: { start: Dayjs; end: Dayjs }[]) {
+  return intervals.reduce<{ start: Dayjs; end: Dayjs }[]>((merged, interval) => {
     const previous = merged.at(-1);
     if (!previous || interval.start.isAfter(previous.end)) {
       merged.push(interval);

@@ -12,7 +12,7 @@ test("allAreas includes each room exactly once including spare_room", () => {
 
 test("latch only allows one in-flight callback until reset", async () => {
   let calls = 0;
-  const resolves: Array<() => void> = [];
+  const resolves: (() => void)[] = [];
   const callback = () =>
     new Promise<void>((accept) => {
       calls += 1;

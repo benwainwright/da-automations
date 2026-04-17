@@ -3,7 +3,7 @@ import { beforeEach, expect, mock, test } from "bun:test";
 const createWebhook = mock(async () => ({ data: { id: 999 } }));
 const updateWebhook = mock(async () => ({ data: { id: 44 } }));
 const listWebhooks = mock(async () => ({
-  data: [] as Array<{ id: number; config: { url?: string } }>,
+  data: [] as { id: number; config: { url?: string } }[],
 }));
 
 mock.module("octokit", () => ({

@@ -41,9 +41,9 @@ test("registers GitHub monitor on ready with configured owner/repo", async () =>
   await onReady?.();
 
   expect(monitorRepo).toHaveBeenCalledTimes(1);
-  const monitorRepoCalls = (monitorRepo as any).mock.calls as Array<
-    [{ owner: string; repo: string; callback: unknown }]
-  >;
+  const monitorRepoCalls = (monitorRepo as any).mock.calls as [
+    { owner: string; repo: string; callback: unknown },
+  ][];
   expect(monitorRepoCalls[0]?.[0]).toMatchObject({
     owner: "benwainwright",
     repo: "da-automations",
