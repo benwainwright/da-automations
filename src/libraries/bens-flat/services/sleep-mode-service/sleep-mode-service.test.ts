@@ -14,13 +14,16 @@ type CalendarEvent = { start: string; end: string; summary: string };
 type GetEventsParams = { start: Dayjs; end: Dayjs };
 
 function setupSleepModeService(events: CalendarEvent[] = []) {
+  const actions: string[] = [];
   let onTurnOn: (() => Promise<void>) | undefined;
   let onAlarmPress: (() => Promise<void>) | undefined;
   const turnOnAll = mock(async () => {});
   const getEvents = mock(async (_params: GetEventsParams) => events);
   const speak = mock(async () => {});
   const command = mock(async () => {});
-  const turnOffSwitch = mock(async () => {});
+  const turnOffSwitch = mock(async ({ entity_id }: { entity_id: string }) => {
+    actions.push(`switch.turn_off:${entity_id}`);
+  });
   const latch = (_callback: () => Promise<void> | void, start = false) => {
     let triggered = start;
     return {
@@ -53,6 +56,7 @@ function setupSleepModeService(events: CalendarEvent[] = []) {
           adaptiveLightingSleepModeLivingRoom: "switch.adaptive_lighting_sleep_mode_living_room",
           adaptiveLightingSleepModeSpareRoom: "switch.adaptive_lighting_sleep_mode_spare_room",
           autoplayMusic: "switch.autoplay_music",
+          bedroomMotionSensor: "switch.bedroom_motion_sensor",
         },
         mediaPlayers: {
           bedroomSonos: "media_player.bedroom_sonos_one",
@@ -63,7 +67,11 @@ function setupSleepModeService(events: CalendarEvent[] = []) {
           getEntity: () => ({ state: "off" }),
         },
       },
-      lights: { turnOffAll: mock(async () => {}) },
+      lights: {
+        turnOffAll: mock(async () => {
+          actions.push("lights.turnOffAll");
+        }),
+      },
       motion: {
         livingRoom: (_cb: () => Promise<void> | void) => {},
         hallway: (_cb: () => Promise<void> | void) => {},
@@ -95,6 +103,7 @@ function setupSleepModeService(events: CalendarEvent[] = []) {
   } as any);
 
   return {
+    actions,
     command,
     getEvents,
     onAlarmPress: () => onAlarmPress?.(),
@@ -106,7 +115,8 @@ function setupSleepModeService(events: CalendarEvent[] = []) {
 }
 
 test("turning sleep mode on enables the expected adaptive-lighting sleep switches", async () => {
-  const { getEvents, onTurnOn, speak, turnOffSwitch, turnOnAll, command } = setupSleepModeService();
+  const { actions, getEvents, onTurnOn, speak, turnOffSwitch, turnOnAll, command } =
+    setupSleepModeService();
 
   await onTurnOn?.();
 
@@ -122,6 +132,10 @@ test("turning sleep mode on enables the expected adaptive-lighting sleep switche
   expect(speak).toHaveBeenCalledTimes(1);
   expect(command).not.toHaveBeenCalled();
   expect(turnOffSwitch).toHaveBeenCalledWith({ entity_id: "switch.autoplay_music" });
+  expect(actions.slice(0, 2)).toEqual([
+    "switch.turn_off:switch.bedroom_motion_sensor",
+    "lights.turnOffAll",
+  ]);
 });
 
 test("set alarm uses today's calendar when triggered after midnight before morning", async () => {
