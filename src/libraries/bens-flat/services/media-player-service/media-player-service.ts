@@ -12,7 +12,7 @@ export interface PlayConfig {
 
 export function MediaPlayerService({ hass, logger }: TServiceParams) {
   const play = async ({ player: playerId, id, type, volume }: PlayConfig) => {
-    logger.info(`Executing play: ${playerId}, ${type} (volume=${volume})`);
+    logger.info(`Executing play: player=${playerId}, id=${id} type=${type} (volume=${volume})`);
     const player = hass.refBy.id(playerId);
 
     if (volume) {
@@ -24,6 +24,8 @@ export function MediaPlayerService({ hass, logger }: TServiceParams) {
       media_content_type: type,
       // enqueue,
     } as unknown as Parameters<typeof player.play_media>[0];
+
+    logger.info(`config: ${JSON.stringify(config, null, 2)}`);
 
     await player.play_media(config);
   };
