@@ -97,7 +97,10 @@ export function BriefingService({
     const visitorModeEntity = visitor?.visitorMode?.getEntity?.();
     const visitorModeIsOn = visitorModeEntity?.state === "on";
     if (time.isAfter(FIVE_AM) && !visitorModeIsOn && time.isBefore(THREE_PM)) {
-      await readBriefing();
+      const briefingWasRead = await readBriefing();
+      if (!briefingWasRead) {
+        return;
+      }
       await Promise.allSettled([
         hass.call.switch.turn_on({ entity_id: entityIds.switches.bedroomMotionSensor }),
         hass.call.switch.turn_on({ entity_id: entityIds.switches.autoplayMusic }),

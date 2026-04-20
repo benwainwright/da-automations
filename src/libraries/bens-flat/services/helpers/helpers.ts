@@ -36,10 +36,11 @@ export function HelpersService({ hass, scheduler }: TServiceParams) {
 
     const trigger = async () => {
       if (triggered) {
-        return;
+        return false;
       }
       triggered = true;
       await callback();
+      return true;
     };
 
     const reset = async () => {
