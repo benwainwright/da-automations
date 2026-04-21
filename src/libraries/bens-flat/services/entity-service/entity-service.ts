@@ -74,6 +74,7 @@ export function EntityIdService() {
 
   const binarySensor = {
     livingRoomOccupancy: "binary_sensor.living_room_occupancy",
+    frontDoor: "binary_sensor.front_door_open",
     hallwayOccupancy: "binary_sensor.hallway_occupancy",
     spareRoomOccupancy: "binary_sensor.spare_room_occupancy",
     bedroomOccupancy: "binary_sensor.bedroom_occupancy",
