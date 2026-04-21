@@ -4,6 +4,7 @@ export function CoreModule({
   bens_flat,
   lifecycle,
   auto_deploy,
+  hass,
   synapse,
   context,
 }: TServiceParams) {
@@ -27,6 +28,16 @@ export function CoreModule({
   lifecycle.onReady(async () => {
     const autoDeployNotificationId = "auto_deploy_status";
     const autoDeployNotificationTitle = "Auto Deploy";
+
+    const doorOpen = hass.refBy.id("binary_sensor.front_door_open");
+    doorOpen.onUpdate(async (newState, oldState) => {
+      if (newState.state === "on" && oldState.state === "off") {
+        await hass.call.light.turn_on({
+          entity_id: "light.living_room_bookcase",
+          effect: "okay",
+        });
+      }
+    });
 
     await notify.replacePersistentNotificationIfExists({
       notificationId: autoDeployNotificationId,
