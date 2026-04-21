@@ -79,7 +79,7 @@ test("subscribes to auto-deploy lifecycle and updates persistent notifications",
       setTimeout: () => ({ remove: () => {} }),
     },
     synapse: {
-      switch: mock(() => ({ is_on: false })),
+      switch: mock(() => ({ is_on: true })),
     },
   } as any);
 
