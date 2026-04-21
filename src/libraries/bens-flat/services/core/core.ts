@@ -31,7 +31,7 @@ export function CoreModule({
 
     const doorOpen = hass.refBy.id("binary_sensor.front_door_open");
     doorOpen.onUpdate(async (newState, oldState) => {
-      if (newState.state === "on" && oldState.state === "off") {
+      if (newState.state === "on" && oldState.state === "off" && cdSwitch.is_on) {
         await hass.call.light.turn_on({
           entity_id: "light.living_room_bookcase",
           effect: "okay",
