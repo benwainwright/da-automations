@@ -14,6 +14,7 @@ export function BriefingService({
   bens_flat: {
     notify,
     helpers,
+    cd,
     visitor,
     mediaPlayer,
     calendar,
@@ -87,7 +88,13 @@ export function BriefingService({
   }, [1, "hour"]);
 
   motion.anywhere(async () => {
-    if (reminders.is_on && !sleepMode.isOn() && time.isAfter("PM01:30") && !tvMode.isOn()) {
+    if (
+      reminders.is_on &&
+      !sleepMode.isOn() &&
+      time.isAfter("PM01:30") &&
+      !tvMode.isOn() &&
+      !cd.cdSwitch.is_on
+    ) {
       await triggerTodoList();
     }
   });

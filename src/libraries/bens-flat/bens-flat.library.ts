@@ -57,7 +57,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     },
     cd: {
       func: CdService,
-      dependencies: ["notify", "motion", "mediaPlayer"],
+      dependencies: ["notify", "motion", "mediaPlayer", "lock"],
     },
     alexa: {
       func: AlexaMediaPlayerService,
@@ -76,6 +76,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
         "mediaPlayer",
         "calendar",
         "todoList",
+        "cd",
         "entityIds",
         "sleepMode",
         "motion",
