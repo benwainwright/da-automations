@@ -31,15 +31,12 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
         group_members: rest,
       });
 
-      logger.info("TYPE HERE");
-      logger.info(typeof withMembers.attributes.group_members);
-      logger.info(JSON.stringify(withMembers.attributes.group_members, null, 2));
-      const members = withMembers.attributes.group_members?.split(",");
+      const members = withMembers.attributes.group_members;
       if (!playerIds.every((theId) => members.includes(theId))) {
         await new Promise<void>((accept, reject) => {
           const listener = leadEntity.onUpdate((newState) => {
             const theState = newState as typeof newState & GroupMembersAttributes;
-            const theMembers = theState.attributes.group_members.split(",");
+            const theMembers = theState.attributes.group_members;
             if (playerIds.every((theId) => theMembers.includes(theId))) {
               listener.remove();
               accept();
