@@ -172,7 +172,7 @@ export function NotificationService({
           ]
         : [];
 
-    await Promise.all([lights.flash(), ...withTv, speak({ message })]);
+    await Promise.all([lights.flash(), ...withTv, speak({ message, announce: true })]);
   };
 
   const hasPersistentNotification = (notificationId: string) => {
