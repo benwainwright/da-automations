@@ -49,6 +49,7 @@ export function BriefingService({
       shuffle: false,
       entity_id: entityIds.mediaPlayers.wholeFlat,
     });
+
     await mediaPlayer.play({
       player: [
         entityIds.mediaPlayers.hallway,

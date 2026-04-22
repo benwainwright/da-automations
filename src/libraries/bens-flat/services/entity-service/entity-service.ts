@@ -55,6 +55,9 @@ export function EntityIdService() {
     bathroom: "media_player.bathroom",
     livingRoom: "media_player.living_room",
     bedroomSonos: "media_player.bedroom_sonos_one",
+    livingRoomSonos: "media_player.living_room_sonos",
+    hallwaySonos: "media_player.hallway_sonos",
+    bathroomSonos: "media_player.bathroom_sonos",
     appleTv: "media_player.apple_tv",
     tv: "media_player.tv",
   } satisfies Record<string, PICK_ENTITY<"media_player">>;

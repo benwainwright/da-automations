@@ -10,20 +10,47 @@ export interface PlayConfig {
   announce?: boolean;
 }
 
-export function MediaPlayerService({ hass, logger }: TServiceParams) {
+export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) {
   const play = async ({ player: playerId, id, type, volume }: PlayConfig) => {
     logger.info(`Executing play: player=${playerId}, id=${id} type=${type} (volume=${volume})`);
     const playerIds = Array.isArray(playerId) ? playerId : [playerId];
 
     const [lead, ...rest] = playerIds;
+
+    const leadEntity = hass.refBy.id(lead);
+
+    type GroupMembersAttributes = {
+      attributes: { group_members: string };
+    };
+
+    const withMembers = leadEntity as typeof leadEntity & GroupMembersAttributes;
+
     if (Array.isArray(playerId) && playerId.length > 1) {
       await hass.call.media_player.join({
         entity_id: lead,
         group_members: rest,
       });
-    }
 
-    const leadEntity = hass.refBy.id(lead);
+      const members = withMembers.attributes.group_members.split(",");
+      if (!playerIds.every((theId) => members.includes(theId))) {
+        await new Promise<void>((accept, reject) => {
+          const listener = leadEntity.onUpdate((newState) => {
+            const theState = newState as typeof newState & GroupMembersAttributes;
+            const theMembers = theState.attributes.group_members.split(",");
+            if (playerIds.every((theId) => theMembers.includes(theId))) {
+              listener.remove();
+              accept();
+              timeout.remove();
+            }
+          });
+
+          const timeout = scheduler.setTimeout(() => {
+            reject(new Error("Join action timed out"));
+            listener.remove();
+          }, "15s");
+        });
+      }
+    }
 
     if (volume) {
       playerIds
