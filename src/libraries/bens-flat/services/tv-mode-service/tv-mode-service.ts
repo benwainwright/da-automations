@@ -7,7 +7,7 @@ export function TVModeService({
   context,
   logger,
   lifecycle,
-  bens_flat: { scene, blinds },
+  bens_flat: { scene, blinds, entityIds, music },
   automation,
 }: TServiceParams) {
   const tvMode = synapse.switch({
@@ -18,9 +18,9 @@ export function TVModeService({
     icon: mdi.television,
   });
 
-  const xboxInGame = hass.refBy.id("binary_sensor.xbox_network_in_game");
-  const appleTv = hass.refBy.id("media_player.apple_tv");
-  const ps5NowPlaying = hass.refBy.id("sensor.ps5_now_playing");
+  const xboxInGame = hass.refBy.id(entityIds.binarySensor.xbox);
+  const appleTv = hass.refBy.id(entityIds.mediaPlayers.appleTv);
+  const ps5NowPlaying = hass.refBy.id(entityIds.sensor.playingPs5);
 
   const shouldBeOn = () => {
     if (xboxInGame.state === "on") {
@@ -62,21 +62,25 @@ export function TVModeService({
       transition: 3,
       scene: "scene.tv_mode",
       snapshot: [
-        "light.living_room_floor_lamp_bottom",
-        "light.living_room_floor_lamp_middle",
-        "light.living_room_floor_lamp_top",
-        "light.kitchen_fridge",
-        "light.kitchen_oven",
-        "light.kitchen_sink",
-        "light.kitchen_washing_machine",
-        "light.living_room_tv_wall",
-        "light.living_room_bookcase",
-        "light.living_room_back_wall_left",
-        "light.living_room_back_wall_middle",
-        "light.living_room_back_wall_right",
-        "switch.adaptive_lighting_living_room",
+        entityIds.light.kitchenFridge,
+        entityIds.light.kitchenOven,
+        entityIds.light.kitchenSink,
+        entityIds.light.kitchenWashingMachine,
+        entityIds.light.livingRoomBackWallMiddle,
+        entityIds.light.livingRoomBackWallMiddle,
+        entityIds.light.livingRoomBackWallRight,
+        entityIds.light.livingRoomFloorLampBottom,
+        entityIds.light.livingRoomFloorLampMiddle,
+        entityIds.light.livingRoomFloorLampTop,
+        entityIds.light.kitchenWashingMachine,
+        entityIds.light.livingRoomTvWall,
+        entityIds.light.livingRoomBookcase,
+        entityIds.light.livingRoomWallLeft,
+        entityIds.light.livingRoomBackWallMiddle,
+        entityIds.light.livingRoomBackWallRight,
+        music.autoplaySwitch.entity_id,
+        entityIds.switches.adaptiveLightingLivingRoom,
         "switch.living_room_motion_sensor",
-        "switch.autoplay_music",
       ],
     });
 
@@ -86,7 +90,7 @@ export function TVModeService({
         logger.info(`TV mode as turned on, triggering actions`);
         await Promise.allSettled([
           hass.call.media_player.media_pause({
-            entity_id: "media_player.living_room",
+            entity_id: entityIds.mediaPlayers.livingRoom,
           }),
           toggler.on(),
           blinds.close(),

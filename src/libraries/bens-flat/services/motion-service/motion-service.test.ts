@@ -1,4 +1,5 @@
 import { beforeEach, expect, mock, test } from "bun:test";
+import { EntityIdService } from "../entity-service/entity-service.ts";
 import { MotionService } from "./motion-service.ts";
 
 type UpdateCallback = (newState?: { state?: string }) => Promise<void> | void;
@@ -34,7 +35,10 @@ test("anywhere() only fires callback for motion on-state updates", async () => {
   const harness = makeHarness();
   const callback = mock(() => {});
 
-  const motion = MotionService({ hass: harness.hass } as any);
+  const motion = MotionService({
+    hass: harness.hass,
+    bens_flat: { entityIds: EntityIdService() },
+  } as any);
   motion.anywhere(callback);
 
   await harness.emit("binary_sensor.bedroom_occupancy", "off");
@@ -48,7 +52,10 @@ test("bedroom() only fires callback when bedroom sensor is on", async () => {
   const harness = makeHarness();
   const callback = mock(() => {});
 
-  const motion = MotionService({ hass: harness.hass } as any);
+  const motion = MotionService({
+    hass: harness.hass,
+    bens_flat: { entityIds: EntityIdService() },
+  } as any);
   motion.bedroom(callback);
 
   await harness.emit("binary_sensor.bedroom_occupancy", "off");

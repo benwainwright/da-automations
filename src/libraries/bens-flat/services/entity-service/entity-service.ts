@@ -1,12 +1,28 @@
 import { PICK_ENTITY } from "@digital-alchemy/hass";
 
 export function EntityIdService() {
+  const light = {
+    livingRoomFloorLampBottom: "light.living_room_floor_lamp_bottom",
+    livingRoomFloorLampMiddle: "light.living_room_floor_lamp_middle",
+    livingRoomFloorLampTop: "light.living_room_floor_lamp_top",
+    kitchenFridge: "light.kitchen_fridge",
+    kitchenOven: "light.kitchen_oven",
+    kitchenSink: "light.kitchen_sink",
+    kitchenWashingMachine: "light.kitchen_washing_machine",
+    livingRoomTvWall: "light.living_room_tv_wall",
+    livingRoomBookcase: "light.living_room_bookcase",
+    livingRoomWallLeft: "light.living_room_back_wall_left",
+    livingRoomBackWallMiddle: "light.living_room_back_wall_middle",
+    livingRoomBackWallRight: "light.living_room_back_wall_right",
+  } satisfies Record<string, PICK_ENTITY<"light">>;
+
   const blinds = {
     livingRoom: "cover.living_room_blinds",
   } satisfies Record<string, PICK_ENTITY<"cover">>;
 
   const sensor = {
     electricityMeter: "sensor.electricity_meter",
+    playingPs5: "sensor.ps5_now_playing",
   } satisfies Record<string, PICK_ENTITY<"sensor">>;
 
   const switches = {
@@ -75,7 +91,12 @@ export function EntityIdService() {
     monroe: "plant.monroe",
   } satisfies Record<string, PICK_ENTITY<"plant">>;
 
+  const button = {
+    turnOnTv: "button.turn_on_tv",
+  } satisfies Record<string, PICK_ENTITY<"button">>;
+
   const binarySensor = {
+    xbox: "binary_sensor.xbox_network_in_game",
     livingRoomOccupancy: "binary_sensor.living_room_occupancy",
     frontDoor: "binary_sensor.front_door_open",
     hallwayOccupancy: "binary_sensor.hallway_occupancy",
@@ -102,5 +123,7 @@ export function EntityIdService() {
     scene,
     number,
     sensor,
+    button,
+    light,
   };
 }

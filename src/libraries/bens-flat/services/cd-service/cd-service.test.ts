@@ -1,4 +1,5 @@
 import { expect, mock, test } from "bun:test";
+import { EntityIdService } from "../entity-service/entity-service.ts";
 import { CdService } from "./cd-service.ts";
 
 test("plays boop announcement when the front door opens in CD mode", async () => {
@@ -31,6 +32,7 @@ test("plays boop announcement when the front door opens in CD mode", async () =>
       })),
     },
     bens_flat: {
+      entityIds: EntityIdService(),
       mediaPlayer: { playLocalMp3 },
       motion: {
         bedroom: mock(() => {}),
@@ -72,6 +74,7 @@ test("sends a critical notification when bedroom or spare room motion fires in C
       })),
     },
     bens_flat: {
+      entityIds: EntityIdService(),
       mediaPlayer: { playLocalMp3: mock(async () => {}) },
       motion: {
         bedroom: (callback: () => Promise<void>) => {

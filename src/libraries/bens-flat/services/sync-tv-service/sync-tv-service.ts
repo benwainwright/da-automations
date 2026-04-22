@@ -12,7 +12,7 @@ export function SyncTvService({ hass, bens_flat: { entityIds } }: TServiceParams
 
     if (newState.state === "idle" && oldState.state === "off" && tv.state !== "on") {
       await hass.call.button.press({
-        entity_id: "button.turn_on_tv",
+        entity_id: entityIds.button.turnOnTv,
       });
       await tv.waitForState("on");
       await tv.select_source({ source: APPLE_TV_SOURCE });

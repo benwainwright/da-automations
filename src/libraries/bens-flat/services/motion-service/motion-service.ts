@@ -1,11 +1,11 @@
 import { TServiceParams } from "@digital-alchemy/core";
 
-export function MotionService({ hass }: TServiceParams) {
-  const bedroom = hass.refBy.id("binary_sensor.bedroom_occupancy");
-  const hallway = hass.refBy.id("binary_sensor.hallway_occupancy");
-  const livingRoom = hass.refBy.id("binary_sensor.living_room_occupancy");
-  const bathroom = hass.refBy.id("binary_sensor.bathroom_occupancy");
-  const spareRoom = hass.refBy.id("binary_sensor.spare_room_occupancy");
+export function MotionService({ hass, bens_flat: { entityIds } }: TServiceParams) {
+  const bedroom = hass.refBy.id(entityIds.binarySensor.bedroomOccupancy);
+  const hallway = hass.refBy.id(entityIds.binarySensor.hallwayOccupancy);
+  const livingRoom = hass.refBy.id(entityIds.binarySensor.livingRoomOccupancy);
+  const bathroom = hass.refBy.id(entityIds.binarySensor.bathroomOccupancy);
+  const spareRoom = hass.refBy.id(entityIds.binarySensor.spareRoomOccupancy);
 
   const onBedroom = (callback: () => void | Promise<void>) =>
     bedroom.onUpdate(async (newState) => {
