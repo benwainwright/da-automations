@@ -13,7 +13,7 @@ export function CdService({
     suggested_object_id: "cd",
   });
 
-  const quickLockState = "quickLock_state";
+  const quickLockState = "quicklock_state";
 
   cdSwitch.onTurnOn(async () => {
     await hass.call.scene.create({
