@@ -28,6 +28,7 @@ import {
   TodoListService,
   BoilerService,
   EntityIdService,
+  CdService,
 } from "./services/index.ts";
 import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.library.ts";
 import { LIB_NUKI } from "../nuki/nuki.library.ts";
@@ -53,6 +54,10 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     calendar: {
       func: CalendarService,
       dependencies: ["entityIds", "notify"],
+    },
+    cd: {
+      func: CdService,
+      dependencies: ["notify", "motion", "mediaPlayer"],
     },
     alexa: {
       func: AlexaMediaPlayerService,
@@ -87,16 +92,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     goingHomeRecorder: GoingHomeRecorderService,
     core: {
       func: CoreModule,
-      dependencies: [
-        "notify",
-        "blinds",
-        "presence",
-        "lights",
-        "entityIds",
-        "sleepMode",
-        "tvMode",
-        "motion",
-      ],
+      dependencies: ["notify", "blinds", "presence", "lights", "entityIds", "sleepMode", "tvMode"],
     },
     nags: {
       func: NagService,

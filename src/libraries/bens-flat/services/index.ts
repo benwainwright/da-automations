@@ -1,5 +1,6 @@
 export { HelpersService } from "./helpers/helpers.ts";
 export { CoreModule } from "./core/core.ts";
+export { CdService } from "./cd-service/cd-service.ts";
 export { VisitorModeService } from "./visitor-mode-service/index.ts";
 export { AlexaMediaPlayerService } from "./alexa-media-player-service/index.ts";
 export { LightsService } from "./lights-service/lights-service.ts";

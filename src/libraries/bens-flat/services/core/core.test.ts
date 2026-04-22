@@ -4,13 +4,9 @@ import { CoreModule } from "./core.ts";
 test("subscribes to auto-deploy lifecycle and updates persistent notifications", async () => {
   let onReady: (() => Promise<void>) | undefined;
   let lifecycleListener: ((event: { type: string }) => Promise<void>) | undefined;
-  let doorOpenListener:
-    | ((newState: { state: string }, oldState: { state: string }) => Promise<void>)
-    | undefined;
 
   const replacePersistentNotificationIfExists = mock(async () => {});
   const replacePersistentNotification = mock(async () => {});
-  const turnOnLight = mock(async () => {});
 
   CoreModule({
     auto_deploy: {
@@ -56,40 +52,12 @@ test("subscribes to auto-deploy lifecycle and updates persistent notifications",
         onReady = callback;
       },
     },
-    hass: {
-      call: {
-        light: {
-          turn_on: turnOnLight,
-        },
-      },
-      refBy: {
-        id: (entityId: string) => {
-          expect(entityId).toBe("binary_sensor.front_door_open");
-          return {
-            onUpdate: (
-              callback: (newState: { state: string }, oldState: { state: string }) => Promise<void>,
-            ) => {
-              doorOpenListener = callback;
-            },
-          };
-        },
-      },
-    },
     scheduler: {
       setTimeout: () => ({ remove: () => {} }),
-    },
-    synapse: {
-      switch: mock(() => ({ is_on: true })),
     },
   } as any);
 
   await onReady?.();
-
-  await doorOpenListener?.({ state: "on" }, { state: "off" });
-  expect(turnOnLight).toHaveBeenCalledWith({
-    entity_id: "light.living_room_bookcase",
-    effect: "okay",
-  });
 
   expect(replacePersistentNotificationIfExists).toHaveBeenCalledWith({
     notificationId: "auto_deploy_status",

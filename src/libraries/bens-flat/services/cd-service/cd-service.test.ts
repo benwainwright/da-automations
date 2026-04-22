@@ -1,0 +1,92 @@
+import { expect, mock, test } from "bun:test";
+import { CdService } from "./cd-service.ts";
+
+test("plays boop announcement when the front door opens in CD mode", async () => {
+  let doorOpenListener:
+    | ((newState: { state: string }, oldState: { state: string }) => Promise<void>)
+    | undefined;
+  const play = mock(async () => {});
+
+  CdService({
+    context: {},
+    hass: {
+      refBy: {
+        id: (entityId: string) => {
+          expect(entityId).toBe("binary_sensor.front_door_open");
+          return {
+            onUpdate: (
+              callback: (newState: { state: string }, oldState: { state: string }) => Promise<void>,
+            ) => {
+              doorOpenListener = callback;
+            },
+          };
+        },
+      },
+    },
+    synapse: {
+      switch: mock(() => ({ is_on: true })),
+    },
+    bens_flat: {
+      mediaPlayer: { play },
+      motion: {
+        bedroom: mock(() => {}),
+        spareRoom: mock(() => {}),
+      },
+      notify: {
+        notifyCritical: mock(async () => {}),
+      },
+    },
+  } as any);
+
+  await doorOpenListener?.({ state: "on" }, { state: "off" });
+
+  expect(play).toHaveBeenCalledWith({
+    id: "media-source://media_source/local/boop.mp3",
+    type: "audio/mpeg",
+    announce: true,
+    player: "media_player.whole_flat",
+  });
+});
+
+test("sends a critical notification when bedroom or spare room motion fires in CD mode", async () => {
+  let bedroomMotion: (() => Promise<void>) | undefined;
+  let spareRoomMotion: (() => Promise<void>) | undefined;
+  const notifyCritical = mock(async () => {});
+
+  CdService({
+    context: {},
+    hass: {
+      refBy: {
+        id: () => ({
+          onUpdate: mock(() => {}),
+        }),
+      },
+    },
+    synapse: {
+      switch: mock(() => ({ is_on: true })),
+    },
+    bens_flat: {
+      mediaPlayer: { play: mock(async () => {}) },
+      motion: {
+        bedroom: (callback: () => Promise<void>) => {
+          bedroomMotion = callback;
+        },
+        spareRoom: (callback: () => Promise<void>) => {
+          spareRoomMotion = callback;
+        },
+      },
+      notify: {
+        notifyCritical,
+      },
+    },
+  } as any);
+
+  await bedroomMotion?.();
+  await spareRoomMotion?.();
+
+  expect(notifyCritical).toHaveBeenCalledTimes(2);
+  expect(notifyCritical).toHaveBeenCalledWith({
+    message: "someone is out of bounds",
+    title: "alert",
+  });
+});

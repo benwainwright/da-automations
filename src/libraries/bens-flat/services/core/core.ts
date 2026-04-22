@@ -1,43 +1,11 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 
-export function CoreModule({
-  bens_flat,
-  lifecycle,
-  auto_deploy,
-  hass,
-  synapse,
-  context,
-}: TServiceParams) {
-  const { lights, presence, blinds, notify, entityIds, tvMode, sleepMode, motion } = bens_flat;
-
-  const cdSwitch = synapse.switch({
-    name: "CD mode",
-    context,
-    suggested_object_id: "cd",
-  });
-
-  const outOfBounds = async () => {
-    if (cdSwitch.is_on) {
-      await notify.notifyCritical({ message: "someone is out of bounds", title: "alert" });
-    }
-  };
-
-  motion.spareRoom(outOfBounds);
-  motion.bedroom(outOfBounds);
+export function CoreModule({ bens_flat, lifecycle, auto_deploy }: TServiceParams) {
+  const { lights, presence, blinds, notify, entityIds, tvMode, sleepMode } = bens_flat;
 
   lifecycle.onReady(async () => {
     const autoDeployNotificationId = "auto_deploy_status";
     const autoDeployNotificationTitle = "Auto Deploy";
-
-    const doorOpen = hass.refBy.id("binary_sensor.front_door_open");
-    doorOpen.onUpdate(async (newState, oldState) => {
-      if (newState.state === "on" && oldState.state === "off" && cdSwitch.is_on) {
-        await hass.call.light.turn_on({
-          entity_id: "light.living_room_bookcase",
-          effect: "okay",
-        });
-      }
-    });
 
     await notify.replacePersistentNotificationIfExists({
       notificationId: autoDeployNotificationId,
