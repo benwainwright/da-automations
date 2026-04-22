@@ -11,7 +11,7 @@ export interface PlayConfig {
 }
 
 export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) {
-  const play = async ({ player: playerId, id, type, volume }: PlayConfig) => {
+  const play = async ({ player: playerId, id, type, volume, announce }: PlayConfig) => {
     logger.info(`Executing play: player=${playerId}, id=${id} type=${type} (volume=${volume})`);
     const playerIds = Array.isArray(playerId) ? playerId : [playerId];
 
@@ -52,18 +52,12 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
       }
     }
 
-    if (volume) {
-      playerIds
-        .map((id) => hass.refBy.id(id))
-        .forEach(async (player) => {
-          await player.volume_set({ volume_level: volume });
-        });
-    }
-
     const config = {
       media_content_id: id,
       media_content_type: type,
       // enqueue,
+      announce,
+      volume,
     } as unknown as Parameters<typeof leadEntity.play_media>[0];
 
     logger.info(`config: ${JSON.stringify(config, null, 2)}`);
