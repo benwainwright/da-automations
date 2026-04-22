@@ -65,5 +65,20 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
     await leadEntity.play_media(config);
   };
 
-  return { play };
+  const playLocalMp3 = async ({
+    file,
+    player,
+  }: {
+    player: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
+    file: string;
+  }) => {
+    await play({
+      id: `media-source://media_source/local/${file}`,
+      player,
+      type: "audio/mpeg",
+      announce: true,
+    });
+  };
+
+  return { play, playLocalMp3 };
 }

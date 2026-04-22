@@ -1,10 +1,11 @@
 import { TServiceParams } from "@digital-alchemy/core";
+import { PICK_ENTITY } from "@digital-alchemy/hass";
 
 export function CdService({
   context,
   hass,
   synapse,
-  bens_flat: { notify, motion, mediaPlayer },
+  bens_flat: { notify, motion, mediaPlayer, lock },
 }: TServiceParams) {
   const cdSwitch = synapse.switch({
     name: "CD mode",
@@ -12,14 +13,31 @@ export function CdService({
     suggested_object_id: "cd",
   });
 
+  const quickLockState = "quickLock_state";
+
+  cdSwitch.onTurnOn(async () => {
+    await hass.call.scene.create({
+      scene_id: quickLockState,
+      snapshot_entities: lock.quickLockMode.entity_id,
+    });
+  });
+
+  cdSwitch.onTurnOff(async () => {
+    await hass.call.scene.turn_on({
+      entity_id: `scene.${quickLockState}` as PICK_ENTITY<"scene">,
+    });
+
+    await hass.call.scene.delete({
+      entity_id: `scene.${quickLockState}` as PICK_ENTITY<"scene">,
+    });
+  });
+
   const doorOpen = hass.refBy.id("binary_sensor.front_door_open");
 
   doorOpen.onUpdate(async (newState, oldState) => {
     if (newState.state === "on" && oldState.state === "off" && cdSwitch.is_on) {
-      await mediaPlayer.play({
-        id: `media-source://media_source/local/boop.mp3`,
-        type: "audio/mpeg",
-        announce: true,
+      await mediaPlayer.playLocalMp3({
+        file: "boop.mp3",
         player: "media_player.whole_flat",
       });
     }

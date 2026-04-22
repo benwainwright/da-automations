@@ -5,7 +5,7 @@ test("plays boop announcement when the front door opens in CD mode", async () =>
   let doorOpenListener:
     | ((newState: { state: string }, oldState: { state: string }) => Promise<void>)
     | undefined;
-  const play = mock(async () => {});
+  const playLocalMp3 = mock(async () => {});
 
   CdService({
     context: {},
@@ -24,10 +24,14 @@ test("plays boop announcement when the front door opens in CD mode", async () =>
       },
     },
     synapse: {
-      switch: mock(() => ({ is_on: true })),
+      switch: mock(() => ({
+        is_on: true,
+        onTurnOff: mock(() => {}),
+        onTurnOn: mock(() => {}),
+      })),
     },
     bens_flat: {
-      mediaPlayer: { play },
+      mediaPlayer: { playLocalMp3 },
       motion: {
         bedroom: mock(() => {}),
         spareRoom: mock(() => {}),
@@ -40,10 +44,8 @@ test("plays boop announcement when the front door opens in CD mode", async () =>
 
   await doorOpenListener?.({ state: "on" }, { state: "off" });
 
-  expect(play).toHaveBeenCalledWith({
-    id: "media-source://media_source/local/boop.mp3",
-    type: "audio/mpeg",
-    announce: true,
+  expect(playLocalMp3).toHaveBeenCalledWith({
+    file: "boop.mp3",
     player: "media_player.whole_flat",
   });
 });
@@ -63,10 +65,14 @@ test("sends a critical notification when bedroom or spare room motion fires in C
       },
     },
     synapse: {
-      switch: mock(() => ({ is_on: true })),
+      switch: mock(() => ({
+        is_on: true,
+        onTurnOff: mock(() => {}),
+        onTurnOn: mock(() => {}),
+      })),
     },
     bens_flat: {
-      mediaPlayer: { play: mock(async () => {}) },
+      mediaPlayer: { playLocalMp3: mock(async () => {}) },
       motion: {
         bedroom: (callback: () => Promise<void>) => {
           bedroomMotion = callback;
