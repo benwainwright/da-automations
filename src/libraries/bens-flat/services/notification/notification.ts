@@ -157,21 +157,22 @@ export function NotificationService({
 
   const notifyCritical = async ({ message, title }: NotifyConfig) => {
     const tv = getTv();
-    if (tv.state === "on") {
-      await Promise.all([
-        lights.flash(),
-        hass.call.notify.tv({
-          message,
-          title,
-          data: {
-            push: {
-              interruption_level: "critical",
-            },
-          },
-        }),
-        speak({ message }),
-      ]);
-    }
+    const withTv =
+      tv.state === "on"
+        ? [
+            hass.call.notify.tv({
+              message,
+              title,
+              data: {
+                push: {
+                  interruption_level: "critical",
+                },
+              },
+            }),
+          ]
+        : [];
+
+    await Promise.all([lights.flash(), ...withTv, speak({ message })]);
   };
 
   const hasPersistentNotification = (notificationId: string) => {
