@@ -31,7 +31,9 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
         group_members: rest,
       });
 
-      const members = withMembers.attributes.group_members.split(",");
+      logger.info("TYPE HERE");
+      logger.info(typeof withMembers.attributes.group_members);
+      const members = withMembers.attributes.group_members?.split(",");
       if (!playerIds.every((theId) => members.includes(theId))) {
         await new Promise<void>((accept, reject) => {
           const listener = leadEntity.onUpdate((newState) => {
