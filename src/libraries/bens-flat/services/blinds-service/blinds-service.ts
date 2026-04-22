@@ -10,7 +10,7 @@ export function BlindsService({
   automation: { time, solar },
   bens_flat,
 }: TServiceParams) {
-  const { motion, entityIds } = bens_flat;
+  const { motion, entityIds, cd } = bens_flat;
 
   const blindsDefaultClosed = synapse.switch({
     name: "Blinds default closed",
@@ -29,7 +29,12 @@ export function BlindsService({
   });
 
   motion.livingRoom(async () => {
-    if (time.isAfter(FIVE_AM) && solar.isBefore("sunset")) {
+    if (
+      time.isAfter(FIVE_AM) &&
+      solar.isBefore("sunset") &&
+      !cd.cdSwitch.is_on &&
+      !blindsDefaultClosed.is_on
+    ) {
       blindsDefaultClosed.is_on = false;
     }
   });
