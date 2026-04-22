@@ -78,7 +78,7 @@ export function TVModeService({
         entityIds.light.livingRoomWallLeft,
         entityIds.light.livingRoomBackWallMiddle,
         entityIds.light.livingRoomBackWallRight,
-        music.autoplaySwitch.entity_id,
+        "switch.autoplay_music",
         entityIds.switches.adaptiveLightingLivingRoom,
         "switch.living_room_motion_sensor",
       ],
