@@ -33,6 +33,7 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
 
       logger.info("TYPE HERE");
       logger.info(typeof withMembers.attributes.group_members);
+      logger.info(JSON.stringify(withMembers.attributes.group_members, null, 2));
       const members = withMembers.attributes.group_members?.split(",");
       if (!playerIds.every((theId) => members.includes(theId))) {
         await new Promise<void>((accept, reject) => {
