@@ -20,6 +20,9 @@ export function CdService({
       scene_id: quickLockState,
       snapshot_entities: lock.quickLockMode.entity_id,
     });
+    await hass.call.switch.turn_on({
+      entity_id: lock.quickLockMode.entity_id,
+    });
   });
 
   cdSwitch.onTurnOff(async () => {
