@@ -89,7 +89,7 @@ test("replacePersistentNotificationIfExists only updates when notification exist
 });
 
 test("speak resolves after an announce TTS call", async () => {
-  const speak = mock(async () => {});
+  const say = mock(async () => {});
   const play = mock(async () => {});
   const service = NotificationService({
     bens_flat: {
@@ -110,8 +110,9 @@ test("speak resolves after an announce TTS call", async () => {
       call: {
         media_player: { volume_set: mock(async () => {}) },
         notify: { mobile_app_bens_phone: { call: mock(async () => {}) }, tv: mock(async () => {}) },
+        openai_tts: { say },
         persistent_notification: { create: mock(async () => {}), dismiss: mock(async () => {}) },
-        tts: { speak },
+        tts: { speak: mock(async () => {}) },
       },
       refBy: {
         id: (_id: string) => ({ attributes: {}, entity_id: _id, state: "off" }),
@@ -122,13 +123,12 @@ test("speak resolves after an announce TTS call", async () => {
 
   await waitWithTimeout(service.speak({ message: "hello", announce: true }));
 
-  expect(play).toHaveBeenCalledWith({
-    id: "media-source://tts/tts.openai_tts_gpt_40?message=hello",
-    type: "provider",
-    player: speechPlayers,
-    announce: true,
+  expect(say).toHaveBeenCalledWith({
+    entity_id: speechPlayers,
+    tts_entity: "tts.openai_tts_gpt_40",
+    message: "hello",
   });
-  expect(speak).not.toHaveBeenCalled();
+  expect(play).not.toHaveBeenCalled();
 });
 
 test("speak resolves when non-announce playback stops", async () => {

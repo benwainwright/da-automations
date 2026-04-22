@@ -95,32 +95,26 @@ export function NotificationService({
 
     const [lead] = playerIds;
     const leadEntity = hass.refBy.id(lead);
-    const originalVolume = leadEntity.attributes?.["volume_level"];
 
-    try {
-      if (config.volume) {
-        await hass.call.media_player.volume_set({
-          volume_level: config.volume,
-          entity_id: config.player,
-        });
-      }
-
-      await mediaPlayer.play({
-        id: `media-source://tts/${config.source}?message=${encodeURIComponent(config.message)}`,
-        type: "provider",
-        player: config.player,
-        announce: config.announce,
+    if (config.announce) {
+      await hass.call.openai_tts.say({
+        entity_id: config.player,
+        tts_entity: "tts.openai_tts_gpt_40",
+        message: config.message,
+        volume: config.volume,
       });
-
-      await waitForPlayback(leadEntity);
-    } finally {
-      if (config.volume && originalVolume !== undefined) {
-        await hass.call.media_player.volume_set({
-          volume_level: originalVolume,
-          entity_id: config.player,
-        });
-      }
+      return;
     }
+
+    await mediaPlayer.play({
+      id: `media-source://tts/${config.source}?message=${encodeURIComponent(config.message)}`,
+      volume: config.volume,
+      type: "provider",
+      player: config.player,
+      announce: false,
+    });
+
+    await waitForPlayback(leadEntity);
   };
 
   const speak = async ({
@@ -139,23 +133,13 @@ export function NotificationService({
       entityIds.mediaPlayers.livingRoom,
     ];
     logger.info(`Speaking: ${message} (announce: ${announce})`);
-    try {
-      await ttsSay({
-        volume,
-        source: entityIds?.tts?.openAiGpt4 as any,
-        message,
-        announce,
-        player: players,
-      });
-    } catch {
-      await ttsSay({
-        source: entityIds?.tts?.openAiGpt4 as any,
-        volume,
-        message,
-        announce,
-        player: players,
-      });
-    }
+    await ttsSay({
+      volume,
+      source: entityIds?.tts?.openAiGpt4 as any,
+      message,
+      announce,
+      player: players,
+    });
   };
 
   const notify = async ({ message, title }: NotifyConfig) => {
