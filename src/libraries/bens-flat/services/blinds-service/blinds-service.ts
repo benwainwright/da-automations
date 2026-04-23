@@ -33,7 +33,7 @@ export function BlindsService({
       time.isAfter(FIVE_AM) &&
       solar.isBefore("sunset") &&
       !cd.cdSwitch.is_on &&
-      !blindsDefaultClosed.is_on
+      blindsDefaultClosed.is_on
     ) {
       blindsDefaultClosed.is_on = false;
     }
