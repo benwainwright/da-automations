@@ -10,6 +10,12 @@ export interface PlayConfig {
   announce?: boolean;
 }
 
+type GroupMembersAttributes = {
+  attributes: {
+    group_members: string;
+  };
+};
+
 export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) {
   const play = async ({ player: playerId, id, type, volume, announce }: PlayConfig) => {
     logger.info(`Executing play: player=${playerId}, id=${id} type=${type} (volume=${volume})`);
@@ -18,10 +24,6 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
     const [lead, ...rest] = playerIds;
 
     const leadEntity = hass.refBy.id(lead);
-
-    type GroupMembersAttributes = {
-      attributes: { group_members: string };
-    };
 
     const withMembers = leadEntity as typeof leadEntity & GroupMembersAttributes;
 
@@ -57,7 +59,6 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
       media_content_type: type,
       // enqueue,
       announce,
-      volume,
     } as unknown as Parameters<typeof leadEntity.play_media>[0];
 
     logger.info(`config: ${JSON.stringify(config, null, 2)}`);

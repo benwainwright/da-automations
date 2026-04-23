@@ -107,7 +107,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     },
     blinds: {
       func: BlindsService,
-      dependencies: ["entityIds", "motion"],
+      dependencies: ["entityIds", "motion", "cd"],
     },
     entityIds: EntityIdService,
     mediaPlayer: MediaPlayerService,
