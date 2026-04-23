@@ -17,6 +17,7 @@ export function LockService({
   });
 
   door.onUpdate(async (newState, oldState) => {
+    if (!newState || !oldState) return;
     if (
       newState.state === "off" &&
       oldState.state === "on" &&

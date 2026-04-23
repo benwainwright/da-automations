@@ -38,6 +38,7 @@ export function CdService({
   const doorOpen = hass.refBy.id(entityIds.binarySensor.frontDoor);
 
   doorOpen.onUpdate(async (newState, oldState) => {
+    if (!newState || !oldState) return;
     if (newState.state === "on" && oldState.state === "off" && cdSwitch.is_on) {
       await mediaPlayer.playLocalMp3({
         file: "boop.mp3",
