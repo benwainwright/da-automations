@@ -5,7 +5,7 @@ export function CdService({
   context,
   hass,
   synapse,
-  bens_flat: { notify, motion, mediaPlayer, lock, entityIds },
+  bens_flat: { notify, motion, mediaPlayer, lock, entityIds, scene },
 }: TServiceParams) {
   const cdSwitch = synapse.switch({
     name: "CD mode",
@@ -15,6 +15,15 @@ export function CdService({
 
   const quickLockState = "quicklock_state";
 
+  const { on, off } = scene.toggle({
+    scene: "scene.sexy",
+    snapshot: [
+      "light.living_room_lights",
+      "switch.adaptive_lighting_living_room",
+      "switch.living_room_motion_sensor",
+    ],
+  });
+
   cdSwitch.onTurnOn(async () => {
     await hass.call.scene.create({
       scene_id: quickLockState,
@@ -23,6 +32,7 @@ export function CdService({
     await hass.call.switch.turn_on({
       entity_id: lock.quickLockMode.entity_id,
     });
+    await on();
   });
 
   cdSwitch.onTurnOff(async () => {
@@ -33,6 +43,7 @@ export function CdService({
     await hass.call.scene.delete({
       entity_id: `scene.${quickLockState}` as PICK_ENTITY<"scene">,
     });
+    await off();
   });
 
   const doorOpen = hass.refBy.id(entityIds.binarySensor.frontDoor);
