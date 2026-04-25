@@ -11,12 +11,6 @@ export function SchedulerService({
 }: TServiceParams) {
   const { on, off } = scene.toggle({
     scene: entityIds.scene.nightAuto,
-    snapshot: [
-      entityIds.number.hallwaySpeakerBass,
-      entityIds.number.bathroomSpeakerBass,
-      entityIds.number.bedroomSpeakerBass,
-      entityIds.number.livingRoomSpeakerBass,
-    ],
   });
 
   lifecycle.onReady(() => {

@@ -17,11 +17,6 @@ export function CdService({
 
   const { on, off } = scene.toggle({
     scene: "scene.sexy",
-    snapshot: [
-      "light.living_room_lights",
-      "switch.adaptive_lighting_living_room",
-      "switch.living_room_motion_sensor",
-    ],
   });
 
   cdSwitch.onTurnOn(async () => {

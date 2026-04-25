@@ -2,6 +2,13 @@ import { expect, mock, test } from "bun:test";
 import { EntityIdService } from "../entity-service/entity-service.ts";
 import { CdService } from "./cd-service.ts";
 
+const createScene = () => ({
+  toggle: mock(() => ({
+    off: mock(async () => {}),
+    on: mock(async () => {}),
+  })),
+});
+
 test("plays boop announcement when the front door opens in CD mode", async () => {
   let doorOpenListener:
     | ((newState: { state: string }, oldState: { state: string }) => Promise<void>)
@@ -41,6 +48,7 @@ test("plays boop announcement when the front door opens in CD mode", async () =>
       notify: {
         notifyCritical: mock(async () => {}),
       },
+      scene: createScene(),
     },
   } as any);
 
@@ -87,6 +95,7 @@ test("sends a critical notification when bedroom or spare room motion fires in C
       notify: {
         notifyCritical,
       },
+      scene: createScene(),
     },
   } as any);
 

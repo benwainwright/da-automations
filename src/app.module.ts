@@ -1,4 +1,4 @@
-import "./utils";
+import "./utils.ts";
 
 import { LIB_AUTOMATION } from "@digital-alchemy/automation";
 import { CreateApplication } from "@digital-alchemy/core";

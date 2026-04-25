@@ -24,12 +24,22 @@ const makeHarness = () => {
       },
     },
     refBy: {
-      id: (id: string) => ({
-        onUpdate: (callback: UpdateHandler) => {
-          sceneUpdateHandlers.set(id, callback);
-          return { remove };
-        },
-      }),
+      id: (id: string) => {
+        const sceneEntitiesById: Record<string, string[] | undefined> = {
+          "scene.tv_mode": ["light.kitchen_sink"],
+          "scene.tv_mode_off": ["light.kitchen_sink"],
+        };
+
+        return {
+          attributes: {
+            entity_id: sceneEntitiesById[id],
+          },
+          onUpdate: (callback: UpdateHandler) => {
+            sceneUpdateHandlers.set(id, callback);
+            return { remove };
+          },
+        };
+      },
     },
   };
 
@@ -59,7 +69,6 @@ test("off() is a no-op before on() creates snapshot scene", async () => {
 
   const toggler = service.toggle({
     scene: "scene.tv_mode",
-    snapshot: ["light.kitchen_sink"],
     transition: 3,
   });
 
@@ -78,7 +87,6 @@ test("on() creates off snapshot and activates target scene", async () => {
 
   const toggler = service.toggle({
     scene: "scene.tv_mode",
-    snapshot: ["light.kitchen_sink"],
     transition: 3,
   });
 
@@ -105,7 +113,6 @@ test("off() restores, deletes snapshot scene, and removes off listener after on(
 
   const toggler = service.toggle({
     scene: "scene.tv_mode",
-    snapshot: ["light.kitchen_sink"],
     transition: 3,
   });
 
@@ -134,7 +141,6 @@ test("onOn and onOff callbacks fire from their respective scene updates", async 
 
   const toggler = service.toggle({
     scene: "scene.tv_mode",
-    snapshot: ["light.kitchen_sink"],
     transition: 3,
   });
 

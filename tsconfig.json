@@ -5,7 +5,6 @@
       "@test-helpers": ["./src/test-helpers/index.ts"]
     },
     "allowJs": false,
-    "alwaysStrict": false,
     "esModuleInterop": true,
     "importHelpers": true,
     "isolatedModules": true,
@@ -19,6 +18,7 @@
     "noEmit": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
+    "types": ["bun"],
     "sourceMap": true,
     "outDir": "./build",
     "strictBindCallApply": true,

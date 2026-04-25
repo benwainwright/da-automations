@@ -1,3 +1,4 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.native-preview.tsdk": "/Users/benwainwright/repos/da-automations/node_modules/@typescript/native-preview"
 }

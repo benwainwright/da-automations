@@ -7,7 +7,7 @@ export function TVModeService({
   context,
   logger,
   lifecycle,
-  bens_flat: { scene, blinds, entityIds, music },
+  bens_flat: { scene, blinds, entityIds },
   automation,
 }: TServiceParams) {
   const tvMode = synapse.switch({
@@ -61,27 +61,6 @@ export function TVModeService({
     const toggler = scene.toggle({
       transition: 3,
       scene: "scene.tv_mode",
-      snapshot: [
-        entityIds.light.kitchenFridge,
-        entityIds.light.kitchenOven,
-        entityIds.light.kitchenSink,
-        entityIds.light.kitchenWashingMachine,
-        entityIds.light.livingRoomBackWallMiddle,
-        entityIds.light.livingRoomBackWallMiddle,
-        entityIds.light.livingRoomBackWallRight,
-        entityIds.light.livingRoomFloorLampBottom,
-        entityIds.light.livingRoomFloorLampMiddle,
-        entityIds.light.livingRoomFloorLampTop,
-        entityIds.light.kitchenWashingMachine,
-        entityIds.light.livingRoomTvWall,
-        entityIds.light.livingRoomBookcase,
-        entityIds.light.livingRoomWallLeft,
-        entityIds.light.livingRoomBackWallMiddle,
-        entityIds.light.livingRoomBackWallRight,
-        "switch.autoplay_music",
-        entityIds.switches.adaptiveLightingLivingRoom,
-        "switch.living_room_motion_sensor",
-      ],
     });
 
     tvMode.onUpdate(async (newState, oldState) => {
