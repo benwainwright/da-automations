@@ -43,7 +43,7 @@ export function BlindsService({
 
   lifecycle.onReady(() => {
     blindsDefaultClosed.onUpdate(async (nextState, oldState) => {
-      if (!nextState) {
+      if (!nextState || !oldState) {
         return null;
       }
 

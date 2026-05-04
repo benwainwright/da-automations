@@ -1,14 +1,13 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 import type { PICK_ENTITY } from "@digital-alchemy/hass";
 import { FIVE_AM, THREE_PM } from "../constants.ts";
-import dayjs from "dayjs";
 import { mdi } from "../icons.ts";
 
 export function SleepModeService({
   hass,
   context,
   synapse,
-  bens_flat: { helpers, lights, motion, visitor, calendar, notify, alexa, entityIds },
+  bens_flat: { helpers, lights, motion, visitor, entityIds, alarm },
   logger,
   automation: { time },
 }: TServiceParams) {
@@ -18,13 +17,6 @@ export function SleepModeService({
     icon: mdi.sleep,
     unique_id: "sleep_mode_switch",
     suggested_object_id: "sleep_mode",
-  });
-
-  const setAlarmButton = synapse.button({
-    unique_id: "Set alarm",
-    name: "Alarm",
-    icon: mdi.alarm,
-    context,
   });
 
   hass.socket.onEvent({
@@ -49,53 +41,12 @@ export function SleepModeService({
     entityIds.switches.adaptiveLightingSleepModeSpareRoom,
   ];
 
-  const setAlarm = async () => {
-    const now = dayjs();
-    const targetDay = now.hour() < 5 ? now : now.add(1, "day");
-    const targetCalendarDay = targetDay.isSame(now, "day") ? "today" : "tomorrow";
-    const targetMorning = targetDay.isSame(now, "day") ? "this morning" : "tomorrow morning";
-
-    const events = await calendar.getEvents({
-      start: targetDay.startOf("day"),
-      end: targetDay.endOf("day"),
-    });
-
-    const [first] = events.filter((event) => /T/.test(event.start));
-
-    if (!first) {
-      await notify.speak({
-        message: `No events in calendar ${targetCalendarDay}. Goodnight!`,
-        announce: false,
-        volume: 0.5,
-      });
-
-      return;
-    }
-
-    await notify.speak({
-      message: `Setting alarm for ${first.summary}`,
-      announce: false,
-      volume: 0.5,
-    });
-
-    const timeToSetAlarmFor = dayjs(first.start).subtract(90, "minutes").format("h:mm A");
-
-    await alexa.command({
-      player: entityIds.mediaPlayers.bedroomSonos,
-      command: `Set alarm for ${timeToSetAlarmFor} ${targetMorning}`,
-    });
-  };
-
-  setAlarmButton.onPress(async () => {
-    await setAlarm();
-  });
-
   sleepMode.onTurnOn(async () => {
     await hass.call.switch.turn_off({ entity_id: entityIds.switches.bedroomMotionSensor });
     await Promise.allSettled([
       helpers.turnOnAll(adaptiveLightingSleepModeSwitches),
       hass.call.switch.turn_off({ entity_id: entityIds.switches.autoplayMusic }),
-      setAlarm(),
+      alarm.setForFirstEventOfNextDay(),
     ]);
     await lights.turnOffAll();
   });
@@ -108,7 +59,11 @@ export function SleepModeService({
     const sleepModeEntity = sleepMode.entity_id;
     const visitorModeEntity = visitor?.visitorMode?.getEntity?.();
     const visitorModeIsOn = visitorModeEntity?.state === "on";
-    if (time.isAfter(FIVE_AM) && sleepModeEntity && !visitorModeIsOn && time.isBefore(THREE_PM)) {
+
+    const sleepModeIsOnVisitorModeIsOffAndTimeIsBetweenFiveAmAndThreePm =
+      time.isAfter(FIVE_AM) && sleepModeEntity && !visitorModeIsOn && time.isBefore(THREE_PM);
+
+    if (sleepModeIsOnVisitorModeIsOffAndTimeIsBetweenFiveAmAndThreePm) {
       await hass.call.switch.turn_off({ entity_id: sleepModeEntity });
     }
   };

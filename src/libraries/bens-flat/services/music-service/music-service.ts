@@ -43,14 +43,14 @@ export function MusicService({
     });
 
     tvMode.tvModeSwitch.onUpdate(async (newState, oldState) => {
-      if (!newState) return;
+      if (!newState || !oldState) return;
       if (newState.state === "on" && oldState.state === "off") {
         await player.pause();
       }
     });
 
     sleepMode.sleepModeSwitch.onUpdate(async (newState, oldState) => {
-      if (!newState) return;
+      if (!newState || !oldState) return;
       if (newState.state === "on" && oldState.state === "off") {
         await player.pause();
       }

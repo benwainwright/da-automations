@@ -48,6 +48,9 @@ test("morning briefing turns bedroom motion sensor back on", async () => {
       notify: {
         speak: mock(async () => {}),
       },
+      podcasts: {
+        playLatestEpisode: mock(async () => {}),
+      },
       sleepMode: {
         isOn: () => false,
         sleepModeSwitch: { onTurnOn: (_callback: () => Promise<void> | void) => {} },
@@ -121,6 +124,9 @@ test("morning motion does not turn autoplay on when briefing latch suppresses", 
       },
       notify: {
         speak: mock(async () => {}),
+      },
+      podcasts: {
+        playLatestEpisode: mock(async () => {}),
       },
       sleepMode: {
         isOn: () => false,

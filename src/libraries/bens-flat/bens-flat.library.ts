@@ -35,11 +35,16 @@ import { LIB_NUKI } from "../nuki/nuki.library.ts";
 import { generateServiceMapWithPriorities } from "./service-manager.ts";
 import { LockService } from "./services/lock-service/lock-service.ts";
 import { PodcastService } from "./services/podcasts/podcast-service.ts";
+import { AlarmService } from "./services/alarm-service/alarm-service.ts";
 
 const { services, priorityInit } = generateServiceMapWithPriorities({
   services: {
     lock: { func: LockService, dependencies: ["entityIds"] },
     tv: { func: SyncTvService, dependencies: ["entityIds"] },
+    alarm: {
+      func: AlarmService,
+      dependencies: ["alexa", "entityIds", "calendar", "notify"],
+    },
     boiler: {
       func: BoilerService,
       dependencies: ["entityIds"],
@@ -131,16 +136,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
 
     sleepMode: {
       func: SleepModeService,
-      dependencies: [
-        "helpers",
-        "lights",
-        "motion",
-        "visitor",
-        "calendar",
-        "notify",
-        "alexa",
-        "entityIds",
-      ],
+      dependencies: ["helpers", "lights", "motion", "visitor", "alarm", "entityIds"],
     },
   },
 });
