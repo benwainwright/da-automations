@@ -28,7 +28,6 @@ export function PresenceDetectionService({
 
   motion.anywhere(() => {
     logger.info(`Motion detected, checking if flat is occupied`);
-
     if (flatIsOccupiedSwitch.is_on) {
       logger.info(`Flat is occupied, turn off zone exits`);
       allowZoneExit = false;
@@ -40,7 +39,7 @@ export function PresenceDetectionService({
           flatIsOccupiedSwitch.is_on = false;
         }
       }, "5m");
-    } else {
+    } else if (homeHasPeople(home.state)) {
       logger.info(`Re-occupying flat`);
       flatIsOccupiedSwitch.is_on = true;
     }
