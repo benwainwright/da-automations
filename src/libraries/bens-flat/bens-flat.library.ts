@@ -34,6 +34,7 @@ import { LIB_LEARNING_SENSORS } from "../learning-sensors/learning-sensors.libra
 import { LIB_NUKI } from "../nuki/nuki.library.ts";
 import { generateServiceMapWithPriorities } from "./service-manager.ts";
 import { LockService } from "./services/lock-service/lock-service.ts";
+import { PodcastService } from "./services/podcasts/podcast-service.ts";
 
 const { services, priorityInit } = generateServiceMapWithPriorities({
   services: {
@@ -123,6 +124,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
       func: PlantsService,
       dependencies: ["nags", "entityIds"],
     },
+    podcasts: PodcastService,
     sleepMode: {
       func: SleepModeService,
       dependencies: [
