@@ -16,7 +16,7 @@ export function BriefingService({
     helpers,
     cd,
     visitor,
-    mediaPlayer,
+    podcasts,
     calendar,
     todoList,
     entityIds,
@@ -46,22 +46,7 @@ export function BriefingService({
     ];
 
     await notify.speak({ message: briefingStringParts.join(" "), announce: false, volume: 0.5 });
-    await hass.call.media_player.shuffle_set({
-      shuffle: false,
-      entity_id: entityIds.mediaPlayers.wholeFlat,
-    });
-
-    await mediaPlayer.play({
-      player: [
-        entityIds.mediaPlayers.hallway,
-        entityIds.mediaPlayers.bathroom,
-        entityIds.mediaPlayers.bedroom,
-        entityIds.mediaPlayers.livingRoom,
-      ],
-      id: "library://podcast/3",
-      type: "music",
-      volume: 0.5,
-    });
+    await podcasts.playLatestEpisode("library://podcast/3");
   };
 
   triggerBriefing.onPress(async () => {

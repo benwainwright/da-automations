@@ -72,9 +72,9 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
       func: BriefingService,
       dependencies: [
         "notify",
+        "podcasts",
         "helpers",
         "visitor",
-        "mediaPlayer",
         "calendar",
         "todoList",
         "cd",
@@ -124,7 +124,11 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
       func: PlantsService,
       dependencies: ["nags", "entityIds"],
     },
-    podcasts: PodcastService,
+    podcasts: {
+      func: PodcastService,
+      dependencies: ["entityIds", "mediaPlayer"],
+    },
+
     sleepMode: {
       func: SleepModeService,
       dependencies: [
