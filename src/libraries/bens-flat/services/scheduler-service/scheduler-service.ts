@@ -40,6 +40,10 @@ export function SchedulerService({
         hass.call.switch.turn_on({
           entity_id: [
             briefing.remindersSwitch.entity_id,
+            entityIds.switches.spareRoomMotionSensor,
+            entityIds.switches.bedroomMotionSensor,
+            entityIds.switches.hallwayMotionSensor,
+            entityIds.switches.livingRoomMotionSensor,
             entityIds.switches.adaptiveLightingBathroom,
             entityIds.switches.adaptiveLightingBedroom,
             entityIds.switches.adaptiveLightingHallway,

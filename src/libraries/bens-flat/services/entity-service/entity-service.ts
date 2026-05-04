@@ -39,6 +39,9 @@ export function EntityIdService() {
     adaptiveLightingSleepModeHallway: "switch.adaptive_lighting_sleep_mode_hallway",
     adaptiveLightingSleepModeSpareRoom: "switch.adaptive_lighting_sleep_mode_spare_room",
     bedroomMotionSensor: "switch.bedroom_motion_sensor",
+    hallwayMotionSensor: "switch.hallway_motion_sensor",
+    livingRoomMotionSensor: "switch.living_room_motion_sensor",
+    spareRoomMotionSensor: "switch.spare_room_motion_sensor",
   } satisfies Record<string, PICK_ENTITY<"switch">>;
 
   const scene = {
