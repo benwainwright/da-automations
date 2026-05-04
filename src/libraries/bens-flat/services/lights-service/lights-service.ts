@@ -58,7 +58,6 @@ export function LightsService({
     switchName,
     sensorId,
     area,
-    timeout,
     blockSwitches,
   }: IMotionSwitchConfig) => {
     const motionSwitch = synapse.switch({
@@ -71,6 +70,19 @@ export function LightsService({
       },
       context,
     });
+
+    const timeoutName = `${switchName} Timeout`;
+
+    const timeout = synapse.number({
+      suggested_unit_of_measurement: "s",
+      name: timeoutName,
+      unique_id: toSynapseUniqueId(timeoutName),
+      context,
+      suggested_object_id: toSynapseUniqueId(timeoutName),
+      icon: mdi.clockTimeEleven,
+    });
+
+    const theTimeout = timeout.state ? timeout.state * 1000 : 60_000;
 
     let remove: RemoveCallback | undefined;
 
@@ -102,7 +114,7 @@ export function LightsService({
           if (!anyBlockSwitchIsOn()) {
             await hass.call.light.turn_off({ area_id: area });
           }
-        }, timeout);
+        }, theTimeout);
       }
     });
   };

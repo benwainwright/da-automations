@@ -1,6 +1,7 @@
 export const mdi = {
   waterBoiler: "mdi:water-boiler",
   heatWave: "mdi:heat-wave",
+  clockTimeEleven: "mdi:clock-time-eleven",
   chat: "mdi:chat",
   calendarBlank: "mdi:calendar-blank",
   motionSensor: "mdi:motion-sensor",
