@@ -32,55 +32,54 @@ export function TVModeService({
 
   const normalize = (input: string): string => input.replace(/[^a-z0-9]/gi, "").toLowerCase();
 
-  const tvModeSwitches = Object.fromEntries(
-    appleTv.attributes.source_list.map((source) => {
-      const id = `tv_mode_enabled_${normalize(source)}`;
-
-      return [
-        normalize(source),
-        synapse.switch({
-          name: `TV Mode enabled for ${source}`,
-          context,
-          unique_id: id,
-          suggested_object_id: id,
-        }),
-      ];
-    }),
-  );
-
-  const shouldBeOn = () => {
-    if (!manageTvMode.is_on) {
-      const entity = tvMode.getEntity();
-      return entity.state === "on";
-    }
-
-    if (xboxInGame.state === "on") {
-      logger.info(`XBOX playing, turning TV mode on`);
-      return true;
-    }
-
-    if (ps5NowPlaying.state === "playing") {
-      logger.info(`PS5 playing, turning TV mode on`);
-      return true;
-    }
-
-    const attributes = appleTv.attributes as typeof appleTv.attributes & {
-      app_id: string;
-      app_name: string;
-    };
-
-    const theSwitch = tvModeSwitches[normalize(attributes.app_name)];
-
-    if (appleTv.state === "playing" && (!theSwitch || theSwitch.is_on)) {
-      logger.info(`Apple tv playing - turning TV mode on`);
-      return true;
-    }
-
-    logger.info(`TV mode is off`);
-    return false;
-  };
-
   lifecycle.onReady(() => {
+    const tvModeSwitches = Object.fromEntries(
+      appleTv.attributes.source_list.map((source) => {
+        const id = `tv_mode_enabled_${normalize(source)}`;
+
+        return [
+          normalize(source),
+          synapse.switch({
+            name: `TV Mode enabled for ${source}`,
+            context,
+            unique_id: id,
+            suggested_object_id: id,
+          }),
+        ];
+      }),
+    );
+
+    const shouldBeOn = () => {
+      if (!manageTvMode.is_on) {
+        const entity = tvMode.getEntity();
+        return entity.state === "on";
+      }
+
+      if (xboxInGame.state === "on") {
+        logger.info(`XBOX playing, turning TV mode on`);
+        return true;
+      }
+
+      if (ps5NowPlaying.state === "playing") {
+        logger.info(`PS5 playing, turning TV mode on`);
+        return true;
+      }
+
+      const attributes = appleTv.attributes as typeof appleTv.attributes & {
+        app_id: string;
+        app_name: string;
+      };
+
+      const theSwitch = tvModeSwitches[normalize(attributes.app_name)];
+
+      if (appleTv.state === "playing" && (!theSwitch || theSwitch.is_on)) {
+        logger.info(`Apple tv playing - turning TV mode on`);
+        return true;
+      }
+
+      logger.info(`TV mode is off`);
+      return false;
+    };
     automation.managed_switch({
       context,
       entity_id: tvMode.entity_id,
