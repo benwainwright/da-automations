@@ -1,6 +1,8 @@
 import { TServiceParams } from "@digital-alchemy/core";
 import { mdi } from "../icons.ts";
 
+const AIRPLAY_SWITCH_ID = "Airplay";
+
 export function TVModeService({
   hass,
   synapse,
@@ -32,21 +34,34 @@ export function TVModeService({
 
   const normalize = (input: string | undefined) => input?.replace(/[^a-z0-9]/gi, "").toLowerCase();
 
+  const exclude = [
+    "Arcade",
+    "App Store",
+    "HADash",
+    "Photos",
+    "Search",
+    "Settings",
+    "Speedtest",
+    "Twitter",
+  ] as const;
+
   lifecycle.onReady(() => {
     const tvModeSwitches = Object.fromEntries(
-      appleTv.attributes.source_list.map((source) => {
-        const id = `tv_mode_enabled_${normalize(source)}`;
+      [AIRPLAY_SWITCH_ID, ...appleTv.attributes.source_list]
+        .filter((item) => !exclude.find((excluded) => excluded === item))
+        .map((source) => {
+          const id = `tv_mode_enabled_${normalize(source)}`;
 
-        return [
-          normalize(source),
-          synapse.switch({
-            name: `TV Mode enabled for ${source}`,
-            context,
-            unique_id: id,
-            suggested_object_id: id,
-          }),
-        ];
-      }),
+          return [
+            normalize(source),
+            synapse.switch({
+              name: `TV Mode enabled for ${source}`,
+              context,
+              unique_id: id,
+              suggested_object_id: id,
+            }),
+          ];
+        }),
     );
 
     const shouldBeOn = () => {
@@ -70,7 +85,9 @@ export function TVModeService({
         app_name: string;
       };
 
-      const switchId = normalize(attributes.app_name);
+      const isAirplay = attributes.app_id === "com.apple.TVAirPlay";
+
+      const switchId = isAirplay ? AIRPLAY_SWITCH_ID : normalize(attributes.app_name);
       const theSwitch = switchId ? tvModeSwitches[switchId] : undefined;
 
       if (appleTv.state === "playing" && (!theSwitch || theSwitch.is_on)) {
