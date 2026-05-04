@@ -76,6 +76,9 @@ export function LightsService({
     const timeout = synapse.number({
       suggested_unit_of_measurement: "s",
       name: timeoutName,
+      native_min_value: 30,
+      native_max_value: 10_800,
+      step: 10,
       unique_id: toSynapseUniqueId(timeoutName),
       context,
       suggested_object_id: toSynapseUniqueId(timeoutName),
