@@ -114,8 +114,6 @@ export function SleepModeService({
   };
 
   motion.livingRoom(morningTrigger);
-  motion.hallway(morningTrigger);
-  motion.bathroom(morningTrigger);
 
   const isOn = () => {
     const sleepModeState = Boolean(sleepMode.is_on);
