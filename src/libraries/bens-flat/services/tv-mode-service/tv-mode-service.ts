@@ -18,11 +18,24 @@ export function TVModeService({
     icon: mdi.television,
   });
 
+  const manageTvMode = synapse.switch({
+    name: "Manage TV Mode",
+    context,
+    unique_id: "manage_tv_mode",
+    suggested_object_id: "manage_tv_mode",
+    icon: mdi.television,
+  });
+
   const xboxInGame = hass.refBy.id(entityIds.binarySensor.xbox);
   const appleTv = hass.refBy.id(entityIds.mediaPlayers.appleTv);
   const ps5NowPlaying = hass.refBy.id(entityIds.sensor.playingPs5);
 
   const shouldBeOn = () => {
+    if (!manageTvMode.is_on) {
+      const entity = tvMode.getEntity();
+      return entity.state === "on";
+    }
+
     if (xboxInGame.state === "on") {
       logger.info(`XBOX playing, turning TV mode on`);
       return true;
