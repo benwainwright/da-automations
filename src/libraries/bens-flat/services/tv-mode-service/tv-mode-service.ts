@@ -30,6 +30,24 @@ export function TVModeService({
   const appleTv = hass.refBy.id(entityIds.mediaPlayers.appleTv);
   const ps5NowPlaying = hass.refBy.id(entityIds.sensor.playingPs5);
 
+  const normalize = (input: string): string => input.replace(/[^a-z0-9]/gi, "").toLowerCase();
+
+  const tvModeSwitches = Object.fromEntries(
+    appleTv.attributes.source_list.map((source) => {
+      const id = `tv_mode_enabled_${normalize(source)}`;
+
+      return [
+        normalize(source),
+        synapse.switch({
+          name: `TV Mode enabled for ${source}`,
+          context,
+          unique_id: id,
+          suggested_object_id: id,
+        }),
+      ];
+    }),
+  );
+
   const shouldBeOn = () => {
     if (!manageTvMode.is_on) {
       const entity = tvMode.getEntity();
@@ -48,13 +66,12 @@ export function TVModeService({
 
     const attributes = appleTv.attributes as typeof appleTv.attributes & {
       app_id: string;
+      app_name: string;
     };
 
-    const isAirplay = attributes.app_id === "com.apple.TVAirPlay";
-    const isYoutube = attributes.app_id === "com.google.ios.youtube";
-    const isSpotify = attributes.app_id === "com.spotify.client";
+    const theSwitch = tvModeSwitches[normalize(attributes.app_name)];
 
-    if (appleTv.state === "playing" && !isYoutube && !isSpotify && !isAirplay) {
+    if ((appleTv.state === "playing" && !theSwitch) || theSwitch.is_on) {
       logger.info(`Apple tv playing - turning TV mode on`);
       return true;
     }
