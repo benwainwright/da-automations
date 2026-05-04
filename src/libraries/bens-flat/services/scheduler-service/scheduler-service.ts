@@ -41,7 +41,6 @@ export function SchedulerService({
           entity_id: [
             briefing.remindersSwitch.entity_id,
             entityIds.switches.spareRoomMotionSensor,
-            entityIds.switches.bedroomMotionSensor,
             entityIds.switches.hallwayMotionSensor,
             entityIds.switches.livingRoomMotionSensor,
             entityIds.switches.adaptiveLightingBathroom,
