@@ -71,7 +71,7 @@ export function TVModeService({
 
     const theSwitch = tvModeSwitches[normalize(attributes.app_name)];
 
-    if ((appleTv.state === "playing" && !theSwitch) || theSwitch.is_on) {
+    if (appleTv.state === "playing" && (!theSwitch || theSwitch.is_on)) {
       logger.info(`Apple tv playing - turning TV mode on`);
       return true;
     }
