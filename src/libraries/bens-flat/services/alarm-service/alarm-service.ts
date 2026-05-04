@@ -10,8 +10,9 @@ export function AlarmService({
 }: TServiceParams) {
   const setAlarmButton = synapse.button({
     unique_id: "Set alarm for tomorrow",
-    name: "Alarm",
+    name: "Set Alarm",
     icon: mdi.alarm,
+    suggested_object_id: "set_alarm",
     context,
   });
 
