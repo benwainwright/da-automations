@@ -30,7 +30,7 @@ export function TVModeService({
   const appleTv = hass.refBy.id(entityIds.mediaPlayers.appleTv);
   const ps5NowPlaying = hass.refBy.id(entityIds.sensor.playingPs5);
 
-  const normalize = (input: string): string => input.replace(/[^a-z0-9]/gi, "").toLowerCase();
+  const normalize = (input: string | undefined) => input?.replace(/[^a-z0-9]/gi, "").toLowerCase();
 
   lifecycle.onReady(() => {
     const tvModeSwitches = Object.fromEntries(
@@ -70,7 +70,8 @@ export function TVModeService({
         app_name: string;
       };
 
-      const theSwitch = tvModeSwitches[normalize(attributes.app_name)];
+      const switchId = normalize(attributes.app_name);
+      const theSwitch = switchId ? tvModeSwitches[switchId] : undefined;
 
       if (appleTv.state === "playing" && (!theSwitch || theSwitch.is_on)) {
         logger.info(`Apple tv playing - turning TV mode on`);
