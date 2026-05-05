@@ -8,7 +8,7 @@ export function SleepModeService({
   context,
   synapse,
   scheduler,
-  bens_flat: { helpers, lights, motion, visitor, entityIds, alarm, briefing, tvMode, cd },
+  bens_flat: { helpers, lights, motion, visitor, entityIds, alarm, briefing, tvMode, cd, presence },
   logger,
   automation: { time },
 }: TServiceParams) {
@@ -28,6 +28,7 @@ export function SleepModeService({
 
   motion.anywhere(async () => {
     if (
+      presence.flatIsOccupied() &&
       briefing.remindersSwitch.is_on &&
       !sleepModeIsOn() &&
       time.isAfter("PM01:30") &&
