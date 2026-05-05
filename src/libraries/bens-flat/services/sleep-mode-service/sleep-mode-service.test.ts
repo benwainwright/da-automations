@@ -19,6 +19,7 @@ function setupSleepModeService() {
     automation: { time: { isAfter: () => false, isBefore: () => false } },
     bens_flat: {
       alarm: { setForFirstEventOfNextDay },
+      iMac: { shutdown: mock() },
       briefing: {
         read: mock(async () => true),
         remindersSwitch: { is_on: false },

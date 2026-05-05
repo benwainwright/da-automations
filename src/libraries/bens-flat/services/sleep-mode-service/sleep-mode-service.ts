@@ -8,7 +8,19 @@ export function SleepModeService({
   context,
   synapse,
   scheduler,
-  bens_flat: { helpers, lights, motion, visitor, entityIds, alarm, briefing, tvMode, cd, presence },
+  bens_flat: {
+    helpers,
+    lights,
+    motion,
+    visitor,
+    entityIds,
+    alarm,
+    briefing,
+    tvMode,
+    cd,
+    presence,
+    iMac,
+  },
   logger,
   automation: { time },
 }: TServiceParams) {
@@ -68,6 +80,7 @@ export function SleepModeService({
       helpers.turnOnAll(adaptiveLightingSleepModeSwitches),
       hass.call.switch.turn_off({ entity_id: entityIds.switches.autoplayMusic }),
       alarm.setForFirstEventOfNextDay(),
+      iMac.shutdown(),
     ]);
     await lights.turnOffAll();
   });
