@@ -22,6 +22,11 @@ interface IMotionSwitchConfig {
    * If any of these switches are turned on, the motion sensor will *not* fire
    */
   blockSwitches?: (PICK_ENTITY<"switch"> | (() => PICK_ENTITY<"switch">))[];
+
+  /**
+   * The time interval before a switch is turned off
+   */
+  timeout: TOffset;
 }
 
 /**
@@ -53,6 +58,7 @@ export function LightsService({
     switchName,
     sensorId,
     area,
+    timeout,
     blockSwitches,
   }: IMotionSwitchConfig) => {
     const motionSwitch = synapse.switch({
@@ -65,22 +71,6 @@ export function LightsService({
       },
       context,
     });
-
-    const timeoutName = `${switchName} Timeout`;
-
-    const timeout = synapse.number({
-      suggested_unit_of_measurement: "s",
-      name: timeoutName,
-      native_min_value: 30,
-      native_max_value: 10_800,
-      step: 10,
-      unique_id: toSynapseUniqueId(timeoutName),
-      context,
-      suggested_object_id: toSynapseUniqueId(timeoutName),
-      icon: mdi.clockTimeEleven,
-    });
-
-    const theTimeout = timeout.state ? timeout.state * 1000 : 60_000;
 
     let remove: RemoveCallback | undefined;
 
@@ -112,7 +102,7 @@ export function LightsService({
           if (!anyBlockSwitchIsOn()) {
             await hass.call.light.turn_off({ area_id: area });
           }
-        }, theTimeout);
+        }, timeout);
       }
     });
   };
