@@ -82,11 +82,8 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
         "visitor",
         "calendar",
         "todoList",
-        "cd",
         "entityIds",
-        "sleepMode",
         "motion",
-        "tvMode",
       ],
     },
     todoList: { func: TodoListService, dependencies: ["calendar", "notify"] },
@@ -136,7 +133,16 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
 
     sleepMode: {
       func: SleepModeService,
-      dependencies: ["helpers", "lights", "motion", "visitor", "alarm", "entityIds"],
+      dependencies: [
+        "helpers",
+        "lights",
+        "motion",
+        "visitor",
+        "alarm",
+        "entityIds",
+        "cd",
+        "briefing",
+      ],
     },
   },
 });

@@ -8,6 +8,7 @@ beforeEach(() => {
 function setupSleepModeService() {
   const actions: string[] = [];
   let onTurnOn: (() => Promise<void>) | undefined;
+  const cron = mock((_config: unknown) => {});
   const setForFirstEventOfNextDay = mock(async () => {});
   const turnOnAll = mock(async () => {});
   const turnOffSwitch = mock(async ({ entity_id }: { entity_id: string }) => {
@@ -18,6 +19,12 @@ function setupSleepModeService() {
     automation: { time: { isAfter: () => false, isBefore: () => false } },
     bens_flat: {
       alarm: { setForFirstEventOfNextDay },
+      briefing: {
+        read: mock(async () => true),
+        remindersSwitch: { is_on: false },
+        reset: mock(() => {}),
+        todoList: mock(async () => {}),
+      },
       helpers: { turnOffAll: mock(async () => {}), turnOnAll },
       entityIds: {
         switches: {
@@ -44,6 +51,7 @@ function setupSleepModeService() {
         }),
       },
       motion: {
+        anywhere: (_cb: () => Promise<void> | void) => {},
         livingRoom: (_cb: () => Promise<void> | void) => {},
         hallway: (_cb: () => Promise<void> | void) => {},
         bathroom: (_cb: () => Promise<void> | void) => {},
@@ -55,6 +63,7 @@ function setupSleepModeService() {
       socket: { onEvent: (_config: unknown) => {} },
     },
     logger: { info: mock(() => {}) },
+    scheduler: { cron },
     synapse: {
       switch: () => ({
         entity_id: "switch.sleep_mode",
@@ -70,6 +79,7 @@ function setupSleepModeService() {
 
   return {
     actions,
+    cron,
     onTurnOn,
     setForFirstEventOfNextDay,
     turnOffSwitch,
@@ -78,11 +88,12 @@ function setupSleepModeService() {
 }
 
 test("turning sleep mode on enables the expected adaptive-lighting sleep switches", async () => {
-  const { actions, onTurnOn, setForFirstEventOfNextDay, turnOffSwitch, turnOnAll } =
+  const { actions, cron, onTurnOn, setForFirstEventOfNextDay, turnOffSwitch, turnOnAll } =
     setupSleepModeService();
 
   await onTurnOn?.();
 
+  expect(cron).toHaveBeenCalledTimes(1);
   expect(turnOnAll).toHaveBeenCalledTimes(1);
   expect(turnOnAll).toHaveBeenCalledWith([
     "switch.adaptive_lighting_sleep_mode_bathroom",

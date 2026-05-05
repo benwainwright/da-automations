@@ -1,4 +1,4 @@
-import { type TServiceParams } from "@digital-alchemy/core";
+import { CronExpression, type TServiceParams } from "@digital-alchemy/core";
 import type { PICK_ENTITY } from "@digital-alchemy/hass";
 import { FIVE_AM, THREE_PM } from "../constants.ts";
 import { mdi } from "../icons.ts";
@@ -7,7 +7,8 @@ export function SleepModeService({
   hass,
   context,
   synapse,
-  bens_flat: { helpers, lights, motion, visitor, entityIds, alarm },
+  scheduler,
+  bens_flat: { helpers, lights, motion, visitor, entityIds, alarm, briefing, tvMode, cd },
   logger,
   automation: { time },
 }: TServiceParams) {
@@ -17,6 +18,24 @@ export function SleepModeService({
     icon: mdi.sleep,
     unique_id: "sleep_mode_switch",
     suggested_object_id: "sleep_mode",
+  });
+
+  const sleepModeIsOn = () => {
+    const sleepModeState = Boolean(sleepMode.is_on);
+    logger.info(`Checking sleep mode is on: ${sleepModeState}`);
+    return sleepModeState;
+  };
+
+  motion.anywhere(async () => {
+    if (
+      briefing.remindersSwitch.is_on &&
+      !sleepModeIsOn() &&
+      time.isAfter("PM01:30") &&
+      !tvMode.isOn() &&
+      !cd.cdSwitch.is_on
+    ) {
+      await briefing.todoList();
+    }
   });
 
   hass.socket.onEvent({
@@ -53,6 +72,22 @@ export function SleepModeService({
 
   sleepMode.onTurnOff(async () => {
     await helpers.turnOffAll(adaptiveLightingSleepModeSwitches);
+    const visitorModeEntity = visitor?.visitorMode?.getEntity?.();
+    const visitorModeIsOn = visitorModeEntity?.state === "on";
+
+    const visitorModeIsOffAndTimeIsBetweenFiveAmAndThreePm =
+      time.isAfter(FIVE_AM) && !visitorModeIsOn && time.isBefore(THREE_PM);
+
+    if (visitorModeIsOffAndTimeIsBetweenFiveAmAndThreePm) {
+      const briefingWasRead = await briefing.read();
+      if (!briefingWasRead) {
+        return;
+      }
+      await Promise.allSettled([
+        hass.call.switch.turn_on({ entity_id: entityIds.switches.bedroomMotionSensor }),
+        hass.call.switch.turn_on({ entity_id: entityIds.switches.autoplayMusic }),
+      ]);
+    }
   });
 
   const morningTrigger = async () => {
@@ -68,13 +103,12 @@ export function SleepModeService({
     }
   };
 
+  scheduler.cron({
+    schedule: CronExpression.EVERY_DAY_AT_5AM,
+    exec: briefing.reset,
+  });
+
   motion.livingRoom(morningTrigger);
 
-  const isOn = () => {
-    const sleepModeState = Boolean(sleepMode.is_on);
-    logger.info(`Checking sleep mode is on: ${sleepModeState}`);
-    return sleepModeState;
-  };
-
-  return { sleepModeSwitch: sleepMode, isOn };
+  return { sleepModeSwitch: sleepMode, isOn: sleepModeIsOn };
 }

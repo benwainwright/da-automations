@@ -11,19 +11,7 @@ export function BriefingService({
   hass,
   synapse,
   context,
-  bens_flat: {
-    notify,
-    helpers,
-    cd,
-    visitor,
-    podcasts,
-    calendar,
-    todoList,
-    entityIds,
-    sleepMode,
-    motion,
-    tvMode,
-  },
+  bens_flat: { notify, helpers, visitor, podcasts, calendar, todoList, entityIds, motion },
   automation: { time },
   logger,
 }: TServiceParams) {
@@ -72,18 +60,6 @@ export function BriefingService({
     }
   }, [1, "hour"]);
 
-  motion.anywhere(async () => {
-    if (
-      reminders.is_on &&
-      !sleepMode.isOn() &&
-      time.isAfter("PM01:30") &&
-      !tvMode.isOn() &&
-      !cd.cdSwitch.is_on
-    ) {
-      await triggerTodoList();
-    }
-  });
-
   const { trigger: readBriefing, reset: resetBriefing } = helpers.latch(readMorningBriefing, true);
 
   const morningTrigger = async () => {
@@ -101,11 +77,12 @@ export function BriefingService({
     }
   };
 
-  sleepMode.sleepModeSwitch.onTurnOn(() => {
-    resetBriefing();
-  });
-
   motion.livingRoom(morningTrigger);
 
-  return { read: readMorningBriefing, remindersSwitch: reminders };
+  return {
+    read: readBriefing,
+    remindersSwitch: reminders,
+    todoList: triggerTodoList,
+    reset: resetBriefing,
+  };
 }
