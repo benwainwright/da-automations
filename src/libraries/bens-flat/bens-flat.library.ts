@@ -36,6 +36,7 @@ import { generateServiceMapWithPriorities } from "./service-manager.ts";
 import { LockService } from "./services/lock-service/lock-service.ts";
 import { PodcastService } from "./services/podcasts/podcast-service.ts";
 import { AlarmService } from "./services/alarm-service/alarm-service.ts";
+import { IMacService } from "./services/iMac-service/iMac-service.ts";
 
 const { services, priorityInit } = generateServiceMapWithPriorities({
   services: {
@@ -73,6 +74,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
       func: LightsService,
       dependencies: ["helpers"],
     },
+    iMac: IMacService,
     briefing: {
       func: BriefingService,
       dependencies: [
@@ -91,12 +93,22 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     visitor: VisitorModeService,
     presence: {
       func: PresenceDetectionService,
-      dependencies: ["motion", "helpers", "entityIds"],
+      dependencies: ["motion", "helpers", "entityIds", "iMac"],
     },
     goingHomeRecorder: GoingHomeRecorderService,
     core: {
       func: CoreModule,
-      dependencies: ["notify", "blinds", "presence", "lights", "entityIds", "sleepMode", "tvMode"],
+      dependencies: [
+        "notify",
+        "blinds",
+        "presence",
+        "lights",
+        "entityIds",
+        "sleepMode",
+        "tvMode",
+        "iMac",
+        "music",
+      ],
     },
     nags: {
       func: NagService,
@@ -116,7 +128,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     mediaPlayer: MediaPlayerService,
     tvMode: {
       func: TVModeService,
-      dependencies: ["blinds", "scene", "entityIds"],
+      dependencies: ["blinds", "scene", "entityIds", "iMac"],
     },
     scheduler: {
       func: SchedulerService,
@@ -137,6 +149,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
         "helpers",
         "lights",
         "motion",
+        "iMac",
         "visitor",
         "alarm",
         "entityIds",

@@ -57,5 +57,11 @@ export function MusicService({
     });
   });
 
-  return { autoplaySwitch: musicPlayerSwitch };
+  const pauseAll = async () => {
+    await hass.call.media_player.media_pause({
+      entity_id: "media_player.whole_flat",
+    });
+  };
+
+  return { autoplaySwitch: musicPlayerSwitch, pauseAll };
 }

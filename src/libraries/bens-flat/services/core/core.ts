@@ -1,7 +1,7 @@
 import { type TServiceParams } from "@digital-alchemy/core";
 
 export function CoreModule({ bens_flat, lifecycle, auto_deploy }: TServiceParams) {
-  const { lights, presence, blinds, notify, entityIds, tvMode, sleepMode } = bens_flat;
+  const { lights, presence, blinds, notify, entityIds, tvMode, sleepMode, iMac, music } = bens_flat;
 
   lifecycle.onReady(async () => {
     const autoDeployNotificationId = "auto_deploy_status";
@@ -34,7 +34,12 @@ export function CoreModule({ bens_flat, lifecycle, auto_deploy }: TServiceParams
     presence.flatIsOccupiedSwitch.onUpdate(async (newState, oldState) => {
       if (!newState || !oldState) return;
       if (oldState.state === "on" && newState.state === "off") {
-        await Promise.allSettled([lights.turnOffAll(), blinds.close()]);
+        await Promise.allSettled([
+          lights.turnOffAll(),
+          blinds.close(),
+          iMac.shutdown(),
+          music.pauseAll(),
+        ]);
       } else if (oldState.state === "off" && newState.state === "on") {
         await blinds.openIfDefaultIsOpen();
       }

@@ -9,7 +9,7 @@ export function TVModeService({
   context,
   logger,
   lifecycle,
-  bens_flat: { scene, blinds, entityIds },
+  bens_flat: { scene, blinds, entityIds, iMac },
   automation,
 }: TServiceParams) {
   const tvMode = synapse.switch({
@@ -120,6 +120,7 @@ export function TVModeService({
           }),
           toggler.on(),
           blinds.close(),
+          iMac.turnScreenOff(),
         ]);
       } else if (newState.state === "off" && oldState.state === "on") {
         logger.info(`Turning TV mode off`);
