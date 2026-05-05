@@ -52,10 +52,10 @@ export function EntityIdService() {
   } satisfies Record<string, PICK_ENTITY<"scene">>;
 
   const number = {
-    bathroomSpeakerBass: "number.bathroom_bass",
-    bedroomSpeakerBass: "number.bedroom_speaker_bass",
+    bathroomSpeakerBass: "number.bathroom_sonos_bass",
+    bedroomSpeakerBass: "number.bedroom_sonos_bass",
     livingRoomSpeakerBass: "number.living_room_bass",
-    hallwaySpeakerBass: "number.hallway_bass",
+    hallwaySpeakerBass: "number.hallway_sonos_bass",
   } satisfies Record<string, PICK_ENTITY<"number">>;
 
   const tts = {
