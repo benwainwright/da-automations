@@ -32,6 +32,7 @@ export function SleepModeService({
       briefing.remindersSwitch.is_on &&
       !sleepModeIsOn() &&
       time.isAfter("PM01:30") &&
+      time.isBefore("PM09:00") &&
       !tvMode.isOn() &&
       !cd.cdSwitch.is_on
     ) {
