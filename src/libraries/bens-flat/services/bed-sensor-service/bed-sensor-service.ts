@@ -6,13 +6,13 @@ export function BedSensorService({ hass, bens_flat: { entityIds, state } }: TSer
 
   bedOccupied.onUpdate(
     state.to("off", async () => {
-      await bedroomMotionSensor.turn_off();
+      await bedroomMotionSensor.turn_on();
     }),
   );
 
   bedOccupied.onUpdate(
     state.to("on", async () => {
-      await bedroomMotionSensor.turn_on();
+      await bedroomMotionSensor.turn_off();
     }),
   );
 }
