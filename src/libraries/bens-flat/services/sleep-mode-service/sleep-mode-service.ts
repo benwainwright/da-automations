@@ -98,10 +98,7 @@ export function SleepModeService({
       if (!briefingWasRead) {
         return;
       }
-      await Promise.allSettled([
-        hass.call.switch.turn_on({ entity_id: entityIds.switches.bedroomMotionSensor }),
-        hass.call.switch.turn_on({ entity_id: entityIds.switches.autoplayMusic }),
-      ]);
+      await hass.call.switch.turn_on({ entity_id: entityIds.switches.autoplayMusic });
     }
   });
 

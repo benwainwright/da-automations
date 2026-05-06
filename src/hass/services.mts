@@ -6548,7 +6548,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -8200,7 +8202,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## Album URI
          *
@@ -8355,7 +8359,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## page
          *
@@ -8532,7 +8538,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## Artist URI
          *
@@ -8687,7 +8695,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## page
          *
@@ -8890,7 +8900,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## Playlist URI
          *
@@ -9045,7 +9057,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## page
          *
@@ -9222,7 +9236,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## Podcast URI
          *
@@ -9377,7 +9393,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## Podcast URI
          *
@@ -9858,7 +9876,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## playlist_id
          *
@@ -10067,7 +10087,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## Data
          *
@@ -11720,7 +11742,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## favorite
          *
@@ -12289,7 +12313,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## library_only
          *
@@ -13943,7 +13969,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## filenames
          *
@@ -14116,7 +14144,9 @@ declare module "@digital-alchemy/hass" {
           | "01KQTGZAPXS26DABNJEXSM8GB4"
           | "01KQTGZN9EY7DNK5CJSH5QZDEX"
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
-          | "01KQVEG9XZD0YTY92FAAKY0GK6";
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
         /**
          * ## prompt
          *

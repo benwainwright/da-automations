@@ -104,6 +104,7 @@ export function EntityIdService() {
     frontDoor: "binary_sensor.front_door_open",
     hallwayOccupancy: "binary_sensor.hallway_occupancy",
     spareRoomOccupancy: "binary_sensor.spare_room_occupancy",
+    bedOccupiedEither: "binary_sensor.bed_occupied_either",
     bedroomOccupancy: "binary_sensor.bedroom_occupancy",
     bathroomOccupancy: "binary_sensor.bathroom_occupancy",
   } satisfies Record<string, PICK_ENTITY<"binary_sensor">>;

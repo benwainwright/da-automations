@@ -37,6 +37,7 @@ import { LockService } from "./services/lock-service/lock-service.ts";
 import { PodcastService } from "./services/podcasts/podcast-service.ts";
 import { AlarmService } from "./services/alarm-service/alarm-service.ts";
 import { IMacService } from "./services/iMac-service/iMac-service.ts";
+import { BedSensorService } from "./services/bed-sensor-service/bed-sensor-service.ts";
 
 const { services, priorityInit } = generateServiceMapWithPriorities({
   services: {
@@ -48,6 +49,10 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     },
     boiler: {
       func: BoilerService,
+      dependencies: ["entityIds"],
+    },
+    bed: {
+      func: BedSensorService,
       dependencies: ["entityIds"],
     },
     music: {

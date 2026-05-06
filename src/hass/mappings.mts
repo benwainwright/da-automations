@@ -385,7 +385,27 @@ declare module "@digital-alchemy/hass" {
       | "switch.bedroom_sonos_loudness"
       | "switch.bedroom_sonos_status_light"
       | "switch.bedroom_sonos_touch_controls"
-      | "number.bedroom_sonos_treble";
+      | "number.bedroom_sonos_treble"
+      | "switch.bed_occupancy_sensor_full_range"
+      | "number.bed_occupancy_sensor_left_unoccupied_pressure"
+      | "number.bed_occupancy_sensor_left_occupied_pressure"
+      | "number.bed_occupancy_sensor_left_trigger_pressure"
+      | "number.bed_occupancy_sensor_right_unoccupied_pressure"
+      | "number.bed_occupancy_sensor_right_occupied_pressure"
+      | "number.bed_occupancy_sensor_right_trigger_pressure"
+      | "button.bed_occupancy_sensor_restart"
+      | "update.bed_occupancy_sensor_firmware"
+      | "sensor.bed_occupancy_sensor_wifi_signal_db"
+      | "sensor.bed_occupancy_sensor_wifi_signal_percent"
+      | "sensor.bed_occupancy_sensor_uptime"
+      | "binary_sensor.bed_occupancy_sensor_status"
+      | "binary_sensor.bed_occupancy_sensor_bed_occupied_right"
+      | "select.bed_occupancy_sensor_response_speed"
+      | "binary_sensor.bed_occupied_both"
+      | "binary_sensor.bed_occupied_either"
+      | "binary_sensor.bed_occupied_left"
+      | "sensor.bed_pressure_left"
+      | "sensor.bed_pressure_right";
     _hallway:
       | "light.hallway_lights"
       | "climate.hallway"
@@ -1517,6 +1537,28 @@ declare module "@digital-alchemy/hass" {
     _9237716645f5c433e2ee7cf94ed2b48c:
       | "button.home_assistant_voice_living_room_favorite_current_song"
       | "media_player.home_assistant_voice_living_room";
+    _1f14d1d872304cdf1192c11050075acc:
+      | "switch.bed_occupancy_sensor_full_range"
+      | "number.bed_occupancy_sensor_left_unoccupied_pressure"
+      | "number.bed_occupancy_sensor_left_occupied_pressure"
+      | "number.bed_occupancy_sensor_left_trigger_pressure"
+      | "number.bed_occupancy_sensor_right_unoccupied_pressure"
+      | "number.bed_occupancy_sensor_right_occupied_pressure"
+      | "number.bed_occupancy_sensor_right_trigger_pressure"
+      | "button.bed_occupancy_sensor_restart"
+      | "update.bed_occupancy_sensor_firmware"
+      | "sensor.bed_occupancy_sensor_wifi_signal_db"
+      | "sensor.bed_occupancy_sensor_wifi_signal_percent"
+      | "sensor.bed_occupancy_sensor_uptime"
+      | "binary_sensor.bed_occupancy_sensor_status"
+      | "binary_sensor.bed_occupancy_sensor_bed_occupied_right"
+      | "select.bed_occupancy_sensor_response_speed"
+      | "binary_sensor.bed_occupied_both"
+      | "binary_sensor.bed_occupied_either"
+      | "binary_sensor.bed_occupied_left"
+      | "sensor.bed_pressure_left"
+      | "sensor.bed_pressure_right";
+    _a7e88522fa927093a8b2b823a0206176: never;
   }
   export interface HassLabelMapping {
     _reviewed:
@@ -1726,7 +1768,12 @@ declare module "@digital-alchemy/hass" {
       | "switch.hallway_sonos_status_light"
       | "number.hallway_sonos_treble"
       | "sensor.bathroom_sensor_linkquality"
-      | "button.boiler_main_element_restart";
+      | "button.boiler_main_element_restart"
+      | "binary_sensor.bed_occupied_both"
+      | "binary_sensor.bed_occupied_either"
+      | "binary_sensor.bed_occupied_left"
+      | "sensor.bed_pressure_left"
+      | "sensor.bed_pressure_right";
     _requires_internet:
       | "tts.home_assistant_cloud"
       | "tts.google_translate_en_com"
@@ -1934,7 +1981,12 @@ declare module "@digital-alchemy/hass" {
       | "switch.hallway_sonos_status_light"
       | "number.hallway_sonos_treble"
       | "sensor.bathroom_sensor_linkquality"
-      | "button.boiler_main_element_restart";
+      | "button.boiler_main_element_restart"
+      | "binary_sensor.bed_occupied_both"
+      | "binary_sensor.bed_occupied_either"
+      | "binary_sensor.bed_occupied_left"
+      | "sensor.bed_pressure_left"
+      | "sensor.bed_pressure_right";
     _do_not_use: "switch.boiler_boost_switch" | "switch.boiler_main_element";
     _review:
       | "device_tracker.bens_phone"
@@ -2804,7 +2856,10 @@ declare module "@digital-alchemy/hass" {
       | "device_tracker.9e_b6_cb_45_cc_d0"
       | "device_tracker.espressif"
       | "device_tracker.34_94_54_6b_4c_3d"
-      | "device_tracker.20_f8_3b_0a_08_83";
+      | "device_tracker.20_f8_3b_0a_08_83"
+      | "device_tracker.esp32_26f428"
+      | "device_tracker.b0_81_84_2d_07_20"
+      | "device_tracker.imacpro_2";
     _homeassistant_connect_zbt2: "update.home_assistant_connect_zbt_2_firmware";
     _matter:
       | "binary_sensor.front_door_lock_actuator"
@@ -2925,6 +2980,27 @@ declare module "@digital-alchemy/hass" {
       | "sensor.last_successful_automatic_backup"
       | "sensor.backup_manager_state"
       | "sensor.next_scheduled_automatic_backup";
+    _esphome:
+      | "switch.bed_occupancy_sensor_full_range"
+      | "number.bed_occupancy_sensor_left_unoccupied_pressure"
+      | "number.bed_occupancy_sensor_left_occupied_pressure"
+      | "number.bed_occupancy_sensor_left_trigger_pressure"
+      | "number.bed_occupancy_sensor_right_unoccupied_pressure"
+      | "number.bed_occupancy_sensor_right_occupied_pressure"
+      | "number.bed_occupancy_sensor_right_trigger_pressure"
+      | "button.bed_occupancy_sensor_restart"
+      | "update.bed_occupancy_sensor_firmware"
+      | "sensor.bed_occupancy_sensor_wifi_signal_db"
+      | "sensor.bed_occupancy_sensor_wifi_signal_percent"
+      | "sensor.bed_occupancy_sensor_uptime"
+      | "binary_sensor.bed_occupancy_sensor_status"
+      | "binary_sensor.bed_occupancy_sensor_bed_occupied_right"
+      | "select.bed_occupancy_sensor_response_speed"
+      | "binary_sensor.bed_occupied_both"
+      | "binary_sensor.bed_occupied_either"
+      | "binary_sensor.bed_occupied_left"
+      | "sensor.bed_pressure_left"
+      | "sensor.bed_pressure_right";
   }
   export interface HassUniqueIdMapping {
     "01KGNB1SM9Q5V950Y0CGGYJ87D-solar_rising": "binary_sensor.sun_solar_rising";
@@ -4387,6 +4463,44 @@ declare module "@digital-alchemy/hass" {
     "RINCON_7828CAEEAD2A01400-treble": "number.hallway_sonos_treble";
     "0x001788010cd820ed_linkquality_zigbee2mqtt": "sensor.bathroom_sensor_linkquality";
     "C45BBE476D6A-reboot": "button.boiler_main_element_restart";
+    "01KMGVV2ZJ67SG5YSJB55NAXMW_tplink_router_70-4B-CA-26-F4-28": "device_tracker.esp32_26f428";
+    "01KMGVV2ZJ67SG5YSJB55NAXMW_tplink_router_B0-81-84-2D-07-20": "device_tracker.b0_81_84_2d_07_20";
+    "01KMGVV2ZJ67SG5YSJB55NAXMW_tplink_router_FE-9B-BC-37-C1-40": "device_tracker.imacpro_2";
+    "B0:81:84:2D:07:20-switch-full_range": "switch.bed_occupancy_sensor_full_range";
+    "B0:81:84:2D:07:20-number-left_unoccupied_pressure": "number.bed_occupancy_sensor_left_unoccupied_pressure";
+    "B0:81:84:2D:07:20-number-left_occupied_pressure": "number.bed_occupancy_sensor_left_occupied_pressure";
+    "B0:81:84:2D:07:20-number-left_trigger_pressure": "number.bed_occupancy_sensor_left_trigger_pressure";
+    "B0:81:84:2D:07:20-number-right_unoccupied_pressure": "number.bed_occupancy_sensor_right_unoccupied_pressure";
+    "B0:81:84:2D:07:20-number-right_occupied_pressure": "number.bed_occupancy_sensor_right_occupied_pressure";
+    "B0:81:84:2D:07:20-number-right_trigger_pressure": "number.bed_occupancy_sensor_right_trigger_pressure";
+    "B0:81:84:2D:07:20-button-restart": "button.bed_occupancy_sensor_restart";
+    "B0:81:84:2D:07:20-button-calibrate_left_unoccupied": "button.bed_occupancy_sensor_calibrate_left_unoccupied";
+    "B0:81:84:2D:07:20-button-calibrate_left_occupied": "button.bed_occupancy_sensor_calibrate_left_occupied";
+    "B0:81:84:2D:07:20-button-calibrate_right_unoccupied": "button.bed_occupancy_sensor_calibrate_right_unoccupied";
+    "B0:81:84:2D:07:20-button-calibrate_right_occupied": "button.bed_occupancy_sensor_calibrate_right_occupied";
+    "B0:81:84:2D:07:20-update-firmware": "update.bed_occupancy_sensor_firmware";
+    "B0:81:84:2D:07:20-sensor-wifi_signal_db": "sensor.bed_occupancy_sensor_wifi_signal_db";
+    "B0:81:84:2D:07:20-sensor-wifi_signal_percent": "sensor.bed_occupancy_sensor_wifi_signal_percent";
+    "B0:81:84:2D:07:20-sensor-uptime": "sensor.bed_occupancy_sensor_uptime";
+    "B0:81:84:2D:07:20-sensor-calibrated_left_pressure": "sensor.bed_presence_2d0720_calibrated_left_pressure";
+    "B0:81:84:2D:07:20-sensor-calibrated_right_pressure": "sensor.bed_presence_2d0720_calibrated_right_pressure";
+    "B0:81:84:2D:07:20-binary_sensor-status": "binary_sensor.bed_occupancy_sensor_status";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_left__fast_": "binary_sensor.bed_presence_2d0720_bed_occupied_left_fast";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_left__normal_": "binary_sensor.bed_presence_2d0720_bed_occupied_left_normal";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_left__slow_": "binary_sensor.bed_presence_2d0720_bed_occupied_left_slow";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_right__fast_": "binary_sensor.bed_presence_2d0720_bed_occupied_right_fast";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_right__normal_": "binary_sensor.bed_presence_2d0720_bed_occupied_right_normal";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_right__slow_": "binary_sensor.bed_presence_2d0720_bed_occupied_right_slow";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_right": "binary_sensor.bed_occupancy_sensor_bed_occupied_right";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_both__fast_": "binary_sensor.bed_presence_2d0720_bed_occupied_both_fast";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_either__fast_": "binary_sensor.bed_presence_2d0720_bed_occupied_either_fast";
+    "B0:81:84:2D:07:20-select-response_speed": "select.bed_occupancy_sensor_response_speed";
+    "B0:81:84:2D:07:20-select-bluetooth_scanner_mode": "select.bed_occupancy_sensor_bluetooth_scanner_mode";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_both": "binary_sensor.bed_occupied_both";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_either": "binary_sensor.bed_occupied_either";
+    "B0:81:84:2D:07:20-binary_sensor-bed_occupied_left": "binary_sensor.bed_occupied_left";
+    "B0:81:84:2D:07:20-sensor-left_pressure": "sensor.bed_pressure_left";
+    "B0:81:84:2D:07:20-sensor-right_pressure": "sensor.bed_pressure_right";
   }
   export interface HassZoneMapping {
     _work: true;
@@ -4575,7 +4689,8 @@ declare module "@digital-alchemy/hass" {
       | "switch.tv_mode_enabled_wow"
       | "switch.tv_mode_enabled_youtube"
       | "switch.tv_mode_enabled_airplay"
-      | "switch.cumdump_mode";
+      | "switch.cumdump_mode"
+      | "switch.bed_occupancy_sensor_full_range";
     update:
       | "update.home_assistant_supervisor_update"
       | "update.home_assistant_core_update"
@@ -4675,7 +4790,8 @@ declare module "@digital-alchemy/hass" {
       | "update.bathroom_sensor"
       | "update.hallway_spare_room"
       | "update.monroe"
-      | "update.marlin";
+      | "update.marlin"
+      | "update.bed_occupancy_sensor_firmware";
     sensor:
       | "sensor.tumble_dryer_energy_spent"
       | "sensor.imac_energy_spent"
@@ -4934,7 +5050,12 @@ declare module "@digital-alchemy/hass" {
       | "sensor.xbox_total_space_internal_storage"
       | "sensor.xbox_free_space_internal_storage"
       | "sensor.all_standby_power"
-      | "sensor.all_standby_energy";
+      | "sensor.all_standby_energy"
+      | "sensor.bed_occupancy_sensor_wifi_signal_db"
+      | "sensor.bed_occupancy_sensor_wifi_signal_percent"
+      | "sensor.bed_occupancy_sensor_uptime"
+      | "sensor.bed_pressure_left"
+      | "sensor.bed_pressure_right";
     event: "event.automatic_backup";
     binary_sensor:
       | "binary_sensor.remote_ui"
@@ -4984,7 +5105,12 @@ declare module "@digital-alchemy/hass" {
       | "binary_sensor.xbox_network_in_game"
       | "binary_sensor.living_room_microphone_2"
       | "binary_sensor.living_room_microphone_3"
-      | "binary_sensor.flat_occupied";
+      | "binary_sensor.flat_occupied"
+      | "binary_sensor.bed_occupancy_sensor_status"
+      | "binary_sensor.bed_occupancy_sensor_bed_occupied_right"
+      | "binary_sensor.bed_occupied_both"
+      | "binary_sensor.bed_occupied_either"
+      | "binary_sensor.bed_occupied_left";
     stt: "stt.home_assistant_cloud" | "stt.openai_stt";
     tts:
       | "tts.home_assistant_cloud"
@@ -5031,7 +5157,8 @@ declare module "@digital-alchemy/hass" {
       | "button.events"
       | "button.schedule_todoist"
       | "button.play_latest_news_podcast"
-      | "button.alarm";
+      | "button.alarm"
+      | "button.bed_occupancy_sensor_restart";
     lock: "lock.front_door";
     select:
       | "select.front_door_lock_operating_mode"
@@ -5067,7 +5194,8 @@ declare module "@digital-alchemy/hass" {
       | "select.bedroom_sensor_motion_sensitivity"
       | "select.bathroom_sensor_motion_sensitivity"
       | "select.hallway_spare_room_power_on_behavior"
-      | "select.0xa4c1387abdb2a4e2_temperature_unit";
+      | "select.0xa4c1387abdb2a4e2_temperature_unit"
+      | "select.bed_occupancy_sensor_response_speed";
     number:
       | "number.kajplats_e27_cws_globe_1055lm_on_level"
       | "number.kajplats_e27_cws_globe_1055lm_power_on_level"
@@ -5155,7 +5283,13 @@ declare module "@digital-alchemy/hass" {
       | "number.living_room_treble_2"
       | "number.living_room_bass_3"
       | "number.living_room_balance_3"
-      | "number.living_room_treble_3";
+      | "number.living_room_treble_3"
+      | "number.bed_occupancy_sensor_left_unoccupied_pressure"
+      | "number.bed_occupancy_sensor_left_occupied_pressure"
+      | "number.bed_occupancy_sensor_left_trigger_pressure"
+      | "number.bed_occupancy_sensor_right_unoccupied_pressure"
+      | "number.bed_occupancy_sensor_right_occupied_pressure"
+      | "number.bed_occupancy_sensor_right_trigger_pressure";
     climate: "climate.living_room" | "climate.hallway" | "climate.bedroom" | "climate.boiler";
     cover: "cover.living_room_blinds";
     ai_task: "ai_task.openai";
@@ -5211,7 +5345,10 @@ declare module "@digital-alchemy/hass" {
       | "device_tracker.9e_b6_cb_45_cc_d0"
       | "device_tracker.espressif"
       | "device_tracker.34_94_54_6b_4c_3d"
-      | "device_tracker.20_f8_3b_0a_08_83";
+      | "device_tracker.20_f8_3b_0a_08_83"
+      | "device_tracker.esp32_26f428"
+      | "device_tracker.b0_81_84_2d_07_20"
+      | "device_tracker.imacpro_2";
     media_player:
       | "media_player.whole_flat"
       | "media_player.lg_webos_tv_oled55c8pla"
