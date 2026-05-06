@@ -160,6 +160,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
         "visitor",
         "alarm",
         "entityIds",
+        "presence",
         "cd",
         "briefing",
       ],
