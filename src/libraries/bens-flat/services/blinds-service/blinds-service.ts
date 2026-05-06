@@ -10,7 +10,7 @@ export function BlindsService({
   automation: { time, solar },
   bens_flat,
 }: TServiceParams) {
-  const { motion, entityIds, cd } = bens_flat;
+  const { motion, entityIds, cd, state } = bens_flat;
 
   const blindsDefaultClosed = synapse.switch({
     name: "Blinds default closed",
@@ -42,17 +42,17 @@ export function BlindsService({
   const blinds = hass.refBy.id(entityIds.blinds.livingRoom);
 
   lifecycle.onReady(() => {
-    blindsDefaultClosed.onUpdate(async (nextState, oldState) => {
-      if (!nextState || !oldState) {
-        return null;
-      }
-
-      if (nextState.state === "on" && oldState.state === "off") {
+    blindsDefaultClosed.onUpdate(
+      state.from("off").to("on", async () => {
         await blinds.close_cover();
-      } else if (nextState.state === "off" && oldState.state === "on") {
+      }),
+    );
+
+    blindsDefaultClosed.onUpdate(
+      state.from("on").to("off", async () => {
         await blinds.open_cover();
-      }
-    });
+      }),
+    );
   });
 
   const closeIfDefaultIsClosed = async () => {

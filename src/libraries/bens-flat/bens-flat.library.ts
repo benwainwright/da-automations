@@ -38,11 +38,13 @@ import { PodcastService } from "./services/podcasts/podcast-service.ts";
 import { AlarmService } from "./services/alarm-service/alarm-service.ts";
 import { IMacService } from "./services/iMac-service/iMac-service.ts";
 import { BedSensorService } from "./services/bed-sensor-service/bed-sensor-service.ts";
+import { StateService } from "./services/state-service/state-service.ts";
 
 const { services, priorityInit } = generateServiceMapWithPriorities({
   services: {
     lock: { func: LockService, dependencies: ["entityIds"] },
     tv: { func: SyncTvService, dependencies: ["entityIds"] },
+    state: StateService,
     alarm: {
       func: AlarmService,
       dependencies: ["alexa", "entityIds", "calendar", "notify"],
@@ -53,7 +55,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     },
     bed: {
       func: BedSensorService,
-      dependencies: ["entityIds"],
+      dependencies: ["entityIds", "state"],
     },
     music: {
       func: MusicService,
@@ -127,7 +129,7 @@ const { services, priorityInit } = generateServiceMapWithPriorities({
     },
     blinds: {
       func: BlindsService,
-      dependencies: ["entityIds", "motion", "cd"],
+      dependencies: ["entityIds", "motion", "cd", "state"],
     },
     entityIds: EntityIdService,
     mediaPlayer: MediaPlayerService,

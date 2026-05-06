@@ -1,26 +1,18 @@
 import { TServiceParams } from "@digital-alchemy/core";
 
-export function BedSensorService({ hass, bens_flat: { entityIds } }: TServiceParams) {
+export function BedSensorService({ hass, bens_flat: { entityIds, state } }: TServiceParams) {
   const bedOccupied = hass.refBy.id(entityIds.binarySensor.bedOccupiedEither);
   const bedroomMotionSensor = hass.refBy.id(entityIds.switches.bedroomMotionSensor);
 
-  bedOccupied.onUpdate(async (newState, oldState) => {
-    if (!newState || !oldState) return;
-
-    if (newState.state === "on" && oldState.state !== "on" && bedroomMotionSensor.state === "on") {
+  bedOccupied.onUpdate(
+    state.to("off", async () => {
       await bedroomMotionSensor.turn_off();
-    }
-  });
+    }),
+  );
 
-  bedOccupied.onUpdate(async (newState, oldState) => {
-    if (!newState || !oldState) return;
-
-    if (
-      newState.state === "off" &&
-      oldState.state !== "on" &&
-      bedroomMotionSensor.state === "off"
-    ) {
+  bedOccupied.onUpdate(
+    state.to("on", async () => {
       await bedroomMotionSensor.turn_on();
-    }
-  });
+    }),
+  );
 }
