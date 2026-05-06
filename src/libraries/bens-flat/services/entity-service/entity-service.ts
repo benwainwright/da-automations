@@ -12,6 +12,7 @@ export function EntityIdService() {
     livingRoomTvWall: "light.living_room_tv_wall",
     livingRoomBookcase: "light.living_room_bookcase",
     livingRoomWallLeft: "light.living_room_back_wall_left",
+    bedroom: "light.bedroom_lights",
     livingRoomBackWallMiddle: "light.living_room_back_wall_middle",
     livingRoomBackWallRight: "light.living_room_back_wall_right",
   } satisfies Record<string, PICK_ENTITY<"light">>;
