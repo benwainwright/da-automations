@@ -5,7 +5,7 @@ export function CdService({
   context,
   hass,
   synapse,
-  bens_flat: { notify, motion, mediaPlayer, lock, entityIds, scene },
+  bens_flat: { notify, motion, mediaPlayer, lock, entityIds, scene, state },
 }: TServiceParams) {
   const cdSwitch = synapse.switch({
     name: "CD mode",
@@ -43,15 +43,16 @@ export function CdService({
 
   const doorOpen = hass.refBy.id(entityIds.binarySensor.frontDoor);
 
-  doorOpen.onUpdate(async (newState, oldState) => {
-    if (!newState || !oldState) return;
-    if (newState.state === "on" && oldState.state === "off" && cdSwitch.is_on) {
-      await mediaPlayer.playLocalMp3({
-        file: "boop.mp3",
-        player: "media_player.whole_flat",
-      });
-    }
-  });
+  doorOpen.onUpdate(
+    state.from("off").to("on", async () => {
+      if (cdSwitch.is_on) {
+        await mediaPlayer.playLocalMp3({
+          file: "boop.mp3",
+          player: "media_player.whole_flat",
+        });
+      }
+    }),
+  );
 
   const outOfBounds = async () => {
     if (cdSwitch.is_on) {

@@ -2,6 +2,21 @@ import { expect, mock, test } from "bun:test";
 import { EntityIdService } from "../entity-service/entity-service.ts";
 import { CdService } from "./cd-service.ts";
 
+const createState = () => ({
+  from: (expectedOldState: string) => ({
+    to:
+      (
+        expectedNewState: string,
+        callback: (newState: { state: string }, oldState: { state: string }) => Promise<void>,
+      ) =>
+      async (newState: { state: string }, oldState: { state: string }) => {
+        if (oldState.state === expectedOldState && newState.state === expectedNewState) {
+          await callback(newState, oldState);
+        }
+      },
+  }),
+});
+
 const createScene = () => ({
   toggle: mock(() => ({
     off: mock(async () => {}),
@@ -49,6 +64,7 @@ test("plays boop announcement when the front door opens in CD mode", async () =>
         notifyCritical: mock(async () => {}),
       },
       scene: createScene(),
+      state: createState(),
     },
   } as any);
 
@@ -96,6 +112,7 @@ test("sends a critical notification when bedroom or spare room motion fires in C
         notifyCritical,
       },
       scene: createScene(),
+      state: createState(),
     },
   } as any);
 
