@@ -90,12 +90,10 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
     const player = hass.refBy.id(entity);
     const prefix = `${topicPrefix}/${entity}`;
     player.onUpdate(async (newState, oldState) => {
-      if (newState.state !== oldState.state) {
-        await hass.call.mqtt.publish({
-          topic: `${prefix}/status`,
-          payload: newState.state,
-        });
-      }
+      await hass.call.mqtt.publish({
+        topic: `${prefix}/status`,
+        payload: newState.state,
+      });
 
       const newStateAs = newState as typeof newState & {
         attributes: { media_title?: string; media_artist?: string; entity_picture?: string };
