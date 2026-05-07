@@ -25,7 +25,6 @@ export const InstalledAddons = {
   Zigbee2MQTT: "45df7312_zigbee2mqtt",
 } as const;
 
-
 import {
   AndroidNotificationData,
   AppleNotificationData,
@@ -270,8 +269,8 @@ declare module "@digital-alchemy/hass" {
          * > entity:
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id: PICK_ENTITY<"switch"> | PICK_ENTITY<"switch">[];
@@ -856,8 +855,8 @@ declare module "@digital-alchemy/hass" {
          * >         - ai_task
          * >       supported_features:
          * >         - 1
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: PICK_ENTITY | PICK_ENTITY[];
@@ -952,8 +951,8 @@ declare module "@digital-alchemy/hass" {
          * >         - ai_task
          * >       supported_features:
          * >         - 4
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id: PICK_ENTITY | PICK_ENTITY[];
@@ -1386,8 +1385,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: alexa_media
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -1438,8 +1437,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: alexa_media
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -1472,6 +1471,441 @@ declare module "@digital-alchemy/hass" {
          * > ```
          */
         email?: unknown;
+      }) => Promise<void>;
+    };
+    // # MARK: apple_tv
+    apple_tv: {
+      /**
+       * ### append_keyboard_text
+       *
+       * >
+       */
+      append_keyboard_text: (service_data: {
+        /**
+         * ## config_entry_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > config_entry:
+         * >   integration: apple_tv
+         * > ```
+         */
+        config_entry_id:
+          | "01KGNB1SM9Q5V950Y0CGGYJ87D"
+          | "01KGNB1SVBWDW2MXPH647M1HER"
+          | "01KGNB1SVJRGREE6JMR645H58Y"
+          | "01KGNB1T2FM0NT8R23MXD4PNZ4"
+          | "01KGNB1W73VP590M9DEP49C16A"
+          | "01KGNB1X9QWNJJ2B2DFM0F6HQ8"
+          | "01KGNB4WB89SBTYRTA7CRC1CNE"
+          | "01KGNB68Y8B88TF39H0FMD0854"
+          | "01KGNB692NWHW6V4JX7PCA7T8D"
+          | "01KGNB692P1T3MYR9SP5KABMVF"
+          | "01KGNEJ1VW5W0MBQQFBVT56DY1"
+          | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
+          | "01KGNHDASVCXZRP69JW51W7AWT"
+          | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
+          | "01KGP9Z70JSRJCRV4T3V0GX4G0"
+          | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
+          | "01KGPDQQB2C6ZWJ9HPN4BZSVW3"
+          | "01KGPDST4QFKXS0PZKN00QK01M"
+          | "01KGPDTX6H3W2C727F7DRH0TET"
+          | "01KGPDV5H7N3HF1RZNSDFHTB7A"
+          | "01KGQ2PXFHSBENFKYFR4QYRMFZ"
+          | "01KGQ2Q02S1VPGDZNDDE24A1YM"
+          | "01KGQ31C7SJ84Q4DACFK99STK6"
+          | "01KGQ33T2WVF93PC45JP1DWHY4"
+          | "01KGQ3DRCV68YGMKKNTS1RNPBM"
+          | "01KGQ5GQ9JA6ZDH9NBG0A9QDZX"
+          | "01KGQ5GS3WWW437ZWZZFBPBXN4"
+          | "01KGQ81R7DCYNP5KX4SFGAWVB6"
+          | "01KGQ8JRQWYNZES8JQA8250S97"
+          | "01KGQANDBGAPKSV8W2PPJ8JCMX"
+          | "01KGQAR09X8VNMTE6F55440WPX"
+          | "01KGQJ8YCWV1J45SFQ1ACGK5M2"
+          | "01KGQJ9A2ZSEGQ0GDETS9YA5EV"
+          | "01KGQJYD31F0M99SWDVT2JW5PS"
+          | "01KGQNW1RQ05GTVV2A0X562VBR"
+          | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B"
+          | "01KGSVRH1C4W71KKZYMTZBT2HP"
+          | "01KGVV88BYMVDGDK15VG0D9KYR"
+          | "01KGVWA098JKVPMQCCR0G9DQQG"
+          | "01KGWE7QF985TGXFP8JS847MCQ"
+          | "01KGWJE8X722GR755ZKJA81EY8"
+          | "01KGYWMBMEHV3XRQMZB4J0DCKZ"
+          | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
+          | "01KH1RG56MRQGSD9V2WA52RZ4N"
+          | "01KH1SH05457MYPF8BZMY7MFDJ"
+          | "01KHNBWD0MWEFFNEY8K217WMHV"
+          | "01KHPJGT8R803RDRPBFA88EDSD"
+          | "01KHPR32WETT9ZK6JJ42TE5E4R"
+          | "01KHS1NC5XFR2Y6Z0HZN9R2Q45"
+          | "01KHS7G1H795CQG23VH10AW6SQ"
+          | "01KHS8YSXFZND22GQDTRBQQX61"
+          | "01KHSBJSBXNP6NVHKYGTB5TVA9"
+          | "01KHSC2S8WVH6QX7EWTDH6XETT"
+          | "01KHSCHHDZCRACHJQ57Y63R36Z"
+          | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
+          | "01KM3MP2KJYCZGP3PJTES7BDMD"
+          | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
+          | "01KM5JA5KW7WHTBP9DBS24W9CM"
+          | "01KM5JQ5DGWDX8JGPZMNPNQN75"
+          | "01KM5ZV4PJ58R66HNJFD7V5QRT"
+          | "01KMD2PC09MXTCKD1M9ZT6BWXA"
+          | "01KMD2PWCAB1338ANZZRJKQ537"
+          | "01KMD7MWT455NT69ZBM3AZ01X6"
+          | "01KMD83K8HRCEC67NHH7E4YZCH"
+          | "01KMD848YYA5VQ93CCJY5FKV1P"
+          | "01KMD850RVZ6JZ4SC7AQQ69142"
+          | "01KMD860B4PBG51118FCX4Y3Q3"
+          | "01KMD86FTGQA0VYEYHV1T749QC"
+          | "01KMD878QAYPFV7X2VM2S4KRP0"
+          | "01KMD87DGPH9QK40VGJ4PMDXVE"
+          | "01KMD87N8CPDAWP2306AV7XWYK"
+          | "01KMD87WDZRQRGGEQEY2ZV4JF7"
+          | "01KMD8878MBDK8Q7DFZ3TCJ290"
+          | "01KMD88F5M6PC4ZK0HGEK9VRM2"
+          | "01KMD88TDMRRV6ADSTMENSG2PX"
+          | "01KMD891JC9CA50H85Q9PBFFHJ"
+          | "01KMD894DJ32A7ACZD47BW7C3K"
+          | "01KMD89ATBVMBXPVAXJN3DVMTE"
+          | "01KMD89GAAZY5244QKRCEXBHF2"
+          | "01KMD89P3Y5AWHQFDN3PH1D1JJ"
+          | "01KMD89XDJDRM0NN3MT8Y9SG92"
+          | "01KMD8A2ABE7VZXGRV3HETRWXK"
+          | "01KMD8AE0S7TEC6AAN46TMFY7X"
+          | "01KMD8ANXH68XH6HVX3FAEFVK8"
+          | "01KMD8AVGTK1J14VW8Z8KAFXJD"
+          | "01KMD8B640PPV194FNENGHJARW"
+          | "01KMD8BE3YX3HB7W4HJJZVMBT8"
+          | "01KMD8BG03JX6RK7ADXVDM2XEF"
+          | "01KMD8BHFMY44FWEY51VZ2H9XC"
+          | "01KMD8BKPZ8CG711JWW78T0QCG"
+          | "01KMD8BPACH27XM12334EGQPA7"
+          | "01KMD8BR272TP391K74K14WRR6"
+          | "01KMD8BSREXQV0YE9QYZRQSD3G"
+          | "01KMD8BVNCW6R7EKQ7FMAXTD97"
+          | "01KMD8BXCYFTRWDCR1QYZZ7GXD"
+          | "01KMGTF5TGYDXD50T0R8FG5D90"
+          | "01KMGVR9283AKCQKTHX3NY3ACG"
+          | "01KMGVV2ZJ67SG5YSJB55NAXMW"
+          | "01KMJ7X01SE2VDJAPVRDYK7QRC"
+          | "01KMKAK76QR7ZV40AERG9089JC"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1"
+          | "01KPDT1865K7GZBMS40ASQ7E9M"
+          | "01KPZDRCGCWF4MRXAPPR0792T4"
+          | "01KQCCRED7ARHT0K82BTE6RQR5"
+          | "01KQN2WH8WXGQVG9PAK7VV1E6Q"
+          | "01KQT8R22JSDV1KMEHS7RXBMG8"
+          | "01KQT8R86HY4EPBFBDA8HGKZME"
+          | "01KQT8RD0TX70AA9C19RP27M5A"
+          | "01KQT8RH61JTJDQSQYMVHCRCJM"
+          | "01KQT8ZE49TEHPTAMAFW2C746D"
+          | "01KQTGZAPXS26DABNJEXSM8GB4"
+          | "01KQTGZN9EY7DNK5CJSH5QZDEX"
+          | "01KQTKJFWS4P3VPY0QE8EWFA12"
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
+        /**
+         * ## text
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiple: false
+         * >   multiline: false
+         * > ```
+         */
+        text: string;
+      }) => Promise<void>;
+      /**
+       * ### clear_keyboard_text
+       *
+       * >
+       */
+      clear_keyboard_text: (service_data: {
+        /**
+         * ## config_entry_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > config_entry:
+         * >   integration: apple_tv
+         * > ```
+         */
+        config_entry_id:
+          | "01KGNB1SM9Q5V950Y0CGGYJ87D"
+          | "01KGNB1SVBWDW2MXPH647M1HER"
+          | "01KGNB1SVJRGREE6JMR645H58Y"
+          | "01KGNB1T2FM0NT8R23MXD4PNZ4"
+          | "01KGNB1W73VP590M9DEP49C16A"
+          | "01KGNB1X9QWNJJ2B2DFM0F6HQ8"
+          | "01KGNB4WB89SBTYRTA7CRC1CNE"
+          | "01KGNB68Y8B88TF39H0FMD0854"
+          | "01KGNB692NWHW6V4JX7PCA7T8D"
+          | "01KGNB692P1T3MYR9SP5KABMVF"
+          | "01KGNEJ1VW5W0MBQQFBVT56DY1"
+          | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
+          | "01KGNHDASVCXZRP69JW51W7AWT"
+          | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
+          | "01KGP9Z70JSRJCRV4T3V0GX4G0"
+          | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
+          | "01KGPDQQB2C6ZWJ9HPN4BZSVW3"
+          | "01KGPDST4QFKXS0PZKN00QK01M"
+          | "01KGPDTX6H3W2C727F7DRH0TET"
+          | "01KGPDV5H7N3HF1RZNSDFHTB7A"
+          | "01KGQ2PXFHSBENFKYFR4QYRMFZ"
+          | "01KGQ2Q02S1VPGDZNDDE24A1YM"
+          | "01KGQ31C7SJ84Q4DACFK99STK6"
+          | "01KGQ33T2WVF93PC45JP1DWHY4"
+          | "01KGQ3DRCV68YGMKKNTS1RNPBM"
+          | "01KGQ5GQ9JA6ZDH9NBG0A9QDZX"
+          | "01KGQ5GS3WWW437ZWZZFBPBXN4"
+          | "01KGQ81R7DCYNP5KX4SFGAWVB6"
+          | "01KGQ8JRQWYNZES8JQA8250S97"
+          | "01KGQANDBGAPKSV8W2PPJ8JCMX"
+          | "01KGQAR09X8VNMTE6F55440WPX"
+          | "01KGQJ8YCWV1J45SFQ1ACGK5M2"
+          | "01KGQJ9A2ZSEGQ0GDETS9YA5EV"
+          | "01KGQJYD31F0M99SWDVT2JW5PS"
+          | "01KGQNW1RQ05GTVV2A0X562VBR"
+          | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B"
+          | "01KGSVRH1C4W71KKZYMTZBT2HP"
+          | "01KGVV88BYMVDGDK15VG0D9KYR"
+          | "01KGVWA098JKVPMQCCR0G9DQQG"
+          | "01KGWE7QF985TGXFP8JS847MCQ"
+          | "01KGWJE8X722GR755ZKJA81EY8"
+          | "01KGYWMBMEHV3XRQMZB4J0DCKZ"
+          | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
+          | "01KH1RG56MRQGSD9V2WA52RZ4N"
+          | "01KH1SH05457MYPF8BZMY7MFDJ"
+          | "01KHNBWD0MWEFFNEY8K217WMHV"
+          | "01KHPJGT8R803RDRPBFA88EDSD"
+          | "01KHPR32WETT9ZK6JJ42TE5E4R"
+          | "01KHS1NC5XFR2Y6Z0HZN9R2Q45"
+          | "01KHS7G1H795CQG23VH10AW6SQ"
+          | "01KHS8YSXFZND22GQDTRBQQX61"
+          | "01KHSBJSBXNP6NVHKYGTB5TVA9"
+          | "01KHSC2S8WVH6QX7EWTDH6XETT"
+          | "01KHSCHHDZCRACHJQ57Y63R36Z"
+          | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
+          | "01KM3MP2KJYCZGP3PJTES7BDMD"
+          | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
+          | "01KM5JA5KW7WHTBP9DBS24W9CM"
+          | "01KM5JQ5DGWDX8JGPZMNPNQN75"
+          | "01KM5ZV4PJ58R66HNJFD7V5QRT"
+          | "01KMD2PC09MXTCKD1M9ZT6BWXA"
+          | "01KMD2PWCAB1338ANZZRJKQ537"
+          | "01KMD7MWT455NT69ZBM3AZ01X6"
+          | "01KMD83K8HRCEC67NHH7E4YZCH"
+          | "01KMD848YYA5VQ93CCJY5FKV1P"
+          | "01KMD850RVZ6JZ4SC7AQQ69142"
+          | "01KMD860B4PBG51118FCX4Y3Q3"
+          | "01KMD86FTGQA0VYEYHV1T749QC"
+          | "01KMD878QAYPFV7X2VM2S4KRP0"
+          | "01KMD87DGPH9QK40VGJ4PMDXVE"
+          | "01KMD87N8CPDAWP2306AV7XWYK"
+          | "01KMD87WDZRQRGGEQEY2ZV4JF7"
+          | "01KMD8878MBDK8Q7DFZ3TCJ290"
+          | "01KMD88F5M6PC4ZK0HGEK9VRM2"
+          | "01KMD88TDMRRV6ADSTMENSG2PX"
+          | "01KMD891JC9CA50H85Q9PBFFHJ"
+          | "01KMD894DJ32A7ACZD47BW7C3K"
+          | "01KMD89ATBVMBXPVAXJN3DVMTE"
+          | "01KMD89GAAZY5244QKRCEXBHF2"
+          | "01KMD89P3Y5AWHQFDN3PH1D1JJ"
+          | "01KMD89XDJDRM0NN3MT8Y9SG92"
+          | "01KMD8A2ABE7VZXGRV3HETRWXK"
+          | "01KMD8AE0S7TEC6AAN46TMFY7X"
+          | "01KMD8ANXH68XH6HVX3FAEFVK8"
+          | "01KMD8AVGTK1J14VW8Z8KAFXJD"
+          | "01KMD8B640PPV194FNENGHJARW"
+          | "01KMD8BE3YX3HB7W4HJJZVMBT8"
+          | "01KMD8BG03JX6RK7ADXVDM2XEF"
+          | "01KMD8BHFMY44FWEY51VZ2H9XC"
+          | "01KMD8BKPZ8CG711JWW78T0QCG"
+          | "01KMD8BPACH27XM12334EGQPA7"
+          | "01KMD8BR272TP391K74K14WRR6"
+          | "01KMD8BSREXQV0YE9QYZRQSD3G"
+          | "01KMD8BVNCW6R7EKQ7FMAXTD97"
+          | "01KMD8BXCYFTRWDCR1QYZZ7GXD"
+          | "01KMGTF5TGYDXD50T0R8FG5D90"
+          | "01KMGVR9283AKCQKTHX3NY3ACG"
+          | "01KMGVV2ZJ67SG5YSJB55NAXMW"
+          | "01KMJ7X01SE2VDJAPVRDYK7QRC"
+          | "01KMKAK76QR7ZV40AERG9089JC"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1"
+          | "01KPDT1865K7GZBMS40ASQ7E9M"
+          | "01KPZDRCGCWF4MRXAPPR0792T4"
+          | "01KQCCRED7ARHT0K82BTE6RQR5"
+          | "01KQN2WH8WXGQVG9PAK7VV1E6Q"
+          | "01KQT8R22JSDV1KMEHS7RXBMG8"
+          | "01KQT8R86HY4EPBFBDA8HGKZME"
+          | "01KQT8RD0TX70AA9C19RP27M5A"
+          | "01KQT8RH61JTJDQSQYMVHCRCJM"
+          | "01KQT8ZE49TEHPTAMAFW2C746D"
+          | "01KQTGZAPXS26DABNJEXSM8GB4"
+          | "01KQTGZN9EY7DNK5CJSH5QZDEX"
+          | "01KQTKJFWS4P3VPY0QE8EWFA12"
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
+      }) => Promise<void>;
+      /**
+       * ### set_keyboard_text
+       *
+       * >
+       */
+      set_keyboard_text: (service_data: {
+        /**
+         * ## config_entry_id
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > config_entry:
+         * >   integration: apple_tv
+         * > ```
+         */
+        config_entry_id:
+          | "01KGNB1SM9Q5V950Y0CGGYJ87D"
+          | "01KGNB1SVBWDW2MXPH647M1HER"
+          | "01KGNB1SVJRGREE6JMR645H58Y"
+          | "01KGNB1T2FM0NT8R23MXD4PNZ4"
+          | "01KGNB1W73VP590M9DEP49C16A"
+          | "01KGNB1X9QWNJJ2B2DFM0F6HQ8"
+          | "01KGNB4WB89SBTYRTA7CRC1CNE"
+          | "01KGNB68Y8B88TF39H0FMD0854"
+          | "01KGNB692NWHW6V4JX7PCA7T8D"
+          | "01KGNB692P1T3MYR9SP5KABMVF"
+          | "01KGNEJ1VW5W0MBQQFBVT56DY1"
+          | "01KGNFZ1C5N8X5PPGFPJV8ATW3"
+          | "01KGNHDASVCXZRP69JW51W7AWT"
+          | "01KGNK3DFHE9DF4CJ7WBM8V01Y"
+          | "01KGP9Z70JSRJCRV4T3V0GX4G0"
+          | "01KGPBGFYYHJ2B2K0WW8PJ27BZ"
+          | "01KGPDQQB2C6ZWJ9HPN4BZSVW3"
+          | "01KGPDST4QFKXS0PZKN00QK01M"
+          | "01KGPDTX6H3W2C727F7DRH0TET"
+          | "01KGPDV5H7N3HF1RZNSDFHTB7A"
+          | "01KGQ2PXFHSBENFKYFR4QYRMFZ"
+          | "01KGQ2Q02S1VPGDZNDDE24A1YM"
+          | "01KGQ31C7SJ84Q4DACFK99STK6"
+          | "01KGQ33T2WVF93PC45JP1DWHY4"
+          | "01KGQ3DRCV68YGMKKNTS1RNPBM"
+          | "01KGQ5GQ9JA6ZDH9NBG0A9QDZX"
+          | "01KGQ5GS3WWW437ZWZZFBPBXN4"
+          | "01KGQ81R7DCYNP5KX4SFGAWVB6"
+          | "01KGQ8JRQWYNZES8JQA8250S97"
+          | "01KGQANDBGAPKSV8W2PPJ8JCMX"
+          | "01KGQAR09X8VNMTE6F55440WPX"
+          | "01KGQJ8YCWV1J45SFQ1ACGK5M2"
+          | "01KGQJ9A2ZSEGQ0GDETS9YA5EV"
+          | "01KGQJYD31F0M99SWDVT2JW5PS"
+          | "01KGQNW1RQ05GTVV2A0X562VBR"
+          | "01KGQT8ZJWTVX9DXC1KEFG8FG8"
+          | "01KGQX5ESRK2J8G1MFYXQ9M68B"
+          | "01KGSVRH1C4W71KKZYMTZBT2HP"
+          | "01KGVV88BYMVDGDK15VG0D9KYR"
+          | "01KGVWA098JKVPMQCCR0G9DQQG"
+          | "01KGWE7QF985TGXFP8JS847MCQ"
+          | "01KGWJE8X722GR755ZKJA81EY8"
+          | "01KGYWMBMEHV3XRQMZB4J0DCKZ"
+          | "01KGYWMM5XZWJWRJ1TQ9B1FSM3"
+          | "01KH1RG56MRQGSD9V2WA52RZ4N"
+          | "01KH1SH05457MYPF8BZMY7MFDJ"
+          | "01KHNBWD0MWEFFNEY8K217WMHV"
+          | "01KHPJGT8R803RDRPBFA88EDSD"
+          | "01KHPR32WETT9ZK6JJ42TE5E4R"
+          | "01KHS1NC5XFR2Y6Z0HZN9R2Q45"
+          | "01KHS7G1H795CQG23VH10AW6SQ"
+          | "01KHS8YSXFZND22GQDTRBQQX61"
+          | "01KHSBJSBXNP6NVHKYGTB5TVA9"
+          | "01KHSC2S8WVH6QX7EWTDH6XETT"
+          | "01KHSCHHDZCRACHJQ57Y63R36Z"
+          | "01KJ9S4ETKZFSY2WFTT0HNYB7D"
+          | "01KM3MP2KJYCZGP3PJTES7BDMD"
+          | "01KM3MZPA0ECG3JBH1DKQ3GVBD"
+          | "01KM5JA5KW7WHTBP9DBS24W9CM"
+          | "01KM5JQ5DGWDX8JGPZMNPNQN75"
+          | "01KM5ZV4PJ58R66HNJFD7V5QRT"
+          | "01KMD2PC09MXTCKD1M9ZT6BWXA"
+          | "01KMD2PWCAB1338ANZZRJKQ537"
+          | "01KMD7MWT455NT69ZBM3AZ01X6"
+          | "01KMD83K8HRCEC67NHH7E4YZCH"
+          | "01KMD848YYA5VQ93CCJY5FKV1P"
+          | "01KMD850RVZ6JZ4SC7AQQ69142"
+          | "01KMD860B4PBG51118FCX4Y3Q3"
+          | "01KMD86FTGQA0VYEYHV1T749QC"
+          | "01KMD878QAYPFV7X2VM2S4KRP0"
+          | "01KMD87DGPH9QK40VGJ4PMDXVE"
+          | "01KMD87N8CPDAWP2306AV7XWYK"
+          | "01KMD87WDZRQRGGEQEY2ZV4JF7"
+          | "01KMD8878MBDK8Q7DFZ3TCJ290"
+          | "01KMD88F5M6PC4ZK0HGEK9VRM2"
+          | "01KMD88TDMRRV6ADSTMENSG2PX"
+          | "01KMD891JC9CA50H85Q9PBFFHJ"
+          | "01KMD894DJ32A7ACZD47BW7C3K"
+          | "01KMD89ATBVMBXPVAXJN3DVMTE"
+          | "01KMD89GAAZY5244QKRCEXBHF2"
+          | "01KMD89P3Y5AWHQFDN3PH1D1JJ"
+          | "01KMD89XDJDRM0NN3MT8Y9SG92"
+          | "01KMD8A2ABE7VZXGRV3HETRWXK"
+          | "01KMD8AE0S7TEC6AAN46TMFY7X"
+          | "01KMD8ANXH68XH6HVX3FAEFVK8"
+          | "01KMD8AVGTK1J14VW8Z8KAFXJD"
+          | "01KMD8B640PPV194FNENGHJARW"
+          | "01KMD8BE3YX3HB7W4HJJZVMBT8"
+          | "01KMD8BG03JX6RK7ADXVDM2XEF"
+          | "01KMD8BHFMY44FWEY51VZ2H9XC"
+          | "01KMD8BKPZ8CG711JWW78T0QCG"
+          | "01KMD8BPACH27XM12334EGQPA7"
+          | "01KMD8BR272TP391K74K14WRR6"
+          | "01KMD8BSREXQV0YE9QYZRQSD3G"
+          | "01KMD8BVNCW6R7EKQ7FMAXTD97"
+          | "01KMD8BXCYFTRWDCR1QYZZ7GXD"
+          | "01KMGTF5TGYDXD50T0R8FG5D90"
+          | "01KMGVR9283AKCQKTHX3NY3ACG"
+          | "01KMGVV2ZJ67SG5YSJB55NAXMW"
+          | "01KMJ7X01SE2VDJAPVRDYK7QRC"
+          | "01KMKAK76QR7ZV40AERG9089JC"
+          | "01KPDG4JTMWY9CJ8NWAERHSSA1"
+          | "01KPDT1865K7GZBMS40ASQ7E9M"
+          | "01KPZDRCGCWF4MRXAPPR0792T4"
+          | "01KQCCRED7ARHT0K82BTE6RQR5"
+          | "01KQN2WH8WXGQVG9PAK7VV1E6Q"
+          | "01KQT8R22JSDV1KMEHS7RXBMG8"
+          | "01KQT8R86HY4EPBFBDA8HGKZME"
+          | "01KQT8RD0TX70AA9C19RP27M5A"
+          | "01KQT8RH61JTJDQSQYMVHCRCJM"
+          | "01KQT8ZE49TEHPTAMAFW2C746D"
+          | "01KQTGZAPXS26DABNJEXSM8GB4"
+          | "01KQTGZN9EY7DNK5CJSH5QZDEX"
+          | "01KQTKJFWS4P3VPY0QE8EWFA12"
+          | "01KQVEG9XZD0YTY92FAAKY0GK6"
+          | "01KQY5GJPGNP2NZGNNPB0KG2PP"
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
+        /**
+         * ## text
+         *
+         * ## Selector
+         *
+         * > ```yaml
+         * > text:
+         * >   multiple: false
+         * >   multiline: false
+         * > ```
+         */
+        text: string;
       }) => Promise<void>;
     };
     // # MARK: assist_satellite
@@ -1613,8 +2047,8 @@ declare module "@digital-alchemy/hass" {
          * >         - assist_satellite
          * >       supported_features:
          * >         - 2
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id: PICK_ENTITY | PICK_ENTITY[];
@@ -2268,8 +2702,8 @@ declare module "@digital-alchemy/hass" {
            * > entity:
            * >   domain:
            * >     - media_player
-           * >   multiple: false
            * >   reorder: false
+           * >   multiple: false
            * > ```
            */
           media_player: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
@@ -4975,8 +5409,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: never | never[];
@@ -4997,8 +5431,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: never | never[];
@@ -5019,8 +5453,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: ffmpeg
          * >   domain:
          * >     - binary_sensor
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: never | never[];
@@ -5730,8 +6164,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > entity:
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id: PICK_ENTITY | PICK_ENTITY[];
@@ -5962,7 +6396,7 @@ declare module "@digital-alchemy/hass" {
        *
        * >
        */
-      backup_full: (service_data?: {
+      backup_full: <T = unknown>(service_data?: {
         /**
          * ## compressed
          *
@@ -6053,13 +6487,13 @@ declare module "@digital-alchemy/hass" {
          * > ```
          */
         password?: string;
-      }) => Promise<void>;
+      }) => Promise<T>;
       /**
        * ### backup_partial
        *
        * >
        */
-      backup_partial: (service_data?: {
+      backup_partial: <T = unknown>(service_data?: {
         /**
          * ## addons
          *
@@ -6217,7 +6651,7 @@ declare module "@digital-alchemy/hass" {
          * > ```
          */
         password?: string;
-      }) => Promise<void>;
+      }) => Promise<T>;
       /**
        * ### host_reboot
        *
@@ -6551,7 +6985,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
       }) => Promise<void>;
       /**
        * ### reload_core_config
@@ -7977,8 +8412,8 @@ declare module "@digital-alchemy/hass" {
          *
          * > ```yaml
          * > entity:
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id?: PICK_ENTITY | PICK_ENTITY[];
@@ -8064,8 +8499,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -8205,7 +8640,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## Album URI
          *
@@ -8362,7 +8798,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## page
          *
@@ -8541,7 +8978,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## Artist URI
          *
@@ -8698,7 +9136,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## page
          *
@@ -8762,8 +9201,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -8903,7 +9342,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## Playlist URI
          *
@@ -9060,7 +9500,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## page
          *
@@ -9239,7 +9680,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## Podcast URI
          *
@@ -9396,7 +9838,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## Podcast URI
          *
@@ -9438,8 +9881,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -9572,8 +10015,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -9612,8 +10055,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -9650,8 +10093,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -9688,8 +10131,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -9726,8 +10169,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -9879,7 +10322,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## playlist_id
          *
@@ -9923,8 +10367,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -10090,7 +10534,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## Data
          *
@@ -10129,8 +10574,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -10172,8 +10617,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - media_player
          * >   integration: music_assistant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity:
@@ -11745,7 +12190,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## favorite
          *
@@ -12316,7 +12762,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## library_only
          *
@@ -12445,8 +12892,8 @@ declare module "@digital-alchemy/hass" {
            * >   domain:
            * >     - media_player
            * >   integration: music_assistant
-           * >   multiple: false
            * >   reorder: false
+           * >   multiple: false
            * > ```
            */
           source_player?:
@@ -13718,7 +14165,7 @@ declare module "@digital-alchemy/hass" {
            * >       - notify
            * > ```
            */
-          entity_id: never | never[];
+          entity_id: PICK_ENTITY<"notify"> | PICK_ENTITY<"notify">[];
           device_id: TDeviceId | TDeviceId[];
           label_id: TLabelId | TLabelId[];
           area_id: TAreaId | TAreaId[];
@@ -13972,7 +14419,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## filenames
          *
@@ -14147,7 +14595,8 @@ declare module "@digital-alchemy/hass" {
           | "01KQTKJFWS4P3VPY0QE8EWFA12"
           | "01KQVEG9XZD0YTY92FAAKY0GK6"
           | "01KQY5GJPGNP2NZGNNPB0KG2PP"
-          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ";
+          | "01KQY5GJWYSWHZ6ZY9EVC8KWMZ"
+          | "01KQZNCVAS42GPXTJG5T98RDTB";
         /**
          * ## prompt
          *
@@ -14421,8 +14870,8 @@ declare module "@digital-alchemy/hass" {
            * >   domain:
            * >     - tts
            * >   integration: openai_tts
-           * >   multiple: false
            * >   reorder: false
+           * >   multiple: false
            * > ```
            */
           tts_entity:
@@ -14621,8 +15070,8 @@ declare module "@digital-alchemy/hass" {
          * >   domain:
          * >     - sensor
          * >   integration: plant
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         meter_entity:
@@ -14647,8 +15096,8 @@ declare module "@digital-alchemy/hass" {
          * > entity:
          * >   domain:
          * >     - sensor
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         new_sensor?: PICK_ENTITY<"sensor"> | PICK_ENTITY<"sensor">[];
@@ -15993,8 +16442,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -16076,8 +16525,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -16215,8 +16664,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -16249,8 +16698,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: scheduler
          * >   domain:
          * >     - switch
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -17023,41 +17472,42 @@ declare module "@digital-alchemy/hass" {
        *
        * >
        */
-      restore: (service_data?: {
-        /**
-         * ## entity_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: sonos
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id?:
-          | PICK_FROM_PLATFORM<"sonos", "media_player">
-          | PICK_FROM_PLATFORM<"sonos", "media_player">[];
-        /**
-         * ## with_group
-         *
-         * ### Default
-         *
-         * > ```json
-         * > true
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        with_group?: boolean;
-      }) => Promise<void>;
+      restore: (
+        service_data?: {
+          /**
+           * ## with_group
+           *
+           * ### Default
+           *
+           * > ```json
+           * > true
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          with_group?: boolean;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - integration: sonos
+           * >     domain:
+           * >       - media_player
+           * > ```
+           */
+          entity_id:
+            | PICK_FROM_PLATFORM<"sonos", "media_player">
+            | PICK_FROM_PLATFORM<"sonos", "media_player">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
       /**
        * ### set_sleep_timer
        *
@@ -17103,41 +17553,42 @@ declare module "@digital-alchemy/hass" {
        *
        * >
        */
-      snapshot: (service_data?: {
-        /**
-         * ## entity_id
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > entity:
-         * >   integration: sonos
-         * >   domain:
-         * >     - media_player
-         * >   multiple: false
-         * >   reorder: false
-         * > ```
-         */
-        entity_id?:
-          | PICK_FROM_PLATFORM<"sonos", "media_player">
-          | PICK_FROM_PLATFORM<"sonos", "media_player">[];
-        /**
-         * ## with_group
-         *
-         * ### Default
-         *
-         * > ```json
-         * > true
-         * > ```
-         *
-         * ## Selector
-         *
-         * > ```yaml
-         * > boolean: {}
-         * > ```
-         */
-        with_group?: boolean;
-      }) => Promise<void>;
+      snapshot: (
+        service_data?: {
+          /**
+           * ## with_group
+           *
+           * ### Default
+           *
+           * > ```json
+           * > true
+           * > ```
+           *
+           * ## Selector
+           *
+           * > ```yaml
+           * > boolean: {}
+           * > ```
+           */
+          with_group?: boolean;
+        } & RequireAtLeastOne<{
+          /**
+           * Assisted definition
+           * > ```yaml
+           * > entity:
+           * >   - integration: sonos
+           * >     domain:
+           * >       - media_player
+           * > ```
+           */
+          entity_id:
+            | PICK_FROM_PLATFORM<"sonos", "media_player">
+            | PICK_FROM_PLATFORM<"sonos", "media_player">[];
+          device_id: TDeviceId | TDeviceId[];
+          label_id: TLabelId | TLabelId[];
+          area_id: TAreaId | TAreaId[];
+        }>,
+      ) => Promise<void>;
       /**
        * ### update_alarm
        *
@@ -18373,8 +18824,8 @@ declare module "@digital-alchemy/hass" {
            * > entity:
            * >   domain:
            * >     - media_player
-           * >   multiple: false
            * >   reorder: false
+           * >   multiple: false
            * > ```
            */
           media_player_entity_id: PICK_ENTITY<"media_player"> | PICK_ENTITY<"media_player">[];
@@ -19341,8 +19792,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: webostv
          * >   domain:
          * >     - media_player
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -19385,8 +19836,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: webostv
          * >   domain:
          * >     - media_player
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:
@@ -19428,8 +19879,8 @@ declare module "@digital-alchemy/hass" {
          * >   integration: webostv
          * >   domain:
          * >     - media_player
-         * >   multiple: false
          * >   reorder: false
+         * >   multiple: false
          * > ```
          */
         entity_id:

@@ -81,5 +81,62 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
     });
   };
 
-  return { play, playLocalMp3 };
+  interface ExposePlayingDataConfig {
+    entity: PICK_ENTITY<"media_player">;
+    topicPrefix: string;
+  }
+
+  const exposePlayingDataOnMqtt = ({ topicPrefix, entity }: ExposePlayingDataConfig) => {
+    const player = hass.refBy.id(entity);
+    const prefix = `${topicPrefix}/${entity}`;
+    player.onUpdate(async (newState, oldState) => {
+      if (newState.state !== oldState.state) {
+        await hass.call.mqtt.publish({
+          topic: `${prefix}/status`,
+          payload: newState.state,
+        });
+      }
+
+      const newStateAs = newState as typeof newState & {
+        attributes: { media_title?: string; media_artist?: string; entity_picture?: string };
+      };
+      const oldStateAs = oldState as typeof oldState & {
+        attributes: { media_title?: string; media_artist?: string; entity_picture?: string };
+      };
+
+      if (newState.state === "playing") {
+        if (
+          newStateAs.attributes.media_title &&
+          newStateAs.attributes.media_title !== oldStateAs.attributes.media_title
+        ) {
+          await hass.call.mqtt.publish({
+            topic: `${prefix}/title`,
+            payload: newStateAs.attributes.media_title,
+          });
+        }
+
+        if (
+          newStateAs.attributes.media_artist &&
+          newStateAs.attributes.media_artist !== oldStateAs.attributes.media_artist
+        ) {
+          await hass.call.mqtt.publish({
+            topic: `${prefix}/artist`,
+            payload: newStateAs.attributes.media_artist,
+          });
+        }
+
+        if (
+          newStateAs.attributes.entity_picture &&
+          newStateAs.attributes.entity_picture !== oldStateAs.attributes.entity_picture
+        ) {
+          await hass.call.mqtt.publish({
+            topic: `${prefix}/artwork`,
+            payload: newStateAs.attributes.entity_picture,
+          });
+        }
+      }
+    });
+  };
+
+  return { play, playLocalMp3, exposePlayingDataOnMqtt };
 }

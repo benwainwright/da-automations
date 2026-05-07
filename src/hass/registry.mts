@@ -130,29 +130,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5178
+           * > color_temp_kelvin: 2309
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.228
-           * >   - 16.878
+           * >   - 29.428
+           * >   - 79.921
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 231
-           * >   - 212
+           * >   - 151
+           * >   - 51
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.365
-           * >   - 0.347
+           * >   - 0.567
+           * >   - 0.389
            * > ```
            */ xy_color: [x: number, y: number];
           entity_id: (
@@ -264,39 +264,32 @@ declare module "@digital-alchemy/hass" {
             | "underwater";
           /**
            * > ```yaml
-           * > color_mode: color_temp
+           * > color_mode: null
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 255
+           * > brightness: null
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: null
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * > hs_color: null
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color:
-           * >   - 255
-           * >   - 233
-           * >   - 215
+           * > rgb_color: null
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * > xy_color: null
            * > ```
            */ xy_color: [x: number, y: number];
           entity_id: (
@@ -927,36 +920,6 @@ declare module "@digital-alchemy/hass" {
            * > ```
            */ max_color_temp_kelvin: number;
           supported_color_modes: ("color_temp" | "hs" | "xy")[];
-          /**
-           * > ```yaml
-           * > color_mode: null
-           * > ```
-           */ color_mode: "color_temp" | "hs" | "xy";
-          /**
-           * > ```yaml
-           * > brightness: null
-           * > ```
-           */ brightness: number;
-          /**
-           * > ```yaml
-           * > color_temp_kelvin: null
-           * > ```
-           */ color_temp_kelvin: number;
-          /**
-           * > ```yaml
-           * > hs_color: null
-           * > ```
-           */ hs_color: [h: number, s: number];
-          /**
-           * > ```yaml
-           * > rgb_color: null
-           * > ```
-           */ rgb_color: [r: number, g: number, b: number];
-          /**
-           * > ```yaml
-           * > xy_color: null
-           * > ```
-           */ xy_color: [x: number, y: number];
           friendly_name: "En-suite ceiling (centre)";
           /**
            * > ```yaml
@@ -982,36 +945,6 @@ declare module "@digital-alchemy/hass" {
            * > ```
            */ max_color_temp_kelvin: number;
           supported_color_modes: ("color_temp" | "hs" | "xy")[];
-          /**
-           * > ```yaml
-           * > color_mode: null
-           * > ```
-           */ color_mode: "color_temp" | "hs" | "xy";
-          /**
-           * > ```yaml
-           * > brightness: null
-           * > ```
-           */ brightness: number;
-          /**
-           * > ```yaml
-           * > color_temp_kelvin: null
-           * > ```
-           */ color_temp_kelvin: number;
-          /**
-           * > ```yaml
-           * > hs_color: null
-           * > ```
-           */ hs_color: [h: number, s: number];
-          /**
-           * > ```yaml
-           * > rgb_color: null
-           * > ```
-           */ rgb_color: [r: number, g: number, b: number];
-          /**
-           * > ```yaml
-           * > xy_color: null
-           * > ```
-           */ xy_color: [x: number, y: number];
           friendly_name: "En-suite (corner)";
           /**
            * > ```yaml
@@ -1116,29 +1049,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: 2309
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * >   - 29.428
+           * >   - 79.921
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 233
-           * >   - 215
+           * >   - 151
+           * >   - 51
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * >   - 0.567
+           * >   - 0.389
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "living room back wall (right)";
@@ -1245,29 +1178,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: 2309
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * >   - 29.428
+           * >   - 79.921
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 233
-           * >   - 215
+           * >   - 151
+           * >   - 51
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * >   - 0.567
+           * >   - 0.389
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room back wall (left)";
@@ -1374,29 +1307,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: 2309
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * >   - 29.428
+           * >   - 79.921
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 233
-           * >   - 215
+           * >   - 151
+           * >   - 51
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * >   - 0.567
+           * >   - 0.389
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room back wall (middlle)";
@@ -1503,29 +1436,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: 2309
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * >   - 29.428
+           * >   - 79.921
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 233
-           * >   - 215
+           * >   - 151
+           * >   - 51
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * >   - 0.567
+           * >   - 0.389
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Washing Machine)";
@@ -1632,29 +1565,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: 2309
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * >   - 29.428
+           * >   - 79.921
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 233
-           * >   - 215
+           * >   - 151
+           * >   - 51
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * >   - 0.567
+           * >   - 0.389
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Sink)";
@@ -1761,29 +1694,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: 2309
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * >   - 29.428
+           * >   - 79.921
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 233
-           * >   - 215
+           * >   - 151
+           * >   - 51
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * >   - 0.567
+           * >   - 0.389
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Oven)";
@@ -1890,29 +1823,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: 2309
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * >   - 29.428
+           * >   - 79.921
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 233
-           * >   - 215
+           * >   - 151
+           * >   - 51
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * >   - 0.567
+           * >   - 0.389
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Kitchen (Fridge)";
@@ -2013,29 +1946,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 4504
+           * > color_temp_kelvin: 2309
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 26.728
-           * >   - 26.434
+           * >   - 29.428
+           * >   - 79.921
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 218
-           * >   - 188
+           * >   - 151
+           * >   - 51
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.392
-           * >   - 0.357
+           * >   - 0.567
+           * >   - 0.389
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living Room (Bookcase)";
@@ -2878,39 +2811,32 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: color_temp
+           * > color_mode: null
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 255
+           * > brightness: null
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: null
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * > hs_color: null
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color:
-           * >   - 255
-           * >   - 233
-           * >   - 215
+           * > rgb_color: null
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * > xy_color: null
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Bedroom wall (right)";
@@ -3007,39 +2933,32 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: color_temp
+           * > color_mode: null
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 255
+           * > brightness: null
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: null
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * > hs_color: null
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color:
-           * >   - 255
-           * >   - 233
-           * >   - 215
+           * > rgb_color: null
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * > xy_color: null
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Left wall";
@@ -3136,39 +3055,32 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: color_temp
+           * > color_mode: null
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 255
+           * > brightness: null
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: null
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * > hs_color: null
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color:
-           * >   - 255
-           * >   - 233
-           * >   - 215
+           * > rgb_color: null
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * > xy_color: null
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Mirror light";
@@ -3265,39 +3177,32 @@ declare module "@digital-alchemy/hass" {
             | "stop_hue_effect";
           /**
            * > ```yaml
-           * > color_mode: color_temp
+           * > color_mode: null
            * > ```
            */ color_mode: "color_temp" | "xy";
           /**
            * > ```yaml
-           * > brightness: 255
+           * > brightness: null
            * > ```
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: null
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * > hs_color: null
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
-           * > rgb_color:
-           * >   - 255
-           * >   - 233
-           * >   - 215
+           * > rgb_color: null
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
-           * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * > xy_color: null
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Boor light";
@@ -3404,29 +3309,29 @@ declare module "@digital-alchemy/hass" {
            */ brightness: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5263
+           * > color_temp_kelvin: 2309
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
            * > hs_color:
-           * >   - 27.371
-           * >   - 15.784
+           * >   - 29.428
+           * >   - 79.921
            * > ```
            */ hs_color: [h: number, s: number];
           /**
            * > ```yaml
            * > rgb_color:
            * >   - 255
-           * >   - 233
-           * >   - 215
+           * >   - 151
+           * >   - 51
            * > ```
            */ rgb_color: [r: number, g: number, b: number];
           /**
            * > ```yaml
            * > xy_color:
-           * >   - 0.362
-           * >   - 0.346
+           * >   - 0.567
+           * >   - 0.389
            * > ```
            */ xy_color: [x: number, y: number];
           friendly_name: "Living room (TV wall)";
@@ -3623,12 +3528,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5260
+           * > color_temp_kelvin: 2305
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 190
+           * > color_temp_mired: 433
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -3636,7 +3541,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.9311055610036648
+           * > sun_position: 0.0876254660094995
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -3698,12 +3603,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5260
+           * > color_temp_kelvin: 2305
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 190
+           * > color_temp_mired: 433
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -3711,7 +3616,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.9307630948527323
+           * > sun_position: 0.08759887536342637
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -3773,12 +3678,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5260
+           * > color_temp_kelvin: 2305
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 190
+           * > color_temp_mired: 433
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -3786,7 +3691,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.9307635773369796
+           * > sun_position: 0.08759744415133619
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -3848,12 +3753,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5260
+           * > color_temp_kelvin: 2305
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 190
+           * > color_temp_mired: 433
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -3861,7 +3766,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.9307637957085021
+           * > sun_position: 0.08759599698698117
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -3923,12 +3828,12 @@ declare module "@digital-alchemy/hass" {
            */ brightness_pct: number;
           /**
            * > ```yaml
-           * > color_temp_kelvin: 5260
+           * > color_temp_kelvin: 2305
            * > ```
            */ color_temp_kelvin: number;
           /**
            * > ```yaml
-           * > color_temp_mired: 190
+           * > color_temp_mired: 433
            * > ```
            */ color_temp_mired: number;
           rgb_color: [];
@@ -3936,7 +3841,7 @@ declare module "@digital-alchemy/hass" {
           hs_color: [];
           /**
            * > ```yaml
-           * > sun_position: 0.9307639347351654
+           * > sun_position: 0.08759538462023275
            * > ```
            */ sun_position: number;
           force_rgb_color: boolean;
@@ -3947,6 +3852,82 @@ declare module "@digital-alchemy/hass" {
            */ autoreset_time_remaining: object;
           icon: "mdi:theme-light-dark";
           friendly_name: "Adaptive Lighting";
+        }
+      >;
+    };
+    "switch.boiler_main_element": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.boiler_main_element",
+        {
+          friendly_name: "Boiler Main Element";
+        }
+      >;
+    };
+    "switch.shellyem_a4e57cba73f5": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.shellyem_a4e57cba73f5",
+        {
+          friendly_name: "Shelly Heating Element";
+        }
+      >;
+    };
+    "switch.boiler_boost_switch": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.boiler_boost_switch",
+        {
+          friendly_name: "Boiler Boost Switch";
+        }
+      >;
+    };
+    "switch.living_room_heater_tv": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_heater_tv",
+        {
+          icon: "mdi:radiator";
+          friendly_name: "Living Room Heater (TV)";
+        }
+      >;
+    };
+    "switch.hallway_heater": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.hallway_heater",
+        {
+          icon: "mdi:radiator";
+          friendly_name: "Hallway Heater";
+        }
+      >;
+    };
+    "switch.living_room_heater_bookcase": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_heater_bookcase",
+        {
+          icon: "mdi:radiator";
+          friendly_name: "Living Room Heater (Bookcase)";
+        }
+      >;
+    };
+    "switch.bookcase_heater_aioshelly_ble_integration": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bookcase_heater_aioshelly_ble_integration",
+        {
+          friendly_name: "Living Room Heater (Bookcase) aioshelly_ble_integration";
+        }
+      >;
+    };
+    "switch.living_room_heater_window": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_heater_window",
+        {
+          icon: "mdi:radiator";
+          friendly_name: "Living Room Heater (Window)";
         }
       >;
     };
@@ -3967,17 +3948,17 @@ declare module "@digital-alchemy/hass" {
           actions: [];
           /**
            * > ```yaml
-           * > current_slot: 2
+           * > current_slot: 3
            * > ```
            */ current_slot: number;
           /**
            * > ```yaml
-           * > next_slot: 3
+           * > next_slot: 4
            * > ```
            */ next_slot: number;
           /**
            * > ```yaml
-           * > next_trigger: '2026-05-06T16:00:00+01:00'
+           * > next_trigger: '2026-05-07T21:00:00+01:00'
            * > ```
            */ next_trigger: string;
           tags: [];
@@ -4003,17 +3984,17 @@ declare module "@digital-alchemy/hass" {
           actions: [];
           /**
            * > ```yaml
-           * > current_slot: 2
+           * > current_slot: 3
            * > ```
            */ current_slot: number;
           /**
            * > ```yaml
-           * > next_slot: 3
+           * > next_slot: 4
            * > ```
            */ next_slot: number;
           /**
            * > ```yaml
-           * > next_trigger: '2026-05-06T16:00:00+01:00'
+           * > next_trigger: '2026-05-07T21:30:00+01:00'
            * > ```
            */ next_trigger: string;
           tags: [];
@@ -4033,17 +4014,17 @@ declare module "@digital-alchemy/hass" {
           actions: [];
           /**
            * > ```yaml
-           * > current_slot: 1
+           * > current_slot: 2
            * > ```
            */ current_slot: number;
           /**
            * > ```yaml
-           * > next_slot: 2
+           * > next_slot: 0
            * > ```
            */ next_slot: number;
           /**
            * > ```yaml
-           * > next_trigger: '2026-05-06T20:00:00+01:00'
+           * > next_trigger: '2026-05-08T00:00:00+01:00'
            * > ```
            */ next_trigger: string;
           tags: [];
@@ -4156,88 +4137,12 @@ declare module "@digital-alchemy/hass" {
            */ next_slot: number;
           /**
            * > ```yaml
-           * > next_trigger: '2026-05-07T00:00:00+01:00'
+           * > next_trigger: '2026-05-08T00:00:00+01:00'
            * > ```
            */ next_trigger: string;
           tags: [];
           icon: "mdi:calendar-clock";
           friendly_name: "Scheduler Boiler Schedule";
-        }
-      >;
-    };
-    "switch.shellyem_a4e57cba73f5": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.shellyem_a4e57cba73f5",
-        {
-          friendly_name: "Shelly Heating Element";
-        }
-      >;
-    };
-    "switch.boiler_main_element": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.boiler_main_element",
-        {
-          friendly_name: "Boiler Main Element";
-        }
-      >;
-    };
-    "switch.living_room_heater_bookcase": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_heater_bookcase",
-        {
-          icon: "mdi:radiator";
-          friendly_name: "Living Room Heater (Bookcase)";
-        }
-      >;
-    };
-    "switch.bookcase_heater_aioshelly_ble_integration": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bookcase_heater_aioshelly_ble_integration",
-        {
-          friendly_name: "Living Room Heater (Bookcase) aioshelly_ble_integration";
-        }
-      >;
-    };
-    "switch.living_room_heater_tv": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_heater_tv",
-        {
-          icon: "mdi:radiator";
-          friendly_name: "Living Room Heater (TV)";
-        }
-      >;
-    };
-    "switch.living_room_heater_window": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_heater_window",
-        {
-          icon: "mdi:radiator";
-          friendly_name: "Living Room Heater (Window)";
-        }
-      >;
-    };
-    "switch.hallway_heater": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.hallway_heater",
-        {
-          icon: "mdi:radiator";
-          friendly_name: "Hallway Heater";
-        }
-      >;
-    };
-    "switch.boiler_boost_switch": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.boiler_boost_switch",
-        {
-          friendly_name: "Boiler Boost Switch";
         }
       >;
     };
@@ -4250,167 +4155,13 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "switch.bathroom_sonos_crossfade": {
+    "switch.bed_occupancy_sensor_full_range": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
-        "switch.bathroom_sonos_crossfade",
+        "switch.bed_occupancy_sensor_full_range",
         {
-          friendly_name: "Bathroom Speaker Crossfade";
-        }
-      >;
-    };
-    "switch.bathroom_sonos_loudness": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bathroom_sonos_loudness",
-        {
-          friendly_name: "Bathroom Speaker Loudness";
-        }
-      >;
-    };
-    "switch.bathroom_sonos_status_light": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bathroom_sonos_status_light",
-        {
-          friendly_name: "Bathroom Speaker Status light";
-        }
-      >;
-    };
-    "switch.living_room_crossfade": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_crossfade",
-        {
-          friendly_name: "Living Room Crossfade";
-        }
-      >;
-    };
-    "switch.living_room_loudness": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_loudness",
-        {
-          friendly_name: "Living Room Loudness";
-        }
-      >;
-    };
-    "switch.living_room_surround_music_full_volume": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_surround_music_full_volume",
-        {
-          friendly_name: "Living Room Surround music full volume";
-        }
-      >;
-    };
-    "switch.living_room_night_sound": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_night_sound",
-        {
-          friendly_name: "Living Room Night sound";
-        }
-      >;
-    };
-    "switch.living_room_speech_enhancement": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_speech_enhancement",
-        {
-          friendly_name: "Living Room Speech enhancement";
-        }
-      >;
-    };
-    "switch.living_room_surround_enabled": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.living_room_surround_enabled",
-        {
-          friendly_name: "Living Room Surround enabled";
-        }
-      >;
-    };
-    "switch.bedroom_sonos_touch_controls": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bedroom_sonos_touch_controls",
-        {
-          friendly_name: "Bedroom Speaker Touch controls";
-        }
-      >;
-    };
-    "switch.bedroom_sonos_crossfade": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bedroom_sonos_crossfade",
-        {
-          friendly_name: "Bedroom Speaker Crossfade";
-        }
-      >;
-    };
-    "switch.bedroom_sonos_loudness": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bedroom_sonos_loudness",
-        {
-          friendly_name: "Bedroom Speaker Loudness";
-        }
-      >;
-    };
-    "switch.bedroom_sonos_status_light": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bedroom_sonos_status_light",
-        {
-          friendly_name: "Bedroom Speaker Status light";
-        }
-      >;
-    };
-    "switch.hallway_sonos_crossfade": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.hallway_sonos_crossfade",
-        {
-          friendly_name: "Hallway Crossfade";
-        }
-      >;
-    };
-    "switch.hallway_sonos_loudness": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.hallway_sonos_loudness",
-        {
-          friendly_name: "Hallway Loudness";
-        }
-      >;
-    };
-    "switch.hallway_sonos_status_light": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.hallway_sonos_status_light",
-        {
-          friendly_name: "Hallway Status light";
-        }
-      >;
-    };
-    "switch.hass_server": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.hass_server",
-        {
-          device_class: "outlet";
-          friendly_name: "Hass Server";
-        }
-      >;
-    };
-    "switch.mac": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.mac",
-        {
-          device_class: "outlet";
-          friendly_name: "Mac";
+          icon: "mdi:arrow-expand";
+          friendly_name: "Bed Occupancy Sensor Full Range";
         }
       >;
     };
@@ -4645,6 +4396,105 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "switch.hallway_sonos_crossfade": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.hallway_sonos_crossfade",
+        {
+          friendly_name: "Hallway Crossfade";
+        }
+      >;
+    };
+    "switch.hallway_sonos_loudness": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.hallway_sonos_loudness",
+        {
+          friendly_name: "Hallway Loudness";
+        }
+      >;
+    };
+    "switch.hallway_sonos_status_light": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.hallway_sonos_status_light",
+        {
+          friendly_name: "Hallway Status light";
+        }
+      >;
+    };
+    "switch.hallway_tv_autoplay": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.hallway_tv_autoplay",
+        {
+          friendly_name: "Hallway TV autoplay";
+        }
+      >;
+    };
+    "switch.hallway_ungroup_on_autoplay": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.hallway_ungroup_on_autoplay",
+        {
+          friendly_name: "Hallway Ungroup on autoplay";
+        }
+      >;
+    };
+    "switch.bedroom_sonos_touch_controls": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_sonos_touch_controls",
+        {
+          friendly_name: "Bedroom Speaker Touch controls";
+        }
+      >;
+    };
+    "switch.bedroom_sonos_crossfade": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_sonos_crossfade",
+        {
+          friendly_name: "Bedroom Speaker Crossfade";
+        }
+      >;
+    };
+    "switch.bedroom_sonos_loudness": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_sonos_loudness",
+        {
+          friendly_name: "Bedroom Speaker Loudness";
+        }
+      >;
+    };
+    "switch.bedroom_sonos_status_light": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_sonos_status_light",
+        {
+          friendly_name: "Bedroom Speaker Status light";
+        }
+      >;
+    };
+    "switch.bedroom_speaker_tv_autoplay": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_speaker_tv_autoplay",
+        {
+          friendly_name: "Bedroom Speaker TV autoplay";
+        }
+      >;
+    };
+    "switch.bedroom_speaker_ungroup_on_autoplay": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bedroom_speaker_ungroup_on_autoplay",
+        {
+          friendly_name: "Bedroom Speaker Ungroup on autoplay";
+        }
+      >;
+    };
     "switch.tumble_dryer": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
@@ -4652,6 +4502,143 @@ declare module "@digital-alchemy/hass" {
         {
           device_class: "outlet";
           friendly_name: "Tumble Dryer";
+        }
+      >;
+    };
+    "switch.mac": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.mac",
+        {
+          device_class: "outlet";
+          friendly_name: "Mac";
+        }
+      >;
+    };
+    "switch.bathroom_sonos_crossfade": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bathroom_sonos_crossfade",
+        {
+          friendly_name: "Bathroom Speaker Crossfade";
+        }
+      >;
+    };
+    "switch.bathroom_sonos_loudness": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bathroom_sonos_loudness",
+        {
+          friendly_name: "Bathroom Speaker Loudness";
+        }
+      >;
+    };
+    "switch.bathroom_sonos_status_light": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bathroom_sonos_status_light",
+        {
+          friendly_name: "Bathroom Speaker Status light";
+        }
+      >;
+    };
+    "switch.bathroom_speaker_tv_autoplay": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bathroom_speaker_tv_autoplay",
+        {
+          friendly_name: "Bathroom Speaker TV autoplay";
+        }
+      >;
+    };
+    "switch.bathroom_speaker_ungroup_on_autoplay": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.bathroom_speaker_ungroup_on_autoplay",
+        {
+          friendly_name: "Bathroom Speaker Ungroup on autoplay";
+        }
+      >;
+    };
+    "switch.hass_server": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.hass_server",
+        {
+          device_class: "outlet";
+          friendly_name: "Hass Server";
+        }
+      >;
+    };
+    "switch.living_room_crossfade": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_crossfade",
+        {
+          friendly_name: "Living Room Crossfade";
+        }
+      >;
+    };
+    "switch.living_room_loudness": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_loudness",
+        {
+          friendly_name: "Living Room Loudness";
+        }
+      >;
+    };
+    "switch.living_room_surround_music_full_volume": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_surround_music_full_volume",
+        {
+          friendly_name: "Living Room Surround music full volume";
+        }
+      >;
+    };
+    "switch.living_room_night_sound": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_night_sound",
+        {
+          friendly_name: "Living Room Night sound";
+        }
+      >;
+    };
+    "switch.living_room_speech_enhancement": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_speech_enhancement",
+        {
+          friendly_name: "Living Room Speech enhancement";
+        }
+      >;
+    };
+    "switch.living_room_surround_enabled": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_surround_enabled",
+        {
+          friendly_name: "Living Room Surround enabled";
+        }
+      >;
+    };
+    "switch.living_room_tv_autoplay": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_tv_autoplay",
+        {
+          friendly_name: "Living Room TV autoplay";
+        }
+      >;
+    };
+    "switch.living_room_ungroup_on_autoplay": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "switch.living_room_ungroup_on_autoplay",
+        {
+          friendly_name: "Living Room Ungroup on autoplay";
         }
       >;
     };
@@ -5358,16 +5345,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "switch.bed_occupancy_sensor_full_range": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "switch.bed_occupancy_sensor_full_range",
-        {
-          icon: "mdi:arrow-expand";
-          friendly_name: "Bed Occupancy Sensor Full Range";
-        }
-      >;
-    };
     "update.home_assistant_supervisor_update": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
@@ -5399,7 +5376,7 @@ declare module "@digital-alchemy/hass" {
           friendly_name: "Home Assistant Supervisor Update";
           /**
            * > ```yaml
-           * > supported_features: 1
+           * > supported_features: 5
            * > ```
            */ supported_features: number;
         }
@@ -5416,9 +5393,9 @@ declare module "@digital-alchemy/hass" {
            * > display_precision: 0
            * > ```
            */ display_precision: number;
-          installed_version: "2026.4.4";
+          installed_version: "2026.5.0";
           in_progress: boolean;
-          latest_version: "2026.4.4";
+          latest_version: "2026.5.0";
           release_summary: null;
           /**
            * > ```yaml
@@ -5437,6 +5414,43 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > supported_features: 15
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.home_assistant_operating_system_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.home_assistant_operating_system_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "17.3";
+          in_progress: boolean;
+          latest_version: "17.3";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/home-assistant/operating-system/releases/tag/17.3
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: "Home Assistant Operating System";
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: /api/brands/integration/homeassistant/icon.png?placeholder=no
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Home Assistant Operating System Update";
+          /**
+           * > ```yaml
+           * > supported_features: 11
            * > ```
            */ supported_features: number;
         }
@@ -5554,7 +5568,7 @@ declare module "@digital-alchemy/hass" {
            */ display_precision: number;
           installed_version: "2.10.0-1";
           in_progress: boolean;
-          latest_version: "2.10.0-1";
+          latest_version: "2.10.1-1";
           release_summary: null;
           release_url: null;
           skipped_version: null;
@@ -5981,9 +5995,9 @@ declare module "@digital-alchemy/hass" {
            * > display_precision: 0
            * > ```
            */ display_precision: number;
-          installed_version: "2026.4.4";
+          installed_version: "2026.4.5";
           in_progress: boolean;
-          latest_version: "2026.4.4";
+          latest_version: "2026.4.5";
           release_summary: null;
           release_url: null;
           skipped_version: null;
@@ -6014,9 +6028,9 @@ declare module "@digital-alchemy/hass" {
            * > display_precision: 0
            * > ```
            */ display_precision: number;
-          installed_version: "2.16.7";
+          installed_version: "2.16.8";
           in_progress: boolean;
-          latest_version: "2.16.7";
+          latest_version: "2.16.8";
           release_summary: null;
           release_url: null;
           skipped_version: null;
@@ -6059,43 +6073,6 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > supported_features: 29
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.home_assistant_operating_system_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.home_assistant_operating_system_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "17.2";
-          in_progress: boolean;
-          latest_version: "17.2";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/home-assistant/operating-system/releases/tag/17.2
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: "Home Assistant Operating System";
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: /api/brands/integration/homeassistant/icon.png?placeholder=no
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Home Assistant Operating System Update";
-          /**
-           * > ```yaml
-           * > supported_features: 11
            * > ```
            */ supported_features: number;
         }
@@ -6222,20 +6199,6 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "update.kajplats_gu10_cws_470lm_firmware_3",
         {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "1.2.0";
-          in_progress: boolean;
-          latest_version: "1.2.0";
-          release_summary: null;
-          release_url: null;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
           device_class: "firmware";
           friendly_name: "En-suite ceiling (centre) Firmware";
           /**
@@ -6251,20 +6214,6 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "update.kajplats_gu10_cws_470lm_firmware_4",
         {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "1.2.0";
-          in_progress: boolean;
-          latest_version: "1.2.0";
-          release_summary: null;
-          release_url: null;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
           device_class: "firmware";
           friendly_name: "En-suite (corner) Firmware";
           /**
@@ -6275,10 +6224,10 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "update.shellyplus1pm_a0dd6c27e768_firmware": {
+    "update.boiler_boost_switch_firmware": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
-        "update.shellyplus1pm_a0dd6c27e768_firmware",
+        "update.boiler_boost_switch_firmware",
         {
           auto_update: boolean;
           /**
@@ -6304,7 +6253,7 @@ declare module "@digital-alchemy/hass" {
            * > entity_picture: /api/brands/integration/shelly/icon.png
            * > ```
            */ entity_picture: string;
-          friendly_name: "Living Room Heater (Bookcase) Firmware";
+          friendly_name: "Boiler Boost Switch Firmware";
           /**
            * > ```yaml
            * > supported_features: 5
@@ -6351,44 +6300,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "update.shellyplus1pm_a0dd6c2b6cf4_firmware": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.shellyplus1pm_a0dd6c2b6cf4_firmware",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "1.7.5";
-          in_progress: boolean;
-          latest_version: "1.7.5";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://shelly-api-docs.shelly.cloud/gen2/changelog/
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          device_class: "firmware";
-          /**
-           * > ```yaml
-           * > entity_picture: /api/brands/integration/shelly/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Living Room Heater (Window) Firmware";
-          /**
-           * > ```yaml
-           * > supported_features: 5
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
     "update.shellyplus1pm_a0dd6c2b3a6c_firmware": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
@@ -6427,10 +6338,10 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "update.boiler_boost_switch_firmware": {
+    "update.shellyplus1pm_a0dd6c27e768_firmware": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
-        "update.boiler_boost_switch_firmware",
+        "update.shellyplus1pm_a0dd6c27e768_firmware",
         {
           auto_update: boolean;
           /**
@@ -6456,10 +6367,1170 @@ declare module "@digital-alchemy/hass" {
            * > entity_picture: /api/brands/integration/shelly/icon.png
            * > ```
            */ entity_picture: string;
-          friendly_name: "Boiler Boost Switch Firmware";
+          friendly_name: "Living Room Heater (Bookcase) Firmware";
           /**
            * > ```yaml
            * > supported_features: 5
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.shellyplus1pm_a0dd6c2b6cf4_firmware": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.shellyplus1pm_a0dd6c2b6cf4_firmware",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "1.7.5";
+          in_progress: boolean;
+          latest_version: "1.7.5";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://shelly-api-docs.shelly.cloud/gen2/changelog/
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          device_class: "firmware";
+          /**
+           * > ```yaml
+           * > entity_picture: /api/brands/integration/shelly/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Living Room Heater (Window) Firmware";
+          /**
+           * > ```yaml
+           * > supported_features: 5
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.openai_tts_speech_service_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.openai_tts_speech_service_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v3.8";
+          in_progress: boolean;
+          latest_version: "v3.8";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/sfortis/openai_tts/releases/v3.8
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/openai_tts/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "OpenAI TTS Speech Service Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.template_entity_row_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.template_entity_row_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v1.4.1";
+          in_progress: boolean;
+          latest_version: "v1.4.1";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/thomasloven/lovelace-template-entity-row/releases/v1.4.1
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "template-entity-row Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.haghs_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.haghs_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v2.2.2";
+          in_progress: boolean;
+          latest_version: "v2.2.2";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/D-N91/home-assistant-global-health-score/releases/v2.2.2
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/haghs/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "HAGHS Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.music_assistant_player_card_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.music_assistant_player_card_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v2.6.0";
+          in_progress: boolean;
+          latest_version: "v2.6.0";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/droans/mass-player-card/releases/v2.6.0
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "Music Assistant Player Card Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.combined_notifications_integration_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.combined_notifications_integration_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v5.3.0";
+          in_progress: boolean;
+          latest_version: "v5.3.0";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: >-
+           * >   https://github.com/Pjarbit/home-assistant-combined-notification-integration/releases/v5.3.0
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/combined_notifications/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Combined Notifications Integration Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.adaptive_lighting_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.adaptive_lighting_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v1.30.1";
+          in_progress: boolean;
+          latest_version: "v1.30.1";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/basnijholt/adaptive-lighting/releases/v1.30.1
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/adaptive_lighting/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Adaptive Lighting Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.scheduler_card_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.scheduler_card_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v4.0.17";
+          in_progress: boolean;
+          latest_version: "v4.0.17";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/nielsfaber/scheduler-card/releases/v4.0.17
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "Scheduler Card Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.chime_tts_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.chime_tts_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v1.2.3-beta1";
+          in_progress: boolean;
+          latest_version: "v1.2.2";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/nimroddolev/chime_tts/releases/v1.2.2
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/chime_tts/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Chime TTS Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.sonos_card_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.sonos_card_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v10.6.8";
+          in_progress: boolean;
+          latest_version: "v10.6.8";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/punxaphil/custom-sonos-card/releases/v10.6.8
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "Sonos Card Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.yet_another_media_player_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.yet_another_media_player_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v38.0.2";
+          in_progress: boolean;
+          latest_version: "v38.0.2";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/jianyu-li/yet-another-media-player/releases/v38.0.2
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "Yet Another Media Player Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.hacs_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.hacs_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "2.0.5";
+          in_progress: boolean;
+          latest_version: "2.0.5";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/hacs/integration/releases/2.0.5
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/hacs/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "HACS Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.auto_entities_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.auto_entities_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v1.16.1";
+          in_progress: boolean;
+          latest_version: "v1.16.1";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/thomasloven/lovelace-auto-entities/releases/v1.16.1
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "auto-entities Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.tp_link_router_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.tp_link_router_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v2.22.0";
+          in_progress: boolean;
+          latest_version: "v2.22.0";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: >-
+           * >   https://github.com/AlexandrErohin/home-assistant-tplink-router/releases/v2.22.0
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/tplink_router/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "TP-Link Router Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.better_thermostat_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.better_thermostat_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "1.7.0";
+          in_progress: boolean;
+          latest_version: "1.7.0";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/KartoffelToby/better_thermostat/releases/1.7.0
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/better_thermostat/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Better Thermostat Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.battery_state_card_entity_row_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.battery_state_card_entity_row_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v4.2.0";
+          in_progress: boolean;
+          latest_version: "v4.2.0";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/maxwroc/battery-state-card/releases/v4.2.0
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "Battery State Card / Entity Row Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.card_mod_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.card_mod_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v4.2.1";
+          in_progress: boolean;
+          latest_version: "v4.2.1";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/thomasloven/lovelace-card-mod/releases/v4.2.1
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "card-mod Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.expander_card_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.expander_card_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "7.0.7";
+          in_progress: boolean;
+          latest_version: "7.0.7";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/MelleD/lovelace-expander-card/releases/7.0.7
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "expander-card Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.digital_alchemy_synapse_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.digital_alchemy_synapse_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v25.12.19";
+          in_progress: boolean;
+          latest_version: "v25.12.19";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/Digital-Alchemy-TS/synapse-extension/releases/v25.12.19
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/synapse/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Digital Alchemy Synapse Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.ultra_card_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.ultra_card_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v3.3.1";
+          in_progress: boolean;
+          latest_version: "v3.3.1";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/WJDDesigns/Ultra-Card/releases/v3.3.1
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "Ultra Card Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.openai_gpt_4o_mini_tts_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.openai_gpt_4o_mini_tts_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v1.1.0";
+          in_progress: boolean;
+          latest_version: "v1.1.0";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: >-
+           * >   https://github.com/wifiuk/OpenAI-GPT-4o-Mini-TTS-Home-Assistant-Integration/releases/v1.1.0
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/openai_gpt4o_tts/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "OpenAI GPT-4o Mini TTS Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.timeline_card_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.timeline_card_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v1.10.0";
+          in_progress: boolean;
+          latest_version: "v1.10.0";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/weedpump/timeline-card/releases/v1.10.0
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "Timeline Card Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.flower_card_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.flower_card_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v2026.4.1";
+          in_progress: boolean;
+          latest_version: "v2026.4.1";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/Olen/lovelace-flower-card/releases/v2026.4.1
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "Flower Card Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.powercalc_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.powercalc_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v1.20.14";
+          in_progress: boolean;
+          latest_version: "v1.20.14";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/bramstroker/homeassistant-powercalc/releases/v1.20.14
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/powercalc/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Powercalc Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.music_assistant_queue_actions_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.music_assistant_queue_actions_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v0.10.1";
+          in_progress: boolean;
+          latest_version: "v0.10.1";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/droans/mass_queue/releases/v0.10.1
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/mass_queue/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Music Assistant Queue Actions Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.tapo_controller_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.tapo_controller_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "3.5.0";
+          in_progress: boolean;
+          latest_version: "3.5.0";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/petretiandrea/home-assistant-tapo-p100/releases/3.5.0
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/tapo/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Tapo Controller Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.openplantbook_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.openplantbook_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v1.4.0";
+          in_progress: boolean;
+          latest_version: "v1.4.0";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/Olen/home-assistant-openplantbook/releases/v1.4.0
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/openplantbook/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "OpenPlantbook Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.ha_optimizer_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.ha_optimizer_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v1.2.2";
+          in_progress: boolean;
+          latest_version: "v1.2.2";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/doanlong1412/HA-Optimizer/releases/v1.2.2
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/ha_optimizer/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "HA Optimizer Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.tp_link_router_card_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.tp_link_router_card_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v0.4.1";
+          in_progress: boolean;
+          latest_version: "v0.4.1";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/hepter/ha-tplink-router-card/releases/v0.4.1
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          friendly_name: "TP-Link Router Card Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.home_assistant_plant_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.home_assistant_plant_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v2026.3.2";
+          in_progress: boolean;
+          latest_version: "v2026.3.2";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/Olen/homeassistant-plant/releases/v2026.3.2
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/plant/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Home Assistant Plant Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.scheduler_component_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.scheduler_component_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v3.3.8";
+          in_progress: boolean;
+          latest_version: "v3.3.8";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/nielsfaber/scheduler-component/releases/v3.3.8
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/scheduler/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Scheduler component Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.extended_openai_conversation_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.extended_openai_conversation_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "2.0.2";
+          in_progress: boolean;
+          latest_version: "2.0.2";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/jekalmin/extended_openai_conversation/releases/2.0.2
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/extended_openai_conversation/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "extended_openai_conversation Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "update.alexa_media_player_update": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "update.alexa_media_player_update",
+        {
+          auto_update: boolean;
+          /**
+           * > ```yaml
+           * > display_precision: 0
+           * > ```
+           */ display_precision: number;
+          installed_version: "v5.15.1";
+          in_progress: boolean;
+          latest_version: "v5.15.1";
+          release_summary: null;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/alandtse/alexa_media_player/releases/v5.15.1
+           * > ```
+           */ release_url: string;
+          skipped_version: null;
+          title: null;
+          update_percentage: null;
+          /**
+           * > ```yaml
+           * > entity_picture: https://brands.home-assistant.io/_/alexa_media/icon.png
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Alexa Media Player Update";
+          /**
+           * > ```yaml
+           * > supported_features: 23
            * > ```
            */ supported_features: number;
         }
@@ -6567,10 +7638,10 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "update.tapo_controller_update": {
+    "update.bed_occupancy_sensor_firmware": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
-        "update.tapo_controller_update",
+        "update.bed_occupancy_sensor_firmware",
         {
           auto_update: boolean;
           /**
@@ -6578,1157 +7649,27 @@ declare module "@digital-alchemy/hass" {
            * > display_precision: 0
            * > ```
            */ display_precision: number;
-          installed_version: "3.5.0";
+          installed_version: "v2.0.0";
           in_progress: boolean;
-          latest_version: "3.5.0";
+          latest_version: "v2.0.0";
           release_summary: null;
           /**
            * > ```yaml
-           * > release_url: https://github.com/petretiandrea/home-assistant-tapo-p100/releases/3.5.0
+           * > release_url: https://github.com/ElevatedSensors/bed-presence-mk1/releases/tag/v2.0.0
            * > ```
            */ release_url: string;
           skipped_version: null;
-          title: null;
+          title: "ElevatedSensors.BedPresenceMk1";
           update_percentage: null;
           /**
            * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/tapo/icon.png
+           * > entity_picture: /api/brands/integration/esphome/icon.png
            * > ```
            */ entity_picture: string;
-          friendly_name: "Tapo Controller Update";
+          friendly_name: "Bed Occupancy Sensor Firmware";
           /**
            * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.expander_card_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.expander_card_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "7.0.7";
-          in_progress: boolean;
-          latest_version: "7.0.7";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/MelleD/lovelace-expander-card/releases/7.0.7
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "expander-card Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.openclaw_assistant_update_2": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.openclaw_assistant_update_2",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "0.1.61";
-          in_progress: boolean;
-          latest_version: "0.1.62";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/techartdev/OpenClawHomeAssistantIntegration/releases/0.1.62
-           * > ```
-           */ release_url: string;
-          /**
-           * > ```yaml
-           * > skipped_version: 0.1.62
-           * > ```
-           */ skipped_version: string;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/openclaw/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "OpenClaw Assistant Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.tp_link_router_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.tp_link_router_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v2.22.0";
-          in_progress: boolean;
-          latest_version: "v2.22.0";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: >-
-           * >   https://github.com/AlexandrErohin/home-assistant-tplink-router/releases/v2.22.0
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/tplink_router/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "TP-Link Router Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.music_assistant_queue_actions_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.music_assistant_queue_actions_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v0.10.1";
-          in_progress: boolean;
-          latest_version: "v0.10.1";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/droans/mass_queue/releases/v0.10.1
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/mass_queue/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Music Assistant Queue Actions Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.tp_link_router_card_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.tp_link_router_card_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v0.4.1";
-          in_progress: boolean;
-          latest_version: "v0.4.1";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/hepter/ha-tplink-router-card/releases/v0.4.1
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "TP-Link Router Card Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.hacs_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.hacs_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "2.0.5";
-          in_progress: boolean;
-          latest_version: "2.0.5";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/hacs/integration/releases/2.0.5
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/hacs/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "HACS Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.ha_optimizer_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.ha_optimizer_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v1.2.2";
-          in_progress: boolean;
-          latest_version: "v1.2.2";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/doanlong1412/HA-Optimizer/releases/v1.2.2
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/ha_optimizer/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "HA Optimizer Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.digital_alchemy_synapse_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.digital_alchemy_synapse_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v25.12.19";
-          in_progress: boolean;
-          latest_version: "v25.12.19";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/Digital-Alchemy-TS/synapse-extension/releases/v25.12.19
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/synapse/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Digital Alchemy Synapse Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.timeline_card_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.timeline_card_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v1.9.0";
-          in_progress: boolean;
-          latest_version: "v1.9.0";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/weedpump/timeline-card/releases/v1.9.0
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "Timeline Card Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.home_assistant_plant_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.home_assistant_plant_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v2026.3.2";
-          in_progress: boolean;
-          latest_version: "v2026.3.2";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/Olen/homeassistant-plant/releases/v2026.3.2
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/plant/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Home Assistant Plant Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.scheduler_component_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.scheduler_component_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v3.3.8";
-          in_progress: boolean;
-          latest_version: "v3.3.8";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/nielsfaber/scheduler-component/releases/v3.3.8
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/scheduler/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Scheduler component Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.alexa_media_player_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.alexa_media_player_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v5.15.1";
-          in_progress: boolean;
-          latest_version: "v5.15.1";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/alandtse/alexa_media_player/releases/v5.15.1
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/alexa_media/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Alexa Media Player Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.openai_gpt_4o_mini_tts_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.openai_gpt_4o_mini_tts_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v1.1.0";
-          in_progress: boolean;
-          latest_version: "v1.1.0";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: >-
-           * >   https://github.com/wifiuk/OpenAI-GPT-4o-Mini-TTS-Home-Assistant-Integration/releases/v1.1.0
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/openai_gpt4o_tts/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "OpenAI GPT-4o Mini TTS Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.adaptive_lighting_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.adaptive_lighting_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v1.30.1";
-          in_progress: boolean;
-          latest_version: "v1.30.1";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/basnijholt/adaptive-lighting/releases/v1.30.1
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/adaptive_lighting/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Adaptive Lighting Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.template_entity_row_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.template_entity_row_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v1.4.1";
-          in_progress: boolean;
-          latest_version: "v1.4.1";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/thomasloven/lovelace-template-entity-row/releases/v1.4.1
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "template-entity-row Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.extended_openai_conversation_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.extended_openai_conversation_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "2.0.2";
-          in_progress: boolean;
-          latest_version: "2.0.2";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/jekalmin/extended_openai_conversation/releases/2.0.2
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/extended_openai_conversation/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "extended_openai_conversation Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.ultra_card_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.ultra_card_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v3.3.1";
-          in_progress: boolean;
-          latest_version: "v3.3.1";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/WJDDesigns/Ultra-Card/releases/v3.3.1
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "Ultra Card Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.powercalc_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.powercalc_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v1.20.14";
-          in_progress: boolean;
-          latest_version: "v1.20.14";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/bramstroker/homeassistant-powercalc/releases/v1.20.14
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/powercalc/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Powercalc Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.yet_another_media_player_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.yet_another_media_player_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v38.0.2";
-          in_progress: boolean;
-          latest_version: "v38.0.2";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/jianyu-li/yet-another-media-player/releases/v38.0.2
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "Yet Another Media Player Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.flower_card_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.flower_card_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v2026.4.1";
-          in_progress: boolean;
-          latest_version: "v2026.4.1";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/Olen/lovelace-flower-card/releases/v2026.4.1
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "Flower Card Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.chime_tts_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.chime_tts_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v1.2.3-beta1";
-          in_progress: boolean;
-          latest_version: "v1.2.2";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/nimroddolev/chime_tts/releases/v1.2.2
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/chime_tts/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Chime TTS Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.scheduler_card_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.scheduler_card_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v4.0.17";
-          in_progress: boolean;
-          latest_version: "v4.0.17";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/nielsfaber/scheduler-card/releases/v4.0.17
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "Scheduler Card Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.haghs_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.haghs_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v2.2.2";
-          in_progress: boolean;
-          latest_version: "v2.2.2";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/D-N91/home-assistant-global-health-score/releases/v2.2.2
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/haghs/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "HAGHS Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.sonos_card_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.sonos_card_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v10.6.8";
-          in_progress: boolean;
-          latest_version: "v10.6.8";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/punxaphil/custom-sonos-card/releases/v10.6.8
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "Sonos Card Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.combined_notifications_integration_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.combined_notifications_integration_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v5.2.0";
-          in_progress: boolean;
-          latest_version: "v5.3.0";
-          /**
-           * > ```yaml
-           * > release_summary: <ha-alert alert-type='error'>Restart of Home Assistant required</ha-alert>
-           * > ```
-           */ release_summary: string;
-          /**
-           * > ```yaml
-           * > release_url: >-
-           * >   https://github.com/Pjarbit/home-assistant-combined-notification-integration/releases/v5.3.0
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/combined_notifications/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Combined Notifications Integration Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.card_mod_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.card_mod_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v4.2.1";
-          in_progress: boolean;
-          latest_version: "v4.2.1";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/thomasloven/lovelace-card-mod/releases/v4.2.1
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "card-mod Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.music_assistant_player_card_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.music_assistant_player_card_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v2.6.0";
-          in_progress: boolean;
-          latest_version: "v2.6.0";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/droans/mass-player-card/releases/v2.6.0
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "Music Assistant Player Card Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.auto_entities_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.auto_entities_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v1.16.1";
-          in_progress: boolean;
-          latest_version: "v1.16.1";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/thomasloven/lovelace-auto-entities/releases/v1.16.1
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "auto-entities Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.battery_state_card_entity_row_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.battery_state_card_entity_row_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v4.2.0";
-          in_progress: boolean;
-          latest_version: "v4.2.0";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/maxwroc/battery-state-card/releases/v4.2.0
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          friendly_name: "Battery State Card / Entity Row Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.openplantbook_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.openplantbook_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v1.4.0";
-          in_progress: boolean;
-          latest_version: "v1.4.0";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/Olen/home-assistant-openplantbook/releases/v1.4.0
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/openplantbook/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "OpenPlantbook Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.better_thermostat_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.better_thermostat_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "1.7.0";
-          in_progress: boolean;
-          latest_version: "1.7.0";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/KartoffelToby/better_thermostat/releases/1.7.0
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/better_thermostat/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Better Thermostat Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "update.openai_tts_speech_service_update": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "update.openai_tts_speech_service_update",
-        {
-          auto_update: boolean;
-          /**
-           * > ```yaml
-           * > display_precision: 0
-           * > ```
-           */ display_precision: number;
-          installed_version: "v3.8";
-          in_progress: boolean;
-          latest_version: "v3.8";
-          release_summary: null;
-          /**
-           * > ```yaml
-           * > release_url: https://github.com/sfortis/openai_tts/releases/v3.8
-           * > ```
-           */ release_url: string;
-          skipped_version: null;
-          title: null;
-          update_percentage: null;
-          /**
-           * > ```yaml
-           * > entity_picture: https://brands.home-assistant.io/_/openai_tts/icon.png
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "OpenAI TTS Speech Service Update";
-          /**
-           * > ```yaml
-           * > supported_features: 23
+           * > supported_features: 21
            * > ```
            */ supported_features: number;
         }
@@ -7778,10 +7719,10 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "update.hass_server_firmware": {
+    "update.tumble_dryer_firmware": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
-        "update.hass_server_firmware",
+        "update.tumble_dryer_firmware",
         {
           auto_update: boolean;
           /**
@@ -7803,7 +7744,7 @@ declare module "@digital-alchemy/hass" {
            * > entity_picture: /api/brands/integration/tapo/icon.png
            * > ```
            */ entity_picture: string;
-          friendly_name: "Hass Server Firmware";
+          friendly_name: "Tumble Dryer Firmware";
           /**
            * > ```yaml
            * > supported_features: 21
@@ -7846,10 +7787,10 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "update.tumble_dryer_firmware": {
+    "update.hass_server_firmware": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
-        "update.tumble_dryer_firmware",
+        "update.hass_server_firmware",
         {
           auto_update: boolean;
           /**
@@ -7857,9 +7798,9 @@ declare module "@digital-alchemy/hass" {
            * > display_precision: 0
            * > ```
            */ display_precision: number;
-          installed_version: "1.4.0";
+          installed_version: "1.4.6";
           in_progress: boolean;
-          latest_version: "1.4.0";
+          latest_version: "1.4.6";
           release_summary: null;
           release_url: null;
           skipped_version: null;
@@ -7871,7 +7812,7 @@ declare module "@digital-alchemy/hass" {
            * > entity_picture: /api/brands/integration/tapo/icon.png
            * > ```
            */ entity_picture: string;
-          friendly_name: "Tumble Dryer Firmware";
+          friendly_name: "Hass Server Firmware";
           /**
            * > ```yaml
            * > supported_features: 21
@@ -8764,10 +8705,10 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "update.bed_occupancy_sensor_firmware": {
+    "update.chronotask_update": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
-        "update.bed_occupancy_sensor_firmware",
+        "update.chronotask_update",
         {
           auto_update: boolean;
           /**
@@ -8775,27 +8716,31 @@ declare module "@digital-alchemy/hass" {
            * > display_precision: 0
            * > ```
            */ display_precision: number;
-          installed_version: "v2.0.0";
+          installed_version: "v1.1.1";
           in_progress: boolean;
-          latest_version: "v2.0.0";
-          release_summary: null;
+          latest_version: "v1.1.1";
           /**
            * > ```yaml
-           * > release_url: https://github.com/ElevatedSensors/bed-presence-mk1/releases/tag/v2.0.0
+           * > release_summary: <ha-alert alert-type='error'>Restart of Home Assistant required</ha-alert>
+           * > ```
+           */ release_summary: string;
+          /**
+           * > ```yaml
+           * > release_url: https://github.com/andker87/Home-Assistant-ChronoTask/releases/v1.1.1
            * > ```
            */ release_url: string;
           skipped_version: null;
-          title: "ElevatedSensors.BedPresenceMk1";
+          title: null;
           update_percentage: null;
           /**
            * > ```yaml
-           * > entity_picture: /api/brands/integration/esphome/icon.png
+           * > entity_picture: https://brands.home-assistant.io/_/chronotask/icon.png
            * > ```
            */ entity_picture: string;
-          friendly_name: "Bed Occupancy Sensor Firmware";
+          friendly_name: "ChronoTask Update";
           /**
            * > ```yaml
-           * > supported_features: 21
+           * > supported_features: 23
            * > ```
            */ supported_features: number;
         }
@@ -8893,6 +8838,27 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "sensor.front_door_lock_battery": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.front_door_lock_battery",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          device_class: "battery";
+          friendly_name: "Front Door Lock Battery";
+        }
+      >;
+    };
+    "sensor.front_door_lock_battery_type": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.front_door_lock_battery_type",
+        {
+          friendly_name: "Front Door Lock Battery type";
+        }
+      >;
+    };
     "sensor.sun_next_dawn": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -8950,466 +8916,6 @@ declare module "@digital-alchemy/hass" {
         {
           device_class: "timestamp";
           friendly_name: "Sun Next setting";
-        }
-      >;
-    };
-    "sensor.front_door_lock_battery": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.front_door_lock_battery",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          device_class: "battery";
-          friendly_name: "Front Door Lock Battery";
-        }
-      >;
-    };
-    "sensor.front_door_lock_battery_type": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.front_door_lock_battery_type",
-        {
-          friendly_name: "Front Door Lock Battery type";
-        }
-      >;
-    };
-    "sensor.electricity_meter": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.electricity_meter",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > status: collecting
-           * > ```
-           */ status: string;
-          /**
-           * > ```yaml
-           * > last_period: '0'
-           * > ```
-           */ last_period: string;
-          /**
-           * > ```yaml
-           * > last_valid_state: '1860.0372'
-           * > ```
-           */ last_valid_state: string;
-          /**
-           * > ```yaml
-           * > last_reset: '2026-03-20T12:07:53.214930+00:00'
-           * > ```
-           */ last_reset: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          friendly_name: "Shelly EM Channel 1 Electricity Meter";
-        }
-      >;
-    };
-    "sensor.flat_poower": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.flat_poower",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Flat Power";
-        }
-      >;
-    };
-    "sensor.flat_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.flat_energy",
-        {
-          state_class: "total_increasing";
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          friendly_name: "Shelly EM Channel 1 Energy";
-        }
-      >;
-    };
-    "sensor.shellyem_a4e57cba73f5_channel_1_energy_returned": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.shellyem_a4e57cba73f5_channel_1_energy_returned",
-        {
-          state_class: "total_increasing";
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          friendly_name: "Shelly EM Channel 1 Energy returned";
-        }
-      >;
-    };
-    "sensor.shellyem_a4e57cba73f5_channel_1_voltage": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.shellyem_a4e57cba73f5_channel_1_voltage",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "V";
-          device_class: "voltage";
-          friendly_name: "Shelly EM Channel 1 Voltage";
-        }
-      >;
-    };
-    "sensor.shellyem_a4e57cba73f5_channel_1_power_factor": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.shellyem_a4e57cba73f5_channel_1_power_factor",
-        {
-          state_class: "measurement";
-          device_class: "power_factor";
-          friendly_name: "Shelly EM Channel 1 Power factor";
-        }
-      >;
-    };
-    "sensor.shellyem_a4e57cba73f5_channel_2_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.shellyem_a4e57cba73f5_channel_2_power",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Shelly EM Channel 2 Power";
-        }
-      >;
-    };
-    "sensor.shellyem_a4e57cba73f5_channel_2_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.shellyem_a4e57cba73f5_channel_2_energy",
-        {
-          state_class: "total_increasing";
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          friendly_name: "Shelly EM Channel 2 Energy";
-        }
-      >;
-    };
-    "sensor.shellyem_a4e57cba73f5_channel_2_energy_returned": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.shellyem_a4e57cba73f5_channel_2_energy_returned",
-        {
-          state_class: "total_increasing";
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          friendly_name: "Shelly EM Channel 2 Energy returned";
-        }
-      >;
-    };
-    "sensor.shellyem_a4e57cba73f5_channel_2_voltage": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.shellyem_a4e57cba73f5_channel_2_voltage",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "V";
-          device_class: "voltage";
-          friendly_name: "Shelly EM Channel 2 Voltage";
-        }
-      >;
-    };
-    "sensor.shellyem_a4e57cba73f5_channel_2_power_factor": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.shellyem_a4e57cba73f5_channel_2_power_factor",
-        {
-          state_class: "measurement";
-          device_class: "power_factor";
-          friendly_name: "Shelly EM Channel 2 Power factor";
-        }
-      >;
-    };
-    "sensor.living_room_heater_bookcase_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_heater_bookcase_power",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Living Room Heater (Bookcase) Power";
-        }
-      >;
-    };
-    "sensor.living_room_heater_bookcase_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_heater_bookcase_energy",
-        {
-          state_class: "total_increasing";
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          friendly_name: "Living Room Heater (Bookcase) Energy";
-        }
-      >;
-    };
-    "sensor.shelly_plus_pm_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.shelly_plus_pm_power",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Living Room Heater (TV) Power";
-        }
-      >;
-    };
-    "sensor.living_room_heater_tv_voltage": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_heater_tv_voltage",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "V";
-          device_class: "voltage";
-          friendly_name: "Living Room Heater (TV) Voltage";
-        }
-      >;
-    };
-    "sensor.lliving_room_heater_tv_current": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.lliving_room_heater_tv_current",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "A";
-          device_class: "current";
-          friendly_name: "Living Room Heater (TV) Current";
-        }
-      >;
-    };
-    "sensor.living_room_heater_tv_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_heater_tv_energy",
-        {
-          state_class: "total_increasing";
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          friendly_name: "Living Room Heater (TV) Energy";
-        }
-      >;
-    };
-    "sensor.living_room_heater_by_window_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_heater_by_window_power",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Living Room Heater (Window) Power";
-        }
-      >;
-    };
-    "sensor.living_room_heater_by_window_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_heater_by_window_energy",
-        {
-          state_class: "total_increasing";
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          friendly_name: "Living Room Heater (Window) Energy";
-        }
-      >;
-    };
-    "sensor.hallway_heater_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.hallway_heater_power",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Hallway Heater Power";
-        }
-      >;
-    };
-    "sensor.hallway_heater_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.hallway_heater_energy",
-        {
-          state_class: "total_increasing";
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          friendly_name: "Hallway Heater Energy";
-        }
-      >;
-    };
-    "sensor.boiler_temperature": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.boiler_temperature",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "\u00B0C";
-          device_class: "temperature";
-          friendly_name: "Boiler Boost Switch Temperature";
-        }
-      >;
-    };
-    "sensor.z_stick_gen5_usb_controller_status": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.z_stick_gen5_usb_controller_status",
-        {
-          friendly_name: "Z\u2010Stick Gen5 USB Controller Status";
-        }
-      >;
-    };
-    "sensor.node_12_node_status": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.node_12_node_status",
-        {
-          friendly_name: "Spare Room Sensor Node status";
-        }
-      >;
-    };
-    "sensor.spare_room_temperature": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.spare_room_temperature",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "\u00B0C";
-          device_class: "temperature";
-          friendly_name: "Spare Room Sensor Air temperature";
-        }
-      >;
-    };
-    "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance_2": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance_2",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          friendly_name: "Spare Room Sensor Illuminance";
-        }
-      >;
-    };
-    "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level_2": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level_2",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          device_class: "battery";
-          friendly_name: "Spare Room Sensor Battery level";
-        }
-      >;
-    };
-    "sensor.living_room_sensor_node_status": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_sensor_node_status",
-        {
-          friendly_name: "Living Room Sensor Node status";
-        }
-      >;
-    };
-    "sensor.living_room_temperature": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_temperature",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "\u00B0C";
-          device_class: "temperature";
-          friendly_name: "Living Room Temperature";
-        }
-      >;
-    };
-    "sensor.living_room_illumination": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_illumination",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          friendly_name: "Illumination";
-        }
-      >;
-    };
-    "sensor.living_room_sensor_battery_level": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_sensor_battery_level",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          device_class: "battery";
-          friendly_name: "Living Room Sensor Battery level";
-        }
-      >;
-    };
-    "sensor.bedroom_heater_node_status": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bedroom_heater_node_status",
-        {
-          friendly_name: "Bedroom Heater Node status";
-        }
-      >;
-    };
-    "sensor.system_monitor_disk_usage": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.system_monitor_disk_usage",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          friendly_name: "System Monitor Disk usage /";
-        }
-      >;
-    };
-    "sensor.system_monitor_memory_usage": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.system_monitor_memory_usage",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          friendly_name: "System Monitor Memory usage";
-        }
-      >;
-    };
-    "sensor.system_monitor_processor_use": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.system_monitor_processor_use",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          icon: "mdi:cpu-64-bit";
-          friendly_name: "System Monitor Processor use";
-        }
-      >;
-    };
-    "sensor.flat_energy_cost": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.flat_energy_cost",
-        {
-          state_class: "total";
-          /**
-           * > ```yaml
-           * > last_reset: '2026-05-05T07:57:49.838558+00:00'
-           * > ```
-           */ last_reset: string;
-          unit_of_measurement: "GBP";
-          device_class: "monetary";
-          friendly_name: "Shelly EM Channel 1 Energy Cost";
         }
       >;
     };
@@ -10389,6 +9895,514 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "sensor.flat_poower": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.flat_poower",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Flat Power";
+        }
+      >;
+    };
+    "sensor.flat_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.flat_energy",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          friendly_name: "Shelly EM Channel 1 Energy";
+        }
+      >;
+    };
+    "sensor.shellyem_a4e57cba73f5_channel_1_energy_returned": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.shellyem_a4e57cba73f5_channel_1_energy_returned",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          friendly_name: "Shelly EM Channel 1 Energy returned";
+        }
+      >;
+    };
+    "sensor.shellyem_a4e57cba73f5_channel_1_voltage": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.shellyem_a4e57cba73f5_channel_1_voltage",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "V";
+          device_class: "voltage";
+          friendly_name: "Shelly EM Channel 1 Voltage";
+        }
+      >;
+    };
+    "sensor.shellyem_a4e57cba73f5_channel_1_power_factor": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.shellyem_a4e57cba73f5_channel_1_power_factor",
+        {
+          state_class: "measurement";
+          device_class: "power_factor";
+          friendly_name: "Shelly EM Channel 1 Power factor";
+        }
+      >;
+    };
+    "sensor.shellyem_a4e57cba73f5_channel_2_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.shellyem_a4e57cba73f5_channel_2_power",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Shelly EM Channel 2 Power";
+        }
+      >;
+    };
+    "sensor.shellyem_a4e57cba73f5_channel_2_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.shellyem_a4e57cba73f5_channel_2_energy",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          friendly_name: "Shelly EM Channel 2 Energy";
+        }
+      >;
+    };
+    "sensor.shellyem_a4e57cba73f5_channel_2_energy_returned": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.shellyem_a4e57cba73f5_channel_2_energy_returned",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          friendly_name: "Shelly EM Channel 2 Energy returned";
+        }
+      >;
+    };
+    "sensor.shellyem_a4e57cba73f5_channel_2_voltage": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.shellyem_a4e57cba73f5_channel_2_voltage",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "V";
+          device_class: "voltage";
+          friendly_name: "Shelly EM Channel 2 Voltage";
+        }
+      >;
+    };
+    "sensor.shellyem_a4e57cba73f5_channel_2_power_factor": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.shellyem_a4e57cba73f5_channel_2_power_factor",
+        {
+          state_class: "measurement";
+          device_class: "power_factor";
+          friendly_name: "Shelly EM Channel 2 Power factor";
+        }
+      >;
+    };
+    "sensor.boiler_temperature": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.boiler_temperature",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "\u00B0C";
+          device_class: "temperature";
+          friendly_name: "Boiler Boost Switch Temperature";
+        }
+      >;
+    };
+    "sensor.shelly_plus_pm_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.shelly_plus_pm_power",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Living Room Heater (TV) Power";
+        }
+      >;
+    };
+    "sensor.living_room_heater_tv_voltage": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_heater_tv_voltage",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "V";
+          device_class: "voltage";
+          friendly_name: "Living Room Heater (TV) Voltage";
+        }
+      >;
+    };
+    "sensor.lliving_room_heater_tv_current": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.lliving_room_heater_tv_current",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "A";
+          device_class: "current";
+          friendly_name: "Living Room Heater (TV) Current";
+        }
+      >;
+    };
+    "sensor.living_room_heater_tv_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_heater_tv_energy",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          friendly_name: "Living Room Heater (TV) Energy";
+        }
+      >;
+    };
+    "sensor.hallway_heater_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.hallway_heater_power",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Hallway Heater Power";
+        }
+      >;
+    };
+    "sensor.hallway_heater_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.hallway_heater_energy",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          friendly_name: "Hallway Heater Energy";
+        }
+      >;
+    };
+    "sensor.living_room_heater_bookcase_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_heater_bookcase_power",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Living Room Heater (Bookcase) Power";
+        }
+      >;
+    };
+    "sensor.living_room_heater_bookcase_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_heater_bookcase_energy",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          friendly_name: "Living Room Heater (Bookcase) Energy";
+        }
+      >;
+    };
+    "sensor.living_room_heater_by_window_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_heater_by_window_power",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Living Room Heater (Window) Power";
+        }
+      >;
+    };
+    "sensor.living_room_heater_by_window_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_heater_by_window_energy",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          friendly_name: "Living Room Heater (Window) Energy";
+        }
+      >;
+    };
+    "sensor.openai_tts_api_status": {
+      state:
+        | "ok"
+        | "quota_exceeded"
+        | "auth_failed"
+        | "rate_limited"
+        | "server_error"
+        | "network_error"
+        | "unknown_error";
+      attributes: DynamicMergeAttributes<
+        "sensor.openai_tts_api_status",
+        {
+          options: (
+            | "ok"
+            | "quota_exceeded"
+            | "auth_failed"
+            | "rate_limited"
+            | "server_error"
+            | "network_error"
+            | "unknown_error"
+          )[];
+          /**
+           * > ```yaml
+           * > description: All systems operational
+           * > ```
+           */ description: string;
+          /**
+           * > ```yaml
+           * > last_success_at: '2026-05-07T15:33:59.467795+00:00'
+           * > ```
+           */ last_success_at: string;
+          last_error_at: null;
+          last_error_message: null;
+          device_class: "enum";
+          icon: "mdi:cloud-check";
+          friendly_name: "OpenAI TTS API Status";
+        }
+      >;
+    };
+    "sensor.electricity_meter": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.electricity_meter",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > status: collecting
+           * > ```
+           */ status: string;
+          /**
+           * > ```yaml
+           * > last_period: '0'
+           * > ```
+           */ last_period: string;
+          /**
+           * > ```yaml
+           * > last_valid_state: '1885.2404'
+           * > ```
+           */ last_valid_state: string;
+          /**
+           * > ```yaml
+           * > last_reset: '2026-03-20T12:07:53.214930+00:00'
+           * > ```
+           */ last_reset: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          friendly_name: "Shelly EM Channel 1 Electricity Meter";
+        }
+      >;
+    };
+    "sensor.flat_energy_cost": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.flat_energy_cost",
+        {
+          state_class: "total";
+          /**
+           * > ```yaml
+           * > last_reset: '2026-05-06T22:11:20.359017+00:00'
+           * > ```
+           */ last_reset: string;
+          unit_of_measurement: "GBP";
+          device_class: "monetary";
+          friendly_name: "Shelly EM Channel 1 Energy Cost";
+        }
+      >;
+    };
+    "sensor.printer_black": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.printer_black",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > marker_high_level: 100
+           * > ```
+           */ marker_high_level: number;
+          /**
+           * > ```yaml
+           * > marker_low_level: 15
+           * > ```
+           */ marker_low_level: number;
+          /**
+           * > ```yaml
+           * > marker_type: ink-cartridge
+           * > ```
+           */ marker_type: string;
+          unit_of_measurement: "%";
+          friendly_name: "Printer Black";
+        }
+      >;
+    };
+    "sensor.printer_color": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.printer_color",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > marker_high_level: 100
+           * > ```
+           */ marker_high_level: number;
+          /**
+           * > ```yaml
+           * > marker_low_level: 15
+           * > ```
+           */ marker_low_level: number;
+          /**
+           * > ```yaml
+           * > marker_type: ink-cartridge
+           * > ```
+           */ marker_type: string;
+          unit_of_measurement: "%";
+          friendly_name: "Printer Color";
+        }
+      >;
+    };
+    "sensor.z_stick_gen5_usb_controller_status": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.z_stick_gen5_usb_controller_status",
+        {
+          friendly_name: "Z\u2010Stick Gen5 USB Controller Status";
+        }
+      >;
+    };
+    "sensor.node_12_node_status": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.node_12_node_status",
+        {
+          friendly_name: "Spare Room Sensor Node status";
+        }
+      >;
+    };
+    "sensor.spare_room_temperature": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.spare_room_temperature",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "\u00B0C";
+          device_class: "temperature";
+          friendly_name: "Spare Room Sensor Air temperature";
+        }
+      >;
+    };
+    "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance_2": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.slim_multi_sensor_pir_temperature_illumination_illuminance_2",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          friendly_name: "Spare Room Sensor Illuminance";
+        }
+      >;
+    };
+    "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level_2": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.slim_multi_sensor_pir_temperature_illumination_battery_level_2",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          device_class: "battery";
+          friendly_name: "Spare Room Sensor Battery level";
+        }
+      >;
+    };
+    "sensor.living_room_sensor_node_status": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_sensor_node_status",
+        {
+          friendly_name: "Living Room Sensor Node status";
+        }
+      >;
+    };
+    "sensor.living_room_temperature": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_temperature",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "\u00B0C";
+          device_class: "temperature";
+          friendly_name: "Living Room Temperature";
+        }
+      >;
+    };
+    "sensor.living_room_illumination": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_illumination",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          friendly_name: "Illumination";
+        }
+      >;
+    };
+    "sensor.living_room_sensor_battery_level": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_sensor_battery_level",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          device_class: "battery";
+          friendly_name: "Living Room Sensor Battery level";
+        }
+      >;
+    };
+    "sensor.bedroom_heater_node_status": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_heater_node_status",
+        {
+          friendly_name: "Bedroom Heater Node status";
+        }
+      >;
+    };
+    "sensor.home_assistant_v2_db_size": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.home_assistant_v2_db_size",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "MB";
+          device_class: "data_size";
+          friendly_name: "home-assistant_v2.db Size";
+        }
+      >;
+    };
     "sensor.upnp_igd_external_ip": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -10422,63 +10436,128 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "sensor.openai_tts_api_status": {
-      state:
-        | "ok"
-        | "quota_exceeded"
-        | "auth_failed"
-        | "rate_limited"
-        | "server_error"
-        | "network_error"
-        | "unknown_error";
-      attributes: DynamicMergeAttributes<
-        "sensor.openai_tts_api_status",
-        {
-          options: (
-            | "ok"
-            | "quota_exceeded"
-            | "auth_failed"
-            | "rate_limited"
-            | "server_error"
-            | "network_error"
-            | "unknown_error"
-          )[];
-          /**
-           * > ```yaml
-           * > description: All systems operational
-           * > ```
-           */ description: string;
-          /**
-           * > ```yaml
-           * > last_success_at: '2026-05-06T05:30:36.719900+00:00'
-           * > ```
-           */ last_success_at: string;
-          last_error_at: null;
-          last_error_message: null;
-          device_class: "enum";
-          icon: "mdi:cloud-check";
-          friendly_name: "OpenAI TTS API Status";
-        }
-      >;
-    };
-    "sensor.living_room_audio_input_format": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.living_room_audio_input_format",
-        {
-          friendly_name: "Living Room Audio input format";
-        }
-      >;
-    };
-    "sensor.home_assistant_v2_db_size": {
+    "sensor.system_monitor_disk_usage": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "sensor.home_assistant_v2_db_size",
+        "sensor.system_monitor_disk_usage",
         {
           state_class: "measurement";
-          unit_of_measurement: "MB";
-          device_class: "data_size";
-          friendly_name: "home-assistant_v2.db Size";
+          unit_of_measurement: "%";
+          friendly_name: "System Monitor Disk usage /";
+        }
+      >;
+    };
+    "sensor.system_monitor_memory_usage": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.system_monitor_memory_usage",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          friendly_name: "System Monitor Memory usage";
+        }
+      >;
+    };
+    "sensor.system_monitor_processor_use": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.system_monitor_processor_use",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          icon: "mdi:cpu-64-bit";
+          friendly_name: "System Monitor Processor use";
+        }
+      >;
+    };
+    "sensor.printer": {
+      state: "idle" | "printing" | "stopped";
+      attributes: DynamicMergeAttributes<
+        "sensor.printer",
+        {
+          options: ("idle" | "printing" | "stopped")[];
+          /**
+           * > ```yaml
+           * > info: Canon TS3700 series
+           * > ```
+           */ info: string;
+          serial: null;
+          /**
+           * > ```yaml
+           * > location: ''
+           * > ```
+           */ location: string;
+          /**
+           * > ```yaml
+           * > state_message: ''
+           * > ```
+           */ state_message: string;
+          state_reason: null;
+          /**
+           * > ```yaml
+           * > command_set: IVEC,URF
+           * > ```
+           */ command_set: string;
+          /**
+           * > ```yaml
+           * > uri_supported: ipp://192.168.1.149:631/ipp/print,ipps://192.168.1.149:631/ipp/print
+           * > ```
+           */ uri_supported: string;
+          device_class: "enum";
+          friendly_name: "Printer";
+        }
+      >;
+    };
+    "sensor.home_proximity_nearest_device": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.home_proximity_nearest_device",
+        {
+          friendly_name: "Home Proximity Nearest device";
+        }
+      >;
+    };
+    "sensor.home_proximity_nearest_distance": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.home_proximity_nearest_distance",
+        {
+          unit_of_measurement: "m";
+          device_class: "distance";
+          friendly_name: "Home Proximity Nearest distance";
+        }
+      >;
+    };
+    "sensor.home_proximity_nearest_direction_of_travel": {
+      state: "arrived" | "away_from" | "stationary" | "towards";
+      attributes: DynamicMergeAttributes<
+        "sensor.home_proximity_nearest_direction_of_travel",
+        {
+          options: ("arrived" | "away_from" | "stationary" | "towards")[];
+          device_class: "enum";
+          friendly_name: "Home Proximity Nearest direction of travel";
+        }
+      >;
+    };
+    "sensor.home_proximity_ben_distance": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.home_proximity_ben_distance",
+        {
+          unit_of_measurement: "m";
+          device_class: "distance";
+          friendly_name: "Home Proximity ben distance";
+        }
+      >;
+    };
+    "sensor.home_proximity_ben_direction_of_travel": {
+      state: "arrived" | "away_from" | "stationary" | "towards";
+      attributes: DynamicMergeAttributes<
+        "sensor.home_proximity_ben_direction_of_travel",
+        {
+          options: ("arrived" | "away_from" | "stationary" | "towards")[];
+          device_class: "enum";
+          friendly_name: "Home Proximity ben direction of travel";
         }
       >;
     };
@@ -10695,128 +10774,63 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "sensor.home_proximity_nearest_device": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.home_proximity_nearest_device",
-        {
-          friendly_name: "Home Proximity Nearest device";
-        }
-      >;
-    };
-    "sensor.home_proximity_nearest_distance": {
+    "sensor.bed_occupancy_sensor_wifi_signal_db": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "sensor.home_proximity_nearest_distance",
-        {
-          unit_of_measurement: "m";
-          device_class: "distance";
-          friendly_name: "Home Proximity Nearest distance";
-        }
-      >;
-    };
-    "sensor.home_proximity_nearest_direction_of_travel": {
-      state: "arrived" | "away_from" | "stationary" | "towards";
-      attributes: DynamicMergeAttributes<
-        "sensor.home_proximity_nearest_direction_of_travel",
-        {
-          options: ("arrived" | "away_from" | "stationary" | "towards")[];
-          device_class: "enum";
-          friendly_name: "Home Proximity Nearest direction of travel";
-        }
-      >;
-    };
-    "sensor.home_proximity_ben_distance": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.home_proximity_ben_distance",
-        {
-          unit_of_measurement: "m";
-          device_class: "distance";
-          friendly_name: "Home Proximity ben distance";
-        }
-      >;
-    };
-    "sensor.home_proximity_ben_direction_of_travel": {
-      state: "arrived" | "away_from" | "stationary" | "towards";
-      attributes: DynamicMergeAttributes<
-        "sensor.home_proximity_ben_direction_of_travel",
-        {
-          options: ("arrived" | "away_from" | "stationary" | "towards")[];
-          device_class: "enum";
-          friendly_name: "Home Proximity ben direction of travel";
-        }
-      >;
-    };
-    "sensor.ps5_online_status": {
-      state: "offline" | "availabletoplay" | "availabletocommunicate" | "busy";
-      attributes: DynamicMergeAttributes<
-        "sensor.ps5_online_status",
-        {
-          options: ("offline" | "availabletoplay" | "availabletocommunicate" | "busy")[];
-          device_class: "enum";
-          friendly_name: "ps5 Online status";
-        }
-      >;
-    };
-    "sensor.ps5_now_playing": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.ps5_now_playing",
-        {
-          friendly_name: "ps5 Now playing";
-        }
-      >;
-    };
-    "sensor.printer_black": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.printer_black",
+        "sensor.bed_occupancy_sensor_wifi_signal_db",
         {
           state_class: "measurement";
-          /**
-           * > ```yaml
-           * > marker_high_level: 100
-           * > ```
-           */ marker_high_level: number;
-          /**
-           * > ```yaml
-           * > marker_low_level: 15
-           * > ```
-           */ marker_low_level: number;
-          /**
-           * > ```yaml
-           * > marker_type: ink-cartridge
-           * > ```
-           */ marker_type: string;
-          unit_of_measurement: "%";
-          friendly_name: "Printer Black";
+          unit_of_measurement: "dBm";
+          device_class: "signal_strength";
+          friendly_name: "Bed Occupancy Sensor WiFi Signal dB";
         }
       >;
     };
-    "sensor.printer_color": {
+    "sensor.bed_occupancy_sensor_wifi_signal_percent": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "sensor.printer_color",
+        "sensor.bed_occupancy_sensor_wifi_signal_percent",
         {
           state_class: "measurement";
-          /**
-           * > ```yaml
-           * > marker_high_level: 100
-           * > ```
-           */ marker_high_level: number;
-          /**
-           * > ```yaml
-           * > marker_low_level: 15
-           * > ```
-           */ marker_low_level: number;
-          /**
-           * > ```yaml
-           * > marker_type: ink-cartridge
-           * > ```
-           */ marker_type: string;
           unit_of_measurement: "%";
-          friendly_name: "Printer Color";
+          friendly_name: "Bed Occupancy Sensor WiFi Signal Percent";
+        }
+      >;
+    };
+    "sensor.bed_occupancy_sensor_uptime": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.bed_occupancy_sensor_uptime",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "s";
+          device_class: "duration";
+          icon: "mdi:timer-outline";
+          friendly_name: "Bed Occupancy Sensor Uptime";
+        }
+      >;
+    };
+    "sensor.bed_pressure_left": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.bed_pressure_left",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          icon: "mdi:gauge";
+          friendly_name: "Bed Occupancy Sensor Left Pressure";
+        }
+      >;
+    };
+    "sensor.bed_pressure_right": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.bed_pressure_right",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          icon: "mdi:gauge";
+          friendly_name: "Bed Occupancy Sensor Right Pressure";
         }
       >;
     };
@@ -10928,16 +10942,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "sensor.bwainwright28_gmail_com_vacation_end_date": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.bwainwright28_gmail_com_vacation_end_date",
-        {
-          device_class: "timestamp";
-          friendly_name: "bwainwright28@gmail.com Vacation end date";
-        }
-      >;
-    };
     "sensor.bedroom_alexa_next_alarm": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -10946,7 +10950,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-05-06T11:03:16.556212+01:00'
+           * > process_timestamp: '2026-05-07T20:25:01.302941+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -10965,11 +10969,7 @@ declare module "@digital-alchemy/hass" {
            * > status: 'OFF'
            * > ```
            */ status: string;
-          /**
-           * > ```yaml
-           * > dismissed: '2026-05-06T06:30:15.103288+01:00'
-           * > ```
-           */ dismissed: string;
+          dismissed: null;
           /**
            * > ```yaml
            * > brief:
@@ -11008,7 +11008,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-05-06T11:03:16.556212+01:00'
+           * > process_timestamp: '2026-05-07T20:25:01.302941+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -11043,7 +11043,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-05-06T11:03:16.556212+01:00'
+           * > process_timestamp: '2026-05-07T20:25:01.302941+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -11078,7 +11078,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-05-06T11:03:16.556212+01:00'
+           * > process_timestamp: '2026-05-07T20:25:01.302941+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -11112,7 +11112,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-05-06T11:03:16.556212+01:00'
+           * > process_timestamp: '2026-05-07T20:25:01.302941+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -11147,7 +11147,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-05-06T11:03:16.556212+01:00'
+           * > process_timestamp: '2026-05-07T20:25:01.302941+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -11215,7 +11215,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-05-06T11:03:16.556212+01:00'
+           * > process_timestamp: '2026-05-07T20:25:01.302941+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -11273,7 +11273,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-05-06T11:03:16.556212+01:00'
+           * > process_timestamp: '2026-05-07T20:25:01.302941+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -11308,7 +11308,7 @@ declare module "@digital-alchemy/hass" {
           recurrence: null;
           /**
            * > ```yaml
-           * > process_timestamp: '2026-05-06T11:03:16.556212+01:00'
+           * > process_timestamp: '2026-05-07T20:25:01.302941+01:00'
            * > ```
            */ process_timestamp: string;
           prior_value: null;
@@ -11434,41 +11434,131 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "sensor.printer": {
-      state: "idle" | "printing" | "stopped";
+    "sensor.bwainwright28_gmail_com_vacation_end_date": {
+      state: string;
       attributes: DynamicMergeAttributes<
-        "sensor.printer",
+        "sensor.bwainwright28_gmail_com_vacation_end_date",
         {
-          options: ("idle" | "printing" | "stopped")[];
-          /**
-           * > ```yaml
-           * > info: Canon TS3700 series
-           * > ```
-           */ info: string;
-          serial: null;
-          /**
-           * > ```yaml
-           * > location: ''
-           * > ```
-           */ location: string;
-          /**
-           * > ```yaml
-           * > state_message: ''
-           * > ```
-           */ state_message: string;
-          state_reason: null;
-          /**
-           * > ```yaml
-           * > command_set: IVEC,URF
-           * > ```
-           */ command_set: string;
-          /**
-           * > ```yaml
-           * > uri_supported: ipp://192.168.1.149:631/ipp/print,ipps://192.168.1.149:631/ipp/print
-           * > ```
-           */ uri_supported: string;
-          device_class: "enum";
-          friendly_name: "Printer";
+          device_class: "timestamp";
+          friendly_name: "bwainwright28@gmail.com Vacation end date";
+        }
+      >;
+    };
+    "sensor.living_room_audio_input_format": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.living_room_audio_input_format",
+        {
+          friendly_name: "Living Room Audio input format";
+        }
+      >;
+    };
+    "sensor.tp_link_router_total_guest_wifi_clients": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.tp_link_router_total_guest_wifi_clients",
+        {
+          state_class: "total";
+          icon: "mdi:account-multiple";
+          friendly_name: "TP-Link Router Total guest wifi clients";
+        }
+      >;
+    };
+    "sensor.tp_link_router_total_main_wifi_clients": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.tp_link_router_total_main_wifi_clients",
+        {
+          state_class: "total";
+          icon: "mdi:account-multiple";
+          friendly_name: "TP-Link Router Total main wifi clients";
+        }
+      >;
+    };
+    "sensor.tp_link_router_total_wired_clients": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.tp_link_router_total_wired_clients",
+        {
+          state_class: "total";
+          icon: "mdi:account-multiple";
+          friendly_name: "TP-Link Router Total wired clients";
+        }
+      >;
+    };
+    "sensor.tp_link_router_total_iot_clients": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.tp_link_router_total_iot_clients",
+        {
+          state_class: "total";
+          icon: "mdi:account-multiple";
+          friendly_name: "TP-Link Router Total IoT clients";
+        }
+      >;
+    };
+    "sensor.tp_link_router_total_clients": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.tp_link_router_total_clients",
+        {
+          state_class: "total";
+          icon: "mdi:account-multiple";
+          friendly_name: "TP-Link Router Total clients";
+        }
+      >;
+    };
+    "sensor.tp_link_router_cpu_used": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.tp_link_router_cpu_used",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          icon: "mdi:cpu-64-bit";
+          friendly_name: "TP-Link Router CPU used";
+        }
+      >;
+    };
+    "sensor.tp_link_router_memory_used": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.tp_link_router_memory_used",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          icon: "mdi:memory";
+          friendly_name: "TP-Link Router Memory used";
+        }
+      >;
+    };
+    "sensor.tp_link_router_connection_type": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.tp_link_router_connection_type",
+        {
+          icon: "mdi:wan";
+          friendly_name: "TP-Link Router Connection Type";
+        }
+      >;
+    };
+    "sensor.tp_link_router_wan_ipv4_address": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.tp_link_router_wan_ipv4_address",
+        {
+          icon: "mdi:wan";
+          friendly_name: "TP-Link Router WAN IPv4 Address";
+        }
+      >;
+    };
+    "sensor.tp_link_router_lan_ipv4_address": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.tp_link_router_lan_ipv4_address",
+        {
+          icon: "mdi:lan";
+          friendly_name: "TP-Link Router LAN IPv4 Address";
         }
       >;
     };
@@ -11602,10 +11692,10 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "sensor.bedroom_wall_right_power": {
+    "sensor.bathroom_ceiing_light_power": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "sensor.bedroom_wall_right_power",
+        "sensor.bathroom_ceiing_light_power",
         {
           state_class: "measurement";
           /**
@@ -11620,7 +11710,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > source_entity: light.bedroom_wall_right
+           * > source_entity: light.bathroom_ceiling
            * > ```
            */ source_entity: string;
           /**
@@ -11630,24 +11720,24 @@ declare module "@digital-alchemy/hass" {
            */ source_domain: string;
           /**
            * > ```yaml
-           * > energy_sensor_entity_id: sensor.bedroom_wall_right_energy
+           * > energy_sensor_entity_id: sensor.bathroom_ceiling_light_energy
            * > ```
            */ energy_sensor_entity_id: string;
           unit_of_measurement: "W";
           device_class: "power";
-          friendly_name: "Bedroom wall (right) Power";
+          friendly_name: "Bathroom (ceiing) Power";
         }
       >;
     };
-    "sensor.bedroom_wall_right_energy": {
+    "sensor.bathroom_ceiling_light_energy": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "sensor.bedroom_wall_right_energy",
+        "sensor.bathroom_ceiling_light_energy",
         {
           state_class: "total_increasing";
           /**
            * > ```yaml
-           * > source_entity: light.bedroom_wall_right
+           * > source_entity: light.bathroom_ceiling
            * > ```
            */ source_entity: string;
           /**
@@ -11657,403 +11747,13 @@ declare module "@digital-alchemy/hass" {
            */ source_domain: string;
           /**
            * > ```yaml
-           * > source: sensor.bedroom_wall_right_power
+           * > source: sensor.bathroom_ceiing_light_power
            * > ```
            */ source: string;
           unit_of_measurement: "kWh";
           device_class: "energy";
           icon: "mdi:lightning-bolt";
-          friendly_name: "Bedroom wall (right) Energy";
-        }
-      >;
-    };
-    "sensor.bedroom_mirror_light_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bedroom_mirror_light_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.bedroom_mirror
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.bedroom_mirror_light_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Bedroom (mirror) Mirror light power";
-        }
-      >;
-    };
-    "sensor.bedroom_mirror_light_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bedroom_mirror_light_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.bedroom_mirror
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.bedroom_mirror_light_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Bedroom (mirror) Mirror light energy";
-        }
-      >;
-    };
-    "sensor.kitchen_fridge_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kitchen_fridge_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.kitchen_fridge
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.kitchen_fridge_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Kitchen (Fridge) Power";
-        }
-      >;
-    };
-    "sensor.kitchen_fridge_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kitchen_fridge_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.kitchen_fridge
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.kitchen_fridge_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Kitchen (Fridge) Energy";
-        }
-      >;
-    };
-    "sensor.hallway_light_spare_room_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.hallway_light_spare_room_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.hallway_spare_room
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.hallway_light_spare_room_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Hallway Spare Room Power";
-        }
-      >;
-    };
-    "sensor.hallway_light_spare_room_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.hallway_light_spare_room_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.hallway_spare_room
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.hallway_light_spare_room_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Hallway Spare Room Energy";
-        }
-      >;
-    };
-    "sensor.bathoom_light_shower_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bathoom_light_shower_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.bathoom_shower
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.bathoom_shower_light_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Bathoom (shower) Power";
-        }
-      >;
-    };
-    "sensor.bathoom_shower_light_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bathoom_shower_light_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.bathoom_shower
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.bathoom_light_shower_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Bathoom (shower) Energy";
-        }
-      >;
-    };
-    "sensor.kitchen_oven_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kitchen_oven_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.kitchen_oven
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.kitchen_oven_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Kitchen (Oven) Power";
-        }
-      >;
-    };
-    "sensor.kitchen_oven_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kitchen_oven_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.kitchen_oven
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.kitchen_oven_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Kitchen (Oven) Energy";
-        }
-      >;
-    };
-    "sensor.kitchen_sink_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kitchen_sink_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.kitchen_sink
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.kitchen_sink_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Kitchen (Sink) Power";
-        }
-      >;
-    };
-    "sensor.kitchen_sink_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kitchen_sink_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.kitchen_sink
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.kitchen_sink_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Kitchen (Sink) Energy";
+          friendly_name: "Bathroom (ceiing) Energy";
         }
       >;
     };
@@ -12122,6 +11822,331 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "sensor.kitchen_fridge_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.kitchen_fridge_power",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.kitchen_fridge
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.kitchen_fridge_energy
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Kitchen (Fridge) Power";
+        }
+      >;
+    };
+    "sensor.kitchen_fridge_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.kitchen_fridge_energy",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.kitchen_fridge
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.kitchen_fridge_power
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Kitchen (Fridge) Energy";
+        }
+      >;
+    };
+    "sensor.kitchen_washing_machine_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.kitchen_washing_machine_power",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.kitchen_washing_machine
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.kitchen_washing_machine_energy
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Kitchen (Washing Machine) Power";
+        }
+      >;
+    };
+    "sensor.kitchen_washing_machine_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.kitchen_washing_machine_energy",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.kitchen_washing_machine
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.kitchen_washing_machine_power
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Kitchen (Washing Machine) Energy";
+        }
+      >;
+    };
+    "sensor.kitchen_oven_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.kitchen_oven_power",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.kitchen_oven
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.kitchen_oven_energy
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Kitchen (Oven) Power";
+        }
+      >;
+    };
+    "sensor.kitchen_oven_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.kitchen_oven_energy",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.kitchen_oven
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.kitchen_oven_power
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Kitchen (Oven) Energy";
+        }
+      >;
+    };
+    "sensor.hallway_light_middle_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.hallway_light_middle_power",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.hallway_middle
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.hallway_light_middle_energy
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Hallway (middle) Power";
+        }
+      >;
+    };
+    "sensor.hallway_light_middle_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.hallway_light_middle_energy",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.hallway_middle
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.hallway_light_middle_power
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Hallway (middle) Energy";
+        }
+      >;
+    };
+    "sensor.bedroom_wall_right_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_wall_right_power",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.bedroom_wall_right
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.bedroom_wall_right_energy
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Bedroom wall (right) Power";
+        }
+      >;
+    };
+    "sensor.bedroom_wall_right_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_wall_right_energy",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.bedroom_wall_right
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.bedroom_wall_right_power
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Bedroom wall (right) Energy";
+        }
+      >;
+    };
     "sensor.hallway_door_light_power": {
       state: number;
       attributes: DynamicMergeAttributes<
@@ -12184,6 +12209,381 @@ declare module "@digital-alchemy/hass" {
           device_class: "energy";
           icon: "mdi:lightning-bolt";
           friendly_name: "Hallway (Door) Energy";
+        }
+      >;
+    };
+    "sensor.door_light_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.door_light_power",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.bedroom_door
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.door_light_energy
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Bedroom (door) Boor light power";
+        }
+      >;
+    };
+    "sensor.door_light_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.door_light_energy",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.bedroom_door
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.door_light_power
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Bedroom (door) Boor light energy";
+        }
+      >;
+    };
+    "sensor.kajplats_gu10_cws_470lm_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.kajplats_gu10_cws_470lm_power",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.spare_room_ceiing_by_ensuite
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.kajplats_gu10_cws_470lm_energy
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Spare Room Ceiling (by en-suite) KAJPLATS GU10 CWS 470lm power";
+        }
+      >;
+    };
+    "sensor.kajplats_gu10_cws_470lm_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.kajplats_gu10_cws_470lm_energy",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.spare_room_ceiing_by_ensuite
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.kajplats_gu10_cws_470lm_power
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Spare Room Ceiling (by en-suite) KAJPLATS GU10 CWS 470lm energy";
+        }
+      >;
+    };
+    "sensor.bathoom_light_shower_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.bathoom_light_shower_power",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.bathoom_shower
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.bathoom_shower_light_energy
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Bathoom (shower) Power";
+        }
+      >;
+    };
+    "sensor.bathoom_shower_light_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.bathoom_shower_light_energy",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.bathoom_shower
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.bathoom_light_shower_power
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Bathoom (shower) Energy";
+        }
+      >;
+    };
+    "sensor.en_suite_corner_power": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.en_suite_corner_power",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "En-suite (corner) Power";
+        }
+      >;
+    };
+    "sensor.en_suite_corner_energy": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.en_suite_corner_energy",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "En-suite (corner) Energy";
+        }
+      >;
+    };
+    "sensor.bedroom_mirror_light_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_mirror_light_power",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.bedroom_mirror
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.bedroom_mirror_light_energy
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Bedroom (mirror) Mirror light power";
+        }
+      >;
+    };
+    "sensor.bedroom_mirror_light_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.bedroom_mirror_light_energy",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.bedroom_mirror
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.bedroom_mirror_light_power
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Bedroom (mirror) Mirror light energy";
+        }
+      >;
+    };
+    "sensor.hallway_light_spare_room_power": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.hallway_light_spare_room_power",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.hallway_spare_room
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.hallway_light_spare_room_energy
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Hallway Spare Room Power";
+        }
+      >;
+    };
+    "sensor.hallway_light_spare_room_energy": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.hallway_light_spare_room_energy",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.hallway_spare_room
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.hallway_light_spare_room_power
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Hallway Spare Room Energy";
+        }
+      >;
+    };
+    "sensor.en_suite_ceiling_centre_power": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.en_suite_ceiling_centre_power",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "En-suite ceiling (centre) Power";
+        }
+      >;
+    };
+    "sensor.en_suite_ceiling_centre_energy": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.en_suite_ceiling_centre_energy",
+        {
+          state_class: "total_increasing";
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "En-suite ceiling (centre) Energy";
         }
       >;
     };
@@ -12317,10 +12717,10 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "sensor.kajplats_gu10_cws_470lm_power": {
+    "sensor.kajplats_e27_cws_globe_1055lm_power": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "sensor.kajplats_gu10_cws_470lm_power",
+        "sensor.kajplats_e27_cws_globe_1055lm_power",
         {
           state_class: "measurement";
           /**
@@ -12335,7 +12735,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > source_entity: light.spare_room_ceiing_by_ensuite
+           * > source_entity: light.spare_room_wall_close_to_door
            * > ```
            */ source_entity: string;
           /**
@@ -12345,24 +12745,24 @@ declare module "@digital-alchemy/hass" {
            */ source_domain: string;
           /**
            * > ```yaml
-           * > energy_sensor_entity_id: sensor.kajplats_gu10_cws_470lm_energy
+           * > energy_sensor_entity_id: sensor.kajplats_e27_cws_globe_1055lm_energy
            * > ```
            */ energy_sensor_entity_id: string;
           unit_of_measurement: "W";
           device_class: "power";
-          friendly_name: "Spare Room Ceiling (by en-suite) KAJPLATS GU10 CWS 470lm power";
+          friendly_name: "Spare Room Wall (close to door) KAJPLATS E27 CWS globe 1055lm power";
         }
       >;
     };
-    "sensor.kajplats_gu10_cws_470lm_energy": {
+    "sensor.kajplats_e27_cws_globe_1055lm_energy": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "sensor.kajplats_gu10_cws_470lm_energy",
+        "sensor.kajplats_e27_cws_globe_1055lm_energy",
         {
           state_class: "total_increasing";
           /**
            * > ```yaml
-           * > source_entity: light.spare_room_ceiing_by_ensuite
+           * > source_entity: light.spare_room_wall_close_to_door
            * > ```
            */ source_entity: string;
           /**
@@ -12372,20 +12772,20 @@ declare module "@digital-alchemy/hass" {
            */ source_domain: string;
           /**
            * > ```yaml
-           * > source: sensor.kajplats_gu10_cws_470lm_power
+           * > source: sensor.kajplats_e27_cws_globe_1055lm_power
            * > ```
            */ source: string;
           unit_of_measurement: "kWh";
           device_class: "energy";
           icon: "mdi:lightning-bolt";
-          friendly_name: "Spare Room Ceiling (by en-suite) KAJPLATS GU10 CWS 470lm energy";
+          friendly_name: "Spare Room Wall (close to door) KAJPLATS E27 CWS globe 1055lm energy";
         }
       >;
     };
-    "sensor.hallway_light_middle_power": {
+    "sensor.kitchen_sink_power": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "sensor.hallway_light_middle_power",
+        "sensor.kitchen_sink_power",
         {
           state_class: "measurement";
           /**
@@ -12400,7 +12800,7 @@ declare module "@digital-alchemy/hass" {
            */ integration: string;
           /**
            * > ```yaml
-           * > source_entity: light.hallway_middle
+           * > source_entity: light.kitchen_sink
            * > ```
            */ source_entity: string;
           /**
@@ -12410,24 +12810,24 @@ declare module "@digital-alchemy/hass" {
            */ source_domain: string;
           /**
            * > ```yaml
-           * > energy_sensor_entity_id: sensor.hallway_light_middle_energy
+           * > energy_sensor_entity_id: sensor.kitchen_sink_energy
            * > ```
            */ energy_sensor_entity_id: string;
           unit_of_measurement: "W";
           device_class: "power";
-          friendly_name: "Hallway (middle) Power";
+          friendly_name: "Kitchen (Sink) Power";
         }
       >;
     };
-    "sensor.hallway_light_middle_energy": {
+    "sensor.kitchen_sink_energy": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "sensor.hallway_light_middle_energy",
+        "sensor.kitchen_sink_energy",
         {
           state_class: "total_increasing";
           /**
            * > ```yaml
-           * > source_entity: light.hallway_middle
+           * > source_entity: light.kitchen_sink
            * > ```
            */ source_entity: string;
           /**
@@ -12437,143 +12837,13 @@ declare module "@digital-alchemy/hass" {
            */ source_domain: string;
           /**
            * > ```yaml
-           * > source: sensor.hallway_light_middle_power
+           * > source: sensor.kitchen_sink_power
            * > ```
            */ source: string;
           unit_of_measurement: "kWh";
           device_class: "energy";
           icon: "mdi:lightning-bolt";
-          friendly_name: "Hallway (middle) Energy";
-        }
-      >;
-    };
-    "sensor.door_light_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.door_light_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.bedroom_door
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.door_light_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Bedroom (door) Boor light power";
-        }
-      >;
-    };
-    "sensor.door_light_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.door_light_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.bedroom_door
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.door_light_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Bedroom (door) Boor light energy";
-        }
-      >;
-    };
-    "sensor.bathroom_ceiing_light_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bathroom_ceiing_light_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.bathroom_ceiling
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.bathroom_ceiling_light_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Bathroom (ceiing) Power";
-        }
-      >;
-    };
-    "sensor.bathroom_ceiling_light_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bathroom_ceiling_light_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.bathroom_ceiling
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.bathroom_ceiing_light_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Bathroom (ceiing) Energy";
+          friendly_name: "Kitchen (Sink) Energy";
         }
       >;
     };
@@ -12639,6 +12909,71 @@ declare module "@digital-alchemy/hass" {
           device_class: "energy";
           icon: "mdi:lightning-bolt";
           friendly_name: "living room back wall (left) Energy";
+        }
+      >;
+    };
+    "sensor.kajplats_gu10_cws_470lm_power_2": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.kajplats_gu10_cws_470lm_power_2",
+        {
+          state_class: "measurement";
+          /**
+           * > ```yaml
+           * > calculation_mode: lut
+           * > ```
+           */ calculation_mode: string;
+          /**
+           * > ```yaml
+           * > integration: powercalc
+           * > ```
+           */ integration: string;
+          /**
+           * > ```yaml
+           * > source_entity: light.spare_room_ceiling_centre
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > energy_sensor_entity_id: sensor.kajplats_gu10_cws_470lm_energy_2
+           * > ```
+           */ energy_sensor_entity_id: string;
+          unit_of_measurement: "W";
+          device_class: "power";
+          friendly_name: "Spare Room Ceiling (centre) KAJPLATS GU10 CWS 470lm power";
+        }
+      >;
+    };
+    "sensor.kajplats_gu10_cws_470lm_energy_2": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.kajplats_gu10_cws_470lm_energy_2",
+        {
+          state_class: "total_increasing";
+          /**
+           * > ```yaml
+           * > source_entity: light.spare_room_ceiling_centre
+           * > ```
+           */ source_entity: string;
+          /**
+           * > ```yaml
+           * > source_domain: light
+           * > ```
+           */ source_domain: string;
+          /**
+           * > ```yaml
+           * > source: sensor.kajplats_gu10_cws_470lm_power_2
+           * > ```
+           */ source: string;
+          unit_of_measurement: "kWh";
+          device_class: "energy";
+          icon: "mdi:lightning-bolt";
+          friendly_name: "Spare Room Ceiling (centre) KAJPLATS GU10 CWS 470lm energy";
         }
       >;
     };
@@ -12769,440 +13104,6 @@ declare module "@digital-alchemy/hass" {
           device_class: "energy";
           icon: "mdi:lightning-bolt";
           friendly_name: "Bedroom wall (left) Left wall energy";
-        }
-      >;
-    };
-    "sensor.en_suite_ceiling_centre_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.en_suite_ceiling_centre_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.ensuite_centre
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.en_suite_ceiling_centre_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "En-suite ceiling (centre) Power";
-        }
-      >;
-    };
-    "sensor.en_suite_ceiling_centre_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.en_suite_ceiling_centre_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.ensuite_centre
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.en_suite_ceiling_centre_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "En-suite ceiling (centre) Energy";
-        }
-      >;
-    };
-    "sensor.kitchen_washing_machine_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kitchen_washing_machine_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.kitchen_washing_machine
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.kitchen_washing_machine_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Kitchen (Washing Machine) Power";
-        }
-      >;
-    };
-    "sensor.kitchen_washing_machine_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kitchen_washing_machine_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.kitchen_washing_machine
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.kitchen_washing_machine_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Kitchen (Washing Machine) Energy";
-        }
-      >;
-    };
-    "sensor.en_suite_corner_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.en_suite_corner_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.ensuite_corner
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.en_suite_corner_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "En-suite (corner) Power";
-        }
-      >;
-    };
-    "sensor.en_suite_corner_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.en_suite_corner_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.ensuite_corner
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.en_suite_corner_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "En-suite (corner) Energy";
-        }
-      >;
-    };
-    "sensor.kajplats_gu10_cws_470lm_power_2": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kajplats_gu10_cws_470lm_power_2",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.spare_room_ceiling_centre
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.kajplats_gu10_cws_470lm_energy_2
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Spare Room Ceiling (centre) KAJPLATS GU10 CWS 470lm power";
-        }
-      >;
-    };
-    "sensor.kajplats_gu10_cws_470lm_energy_2": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kajplats_gu10_cws_470lm_energy_2",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.spare_room_ceiling_centre
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.kajplats_gu10_cws_470lm_power_2
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Spare Room Ceiling (centre) KAJPLATS GU10 CWS 470lm energy";
-        }
-      >;
-    };
-    "sensor.kajplats_e27_cws_globe_1055lm_power": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kajplats_e27_cws_globe_1055lm_power",
-        {
-          state_class: "measurement";
-          /**
-           * > ```yaml
-           * > calculation_mode: lut
-           * > ```
-           */ calculation_mode: string;
-          /**
-           * > ```yaml
-           * > integration: powercalc
-           * > ```
-           */ integration: string;
-          /**
-           * > ```yaml
-           * > source_entity: light.spare_room_wall_close_to_door
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > energy_sensor_entity_id: sensor.kajplats_e27_cws_globe_1055lm_energy
-           * > ```
-           */ energy_sensor_entity_id: string;
-          unit_of_measurement: "W";
-          device_class: "power";
-          friendly_name: "Spare Room Wall (close to door) KAJPLATS E27 CWS globe 1055lm power";
-        }
-      >;
-    };
-    "sensor.kajplats_e27_cws_globe_1055lm_energy": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.kajplats_e27_cws_globe_1055lm_energy",
-        {
-          state_class: "total_increasing";
-          /**
-           * > ```yaml
-           * > source_entity: light.spare_room_wall_close_to_door
-           * > ```
-           */ source_entity: string;
-          /**
-           * > ```yaml
-           * > source_domain: light
-           * > ```
-           */ source_domain: string;
-          /**
-           * > ```yaml
-           * > source: sensor.kajplats_e27_cws_globe_1055lm_power
-           * > ```
-           */ source: string;
-          unit_of_measurement: "kWh";
-          device_class: "energy";
-          icon: "mdi:lightning-bolt";
-          friendly_name: "Spare Room Wall (close to door) KAJPLATS E27 CWS globe 1055lm energy";
-        }
-      >;
-    };
-    "sensor.tp_link_router_total_guest_wifi_clients": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.tp_link_router_total_guest_wifi_clients",
-        {
-          state_class: "total";
-          icon: "mdi:account-multiple";
-          friendly_name: "TP-Link Router Total guest wifi clients";
-        }
-      >;
-    };
-    "sensor.tp_link_router_total_main_wifi_clients": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.tp_link_router_total_main_wifi_clients",
-        {
-          state_class: "total";
-          icon: "mdi:account-multiple";
-          friendly_name: "TP-Link Router Total main wifi clients";
-        }
-      >;
-    };
-    "sensor.tp_link_router_total_wired_clients": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.tp_link_router_total_wired_clients",
-        {
-          state_class: "total";
-          icon: "mdi:account-multiple";
-          friendly_name: "TP-Link Router Total wired clients";
-        }
-      >;
-    };
-    "sensor.tp_link_router_total_iot_clients": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.tp_link_router_total_iot_clients",
-        {
-          state_class: "total";
-          icon: "mdi:account-multiple";
-          friendly_name: "TP-Link Router Total IoT clients";
-        }
-      >;
-    };
-    "sensor.tp_link_router_total_clients": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.tp_link_router_total_clients",
-        {
-          state_class: "total";
-          icon: "mdi:account-multiple";
-          friendly_name: "TP-Link Router Total clients";
-        }
-      >;
-    };
-    "sensor.tp_link_router_cpu_used": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.tp_link_router_cpu_used",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          icon: "mdi:cpu-64-bit";
-          friendly_name: "TP-Link Router CPU used";
-        }
-      >;
-    };
-    "sensor.tp_link_router_memory_used": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.tp_link_router_memory_used",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          icon: "mdi:memory";
-          friendly_name: "TP-Link Router Memory used";
-        }
-      >;
-    };
-    "sensor.tp_link_router_connection_type": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.tp_link_router_connection_type",
-        {
-          icon: "mdi:wan";
-          friendly_name: "TP-Link Router Connection Type";
-        }
-      >;
-    };
-    "sensor.tp_link_router_wan_ipv4_address": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.tp_link_router_wan_ipv4_address",
-        {
-          icon: "mdi:wan";
-          friendly_name: "TP-Link Router WAN IPv4 Address";
-        }
-      >;
-    };
-    "sensor.tp_link_router_lan_ipv4_address": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sensor.tp_link_router_lan_ipv4_address",
-        {
-          icon: "mdi:lan";
-          friendly_name: "TP-Link Router LAN IPv4 Address";
         }
       >;
     };
@@ -13453,6 +13354,51 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "sensor.0xa4c1385b9f71e566_temperature": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.0xa4c1385b9f71e566_temperature",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "\u00B0C";
+          device_class: "temperature";
+          friendly_name: "0xa4c1385b9f71e566 Temperature";
+        }
+      >;
+    };
+    "sensor.0xa4c1385b9f71e566_soil_moisture": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.0xa4c1385b9f71e566_soil_moisture",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          device_class: "moisture";
+          friendly_name: "0xa4c1385b9f71e566 Moisture";
+        }
+      >;
+    };
+    "sensor.0xa4c1385b9f71e566_battery": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "sensor.0xa4c1385b9f71e566_battery",
+        {
+          state_class: "measurement";
+          unit_of_measurement: "%";
+          device_class: "battery";
+          friendly_name: "0xa4c1385b9f71e566 Battery";
+        }
+      >;
+    };
+    "sensor.0xa4c1385b9f71e566_battery_state": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.0xa4c1385b9f71e566_battery_state",
+        {
+          friendly_name: "0xa4c1385b9f71e566 Battery state";
+        }
+      >;
+    };
     "sensor.front_door_open_battery": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -13474,6 +13420,26 @@ declare module "@digital-alchemy/hass" {
           unit_of_measurement: "mV";
           device_class: "voltage";
           friendly_name: "Front Door Open Voltage";
+        }
+      >;
+    };
+    "sensor.ps5_online_status": {
+      state: "offline" | "availabletoplay" | "availabletocommunicate" | "busy";
+      attributes: DynamicMergeAttributes<
+        "sensor.ps5_online_status",
+        {
+          options: ("offline" | "availabletoplay" | "availabletocommunicate" | "busy")[];
+          device_class: "enum";
+          friendly_name: "ps5 Online status";
+        }
+      >;
+    };
+    "sensor.ps5_now_playing": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "sensor.ps5_now_playing",
+        {
+          friendly_name: "ps5 Now playing";
         }
       >;
     };
@@ -13599,66 +13565,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "sensor.bed_occupancy_sensor_wifi_signal_db": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bed_occupancy_sensor_wifi_signal_db",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "dBm";
-          device_class: "signal_strength";
-          friendly_name: "Bed Occupancy Sensor WiFi Signal dB";
-        }
-      >;
-    };
-    "sensor.bed_occupancy_sensor_wifi_signal_percent": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bed_occupancy_sensor_wifi_signal_percent",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          friendly_name: "Bed Occupancy Sensor WiFi Signal Percent";
-        }
-      >;
-    };
-    "sensor.bed_occupancy_sensor_uptime": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bed_occupancy_sensor_uptime",
-        {
-          state_class: "total_increasing";
-          unit_of_measurement: "s";
-          device_class: "duration";
-          icon: "mdi:timer-outline";
-          friendly_name: "Bed Occupancy Sensor Uptime";
-        }
-      >;
-    };
-    "sensor.bed_pressure_left": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bed_pressure_left",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          icon: "mdi:gauge";
-          friendly_name: "Bed Occupancy Sensor Left Pressure";
-        }
-      >;
-    };
-    "sensor.bed_pressure_right": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "sensor.bed_pressure_right",
-        {
-          state_class: "measurement";
-          unit_of_measurement: "%";
-          icon: "mdi:gauge";
-          friendly_name: "Bed Occupancy Sensor Right Pressure";
-        }
-      >;
-    };
     "event.automatic_backup": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -13692,227 +13598,6 @@ declare module "@digital-alchemy/hass" {
         "binary_sensor.front_door_lock_actuator",
         {
           friendly_name: "Front Door Lock Actuator";
-        }
-      >;
-    };
-    "binary_sensor.shellyem_a4e57cba73f5_overpowering": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyem_a4e57cba73f5_overpowering",
-        {
-          device_class: "problem";
-          friendly_name: "Shelly Heating Element Overpowering";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c27e768_input_0": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c27e768_input_0",
-        {
-          device_class: "power";
-          friendly_name: "Living Room Heater (Bookcase) Input 0";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c27e768_overheating": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c27e768_overheating",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (Bookcase) Overheating";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c27e768_overpowering": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c27e768_overpowering",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (Bookcase) Overpowering";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c27e768_overvoltage": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c27e768_overvoltage",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (Bookcase) Overvoltage";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c27e768_overcurrent": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c27e768_overcurrent",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (Bookcase) Overcurrent";
-        }
-      >;
-    };
-    "binary_sensor.shelly_plus_pm_overheating": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shelly_plus_pm_overheating",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (TV) Overheating";
-        }
-      >;
-    };
-    "binary_sensor.shelly_plus_pm_overpowering": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shelly_plus_pm_overpowering",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (TV) Overpowering";
-        }
-      >;
-    };
-    "binary_sensor.shelly_plus_pm_overvoltage": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shelly_plus_pm_overvoltage",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (TV) Overvoltage";
-        }
-      >;
-    };
-    "binary_sensor.shelly_plus_pm_overcurrent": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shelly_plus_pm_overcurrent",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (TV) Overcurrent";
-        }
-      >;
-    };
-    "binary_sensor.living_room_heater_by_window_input": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.living_room_heater_by_window_input",
-        {
-          device_class: "power";
-          friendly_name: "Living Room Heater (Window) Input 0";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overheating": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overheating",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (Window) Overheating";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overpowering": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overpowering",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (Window) Overpowering";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overvoltage": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overvoltage",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (Window) Overvoltage";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overcurrent": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overcurrent",
-        {
-          device_class: "problem";
-          friendly_name: "Living Room Heater (Window) Overcurrent";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_input_0": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_input_0",
-        {
-          device_class: "power";
-          friendly_name: "Hallway Heater Input 0";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overheating": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overheating",
-        {
-          device_class: "problem";
-          friendly_name: "Hallway Heater Overheating";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overpowering": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overpowering",
-        {
-          device_class: "problem";
-          friendly_name: "Hallway Heater Overpowering";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overvoltage": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overvoltage",
-        {
-          device_class: "problem";
-          friendly_name: "Hallway Heater Overvoltage";
-        }
-      >;
-    };
-    "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overcurrent": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overcurrent",
-        {
-          device_class: "problem";
-          friendly_name: "Hallway Heater Overcurrent";
-        }
-      >;
-    };
-    "binary_sensor.spare_room_occupancy": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.spare_room_occupancy",
-        {
-          device_class: "motion";
-          friendly_name: "Motion";
-        }
-      >;
-    };
-    "binary_sensor.living_room_occupancy": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.living_room_occupancy",
-        {
-          device_class: "motion";
-          icon: "mdi:motion-sensor";
-          friendly_name: "Living Room Motion Sensor";
         }
       >;
     };
@@ -13988,6 +13673,227 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "binary_sensor.shellyem_a4e57cba73f5_overpowering": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyem_a4e57cba73f5_overpowering",
+        {
+          device_class: "problem";
+          friendly_name: "Shelly Heating Element Overpowering";
+        }
+      >;
+    };
+    "binary_sensor.shelly_plus_pm_overheating": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shelly_plus_pm_overheating",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (TV) Overheating";
+        }
+      >;
+    };
+    "binary_sensor.shelly_plus_pm_overpowering": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shelly_plus_pm_overpowering",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (TV) Overpowering";
+        }
+      >;
+    };
+    "binary_sensor.shelly_plus_pm_overvoltage": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shelly_plus_pm_overvoltage",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (TV) Overvoltage";
+        }
+      >;
+    };
+    "binary_sensor.shelly_plus_pm_overcurrent": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shelly_plus_pm_overcurrent",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (TV) Overcurrent";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_input_0": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_input_0",
+        {
+          device_class: "power";
+          friendly_name: "Hallway Heater Input 0";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overheating": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overheating",
+        {
+          device_class: "problem";
+          friendly_name: "Hallway Heater Overheating";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overpowering": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overpowering",
+        {
+          device_class: "problem";
+          friendly_name: "Hallway Heater Overpowering";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overvoltage": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overvoltage",
+        {
+          device_class: "problem";
+          friendly_name: "Hallway Heater Overvoltage";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overcurrent": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c2b3a6c_overcurrent",
+        {
+          device_class: "problem";
+          friendly_name: "Hallway Heater Overcurrent";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c27e768_input_0": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c27e768_input_0",
+        {
+          device_class: "power";
+          friendly_name: "Living Room Heater (Bookcase) Input 0";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c27e768_overheating": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c27e768_overheating",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (Bookcase) Overheating";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c27e768_overpowering": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c27e768_overpowering",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (Bookcase) Overpowering";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c27e768_overvoltage": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c27e768_overvoltage",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (Bookcase) Overvoltage";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c27e768_overcurrent": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c27e768_overcurrent",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (Bookcase) Overcurrent";
+        }
+      >;
+    };
+    "binary_sensor.living_room_heater_by_window_input": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.living_room_heater_by_window_input",
+        {
+          device_class: "power";
+          friendly_name: "Living Room Heater (Window) Input 0";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overheating": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overheating",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (Window) Overheating";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overpowering": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overpowering",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (Window) Overpowering";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overvoltage": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overvoltage",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (Window) Overvoltage";
+        }
+      >;
+    };
+    "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overcurrent": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.shellyplus1pm_a0dd6c2b6cf4_overcurrent",
+        {
+          device_class: "problem";
+          friendly_name: "Living Room Heater (Window) Overcurrent";
+        }
+      >;
+    };
+    "binary_sensor.spare_room_occupancy": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.spare_room_occupancy",
+        {
+          device_class: "motion";
+          friendly_name: "Motion";
+        }
+      >;
+    };
+    "binary_sensor.living_room_occupancy": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.living_room_occupancy",
+        {
+          device_class: "motion";
+          icon: "mdi:motion-sensor";
+          friendly_name: "Living Room Motion Sensor";
+        }
+      >;
+    };
     "binary_sensor.upnp_igd_wan_status": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
@@ -13995,33 +13901,6 @@ declare module "@digital-alchemy/hass" {
         {
           device_class: "connectivity";
           friendly_name: "UPNP IGD WAN status";
-        }
-      >;
-    };
-    "binary_sensor.bathroom_sonos_microphone": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.bathroom_sonos_microphone",
-        {
-          friendly_name: "Bathroom Speaker Microphone";
-        }
-      >;
-    };
-    "binary_sensor.living_room_microphone": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.living_room_microphone",
-        {
-          friendly_name: "Living Room Microphone";
-        }
-      >;
-    };
-    "binary_sensor.bedroom_speaker_microphone": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.bedroom_speaker_microphone",
-        {
-          friendly_name: "Bedroom Speaker Microphone";
         }
       >;
     };
@@ -14058,12 +13937,93 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "binary_sensor.bed_occupancy_sensor_status": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.bed_occupancy_sensor_status",
+        {
+          device_class: "connectivity";
+          friendly_name: "Bed Occupancy Sensor Status";
+        }
+      >;
+    };
+    "binary_sensor.bed_occupied_left": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.bed_occupied_left",
+        {
+          device_class: "occupancy";
+          icon: "mdi:bed";
+          friendly_name: "Bed Occupancy Sensor Bed Occupied Left";
+        }
+      >;
+    };
+    "binary_sensor.bed_occupancy_sensor_bed_occupied_right": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.bed_occupancy_sensor_bed_occupied_right",
+        {
+          device_class: "occupancy";
+          icon: "mdi:bed";
+          friendly_name: "Bed Occupancy Sensor Bed Occupied Right";
+        }
+      >;
+    };
+    "binary_sensor.bed_occupied_both": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.bed_occupied_both",
+        {
+          device_class: "occupancy";
+          icon: "mdi:bunk-bed";
+          friendly_name: "Bed Occupancy Sensor Bed Occupied Both";
+        }
+      >;
+    };
+    "binary_sensor.bed_occupied_either": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.bed_occupied_either",
+        {
+          device_class: "occupancy";
+          icon: "mdi:bunk-bed";
+          friendly_name: "Bed Occupancy Sensor Bed Occupied Either";
+        }
+      >;
+    };
     "binary_sensor.hallway_microphone": {
       state: "on" | "off";
       attributes: DynamicMergeAttributes<
         "binary_sensor.hallway_microphone",
         {
           friendly_name: "Hallway Microphone";
+        }
+      >;
+    };
+    "binary_sensor.bedroom_speaker_microphone": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.bedroom_speaker_microphone",
+        {
+          friendly_name: "Bedroom Speaker Microphone";
+        }
+      >;
+    };
+    "binary_sensor.bathroom_sonos_microphone": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.bathroom_sonos_microphone",
+        {
+          friendly_name: "Bathroom Speaker Microphone";
+        }
+      >;
+    };
+    "binary_sensor.living_room_microphone": {
+      state: "on" | "off";
+      attributes: DynamicMergeAttributes<
+        "binary_sensor.living_room_microphone",
+        {
+          friendly_name: "Living Room Microphone";
         }
       >;
     };
@@ -14198,60 +14158,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "binary_sensor.bed_occupancy_sensor_status": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.bed_occupancy_sensor_status",
-        {
-          device_class: "connectivity";
-          friendly_name: "Bed Occupancy Sensor Status";
-        }
-      >;
-    };
-    "binary_sensor.bed_occupancy_sensor_bed_occupied_right": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.bed_occupancy_sensor_bed_occupied_right",
-        {
-          device_class: "occupancy";
-          icon: "mdi:bed";
-          friendly_name: "Bed Occupancy Sensor Bed Occupied Right";
-        }
-      >;
-    };
-    "binary_sensor.bed_occupied_both": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.bed_occupied_both",
-        {
-          device_class: "occupancy";
-          icon: "mdi:bunk-bed";
-          friendly_name: "Bed Occupancy Sensor Bed Occupied Both";
-        }
-      >;
-    };
-    "binary_sensor.bed_occupied_either": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.bed_occupied_either",
-        {
-          device_class: "occupancy";
-          icon: "mdi:bunk-bed";
-          friendly_name: "Bed Occupancy Sensor Bed Occupied Either";
-        }
-      >;
-    };
-    "binary_sensor.bed_occupied_left": {
-      state: "on" | "off";
-      attributes: DynamicMergeAttributes<
-        "binary_sensor.bed_occupied_left",
-        {
-          device_class: "occupancy";
-          icon: "mdi:bed";
-          friendly_name: "Bed Occupancy Sensor Bed Occupied Left";
-        }
-      >;
-    };
     "stt.home_assistant_cloud": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -14279,24 +14185,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "tts.google_translate_en_com": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "tts.google_translate_en_com",
-        {
-          friendly_name: "Google Translate en com";
-        }
-      >;
-    };
-    "tts.openai_tts": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "tts.openai_tts",
-        {
-          friendly_name: "OpenAI TTS";
-        }
-      >;
-    };
     "tts.openai_tts_gpt_40": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -14304,7 +14192,7 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > media_duration: 29904
+           * > media_duration: 5112
            * > ```
            */ media_duration: number;
           /**
@@ -14351,6 +14239,24 @@ declare module "@digital-alchemy/hass" {
            */ current_chime_sound: string;
           current_extra_payload: null;
           friendly_name: "GPT-40 (gpt-4o-mini-tts-shimmer) OpenAI TTS GPT-40";
+        }
+      >;
+    };
+    "tts.google_translate_en_com": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "tts.google_translate_en_com",
+        {
+          friendly_name: "Google Translate en com";
+        }
+      >;
+    };
+    "tts.openai_tts": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "tts.openai_tts",
+        {
+          friendly_name: "OpenAI TTS";
         }
       >;
     };
@@ -14567,19 +14473,20 @@ declare module "@digital-alchemy/hass" {
             | "device_tracker.apple_tv"
             | "device_tracker.bens_iphone_2"
           )[];
+          in_zones: "zone.home"[];
           /**
            * > ```yaml
-           * > latitude: 53.47927422930142
+           * > latitude: 53.47926866642194
            * > ```
            */ latitude: number;
           /**
            * > ```yaml
-           * > longitude: -2.2206661400601937
+           * > longitude: -2.2207866076480647
            * > ```
            */ longitude: number;
           /**
            * > ```yaml
-           * > gps_accuracy: 17
+           * > gps_accuracy: 8.095014
            * > ```
            */ gps_accuracy: number;
           /**
@@ -14593,56 +14500,6 @@ declare module "@digital-alchemy/hass" {
            * > ```
            */ user_id: string;
           friendly_name: "ben";
-        }
-      >;
-    };
-    "sun.sun": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "sun.sun",
-        {
-          /**
-           * > ```yaml
-           * > next_dawn: '2026-05-07T03:40:00.103894+00:00'
-           * > ```
-           */ next_dawn: string;
-          /**
-           * > ```yaml
-           * > next_dusk: '2026-05-06T20:30:19.145012+00:00'
-           * > ```
-           */ next_dusk: string;
-          /**
-           * > ```yaml
-           * > next_midnight: '2026-05-07T00:05:26+00:00'
-           * > ```
-           */ next_midnight: string;
-          /**
-           * > ```yaml
-           * > next_noon: '2026-05-06T12:05:32+00:00'
-           * > ```
-           */ next_noon: string;
-          /**
-           * > ```yaml
-           * > next_rising: '2026-05-07T04:23:01.880549+00:00'
-           * > ```
-           */ next_rising: string;
-          /**
-           * > ```yaml
-           * > next_setting: '2026-05-06T19:47:14.929543+00:00'
-           * > ```
-           */ next_setting: string;
-          /**
-           * > ```yaml
-           * > elevation: 46.06
-           * > ```
-           */ elevation: number;
-          /**
-           * > ```yaml
-           * > azimuth: 135.16
-           * > ```
-           */ azimuth: number;
-          rising: boolean;
-          friendly_name: "Sun";
         }
       >;
     };
@@ -14731,16 +14588,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "button.shellyem_a4e57cba73f5_restart": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "button.shellyem_a4e57cba73f5_restart",
-        {
-          device_class: "restart";
-          friendly_name: "Shelly Heating Element Restart";
-        }
-      >;
-    };
     "button.boiler_main_element_restart": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -14751,13 +14598,23 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "button.shellyplus1pm_a0dd6c27e768_restart": {
+    "button.shellyem_a4e57cba73f5_restart": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "button.shellyplus1pm_a0dd6c27e768_restart",
+        "button.shellyem_a4e57cba73f5_restart",
         {
           device_class: "restart";
-          friendly_name: "Living Room Heater (Bookcase) Restart";
+          friendly_name: "Shelly Heating Element Restart";
+        }
+      >;
+    };
+    "button.boiler_boost_switch_restart": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "button.boiler_boost_switch_restart",
+        {
+          device_class: "restart";
+          friendly_name: "Boiler Boost Switch Restart";
         }
       >;
     };
@@ -14771,16 +14628,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "button.shellyplus1pm_a0dd6c2b6cf4_restart": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "button.shellyplus1pm_a0dd6c2b6cf4_restart",
-        {
-          device_class: "restart";
-          friendly_name: "Living Room Heater (Window) Restart";
-        }
-      >;
-    };
     "button.shellyplus1pm_a0dd6c2b3a6c_restart": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -14791,13 +14638,32 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "button.boiler_boost_switch_restart": {
+    "button.shellyplus1pm_a0dd6c27e768_restart": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "button.boiler_boost_switch_restart",
+        "button.shellyplus1pm_a0dd6c27e768_restart",
         {
           device_class: "restart";
-          friendly_name: "Boiler Boost Switch Restart";
+          friendly_name: "Living Room Heater (Bookcase) Restart";
+        }
+      >;
+    };
+    "button.shellyplus1pm_a0dd6c2b6cf4_restart": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "button.shellyplus1pm_a0dd6c2b6cf4_restart",
+        {
+          device_class: "restart";
+          friendly_name: "Living Room Heater (Window) Restart";
+        }
+      >;
+    };
+    "button.turn_on_tv": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "button.turn_on_tv",
+        {
+          friendly_name: "TV";
         }
       >;
     };
@@ -14828,17 +14694,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "button.living_room_blinds_my_position": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "button.living_room_blinds_my_position",
-        {
-          assumed_state: boolean;
-          icon: "mdi:star";
-          friendly_name: "Living Room Blinds My position";
-        }
-      >;
-    };
     "button.flat_favorite_current_song_2": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -14863,6 +14718,15 @@ declare module "@digital-alchemy/hass" {
         "button.xbox_favorite_current_song",
         {
           friendly_name: "XBOX Favorite current song";
+        }
+      >;
+    };
+    "button.home_assistant_voice_living_room_favorite_current_song": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "button.home_assistant_voice_living_room_favorite_current_song",
+        {
+          friendly_name: "Home Assistant Voice Living Room Favorite current song";
         }
       >;
     };
@@ -14893,31 +14757,25 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "button.home_assistant_voice_living_room_favorite_current_song": {
+    "button.living_room_blinds_my_position": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "button.home_assistant_voice_living_room_favorite_current_song",
+        "button.living_room_blinds_my_position",
         {
-          friendly_name: "Home Assistant Voice Living Room Favorite current song";
+          assumed_state: boolean;
+          icon: "mdi:star";
+          friendly_name: "Living Room Blinds My position";
         }
       >;
     };
-    "button.turn_on_tv": {
+    "button.bed_occupancy_sensor_restart": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "button.turn_on_tv",
-        {
-          friendly_name: "TV";
-        }
-      >;
-    };
-    "button.reboot": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "button.reboot",
+        "button.bed_occupancy_sensor_restart",
         {
           device_class: "restart";
-          friendly_name: "TP-Link Router Reboot";
+          icon: "mdi:restart";
+          friendly_name: "Bed Occupancy Sensor Restart";
         }
       >;
     };
@@ -14928,6 +14786,16 @@ declare module "@digital-alchemy/hass" {
         {
           device_class: "restart";
           friendly_name: "Zigbee2MQTT Bridge Restart";
+        }
+      >;
+    };
+    "button.reboot": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "button.reboot",
+        {
+          device_class: "restart";
+          friendly_name: "TP-Link Router Reboot";
         }
       >;
     };
@@ -14977,17 +14845,6 @@ declare module "@digital-alchemy/hass" {
         {
           icon: "mdi:alarm";
           friendly_name: "Set Alarm";
-        }
-      >;
-    };
-    "button.bed_occupancy_sensor_restart": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "button.bed_occupancy_sensor_restart",
-        {
-          device_class: "restart";
-          icon: "mdi:restart";
-          friendly_name: "Bed Occupancy Sensor Restart";
         }
       >;
     };
@@ -15077,6 +14934,17 @@ declare module "@digital-alchemy/hass" {
         {
           options: ("on" | "off" | "toggle" | "previous")[];
           friendly_name: "En-suite (corner) Power-on behavior";
+        }
+      >;
+    };
+    "select.bed_occupancy_sensor_response_speed": {
+      state: "Fast" | "Normal" | "Slow";
+      attributes: DynamicMergeAttributes<
+        "select.bed_occupancy_sensor_response_speed",
+        {
+          options: ("Fast" | "Normal" | "Slow")[];
+          icon: "mdi:speedometer";
+          friendly_name: "Bed Occupancy Sensor Response Speed";
         }
       >;
     };
@@ -15374,14 +15242,23 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "select.bed_occupancy_sensor_response_speed": {
-      state: "Fast" | "Normal" | "Slow";
+    "select.0xa4c1385b9f71e566_temperature_unit": {
+      state: "celsius" | "fahrenheit";
       attributes: DynamicMergeAttributes<
-        "select.bed_occupancy_sensor_response_speed",
+        "select.0xa4c1385b9f71e566_temperature_unit",
         {
-          options: ("Fast" | "Normal" | "Slow")[];
-          icon: "mdi:speedometer";
-          friendly_name: "Bed Occupancy Sensor Response Speed";
+          options: ("celsius" | "fahrenheit")[];
+          friendly_name: "0xa4c1385b9f71e566 Temperature unit";
+        }
+      >;
+    };
+    "select.led_matrix_page_mqtt_select": {
+      state: "clock" | "dashboard";
+      attributes: DynamicMergeAttributes<
+        "select.led_matrix_page_mqtt_select",
+        {
+          options: ("clock" | "dashboard")[];
+          friendly_name: "LED Matrix Display Page";
         }
       >;
     };
@@ -16153,85 +16030,10 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "number.bathroom_sonos_bass": {
+    "number.bed_occupancy_sensor_left_unoccupied_pressure": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "number.bathroom_sonos_bass",
-        {
-          /**
-           * > ```yaml
-           * > min: -10
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 10
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "auto";
-          friendly_name: "Bathroom Speaker Bass";
-        }
-      >;
-    };
-    "number.bathroom_sonos_balance": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.bathroom_sonos_balance",
-        {
-          /**
-           * > ```yaml
-           * > min: -100
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 100
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "auto";
-          friendly_name: "Bathroom Speaker Balance";
-        }
-      >;
-    };
-    "number.bathroom_sonos_treble": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.bathroom_sonos_treble",
-        {
-          /**
-           * > ```yaml
-           * > min: -10
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 10
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "auto";
-          friendly_name: "Bathroom Speaker Treble";
-        }
-      >;
-    };
-    "number.living_room_audio_delay": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.living_room_audio_delay",
+        "number.bed_occupancy_sensor_left_unoccupied_pressure",
         {
           /**
            * > ```yaml
@@ -16240,7 +16042,7 @@ declare module "@digital-alchemy/hass" {
            */ min: number;
           /**
            * > ```yaml
-           * > max: 5
+           * > max: 120
            * > ```
            */ max: number;
           /**
@@ -16248,24 +16050,26 @@ declare module "@digital-alchemy/hass" {
            * > step: 1
            * > ```
            */ step: number;
-          mode: "auto";
-          friendly_name: "Living Room Audio delay";
+          mode: "box";
+          unit_of_measurement: "%";
+          icon: "mdi:gauge-empty";
+          friendly_name: "Bed Occupancy Sensor Left Unoccupied Pressure";
         }
       >;
     };
-    "number.living_room_bass": {
+    "number.bed_occupancy_sensor_left_occupied_pressure": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "number.living_room_bass",
+        "number.bed_occupancy_sensor_left_occupied_pressure",
         {
           /**
            * > ```yaml
-           * > min: -10
+           * > min: 0
            * > ```
            */ min: number;
           /**
            * > ```yaml
-           * > max: 10
+           * > max: 120
            * > ```
            */ max: number;
           /**
@@ -16273,24 +16077,26 @@ declare module "@digital-alchemy/hass" {
            * > step: 1
            * > ```
            */ step: number;
-          mode: "auto";
-          friendly_name: "Living Room Bass";
+          mode: "box";
+          unit_of_measurement: "%";
+          icon: "mdi:gauge-full";
+          friendly_name: "Bed Occupancy Sensor Left Occupied Pressure";
         }
       >;
     };
-    "number.living_room_balance": {
+    "number.bed_occupancy_sensor_left_trigger_pressure": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "number.living_room_balance",
+        "number.bed_occupancy_sensor_left_trigger_pressure",
         {
           /**
            * > ```yaml
-           * > min: -100
+           * > min: 0
            * > ```
            */ min: number;
           /**
            * > ```yaml
-           * > max: 100
+           * > max: 120
            * > ```
            */ max: number;
           /**
@@ -16298,24 +16104,26 @@ declare module "@digital-alchemy/hass" {
            * > step: 1
            * > ```
            */ step: number;
-          mode: "auto";
-          friendly_name: "Living Room Balance";
+          mode: "box";
+          unit_of_measurement: "%";
+          icon: "mdi:gauge";
+          friendly_name: "Bed Occupancy Sensor Left Trigger Pressure";
         }
       >;
     };
-    "number.living_room_treble": {
+    "number.bed_occupancy_sensor_right_unoccupied_pressure": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "number.living_room_treble",
+        "number.bed_occupancy_sensor_right_unoccupied_pressure",
         {
           /**
            * > ```yaml
-           * > min: -10
+           * > min: 0
            * > ```
            */ min: number;
           /**
            * > ```yaml
-           * > max: 10
+           * > max: 120
            * > ```
            */ max: number;
           /**
@@ -16323,24 +16131,26 @@ declare module "@digital-alchemy/hass" {
            * > step: 1
            * > ```
            */ step: number;
-          mode: "auto";
-          friendly_name: "Living Room Treble";
+          mode: "box";
+          unit_of_measurement: "%";
+          icon: "mdi:gauge-empty";
+          friendly_name: "Bed Occupancy Sensor Right Unoccupied Pressure";
         }
       >;
     };
-    "number.living_room_surround_level": {
+    "number.bed_occupancy_sensor_right_occupied_pressure": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "number.living_room_surround_level",
+        "number.bed_occupancy_sensor_right_occupied_pressure",
         {
           /**
            * > ```yaml
-           * > min: -15
+           * > min: 0
            * > ```
            */ min: number;
           /**
            * > ```yaml
-           * > max: 15
+           * > max: 120
            * > ```
            */ max: number;
           /**
@@ -16348,24 +16158,26 @@ declare module "@digital-alchemy/hass" {
            * > step: 1
            * > ```
            */ step: number;
-          mode: "auto";
-          friendly_name: "Living Room Surround level";
+          mode: "box";
+          unit_of_measurement: "%";
+          icon: "mdi:gauge-full";
+          friendly_name: "Bed Occupancy Sensor Right Occupied Pressure";
         }
       >;
     };
-    "number.living_room_music_surround_level": {
+    "number.bed_occupancy_sensor_right_trigger_pressure": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "number.living_room_music_surround_level",
+        "number.bed_occupancy_sensor_right_trigger_pressure",
         {
           /**
            * > ```yaml
-           * > min: -15
+           * > min: 0
            * > ```
            */ min: number;
           /**
            * > ```yaml
-           * > max: 15
+           * > max: 120
            * > ```
            */ max: number;
           /**
@@ -16373,158 +16185,10 @@ declare module "@digital-alchemy/hass" {
            * > step: 1
            * > ```
            */ step: number;
-          mode: "auto";
-          friendly_name: "Living Room Music surround level";
-        }
-      >;
-    };
-    "number.bedroom_sonos_bass": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.bedroom_sonos_bass",
-        {
-          /**
-           * > ```yaml
-           * > min: -10
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 10
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "auto";
-          friendly_name: "Bedroom Speaker Bass";
-        }
-      >;
-    };
-    "number.bedroom_sonos_balance": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.bedroom_sonos_balance",
-        {
-          /**
-           * > ```yaml
-           * > min: -100
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 100
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "auto";
-          friendly_name: "Bedroom Speaker Balance";
-        }
-      >;
-    };
-    "number.bedroom_sonos_treble": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.bedroom_sonos_treble",
-        {
-          /**
-           * > ```yaml
-           * > min: -10
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 10
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "auto";
-          friendly_name: "Bedroom Speaker Treble";
-        }
-      >;
-    };
-    "number.hallway_sonos_bass": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.hallway_sonos_bass",
-        {
-          /**
-           * > ```yaml
-           * > min: -10
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 10
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "auto";
-          friendly_name: "Hallway Bass";
-        }
-      >;
-    };
-    "number.hallway_sonos_balance": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.hallway_sonos_balance",
-        {
-          /**
-           * > ```yaml
-           * > min: -100
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 100
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "auto";
-          friendly_name: "Hallway Balance";
-        }
-      >;
-    };
-    "number.hallway_sonos_treble": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.hallway_sonos_treble",
-        {
-          /**
-           * > ```yaml
-           * > min: -10
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 10
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "auto";
-          friendly_name: "Hallway Treble";
+          mode: "box";
+          unit_of_measurement: "%";
+          icon: "mdi:gauge";
+          friendly_name: "Bed Occupancy Sensor Right Trigger Pressure";
         }
       >;
     };
@@ -16861,6 +16525,381 @@ declare module "@digital-alchemy/hass" {
           device_class: "temperature";
           icon: "mdi:thermometer-probe";
           friendly_name: "Monroe Min soil temperature";
+        }
+      >;
+    };
+    "number.hallway_sonos_bass": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.hallway_sonos_bass",
+        {
+          /**
+           * > ```yaml
+           * > min: -10
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 10
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Hallway Bass";
+        }
+      >;
+    };
+    "number.hallway_sonos_balance": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.hallway_sonos_balance",
+        {
+          /**
+           * > ```yaml
+           * > min: -100
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 100
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Hallway Balance";
+        }
+      >;
+    };
+    "number.hallway_sonos_treble": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.hallway_sonos_treble",
+        {
+          /**
+           * > ```yaml
+           * > min: -10
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 10
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Hallway Treble";
+        }
+      >;
+    };
+    "number.bedroom_sonos_bass": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.bedroom_sonos_bass",
+        {
+          /**
+           * > ```yaml
+           * > min: -10
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 10
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Bedroom Speaker Bass";
+        }
+      >;
+    };
+    "number.bedroom_sonos_balance": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.bedroom_sonos_balance",
+        {
+          /**
+           * > ```yaml
+           * > min: -100
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 100
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Bedroom Speaker Balance";
+        }
+      >;
+    };
+    "number.bedroom_sonos_treble": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.bedroom_sonos_treble",
+        {
+          /**
+           * > ```yaml
+           * > min: -10
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 10
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Bedroom Speaker Treble";
+        }
+      >;
+    };
+    "number.bathroom_sonos_bass": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.bathroom_sonos_bass",
+        {
+          /**
+           * > ```yaml
+           * > min: -10
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 10
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Bathroom Speaker Bass";
+        }
+      >;
+    };
+    "number.bathroom_sonos_balance": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.bathroom_sonos_balance",
+        {
+          /**
+           * > ```yaml
+           * > min: -100
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 100
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Bathroom Speaker Balance";
+        }
+      >;
+    };
+    "number.bathroom_sonos_treble": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.bathroom_sonos_treble",
+        {
+          /**
+           * > ```yaml
+           * > min: -10
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 10
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Bathroom Speaker Treble";
+        }
+      >;
+    };
+    "number.living_room_audio_delay": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.living_room_audio_delay",
+        {
+          /**
+           * > ```yaml
+           * > min: 0
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 5
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Living Room Audio delay";
+        }
+      >;
+    };
+    "number.living_room_bass": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.living_room_bass",
+        {
+          /**
+           * > ```yaml
+           * > min: -10
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 10
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Living Room Bass";
+        }
+      >;
+    };
+    "number.living_room_balance": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.living_room_balance",
+        {
+          /**
+           * > ```yaml
+           * > min: -100
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 100
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Living Room Balance";
+        }
+      >;
+    };
+    "number.living_room_treble": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.living_room_treble",
+        {
+          /**
+           * > ```yaml
+           * > min: -10
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 10
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Living Room Treble";
+        }
+      >;
+    };
+    "number.living_room_surround_level": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.living_room_surround_level",
+        {
+          /**
+           * > ```yaml
+           * > min: -15
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 15
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Living Room Surround level";
+        }
+      >;
+    };
+    "number.living_room_music_surround_level": {
+      state: number;
+      attributes: DynamicMergeAttributes<
+        "number.living_room_music_surround_level",
+        {
+          /**
+           * > ```yaml
+           * > min: -15
+           * > ```
+           */ min: number;
+          /**
+           * > ```yaml
+           * > max: 15
+           * > ```
+           */ max: number;
+          /**
+           * > ```yaml
+           * > step: 1
+           * > ```
+           */ step: number;
+          mode: "auto";
+          friendly_name: "Living Room Music surround level";
         }
       >;
     };
@@ -17656,10 +17695,10 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "number.bed_occupancy_sensor_left_unoccupied_pressure": {
+    "number.led_matrix_brightness_illuminance": {
       state: number;
       attributes: DynamicMergeAttributes<
-        "number.bed_occupancy_sensor_left_unoccupied_pressure",
+        "number.led_matrix_brightness_illuminance",
         {
           /**
            * > ```yaml
@@ -17668,7 +17707,7 @@ declare module "@digital-alchemy/hass" {
            */ min: number;
           /**
            * > ```yaml
-           * > max: 120
+           * > max: 100
            * > ```
            */ max: number;
           /**
@@ -17676,145 +17715,58 @@ declare module "@digital-alchemy/hass" {
            * > step: 1
            * > ```
            */ step: number;
-          mode: "box";
-          unit_of_measurement: "%";
-          icon: "mdi:gauge-empty";
-          friendly_name: "Bed Occupancy Sensor Left Unoccupied Pressure";
+          mode: "auto";
+          friendly_name: "LED Matrix Display Screen Brightness";
         }
       >;
     };
-    "number.bed_occupancy_sensor_left_occupied_pressure": {
-      state: number;
+    "sun.sun": {
+      state: string;
       attributes: DynamicMergeAttributes<
-        "number.bed_occupancy_sensor_left_occupied_pressure",
+        "sun.sun",
         {
           /**
            * > ```yaml
-           * > min: 0
+           * > next_dawn: '2026-05-08T03:37:51.134773+00:00'
            * > ```
-           */ min: number;
+           */ next_dawn: string;
           /**
            * > ```yaml
-           * > max: 120
+           * > next_dusk: '2026-05-07T20:32:21.277890+00:00'
            * > ```
-           */ max: number;
+           */ next_dusk: string;
           /**
            * > ```yaml
-           * > step: 1
+           * > next_midnight: '2026-05-08T00:05:23+00:00'
            * > ```
-           */ step: number;
-          mode: "box";
-          unit_of_measurement: "%";
-          icon: "mdi:gauge-full";
-          friendly_name: "Bed Occupancy Sensor Left Occupied Pressure";
-        }
-      >;
-    };
-    "number.bed_occupancy_sensor_left_trigger_pressure": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.bed_occupancy_sensor_left_trigger_pressure",
-        {
+           */ next_midnight: string;
           /**
            * > ```yaml
-           * > min: 0
+           * > next_noon: '2026-05-08T12:05:24+00:00'
            * > ```
-           */ min: number;
+           */ next_noon: string;
           /**
            * > ```yaml
-           * > max: 120
+           * > next_rising: '2026-05-08T04:21:10.119855+00:00'
            * > ```
-           */ max: number;
+           */ next_rising: string;
           /**
            * > ```yaml
-           * > step: 1
+           * > next_setting: '2026-05-07T19:48:59.912188+00:00'
            * > ```
-           */ step: number;
-          mode: "box";
-          unit_of_measurement: "%";
-          icon: "mdi:gauge";
-          friendly_name: "Bed Occupancy Sensor Left Trigger Pressure";
-        }
-      >;
-    };
-    "number.bed_occupancy_sensor_right_unoccupied_pressure": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.bed_occupancy_sensor_right_unoccupied_pressure",
-        {
+           */ next_setting: string;
           /**
            * > ```yaml
-           * > min: 0
+           * > elevation: 2.16
            * > ```
-           */ min: number;
+           */ elevation: number;
           /**
            * > ```yaml
-           * > max: 120
+           * > azimuth: 296.55
            * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "box";
-          unit_of_measurement: "%";
-          icon: "mdi:gauge-empty";
-          friendly_name: "Bed Occupancy Sensor Right Unoccupied Pressure";
-        }
-      >;
-    };
-    "number.bed_occupancy_sensor_right_occupied_pressure": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.bed_occupancy_sensor_right_occupied_pressure",
-        {
-          /**
-           * > ```yaml
-           * > min: 0
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 120
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "box";
-          unit_of_measurement: "%";
-          icon: "mdi:gauge-full";
-          friendly_name: "Bed Occupancy Sensor Right Occupied Pressure";
-        }
-      >;
-    };
-    "number.bed_occupancy_sensor_right_trigger_pressure": {
-      state: number;
-      attributes: DynamicMergeAttributes<
-        "number.bed_occupancy_sensor_right_trigger_pressure",
-        {
-          /**
-           * > ```yaml
-           * > min: 0
-           * > ```
-           */ min: number;
-          /**
-           * > ```yaml
-           * > max: 120
-           * > ```
-           */ max: number;
-          /**
-           * > ```yaml
-           * > step: 1
-           * > ```
-           */ step: number;
-          mode: "box";
-          unit_of_measurement: "%";
-          icon: "mdi:gauge";
-          friendly_name: "Bed Occupancy Sensor Right Trigger Pressure";
+           */ azimuth: number;
+          rising: boolean;
+          friendly_name: "Sun";
         }
       >;
     };
@@ -17842,12 +17794,12 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 20.5
+           * > current_temperature: 21
            * > ```
            */ current_temperature: number;
           /**
            * > ```yaml
-           * > temperature: 4
+           * > temperature: 21
            * > ```
            */ temperature: number;
           /**
@@ -17857,7 +17809,7 @@ declare module "@digital-alchemy/hass" {
            */ hvac_action: string;
           /**
            * > ```yaml
-           * > preset_mode: away
+           * > preset_mode: comfort
            * > ```
            */ preset_mode: "none" | "away" | "comfort" | "sleep";
           friendly_name: "Living Room";
@@ -17893,12 +17845,12 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 18.5
+           * > current_temperature: 19.9
            * > ```
            */ current_temperature: number;
           /**
            * > ```yaml
-           * > temperature: 4
+           * > temperature: 18
            * > ```
            */ temperature: number;
           /**
@@ -17908,7 +17860,7 @@ declare module "@digital-alchemy/hass" {
            */ hvac_action: string;
           /**
            * > ```yaml
-           * > preset_mode: away
+           * > preset_mode: comfort
            * > ```
            */ preset_mode: "none" | "away" | "comfort" | "sleep";
           friendly_name: "Hallway";
@@ -17944,12 +17896,12 @@ declare module "@digital-alchemy/hass" {
           preset_modes: ("none" | "away" | "comfort" | "sleep")[];
           /**
            * > ```yaml
-           * > current_temperature: 19.3
+           * > current_temperature: 19.8
            * > ```
            */ current_temperature: number;
           /**
            * > ```yaml
-           * > temperature: 4
+           * > temperature: 18
            * > ```
            */ temperature: number;
           /**
@@ -17959,7 +17911,7 @@ declare module "@digital-alchemy/hass" {
            */ hvac_action: string;
           /**
            * > ```yaml
-           * > preset_mode: away
+           * > preset_mode: sleep
            * > ```
            */ preset_mode: "none" | "away" | "comfort" | "sleep";
           friendly_name: "Bedroom";
@@ -17994,7 +17946,7 @@ declare module "@digital-alchemy/hass" {
            */ target_temp_step: number;
           /**
            * > ```yaml
-           * > current_temperature: 44.9
+           * > current_temperature: 42.8
            * > ```
            */ current_temperature: number;
           /**
@@ -18016,42 +17968,12 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "cover.living_room_blinds": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "cover.living_room_blinds",
-        {
-          is_closed: null;
-          assumed_state: boolean;
-          device_class: "blind";
-          friendly_name: "Living Room Blinds";
-          /**
-           * > ```yaml
-           * > supported_features: 11
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "ai_task.openai": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "ai_task.openai",
-        {
-          friendly_name: "OpenAI AI Task";
-          /**
-           * > ```yaml
-           * > supported_features: 7
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
     "device_tracker.bens_phone": {
       state: string;
       attributes: DynamicMergeAttributes<
         "device_tracker.bens_phone",
         {
+          in_zones: "zone.home"[];
           source_type: "gps";
           /**
            * > ```yaml
@@ -18092,6 +18014,7 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "device_tracker.bens_imac_pro",
         {
+          in_zones: "zone.home"[];
           source_type: "gps";
           /**
            * > ```yaml
@@ -18122,6 +18045,7 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "device_tracker.bens_iphone",
         {
+          in_zones: "zone.home"[];
           source_type: "gps";
           /**
            * > ```yaml
@@ -18172,6 +18096,7 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "device_tracker.apple_tv",
         {
+          in_zones: [];
           source_type: "gps";
           friendly_name: "Apple TV";
         }
@@ -18182,35 +18107,36 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "device_tracker.bens_iphone_2",
         {
+          in_zones: "zone.home"[];
           source_type: "gps";
           /**
            * > ```yaml
-           * > battery_level: 60
+           * > battery_level: 65
            * > ```
            */ battery_level: number;
           /**
            * > ```yaml
-           * > latitude: 53.47927422930142
+           * > latitude: 53.47926866642194
            * > ```
            */ latitude: number;
           /**
            * > ```yaml
-           * > longitude: -2.2206661400601937
+           * > longitude: -2.2207866076480647
            * > ```
            */ longitude: number;
           /**
            * > ```yaml
-           * > gps_accuracy: 17
+           * > gps_accuracy: 8.095014
            * > ```
            */ gps_accuracy: number;
           /**
            * > ```yaml
-           * > altitude: 53.900864425842904
+           * > altitude: 53.47762561614588
            * > ```
            */ altitude: number;
           /**
            * > ```yaml
-           * > vertical_accuracy: 31
+           * > vertical_accuracy: 112
            * > ```
            */ vertical_accuracy: number;
           friendly_name: "Ben\u2019s iPhone";
@@ -18258,12 +18184,12 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 211.79999999981
+           * > online_time: 67.959999999963
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 17882589862
+           * > traffic_usage: 18089176623
            * > ```
            */ traffic_usage: number;
           icon: "mdi:lan-connect";
@@ -18312,16 +18238,70 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 2881394.8
+           * > online_time: 3001612.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 152483053808
+           * > traffic_usage: 173741588209
            * > ```
            */ traffic_usage: number;
           icon: "mdi:lan-connect";
           friendly_name: "AppleTV";
+        }
+      >;
+    };
+    "device_tracker.lgwebostv": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "device_tracker.lgwebostv",
+        {
+          source_type: "router";
+          /**
+           * > ```yaml
+           * > ip: 192.168.1.136
+           * > ```
+           */ ip: string;
+          /**
+           * > ```yaml
+           * > mac: A8-23-FE-B0-F2-0A
+           * > ```
+           */ mac: string;
+          /**
+           * > ```yaml
+           * > host_name: LGwebOSTV
+           * > ```
+           */ host_name: string;
+          /**
+           * > ```yaml
+           * > connection: wired
+           * > ```
+           */ connection: string;
+          band: null;
+          packets_sent: null;
+          packets_received: null;
+          /**
+           * > ```yaml
+           * > up_speed: 0
+           * > ```
+           */ up_speed: number;
+          /**
+           * > ```yaml
+           * > down_speed: 0
+           * > ```
+           */ down_speed: number;
+          /**
+           * > ```yaml
+           * > online_time: 485.56000000006
+           * > ```
+           */ online_time: number;
+          /**
+           * > ```yaml
+           * > traffic_usage: 674051767
+           * > ```
+           */ traffic_usage: number;
+          icon: "mdi:lan-disconnect";
+          friendly_name: "TV LGwebOSTV";
         }
       >;
     };
@@ -18356,6 +18336,72 @@ declare module "@digital-alchemy/hass" {
           packets_received: null;
           /**
            * > ```yaml
+           * > up_speed: 160
+           * > ```
+           */ up_speed: number;
+          /**
+           * > ```yaml
+           * > down_speed: 949
+           * > ```
+           */ down_speed: number;
+          /**
+           * > ```yaml
+           * > online_time: 77085.96
+           * > ```
+           */ online_time: number;
+          /**
+           * > ```yaml
+           * > traffic_usage: 320558771194
+           * > ```
+           */ traffic_usage: number;
+          icon: "mdi:lan-connect";
+          friendly_name: "homeassistant";
+        }
+      >;
+    };
+    "device_tracker.b0_81_84_2d_07_20": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "device_tracker.b0_81_84_2d_07_20",
+        {
+          source_type: "router";
+          /**
+           * > ```yaml
+           * > ip: 192.168.1.201
+           * > ```
+           */ ip: string;
+          /**
+           * > ```yaml
+           * > mac: B0-81-84-2D-07-20
+           * > ```
+           */ mac: string;
+          /**
+           * > ```yaml
+           * > host_name: bed-presence-2d0720
+           * > ```
+           */ host_name: string;
+          /**
+           * > ```yaml
+           * > connection: host
+           * > ```
+           */ connection: string;
+          /**
+           * > ```yaml
+           * > band: 2G
+           * > ```
+           */ band: string;
+          /**
+           * > ```yaml
+           * > packets_sent: 1723375
+           * > ```
+           */ packets_sent: number;
+          /**
+           * > ```yaml
+           * > packets_received: 9677220
+           * > ```
+           */ packets_received: number;
+          /**
+           * > ```yaml
            * > up_speed: 0
            * > ```
            */ up_speed: number;
@@ -18366,70 +18412,31 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > online_time: 2237262.8
+           * > tx_rate: 65000
+           * > ```
+           */ tx_rate: number;
+          /**
+           * > ```yaml
+           * > rx_rate: 6000
+           * > ```
+           */ rx_rate: number;
+          /**
+           * > ```yaml
+           * > online_time: 121190.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 309270417260
+           * > traffic_usage: 1657214
            * > ```
            */ traffic_usage: number;
+          /**
+           * > ```yaml
+           * > signal: -64
+           * > ```
+           */ signal: number;
           icon: "mdi:lan-connect";
-          friendly_name: "homeassistant";
-        }
-      >;
-    };
-    "device_tracker.lgwebostv": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "device_tracker.lgwebostv",
-        {
-          source_type: "router";
-          /**
-           * > ```yaml
-           * > ip: 192.168.1.136
-           * > ```
-           */ ip: string;
-          /**
-           * > ```yaml
-           * > mac: A8-23-FE-B0-F2-0A
-           * > ```
-           */ mac: string;
-          /**
-           * > ```yaml
-           * > host_name: none
-           * > ```
-           */ host_name: string;
-          /**
-           * > ```yaml
-           * > connection: wired
-           * > ```
-           */ connection: string;
-          band: null;
-          packets_sent: null;
-          packets_received: null;
-          /**
-           * > ```yaml
-           * > up_speed: 66
-           * > ```
-           */ up_speed: number;
-          /**
-           * > ```yaml
-           * > down_speed: 66
-           * > ```
-           */ down_speed: number;
-          /**
-           * > ```yaml
-           * > online_time: 851.83000000007
-           * > ```
-           */ online_time: number;
-          /**
-           * > ```yaml
-           * > traffic_usage: 523299023
-           * > ```
-           */ traffic_usage: number;
-          icon: "mdi:lan-disconnect";
-          friendly_name: "TV none";
+          friendly_name: "Bed Occupancy Sensor bed-presence-2d0720";
         }
       >;
     };
@@ -18466,12 +18473,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 108058
+           * > packets_sent: 56909
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9017992
+           * > packets_received: 9359303
            * > ```
            */ packets_received: number;
           /**
@@ -18491,22 +18498,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 65000
+           * > rx_rate: 1000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 133140.8
+           * > online_time: 253358.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 67323642
+           * > traffic_usage: 69576031
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -51
+           * > signal: -49
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -18547,12 +18554,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 6920293
+           * > packets_sent: 9270171
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9031596
+           * > packets_received: 9443361
            * > ```
            */ packets_received: number;
           /**
@@ -18572,12 +18579,12 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 5500
+           * > rx_rate: 58500
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 10991.8
+           * > online_time: 44072.96
            * > ```
            */ online_time: number;
           /**
@@ -18587,7 +18594,7 @@ declare module "@digital-alchemy/hass" {
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -61
+           * > signal: -58
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -18628,12 +18635,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 553397
+           * > packets_sent: 28822
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9511411
+           * > packets_received: 9351310
            * > ```
            */ packets_received: number;
           /**
@@ -18653,22 +18660,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 72222
+           * > rx_rate: 1000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 54353.8
+           * > online_time: 79297.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 5251112
+           * > traffic_usage: 6503762
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -53
+           * > signal: -56
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -18709,12 +18716,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 2711952
+           * > packets_sent: 3017302
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 27345819
+           * > packets_received: 30949896
            * > ```
            */ packets_received: number;
           /**
@@ -18734,22 +18741,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 1200950
+           * > rx_rate: 1080880
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1235663.8
+           * > online_time: 1355881.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 322562038
+           * > traffic_usage: 323489319
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -42
+           * > signal: -35
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -18790,12 +18797,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 668822
+           * > packets_sent: 690477
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9253892
+           * > packets_received: 9642175
            * > ```
            */ packets_received: number;
           /**
@@ -18810,7 +18817,7 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > tx_rate: 52000
+           * > tx_rate: 65000
            * > ```
            */ tx_rate: number;
           /**
@@ -18820,21 +18827,102 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 3631414.8
+           * > online_time: 3751632.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 973733
+           * > traffic_usage: 1009001
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -59
+           * > signal: -55
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
           friendly_name: "Hallway Heater shellyplus1pm-a0dd6c2b3a6c";
+        }
+      >;
+    };
+    "device_tracker.imacpro_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "device_tracker.imacpro_2",
+        {
+          source_type: "router";
+          /**
+           * > ```yaml
+           * > ip: 192.168.1.120
+           * > ```
+           */ ip: string;
+          /**
+           * > ```yaml
+           * > mac: FE-9B-BC-37-C1-40
+           * > ```
+           */ mac: string;
+          /**
+           * > ```yaml
+           * > host_name: iMacPro
+           * > ```
+           */ host_name: string;
+          /**
+           * > ```yaml
+           * > connection: host
+           * > ```
+           */ connection: string;
+          /**
+           * > ```yaml
+           * > band: 2G
+           * > ```
+           */ band: string;
+          /**
+           * > ```yaml
+           * > packets_sent: 119219
+           * > ```
+           */ packets_sent: number;
+          /**
+           * > ```yaml
+           * > packets_received: 9686552
+           * > ```
+           */ packets_received: number;
+          /**
+           * > ```yaml
+           * > up_speed: 1404
+           * > ```
+           */ up_speed: number;
+          /**
+           * > ```yaml
+           * > down_speed: 2172
+           * > ```
+           */ down_speed: number;
+          /**
+           * > ```yaml
+           * > tx_rate: 130000
+           * > ```
+           */ tx_rate: number;
+          /**
+           * > ```yaml
+           * > rx_rate: 24000
+           * > ```
+           */ rx_rate: number;
+          /**
+           * > ```yaml
+           * > online_time: 998.95999999996
+           * > ```
+           */ online_time: number;
+          /**
+           * > ```yaml
+           * > traffic_usage: 19795677951
+           * > ```
+           */ traffic_usage: number;
+          /**
+           * > ```yaml
+           * > signal: -43
+           * > ```
+           */ signal: number;
+          icon: "mdi:lan-connect";
+          friendly_name: "iMacPro";
         }
       >;
     };
@@ -18871,12 +18959,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 722807
+           * > packets_sent: 56058
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9689079
+           * > packets_received: 9379183
            * > ```
            */ packets_received: number;
           /**
@@ -18901,17 +18989,17 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 52261.8
+           * > online_time: 85494.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 6098234
+           * > traffic_usage: 6281152
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -52
+           * > signal: -46
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -18952,12 +19040,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 437679
+           * > packets_sent: 460446
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9169267
+           * > packets_received: 9558943
            * > ```
            */ packets_received: number;
           /**
@@ -18977,17 +19065,17 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 39000
+           * > rx_rate: 6000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 2241986.8
+           * > online_time: 2362204.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 3206378
+           * > traffic_usage: 3242028
            * > ```
            */ traffic_usage: number;
           /**
@@ -19033,12 +19121,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 282773
+           * > packets_sent: 306130
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9107354
+           * > packets_received: 9499116
            * > ```
            */ packets_received: number;
           /**
@@ -19058,22 +19146,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 65000
+           * > rx_rate: 6000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1437309.8
+           * > online_time: 1557527.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 37054090
+           * > traffic_usage: 38100052
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -54
+           * > signal: -46
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -19114,12 +19202,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 59372
+           * > packets_sent: 4844
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 10162976
+           * > packets_received: 10469395
            * > ```
            */ packets_received: number;
           /**
@@ -19129,32 +19217,32 @@ declare module "@digital-alchemy/hass" {
            */ up_speed: number;
           /**
            * > ```yaml
-           * > down_speed: 0
+           * > down_speed: 454
            * > ```
            */ down_speed: number;
           /**
            * > ```yaml
-           * > tx_rate: 600440
+           * > tx_rate: 907360
            * > ```
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 24000
+           * > rx_rate: 172050
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 7488.7999999998
+           * > online_time: 1138.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 64324665085
+           * > traffic_usage: 75949898600
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -57
+           * > signal: -58
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -19195,12 +19283,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 13194529
+           * > packets_sent: 13708458
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9953125
+           * > packets_received: 10358554
            * > ```
            */ packets_received: number;
           /**
@@ -19215,7 +19303,7 @@ declare module "@digital-alchemy/hass" {
            */ down_speed: number;
           /**
            * > ```yaml
-           * > tx_rate: 52000
+           * > tx_rate: 58500
            * > ```
            */ tx_rate: number;
           /**
@@ -19225,102 +19313,21 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 1649890.8
+           * > online_time: 1770108.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 283486
+           * > traffic_usage: 291616
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -54
+           * > signal: -56
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
           friendly_name: "Shelly Heating Element shellyem-A4E57CBA73F5";
-        }
-      >;
-    };
-    "device_tracker.ringdoorbell_a7": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "device_tracker.ringdoorbell_a7",
-        {
-          source_type: "router";
-          /**
-           * > ```yaml
-           * > ip: 192.168.1.148
-           * > ```
-           */ ip: string;
-          /**
-           * > ```yaml
-           * > mac: 18-7F-88-07-09-A7
-           * > ```
-           */ mac: string;
-          /**
-           * > ```yaml
-           * > host_name: RingDoorbell-a7
-           * > ```
-           */ host_name: string;
-          /**
-           * > ```yaml
-           * > connection: host
-           * > ```
-           */ connection: string;
-          /**
-           * > ```yaml
-           * > band: 2G
-           * > ```
-           */ band: string;
-          /**
-           * > ```yaml
-           * > packets_sent: 121519
-           * > ```
-           */ packets_sent: number;
-          /**
-           * > ```yaml
-           * > packets_received: 8968699
-           * > ```
-           */ packets_received: number;
-          /**
-           * > ```yaml
-           * > up_speed: 0
-           * > ```
-           */ up_speed: number;
-          /**
-           * > ```yaml
-           * > down_speed: 0
-           * > ```
-           */ down_speed: number;
-          /**
-           * > ```yaml
-           * > tx_rate: 52000
-           * > ```
-           */ tx_rate: number;
-          /**
-           * > ```yaml
-           * > rx_rate: 1000
-           * > ```
-           */ rx_rate: number;
-          /**
-           * > ```yaml
-           * > online_time: 22683.8
-           * > ```
-           */ online_time: number;
-          /**
-           * > ```yaml
-           * > traffic_usage: 819486784
-           * > ```
-           */ traffic_usage: number;
-          /**
-           * > ```yaml
-           * > signal: -61
-           * > ```
-           */ signal: number;
-          icon: "mdi:lan-connect";
-          friendly_name: "RingDoorbell-a7";
         }
       >;
     };
@@ -19357,12 +19364,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 435889
+           * > packets_sent: 458628
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9168106
+           * > packets_received: 9557782
            * > ```
            */ packets_received: number;
           /**
@@ -19382,22 +19389,22 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 72222
+           * > rx_rate: 6000
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 2241986.8
+           * > online_time: 2362204.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 3196671
+           * > traffic_usage: 3232321
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -37
+           * > signal: -35
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -19438,12 +19445,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 985559
+           * > packets_sent: 1058188
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9962330
+           * > packets_received: 10415305
            * > ```
            */ packets_received: number;
           /**
@@ -19468,17 +19475,17 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 49699.8
+           * > online_time: 77305.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 5985089
+           * > traffic_usage: 6146329
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -33
+           * > signal: -32
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
@@ -19519,12 +19526,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 108922
+           * > packets_sent: 22802
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 9092851
+           * > packets_received: 9348815
            * > ```
            */ packets_received: number;
           /**
@@ -19544,17 +19551,17 @@ declare module "@digital-alchemy/hass" {
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 72222
+           * > rx_rate: 58500
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 3774.7999999998
+           * > online_time: 37.959999999963
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 257136739
+           * > traffic_usage: 257611332
            * > ```
            */ traffic_usage: number;
           /**
@@ -19567,25 +19574,25 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "device_tracker.ae_40_f0_a7_c5_94": {
+    "device_tracker.ringdoorbell_a7": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "device_tracker.ae_40_f0_a7_c5_94",
+        "device_tracker.ringdoorbell_a7",
         {
           source_type: "router";
           /**
            * > ```yaml
-           * > ip: 0.0.0.0
+           * > ip: 192.168.1.148
            * > ```
            */ ip: string;
           /**
            * > ```yaml
-           * > mac: AE-40-F0-A7-C5-94
+           * > mac: 18-7F-88-07-09-A7
            * > ```
            */ mac: string;
           /**
            * > ```yaml
-           * > host_name: ''
+           * > host_name: RingDoorbell-a7
            * > ```
            */ host_name: string;
           /**
@@ -19595,21 +19602,56 @@ declare module "@digital-alchemy/hass" {
            */ connection: string;
           /**
            * > ```yaml
-           * > band: 5G
+           * > band: 2G
            * > ```
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 4620
+           * > packets_sent: 347909
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 10081401
+           * > packets_received: 9371425
            * > ```
            */ packets_received: number;
-          icon: "mdi:lan-disconnect";
-          friendly_name: "AE-40-F0-A7-C5-94";
+          /**
+           * > ```yaml
+           * > up_speed: 0
+           * > ```
+           */ up_speed: number;
+          /**
+           * > ```yaml
+           * > down_speed: 0
+           * > ```
+           */ down_speed: number;
+          /**
+           * > ```yaml
+           * > tx_rate: 52000
+           * > ```
+           */ tx_rate: number;
+          /**
+           * > ```yaml
+           * > rx_rate: 1000
+           * > ```
+           */ rx_rate: number;
+          /**
+           * > ```yaml
+           * > online_time: 75664.96
+           * > ```
+           */ online_time: number;
+          /**
+           * > ```yaml
+           * > traffic_usage: 1035035268
+           * > ```
+           */ traffic_usage: number;
+          /**
+           * > ```yaml
+           * > signal: -67
+           * > ```
+           */ signal: number;
+          icon: "mdi:lan-connect";
+          friendly_name: "RingDoorbell-a7";
         }
       >;
     };
@@ -19675,6 +19717,22 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "device_tracker.ae_40_f0_a7_c5_94": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "device_tracker.ae_40_f0_a7_c5_94",
+        {
+          restored: boolean;
+          icon: "mdi:lan-connect";
+          friendly_name: "AE-40-F0-A7-C5-94";
+          /**
+           * > ```yaml
+           * > supported_features: 0
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
     "device_tracker.80_4a_f2_92_c8_dc": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -19696,14 +19754,79 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "device_tracker.0e_02_08_51_2c_db",
         {
-          restored: boolean;
-          icon: "mdi:lan-connect";
-          friendly_name: "iPhone";
+          source_type: "router";
           /**
            * > ```yaml
-           * > supported_features: 0
+           * > ip: 192.168.1.151
            * > ```
-           */ supported_features: number;
+           */ ip: string;
+          /**
+           * > ```yaml
+           * > mac: 0E-02-08-51-2C-DB
+           * > ```
+           */ mac: string;
+          /**
+           * > ```yaml
+           * > host_name: iPhone
+           * > ```
+           */ host_name: string;
+          /**
+           * > ```yaml
+           * > connection: host
+           * > ```
+           */ connection: string;
+          /**
+           * > ```yaml
+           * > band: 2G
+           * > ```
+           */ band: string;
+          /**
+           * > ```yaml
+           * > packets_sent: 24738
+           * > ```
+           */ packets_sent: number;
+          /**
+           * > ```yaml
+           * > packets_received: 9276817
+           * > ```
+           */ packets_received: number;
+          /**
+           * > ```yaml
+           * > up_speed: 0
+           * > ```
+           */ up_speed: number;
+          /**
+           * > ```yaml
+           * > down_speed: 0
+           * > ```
+           */ down_speed: number;
+          /**
+           * > ```yaml
+           * > tx_rate: 78000
+           * > ```
+           */ tx_rate: number;
+          /**
+           * > ```yaml
+           * > rx_rate: 1000
+           * > ```
+           */ rx_rate: number;
+          /**
+           * > ```yaml
+           * > online_time: 5475.1600000001
+           * > ```
+           */ online_time: number;
+          /**
+           * > ```yaml
+           * > traffic_usage: 2378268
+           * > ```
+           */ traffic_usage: number;
+          /**
+           * > ```yaml
+           * > signal: -61
+           * > ```
+           */ signal: number;
+          icon: "mdi:lan-disconnect";
+          friendly_name: "iPhone";
         }
       >;
     };
@@ -19728,14 +19851,66 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "device_tracker.wifitd_3948",
         {
-          restored: boolean;
-          icon: "mdi:lan-connect";
-          friendly_name: "WIFITD-3948";
+          source_type: "router";
           /**
            * > ```yaml
-           * > supported_features: 0
+           * > ip: 192.168.1.242
            * > ```
-           */ supported_features: number;
+           */ ip: string;
+          /**
+           * > ```yaml
+           * > mac: 1C-9D-C2-70-39-48
+           * > ```
+           */ mac: string;
+          /**
+           * > ```yaml
+           * > host_name: WIFITD-3948
+           * > ```
+           */ host_name: string;
+          /**
+           * > ```yaml
+           * > connection: host
+           * > ```
+           */ connection: string;
+          /**
+           * > ```yaml
+           * > band: 2G
+           * > ```
+           */ band: string;
+          packets_sent: null;
+          packets_received: null;
+          /**
+           * > ```yaml
+           * > up_speed: 0
+           * > ```
+           */ up_speed: number;
+          /**
+           * > ```yaml
+           * > down_speed: 0
+           * > ```
+           */ down_speed: number;
+          /**
+           * > ```yaml
+           * > tx_rate: 1024
+           * > ```
+           */ tx_rate: number;
+          /**
+           * > ```yaml
+           * > rx_rate: 5120
+           * > ```
+           */ rx_rate: number;
+          /**
+           * > ```yaml
+           * > online_time: 3809.1400000001
+           * > ```
+           */ online_time: number;
+          /**
+           * > ```yaml
+           * > traffic_usage: 4216029
+           * > ```
+           */ traffic_usage: number;
+          icon: "mdi:lan-disconnect";
+          friendly_name: "WIFITD-3948";
         }
       >;
     };
@@ -20048,79 +20223,14 @@ declare module "@digital-alchemy/hass" {
       attributes: DynamicMergeAttributes<
         "device_tracker.20_f8_3b_0a_08_83",
         {
-          source_type: "router";
+          restored: boolean;
+          icon: "mdi:lan-connect";
+          friendly_name: "home-assistant-voice-0a0883";
           /**
            * > ```yaml
-           * > ip: 192.168.1.150
+           * > supported_features: 0
            * > ```
-           */ ip: string;
-          /**
-           * > ```yaml
-           * > mac: 20-F8-3B-0A-08-83
-           * > ```
-           */ mac: string;
-          /**
-           * > ```yaml
-           * > host_name: home-assistant-voice-0a0883
-           * > ```
-           */ host_name: string;
-          /**
-           * > ```yaml
-           * > connection: host
-           * > ```
-           */ connection: string;
-          /**
-           * > ```yaml
-           * > band: 2G
-           * > ```
-           */ band: string;
-          /**
-           * > ```yaml
-           * > packets_sent: 766
-           * > ```
-           */ packets_sent: number;
-          /**
-           * > ```yaml
-           * > packets_received: 8798432
-           * > ```
-           */ packets_received: number;
-          /**
-           * > ```yaml
-           * > up_speed: 0
-           * > ```
-           */ up_speed: number;
-          /**
-           * > ```yaml
-           * > down_speed: 0
-           * > ```
-           */ down_speed: number;
-          /**
-           * > ```yaml
-           * > tx_rate: 65000
-           * > ```
-           */ tx_rate: number;
-          /**
-           * > ```yaml
-           * > rx_rate: 6000
-           * > ```
-           */ rx_rate: number;
-          /**
-           * > ```yaml
-           * > online_time: 289.43000000017
-           * > ```
-           */ online_time: number;
-          /**
-           * > ```yaml
-           * > traffic_usage: 3756440
-           * > ```
-           */ traffic_usage: number;
-          /**
-           * > ```yaml
-           * > signal: -33
-           * > ```
-           */ signal: number;
-          icon: "mdi:lan-disconnect";
-          friendly_name: "Home Assistant Voice Living Room home-assistant-voice-0a0883";
+           */ supported_features: number;
         }
       >;
     };
@@ -20132,7 +20242,7 @@ declare module "@digital-alchemy/hass" {
           source_type: "router";
           /**
            * > ```yaml
-           * > ip: 0.0.0.0
+           * > ip: 192.168.1.150
            * > ```
            */ ip: string;
           /**
@@ -20142,7 +20252,7 @@ declare module "@digital-alchemy/hass" {
            */ mac: string;
           /**
            * > ```yaml
-           * > host_name: ''
+           * > host_name: esp32-26F428
            * > ```
            */ host_name: string;
           /**
@@ -20157,58 +20267,12 @@ declare module "@digital-alchemy/hass" {
            */ band: string;
           /**
            * > ```yaml
-           * > packets_sent: 8
+           * > packets_sent: 679
            * > ```
            */ packets_sent: number;
           /**
            * > ```yaml
-           * > packets_received: 8896447
-           * > ```
-           */ packets_received: number;
-          icon: "mdi:lan-disconnect";
-          friendly_name: "70-4B-CA-26-F4-28";
-        }
-      >;
-    };
-    "device_tracker.b0_81_84_2d_07_20": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "device_tracker.b0_81_84_2d_07_20",
-        {
-          source_type: "router";
-          /**
-           * > ```yaml
-           * > ip: 192.168.1.201
-           * > ```
-           */ ip: string;
-          /**
-           * > ```yaml
-           * > mac: B0-81-84-2D-07-20
-           * > ```
-           */ mac: string;
-          /**
-           * > ```yaml
-           * > host_name: bed-presence-2d0720
-           * > ```
-           */ host_name: string;
-          /**
-           * > ```yaml
-           * > connection: host
-           * > ```
-           */ connection: string;
-          /**
-           * > ```yaml
-           * > band: 2G
-           * > ```
-           */ band: string;
-          /**
-           * > ```yaml
-           * > packets_sent: 14168
-           * > ```
-           */ packets_sent: number;
-          /**
-           * > ```yaml
-           * > packets_received: 8946719
+           * > packets_received: 9321771
            * > ```
            */ packets_received: number;
           /**
@@ -20233,43 +20297,59 @@ declare module "@digital-alchemy/hass" {
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 972.79999999981
+           * > online_time: 1108.96
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 1651109
+           * > traffic_usage: 3795440
            * > ```
            */ traffic_usage: number;
           /**
            * > ```yaml
-           * > signal: -62
+           * > signal: -57
            * > ```
            */ signal: number;
           icon: "mdi:lan-connect";
-          friendly_name: "bed-presence-2d0720";
+          friendly_name: "esp32-26F428";
         }
       >;
     };
-    "device_tracker.imacpro_2": {
+    "device_tracker.c2_23_f1_db_96_d0": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "device_tracker.imacpro_2",
+        "device_tracker.c2_23_f1_db_96_d0",
+        {
+          restored: boolean;
+          icon: "mdi:lan-connect";
+          friendly_name: "network device";
+          /**
+           * > ```yaml
+           * > supported_features: 0
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "device_tracker.watch_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "device_tracker.watch_2",
         {
           source_type: "router";
           /**
            * > ```yaml
-           * > ip: 192.168.1.120
+           * > ip: 192.168.1.186
            * > ```
            */ ip: string;
           /**
            * > ```yaml
-           * > mac: FE-9B-BC-37-C1-40
+           * > mac: 36-F8-AD-2C-78-01
            * > ```
            */ mac: string;
           /**
            * > ```yaml
-           * > host_name: iMacPro
+           * > host_name: Watch
            * > ```
            */ host_name: string;
           /**
@@ -20282,932 +20362,108 @@ declare module "@digital-alchemy/hass" {
            * > band: 2G
            * > ```
            */ band: string;
+          packets_sent: null;
+          packets_received: null;
           /**
            * > ```yaml
-           * > packets_sent: 308973
-           * > ```
-           */ packets_sent: number;
-          /**
-           * > ```yaml
-           * > packets_received: 9475189
-           * > ```
-           */ packets_received: number;
-          /**
-           * > ```yaml
-           * > up_speed: 5347
+           * > up_speed: 0
            * > ```
            */ up_speed: number;
           /**
            * > ```yaml
-           * > down_speed: 9650
+           * > down_speed: 0
            * > ```
            */ down_speed: number;
           /**
            * > ```yaml
-           * > tx_rate: 130000
+           * > tx_rate: 1024
            * > ```
            */ tx_rate: number;
           /**
            * > ```yaml
-           * > rx_rate: 144444
+           * > rx_rate: 5120
            * > ```
            */ rx_rate: number;
           /**
            * > ```yaml
-           * > online_time: 7047.7999999998
+           * > online_time: 2733.2400000002
            * > ```
            */ online_time: number;
           /**
            * > ```yaml
-           * > traffic_usage: 625896480
+           * > traffic_usage: 3260
            * > ```
            */ traffic_usage: number;
-          /**
-           * > ```yaml
-           * > signal: -40
-           * > ```
-           */ signal: number;
-          icon: "mdi:lan-connect";
-          friendly_name: "iMacPro";
+          icon: "mdi:lan-disconnect";
+          friendly_name: "Watch";
         }
       >;
     };
-    "media_player.whole_flat": {
+    "notify.bens_phone": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "media_player.whole_flat",
+        "notify.bens_phone",
         {
-          group_members: (
-            | "media_player.bedroom"
-            | "media_player.hallway"
-            | "media_player.living_room"
-            | "media_player.bathroom"
-          )[];
+          friendly_name: "Bens Phone";
           /**
            * > ```yaml
-           * > volume_level: 0.48
-           * > ```
-           */ volume_level: number;
-          /**
-           * > ```yaml
-           * > media_content_id: None
-           * > ```
-           */ media_content_id: string;
-          /**
-           * > ```yaml
-           * > media_content_type: music
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > media_duration: 234
-           * > ```
-           */ media_duration: number;
-          /**
-           * > ```yaml
-           * > media_position: 0
-           * > ```
-           */ media_position: number;
-          /**
-           * > ```yaml
-           * > media_position_updated_at: '2026-05-06T10:02:44.278437+00:00'
-           * > ```
-           */ media_position_updated_at: string;
-          /**
-           * > ```yaml
-           * > media_title: Love Yourself
-           * > ```
-           */ media_title: string;
-          /**
-           * > ```yaml
-           * > media_artist: Justin Bieber
-           * > ```
-           */ media_artist: string;
-          /**
-           * > ```yaml
-           * > media_album_name: Custom Mix
-           * > ```
-           */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > app_id: Amazon Music
-           * > ```
-           */ app_id: string;
-          /**
-           * > ```yaml
-           * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.whole_flat?token=e8e216499dded4672c804a8f09793e720511a4ec124a6e8c21f4012c95bbcedf&cache=95abb3984039b297
-           * > ```
-           */ entity_picture_local: string;
-          /**
-           * > ```yaml
-           * > mass_player_type: group
-           * > ```
-           */ mass_player_type: string;
-          active_queue: null;
-          device_class: "speaker";
-          /**
-           * > ```yaml
-           * > entity_picture: https://m.media-amazon.com/images/I/71c5OjnGCCL._UL600_.jpg
-           * > ```
-           */ entity_picture: string;
-          icon: "mdi:speaker-multiple";
-          friendly_name: "Whole Flat";
-          /**
-           * > ```yaml
-           * > supported_features: 8320959
+           * > supported_features: 1
            * > ```
            */ supported_features: number;
         }
       >;
     };
-    "media_player.lg_webos_tv_oled55c8pla": {
+    "notify.imac": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "media_player.lg_webos_tv_oled55c8pla",
+        "notify.imac",
         {
-          device_class: "speaker";
-          icon: "mdi:speaker";
-          friendly_name: "[LG] webOS TV OLED55C8PLA";
+          friendly_name: "iMac";
           /**
            * > ```yaml
-           * > supported_features: 7795251
+           * > supported_features: 1
            * > ```
            */ supported_features: number;
         }
       >;
     };
-    "media_player.xbox_2": {
+    "notify.bens_iphone": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "media_player.xbox_2",
+        "notify.bens_iphone",
         {
-          device_class: "speaker";
-          icon: "mdi:speaker";
-          friendly_name: "XBOX";
+          friendly_name: "Bens iPhone";
           /**
            * > ```yaml
-           * > supported_features: 7795251
+           * > supported_features: 1
            * > ```
            */ supported_features: number;
         }
       >;
     };
-    "media_player.living_room": {
+    "notify.apple_tv": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "media_player.living_room",
+        "notify.apple_tv",
         {
-          source_list: ("TV" | "Music Assistant Queue")[];
-          group_members: (
-            | "media_player.hallway"
-            | "media_player.bedroom"
-            | "media_player.living_room"
-            | "media_player.bathroom"
-          )[];
+          friendly_name: "Apple TV";
           /**
            * > ```yaml
-           * > volume_level: 0.4
-           * > ```
-           */ volume_level: number;
-          is_volume_muted: boolean;
-          /**
-           * > ```yaml
-           * > media_content_id: None
-           * > ```
-           */ media_content_id: string;
-          /**
-           * > ```yaml
-           * > media_content_type: music
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > media_duration: 234
-           * > ```
-           */ media_duration: number;
-          /**
-           * > ```yaml
-           * > media_position: 0
-           * > ```
-           */ media_position: number;
-          /**
-           * > ```yaml
-           * > media_position_updated_at: '2026-05-06T10:02:44.278437+00:00'
-           * > ```
-           */ media_position_updated_at: string;
-          /**
-           * > ```yaml
-           * > media_title: Love Yourself
-           * > ```
-           */ media_title: string;
-          /**
-           * > ```yaml
-           * > media_artist: Justin Bieber
-           * > ```
-           */ media_artist: string;
-          /**
-           * > ```yaml
-           * > media_album_name: Custom Mix
-           * > ```
-           */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > app_id: Amazon Music
-           * > ```
-           */ app_id: string;
-          /**
-           * > ```yaml
-           * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.living_room?token=60223c7a9a7ac12cd2ae9e83879334d755ea46aa27a4c8b47bb3f7df41a728ea&cache=95abb3984039b297
-           * > ```
-           */ entity_picture_local: string;
-          /**
-           * > ```yaml
-           * > mass_player_type: player
-           * > ```
-           */ mass_player_type: string;
-          active_queue: null;
-          device_class: "speaker";
-          /**
-           * > ```yaml
-           * > entity_picture: https://m.media-amazon.com/images/I/71c5OjnGCCL._UL600_.jpg
-           * > ```
-           */ entity_picture: string;
-          icon: "mdi:speaker";
-          friendly_name: "Living Room Speakers";
-          /**
-           * > ```yaml
-           * > supported_features: 8322623
+           * > supported_features: 1
            * > ```
            */ supported_features: number;
         }
       >;
     };
-    "media_player.bedroom": {
+    "notify.bens_iphone_2": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "media_player.bedroom",
+        "notify.bens_iphone_2",
         {
-          source_list: "Music Assistant Queue"[];
-          group_members: (
-            | "media_player.hallway"
-            | "media_player.bedroom"
-            | "media_player.living_room"
-            | "media_player.bathroom"
-          )[];
+          friendly_name: "Ben\u2019s iPhone";
           /**
            * > ```yaml
-           * > volume_level: 0.18
-           * > ```
-           */ volume_level: number;
-          is_volume_muted: boolean;
-          /**
-           * > ```yaml
-           * > media_content_id: None
-           * > ```
-           */ media_content_id: string;
-          /**
-           * > ```yaml
-           * > media_content_type: music
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > media_duration: 234
-           * > ```
-           */ media_duration: number;
-          /**
-           * > ```yaml
-           * > media_position: 0
-           * > ```
-           */ media_position: number;
-          /**
-           * > ```yaml
-           * > media_position_updated_at: '2026-05-06T10:02:44.278437+00:00'
-           * > ```
-           */ media_position_updated_at: string;
-          /**
-           * > ```yaml
-           * > media_title: Love Yourself
-           * > ```
-           */ media_title: string;
-          /**
-           * > ```yaml
-           * > media_artist: Justin Bieber
-           * > ```
-           */ media_artist: string;
-          /**
-           * > ```yaml
-           * > media_album_name: Custom Mix
-           * > ```
-           */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > app_id: Amazon Music
-           * > ```
-           */ app_id: string;
-          /**
-           * > ```yaml
-           * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bedroom?token=7370ac55ce14ecc7d92263361ea88837b58b977e3df4bf3007626b8452eb2e09&cache=95abb3984039b297
-           * > ```
-           */ entity_picture_local: string;
-          /**
-           * > ```yaml
-           * > mass_player_type: player
-           * > ```
-           */ mass_player_type: string;
-          active_queue: null;
-          device_class: "speaker";
-          /**
-           * > ```yaml
-           * > entity_picture: https://m.media-amazon.com/images/I/71c5OjnGCCL._UL600_.jpg
-           * > ```
-           */ entity_picture: string;
-          icon: "mdi:speaker";
-          friendly_name: "Bedroom Speaker";
-          /**
-           * > ```yaml
-           * > supported_features: 8322623
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.bathroom": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.bathroom",
-        {
-          source_list: "Music Assistant Queue"[];
-          group_members: (
-            | "media_player.hallway"
-            | "media_player.bedroom"
-            | "media_player.living_room"
-            | "media_player.bathroom"
-          )[];
-          /**
-           * > ```yaml
-           * > volume_level: 0.43
-           * > ```
-           */ volume_level: number;
-          is_volume_muted: boolean;
-          /**
-           * > ```yaml
-           * > media_content_id: None
-           * > ```
-           */ media_content_id: string;
-          /**
-           * > ```yaml
-           * > media_content_type: music
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > media_duration: 234
-           * > ```
-           */ media_duration: number;
-          /**
-           * > ```yaml
-           * > media_position: 0
-           * > ```
-           */ media_position: number;
-          /**
-           * > ```yaml
-           * > media_position_updated_at: '2026-05-06T10:02:44.278437+00:00'
-           * > ```
-           */ media_position_updated_at: string;
-          /**
-           * > ```yaml
-           * > media_title: Love Yourself
-           * > ```
-           */ media_title: string;
-          /**
-           * > ```yaml
-           * > media_artist: Justin Bieber
-           * > ```
-           */ media_artist: string;
-          /**
-           * > ```yaml
-           * > media_album_name: Custom Mix
-           * > ```
-           */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > app_id: Amazon Music
-           * > ```
-           */ app_id: string;
-          /**
-           * > ```yaml
-           * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.bathroom?token=89e0baba62de35d685e3cb66b5f207481239b0717c3ae824d6b0e09fa712548b&cache=95abb3984039b297
-           * > ```
-           */ entity_picture_local: string;
-          /**
-           * > ```yaml
-           * > mass_player_type: player
-           * > ```
-           */ mass_player_type: string;
-          active_queue: null;
-          device_class: "speaker";
-          /**
-           * > ```yaml
-           * > entity_picture: https://m.media-amazon.com/images/I/71c5OjnGCCL._UL600_.jpg
-           * > ```
-           */ entity_picture: string;
-          icon: "mdi:speaker";
-          friendly_name: "Bathroom Speaker";
-          /**
-           * > ```yaml
-           * > supported_features: 8322623
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.hallway": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.hallway",
-        {
-          source_list: "Music Assistant Queue"[];
-          group_members: (
-            | "media_player.hallway"
-            | "media_player.bedroom"
-            | "media_player.living_room"
-            | "media_player.bathroom"
-          )[];
-          /**
-           * > ```yaml
-           * > volume_level: 0.48
-           * > ```
-           */ volume_level: number;
-          is_volume_muted: boolean;
-          /**
-           * > ```yaml
-           * > media_content_id: None
-           * > ```
-           */ media_content_id: string;
-          /**
-           * > ```yaml
-           * > media_content_type: music
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > media_duration: 234
-           * > ```
-           */ media_duration: number;
-          /**
-           * > ```yaml
-           * > media_position: 0
-           * > ```
-           */ media_position: number;
-          /**
-           * > ```yaml
-           * > media_position_updated_at: '2026-05-06T10:02:44.278437+00:00'
-           * > ```
-           */ media_position_updated_at: string;
-          /**
-           * > ```yaml
-           * > media_title: Love Yourself
-           * > ```
-           */ media_title: string;
-          /**
-           * > ```yaml
-           * > media_artist: Justin Bieber
-           * > ```
-           */ media_artist: string;
-          /**
-           * > ```yaml
-           * > media_album_name: Custom Mix
-           * > ```
-           */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > app_id: Amazon Music
-           * > ```
-           */ app_id: string;
-          /**
-           * > ```yaml
-           * > entity_picture_local: >-
-           * >   /api/media_player_proxy/media_player.hallway?token=f32605a8f32ddfd9b4c32609859c69c03c1a083f16696dea59ff862726e3c7cd&cache=95abb3984039b297
-           * > ```
-           */ entity_picture_local: string;
-          /**
-           * > ```yaml
-           * > mass_player_type: player
-           * > ```
-           */ mass_player_type: string;
-          active_queue: null;
-          device_class: "speaker";
-          /**
-           * > ```yaml
-           * > entity_picture: https://m.media-amazon.com/images/I/71c5OjnGCCL._UL600_.jpg
-           * > ```
-           */ entity_picture: string;
-          icon: "mdi:speaker";
-          friendly_name: "Hallway Speaker";
-          /**
-           * > ```yaml
-           * > supported_features: 8322623
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.home_assistant_voice_living_room": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.home_assistant_voice_living_room",
-        {
-          device_class: "speaker";
-          icon: "mdi:speaker";
-          friendly_name: "Home Assistant Voice Living Room";
-          /**
-           * > ```yaml
-           * > supported_features: 7795251
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.bathroom_sonos": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.bathroom_sonos",
-        {
-          group_members: (
-            | "media_player.hallway_sonos"
-            | "media_player.bathroom_sonos"
-            | "media_player.bedroom_sonos"
-            | "media_player.living_room_sonos"
-          )[];
-          /**
-           * > ```yaml
-           * > volume_level: 0.43
-           * > ```
-           */ volume_level: number;
-          is_volume_muted: boolean;
-          /**
-           * > ```yaml
-           * > media_content_id: >-
-           * >   https://d2qhcol036tlr5.cloudfront.net/api/manifest.m3u8?dmid=264523806&m=m&c=cf&bl=256k&s=true&e=1778062516000&v=V2&r=9f33bc8c-0e0b-4bcd-94e6-6081d423660a&region=EU&Expires=1778062516&Signature=i~YTMdxTWCr39YV72mV1kQmZ5EUfzEYZ5GXW2ipV4WoXbf8oNBGBaqIVQzl2QCPbW9202SS6XhqbnUPAmhyiOm3jA7Aj1HmLs9gI4IN7sRBDkc8B-ZhowQ5hLjaW1C1lLvY~mrCeJLBLKNaVZ1RORgHII-WuBOFN1RIkvAYo8FazPb3EZe3QWGXSbe6o9FI-zhaP3fsc653CLFepZL2FmOn9kkldvpjin3y42yxEbH7MYFrFo4YVXWcbj1nzHhXbklVg7eZjfAsr-G3cmYX5jlHSL69... [truncated]
-           * > ```
-           */ media_content_id: string;
-          /**
-           * > ```yaml
-           * > media_content_type: music
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > media_duration: 234
-           * > ```
-           */ media_duration: number;
-          /**
-           * > ```yaml
-           * > media_position: 1
-           * > ```
-           */ media_position: number;
-          /**
-           * > ```yaml
-           * > media_position_updated_at: '2026-05-06T10:02:44.306070+00:00'
-           * > ```
-           */ media_position_updated_at: string;
-          /**
-           * > ```yaml
-           * > media_title: Love Yourself
-           * > ```
-           */ media_title: string;
-          /**
-           * > ```yaml
-           * > media_artist: Justin Bieber
-           * > ```
-           */ media_artist: string;
-          /**
-           * > ```yaml
-           * > media_album_name: Custom Mix
-           * > ```
-           */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > media_playlist: Alexa
-           * > ```
-           */ media_playlist: string;
-          shuffle: boolean;
-          /**
-           * > ```yaml
-           * > repeat: 'off'
-           * > ```
-           */ repeat: string;
-          /**
-           * > ```yaml
-           * > queue_position: 1
-           * > ```
-           */ queue_position: number;
-          /**
-           * > ```yaml
-           * > queue_size: 2
-           * > ```
-           */ queue_size: number;
-          device_class: "speaker";
-          /**
-           * > ```yaml
-           * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bathroom_sonos?token=321f494d82468d64de415fc17933fb7e25cf1b0a575d491a7a1ed8c2535c6163&cache=95abb3984039b297
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Bathroom Speaker";
-          /**
-           * > ```yaml
-           * > supported_features: 4127295
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.living_room_sonos": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.living_room_sonos",
-        {
-          group_members: (
-            | "media_player.hallway_sonos"
-            | "media_player.bathroom_sonos"
-            | "media_player.bedroom_sonos"
-            | "media_player.living_room_sonos"
-          )[];
-          /**
-           * > ```yaml
-           * > volume_level: 0.4
-           * > ```
-           */ volume_level: number;
-          is_volume_muted: boolean;
-          /**
-           * > ```yaml
-           * > media_content_id: >-
-           * >   https://d2qhcol036tlr5.cloudfront.net/api/manifest.m3u8?dmid=264523806&m=m&c=cf&bl=256k&s=true&e=1778062516000&v=V2&r=9f33bc8c-0e0b-4bcd-94e6-6081d423660a&region=EU&Expires=1778062516&Signature=i~YTMdxTWCr39YV72mV1kQmZ5EUfzEYZ5GXW2ipV4WoXbf8oNBGBaqIVQzl2QCPbW9202SS6XhqbnUPAmhyiOm3jA7Aj1HmLs9gI4IN7sRBDkc8B-ZhowQ5hLjaW1C1lLvY~mrCeJLBLKNaVZ1RORgHII-WuBOFN1RIkvAYo8FazPb3EZe3QWGXSbe6o9FI-zhaP3fsc653CLFepZL2FmOn9kkldvpjin3y42yxEbH7MYFrFo4YVXWcbj1nzHhXbklVg7eZjfAsr-G3cmYX5jlHSL69... [truncated]
-           * > ```
-           */ media_content_id: string;
-          /**
-           * > ```yaml
-           * > media_content_type: music
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > media_duration: 234
-           * > ```
-           */ media_duration: number;
-          /**
-           * > ```yaml
-           * > media_position: 1
-           * > ```
-           */ media_position: number;
-          /**
-           * > ```yaml
-           * > media_position_updated_at: '2026-05-06T10:02:44.306070+00:00'
-           * > ```
-           */ media_position_updated_at: string;
-          /**
-           * > ```yaml
-           * > media_title: Love Yourself
-           * > ```
-           */ media_title: string;
-          /**
-           * > ```yaml
-           * > media_artist: Justin Bieber
-           * > ```
-           */ media_artist: string;
-          /**
-           * > ```yaml
-           * > media_album_name: Custom Mix
-           * > ```
-           */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > media_playlist: Alexa
-           * > ```
-           */ media_playlist: string;
-          shuffle: boolean;
-          /**
-           * > ```yaml
-           * > repeat: 'off'
-           * > ```
-           */ repeat: string;
-          /**
-           * > ```yaml
-           * > queue_position: 1
-           * > ```
-           */ queue_position: number;
-          /**
-           * > ```yaml
-           * > queue_size: 2
-           * > ```
-           */ queue_size: number;
-          device_class: "speaker";
-          /**
-           * > ```yaml
-           * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.living_room_sonos?token=17abb69e81eac69d9bb2aa34314b76fa462cea288ba7c2b81ba60d507b75bfb6&cache=95abb3984039b297
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Living Room";
-          /**
-           * > ```yaml
-           * > supported_features: 4127295
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.bedroom_sonos": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.bedroom_sonos",
-        {
-          group_members: (
-            | "media_player.hallway_sonos"
-            | "media_player.bathroom_sonos"
-            | "media_player.bedroom_sonos"
-            | "media_player.living_room_sonos"
-          )[];
-          /**
-           * > ```yaml
-           * > volume_level: 0.18
-           * > ```
-           */ volume_level: number;
-          is_volume_muted: boolean;
-          /**
-           * > ```yaml
-           * > media_content_id: >-
-           * >   https://d2qhcol036tlr5.cloudfront.net/api/manifest.m3u8?dmid=264523806&m=m&c=cf&bl=256k&s=true&e=1778062516000&v=V2&r=9f33bc8c-0e0b-4bcd-94e6-6081d423660a&region=EU&Expires=1778062516&Signature=i~YTMdxTWCr39YV72mV1kQmZ5EUfzEYZ5GXW2ipV4WoXbf8oNBGBaqIVQzl2QCPbW9202SS6XhqbnUPAmhyiOm3jA7Aj1HmLs9gI4IN7sRBDkc8B-ZhowQ5hLjaW1C1lLvY~mrCeJLBLKNaVZ1RORgHII-WuBOFN1RIkvAYo8FazPb3EZe3QWGXSbe6o9FI-zhaP3fsc653CLFepZL2FmOn9kkldvpjin3y42yxEbH7MYFrFo4YVXWcbj1nzHhXbklVg7eZjfAsr-G3cmYX5jlHSL69... [truncated]
-           * > ```
-           */ media_content_id: string;
-          /**
-           * > ```yaml
-           * > media_content_type: music
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > media_duration: 234
-           * > ```
-           */ media_duration: number;
-          /**
-           * > ```yaml
-           * > media_position: 1
-           * > ```
-           */ media_position: number;
-          /**
-           * > ```yaml
-           * > media_position_updated_at: '2026-05-06T10:02:44.306070+00:00'
-           * > ```
-           */ media_position_updated_at: string;
-          /**
-           * > ```yaml
-           * > media_title: Love Yourself
-           * > ```
-           */ media_title: string;
-          /**
-           * > ```yaml
-           * > media_artist: Justin Bieber
-           * > ```
-           */ media_artist: string;
-          /**
-           * > ```yaml
-           * > media_album_name: Custom Mix
-           * > ```
-           */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > media_playlist: Alexa
-           * > ```
-           */ media_playlist: string;
-          shuffle: boolean;
-          /**
-           * > ```yaml
-           * > repeat: 'off'
-           * > ```
-           */ repeat: string;
-          /**
-           * > ```yaml
-           * > queue_position: 1
-           * > ```
-           */ queue_position: number;
-          /**
-           * > ```yaml
-           * > queue_size: 2
-           * > ```
-           */ queue_size: number;
-          device_class: "speaker";
-          /**
-           * > ```yaml
-           * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=7f8061d30c99fba1395ba14e3905bf7297072e0ad06e8319fe0f7300a0b4a6ee&cache=95abb3984039b297
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Bedroom Speaker";
-          /**
-           * > ```yaml
-           * > supported_features: 4127295
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
-    "media_player.hallway_sonos": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.hallway_sonos",
-        {
-          group_members: (
-            | "media_player.hallway_sonos"
-            | "media_player.bathroom_sonos"
-            | "media_player.bedroom_sonos"
-            | "media_player.living_room_sonos"
-          )[];
-          /**
-           * > ```yaml
-           * > volume_level: 0.48
-           * > ```
-           */ volume_level: number;
-          is_volume_muted: boolean;
-          /**
-           * > ```yaml
-           * > media_content_id: >-
-           * >   https://d2qhcol036tlr5.cloudfront.net/api/manifest.m3u8?dmid=264523806&m=m&c=cf&bl=256k&s=true&e=1778062516000&v=V2&r=9f33bc8c-0e0b-4bcd-94e6-6081d423660a&region=EU&Expires=1778062516&Signature=i~YTMdxTWCr39YV72mV1kQmZ5EUfzEYZ5GXW2ipV4WoXbf8oNBGBaqIVQzl2QCPbW9202SS6XhqbnUPAmhyiOm3jA7Aj1HmLs9gI4IN7sRBDkc8B-ZhowQ5hLjaW1C1lLvY~mrCeJLBLKNaVZ1RORgHII-WuBOFN1RIkvAYo8FazPb3EZe3QWGXSbe6o9FI-zhaP3fsc653CLFepZL2FmOn9kkldvpjin3y42yxEbH7MYFrFo4YVXWcbj1nzHhXbklVg7eZjfAsr-G3cmYX5jlHSL69... [truncated]
-           * > ```
-           */ media_content_id: string;
-          /**
-           * > ```yaml
-           * > media_content_type: music
-           * > ```
-           */ media_content_type: string;
-          /**
-           * > ```yaml
-           * > media_duration: 234
-           * > ```
-           */ media_duration: number;
-          /**
-           * > ```yaml
-           * > media_position: 1
-           * > ```
-           */ media_position: number;
-          /**
-           * > ```yaml
-           * > media_position_updated_at: '2026-05-06T10:02:44.306070+00:00'
-           * > ```
-           */ media_position_updated_at: string;
-          /**
-           * > ```yaml
-           * > media_title: Love Yourself
-           * > ```
-           */ media_title: string;
-          /**
-           * > ```yaml
-           * > media_artist: Justin Bieber
-           * > ```
-           */ media_artist: string;
-          /**
-           * > ```yaml
-           * > media_album_name: Custom Mix
-           * > ```
-           */ media_album_name: string;
-          /**
-           * > ```yaml
-           * > media_playlist: Alexa
-           * > ```
-           */ media_playlist: string;
-          shuffle: boolean;
-          /**
-           * > ```yaml
-           * > repeat: 'off'
-           * > ```
-           */ repeat: string;
-          /**
-           * > ```yaml
-           * > queue_position: 1
-           * > ```
-           */ queue_position: number;
-          /**
-           * > ```yaml
-           * > queue_size: 2
-           * > ```
-           */ queue_size: number;
-          device_class: "speaker";
-          /**
-           * > ```yaml
-           * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.hallway_sonos?token=1ff5162eea8900e53ff2b13727eefe3f16055a660d635226217103137bdff4ad&cache=95abb3984039b297
-           * > ```
-           */ entity_picture: string;
-          friendly_name: "Hallway";
-          /**
-           * > ```yaml
-           * > supported_features: 4127295
+           * > supported_features: 1
            * > ```
            */ supported_features: number;
         }
@@ -21269,21 +20525,6 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "media_player.playstation_5": {
-      state: string;
-      attributes: DynamicMergeAttributes<
-        "media_player.playstation_5",
-        {
-          device_class: "receiver";
-          friendly_name: "PlayStation 5";
-          /**
-           * > ```yaml
-           * > supported_features: 0
-           * > ```
-           */ supported_features: number;
-        }
-      >;
-    };
     "media_player.tv": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -21331,7 +20572,7 @@ declare module "@digital-alchemy/hass" {
           )[];
           /**
            * > ```yaml
-           * > volume_level: 0
+           * > volume_level: 0.26
            * > ```
            */ volume_level: number;
           is_volume_muted: boolean;
@@ -21360,13 +20601,669 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/media_player_proxy/media_player.tv?token=e5a71eca7e88b9e37d9345ca75cad90effc433c77c5d1c1e667ef0d76cb070c8&cache=724178d0787746f3
+           * >   /api/media_player_proxy/media_player.tv?token=0a241e18aba8b958d68b3eab427712958ba5235a6ca7db82c37a8378ee1e9527&cache=51b20ba13caf9702
            * > ```
            */ entity_picture: string;
           friendly_name: "TV";
           /**
            * > ```yaml
            * > supported_features: 24381
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.whole_flat": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.whole_flat",
+        {
+          group_members: (
+            | "media_player.living_room"
+            | "media_player.bedroom"
+            | "media_player.hallway"
+            | "media_player.bathroom"
+          )[];
+          /**
+           * > ```yaml
+           * > volume_level: 0.38
+           * > ```
+           */ volume_level: number;
+          /**
+           * > ```yaml
+           * > media_content_id: tidal--MtLzofsn://track/345683247
+           * > ```
+           */ media_content_id: string;
+          /**
+           * > ```yaml
+           * > media_content_type: music
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_duration: 127
+           * > ```
+           */ media_duration: number;
+          /**
+           * > ```yaml
+           * > media_position: 179
+           * > ```
+           */ media_position: number;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-05-07T19:27:41.944781+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          /**
+           * > ```yaml
+           * > media_title: SPRING BREAK
+           * > ```
+           */ media_title: string;
+          /**
+           * > ```yaml
+           * > media_artist: Bronze Avery
+           * > ```
+           */ media_artist: string;
+          /**
+           * > ```yaml
+           * > media_album_name: SPRING BREAK
+           * > ```
+           */ media_album_name: string;
+          /**
+           * > ```yaml
+           * > app_id: music_assistant
+           * > ```
+           */ app_id: string;
+          /**
+           * > ```yaml
+           * > source: Music Assistant Queue
+           * > ```
+           */ source: string;
+          shuffle: boolean;
+          /**
+           * > ```yaml
+           * > repeat: 'off'
+           * > ```
+           */ repeat: string;
+          /**
+           * > ```yaml
+           * > entity_picture_local: >-
+           * >   /api/media_player_proxy/media_player.whole_flat?token=d5effef30957b909454c45d6aa2f656407c66e04441a0ac30a96781ea339ec03&cache=79268473b20f2613
+           * > ```
+           */ entity_picture_local: string;
+          /**
+           * > ```yaml
+           * > mass_player_type: group
+           * > ```
+           */ mass_player_type: string;
+          /**
+           * > ```yaml
+           * > active_queue: syncgroup_gwngzsny
+           * > ```
+           */ active_queue: string;
+          device_class: "speaker";
+          /**
+           * > ```yaml
+           * > entity_picture: >-
+           * >   http://192.168.1.143:8095/imageproxy?provider=tidal--MtLzofsn&size=500&fmt=jpeg&path=https%253A%252F%252Fresources.tidal.com%252Fimages%252F048e53f4%252Fd54e%252F49a4%252F86d2%252F343ab8e52e3e%252F750x750.jpg
+           * > ```
+           */ entity_picture: string;
+          icon: "mdi:speaker-multiple";
+          friendly_name: "Whole Flat";
+          /**
+           * > ```yaml
+           * > supported_features: 8320959
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.lg_webos_tv_oled55c8pla": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.lg_webos_tv_oled55c8pla",
+        {
+          device_class: "speaker";
+          icon: "mdi:speaker";
+          friendly_name: "[LG] webOS TV OLED55C8PLA";
+          /**
+           * > ```yaml
+           * > supported_features: 7795251
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.xbox_2": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.xbox_2",
+        {
+          device_class: "speaker";
+          icon: "mdi:speaker";
+          friendly_name: "XBOX";
+          /**
+           * > ```yaml
+           * > supported_features: 7795251
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.home_assistant_voice_living_room": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.home_assistant_voice_living_room",
+        {
+          device_class: "speaker";
+          icon: "mdi:speaker";
+          friendly_name: "Home Assistant Voice Living Room";
+          /**
+           * > ```yaml
+           * > supported_features: 7795251
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.living_room": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.living_room",
+        {
+          source_list: ("TV" | "Music Assistant Queue")[];
+          group_members: (
+            | "media_player.hallway"
+            | "media_player.living_room"
+            | "media_player.bedroom"
+            | "media_player.bathroom"
+          )[];
+          /**
+           * > ```yaml
+           * > volume_level: 0.3
+           * > ```
+           */ volume_level: number;
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_id: tidal--MtLzofsn://track/345683247
+           * > ```
+           */ media_content_id: string;
+          /**
+           * > ```yaml
+           * > media_content_type: music
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_duration: 127
+           * > ```
+           */ media_duration: number;
+          /**
+           * > ```yaml
+           * > media_position: 179
+           * > ```
+           */ media_position: number;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-05-07T19:27:41.944781+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          /**
+           * > ```yaml
+           * > media_title: SPRING BREAK
+           * > ```
+           */ media_title: string;
+          /**
+           * > ```yaml
+           * > media_artist: Bronze Avery
+           * > ```
+           */ media_artist: string;
+          /**
+           * > ```yaml
+           * > media_album_name: SPRING BREAK
+           * > ```
+           */ media_album_name: string;
+          /**
+           * > ```yaml
+           * > app_id: music_assistant
+           * > ```
+           */ app_id: string;
+          shuffle: boolean;
+          /**
+           * > ```yaml
+           * > repeat: 'off'
+           * > ```
+           */ repeat: string;
+          /**
+           * > ```yaml
+           * > entity_picture_local: >-
+           * >   /api/media_player_proxy/media_player.living_room?token=5fc6f325aa11110cb06cfff139968d0472f3a1181eac00bc743545f55c01a22b&cache=79268473b20f2613
+           * > ```
+           */ entity_picture_local: string;
+          /**
+           * > ```yaml
+           * > mass_player_type: player
+           * > ```
+           */ mass_player_type: string;
+          /**
+           * > ```yaml
+           * > active_queue: syncgroup_gwngzsny
+           * > ```
+           */ active_queue: string;
+          device_class: "speaker";
+          /**
+           * > ```yaml
+           * > entity_picture: >-
+           * >   http://192.168.1.143:8095/imageproxy?provider=tidal--MtLzofsn&size=500&fmt=jpeg&path=https%253A%252F%252Fresources.tidal.com%252Fimages%252F048e53f4%252Fd54e%252F49a4%252F86d2%252F343ab8e52e3e%252F750x750.jpg
+           * > ```
+           */ entity_picture: string;
+          icon: "mdi:speaker";
+          friendly_name: "Living Room Speakers";
+          /**
+           * > ```yaml
+           * > supported_features: 8322623
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.bathroom": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.bathroom",
+        {
+          source_list: "Music Assistant Queue"[];
+          group_members: (
+            | "media_player.hallway"
+            | "media_player.living_room"
+            | "media_player.bedroom"
+            | "media_player.bathroom"
+          )[];
+          /**
+           * > ```yaml
+           * > volume_level: 0.34
+           * > ```
+           */ volume_level: number;
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_id: tidal--MtLzofsn://track/345683247
+           * > ```
+           */ media_content_id: string;
+          /**
+           * > ```yaml
+           * > media_content_type: music
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_duration: 127
+           * > ```
+           */ media_duration: number;
+          /**
+           * > ```yaml
+           * > media_position: 179
+           * > ```
+           */ media_position: number;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-05-07T19:27:41.944781+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          /**
+           * > ```yaml
+           * > media_title: SPRING BREAK
+           * > ```
+           */ media_title: string;
+          /**
+           * > ```yaml
+           * > media_artist: Bronze Avery
+           * > ```
+           */ media_artist: string;
+          /**
+           * > ```yaml
+           * > media_album_name: SPRING BREAK
+           * > ```
+           */ media_album_name: string;
+          /**
+           * > ```yaml
+           * > app_id: music_assistant
+           * > ```
+           */ app_id: string;
+          shuffle: boolean;
+          /**
+           * > ```yaml
+           * > repeat: 'off'
+           * > ```
+           */ repeat: string;
+          /**
+           * > ```yaml
+           * > entity_picture_local: >-
+           * >   /api/media_player_proxy/media_player.bathroom?token=07f25fc670f8eceb4c00ff025d345f6345017a46e2a0255c9ce1b8b73aa96acc&cache=79268473b20f2613
+           * > ```
+           */ entity_picture_local: string;
+          /**
+           * > ```yaml
+           * > mass_player_type: player
+           * > ```
+           */ mass_player_type: string;
+          /**
+           * > ```yaml
+           * > active_queue: syncgroup_gwngzsny
+           * > ```
+           */ active_queue: string;
+          device_class: "speaker";
+          /**
+           * > ```yaml
+           * > entity_picture: >-
+           * >   http://192.168.1.143:8095/imageproxy?provider=tidal--MtLzofsn&size=500&fmt=jpeg&path=https%253A%252F%252Fresources.tidal.com%252Fimages%252F048e53f4%252Fd54e%252F49a4%252F86d2%252F343ab8e52e3e%252F750x750.jpg
+           * > ```
+           */ entity_picture: string;
+          icon: "mdi:speaker";
+          friendly_name: "Bathroom Speaker";
+          /**
+           * > ```yaml
+           * > supported_features: 8322623
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.bedroom": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.bedroom",
+        {
+          source_list: "Music Assistant Queue"[];
+          group_members: (
+            | "media_player.hallway"
+            | "media_player.living_room"
+            | "media_player.bedroom"
+            | "media_player.bathroom"
+          )[];
+          /**
+           * > ```yaml
+           * > volume_level: 0.14
+           * > ```
+           */ volume_level: number;
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_id: tidal--MtLzofsn://track/345683247
+           * > ```
+           */ media_content_id: string;
+          /**
+           * > ```yaml
+           * > media_content_type: music
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_duration: 127
+           * > ```
+           */ media_duration: number;
+          /**
+           * > ```yaml
+           * > media_position: 179
+           * > ```
+           */ media_position: number;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-05-07T19:27:41.944781+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          /**
+           * > ```yaml
+           * > media_title: SPRING BREAK
+           * > ```
+           */ media_title: string;
+          /**
+           * > ```yaml
+           * > media_artist: Bronze Avery
+           * > ```
+           */ media_artist: string;
+          /**
+           * > ```yaml
+           * > media_album_name: SPRING BREAK
+           * > ```
+           */ media_album_name: string;
+          /**
+           * > ```yaml
+           * > app_id: music_assistant
+           * > ```
+           */ app_id: string;
+          shuffle: boolean;
+          /**
+           * > ```yaml
+           * > repeat: 'off'
+           * > ```
+           */ repeat: string;
+          /**
+           * > ```yaml
+           * > entity_picture_local: >-
+           * >   /api/media_player_proxy/media_player.bedroom?token=8816df6fa7c1a7038cba986592d3b2164d427da97b375838110691fc5ce83604&cache=79268473b20f2613
+           * > ```
+           */ entity_picture_local: string;
+          /**
+           * > ```yaml
+           * > mass_player_type: player
+           * > ```
+           */ mass_player_type: string;
+          /**
+           * > ```yaml
+           * > active_queue: syncgroup_gwngzsny
+           * > ```
+           */ active_queue: string;
+          device_class: "speaker";
+          /**
+           * > ```yaml
+           * > entity_picture: >-
+           * >   http://192.168.1.143:8095/imageproxy?provider=tidal--MtLzofsn&size=500&fmt=jpeg&path=https%253A%252F%252Fresources.tidal.com%252Fimages%252F048e53f4%252Fd54e%252F49a4%252F86d2%252F343ab8e52e3e%252F750x750.jpg
+           * > ```
+           */ entity_picture: string;
+          icon: "mdi:speaker";
+          friendly_name: "Bedroom Speaker";
+          /**
+           * > ```yaml
+           * > supported_features: 8322623
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.hallway": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.hallway",
+        {
+          source_list: "Music Assistant Queue"[];
+          group_members: (
+            | "media_player.hallway"
+            | "media_player.living_room"
+            | "media_player.bedroom"
+            | "media_player.bathroom"
+          )[];
+          /**
+           * > ```yaml
+           * > volume_level: 0.38
+           * > ```
+           */ volume_level: number;
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_id: tidal--MtLzofsn://track/345683247
+           * > ```
+           */ media_content_id: string;
+          /**
+           * > ```yaml
+           * > media_content_type: music
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_duration: 127
+           * > ```
+           */ media_duration: number;
+          /**
+           * > ```yaml
+           * > media_position: 179
+           * > ```
+           */ media_position: number;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-05-07T19:27:41.944781+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          /**
+           * > ```yaml
+           * > media_title: SPRING BREAK
+           * > ```
+           */ media_title: string;
+          /**
+           * > ```yaml
+           * > media_artist: Bronze Avery
+           * > ```
+           */ media_artist: string;
+          /**
+           * > ```yaml
+           * > media_album_name: SPRING BREAK
+           * > ```
+           */ media_album_name: string;
+          /**
+           * > ```yaml
+           * > app_id: music_assistant
+           * > ```
+           */ app_id: string;
+          shuffle: boolean;
+          /**
+           * > ```yaml
+           * > repeat: 'off'
+           * > ```
+           */ repeat: string;
+          /**
+           * > ```yaml
+           * > entity_picture_local: >-
+           * >   /api/media_player_proxy/media_player.hallway?token=ccfd5586b7114400da27217888b36be4ab36be5881ee199be3407c986a8da72b&cache=79268473b20f2613
+           * > ```
+           */ entity_picture_local: string;
+          /**
+           * > ```yaml
+           * > mass_player_type: player
+           * > ```
+           */ mass_player_type: string;
+          /**
+           * > ```yaml
+           * > active_queue: syncgroup_gwngzsny
+           * > ```
+           */ active_queue: string;
+          device_class: "speaker";
+          /**
+           * > ```yaml
+           * > entity_picture: >-
+           * >   http://192.168.1.143:8095/imageproxy?provider=tidal--MtLzofsn&size=500&fmt=jpeg&path=https%253A%252F%252Fresources.tidal.com%252Fimages%252F048e53f4%252Fd54e%252F49a4%252F86d2%252F343ab8e52e3e%252F750x750.jpg
+           * > ```
+           */ entity_picture: string;
+          icon: "mdi:speaker";
+          friendly_name: "Hallway Speaker";
+          /**
+           * > ```yaml
+           * > supported_features: 8322623
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.hallway_sonos": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.hallway_sonos",
+        {
+          group_members: (
+            | "media_player.hallway_sonos"
+            | "media_player.bathroom_sonos"
+            | "media_player.bedroom_sonos"
+            | "media_player.living_room_sonos"
+          )[];
+          /**
+           * > ```yaml
+           * > volume_level: 0.38
+           * > ```
+           */ volume_level: number;
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_id: >-
+           * >   http://192.168.1.143:8097/single/rG3DHkxL/syncgroup_gwngzsny/5bbbee5b11c5410a9bd9b70043e66bbf/RINCON_7828CAEEAD2A01400.flac
+           * > ```
+           */ media_content_id: string;
+          /**
+           * > ```yaml
+           * > media_content_type: music
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_duration: 127
+           * > ```
+           */ media_duration: number;
+          /**
+           * > ```yaml
+           * > media_position: 0
+           * > ```
+           */ media_position: number;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-05-07T19:27:41.707857+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          /**
+           * > ```yaml
+           * > media_title: SPRING BREAK
+           * > ```
+           */ media_title: string;
+          /**
+           * > ```yaml
+           * > media_artist: Bronze Avery
+           * > ```
+           */ media_artist: string;
+          /**
+           * > ```yaml
+           * > media_album_name: SPRING BREAK
+           * > ```
+           */ media_album_name: string;
+          /**
+           * > ```yaml
+           * > media_playlist: Music Assistant
+           * > ```
+           */ media_playlist: string;
+          shuffle: boolean;
+          /**
+           * > ```yaml
+           * > repeat: 'off'
+           * > ```
+           */ repeat: string;
+          /**
+           * > ```yaml
+           * > queue_position: 3
+           * > ```
+           */ queue_position: number;
+          /**
+           * > ```yaml
+           * > queue_size: 8
+           * > ```
+           */ queue_size: number;
+          device_class: "speaker";
+          /**
+           * > ```yaml
+           * > entity_picture: >-
+           * >   /api/media_player_proxy/media_player.hallway_sonos?token=7e9f5dfd259f1726ffa7b82bec77b9e503b1257e5280d75b4d71cfcccd60ab5e&cache=bc22b96b1ac80d11
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Hallway";
+          /**
+           * > ```yaml
+           * > supported_features: 4127295
            * > ```
            */ supported_features: number;
         }
@@ -21390,19 +21287,19 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-05-05T07:58:01.410859+00:00'
+           * > media_position_updated_at: '2026-05-06T22:11:30.912000+00:00'
            * > ```
            */ media_position_updated_at: string;
           available: boolean;
           last_called: boolean;
           /**
            * > ```yaml
-           * > last_called_timestamp: 1778046352428
+           * > last_called_timestamp: 1778165564839
            * > ```
            */ last_called_timestamp: number;
           /**
            * > ```yaml
-           * > last_called_summary: lights on
+           * > last_called_summary: bathroom light on
            * > ```
            */ last_called_summary: string;
           last_called_response: null;
@@ -21437,21 +21334,13 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-05-05T07:58:01.482487+00:00'
+           * > media_position_updated_at: '2026-05-06T22:11:30.982782+00:00'
            * > ```
            */ media_position_updated_at: string;
           available: boolean;
           last_called: boolean;
-          /**
-           * > ```yaml
-           * > last_called_timestamp: 1777967467701
-           * > ```
-           */ last_called_timestamp: number;
-          /**
-           * > ```yaml
-           * > last_called_summary: skip
-           * > ```
-           */ last_called_summary: string;
+          last_called_timestamp: null;
+          last_called_summary: null;
           last_called_response: null;
           connected_bluetooth: null;
           bluetooth_list: [];
@@ -21498,19 +21387,19 @@ declare module "@digital-alchemy/hass" {
            */ media_content_type: string;
           /**
            * > ```yaml
-           * > media_position_updated_at: '2026-05-05T07:58:01.583747+00:00'
+           * > media_position_updated_at: '2026-05-06T22:11:31.052025+00:00'
            * > ```
            */ media_position_updated_at: string;
           available: boolean;
           last_called: boolean;
           /**
            * > ```yaml
-           * > last_called_timestamp: 1778012688551
+           * > last_called_timestamp: 1778149717216
            * > ```
            */ last_called_timestamp: number;
           /**
            * > ```yaml
-           * > last_called_summary: lights on hundred percent
+           * > last_called_summary: play some music
            * > ```
            */ last_called_summary: string;
           last_called_response: null;
@@ -21569,6 +21458,306 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
+    "media_player.bedroom_sonos": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.bedroom_sonos",
+        {
+          group_members: (
+            | "media_player.hallway_sonos"
+            | "media_player.bathroom_sonos"
+            | "media_player.bedroom_sonos"
+            | "media_player.living_room_sonos"
+          )[];
+          /**
+           * > ```yaml
+           * > volume_level: 0.14
+           * > ```
+           */ volume_level: number;
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_id: >-
+           * >   http://192.168.1.143:8097/single/rG3DHkxL/syncgroup_gwngzsny/5bbbee5b11c5410a9bd9b70043e66bbf/RINCON_7828CAEEAD2A01400.flac
+           * > ```
+           */ media_content_id: string;
+          /**
+           * > ```yaml
+           * > media_content_type: music
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_duration: 127
+           * > ```
+           */ media_duration: number;
+          /**
+           * > ```yaml
+           * > media_position: 0
+           * > ```
+           */ media_position: number;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-05-07T19:27:41.707857+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          /**
+           * > ```yaml
+           * > media_title: SPRING BREAK
+           * > ```
+           */ media_title: string;
+          /**
+           * > ```yaml
+           * > media_artist: Bronze Avery
+           * > ```
+           */ media_artist: string;
+          /**
+           * > ```yaml
+           * > media_album_name: SPRING BREAK
+           * > ```
+           */ media_album_name: string;
+          /**
+           * > ```yaml
+           * > media_playlist: Music Assistant
+           * > ```
+           */ media_playlist: string;
+          shuffle: boolean;
+          /**
+           * > ```yaml
+           * > repeat: 'off'
+           * > ```
+           */ repeat: string;
+          /**
+           * > ```yaml
+           * > queue_position: 3
+           * > ```
+           */ queue_position: number;
+          /**
+           * > ```yaml
+           * > queue_size: 8
+           * > ```
+           */ queue_size: number;
+          device_class: "speaker";
+          /**
+           * > ```yaml
+           * > entity_picture: >-
+           * >   /api/media_player_proxy/media_player.bedroom_sonos?token=91acb6a6c95ef4fa2236c4c7460d50ec5295c25438cdbd8f83753c1855183537&cache=bc22b96b1ac80d11
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Bedroom Speaker";
+          /**
+           * > ```yaml
+           * > supported_features: 4127295
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.bathroom_sonos": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.bathroom_sonos",
+        {
+          group_members: (
+            | "media_player.hallway_sonos"
+            | "media_player.bathroom_sonos"
+            | "media_player.bedroom_sonos"
+            | "media_player.living_room_sonos"
+          )[];
+          /**
+           * > ```yaml
+           * > volume_level: 0.34
+           * > ```
+           */ volume_level: number;
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_id: >-
+           * >   http://192.168.1.143:8097/single/rG3DHkxL/syncgroup_gwngzsny/5bbbee5b11c5410a9bd9b70043e66bbf/RINCON_7828CAEEAD2A01400.flac
+           * > ```
+           */ media_content_id: string;
+          /**
+           * > ```yaml
+           * > media_content_type: music
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_duration: 127
+           * > ```
+           */ media_duration: number;
+          /**
+           * > ```yaml
+           * > media_position: 0
+           * > ```
+           */ media_position: number;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-05-07T19:27:41.707857+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          /**
+           * > ```yaml
+           * > media_title: SPRING BREAK
+           * > ```
+           */ media_title: string;
+          /**
+           * > ```yaml
+           * > media_artist: Bronze Avery
+           * > ```
+           */ media_artist: string;
+          /**
+           * > ```yaml
+           * > media_album_name: SPRING BREAK
+           * > ```
+           */ media_album_name: string;
+          /**
+           * > ```yaml
+           * > media_playlist: Music Assistant
+           * > ```
+           */ media_playlist: string;
+          shuffle: boolean;
+          /**
+           * > ```yaml
+           * > repeat: 'off'
+           * > ```
+           */ repeat: string;
+          /**
+           * > ```yaml
+           * > queue_position: 3
+           * > ```
+           */ queue_position: number;
+          /**
+           * > ```yaml
+           * > queue_size: 8
+           * > ```
+           */ queue_size: number;
+          device_class: "speaker";
+          /**
+           * > ```yaml
+           * > entity_picture: >-
+           * >   /api/media_player_proxy/media_player.bathroom_sonos?token=56c015c166059c5bd428b96dec59fb8bfae2a0eb6d3e5410161c1e6278622b40&cache=bc22b96b1ac80d11
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Bathroom Speaker";
+          /**
+           * > ```yaml
+           * > supported_features: 4127295
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.living_room_sonos": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.living_room_sonos",
+        {
+          group_members: (
+            | "media_player.hallway_sonos"
+            | "media_player.bathroom_sonos"
+            | "media_player.bedroom_sonos"
+            | "media_player.living_room_sonos"
+          )[];
+          /**
+           * > ```yaml
+           * > volume_level: 0.3
+           * > ```
+           */ volume_level: number;
+          is_volume_muted: boolean;
+          /**
+           * > ```yaml
+           * > media_content_id: >-
+           * >   http://192.168.1.143:8097/single/rG3DHkxL/syncgroup_gwngzsny/5bbbee5b11c5410a9bd9b70043e66bbf/RINCON_7828CAEEAD2A01400.flac
+           * > ```
+           */ media_content_id: string;
+          /**
+           * > ```yaml
+           * > media_content_type: music
+           * > ```
+           */ media_content_type: string;
+          /**
+           * > ```yaml
+           * > media_duration: 127
+           * > ```
+           */ media_duration: number;
+          /**
+           * > ```yaml
+           * > media_position: 0
+           * > ```
+           */ media_position: number;
+          /**
+           * > ```yaml
+           * > media_position_updated_at: '2026-05-07T19:27:41.707857+00:00'
+           * > ```
+           */ media_position_updated_at: string;
+          /**
+           * > ```yaml
+           * > media_title: SPRING BREAK
+           * > ```
+           */ media_title: string;
+          /**
+           * > ```yaml
+           * > media_artist: Bronze Avery
+           * > ```
+           */ media_artist: string;
+          /**
+           * > ```yaml
+           * > media_album_name: SPRING BREAK
+           * > ```
+           */ media_album_name: string;
+          /**
+           * > ```yaml
+           * > media_playlist: Music Assistant
+           * > ```
+           */ media_playlist: string;
+          shuffle: boolean;
+          /**
+           * > ```yaml
+           * > repeat: 'off'
+           * > ```
+           */ repeat: string;
+          /**
+           * > ```yaml
+           * > queue_position: 3
+           * > ```
+           */ queue_position: number;
+          /**
+           * > ```yaml
+           * > queue_size: 8
+           * > ```
+           */ queue_size: number;
+          device_class: "speaker";
+          /**
+           * > ```yaml
+           * > entity_picture: >-
+           * >   /api/media_player_proxy/media_player.living_room_sonos?token=e9409b0c4c8aeb32c845bbbff1993b2983c680c9f8b358bf9fbc51b944fe45af&cache=bc22b96b1ac80d11
+           * > ```
+           */ entity_picture: string;
+          friendly_name: "Living Room";
+          /**
+           * > ```yaml
+           * > supported_features: 4127295
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "media_player.playstation_5": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "media_player.playstation_5",
+        {
+          device_class: "receiver";
+          friendly_name: "PlayStation 5";
+          /**
+           * > ```yaml
+           * > supported_features: 0
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
     "media_player.xbox": {
       state: string;
       attributes: DynamicMergeAttributes<
@@ -21608,6 +21797,34 @@ declare module "@digital-alchemy/hass" {
           /**
            * > ```yaml
            * > supported_features: 4127295
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "remote.bens_apple_tv": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "remote.bens_apple_tv",
+        {
+          friendly_name: "Apple TV";
+          /**
+           * > ```yaml
+           * > supported_features: 0
+           * > ```
+           */ supported_features: number;
+        }
+      >;
+    };
+    "remote.xbox": {
+      state: string;
+      attributes: DynamicMergeAttributes<
+        "remote.xbox",
+        {
+          friendly_name: "XBox";
+          /**
+           * > ```yaml
+           * > supported_features: 0
            * > ```
            */ supported_features: number;
         }
@@ -21753,29 +21970,32 @@ declare module "@digital-alchemy/hass" {
         }
       >;
     };
-    "remote.bens_apple_tv": {
+    "ai_task.openai": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "remote.bens_apple_tv",
+        "ai_task.openai",
         {
-          friendly_name: "Apple TV";
+          friendly_name: "OpenAI AI Task";
           /**
            * > ```yaml
-           * > supported_features: 0
+           * > supported_features: 7
            * > ```
            */ supported_features: number;
         }
       >;
     };
-    "remote.xbox": {
+    "cover.living_room_blinds": {
       state: string;
       attributes: DynamicMergeAttributes<
-        "remote.xbox",
+        "cover.living_room_blinds",
         {
-          friendly_name: "XBox";
+          is_closed: null;
+          assumed_state: boolean;
+          device_class: "blind";
+          friendly_name: "Living Room Blinds";
           /**
            * > ```yaml
-           * > supported_features: 0
+           * > supported_features: 11
            * > ```
            */ supported_features: number;
         }
@@ -21788,19 +22008,19 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > temperature: 10.1
+           * > temperature: 12.6
            * > ```
            */ temperature: number;
           temperature_unit: "\u00B0C";
           pressure_unit: "hPa";
           /**
            * > ```yaml
-           * > wind_bearing: 71
+           * > wind_bearing: 156
            * > ```
            */ wind_bearing: number;
           /**
            * > ```yaml
-           * > wind_speed: 11.2
+           * > wind_speed: 18
            * > ```
            */ wind_speed: number;
           wind_speed_unit: "km/h";
@@ -21912,18 +22132,18 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > message: Fill in patches form again
+           * > message: Vote
            * > ```
            */ message: string;
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-05-06 11:03:42'
+           * > start_time: '2026-05-07 20:28:06'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-05-06 12:03:42'
+           * > end_time: '2026-05-07 21:28:06'
            * > ```
            */ end_time: string;
           /**
@@ -21939,9 +22159,9 @@ declare module "@digital-alchemy/hass" {
           due_today: boolean;
           overdue: boolean;
           all_tasks: (
-            | "Fill in patches form again"
             | "Vote"
             | "Get someone to look at freezer"
+            | "Fill in patches form again"
             | "Replace fire alarm battery"
             | "Sort out medication"
             | "Sort out fire alarms"
@@ -21950,13 +22170,14 @@ declare module "@digital-alchemy/hass" {
             | "Put watering machines back in plants"
             | "Buy tickets to rhps"
             | "Shelly wall display"
+            | "Ask Ryan about coming up"
           )[];
           /**
            * > ```yaml
            * > priority: 1
            * > ```
            */ priority: number;
-          labels: [];
+          labels: "medium"[];
           friendly_name: "Inbox";
         }
       >;
@@ -21974,7 +22195,7 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-05-06 11:03:42'
+           * > start_time: '2026-05-07 20:28:06'
            * > ```
            */ start_time: string;
           /**
@@ -22018,7 +22239,7 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-05-06 11:03:42'
+           * > start_time: '2026-05-07 20:28:06'
            * > ```
            */ start_time: string;
           /**
@@ -22062,12 +22283,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-05-06 11:03:42'
+           * > start_time: '2026-05-07 20:28:06'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-05-07 10:00:00'
+           * > end_time: '2026-05-08 20:00:00'
            * > ```
            */ end_time: string;
           /**
@@ -22114,12 +22335,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-05-06 11:03:42'
+           * > start_time: '2026-05-07 20:28:06'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-05-06 12:03:42'
+           * > end_time: '2026-05-09 17:00:00'
            * > ```
            */ end_time: string;
           /**
@@ -22176,12 +22397,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-05-06 11:03:42'
+           * > start_time: '2026-05-07 20:28:06'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-05-06 12:03:42'
+           * > end_time: '2026-05-07 21:28:06'
            * > ```
            */ end_time: string;
           /**
@@ -22220,12 +22441,12 @@ declare module "@digital-alchemy/hass" {
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-05-06 11:03:42'
+           * > start_time: '2026-05-07 20:28:06'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-05-11 09:00:00'
+           * > end_time: '2026-05-12 09:00:00'
            * > ```
            */ end_time: string;
           /**
@@ -22500,25 +22721,23 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > message: Guitar Lesson
+           * > message: Training
            * > ```
            */ message: string;
           all_day: boolean;
           /**
            * > ```yaml
-           * > start_time: '2026-05-06 17:00:00'
+           * > start_time: '2026-05-08 08:00:00'
            * > ```
            */ start_time: string;
           /**
            * > ```yaml
-           * > end_time: '2026-05-06 18:00:00'
+           * > end_time: '2026-05-08 09:00:00'
            * > ```
            */ end_time: string;
           /**
            * > ```yaml
-           * > location: |-
-           * >   22 Jones Street
-           * >   Salford, England
+           * > location: ''
            * > ```
            */ location: string;
           /**
@@ -23147,13 +23366,13 @@ declare module "@digital-alchemy/hass" {
         {
           /**
            * > ```yaml
-           * > access_token: 60c01a2d0faa1a6e075318ddb7fd87fcc0f077654cefbbdba2fc7acd0a235b64
+           * > access_token: e697365b68a5e3b07d3d4c6325c8186a7147dcf2b1860b47d264ba4ffc888d16
            * > ```
            */ access_token: string;
           /**
            * > ```yaml
            * > entity_picture: >-
-           * >   /api/image_proxy/image.xbox_network_now_playing?token=60c01a2d0faa1a6e075318ddb7fd87fcc0f077654cefbbdba2fc7acd0a235b64
+           * >   /api/image_proxy/image.xbox_network_now_playing?token=e697365b68a5e3b07d3d4c6325c8186a7147dcf2b1860b47d264ba4ffc888d16
            * > ```
            */ entity_picture: string;
           friendly_name: "Xbox Network Now playing";

@@ -25,6 +25,12 @@ export function MusicService({
     context,
   });
 
+  mediaPlayer.exposePlayingDataOnMqtt({
+    entity: "media_player.living_room",
+    /* cspell:disable-next-line */
+    topicPrefix: "homeassistant/media_players",
+  });
+
   lifecycle.onReady(() => {
     const player = new MusicPlayer({
       hass,
