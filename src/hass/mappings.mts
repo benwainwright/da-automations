@@ -1589,9 +1589,7 @@ declare module "@digital-alchemy/hass" {
       | "sensor.bed_pressure_right";
     _a7e88522fa927093a8b2b823a0206176: never;
     _021d46f7f893e756f3423f922916dbdc: "update.chronotask_update";
-    _d151768b0f4352592018b0f34cfe5bfb:
-      | "number.led_matrix_brightness_illuminance"
-      | "select.led_matrix_page_mqtt_select";
+    _d151768b0f4352592018b0f34cfe5bfb: "select.led_matrix_page" | "number.led_matrix_brightness";
   }
   export interface HassLabelMapping {
     _reviewed:
@@ -2349,8 +2347,8 @@ declare module "@digital-alchemy/hass" {
       | "select.0xa4c1385b9f71e566_temperature_unit"
       | "sensor.0xa4c1385b9f71e566_battery"
       | "sensor.0xa4c1385b9f71e566_battery_state"
-      | "number.led_matrix_brightness_illuminance"
-      | "select.led_matrix_page_mqtt_select";
+      | "select.led_matrix_page"
+      | "number.led_matrix_brightness";
     _zwave_js:
       | "sensor.z_stick_gen5_usb_controller_status"
       | "update.z_stick_gen5_usb_controller_firmware"
@@ -2914,7 +2912,10 @@ declare module "@digital-alchemy/hass" {
       | "device_tracker.b0_81_84_2d_07_20"
       | "device_tracker.imacpro_2"
       | "device_tracker.c2_23_f1_db_96_d0"
-      | "device_tracker.watch_2";
+      | "device_tracker.watch_2"
+      | "device_tracker.e6_2f_fd_18_96_07"
+      | "device_tracker.imacpro_3"
+      | "device_tracker.1e_97_19_d6_93_03";
     _homeassistant_connect_zbt2: "update.home_assistant_connect_zbt_2_firmware";
     _matter:
       | "binary_sensor.front_door_lock_actuator"
@@ -4571,8 +4572,11 @@ declare module "@digital-alchemy/hass" {
     "RINCON_7828CAEEAD2A01400-ungroup_on_autoplay": "switch.hallway_ungroup_on_autoplay";
     "1169537265": "update.chronotask_update";
     "01KMGVV2ZJ67SG5YSJB55NAXMW_tplink_router_36-F8-AD-2C-78-01": "device_tracker.watch_2";
-    "led-matrix-brightness": "number.led_matrix_brightness_illuminance";
-    "led-matrix-page": "select.led_matrix_page_mqtt_select";
+    "01KMGVV2ZJ67SG5YSJB55NAXMW_tplink_router_E6-2F-FD-18-96-07": "device_tracker.e6_2f_fd_18_96_07";
+    "01KMGVV2ZJ67SG5YSJB55NAXMW_tplink_router_9A-99-37-C8-43-B0": "device_tracker.imacpro_3";
+    "01KMGVV2ZJ67SG5YSJB55NAXMW_tplink_router_1E-97-19-D6-93-03": "device_tracker.1e_97_19_d6_93_03";
+    "led-matrix-page": "select.led_matrix_page";
+    "led-matrix-brightness": "number.led_matrix_brightness";
   }
   export interface HassZoneMapping {
     _work: true;
@@ -5280,7 +5284,7 @@ declare module "@digital-alchemy/hass" {
       | "select.hallway_spare_room_power_on_behavior"
       | "select.0xa4c1387abdb2a4e2_temperature_unit"
       | "select.0xa4c1385b9f71e566_temperature_unit"
-      | "select.led_matrix_page_mqtt_select";
+      | "select.led_matrix_page";
     number:
       | "number.kajplats_e27_cws_globe_1055lm_on_level"
       | "number.kajplats_e27_cws_globe_1055lm_power_on_level"
@@ -5375,7 +5379,7 @@ declare module "@digital-alchemy/hass" {
       | "number.living_room_bass_3"
       | "number.living_room_balance_3"
       | "number.living_room_treble_3"
-      | "number.led_matrix_brightness_illuminance";
+      | "number.led_matrix_brightness";
     sun: "sun.sun";
     climate: "climate.living_room" | "climate.hallway" | "climate.bedroom" | "climate.boiler";
     device_tracker:
@@ -5435,7 +5439,10 @@ declare module "@digital-alchemy/hass" {
       | "device_tracker.20_f8_3b_0a_08_83"
       | "device_tracker.esp32_26f428"
       | "device_tracker.c2_23_f1_db_96_d0"
-      | "device_tracker.watch_2";
+      | "device_tracker.watch_2"
+      | "device_tracker.e6_2f_fd_18_96_07"
+      | "device_tracker.imacpro_3"
+      | "device_tracker.1e_97_19_d6_93_03";
     notify:
       | "notify.bens_phone"
       | "notify.imac"

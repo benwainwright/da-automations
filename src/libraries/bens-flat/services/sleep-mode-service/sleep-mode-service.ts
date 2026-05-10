@@ -81,6 +81,10 @@ export function SleepModeService({
       hass.call.switch.turn_off({ entity_id: entityIds.switches.autoplayMusic }),
       alarm.setForFirstEventOfNextDay(),
       iMac.shutdown(),
+      hass.call.number.set_value({
+        entity_id: "number.led_matrix_brightness",
+        value: "0",
+      }),
     ]);
     await lights.turnOffAll();
   });
@@ -88,6 +92,10 @@ export function SleepModeService({
   sleepMode.onTurnOff(async () => {
     await helpers.turnOffAll(adaptiveLightingSleepModeSwitches);
     const visitorModeEntity = visitor?.visitorMode?.getEntity?.();
+    await hass.call.number.set_value({
+      value: "100",
+      entity_id: "number.led_matrix_brightness",
+    });
     const visitorModeIsOn = visitorModeEntity?.state === "on";
 
     const visitorModeIsOffAndTimeIsBetweenFiveAmAndThreePm =
