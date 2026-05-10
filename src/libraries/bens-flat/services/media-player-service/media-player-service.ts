@@ -116,16 +116,18 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
         }
 
         if (newStateAs.attributes.media_title !== oldStateAs.attributes.media_title) {
-          await hass.call.select.select_option({
-            entity_id: "select.led_matrix_page",
-            option: "media",
-          });
           scheduler.setTimeout(async () => {
             await hass.call.select.select_option({
               entity_id: "select.led_matrix_page",
-              option: "clock",
+              option: "media",
             });
-          }, "5s");
+            scheduler.setTimeout(async () => {
+              await hass.call.select.select_option({
+                entity_id: "select.led_matrix_page",
+                option: "clock",
+              });
+            }, "5s");
+          }, "1s");
         }
 
         if (
