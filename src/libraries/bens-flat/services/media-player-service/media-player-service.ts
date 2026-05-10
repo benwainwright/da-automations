@@ -93,6 +93,7 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
       await hass.call.mqtt.publish({
         topic: `${prefix}/status`,
         payload: newState.state,
+        retain: true,
       });
 
       const newStateAs = newState as typeof newState & {
@@ -110,6 +111,7 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
           await hass.call.mqtt.publish({
             topic: `${prefix}/title`,
             payload: newStateAs.attributes.media_title,
+            retain: true,
           });
         }
 
@@ -120,6 +122,7 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
           await hass.call.mqtt.publish({
             topic: `${prefix}/artist`,
             payload: newStateAs.attributes.media_artist,
+            retain: true,
           });
         }
 
@@ -130,6 +133,7 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
           await hass.call.mqtt.publish({
             topic: `${prefix}/artwork`,
             payload: newStateAs.attributes.entity_picture,
+            retain: true,
           });
         }
       }
