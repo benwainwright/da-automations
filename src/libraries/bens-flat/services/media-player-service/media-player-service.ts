@@ -1,5 +1,5 @@
 import { TServiceParams } from "@digital-alchemy/core";
-import { PICK_ENTITY } from "@digital-alchemy/hass";
+import { PICK_ENTITY, RemoveCallback } from "@digital-alchemy/hass";
 
 export interface PlayConfig {
   type: string;
@@ -116,12 +116,14 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
         }
 
         if (newStateAs.attributes.media_title !== oldStateAs.attributes.media_title) {
+          let remove: RemoveCallback | undefined;
           scheduler.setTimeout(async () => {
             await hass.call.select.select_option({
               entity_id: "select.led_matrix_page",
               option: "media",
             });
-            scheduler.setTimeout(async () => {
+            remove?.remove();
+            remove = scheduler.setTimeout(async () => {
               await hass.call.select.select_option({
                 entity_id: "select.led_matrix_page",
                 option: "clock",
