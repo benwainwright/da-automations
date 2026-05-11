@@ -89,6 +89,7 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
   const exposePlayingDataOnMqtt = ({ topicPrefix, entity }: ExposePlayingDataConfig) => {
     const player = hass.refBy.id(entity);
     const prefix = `${topicPrefix}/${entity}`;
+    let screenSwitchTimer: RemoveCallback | undefined;
     player.onUpdate(async (newState, oldState) => {
       await hass.call.mqtt.publish({
         topic: `${prefix}/status`,
@@ -116,14 +117,13 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
         }
 
         if (newStateAs.attributes.media_title !== oldStateAs.attributes.media_title) {
-          let remove: RemoveCallback | undefined;
           scheduler.setTimeout(async () => {
             await hass.call.select.select_option({
               entity_id: "select.led_matrix_page",
               option: "media",
             });
-            remove?.remove();
-            remove = scheduler.setTimeout(async () => {
+            screenSwitchTimer?.remove();
+            screenSwitchTimer = scheduler.setTimeout(async () => {
               await hass.call.select.select_option({
                 entity_id: "select.led_matrix_page",
                 option: "clock",
