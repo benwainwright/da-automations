@@ -126,7 +126,7 @@ export function MediaPlayerService({ hass, logger, scheduler }: TServiceParams) 
                 entity_id: "select.led_matrix_page",
                 option: "clock",
               });
-            }, "5s");
+            }, "10s");
           }, "1s");
         }
 
